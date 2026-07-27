@@ -1,0 +1,48 @@
+---
+created: 2026-07-27
+source: "m-code.pdf"
+note_type: function
+tags: ["table", "m-function"]
+---
+
+
+# Table.ColumnNames
+
+Returns the column names in the table table as a list of text.
+
+## Signature
+
+```m
+Table.ColumnNames(table as table) as list
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| table | table | |
+
+## Returns
+
+list
+
+### Example 1
+
+Find the column names of the table.
+
+```m
+Table.ColumnNames(
+Table.FromRecords({
+[CustomerID = 1, Name = "Bob", Phone = "123-4567"],
+[CustomerID = 2, Name = "Jim", Phone = "987-6543"],
+[CustomerID = 3, Name = "Paul", Phone = "543-7890"],
+[CustomerID = 4, Name = "Ringo", Phone = "232-1550"]
+})
+)
+```
+
+// Output
+```
+{"CustomerID", "Name", "Phone"}
+```
+

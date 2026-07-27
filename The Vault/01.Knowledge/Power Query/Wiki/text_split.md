@@ -1,0 +1,61 @@
+---
+created: 2026-07-27
+source: "m-code.pdf"
+note_type: function
+tags: ["text", "m-function"]
+---
+
+
+# Text.Split
+
+Returns a list of text values resulting from the splitting of a text value based on the specified delimiter. text: The text value to split. separator: The delimiter used to split the text. The delimiter can be either a single character or a sequence of characters. If a sequence of characters is used, the text is split only at instances where the exact sequence occurs.
+
+## Signature
+
+```m
+Text.Split(text as text, separator as text) as list
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| text | text | |
+| separator | text | |
+
+## Returns
+
+list
+
+### Example 1
+
+Create a list from the "|" delimited text value "Name|Address|PhoneNumber".
+
+```m
+Text.Split("Name|Address|PhoneNumber", "|")
+```
+
+// Output
+```
+{
+"Name",
+"Address",
+"PhoneNumber"
+}
+```
+
+### Example 2
+
+```m
+Text.Split("Name, the Customer, the Purchase Date", ", the ")
+```
+
+// Output
+```
+{
+Name,
+Customer,
+Purchase Date
+}
+```
+

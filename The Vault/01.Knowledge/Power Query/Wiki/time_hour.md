@@ -1,0 +1,41 @@
+---
+created: 2026-07-27
+source: "m-code.pdf"
+note_type: function
+tags: ["time", "m-function"]
+---
+
+
+# Time.Hour
+
+Returns the hour component of the provided time, datetime, or datetimezone value, dateTime.
+
+## Signature
+
+```m
+Time.Hour(dateTime as any) as nullable number
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| dateTime | any | |
+
+## Returns
+
+nullable number
+
+### Example 1
+
+Find the hour in #datetime(2011, 12, 31, 9, 15, 36).
+
+```m
+Time.Hour(#datetime(2011, 12, 31, 9, 15, 36))
+```
+
+// Output
+```
+9
+```
+

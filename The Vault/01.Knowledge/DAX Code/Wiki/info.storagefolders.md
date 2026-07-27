@@ -1,0 +1,16 @@
+---
+created: 2026-07-26
+source: dax.pdf
+note_type: function
+tags: [dax, function, dax]
+---
+
+# INFO.STORAGEFOLDERS
+
+Summarize this article for me Applies to: Calculated column Calculated table Measure Visual calculation DAX query
+
+## Syntax
+
+```dax
+INFO.STORAGEFOLDERS([<Restriction name>, <Restriction value>], ...)
+```

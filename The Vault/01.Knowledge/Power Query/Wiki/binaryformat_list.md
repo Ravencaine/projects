@@ -1,0 +1,81 @@
+---
+created: 2026-07-27
+source: "m-code.pdf"
+note_type: function
+tags: ["binaryformat", "m-function"]
+---
+
+
+# BinaryFormat.List
+
+Returns a binary format that reads a sequence of items and returns a list. The binaryFormat parameter specifies the binary format of each item. There are three ways to determine the number of items read: If the countOrCondition is not specified, then the binary format will read until there are no more items. If the countOrCondition is a number, then the binary format will read that many items. If the countOrCondition is a function, then that function will be invoked for each item read. The function returns true to continue, and false to stop reading items. The final item is included in the list. If the countOrCondition is a binary format, then the count of items is expected to precede the list, and the specified format is used to read the count.
+
+## Signature
+
+```m
+BinaryFormat.List(binaryFormat as function, optional countOrCondition as any) as
+function
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| binaryFormat | function | |
+| optional countOrCondition | any | |
+
+## Returns
+
+function
+
+### Example 1
+
+Read bytes until the end of the data.
+
+```m
+let
+binaryData = #binary({1, 2, 3}),
+listFormat = BinaryFormat.List(BinaryFormat.Byte)
+in
+listFormat(binaryData)
+```
+
+// Output
+```
+{1, 2, 3}
+```
+
+### Example 2
+
+Read two bytes.
+
+```m
+let
+binaryData = #binary({1, 2, 3}),
+listFormat = BinaryFormat.List(BinaryFormat.Byte, 2)
+in
+listFormat(binaryData)
+```
+
+// Output
+```
+{1, 2}
+```
+
+### Example 3
+
+Read bytes until the byte value is greater than or equal to two.
+
+```m
+let
+binaryData = #binary({1, 2, 3}),
+listFormat = BinaryFormat.List(BinaryFormat.Byte, (x) => x < 2)
+in
+listFormat(binaryData)
+```
+
+// Output
+```
+{1, 2}
+```
+

@@ -1,0 +1,262 @@
+{
+  "main": {
+    "id": "59c4ef09bcbe7dcb",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b4ef03ff1814b7a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65fb339232bea149",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "24478a505974c84a",
+    "type": "split",
+    "children": [
+      {
+        "id": "13177260e1f970d4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "30a382f52ab3688f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "49ec907890c10ae3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "2cfd1f3672adae15",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "018c275678f6b701",
+    "type": "split",
+    "children": [
+      {
+        "id": "76db75e84a9b4aeb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "905aba765e85d4b1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "d6243683b0f11c70",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "89a9418fad558c55",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "81e61fc1bf3db9ef",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Local graph"
+            }
+          },
+          {
+            "id": "f76310edc2935b2d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "d82377dcbc056952",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "65fb339232bea149",
+  "lastOpenFiles": [
+    "00.Inbox/Integrating Python into Excel A New Era of Data Analysis.md",
+    "99.System/NewNotesTracker.md",
+    "99.System/InboxArchive/2026-07/What 100 Hours of YouTube Won’t Teach You About Power BI in Production.md",
+    "99.System/InboxArchive/2026-07/Microsoft Fabric The Complete Guide to Microsoft’s Unified Data Platform.md",
+    "99.System/InboxArchive/2026-07/ALL, ALLEXCEPT, ALLSELECTED, and REMOVEFILTERS in Power BI What’s the Difference.md",
+    "99.System/InboxArchive/2026-07/🏛️ Data Warehouse Architectures Inmon vs. Kimball vs. Data Vault 2.0.md",
+    "99.System/InboxArchive/2026-07/Why Totals Look Wrong in DAX (and How to Fix Them).md",
+    "99.System/InboxArchive/2026-07/What is Filter Context in Power BI A Complete Guide with Examples and Visuals.md",
+    "99.System/InboxArchive/2026-07/What I Learned While Working with Microsoft Fabric Pipelines.md",
+    "99.System/InboxArchive/2026-07/Using Visual Calculation To Easily Calculate Avg 3 Month Sales In Power BI(.pbix included).md",
+    "99.System/InboxArchive/2026-07/Unlock the Power of Multiple Tooltips in Power BI Reports.md",
+    "99.System/InboxArchive/2026-07/The Python Library That Reads Your Power BI Models Like Data. Most Fabric Teams Have Never Opened It.md",
+    "99.System/InboxArchive/2026-07/The FILTER Function in DAX Friend or Foe.md",
+    "99.System/InboxArchive/2026-07/Data Warehousing for BI.md",
+    "99.System/InboxArchive/2026-07/Data Modeling for Business Intelligence (BI) Build Trustworthy, Query-Friendly Analytics.md",
+    "99.System/InboxArchive/2026-07/Conversational Analytics in Power BI.md",
+    "99.System/InboxArchive/2026-07/Calculated objects in Power BI.md",
+    "99.System/InboxArchive/2026-07/CALCULATE in Power BI The Most Important Function in DAX Explained with Examples.md",
+    "01.Knowledge/Power BI/Wiki/what-100-hours-of-youtube-wont-teach-power-bi-production.md",
+    "01.Knowledge/Power BI/Wiki/microsoft-fabric-complete-guide.md",
+    "01.Knowledge/Excel/Wiki/excel-copy-without-incrementing.md",
+    "01.Knowledge/Excel/Wiki/integrating-python-excel.md",
+    "01.Knowledge/Data Modeling/Wiki/is-data-cleaning-more-painful-than-building-models.md",
+    "01.Knowledge/Data Modeling/Wiki/data-warehouse-architectures-inmon-kimball-datavault.md",
+    "01.Knowledge/Data Modeling/Wiki/data-warehousing-bi.md",
+    "01.Knowledge/Data Modeling/Wiki/data-modeling-bi-trustworthy-analytics.md",
+    "The-Vault",
+    "99.System/InboxArchive/2026-07/dax.pdf",
+    "99.System/InboxArchive/2026-07/m-code_extracted.txt",
+    "00.Inbox/m-code_extracted.txt",
+    "99.System/InboxArchive/2026-07/m-code.pdf",
+    "00.Inbox/m-code_functions.json",
+    "00.Inbox/dax_missing_raw.json",
+    "00.Inbox/_Archive/2026-07/dax_extracted.txt",
+    "00.Inbox/_Archive/2026-07/dax.pdf",
+    "00.Inbox/_Archive/2026-07"
+  ]
+}

@@ -1,0 +1,178 @@
+---
+created: 2026-07-27
+source: "m-code.pdf"
+note_type: function
+tags: ["table", "m-function"]
+---
+
+
+# Table.SplitColumn
+
+Splits the specified column into a set of additional columns using the specified splitter function. table: The table containing the column to split. sourceColumn: The name of the column to split. splitter: The splitter function used to split the column (for example, Splitter.SplitTextByDelimiter or Splitter.SplitTextByPositions). columnNamesOrNumber: Either a list of new column names to create, or the number of new columns. default: Overrides the value used when there aren't enough split values to fill all of the new columns. The default for this parameter is null. extraColumns: Specifies what to do if there might be more split values than the number of new columns. You can pass an ExtraValues.Type enumeration value to this parameter. The default is ExtraValues.Ignore.
+
+## Signature
+
+```m
+Table.SplitColumn(
+table as table,
+sourceColumn as text,
+splitter as function,
+optional columnNamesOrNumber as any,
+optional default as any,
+optional extraColumns as any
+) as table
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| table | table | |
+| sourceColumn | text | |
+| splitter | function | |
+| optional columnNamesOrNumber | any | |
+| optional default | any | |
+| optional extraColumns | any | |
+
+## Returns
+
+table
+
+### Example 1
+
+Split the name column into first name and last name.
+
+```m
+let
+Source = #table(type table[CustomerID = number, Name = text, Phone = text],
+{
+{1, "Bob White", "123-4567"},
+{2, "Jim Smith", "987-6543"},
+{3, "Paul", "543-7890"},
+{4, "Cristina Best", "232-1550"}
+}),
+SplitColumns = Table.SplitColumn(
+Source,
+"Name",
+Splitter.SplitTextByDelimiter(" "))
+in
+SplitColumns
+```
+
+// Output
+```
+#table(type table[CustomerID = number, Name.1 = text, Name.2 = text, Phone =
+text],
+{
+{1, "Bob", "White", "123-4567"},
+{2, "Jim", "Smith", "987-6543"},
+{3, "Paul", null, "543-7890"},
+{4, "Cristina", "Best", "232-1550"}
+})
+```
+
+### Example 2
+
+Split the name column into first name and last name, then rename the new columns.
+
+```m
+let
+Source = #table(type table[CustomerID = number, Name = text, Phone = text],
+{
+{1, "Bob White", "123-4567"},
+{2, "Jim Smith", "987-6543"},
+{3, "Paul", "543-7890"},
+{4, "Cristina Best", "232-1550"}
+}),
+SplitColumns = Table.SplitColumn(
+Source,
+"Name",
+Splitter.SplitTextByDelimiter(" "),
+{"First Name", "Last Name"})
+in
+SplitColumns
+```
+
+// Output
+```
+#table(type table[CustomerID = number, First Name = text, Last Name = text, Phone
+= text],
+{
+{1, "Bob", "White", "123-4567"},
+{2, "Jim", "Smith", "987-6543"},
+{3, "Paul", null, "543-7890"},
+{4, "Cristina", "Best", "232-1550"}
+})
+```
+
+### Example 3
+
+Split the name column into first name and last name, rename the new columns, and fill in any blanks with "-No Entry-".
+
+```m
+let
+Source = #table(type table[CustomerID = number, Name = text, Phone = text],
+{
+{1, "Bob White", "123-4567"},
+{2, "Jim Smith", "987-6543"},
+{3, "Paul", "543-7890"},
+{4, "Cristina Best", "232-1550"}
+}),
+SplitColumns = Table.SplitColumn(
+Source,
+"Name",
+Splitter.SplitTextByDelimiter(" "),
+{"First Name", "Last Name"},
+"-No Entry-")
+in
+SplitColumns
+```
+
+// Output
+```
+#table(type table[CustomerID = number, First Name = text, Last Name = text, Phone
+= text],
+{
+{1, "Bob", "White", "123-4567"},
+{2, "Jim", "Smith", "987-6543"},
+{3, "Paul", "-No Entry-", "543-7890"},
+{4, "Cristina", "Best", "232-1550"}
+})
+```
+
+### Example 4
+
+Split the name column into first name and last name, then rename the new columns. Because there might be more values than the number of available columns, make the last name column a list that includes all values after the first name.
+
+```m
+let
+Source = #table(type table[CustomerID = number, Name = text, Phone = text],
+{
+{1, "Bob White", "123-4567"},
+{2, "Jim Smith", "987-6543"},
+{3, "Paul Green", "543-7890"},
+{4, "Cristina J. Best", "232-1550"}
+}),
+SplitColumns = Table.SplitColumn(
+Source,
+"Name",
+Splitter.SplitTextByDelimiter(" "),
+{"First Name", "Last Name"},
+null,
+ExtraValues.List)
+in
+SplitColumns
+```
+
+// Output
+```
+#table(type table[CustomerID = number, First Name = text, Last Name = text, Phone
+= text],
+{
+{1, "Bob", {"White"}, "123-4567"},
+{2, "Jim", {"Smith"}, "987-6543"},
+{3, "Paul", {"Green"}, "543-7890"},
+{4, "Cristina", {"J.", "Best"}, "232-1550"}
+})
+```
+

@@ -1,0 +1,28 @@
+---
+created: 2026-07-27
+source: "m-code.pdf"
+note_type: function
+tags: ["hdinsight", "m-function"]
+---
+
+
+# HdInsight.Contents
+
+Returns a navigational table containing a row for each container found at the account URL, account, from an Azure storage vault. Each row contains a link to the container blobs. --- PAGE 363 ---
+
+## Signature
+
+```m
+HdInsight.Contents(account as text) as table
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| account | text | |
+
+## Returns
+
+table
+

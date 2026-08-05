@@ -1,0 +1,102 @@
+Fuzzy matching is a technique used to identify and compare text strings that are approximately, but not exactly, the same. Unlike exact matching, which requires two strings to be identical, fuzzy matching allows for differences such as typos, alternate spellings, abbreviations, or slight variations in formatting. This is particularly useful in situations where there are data inconsistencies (in other words, all situations), such as matching customer names across different databases or aligning product descriptions from multiple sources.
+Fuzzy matching traditionally uses algorithms such as the Levenshtein distance, Jaccard similarity, or soundex. These algorithms quantify the similarity between two strings and help determine the best possible matches, even when data isn't perfectly clean or standardized.
+While DAX includes numerous exact matching functions such as SEARCH, FIND, EXACT, CONTAINSSTRING, CONTAINSTRINGEXACT, or even the FILTER function, DAX does not include any fuzzy matching functions. One might question the need for such functions since Power Query includes fuzzy matching functions such as Table.FuzzyGroup, Table.FuzzyJoin and Table.FuzzyNestedJoin. However, Power Query cannot be used in all situations and there is a lack of exact control over the fuzzy matching algorithm. Thus, it can be useful to understand how to implement fuzzy matching within DAX.
+To investigate how to implement fuzzy matching in DAX, import the Clients and Projects sheets from the Excel spreadsheet, Chapter14_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book. Ensure that both tables promote the first row as headers. The Clients table has a single column called Client Name and the Projects table has two columns, Project and Index.
+The goal is to use fuzzy matching to match the Client Name column in the Clients table with the Project column in the Projects table. To do so, create the following measure:
+Fuzzy =  VAR __MatchWord = MAX( 'Clients'[Client Name] )  VAR __CleanMatchThreshold = 4  VAR __KillThreshold = 3  VAR __FuzzyThreshold1 = .4  VAR __FuzzyThreshold2 = .8  VAR __WordSearchTable =  GENERATE(  'Projects',  VAR __Word = [Project]  VAR __Result =  ADDCOLUMNS(  GENERATESERIES( 3, LEN( __Word ), 1 ),  "Search", LEFT( __Word, [Value] ),  "Original", __Word  )  RETURN  __Result  )  VAR __Table =  FILTER(  ADDCOLUMNS(  __WordSearchTable,  "Match", SEARCH( [Search], __MatchWord, , BLANK() )  ),  NOT(ISBLANK([Match]))  )  VAR __Max = MAXX( __Table, [Value] )  VAR __Match = MAXX( FILTER( __Table, [Value] = __Max ), [Search] )  VAR __Proposed =  IF(  LEN( __Match )   SWITCH(TRUE(),  COUNTROWS( FILTER( __Table, [Value] = __Max ) ) > 1, "No Match 1",  LEN( __Match )   LEN( __Match ) = LEN( __MatchWord ), __Match,  LEN( __Match ) / LEN( __MatchWord ) > __FuzzyThreshold1 &&  SEARCH( __Match, __MatchWord, , 0 ) = 1, __Match,  LEN( __Match ) / LEN( __MatchWord ) > __FuzzyThreshold2, __Match,  "No Match 3"  ),  SWITCH( TRUE(),  __Match = "Blue Cross" || __Match = "Blue Cross ", __Match,  LEN( __Match ) / LEN( __MatchWord )   SEARCH( __Match, __MatchWord, , 0 ) <> 1, "No Match 4",  __Match  )  )  VAR __Clean1 =  IF(  RIGHT( __Proposed, 1 ) = "(",  LEFT( __Proposed, LEN( __Proposed ) - 1 ),  __Proposed  )  VAR __Result =  IF(  RIGHT( __Clean1, 1 ) = " ",  LEFT( __Clean1, LEN( __Clean1 ) - 1 ),  __Clean1  ) RETURN  __Result  Obviously, this measure is quite large and complex with several custom tweaks for specific situations. However, the key components of this calculation are contained within the __WordSearchTable and __Table variables.
+The __WordSearchTable blows out the Projects table such that each project name is expanded to additional rows where each row lists out the characters of the project name starting with the first three letters and then adding one letter per row. This is done in the Search column and is best explained in the following example snippet from the __WordSearchTable variable:
+Project
+Index
+Value
+Search
+Original
+Aaron’s
+1
+3
+Aar
+Aaron’s
+Aaron’s
+1
+4
+Aaro
+Aaron’s
+Aaron’s
+1
+5
+Aaron
+Aaron’s
+Aaron’s
+1
+6
+Aaron’
+Aaron’s
+Aaron’s
+1
+7
+Aaron’s
+Aaron’s
+ABB (CA VDA)
+2
+3
+ABB
+ABB (CA VDA)
+ABB (CA VDA)
+2
+4
+ABB
+ABB (CA VDA)
+ABB (CA VDA)
+2
+5
+ABB (
+ABB (CA VDA)
+ABB (CA VDA)
+2
+6
+ABB (C
+ABB (CA VDA)
+ABB (CA VDA)
+2
+7
+ABB (CA
+ABB (CA VDA)
+ABB (CA VDA)
+2
+8
+ABB (CA
+ABB (CA VDA)
+ABB (CA VDA)
+2
+9
+ABB (CA V
+ABB (CA VDA)
+ABB (CA VDA)
+2
+10
+ABB (CA VD
+ABB (CA VDA)
+ABB (CA VDA)
+2
+11
+ABB (CA VDA
+ABB (CA VDA)
+ABB (CA VDA)
+2
+12
+ABB (CA VDA)
+ABB (CA VDA)
+Table 14.6: __ WordSearchTable data
+The __Match table adds an additional column called Match using the SEARCH function which is case-insensitive and accent sensitive. This column returns BLANK if the Client Name (__MatchWord) is not found in the Search column and returns __MatchWord if the Client Name is found. The __Match table is then filtered to remove any rows where the Match column is blank.
+Now that the __Match table is constructed, we can determine the best match by finding the maximum value of the Value column which is stored in the __Max variable. It is then a simple matter to look up the corresponding value of the Search column for that row. The rest of the code simply performs some customized tweaks to ensure the best match is found and returned as well as some formatting and text cleaning to remove the parenthesis portions of matches which are not desirable in this circumstance.
+Creating a table visualization with the Client Name column from the Clients table and the Fuzzy measure allows us to check the accuracy of our matching. It is helpful to also have a table visual of the Project column from the Projects column when performing this check:
+Figure 14.3: Fuzzy matching results
+We can see in the table that our Fuzzy measure works quite well with few, if any false positives. However, you might be wondering about exactly which fuzzy matching algorithm the Fuzzy measure implements. Well, the answer is that it is essentially a custom algorithm that blends elements of more formalized fuzzy matching algorithms. To understand this, let’s look at two formal fuzzy matching algorithms, the Jaccard similarity and Levenshtein distance.
+The Jaccard similarity is relatively straightforward. You first convert the words to tables. You then compute the number of intersecting characters between the two tables and divide this number by the total number of rows after performing a union of the two tables. A DAX implementation of the Jaccard similarity is as follows:
+Jaccard Similarity =  VAR __FuzzyThreshold = .2  VAR __MatchWord = MAX( 'Clients'[Client Name] )  VAR __MatchTable =  ADDCOLUMNS(  GENERATESERIES( 1, LEN( __MatchWord ), 1 ),  "__Char", MID( __MatchWord, [Value], 1 )  )  VAR __Table =  ADDCOLUMNS(  DISTINCT( 'Projects'[Project] ),  "__JS",  VAR __SearchWord = [Project]  VAR __SearchTable =  ADDCOLUMNS(  GENERATESERIES( 1, LEN( __SearchWord ), 1 ),  "__Char", MID( __SearchWord, [Value], 1 )  )  VAR __Intersect = COUNTROWS( INTERSECT( __SearchTable, __MatchTable ) )  VAR __Union = COUNTROWS( UNION( __SearchTable, __MatchTable ) )  VAR __Result = DIVIDE( __Intersect, __Union, 0 )  RETURN  __Result  )  VAR __Max = MAXX( __Table, [__JS] )  VAR __Result =  IF(  __Max >= __FuzzyThreshold,  MAXX( FILTER( __Table, [__JS] = __Max ), [Project] ),  BLANK()  ) RETURN  __Result  You can adjust the __FuzzyThreshold to make the matching more fuzzy or less fuzzy. Also, astute readers might complain that this implementation only counts intersecting characters in the same position within the strings, but practical testing found that this approach worked far better than simply ignoring the order of characters.
+The Levenshtein distance is somewhat similar in approach. However, the Levenshtein distance computes the number of insertions, deletions, or substitutions required to transform one string into another string. A DAX implementation of the Levenshtein distance is as follows:
+Levenshtein distance =  VAR __FuzzyThreshold = 8  VAR __MatchWord = MAX( 'Clients'[Client Name] )  VAR __MatchTable =  ADDCOLUMNS(  GENERATESERIES( 1, LEN( __MatchWord ), 1 ),  "__Char", MID( __MatchWord, [Value], 1 )  )  VAR __Table =  ADDCOLUMNS(  DISTINCT( 'Projects'[Project] ),  "__JS",  VAR __SearchWord = [Project]  VAR __SearchTable =  ADDCOLUMNS(  GENERATESERIES( 1, LEN( __SearchWord ), 1 ),  "__Char", MID( __SearchWord, [Value], 1 )  )  VAR __Result =  IF(  COUNTROWS( __SearchTable ) > COUNTROWS( __MatchTable ),  COUNTROWS( EXCEPT( __SearchTable, __MatchTable ) ),  COUNTROWS( EXCEPT( __MatchTable, __SearchTable ) )  )  RETURN  __Result  )  VAR __Max = MINX( __Table, [__JS] )  VAR __Result =  IF(  __Max   MAXX( FILTER( __Table, [__JS] = __Max ), [Project] ),  BLANK()  ) RETURN  __Result  This is effectively the same DAX code as the Jaccard similarity measure except for how the fuzzy matching is performed between the two words converted to tables. Again, one can adjust the __FuzzyThreshold, which; in this case, designates the maximum number of insertions, deletions, and substitutions necessary to convert one string into the other string.
+Placing both the Jaccard similarity and Levenshtein distance measures into the Table visualization we can compare the different fuzzy matching approaches:
+Figure 14.4: Fuzzy matching compared to Jaccard similarity and Levenshtein distance
+The Fuzzy measure clearly performs the best with more matches and fewer false positives although it is possible that with enough tweaking, the other two approaches could potentially provide similar levels of accuracy. For example, one improvement to the Levenshtein distance measure might be to make the __FuzzyThreshold dynamic based upon a percentage of the overall length of the word being matched.
+The key takeaway here is that DAX can be used to solve some rather gnarly problems and that sometimes a custom approach provides better results than standard algorithms.
+This completes our analysis of fuzzy matching in DAX. We now move on to another problem that is traditionally solved in Power Query, creating a sorted table index.

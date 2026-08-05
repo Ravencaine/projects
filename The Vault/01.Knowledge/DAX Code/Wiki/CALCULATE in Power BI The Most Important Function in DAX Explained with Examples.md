@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "CALCULATE in Power BI: The Most Important Function in DAX Explained with Examples"
 source_url: https://medium.com/write-your-world/calculate-in-power-bi-the-most-important-function-in-dax-explained-with-examples-8b2c54f0e28a
 note_type: source
@@ -74,7 +75,7 @@ Using CALCULATE with ALL removes filters, letting you calculate values across al
 
 ## Example 4: Context Transition
 
-When CALCULATE is used in a row context, it triggers **context transition** — turning row context into filter context.
+When CALCULATE is used in a row context, it triggers **context transition**: turning row context into filter context.
 
 ```c
 Profit by Row = SUMX( Sales, CALCULATE( Sales[Revenue] — Sales[Cost] ) )

@@ -1,0 +1,17 @@
+The DAX function EVALUATEANDLOG is a diagnostic and debugging function introduced to help developers inspect intermediate results in DAX expressions. The EVALUATEANDLOG function logs the result of an expression while still returning its value. Think of it like inserting a "debug print" into your DAX code, like how console.log works in JavaScript or print() in Python. It doesn't change the calculation outcome but gives visibility into what's being evaluated, making it easier to trace logic and validate assumptions.
+The “log” part of the EVALUATEANDLOG function refers to logging within Analysis Services and in particular traces performed via SQL Profiler. Thus, to utilize the EVALUATEANDLOG function as intended, you must have SQL Profiler installed or some other third-party tool. SQL Profiler can be installed when installing SQL Server Management Studio (SSMS).
+An easy way to use EVALUATEANDLOG is to install SQL Profiler and then create a quick text file that allows you to open the SQL Profiler tool as an external tool in Power BI. This way SQL Profiler is automatically connected to your semantic model. To do this, create the following text file:
+SQLProfiler.pbitool.json
+{  "version": "1.0",  "name": "SQL Profiler",  "description": "SQL Profiler",  "path": "C:\\Program Files (x86)\\Microsoft SQL Server Management Studio 18\\Common7\\PROFILER.exe",  "arguments": "/A \"%server%\" /D \"%database%\"",  "iconData": "image/png;base64,…" }  The text shown here does not include the full iconData value. The full version of this file is available in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Place this file in the following directory:
+C:\Program Files (x86)\Common Files\Microsoft Shared\Power BI Desktop\External Tools
+After restarting Power BI Desktop, the SQL Profiler tool shows up in the External tools tab of the ribbon:
+Table 16.10: SQL Profiler in External tools tab
+Clicking SQL Profiler in the External tools tab of the ribbon opens SQL Server Profiler and initiates a trace:
+Figure 16.11: SQL Server Profiler trace
+Switch to the Events Selection tab, expand the Query Processing section of the Events column and select the DAX-related events:
+Figure 16.12: DAX query trace events
+Select the Run button to initiate the trace. Now, back in Power BI Desktop, you can create visuals, interact with visuals or use the Performance Analyzer to refresh the visuals on a page. The query events of any measure using EVALUATEANDLOG are then displayed in the SQL Server Profiler trace:
+Figure 16.13: SQL Server Profiler trace
+Note that EVALULATEANDLOG is not intended for use in production but rather only as a debugging tool. Thus, it is generally the case that measures are created and then a separate measure is created that uses EVALUATEANDLOG( [Measure] ) in order to debug the measure. Once the measure is debugged, the EVALUATEANDLOG measure is removed and replaced with the original measure in the report.
+This completes our analysis of the EVALUATEANDLOG function. As our final topic, let’s address the CALCULATE function head on.

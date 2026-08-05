@@ -1,0 +1,52 @@
+table 'Person AddressType'
+	lineageTag: d488df34-2172-49df-b825-891107c47892
+
+	column AddressTypeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b8e9caf-e238-4cf2-ad2b-c0e11cbb8e6c
+		summarizeBy: none
+		sourceColumn: AddressTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 3c7c0408-9c5c-4323-914e-509d953b4a9d
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: 3883f414-7309-45a4-bcc8-f5bce7b464de
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 23c5bd05-1559-4d86-b584-5923a06ba349
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 282ea195-05cf-4428-b755-1d83edb96dec
+			defaultHierarchy: LocalDateTable_d3f6e96f-dae9-43d6-a974-72d2f97ab2f9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Person AddressType' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Person", Item = "AddressType"]}[Data]
+				in
+				  #"Navigation 2"
+

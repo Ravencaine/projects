@@ -1,0 +1,114 @@
+table 'Sales SalesTerritory'
+	lineageTag: e1a99c89-8be4-4dd8-91ff-62479bdbd25a
+
+	column TerritoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c288c5d-0450-41bc-b2a2-8be5caedea42
+		summarizeBy: none
+		sourceColumn: TerritoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 000fe558-303b-4b64-9aef-752ea2b2b583
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegionCode
+		dataType: string
+		lineageTag: 70fbb1f5-c7c6-45c1-bc15-d810bfba2882
+		summarizeBy: none
+		sourceColumn: CountryRegionCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Group
+		dataType: string
+		lineageTag: e1dc689f-672b-478f-a19f-acdf0f113aa6
+		summarizeBy: none
+		sourceColumn: Group
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesYTD
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: ae671402-841e-4cd4-83e8-7bc61a1c28ba
+		summarizeBy: sum
+		sourceColumn: SalesYTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column SalesLastYear
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 0d01d9d0-4481-4a2b-8f17-f968954084c7
+		summarizeBy: sum
+		sourceColumn: SalesLastYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column CostYTD
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 4ff684fa-f198-4012-9443-2a3ac24be41c
+		summarizeBy: sum
+		sourceColumn: CostYTD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column CostLastYear
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 25241c8d-95ba-4474-b72d-d553ffc1a80d
+		summarizeBy: sum
+		sourceColumn: CostLastYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column rowguid
+		dataType: string
+		lineageTag: da7c21fd-79d5-4e0c-8c84-236628ecaf45
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 12913982-cde1-4e3b-9c91-1d9f479fb56c
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: a5619474-7505-4316-b281-4b96680df263
+			defaultHierarchy: LocalDateTable_37055824-833f-492e-8a52-dfec36203acf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales SalesTerritory' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Sales", Item = "SalesTerritory"]}[Data]
+				in
+				  #"Navigation 2"
+
+	annotation PBI_ResultType = Table
+

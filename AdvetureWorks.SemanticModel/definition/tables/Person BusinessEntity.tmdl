@@ -1,0 +1,44 @@
+table 'Person BusinessEntity'
+	lineageTag: 1e5e04d8-618e-40eb-98f5-c1c8d93d2e6a
+
+	column BusinessEntityID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ee0e83c-6db1-43f2-a82a-91bd8a7fc9ee
+		summarizeBy: none
+		sourceColumn: BusinessEntityID
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: e6ab94e4-e8d7-4311-bfff-0d1eb4558502
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3a1cf554-5805-48a9-95d3-0ca252d1336e
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 55342431-49ea-4e14-977f-d395b896e402
+			defaultHierarchy: LocalDateTable_1c80bf78-0860-4c1a-9750-0c244ac3ce07.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Person BusinessEntity' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Person", Item = "BusinessEntity"]}[Data]
+				in
+				  #"Navigation 2"
+

@@ -12,7 +12,7 @@ Processed: "Unprocessed"
 
 A conversational technical guide to building dynamic KPI calculations
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*B4MTN5PIxMKlXQEC)
+![](99.System/Attachments/0!B4MTN5PIxMKlXQEC.webp)
 
 Photo by Luke Chesser on Unsplash
 

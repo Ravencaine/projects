@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, context]
@@ -38,7 +39,7 @@ EARLIER('Table'[Sales], 2)
 
 - Used in **calculated columns** for nested row context calculations.
 - `EARLIEST` is equivalent to `EARLIER` with `number = 1`.
-- Can be **slow** — consider using variables instead.
+- Can be **slow**: consider using variables instead.
 - **Not supported** in DirectQuery mode for calculated columns or RLS rules.
 
 ## Related

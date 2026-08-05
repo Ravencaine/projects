@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "How to Highlight a Segment in a 100% Stacked Chart and Move It to the Baseline in Power BI"
 source_url: https://medium.com/@iwasanjaya/how-to-highlight-a-segment-in-a-100-stacked-chart-and-move-it-to-the-baseline-in-power-bi-fbb68f3dade6
 note_type: source
@@ -178,12 +179,12 @@ Figure 8.1: Building the chart
 
 1. **Visual type: 100% Stacked Bar chart or 100% Stacked Column chart.**
 2. **Category / Axis:** whatever you’re comparing across (e.g. pizza types, products, dates…).
-3. **Y-axis / Values:** add **all N** `**Position**` **measures** — *not* one measure plus your `[Category]` field in Series. If you’re converting an existing chart that currently has `[Category]` in the Series/Legend well, remove it; the position measures replace that binding entirely.
+3. **Y-axis / Values:** add **all N** `**Position**` **measures**: *not* one measure plus your `[Category]` field in Series. If you’re converting an existing chart that currently has `[Category]` in the Series/Legend well, remove it; the position measures replace that binding entirely.
 
 ### Add the selector slicer:
 
 1. Insert a **Slicer** → field `**Selector[Category]**`.
-2. Format → **Selection** → **Single select = On** — cleanest UX, though the measures above already resolve to blank on no/multi-selection, so nothing breaks if you leave it off.
+2. Format → **Selection** → **Single select = On**: cleanest UX, though the measures above already resolve to blank on no/multi-selection, so nothing breaks if you leave it off.
 
 ### Colors & legend — see Block 3 above.
 

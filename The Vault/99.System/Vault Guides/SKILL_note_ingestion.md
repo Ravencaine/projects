@@ -163,6 +163,34 @@ The frontmatter must be valid YAML. Do not add custom fields outside this block 
 
 ---
 
+## Section 5b — Unicode Filename Normalization
+
+If the Inbox source filename contains any non-ASCII character (em-dash, curly quotes, emoji, mathematical Unicode, etc.), **normalize it to ASCII before writing it into any `source:` field or any `source` column in `_INGESTED.md`**.
+
+Normalize the Inbox source file's name FIRST (rename it in-place before ingestion), then use that normalized name in all frontmatter and registry entries. This ensures the `source:` field and the archived filename always match exactly — enabling `find_orphans.py` to correctly link notes back to their sources.
+
+**Normalization rules** (apply in order):
+
+| Unicode | Replace with |
+|---------|-------------|
+| Em-dash `—`, en-dash `–`, hyphen-dash `‐` | `-` (hyphen) |
+| Left/right double curly quotes `"` `"` | ` ` (stripped) |
+| Left/right single curly quotes `'` `'` | `'` (straight apostrophe) |
+| Ellipsis `…` | `...` |
+| Emoji and decorative Unicode (`📊🚀💻🧙⚡🏛️🔄✨`, etc.) | stripped |
+| Mathematical bold/script/italic letters (`𝐒𝐮𝐩𝐞𝐫…`) | stripped |
+| Other non-ASCII | stripped via NFKD + ASCII replace |
+
+**Procedure when ingesting a Unicode filename:**
+1. Rename the file in `00.Inbox/` using the rules above — e.g. `"🧙 Power Query Trick…"` → `"Power Query Trick Add Leading Zeros Only When You Should.md"`
+2. Use the renamed filename in all `source:` frontmatter fields
+3. Use the renamed filename in `_INGESTED.md`
+4. The archived file in `InboxArchive/YYYY-MM/` will also have the ASCII name
+
+**Do not use the original Unicode filename anywhere** — even if the Inbox file has emoji or em-dashes in its name, the `source:` field must use the ASCII-normalized form.
+
+---
+
 ## Section 6 — Quality Checks
 
 Run these before delivering any note:
@@ -179,6 +207,7 @@ Run these before delivering any note:
 10. No duplicate headings in the same note.
 11. Note is filed under the correct KB.
 12. Note was added to the target KB's INDEX.md under the correct section.
+13. `source:` field is present in frontmatter with the exact source filename. **Normalize Unicode to ASCII** before writing it — see Section 5b (below). This field is what links notes back to their source and enables orphan detection via `find_orphans.py`. Using a normalized form ensures notes always match their archived source even if the Inbox file had Unicode in its name.
 
 ---
 
@@ -201,10 +230,29 @@ Author note : <yes|no — write one if author has 2+ sources or is a recognised 
 Saturation  : <M items found | clean>
 ```
 
-After outputting the summary block, archive the source file:
-1. Move the source file from `00.Inbox/` to `99.System/InboxArchive/YYYY-MM/` (use current month)
-2. Update `00.Inbox/_INGESTED.md` to change status from "pending" to "archived" and add the Location column value
-3. Delete any temporary extracted files (e.g., `*_extracted.txt`) from the Inbox
+**After the summary block**, run `find_orphans.py` to verify no notes were left as orphans:
+
+```
+python 99.System/Scripts/find_orphans.py
+```
+
+Exit 0 = clean. Exit 1 = orphans found — fix the `source:` frontmatter on each orphan note to match the actual Inbox/Archive filename, then re-run until clean.
+
+**The source file stays in `00.Inbox/` after the summary block.** Archive is a separate, optional step — not a completion gate. Nothing is lost if a source stays in the Inbox.
+
+### Manual Archive (Optional)
+
+When you want to clean up the Inbox, run `99.System/Scripts/safe_archive.py` — never use raw `mv` or shutil.move directly. The script verifies that notes exist before archiving and refuses to move the source if they don't.
+
+Archive triggers (any of these):
+- User says "archive" or "clean up inbox"
+- Batch ingest is complete and the user requests cleanup
+- The Inbox exceeds 50 files and you proactively offer to archive
+
+When archiving:
+1. Call `safe_archive.py` — it exits non-zero if notes are missing
+2. `safe_archive.py` moves the source file and updates `_INGESTED.md` status to `archived` atomically
+3. Delete any temporary extracted files (e.g., `*_extracted.txt`) from the Inbox after archiving
 
 ---
 
@@ -221,7 +269,7 @@ After outputting the summary block, archive the source file:
 9. Write a note longer than 800 words without splitting it.
 10. Leave frontmatter blank or incomplete.
 11. Use the wrong template for the selected `note_type`.
-12. Archive the source before all notes are written and saved.
+12. Move a source from the Inbox without running `safe_archive.py` first.
 13. Skip the quality checks before delivering.
 14. File a note in the wrong KB.
 15. Leave notes without adding them to INDEX.md.

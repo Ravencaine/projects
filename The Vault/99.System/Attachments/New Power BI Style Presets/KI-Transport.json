@@ -1,0 +1,402 @@
+﻿{
+    "name": "Style Presets Demo",
+    "$schema":"https://raw.githubusercontent.com/microsoft/powerbi-desktop-samples/refs/heads/main/Report%20Theme%20JSON%20Schema/reportThemeSchema-2.141.json",
+    "textClasses": {
+        "callout": {
+            "fontFace": "'Segoe UI Semibold', wf_segoe-ui_semibold, helvetica, arial, sans-serif",
+            "fontSize": 28,
+            "color": "#131517"
+        },
+        "title": {
+            "fontFace": "'Segoe UI Semibold', wf_segoe-ui_semibold, helvetica, arial, sans-serif",
+            "color": "#131517"
+        },
+        "label": {
+            "color": "#131517"
+        },
+        "header": {
+            "color": "#131517"
+        }
+    },
+    "dataColors": [
+        "#111516",
+        "#CBDAEA",
+        "#E66C37",
+        "#6B007B",
+        "#E044A7",
+        "#744EC2",
+        "#D9B300",
+        "#D64550",
+        "#3599B8",
+        "#DFBFBF",
+        "#4AC5BB",
+        "#5F6B6D",
+        "#FB8281",
+        "#F4D25A",
+        "#7F898A",
+        "#A4DDEE",
+        "#FDAB89",
+        "#B687AC",
+        "#28738A",
+        "#A78F8F",
+        "#168980",
+        "#293537",
+        "#BB4A4A",
+        "#B59525",
+        "#475052",
+        "#6A9FB0",
+        "#BD7150",
+        "#7B4F71",
+        "#1B4D5C",
+        "#706060",
+        "#0F5C55",
+        "#1C2325"
+    ],
+    "foreground": "#0A1818",
+    "foregroundNeutralSecondary": "#777777",
+    "backgroundLight": "#F6F6F6",
+    "backgroundNeutral": "#F6F6F6",
+    "bad": "#EF4444",
+    "neutral": "#FFFFD2",
+    "good": "#22C55E",
+    "visualStyles": {
+        "*": {
+            "*": {
+                "background": [
+                    {
+                        "transparency": 0
+                    }
+                ],
+                "border": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#F7F7F7"
+                            }
+                        },
+                        "show": true,
+                        "radius": 20
+                    }
+                ],
+                "visualHeader": [
+                    {
+                        "foreground": {
+                            "solid": {
+                                "color": "#10181C"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ],
+                "visualTooltip": [
+                    {
+                        "themedTitleFontColor": {
+                            "solid": {
+                                "color": "#10181C"
+                            }
+                        },
+                        "themedValueFontColor": {
+                            "solid": {
+                                "color": "#10181C"
+                            }
+                        },
+                        "actionFontColor": {
+                            "solid": {
+                                "color": "#10181C"
+                            }
+                        }
+                    }
+                ],
+                "visualHeaderTooltip": [
+                    {
+                        "themedTitleFontColor": {
+                            "solid": {
+                                "color": "#10181C"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "lineChart": {
+            "*":{
+                "padding": [
+                    {
+                      "left": 20,
+                      "right": 20,
+                      "bottom": 15,
+                      "top": 15  
+                    }
+                ],
+                "title": [
+                    {
+                        "fontSize": 12
+                    }
+                ],
+                "valueAxis": [
+                    {
+                        "fontSize": 9,
+                        "showAxisTitle": false
+                    }
+                ],
+                "categoryAxis": [
+                    {
+                        "showAxisTitle": false
+                    }
+                ],
+                "dropShadow": [
+                    {
+                       "show": true,
+                        "position": "Outer",
+                        "shadowSpread": 1,
+                        "shadowBlur": 0,
+                        "angle": 0,
+                        "shadowDistance": 0,
+                        "preset": "Center",
+                        "transparency": 90 
+                    }
+                ],
+                "lineStyles": [
+                    {
+                        "strokeWidth": 2
+                    }
+                ],
+                "stylePreset": [{"name": "LineDetailedChart"}]
+            },
+            "LineDetailedChart":{
+                "dropShadow": [
+                    {
+                        "show": true,
+                        "position": "Outer",
+                        "shadowSpread": 1,
+                        "shadowBlur": 0,
+                        "angle": 0,
+                        "shadowDistance": 0,
+                        "preset": "Center",
+                        "transparency": 90
+
+                    }
+                ],
+                "valueAxis": [
+                    {
+                        "gridlineShow": true,
+                        "gridlineStyle": "dashed",
+                        "gridlineColor":{
+                            "solid": {"color":"#ACB5B9"}
+                        }
+                    }
+                ]
+            }
+        },
+        "cardVisual": {
+            "*": {
+                "background": [
+                    {
+                        "show": true
+                    }
+                ],
+                "border": [
+                    {
+                        "show": true
+                    }
+                ],
+                "label": [
+                    {
+                        "position": "belowValue"
+                    }
+                ],
+                "outline": [
+                    {
+                        "show": false
+                    }
+                ],
+                "layout": [
+                    {
+                        "backgroundShow": false,
+                        "backgroundTransparency": 100
+                    }
+                ],
+                "stylePreset": [{"name": "SmallCard"}]
+            },
+            "SmallCard":{
+                "background": [
+                    {
+                        "show": false
+                    }
+                ],
+                "border": [
+                    {
+                        "show": false
+                    }
+                ],
+                "value": [
+                    {
+                        "fontSize": 20
+                        
+                    }
+                ],
+                "label": [
+                    {
+                        "fontSize": 10
+                    }
+                ]
+            }
+        },
+        "clusteredColumnChart": {
+            "*": {
+                "categoryAxis": [
+                    {
+                        "showAxisTitle": false,
+                        "fontSize": 9
+                    }
+                ],
+                "legend": [
+                    {"fontSize": 9}
+                ],
+                "padding": [
+                    {
+                        "left": 20,
+                        "right": 20,
+                        "bottom": 15,
+                        "top": 15
+                    }
+                ],
+                "title": [
+                    {"fontSize": 12}
+                ],
+                "valueAxis": [
+                    {
+                        "fontSize": 9,
+                        "showAxisTitle": false
+
+                    }
+                ],
+                
+                "stylePreset": [{"name": "ColumnDetailedChartLabels"}]
+            },
+            "ColumnDetailedChartLabels": {
+                "dropShadow": [
+                    {
+                        "show": true,
+                        "position": "Outer",
+                        "shadowSpread": 1,
+                        "shadowBlur": 0,
+                        "angle": 0,
+                        "shadowDistance": 0,
+                        "preset": "Center",
+                        "transparency": 90
+
+                    }
+                ],
+                "labels": [
+                    {
+                        "show": true,
+                        "bold": true
+                    }
+                ],
+                
+                "valueAxis": [
+                    {
+                        "show": false                        
+                    }
+                ]
+            },
+            "ColumnDetailedChartNoLabels": {
+                "dropShadow": [
+                    {
+                        "show": true,
+                        "position": "Outer",
+                        "shadowSpread": 1,
+                        "shadowBlur": 0,
+                        "angle": 0,
+                        "shadowDistance": 0,
+                        "preset": "Center",
+                        "transparency": 90
+
+                    }
+                ],
+                "labels": [
+                    {
+                        "show": false
+                    }
+                ],
+                
+                "valueAxis": [
+                    {
+                        "gridlineStyle": "dashed",
+                        "gridlineShow": true,
+                        "gridlineColor":{
+                            "solid": {
+                                "color":"#ACB5B9"
+                            }
+                        }                        
+                    }
+                ]
+            },
+            "ColumnSimpleChart": {
+                "background": [
+                    {
+                        "show": false
+                    }
+                ],
+                "border": [
+                    {
+                        "show": false
+                    }
+                ],
+                "categoryAxis": [
+                    {
+                        "show": false
+                    }
+                ],
+                "dropShadow": [
+                    {
+                        "show": false
+                    }
+                ],
+                "labels": [
+                    {
+                        "show": false
+                    }
+                ],
+                "padding": [
+                    {
+                        "left": 0,
+                        "right": 0,
+                        "bottom": 0,
+                        "top": 0
+                    }
+                ], 
+                "title":[
+                    {"show": false}
+                ],               
+                "valueAxis": [
+                    {
+                        "show": false
+                                               
+                    }
+                ]
+            }
+        },
+        
+        "page": {
+            "*": {
+                "background": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#F6F6F6"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ],
+                "outspace": [
+                    {
+                        "transparency": 100
+                    }
+                ]
+            }
+        }
+    }
+}

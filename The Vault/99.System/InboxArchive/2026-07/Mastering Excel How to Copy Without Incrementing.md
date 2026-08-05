@@ -84,4 +84,4 @@ Excel is an incredibly powerful tool, and mastering small tricks like these can 
 
 Try these techniques and see which one works best for you! 🚀
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*BFqM4e-zqqBCXrdJ6H9Ldw.png)
+![](99.System/Attachments/1!BFqM4e-zqqBCXrdJ6H9Ldw.png.webp)

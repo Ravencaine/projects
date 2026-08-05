@@ -10,7 +10,7 @@ Processed: "Unprocessed"
 ---
 ## For Job Hunters in Tech
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*AA-NxyUalSDzwJD9)
+![](99.System/Attachments/0!AA-NxyUalSDzwJD9.webp)
 
 Photo by Alex wong on Unsplash
 
@@ -28,7 +28,7 @@ If you’re interested in data engineering, cloud architecture and practical tec
 
 Don’t look at the answers below until you tried it yourself…(scroll down for answers)
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*LGkNO41iY5zAwp4l)
+![](99.System/Attachments/0!LGkNO41iY5zAwp4l.webp)
 
 Photo by Wim van 't Einde on Unsplash
 

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "AdvetureWorks"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8327ecb4-269d-41ae-a327-17e07065e60b"
+  }
+}

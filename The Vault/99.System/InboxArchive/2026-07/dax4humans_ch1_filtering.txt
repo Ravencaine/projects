@@ -1,0 +1,13 @@
+As mentioned in the previous section, Thinking In DAX, to be effective with DAX, one must think in terms of tables, rows and columns. Fundamental to DAX is the concept of filtering. You have already seen in the sections Creating a DAX Measure and Let’s Talk About Context how visuals can filter the rows available to a DAX measure. However, DAX also includes the ability to explicitly define filters as well. This is done primarily via the FILTER function. To learn how to use the FILTER function, follow these steps while referring to Figure 1.35:
+- These instructions continue from the previous section, Thinking in DAX. If you have not completed that section, simply download and open ThinkingInDAX.pbix from the Chapter 1 folder of the following GitHub repository: https://github.com/gdeckler/DAX-For-Humans/tree/main/book
+- Click on the Table view.
+- Select the Table table in the Data fly-out pane.
+- In the Table tools tab of the ribbon, select New table.
+- In the formula bar, replace the text with the following formula and then press the Enter key:
+Table 2 = FILTER( 'Table', 'Table'[Item] = "Banana" )
+- A new table is created in the table called Table 2.
+Figure 1.35: Creating a new table using FILTER.
+You have created a DAX calculated table. This new table, Table 2, only contains the Banana rows from the Table thanks to the use of the FILTER function.
+The FILTER function supports logical operators such as && for “and”, || for “or” and <> for “not”. For example, the following formula would return a table with both the Banana and Pickle rows:
+Table 3 =  FILTER(  'Table',  'Table'[Item] = "Banana" || 'Table'[Item] = "Pickle"  )  Conversely, the following formula only returns the Banana and Grapefruit rows:
+Table 4 = FILTER( 'Table', 'Table'[Item] <> "Pickle" )  You now understand the basics of filtering in DAX, which is a core concept central to “thinking in DAX”. Next up are X aggregators.

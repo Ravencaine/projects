@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Calculated objects in Power BI"
 source_url: https://medium.com/@2020ec0712/calculated-objects-in-power-bi-f92d04228349
 note_type: source
@@ -16,7 +17,7 @@ Calculated columns:
 Calculated columns, as the name suggests, are columns added to the chosen table based on some logic written in DAX. Like the other columns in the table, this will have as **many values** as there are rows in the table because calculated columns use a **row context**. They do increase model size, although Power BI’s VertiPaq engine compresses data, so the impact may not always be significant. They are **calculated during refresh** and are **stored in the model permanently**. It is important to analyze if a DAX-based calculated column is actually required. If the same task can be performed at the source or in the Power Query layer, it should be done there because it does not affect the performance as much as a calculated column. Some scenarios where a calculated column is the only feasible solution are:
 
 - **When a calculation depends on another DAX logic** like a calculated column or a measure — because measures are in the DAX ecosystem and Power Query cannot see them.
-- **When complex cross-table logic is involved** — if something needs to be calculated based on a relationship that only exists in the model, performing the calculation using DAX is the simplest way because doing it with Power Query (using merges) can be memory-intensive for large datasets.
+- **When complex cross-table logic is involved**: if something needs to be calculated based on a relationship that only exists in the model, performing the calculation using DAX is the simplest way because doing it with Power Query (using merges) can be memory-intensive for large datasets.
 
 Calculated tables:
 

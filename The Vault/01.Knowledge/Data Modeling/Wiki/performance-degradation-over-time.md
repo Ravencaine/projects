@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Advanced Dimensional Modeling for Retail Product Variants Pt 3"
 source_url: "https://medium.com/@jjr8888/advanced-dimensional-modeling-for-retail-product-variants-pt-3-d02abbc97319"
 note_type: error
@@ -24,9 +25,9 @@ No code changes — only data volume growth.
 
 Three compounding factors:
 
-1. **Product catalog growth** — more variants added to InventDimCombination over time
-2. **Price history accumulation** — PriceDiscTable grows with each new price agreement; more rows to filter in the ROW_NUMBER CTE
-3. **Stale statistics** — the query optimizer makes execution plans based on table statistics; as data grows, statistics become stale and the plan becomes suboptimal
+1. **Product catalog growth**: more variants added to InventDimCombination over time
+2. **Price history accumulation**: PriceDiscTable grows with each new price agreement; more rows to filter in the ROW_NUMBER CTE
+3. **Stale statistics**: the query optimizer makes execution plans based on table statistics; as data grows, statistics become stale and the plan becomes suboptimal
 
 ## Solution
 

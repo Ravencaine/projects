@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "m-code.pdf"
 note_type: gotcha
 tags: ["m-language", "operators", "types"]
@@ -22,7 +23,7 @@ M operators behave differently depending on the types of their operands. The `+`
 
 ## Why It Matters
 
-`1 + "2"` is an **error** — you cannot add a number and text. Mixing up the expected types is a common source of errors.
+`1 + "2"` is an **error**: you cannot add a number and text. Mixing up the expected types is a common source of errors.
 
 ## How to Handle It
 

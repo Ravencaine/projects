@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: atomic
 tags: [dax, fundamentals, relationships]
@@ -57,6 +58,6 @@ A relationship connects two tables on a key column (typically a foreign key rela
 - [[relatedtable]] — function
 - [[relatedtable]] — access related rows from the many side of a relationship
 - [[userexplicitrelationship]] — function (spells USERELATIONSHIP)
-- [[treatas]] — function
+- [[cross-fact-treatas-virtual-relationships]] — function
 - [[crossfilter]] — function
 - [[lookupvalue]] — function

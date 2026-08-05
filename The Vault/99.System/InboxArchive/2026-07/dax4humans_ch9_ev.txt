@@ -1,0 +1,90 @@
+Planned and earned value are common metrics used within project management circles, particularly in relation to the Earned Value Management (EVM) methodology. Planned value, PV, is the baseline cost, or budget, for a project. Obviously, PV plays a key role in determining whether a project is completed within its original budget. PV is also known as Budgeted Cost of Work Scheduled (BCWS).
+Earned value, EV, uses planned value as an input along with the percentage complete for the project, phase, or task to calculate the amount of budget that should have been consumed based upon what is and is not completed. Earned value is also known as Budgeted Cost of Work Performed (BCWP).
+It must be noted that the budget for a project includes the cost of physical materials such as hardware or other supplies as well as the costs of salaries or hourly wages. The calculations presented here only factors in salary and wages for the budget and earned value.
+If you have not already completed the section, Burndown Chart in this chapter, please do so now to create the Project and Dates tables. Next, use an Enter data query to enter the following data into a table named Assignments or download Chapter9_Data.xlsx from the GitHub repository for this book and import the data on the Assignments sheet.
+ID
+Work
+Resource
+3
+8
+Greg
+3
+8
+Jennifer
+3
+8
+Pam
+4
+80
+Greg
+4
+80
+Jennifer
+5
+40
+Jennifer
+7
+120
+Greg
+7
+120
+Jennifer
+8
+200
+Greg
+9
+160
+Jennifer
+11
+40
+Greg
+11
+40
+Pam
+11
+40
+Mike
+12
+120
+Pam
+12
+120
+Mike
+13
+80
+Pam
+Table 9.2: Assignments data
+Use another Enter data query to create a Costs table with the following data. Alternatively, import the Costs sheet from Chapter9_Data.xlsx.
+Hourly Cost
+Resource
+95
+Greg
+85
+Jennifer
+75
+Pam
+75
+Mike
+Table 9.3: Costs data
+Create a relationship between the ID columns of the Project and Assignments tables. Create another relationship between the Resource columns of the Costs and Assignments tables and ensure that this relationship is bi-directional. Your semantic model should now look like the following:
+Figure 9.3: Semantic model relationships
+Now, create the following measure:
+PV =  VAR __Table =  ADDCOLUMNS(  ADDCOLUMNS(  'Assignments',  "__HourlyCost", RELATED( 'Costs'[Hourly Cost] )  ),  "__PV", [Work] * [__HourlyCost]  )  VAR __Result = SUMX( __Table, [__PV] ) RETURN  __Result  The PV measure calculates the planned value by multiplying the Work column from the Assignments table by the Hourly Cost column from the Costs table. This is done for each row of the Assignments table and then SUMX is used to compute the total planned value within the current context.
+The RELATED function returns a value from a related table. This is used to retrieve the Hourly Cost from the Costs table for the associated resource in the Assignments table.
+Now create a Matrix visualization and place the Project, Phase, and Name columns from the Project table into the Rows field well and the PV measure in the Values field well.
+Figure 9.4: Planned value
+The matrix displays the planned value or budget for each task, phase, and the entire project. However, another way to visualize the budget for a project is the cumulative planned value over time. To demonstrate visualizing the cumulative planned value over time, create the following measure:
+Cumulative PV =  VAR __MaxDate = MAX( 'Project'[Finish] )  VAR __Date = MAX( 'Dates'[Date] )  VAR __Table =  ADDCOLUMNS(  ADDCOLUMNS(  FILTER( 'Project', 'Project'[Start]   "__TaskDays",  ( [Finish] - [Start] ) + 1,  "__Days",  ( __Date - [Start] ) + 1  ),  "__PV",  SWITCH( TRUE(),  __Date > __MaxDate, BLANK(),  [__Days] >= [__TaskDays], [PV],  [__Days] / [__TaskDays] * [PV]  )  )  VAR __Result = SUMX( __Table, [__PV] ) RETURN  __Result  This measure calculates the planned value for each project task using the PV measure created earlier. The budget consumption is idealized such that all work is expected to be completed on time. Thus, the planned value for a task in progress is the current percentage of the overall days for a task multiplied by the total planned value (PV) for that task. This percentage calculation is handled by calculating the total number of days for a task (__TaskDays) and the current number of days since the start of the task, __Days.
+Now create a Line chart with the Date column from the Dates table in the X-axis and the Cumulative PV measure as the Y-axis. Your chart should look like the following:
+Figure 9.5: Cumulative planned value
+We can use what we have learned about calculating planned value to calculate earned value. The following measure demonstrates how to calculate earned value without assuming the creation of a planned value measure.
+EV =  VAR __Table =  ADDCOLUMNS(  'Project',  "__PV",  VAR __Table =  ADDCOLUMNS(  ADDCOLUMNS(  RELATEDTABLE( 'Assignments' ),  "__HourlyCost", RELATED( 'Costs'[Hourly Cost] )  ),  "__PV", [Work] * [__HourlyCost]  )  VAR __Result = SUMX( __Table, [__PV] )  RETURN  __Result  )  VAR __Result = SUMX( __Table, [%] * [__PV] ) RETURN  __Result  The EV measure is like the PV measure created earlier. However, the difference is that the planned value is calculated as a calculated column added to the Project table. The earned value then is simply the percentage completion for the task, the % column from the Project table, multiplied by the planned value for the task, phase, or project.
+If a PV measure has already been created, the formula can be simplified as follows:
+EV Alt 1 =  VAR __Table =  ADDCOLUMNS(  'Project',  "__PV", [PV]  )  VAR __Result = SUMX( __Table, [%] * [__PV] ) RETURN  __Result  It should be noted that there are different methods used to calculate earned value rather than simply multiplying the percent complete by the planned value. For example, some project management methodologies specify that tasks in progress have an earned value of 20% of planned value, regardless of the actual completion percentage. This version of earned value is demonstrated in the following measure:
+EV Alt 2 =  VAR __Table =  ADDCOLUMNS(  ADDCOLUMNS(  'Project',  "__PV", [PV]  ),  "__EV",  SWITCH( TRUE(),  [%] = 1, [__PV],  [%] > 0, [__PV] * .2,  0  )  )  VAR __Result = SUMX( __Table, [__EV] ) RETURN  __Result  Create a Matrix visualization and place the Project, Phase, and Name columns from the Project table into the Rows field well and the three EV measures in the Values field well.
+Figure 9.6: Earned value
+We can also visualize the cumulative earned value over time in the same way as planned value with the following measure:
+Cumulative EV =  VAR __ReportingDate = DATE( 2025, 4, 1 )  VAR __MaxDate = MAX( 'Project'[Finish] )  VAR __Date = MAX( 'Dates'[Date] )  VAR __Table =  ADDCOLUMNS(  ADDCOLUMNS(  FILTER('Project','Project'[Start]   "__TaskDays",  ( [Finish] - [Start] ) + 1,  "__Days",  ( __Date - [Start] ) + 1  ),  "__EV",  SWITCH( TRUE(),  __Date > __MaxDate, BLANK(),  [__Days] >= [__TaskDays], [EV],  [__Days] / [__TaskDays] * [EV]  )  )  VAR __Result = IF( __Date > __ReportingDate, BLANK(), SUMX(__Table, [__EV]) ) RETURN  __Result  Now create a Line chart with the Date column from the Dates table in the X-axis and the Cumulative EV measure as the Y-axis.
+Figure 9.7: Cumulative earned value
+Note that Figure 9.7 shows the Cumulative EV measure as the light blue line and a Cumulative EV Alt measure as the dark blue line. The Cumulative EV Alt measure is the same as the Cumulative EV measure except that all references to the EV measure are replaced by the EV Alt 2 measure. You can also add the Cumulative PV measure to the Line chart to analyze the current state of the project.
+Now that we have established how to calculate the baseline metrics of planned value and earned value, let’s next turn our attention to calculating variances.

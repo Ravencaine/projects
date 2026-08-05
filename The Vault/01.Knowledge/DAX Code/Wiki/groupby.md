@@ -1,14 +1,50 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+
+created: 2026-07-28
+updated: 2026-08-02
+source: "[[beginning-big-data-with-power-bi-and-excel-2013-dunlop|Beginning Big Data with Power BI and Excel 2013]]"
+tags: ["dax", "function", "table", "groupby", "aggregation"]
 note_type: function
-tags: [dax, function, table]
+
 ---
 
-# GROUPBY
+# GROUPBY — Manual Grouping in Iterators
 
-Applies to: Calculated column Calculated table Measure Visual This function is discouraged for use in visual calculations as it likely returns The GROUPBY function is similar to the SUMMARIZE function. However, GROUPBY does
+Groups rows and computes aggregations within iterator functions.
 
-## Return Value
+## Signature
 
-meaningless results. The GROUPBY function is similar to the SUMMARIZE function. However, GROUPBY does not do an implicit CALCULATE for any extension columns that it adds. GROUPBY permits a new function, CURRENTGROUP, to be used inside aggregation functions in the extension columns that it adds. GROU
+```dax
+GROUPBY( <Table>, [<GroupBy_Column1>], [<Name1>, <Expression1>], ... )
+```
+
+## Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| Table | Table | Table to group. |
+| GroupBy_Column | Column | Column to group by. |
+| Name | Text | Output column name. |
+| Expression | Any | Expression evaluated per group. |
+
+## Examples
+
+```dax
+Category Summary :=
+GROUPBY(
+    'Sales',
+    'Sales'[Category],
+    "Total", SUMX( CURRENTGROUP(), 'Sales'[Amount] )
+)
+```
+
+## Notes
+
+- Requires SUMX(CURRENTGROUP(), ...) for aggregations inside GROUPBY
+- CURRENTGROUP() refers to the current group within the iterator
+- Use SUMMARIZECOLUMNS() instead for simpler syntax
+
+## Related
+
+- [[SUMMARIZECOLUMNS]]
+- [[SELECTCOLUMNS]]

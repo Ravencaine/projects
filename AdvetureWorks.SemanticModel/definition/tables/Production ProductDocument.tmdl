@@ -1,0 +1,44 @@
+table 'Production ProductDocument'
+	lineageTag: 4851e9bc-042a-428a-8165-29f027eb1d3c
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b3e3913-0f21-4cc4-8a0b-873936a9c832
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocumentNode
+		dataType: string
+		lineageTag: 2a7bd6be-1160-490c-8a9e-ba9bd253ab0c
+		summarizeBy: none
+		sourceColumn: DocumentNode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a16022f1-7858-45a6-bf50-731fde90a3b1
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 3723afc7-9fd6-475c-8afe-d83a82ded3f6
+			defaultHierarchy: LocalDateTable_5f1a9d7c-5f0c-46e0-91fd-ec07c263afa4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production ProductDocument' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "ProductDocument"]}[Data]
+				in
+				  #"Navigation 2"
+

@@ -10,7 +10,7 @@ Processed: "Unprocessed"
 ---
 ## When to Use Each
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3LDvHJgZfTaYF5zQMTWCjA.jpeg)
+![](99.System/Attachments/1!3LDvHJgZfTaYF5zQMTWCjA.jpeg.webp)
 
 Photo by RDNE Stock project: https://www.pexels.com/photo/television-screen-with-display-7947955/
 
@@ -119,7 +119,7 @@ That’s 4x slower.
 
 Use Star Schema when:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*MnF-O2CPXZh43vnW6B7T4Q.png)
+![](99.System/Attachments/1!MnF-O2CPXZh43vnW6B7T4Q.png.webp)
 
 **Rule of thumb:** If your data is “flat” (no hierarchy), use Star Schema.
 
@@ -134,7 +134,7 @@ Use Star Schema when:
 
 Use Snowflake Schema when:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cAyrwa8Y8LmWkGNTzEMUWw.png)
+![](99.System/Attachments/1!cAyrwa8Y8LmWkGNTzEMUWw.png.webp)
 
 **Rule of thumb:** If your data has “hierarchy” (nested levels), use Snowflake Schema.
 
@@ -142,7 +142,7 @@ Use Snowflake Schema when:
 
 Before you present your Power BI report, ask yourself:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*po4RNsxtcDpUAp-JO4KHxg.png)
+![](99.System/Attachments/1!po4RNsxtcDpUAp-JO4KHxg.png.webp)
 
 **My rule:** Use Star Schema 90% of the time. Use Snowflake Schema 10% of the time.
 

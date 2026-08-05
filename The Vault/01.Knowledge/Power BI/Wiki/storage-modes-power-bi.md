@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Storage modes in Power BI"
 source_url: https://medium.com/@2020ec0712/storage-modes-in-power-bi-d32a57213041
 note_type: source
@@ -23,17 +24,17 @@ In Import mode, instead of querying the source each time, we query it once and *
 
 Composite model:
 
-In a star schema data model, there are one or two fact tables and they have massive number of rows. There are also quite a few dimension tables, but they have less number of rows. How about storing the fact tables in a direct query mode and the smaller dimension tables in import mode? This is what composite model lets you do — **store some tables in import mode and some in direct query mode**, harnessing the benefits of both the modes seamlessly. The tables stored in import mode will be queried faster while those stored in direct query mode will take more time. But overall, the **performance and memory consumption will be highly optimized**. Generally, fact tables require frequent refreshes while dimension tables do not change as much and do not require frequent refreshes. Hence, dimension tables in import mode need to be refreshed once in a while and fact tables in direct query mode get updated automatically. As expected, the support for features like Power Query transformations and DAX logic is also **mixed** — with the respective tables in each mode offering its own benefits and disadvantages. Composite models are therefore a **preferred choice for many business models**.
+In a star schema data model, there are one or two fact tables and they have massive number of rows. There are also quite a few dimension tables, but they have less number of rows. How about storing the fact tables in a direct query mode and the smaller dimension tables in import mode? This is what composite model lets you do — **store some tables in import mode and some in direct query mode**, harnessing the benefits of both the modes seamlessly. The tables stored in import mode will be queried faster while those stored in direct query mode will take more time. But overall, the **performance and memory consumption will be highly optimized**. Generally, fact tables require frequent refreshes while dimension tables do not change as much and do not require frequent refreshes. Hence, dimension tables in import mode need to be refreshed once in a while and fact tables in direct query mode get updated automatically. As expected, the support for features like Power Query transformations and DAX logic is also **mixed**: with the respective tables in each mode offering its own benefits and disadvantages. Composite models are therefore a **preferred choice for many business models**.
 
 The three storage modes — Direct query mode, Import mode and Composite model are used in building the data models in both [semantic model](https://medium.com/@2020ec0712/reports-semantic-models-and-power-bi-service-ce8639e5cf69) files as well as report files that have data in them. Although **live connection is not a storage mode**, it is generally associated with them. Thin reports or live connected reports have only visuals in them. Their data is stored in semantic model files published to Power BI service.
 
 
 A simple way to summarize is:  
-**Import mode** — Data and Model belong to the Power BI file.
+**Import mode**: Data and Model belong to the Power BI file.
 
-**Direct Query mode** — Data belongs to the source (the data source) and the model belongs to the Power BI file.
+**Direct Query mode**: Data belongs to the source (the data source) and the model belongs to the Power BI file.
 
-**Live Connection** — Data and the model belong to the source (the semantic model to which the report is connected).
+**Live Connection**: Data and the model belong to the source (the semantic model to which the report is connected).
 
 You can tell if a table in a model is in import mode or direct query mode by going to the properties pane of that table in model view or by seeing the small icon on top of the table in the model relationship diagram in model view. In live connected reports, below the report canvas and the list of pages in the report in the report view, the semantic model to which the particular report is connected is specified along with the workspace in which the semantic model resides.
 

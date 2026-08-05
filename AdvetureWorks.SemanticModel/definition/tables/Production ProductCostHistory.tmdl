@@ -1,0 +1,75 @@
+table 'Production ProductCostHistory'
+	lineageTag: fbe97adc-c10e-4242-8e32-2ea3754f9b3e
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 81ddad5f-f23c-404f-bba8-7cf5e9a1a14b
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4b87d6d6-9bdc-4f0a-bab4-6d5fe5181643
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variation
+			isDefault
+			relationship: dad5d951-b693-4d9b-a8c4-16ef45c4ad17
+			defaultHierarchy: LocalDateTable_66e394fb-4506-4728-b431-5f25c5daa56d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 05b5e4b8-94f6-43b8-9f72-be07638a42ef
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variation
+			isDefault
+			relationship: 34d3a664-5003-445d-827d-14fa028b7f4f
+			defaultHierarchy: LocalDateTable_ee2e8472-bc57-4634-97df-6eb28176110a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column StandardCost
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: bd9c0543-7b72-4665-9c0a-34c90a0f6a39
+		summarizeBy: sum
+		sourceColumn: StandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a42a2cda-bcd3-4fb6-b495-71f34cd4acd0
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: f3621001-7b17-400f-a14f-791de8e8112e
+			defaultHierarchy: LocalDateTable_411a1a3a-f7c7-4b6e-84aa-c307fd571ecf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production ProductCostHistory' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "ProductCostHistory"]}[Data]
+				in
+				  #"Navigation 2"
+

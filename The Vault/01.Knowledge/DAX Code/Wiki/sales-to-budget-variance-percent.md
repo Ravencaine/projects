@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Advanced Power BI DAX Measures for Retail Analytics Pt 1"
 source_url: "https://medium.com/@jjr8888/advanced-power-bi-dax-measures-for-retail-analytics-pt-1-297936931171"
 note_type: pattern
@@ -42,4 +43,4 @@ IF(
 ## Related
 
 - [[conditional-variance-display-percent-hide]] — hiding -100% values from visuals
-- [[sales-to-budget-variance-percent]] — extended version with budget MTD/YTD variants
+- sales-to-budget-variance-percent — extended version with budget MTD/YTD variants

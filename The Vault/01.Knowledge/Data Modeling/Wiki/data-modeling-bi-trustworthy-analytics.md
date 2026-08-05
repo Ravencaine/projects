@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Data Modeling for Business Intelligence (BI): Build Trustworthy, Query-Friendly Analytics"
 source_url: https://medium.com/@hanxuyang0826/data-modeling-for-business-intelligence-bi-build-trustworthy-query-friendly-analytics-e5a8a340fc3e
 note_type: source

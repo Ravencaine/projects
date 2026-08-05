@@ -1,30 +1,50 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+
+created: 2026-07-28
+updated: 2026-08-02
+source: "[[beginning-big-data-with-power-bi-and-excel-2013-dunlop|Beginning Big Data with Power BI and Excel 2013]]"
+tags: ["dax", "function", "partition", "group", "orderby"]
 note_type: function
-tags: [dax, function, window]
+
 ---
 
-# PARTITIONBY
+# PARTITIONBY — Iterator Grouping
 
-Defines the columns that are used to partition a window function's relation parameter.
+Defines groups within an iterator for independent ordering.
 
-## Syntax
+## Signature
 
 ```dax
-PARTITIONBY ( [<partitionBy_columnName>[, ...]] )
+<IteratorFunction>(
+    <Table>,
+    <Expression>,
+    ORDERBY( <Column>, <Order>, PARTITIONBY( <Column> ) )
+)
 ```
 
-## Parameters
+## Examples
 
-| Term | Definition |
-|------|------------|
-| `partitionBy_columnName` | (Optional) The name of an existing column to partition the window function's relation. RELATED() may be used to refer to a column in a related table. |
+```dax
+Row Number Per Category :=
+ADDCOLUMNS(
+    'Sales',
+    "__RN",
+    RANKX(
+        ALL( 'Sales'[Category] ),
+        CALCULATE( COUNTROWS( 'Sales' ) ),
+        ,
+        ASC
+    )
+)
+```
 
-## Return Value
+## Notes
 
-This function does not return a value — it is used as a clause within window functions.
+- `PARTITIONBY()` groups rows for separate ranking/ordering within each group
+- Similar to SQL's `PARTITION BY` clause
+- DAX natively supports `PARTITIONBY` inside `ORDERBY` in newer versions
 
-## Remarks
+## Related
 
-Can only be used within a window function expression. See OFFSET for an example. Used alongside ORDERBY and optionally MATCHBY.
+- [[ORDERBY]]
+- [[RANKX]]

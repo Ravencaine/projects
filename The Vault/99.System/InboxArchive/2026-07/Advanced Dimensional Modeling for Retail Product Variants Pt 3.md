@@ -12,7 +12,7 @@ Processed: "Unprocessed"
 
 A conversational technical guide to production-ready product dimensions
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*0r1UGXgArcNnwCwt)
+![](99.System/Attachments/0!0r1UGXgArcNnwCwt.webp)
 
 Photo by Hanson Lu on Unsplash
 

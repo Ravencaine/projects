@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Enhancing Data Narratives with Power BI Tooltips"
 source_url: https://medium.com/@markchen69/enhancing-data-narratives-with-power-bi-tooltips-43997a01a967
 note_type: source
@@ -32,6 +33,12 @@ Once you’ve designed your tooltip page, attach it to your visual via the Forma
 
 ## Best Practices for Power BI Tooltips
 
-Keep it Light: While it’s tempting to pack in data, remember that tooltips are supplementary by nature. Include only the most pertinent information to maintain fast load times and user focus.
+Keep it Light: While it's tempting to pack in data, remember that tooltips are supplementary by nature. Include only the most pertinent information to maintain fast load times and user focus.
 
 Stay Dynamic: Use the fields from the primary visual to inform the tooltip content, creating a responsive experience.
+
+## Related Notes
+
+- [[tooltip-design-concise-and-relevant]] — atomic: concise tooltips are supplementary, not primary communication (Janvi Gupta)
+- [[unlock-power-multiple-tooltips-power-bi]] — multiple tooltip pages per visual
+- [[label-formatting-units-truncation-tooltips]] — labels carry units; tooltips carry the detail

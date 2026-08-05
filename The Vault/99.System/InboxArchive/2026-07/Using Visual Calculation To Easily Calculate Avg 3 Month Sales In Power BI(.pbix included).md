@@ -19,7 +19,7 @@ how Visual Calculation simplifies the process:
 
 This is what we wish to achieve.
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*42pam0CACVZ61UwW8Xgwbw.png)
+![](99.System/Attachments/1!42pam0CACVZ61UwW8Xgwbw.png.webp)
 
 **🎁** [**Get friend links for all of our 1500> Power BI learning articles here**](https://powerbi-masterclass.short.gy/learning-database?utm_source=medium&utm_medium=medium-post&utm_campaign=database-medium-post-start) **🎁**
 
@@ -36,7 +36,7 @@ Happy learning!
 
 ## 1\. About The Table Used:
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*QvrgcVmN4xW3gyFKtpAtcA.png)
+![](99.System/Attachments/1!QvrgcVmN4xW3gyFKtpAtcA.png.webp)
 
 - **Year**: All entries are from 2007.
 - **Month**: Data is broken down by month from January to August.
@@ -45,14 +45,14 @@ Happy learning!
 ## 2\. Creating The Table:
 
 - Now in a **Table** visualization add Year, Month and Total Sales Columns.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*W7GZoj1K6xJ1pORW2eKoaw.gif)
+![](99.System/Attachments/1!W7GZoj1K6xJ1pORW2eKoaw.gif)
 
 Now in a Table visualization add Year, Month and Total Sales Columns
 
 ## 3\. Adding Visual Calculation:
 
 - Select the table **right click** and select **New visual calculation.**
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*pTzKO57d-4NlhHPQ5IyDvA.gif)
+![](99.System/Attachments/1!pTzKO57d-4NlhHPQ5IyDvA.gif)
 
 Select the table right click and select New visual calculation
 
@@ -70,14 +70,14 @@ This is how the DAX works:
 - `**ISATLEVEL([Month])**`: This acts as a safety check. It returns `TRUE` only if the current row in the visual is at the `[Month]` level. If the visual rolls up to a higher level (like `[Year]`), it returns `FALSE`, and the calculation returns blank. This prevents misleading averages from appearing on total rows.
 - `**MOVINGAVERAGE([Total Sales], 3)**`: This section calculates the average of the current row's `[Total Sales]` and the previous 2 rows' sales (a 3-row moving window total).
 - `**FORMAT(..., "#,#.0")**`: This portion converts the resulting average into a text string formatted with thousands separators and exactly one decimal place (e.g., `583.3`).
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*P3pacVrZURn15TBsZ9pHWQ.gif)
+![](99.System/Attachments/1!P3pacVrZURn15TBsZ9pHWQ.gif)
 
 Now create the Avg Past 3 Months DAX
 
 ## 4\. Completion Step:
 
 - Now select Back to report where you can easily visualize this data**.**
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*-15IE91XEIy8vTz4rUw8EQ.gif)
+![](99.System/Attachments/1!-15IE91XEIy8vTz4rUw8EQ.gif)
 
 Now select Back to report where you can easily visualize this data
 

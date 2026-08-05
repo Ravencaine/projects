@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Microsoft Fabric: The Complete Guide to Microsoft’s Unified Data Platform"
 source_url: https://medium.com/@kanerika/microsoft-fabric-the-complete-guide-to-microsofts-unified-data-platform-a5693dee78a5
 note_type: source

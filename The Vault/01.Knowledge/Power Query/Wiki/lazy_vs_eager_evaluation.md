@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "m-code.pdf"
 note_type: atomic
 tags: ["m-language", "evaluation"]
@@ -8,7 +9,7 @@ tags: ["m-language", "evaluation"]
 
 # Lazy vs Eager Evaluation
 
-M uses different evaluation strategies depending on the construct. Lists, records, and let expressions use **lazy evaluation** — they are only computed when accessed. All other expressions use **eager evaluation** — they are computed immediately.
+M uses different evaluation strategies depending on the construct. Lists, records, and let expressions use **lazy evaluation**: they are only computed when accessed. All other expressions use **eager evaluation**: they are computed immediately.
 
 ## Key Points
 

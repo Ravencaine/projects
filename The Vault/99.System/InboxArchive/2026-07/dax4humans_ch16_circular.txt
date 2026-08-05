@@ -1,0 +1,33 @@
+A circular dependency in Power BI occurs when two or more calculated columns or measures depend on each other either directly or indirectly, creating a loop that the calculation engine cannot resolve. For example, if Column1 references Column2, and Column2 references Column1, the model enters a state where it doesn’t know which calculation to evaluate first. This results in an error because DAX calculations require a clear, acyclic order of operations.
+Circular dependencies can also arise when using calculated columns for relationships, creating relationships involving calculated tables, or when using the CALCULATE function in calculated columns. Avoiding or resolving circular dependencies typically involves redesigning the logic to break the cycle, simplifying dependencies, or shifting calculations to a different layer such as Power Query.
+To explore circular dependencies, use an Enter data query to create the following table called Table:
+Index
+Value
+1
+One
+2
+Two
+3
+Three
+4
+Four
+5
+One
+6
+Two
+7
+Three
+8
+Four
+9
+One
+10
+Two
+Table 16.1: Table data
+Now create the following two identical columns:
+Val1 = CALCULATE( MAX( 'Table'[Value] ), 'Table'[Index] > 1 ) Val2 = CALCULATE( MAX( 'Table'[Value] ), 'Table'[Index] > 1 )  Unexpectedly, you receive a circular dependency error creating the second column.
+Figure 16.8: Circular dependency error
+There are long-winded explanations for exactly why this occurs, but the easy solution is to just not use the CALCULATE function. Creating the following identical columns returns no errors.
+Val3 = MAXX( FILTER( 'Table', [Index] > 1 && [Index] = EARLIER( 'Table'[Index] ) ), [Value] ) Val4 = MAXX( FILTER( 'Table', [Index] > 1 && [Index] = EARLIER( 'Table'[Index] ) ), [Value] )  This is not to say that using the CALCULATE function in calculated columns will always produce circular dependency errors. Indeed, the following two identical columns produce no circular dependency errors:
+Val5 = CALCULATE( MAX( 'Table'[Value] ), ALL( 'Table' ), 'Table'[Index] > 1 ) Val6 = CALCULATE( MAX( 'Table'[Value] ), ALL( 'Table' ), 'Table'[Index] > 1 )  Again, you may be interested in the specific details of why and there are plenty of articles available on the internet to explain those specifics. But the easy answer is, don’t use the CALCULATE function in calculated columns and you won’t run into this issue.
+Let’s now turn our attention to the DAX query view.

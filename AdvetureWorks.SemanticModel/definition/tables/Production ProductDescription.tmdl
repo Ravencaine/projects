@@ -1,0 +1,52 @@
+table 'Production ProductDescription'
+	lineageTag: 9417f73e-fb49-4388-bc53-85005736d2b6
+
+	column ProductDescriptionID
+		dataType: int64
+		formatString: 0
+		lineageTag: bd83ee6e-f977-4029-9146-8c71d9dc3b69
+		summarizeBy: none
+		sourceColumn: ProductDescriptionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: a8e6e7a1-9c5d-42ae-9457-46f485bdb44d
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: 1e5f4c79-b635-4177-9d4d-e302009029a3
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5e4647f7-4bb7-45d8-9233-03af00573fd7
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: d5498a9e-95a3-49e6-9afe-9d3576b93f74
+			defaultHierarchy: LocalDateTable_ccec790b-dd43-424f-bdf0-54943882d4ab.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production ProductDescription' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "ProductDescription"]}[Data]
+				in
+				  #"Navigation 2"
+

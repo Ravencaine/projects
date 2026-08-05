@@ -1,0 +1,83 @@
+table 'Sales SalesTaxRate'
+	lineageTag: 53e923e0-1a94-47bb-b205-8b87223bdf07
+
+	column SalesTaxRateID
+		dataType: int64
+		formatString: 0
+		lineageTag: 0270b370-dcc0-4082-9670-5499f28f2676
+		summarizeBy: count
+		sourceColumn: SalesTaxRateID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvinceID
+		dataType: int64
+		formatString: 0
+		lineageTag: b15b766c-8347-4572-8226-8af316536652
+		summarizeBy: none
+		sourceColumn: StateProvinceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TaxType
+		dataType: int64
+		formatString: 0
+		lineageTag: 429156ff-8782-4ac2-a6d9-ec75dd707032
+		summarizeBy: sum
+		sourceColumn: TaxType
+
+		annotation SummarizationSetBy = Automatic
+
+	column TaxRate
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 0068a830-5ca1-4f8f-820c-b5e3b955d70b
+		summarizeBy: sum
+		sourceColumn: TaxRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column Name
+		dataType: string
+		lineageTag: d89e9e65-d6cc-4f1d-b373-3efc91971f2a
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: ca722033-e8cd-4fe4-8134-949e2038158c
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f536d9db-f13c-479e-9f52-b217cf2cd0bd
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 5c607c84-5198-434b-9ce6-9447455fe59a
+			defaultHierarchy: LocalDateTable_6bc17248-0f14-465e-a0ef-0c184ac8ac9f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales SalesTaxRate' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Sales", Item = "SalesTaxRate"]}[Data]
+				in
+				  #"Navigation 2"
+
+	annotation PBI_ResultType = Table
+

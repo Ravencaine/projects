@@ -13,13 +13,13 @@ Processed: "Unprocessed"
 Power BI allows you to uncover insights from data using natural language. In this article, we will look at two ways in which this can be done — Power BI Q&A and Power BI Copilot.  
 *Note: As of this month’s update, Microsoft has officially started deprecating the legacy Q&A visual and it is said that Q&A will retire in December 2026. They are encouraging everyone to move toward the Copilot Narrative and Chat visuals instead because LLMs (Copilot) are generally better at handling ambiguous human language than the older, rule-based linguistic schemas of Q&A.*
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*CNO3pXsqyVfxiqOOPncUfA.png)
+![](99.System/Attachments/1!CNO3pXsqyVfxiqOOPncUfA.png.webp)
 
 If you plan to use the Q&A visual until December, here is what you need to know:
 
 ### Power BI Q&A:
 
-![](https://miro.medium.com/v2/resize:fit:1226/format:webp/0*6tBut8V9H1Kk6HNN.png)
+![](99.System/Attachments/0!6tBut8V9H1Kk6HNN.png.webp)
 
 ***What is Power BI Q&A?***  
 Power BI Q&A feature allows users to interact with their data using natural language queries, leveraging AI to interpret user questions and generate visual responses.
@@ -62,7 +62,7 @@ Power BI Q&A feature allows users to interact with their data using natural lang
 
 ***Linguistic Schema:***
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*GacdRXntABxQmN54.png)
+![](99.System/Attachments/0!GacdRXntABxQmN54.png.webp)
 
 When a dataset is imported or connected to, Power BI creates a linguistic schema based on the structure of the dataset. A linguistic schema describes terms and phrases that Q&A should understand for objects within a dataset, including parts of speech, synonyms and phrasings. We can edit the linguistic schema to improve the Q&A answers for even better interactions. They are saved in a flexible format called.yaml format. It is not mandatory to edit the linguistic schema and as a beginner, you can definitely skip this step. But, if you want your answers to be more business friendly and accurate, you can edit it according to your organization’s needs.  
 • In the Modeling tab, select Linguistic Schema > Export linguistic schema. Open the file in an editor or VS Code.  
@@ -80,7 +80,7 @@ Now that Q&A is deprecating, here is how you can take advantage of Copilot in Po
 
 ### Power BI Copilot:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*T7XajdJvmhIGk8Jc.png)
+![](99.System/Attachments/0!T7XajdJvmhIGk8Jc.png.webp)
 
 ***What is Power BI Copilot?  
 ***Copilot in Power BI integrates generative AI capabilities into the Power BI experience, enabling users to create reports, analyze data, and get insights.
@@ -126,7 +126,7 @@ Now that Q&A is deprecating, here is how you can take advantage of Copilot in Po
 
 ***Prep data for AI:***
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*TI1eX-yoN5MZT65R.png)
+![](99.System/Attachments/0!TI1eX-yoN5MZT65R.png.webp)
 
 In the Copilot tab in Power BI desktop, there is a feature called ‘Prep data for AI’. This can help improve Copilot insights by prepping the model to be AI-ready.  
 ⁃Simplify the data schema:Improve response accuracy by deselecting fields Copilot doesn’t need to analyze.  
@@ -140,7 +140,7 @@ In the Copilot tab in Power BI desktop, there is a feature called ‘Prep data f
 • **Data Privacy:** Your data stays within the Microsoft Trust Boundary and is not used to train the public LLM, though Copilot analyzes your data values to generate insights.  
 • **Unsupported Scenarios:** Copilot is not supported in sovereign clouds (e.g., Azure Government) and in Power BI Embedded scenarios.
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*GVUwz4QzCe7qc-6uymdwjg.png)
+![](99.System/Attachments/1!GVUwz4QzCe7qc-6uymdwjg.png.webp)
 
 To summarize:  
 Use Q&A for quick data exploration and ad-hoc queries.  

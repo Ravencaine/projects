@@ -1,0 +1,62 @@
+As the complexity and scale of Power BI solutions grows, so too does the demand for faster, smarter ways to develop DAX (Data Analysis Expressions) code. Luckily, with the transformative technology of generative AI and large language models (LLMs), many mundane tasks can now be automated, including accelerating and democratizing DAX development. From generating first drafts of measures to debugging logic and optimizing performance, AI is becoming a valuable partner in the modern Power BI developer’s toolkit. But while AI can suggest syntax and structures, it still requires a human expert to ensure business logic, context, and intent are correctly applied.
+While DAX code can be generated using simple prompts to common AI chatbots such as ChatGPT, Copilot, Claude Sonnet, and Gemini, such DAX code is generally generic and must be adapted to work within a specific semantic model. However, there is a process that can provide much more accurate DAX code that works perfectly within specific semantic models. This process was pioneered by patron Brian Julius and is the process covered in this section.
+The trick to this process is to provide the chatbot with more information about the semantic model so that the DAX measure works perfectly with that semantic model. We can use a business intelligence model (.bim) file for this purpose. A BIM file is a text file in JSON format that describes a Power BI semantic model. We can generate a BIM file quite easily in one of two ways.
+One way to generate a BIM file is to use a preview feature in Power BI Desktop. This preview feature is the Power BI Project (.pbip) save option. This preview feature can be activated by going to File | Options and settings | Options in Power BI Desktop and then in the Options dialog, check the box for Power BI Project (.pbip) save option. Importantly, do NOT check the two checkboxes below this feature.
+Figure 16.1: Power BI Project (.pbip) save option preview feature
+After this feature is activated, you can use File | Save as to save the file as a Power BI Project (.pbip) file. Doing so creates the .pbip file as well as two folders, one ending in .Report and one ending in .SemanticModel. Inside the .SemanticModel folder you will find a model.bim file.
+The second way to generate a BIM file is to use Tabular Editor. Even the free version of Tabular Editor (Tabular Editor 2.x) can generate a BIM file quite easily. Tabular Editor 2.x can be downloaded here: https://tabulareditor.github.io/TabularEditor/.
+Once installed, simply connect Tabular Editor to the Power BI analysis services instance, or open your Power BI file in Power BI Desktop and choose Tabular Editor from the External Tools tab of the ribbon. Once connected, choose File | Save As… to save the .bim file.
+Figure 16.2: Creating a BIM file in Tabular Editor 2.x
+Patron Recommendation
+Alexis Olson finds that the BIM files can be bloated, so he runs a script in Tabular Editor to clean up much of the junk before saving it. You can often cut up to 80% of the file size by removing stuff like the linguistic metadata: https://gist.github.com/AlexisOlson/8cff91128d02d0b1857a93101309eb7b.
+To explore a specific scenario of using AI to generate DAX code, import the DateTimeTable, Dim_Department, and Tracking_History sheets from the Excel spreadsheet, Chapter16_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Create a relationship between the Dim_Department and Tracking_History tables using the common Department ID columns in both tables. Your semantic model should look like the following:
+Figure 16.3: Scenario semantic model
+You may recognize this model and scenario from Chapter 15. In fact, this is the exact same data and semantic model as used in the General example section of Chapter 15. Recall that there were nine iterations of improving the measure performance to go from a measure that took over 10 minutes to return to one that took mere seconds to return.
+Save your work and then generate the BIM file for this model using one of the two techniques covered earlier in this section. Now that you have the BIM file, we can use this BIM file while prompting the chatbot. In our case, we are using ChatGPT 4o which supports multi-modal inputs. If the chatbot only supports text, you can copy the contents of the BIM file and paste these contents into the chatbot prompt.
+To upload the BIM file in ChatGPT 4o, use the + icon and then choose Upload from computer:
+Figure 16.4: Uploading a file in ChatGPT 4o
+The following is an actual chatbot conversation with ChatGPT 4o after uploading the specified BIM file:
+Start of Chat
+The attached BIM file contains the model information for a Power BI semantic model. For a visual containing the Date column from the DateTimeTable table as the x-axis and the Responsible Department column from the Dim_Department table as the legend, create a DAX measure that will be used as the y-axis. This measure should count the number of transactions in the Tracking_History table that were performed by each department during the hourly time interval specified in the x-axis.
+ChatGPT said:
+Based on the BIM model structure, we have the following:
+- DateTimeTable[Date]: to be used as the x-axis (assumed to contain datetime values, down to hour level).
+- Dim_Department[Responsible Department]: used as the legend.
+- Tracking_History has:
+Start Date: the datetime of each transaction.
+- Department ID: which links to Dim_Department[Department ID].
+To create a measure that counts the number of transactions per department and hour, we assume the following relationships:
+- Tracking_History[Department ID] → Dim_Department[Department ID]
+- Tracking_History[Start Date] → DateTimeTable[Date] (on datetime granularity)
+Here is the DAX measure:
+Transactions Per Hour = CALCULATE(  COUNTROWS(Tracking_History),  TREATAS(  VALUES(DateTimeTable[Date]),  Tracking_History[Start Date]  ) )  Explanation:
+- TREATAS aligns the DateTimeTable[Date] context (from the x-axis) with Tracking_History[Start Date], enabling filtering by hour.
+- COUNTROWS(Tracking_History) gives the count of transactions in that filtered context.
+Would you like me to add this DAX measure directly into the BIM file and return the updated version? ​​
+You said:
+That measure is not correct. The measure needs to return the count based on the Start Date and End Date must be less than the current x-axis time.
+ChatGPT said:
+Thanks for the clarification — you're looking to count transactions where:
+- Tracking_History[Start Date] is on or before the current hour (from the x-axis),
+- and Tracking_History[End Date] is after the current hour.
+This suggests the goal is to count all active transactions at a given hour interval, filtered by department.
+Here is the corrected DAX measure:
+Active Transactions Per Hour = VAR CurrentHour = SELECTEDVALUE(DateTimeTable[Date]) RETURN CALCULATE(  COUNTROWS(Tracking_History),  FILTER(  Tracking_History,  Tracking_History[Start Date]   Tracking_History[End Date] > CurrentHour  ) )  What it does:
+- SELECTEDVALUE(DateTimeTable[Date]) gets the current hour on the x-axis.
+- The FILTER condition checks for active transactions during that exact hour.
+- The visual must be sliced by both DateTimeTable[Date] and Dim_Department[Responsible Department], which will handle grouping by department due to existing relationships.
+Would you like me to inject this measure into the BIM model and provide the updated file?
+You said:
+That measure is exactly correct, can you create a version of the measure that does not use the CALCULATE function?
+ChatGPT said:
+Absolutely — here's a version of the same measure logic without using CALCULATE, using SUMX and FILTER instead:
+Active Transactions Per Hour (No CALCULATE) = VAR CurrentHour = SELECTEDVALUE(DateTimeTable[Date]) RETURN SUMX(  FILTER(  Tracking_History,  Tracking_History[Start Date]   Tracking_History[End Date] > CurrentHour  ),  1 )  Explanation:
+- SUMX iterates over the filtered rows of Tracking_History.
+- Each matching row contributes 1, effectively counting them.
+- The logic is exactly the same as before — this just avoids CALCULATE, which can be useful for debugging or experimenting with row context-based aggregations.
+Let me know if you'd like this version or the original added to the BIM file, or both.
+End of Chat
+Recall that this same scenario from Chapter 15, Optimizing Performance took us nine iterations to arrive at a truly performant solution. The last two measures created by ChatGPT both returned in about 3 seconds on the same test machine used previously. And, bonus, we can simply copy the code and paste it into Power BI when creating a measure and the measure works flawlessly! Obviously, ChatGPT and other LLMs can write some impressive DAX code!
+What is perhaps most impressive about this chat session however is that the second prompt isn’t even very clear, but the AI was able to reason out what was intended and return the desired result. While AI may or may not take over the world one day, today AI tools like ChatGPT 4o and other similar models are extremely good at writing code and, given adequate information, are able to generate accurate and performant DAX code. The key, however, is providing the AI models with as much information as possible and including the BIM file is a great shortcut for doing exactly that.
+Let’s now move on to the subject of debugging DAX code.

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Conversational Analytics in Power BI"
 source_url: https://medium.com/@2020ec0712/conversational-analytics-in-power-bi-21ca16da2795
 note_type: source

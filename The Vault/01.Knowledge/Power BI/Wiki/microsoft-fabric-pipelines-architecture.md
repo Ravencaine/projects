@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "What I Learned While Working with Microsoft Fabric Pipelines"
 source_url: https://medium.com/python-in-plain-english/microsoft-fabric-made-simple-from-data-pipelines-to-power-bi-b01d8b28d7f2
 note_type: source
@@ -12,7 +13,7 @@ But after working with Fabric pipelines, Lakehouse, Warehouse, notebooks, semant
 
 **Microsoft Fabric is not just one tool. It is a complete data platform.**
 
-![MS FABRIC](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*LVY5ZBp3QTaet6neGy4rpA.png)
+![MS FABRIC](99.System/Attachments/MS_FABRIC.webp)
 
 MS FABRIC
 

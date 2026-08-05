@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, table]
@@ -15,7 +16,7 @@ Table joins and cross-products.
 CROSSJOIN(<table1>, <table2>[, <table3>, ...])
 ```
 
-Returns the **Cartesian product** — every combination of rows from all tables. Total rows = rows₁ × rows₂ × ...
+Returns the **Cartesian product**: every combination of rows from all tables. Total rows = rows₁ × rows₂ × ...
 
 ```dax
 -- All Color × Size combinations
@@ -43,10 +44,10 @@ Left outer join — returns all rows from the left table, with matching rows fro
 - CROSSJOIN: all column names must be unique across tables, or an error is returned
 - NATURAL joins: requires at least one common column name; common columns must have the same data type
 - No sort order guarantee on NATURALINNERJOIN/NATURALLEFTOUTERJOIN
-- Use [[treatas]] or [[summarizecolumns]] for more controlled joins
+- Use [[cross-fact-treatas-virtual-relationships]] or [[summarizecolumns]] for more controlled joins
 - Not supported in DirectQuery mode for calculated columns or RLS rules
 
 ## Related
 
-- [[treatas]]
+- [[cross-fact-treatas-virtual-relationships]]
 - [[summarizecolumns]]

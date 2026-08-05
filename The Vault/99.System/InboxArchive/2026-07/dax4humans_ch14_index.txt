@@ -1,0 +1,105 @@
+While adding an index column to a table is generally done in Power Query or a source system, for the same reasons as fuzzy matching, there are situations where this is simply impossible or impractical. For years, adding an index in DAX was effectively considered impossible and particularly impossible if attempting to enforce a particular sort order for that index.
+The reason for the supposed impossibility of a sorted index is that DAX functions are generally unable to guarantee sort order. This can be seen in the official DAX documentation regarding TOPN and other DAX functions. Yes, when writing DAX queries, the ORDERBY expression is available but the ORDERBY expression is not available when writing standard DAX. In addition, one can use a Sort by column, but this requires configuration outside of DAX itself.
+Luckily, the solution to this dilemma is fairly simple and straightforward and is really a simple extension of a concept and technique that we have already covered numerous times throughout this book. To demonstrate this technique, first start by using an Enter data query to create a table called Index using the following data or import the Index sheet from the Excel spreadsheet, Chapter14_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Product
+Orange
+Banana
+Apple
+Grapes
+Kiwi
+Mango
+Coconut
+Pickle
+Eggplant
+Jabuticaba
+Table 14.7: Index data
+Now create the following DAX table:
+DAX Index Table =  VAR __Table = 'Index'  VAR __Path = CONCATENATEX( __Table, [Product], "|" )  VAR __Result =  ADDCOLUMNS(  SELECTCOLUMNS(  GENERATESERIES( 1, COUNTROWS( __Table ), 1 ),  "Index", [Value]  ),  "Product", PATHITEM( __Path, [Index] )  ) RETURN  __Result  You may notice that this technique is effectively the same technique that we have used to convert strings of text into tables. We use CONCATENATEX to append elements together with the pipe character ( | ) turning the table into a string recognized as a path by the PATH family of functions. We can then use GENERATESERIES and pluck the desired path items from the path using the PATHITEM function. The output of this formula is the following table:
+Index
+Product
+1
+Orange
+2
+Banana
+3
+Apple
+4
+Grapes
+5
+Kiwi
+6
+Mango
+7
+Coconut
+8
+Pickle
+9
+Eggplant
+10
+Jabuticaba
+Table 14.8: DAX Index Table data
+Because CONCATENATEX supports sorting parameters, we can also sort the data as we please using this variation:
+DAX Index Sorted Table =  VAR __Table = 'Index'  VAR __Path = CONCATENATEX( __Table, [Product], "|", [Product], ASC )  VAR __Result =  ADDCOLUMNS(  SELECTCOLUMNS(  GENERATESERIES( 1, COUNTROWS( __Table ), 1 ),  "Index", [Value]  ),  "Product", PATHITEM( __Path, [Index] )  ) RETURN  __Result  Here we specify to sort the data alphabetically in ascending order which produces the following table:
+Index
+Product
+1
+Apple
+2
+Banana
+3
+Coconut
+4
+Eggplant
+5
+Grapes
+6
+Jabuticaba
+7
+Kiwi
+8
+Mango
+9
+Orange
+10
+Pickle
+Table 14.9: DAX Index Sorted Table data
+Duplicates can also be handled, and this technique has the advantage of being able to rank items without duplicating rank values:
+DAX Index Duplicates Sorted Table =  VAR __Table = UNION( 'Index', 'Index' )  VAR __Path = CONCATENATEX( __Table, [Product], "|", [Product], ASC )  VAR __Result =  ADDCOLUMNS(  SELECTCOLUMNS(  GENERATESERIES( 1, COUNTROWS( __Table ), 1 ),  "Index", [Value]  ),  "Product", PATHITEM( __Path, [Index] )  ) RETURN  __Result  This code produces results where the two Apple rows are index 1 and 2 respectively while the Banana rows are index 3 and 4. Finally, we can also handle multiple column tables with some extra text parsing such as the following:
+DAX Index Table 2 =  VAR __Table = ADDCOLUMNS( 'Index', "Value", RANDBETWEEN( 10, 100 ) )  VAR __Path = CONCATENATEX( __Table, [Product] & "~" & [Value], "|", [Value], DESC )  VAR __Result =  ADDCOLUMNS(  SELECTCOLUMNS(  GENERATESERIES( 1, COUNTROWS( __Table ), 1 ),  "Index", [Value]  ),  "Product",  VAR __Item = PATHITEM( __Path, [Index] )  VAR __Result = MID( __Item, 1, FIND( "~", __Item ) - 1 )  RETURN  __Result,  "Value",  VAR __Item = PATHITEM( __Path, [Index] )  VAR __Result =  MID(  __Item,  FIND( "~", __Item ) + 1,  LEN( __Item ) - FIND( "~", __Item )  )  RETURN  __Result  ) RETURN  __Result  This code creates the following table:
+Value
+Index
+Product
+74
+1
+Mango
+68
+2
+Banana
+67
+3
+Jabuticaba
+65
+4
+Orange
+56
+5
+Pickle
+42
+6
+Coconut
+40
+7
+Grapes
+38
+8
+Kiwi
+23
+9
+Eggplant
+10
+10
+Apple
+Table 14.10: DAX Index Table 2 data
+Your results will be different because of RANDBETWEEN.
+While we have used DAX calculated tables to demonstrate this technique, you can also use this technique to create table variables as well inside of a DAX measure. The key lesson here is that just because the entire world doesn’t think it is possible doesn’t mean that you shouldn’t try to do it anyway. Often, one simply needs to use some creativity or repurpose existing techniques to overcome a particular challenge.
+This completes our exploration of creating a DAX index. Let’s now move on to the subject of streaks.

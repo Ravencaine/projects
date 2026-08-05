@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: "Beyond VLOOKUP: Unleashing Excel's True Data Power for Business Analysis"
 source_url: https://medium.com/@harsh1995hg/beyond-vlookup-unleashing-excels-true-data-power-for-business-analysis-33e9c54a66c4
 note_type: pattern
@@ -16,10 +17,10 @@ Transform raw numeric or categorical data into a visual layer — colour scales,
 
 ## Components
 
-1. **Colour scales** — Gradient fill from low (one colour) to high (another colour) across a range.
-2. **Data bars** — Horizontal bars proportional to the cell value within the range.
-3. **Icon sets** — Shapes, arrows, or traffic-light symbols assigned by rule thresholds.
-4. **Threshold rules** — Specific rules triggered by a condition (e.g., value > 1000, text = "Overdue").
+1. **Colour scales**: Gradient fill from low (one colour) to high (another colour) across a range.
+2. **Data bars**: Horizontal bars proportional to the cell value within the range.
+3. **Icon sets**: Shapes, arrows, or traffic-light symbols assigned by rule thresholds.
+4. **Threshold rules**: Specific rules triggered by a condition (e.g., value > 1000, text = "Overdue").
 
 ## Structure
 
@@ -56,9 +57,9 @@ Apply the desired format, set the range (typically the full column of data), and
 
 ## Variations
 
-- **Two-colour scale** — Min = red, Max = green — useful for error rates (lower is better).
-- **Formula-based rules** — Apply to entire rows based on a value in one column: `=$D2="Overdue"` applied to the full row range.
-- **Bar-only** — Data bars without number display: `Conditional Formatting → Data Bars → Show Bar Only` — clean dashboard look.
+- **Two-colour scale**: Min = red, Max = green — useful for error rates (lower is better).
+- **Formula-based rules**: Apply to entire rows based on a value in one column: `=$D2="Overdue"` applied to the full row range.
+- **Bar-only**: Data bars without number display: `Conditional Formatting → Data Bars → Show Bar Only` — clean dashboard look.
 
 ## Related
 

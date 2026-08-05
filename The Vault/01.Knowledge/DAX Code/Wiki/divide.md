@@ -1,11 +1,15 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+created: 2026-07-29
+updated: 2026-08-02
+source: "[[Author-Isabelle-Bittar|Isabelle Bittar]]"
 note_type: function
-tags: [dax, function, math]
+tags: [safe-division, division, null-handling, division-by-zero]
+related: [IFERROR, CALCULATE, SUM]
 ---
 
 # DIVIDE
+
+Performs division and returns an alternate result if the denominator is zero or blank. The preferred DAX function for safe division.
 
 ## Signature
 
@@ -15,36 +19,58 @@ DIVIDE(<numerator>, <denominator>[, <alternateResult>])
 
 ## Parameters
 
-| Parameter | Description |
-|-----------|-------------|
-| `<numerator>` | The value to be divided. |
-| `<denominator>` | The value to divide by. |
-| `<alternateResult>` | *(Optional)* Value returned when denominator is zero or blank. Defaults to `BLANK`. |
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `numerator` | Scalar | The dividend |
+| `denominator` | Scalar | The divisor |
+| `alternateResult` | Scalar (optional) | Value to return when `denominator` = 0 or BLANK (default: BLANK) |
 
 ## Returns
 
-The quotient of numerator divided by denominator. Returns `<alternateResult>` (or `BLANK` if not provided) when the denominator is zero or blank.
+The result of `numerator / denominator`, or `alternateResult` if `denominator` is 0 or BLANK.
 
 ## Examples
 
+**Safe division for rate metrics:**
 ```dax
--- Simple division (returns BLANK on divide-by-zero)
-DIVIDE([Profit], [Sales])
+Vacancy Rate =
+    DIVIDE(
+        SUM('Positions'[Vacancies]),
+        SUM('Positions'[Payroll Employees]),
+        0
+    )
+```
 
--- Return 0 instead of BLANK when denominator is zero
-DIVIDE([Sales], [Target], 0)
+**Percentage with zero guard:**
+```dax
+Completion % =
+    DIVIDE(
+        [Completed Steps],
+        [Total Steps],
+        BLANK()
+    )
+```
+
+**Chained in a calculation:**
+```dax
+Conversion Rate =
+    DIVIDE(
+        [Orders],
+        [Visitors],
+        0
+    )
 ```
 
 ## Notes
 
-- Handles **divide-by-zero gracefully** — returns `BLANK` instead of an error.
-- More **efficient** than `IF(ISBLANK(...), ..., ...)` or `IF(d=0, ..., n/d)`.
-- For **measures**: prefer **not** using the 3rd alternate result argument — let `BLANK` propagate naturally so the visual renders empty rather than showing a zero that can be misinterpreted.
-- For **constant denominators**: use the `/` operator directly for better performance (e.g., `SUM('Sales'[Profit]) / 100`).
-- The optional 3rd argument is most useful in calculated columns or fixed-threshold scenarios.
+- Use `DIVIDE` instead of the `/` operator in DAX. The `/` operator returns `INFINITY` when dividing by zero, which propagates through aggregations and can corrupt visuals.
+- `DIVIDE` with no `alternateResult` returns `BLANK()` — this causes the visual to show blank instead of an error, which is usually the desired behavior.
+- Pass `0` as `alternateResult` when you want to show `0` instead of blank for new categories with no denominator.
+- Behind the scenes, `DIVIDE` is optimised for evaluation — it uses a single storage engine query, making it faster than `IFERROR(<a>/<b>, <alt>)`.
+- In Bittar's articles, `DIVIDE` appears in rate calculations (vacancy rates, completion percentages).
 
 ## Related
 
-- [[divide-function-vs-divide-operator]] — when to use DIVIDE vs. the `/` operator
-- [[iferror]] — general-purpose error handling (less efficient for divide-by-zero)
-- [[avoid-converting-blanks-to-values]] — guidance on letting BLANK propagate
+- [[IFERROR]] — general-purpose error catching (less efficient than DIVIDE for division)
+- [[CALCULATE]] — wrap DIVIDE in CALCULATE to modify filter context
+- [[SUM]] — aggregate numerators and denominators before dividing

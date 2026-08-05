@@ -1,0 +1,44 @@
+table 'Person PhoneNumberType'
+	lineageTag: 65e89712-b7dd-4d16-b802-59e01059a95f
+
+	column PhoneNumberTypeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4be86b9d-6a01-4486-a235-09a178aecb31
+		summarizeBy: none
+		sourceColumn: PhoneNumberTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 3100fa1b-ec7e-4680-9005-7a49f0dbc663
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d225c31b-ee83-4248-8921-72e482cf853b
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: cfb97152-294b-4b10-8546-210108155ec5
+			defaultHierarchy: LocalDateTable_dd433ca4-b5f7-4979-b0a2-699e320f7146.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Person PhoneNumberType' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Person", Item = "PhoneNumberType"]}[Data]
+				in
+				  #"Navigation 2"
+

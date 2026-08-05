@@ -1,18 +1,20 @@
 ---
 created: 2026-07-26
-source: system
-note_type: reference
-tags: [index]
+updated: 2026-08-02
+note_type: index
+tags: [vba, index]
 ---
 
-# VBA — Index
+# VBA — Knowledge Base Index
 
-> Last updated: 2026-07-26
+This is the index for the VBA knowledge base. 1 notes grouped by type.
 
-## Notes
+## Macros & Procedures  (1 notes)
 
-*(None yet — notes appear here after ingestion.)*
+| Note | Description |
+|------|-------------|
+| [[QUESTIONS.md]] | Open Questions
 
-## Open Questions
+(None yet — questions surface here after ingestion, health checks, or during note-writing.)
 
-*(Use this space to track gaps, contradictions, and threads to explore.)*
+Open questi |

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, table-manipulation]
@@ -66,7 +67,7 @@ DATATABLE(
 
 ## Notes
 
-- DATATABLE only accepts **literal constants** — no columns, measures, or expressions
+- DATATABLE only accepts **literal constants**: no columns, measures, or expressions
 - DATATABLE values may use: constants, `BLANK()`, `DATE()`, `TIME()`, and unary minus for negatives
 - GENERATESERIES can use scalar expressions for start/end (including TODAY(), NOW())
 - Use DATATABLE for small lookup tables and GENERATESERIES for numeric/date sequences

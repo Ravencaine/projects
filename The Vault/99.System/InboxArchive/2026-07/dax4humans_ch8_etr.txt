@@ -1,0 +1,89 @@
+Employee turnover rate (ETR) is one of the most important employment KPIs to track since a high ETR has many negative impacts on an organization such as the loss of organizational knowledge, loss of productivity, and replacement costs.
+The formula for calculating ETR is quite simple:
+ETR = ( Employees leaving / Average employees ) * 100
+Importantly, ETR is calculated for specific time periods such as annually or quarterly for example. Therefore, to get started, create the following Dates table:
+Dates =  VAR __Calendar =  ADDCOLUMNS(  CALENDAR( DATE( 2020, 1, 1 ), DATE( 2025, 12, 31 ) ),  "Quarter", QUARTER( [Date] ),  "Month", FORMAT( [Date], "mmmm" ),  "MonthSort", MONTH( [Date] ),  "Year", YEAR( [Date] )  ) RETURN  __Calendar  Be sure to set the Sort by column for the Month column to the MonthSort column.
+Next, create the following table to hold measures:
+Calculations = { 0 }  Use an Enter data query to create an Employees table:
+Employee
+Hire Date
+Term Date
+Annual Salary
+Greg
+3/3/2020
+12/31/9999
+100000
+Carl
+12/4/2021
+12/31/9999
+150000
+Sandy
+6/17/2022
+12/31/9999
+120000
+Laurie
+8/5/2022
+12/31/9999
+75000
+Dan
+9/10/2022
+2/17/2024
+45000
+Penny
+1/12/2023
+12/31/9999
+110000
+Julie
+3/12/2023
+12/31/9999
+90000
+Tammy
+4/16/2023
+12/31/9999
+80000
+Pam
+8/7/2023
+12/3/2023
+70000
+Mike
+3/25/2024
+12/31/9999
+60000
+Paul
+3/25/2024
+12/31/9999
+100000
+Lori
+3/25/2024
+12/31/9999
+150000
+Cayla
+3/25/2024
+12/31/9999
+90000
+Bob
+3/25/2024
+12/31/9999
+100000
+Pi-Jou
+3/25/2024
+12/31/9999
+110000
+David
+3/25/2024
+12/31/9999
+80000
+Table 8.1: Employee data.
+Alternatively, import the Employees sheet from the Excel spreadsheet, Chapter8_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Some HR systems use a blank value or null value for the termination date of employees who are still actively employed. This approach signals that no termination event has taken place and prevents accidental processing of an end-of-employment record. Alternatively, other systems use a “dummy” or “sentinel” date such as 12/31/9999 as a placeholder in the termination date field. This method ensures that every record has a value in the date field, which can simplify certain standardized reporting and system logic. However, the specific practice often depends on the HR platform’s data model, reporting requirements, and organizational preferences. Here we are using a sentinel date of 12/31/9999 for the Term Date column.
+Ensure that the Hire Date and Term Date columns are of type Date and that there is no relationship between the Dates table and the Employees table.
+Now, create the following measure in the Calculations table:
+ETR =  VAR __Start = MIN( 'Dates'[Date] )  VAR __End = MAX( 'Dates'[Date] )  VAR __StartingEmployees =  COUNTROWS(  FILTER(  ALL( 'Employees' ),  [Hire Date]  __Start  )  )  VAR __EndingEmployees =  COUNTROWS(  FILTER(  ALL( 'Employees' ),  [Hire Date]  __End  )  )  VAR __TermedEmployees =  COUNTROWS(  FILTER(  ALL( 'Employees' ),  [Term Date] >= __Start && [Term Date]   )  )  VAR __AverageEmployees = ( __StartingEmployees + __EndingEmployees ) / 2  VAR __Result = DIVIDE( __TermedEmployees, __AverageEmployees, 0 ) + 0 RETURN  __Result  Format this measure as a percentage and hide the Value column in the Calculations table.
+This measure starts with getting the minimum (__Start) and maximum (__End) dates within the current context. Next, the number of employees at the start of the period (__StartingEmployees) and at the end of the period (__EndingEmployees) are calculated using COUNTROWS along with the appropriate filters. In both cases, the ALL function is used to ensure that all employees employed at the time are counted since employees are likely to have hire and leave dates that do not fall within the current period. With the configuration of having no relationship between the Dates table and Employees table, this is technically unnecessary, but better safe than sorry.
+Similarly, we next calculate the number of termed employees (__TermedEmployees) again using COUNTROWS and FILTER. We can then find the average number of employees (__AverageEmployees) employed during the period by adding __StartingEmployees and __EndingEmployees and then dividing by 2. Using a simple average is generally sufficient for most normal scenarios although there may be extreme edge cases where this could skew the results. Finally, the __Result is calculated by dividing the __TermedEmployees by the __AverageEmployees.
+It should be noted that using a sentinel date of 12/31/9999 simplifies the filtering required. If these values were blank or null, additional filtering would be required to account for these blank or null values.
+Place the Year and Quarter columns from the Dates table into the X-axis field well of a Line chart visual as well as the ETR measure in the Y-axis field well to display a visualization such as the following:
+Figure 8.1: ETR measure in a line chart.
+Note that the ETR measure only returns values for quarter 4 of 2023 and quarter 1 of 2024, the quarters when at least one employee was terminated. This is because if the __TermedEmployees variable in the DAX measure evaluates to BLANK, then the ETR measure returns BLANK and is not displayed in the line chart by default. To modify this behavior, you can add “+ 0” to either the __TermedEmployees variable or the __Result variable such as:
+VAR __Result = DIVIDE( __TermedEmployees, __AverageEmployees, 0 ) + 0  You may think it odd that a function like COUNTROWS would return BLANK and not 0 but this is indeed the case. If the FILTER clause returns BLANK due to not holding any rows, then using COUNTROWS on that resulting table also returns BLANK.
+Now that we have demonstrated employee turnover rate (ETR), let’s next take a look at absenteeism.

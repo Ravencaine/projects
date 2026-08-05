@@ -1,20 +1,52 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+
+created: 2026-07-28
+updated: 2026-08-02
+source: "[[beginning-big-data-with-power-bi-and-excel-2013-dunlop|Beginning Big Data with Power BI and Excel 2013]]"
+tags: ["dax", "function", "table", "union", "combine"]
 note_type: function
-tags: [dax, function, table]
+
 ---
 
-# UNION
+# UNION — Combine Tables
 
-Applies to: Calculated column Calculated table Measure Visual calculation Creates a union (join) table from a pair of tables.
+Stacks two or more tables vertically, keeping all rows.
 
-## Syntax
+## Signature
 
 ```dax
-UNION(<table_expression1>, <table_expression2> [,<table_expression>]…)
+UNION( <Table1>, <Table2>, ... )
 ```
 
-## Remarks
+## Parameters
 
-The two tables must have the same number of columns. Columns are combined by position in their respective tables. The column names in the return table will match the column names in table_expression1. Duplicate rows are retained. The returned table has lineage where possible. For
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| Table1, Table2, ... | Table | Tables to combine. Must have the same number of columns. |
+
+## Returns
+
+A table containing all rows from each input table.
+
+## Examples
+
+```dax
+Combined :=
+UNION(
+    FILTER( 'Sales', 'Sales'[Region] = "North" ),
+    FILTER( 'Sales', 'Sales'[Region] = "South" )
+)
+```
+
+## Notes
+
+- Columns are matched by position, not name
+- Duplicate rows are retained
+- Use DISTINCT(UNION(...)) to remove duplicates
+- All input tables must have the same column count
+
+## Related
+
+- [[intersect]]
+- [[except]]
+- [[SUMMARIZECOLUMNS]]

@@ -1,7 +1,9 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Using Visual Calculation To Easily Calculate Avg 3 Month Sales In Power BI(.pbix included)"
 source_url: https://medium.com/@shashanka.shekhar02/using-visual-calculation-to-easily-calculate-avg-3-month-sales-in-power-bi-pbix-included-0a6d3b76f703
+attachment: "[[Attachments/Using Visual Calculation Avg 3 Month Sales.pbix]]"
 note_type: source
 tags: [dax-code]
 ---

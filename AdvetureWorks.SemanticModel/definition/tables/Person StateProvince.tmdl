@@ -1,0 +1,86 @@
+table 'Person StateProvince'
+	lineageTag: 1028d8f3-394a-490e-8d93-147c9ab9a0fc
+
+	column StateProvinceID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7bebc780-6e02-448f-9f73-988a2aa8ebf8
+		summarizeBy: none
+		sourceColumn: StateProvinceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvinceCode
+		dataType: string
+		lineageTag: d9b603a8-2123-466c-948b-a3659c36689c
+		summarizeBy: none
+		sourceColumn: StateProvinceCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegionCode
+		dataType: string
+		lineageTag: f8ffffe6-58f2-41c1-9624-cc46bd2f5c7b
+		summarizeBy: none
+		sourceColumn: CountryRegionCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsOnlyStateProvinceFlag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8b398b76-45dc-49bb-b024-129761753b12
+		summarizeBy: none
+		sourceColumn: IsOnlyStateProvinceFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: b12e111b-014f-4833-99f8-6cb18581457c
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: cf780ae1-2f40-442e-a931-ba0765bcf078
+		summarizeBy: none
+		sourceColumn: TerritoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: 1c611fc7-5477-4b33-b834-54ad1cb774e9
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c07f578f-737f-4dc5-83ce-82b8ecc75018
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 21ec2907-6862-43fb-a030-939bb269ff47
+			defaultHierarchy: LocalDateTable_3b581c89-8b6a-4f24-8893-bad5294a8d1e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Person StateProvince' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Person", Item = "StateProvince"]}[Data]
+				in
+				  #"Navigation 2"
+

@@ -1,0 +1,269 @@
+table 'Sales SalesOrderHeader'
+	lineageTag: b6c75301-0291-40df-8d2a-f58dbcea455f
+
+	column SalesOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: da6e7b36-e11a-45c8-a16d-630eb8f6fd74
+		summarizeBy: none
+		sourceColumn: SalesOrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisionNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: c1682447-7411-4b5b-b5c7-036618928fad
+		summarizeBy: sum
+		sourceColumn: RevisionNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 55dbbe09-d61b-4de5-905a-7e8c460678b3
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		variation Variation
+			isDefault
+			relationship: 9379fe70-7670-4cc5-8bfc-0464e76d87a1
+			defaultHierarchy: LocalDateTable_8ca2057d-02c6-4b4b-a616-c32ae8e2d4c0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4b49ae4d-8ea8-4821-adc7-a97735cad304
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		variation Variation
+			isDefault
+			relationship: 8a945970-f756-4f64-8f58-f129d26facd2
+			defaultHierarchy: LocalDateTable_1dc3ac84-65a8-4369-85c9-9aaca2dbcf3c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0a2f7f25-913c-4945-b855-7a6d2bcb68d4
+		summarizeBy: none
+		sourceColumn: ShipDate
+
+		variation Variation
+			isDefault
+			relationship: 895d19e3-9699-4b65-9427-1b5896fbdd42
+			defaultHierarchy: LocalDateTable_95c08004-daab-4e04-bae3-9cf66e6a513e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: int64
+		formatString: 0
+		lineageTag: e2e9b45d-5dd6-47ba-bdc9-66f9fd6334f9
+		summarizeBy: sum
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column OnlineOrderFlag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f9594dfc-918e-439a-948e-c11c552b79eb
+		summarizeBy: none
+		sourceColumn: OnlineOrderFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderNumber
+		dataType: string
+		lineageTag: b2235ff5-c7f5-4573-83d6-fbc15f794f35
+		summarizeBy: none
+		sourceColumn: SalesOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column PurchaseOrderNumber
+		dataType: string
+		lineageTag: ba962d6c-d28d-4750-8930-9c2a8f98fdcd
+		summarizeBy: none
+		sourceColumn: PurchaseOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountNumber
+		dataType: string
+		lineageTag: e1183267-38a6-4793-b1eb-87442c7e1b02
+		summarizeBy: none
+		sourceColumn: AccountNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f43bac7-e487-4c4a-9667-68e5dc77e5cd
+		summarizeBy: count
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesPersonID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f9b8fdb-1411-4db1-9cab-5fadbe79fd81
+		summarizeBy: none
+		sourceColumn: SalesPersonID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: e0150d81-840c-4bf9-98e1-0518bbea6042
+		summarizeBy: count
+		sourceColumn: TerritoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillToAddressID
+		dataType: int64
+		formatString: 0
+		lineageTag: ed4e823e-54f9-4b97-ac30-409c8ee10fb0
+		summarizeBy: none
+		sourceColumn: BillToAddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipToAddressID
+		dataType: int64
+		formatString: 0
+		lineageTag: 76620cf2-1c02-432a-88c1-0f14d12a2854
+		summarizeBy: count
+		sourceColumn: ShipToAddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipMethodID
+		dataType: int64
+		formatString: 0
+		lineageTag: ed5d2ddb-5c1e-4cf6-9472-bf6bd154f06b
+		summarizeBy: none
+		sourceColumn: ShipMethodID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditCardID
+		dataType: int64
+		formatString: 0
+		lineageTag: 789951ab-f81e-457b-afae-9320988a51fa
+		summarizeBy: count
+		sourceColumn: CreditCardID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditCardApprovalCode
+		dataType: string
+		lineageTag: cfe8e4ff-0283-485b-918f-e0f514336194
+		summarizeBy: none
+		sourceColumn: CreditCardApprovalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyRateID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2ea4d84a-3b57-40a4-a172-5d929fd4e19b
+		summarizeBy: none
+		sourceColumn: CurrencyRateID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubTotal
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: d2de8acf-cb67-4818-a827-3d449e141ca3
+		summarizeBy: sum
+		sourceColumn: SubTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column TaxAmt
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: d4417c34-5792-4b06-9d12-7718bdfb2bda
+		summarizeBy: sum
+		sourceColumn: TaxAmt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column Freight
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 365ffe9e-d8f6-4496-9157-985f811268a7
+		summarizeBy: sum
+		sourceColumn: Freight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column TotalDue
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 749d57f3-230f-44b3-8c44-b5ea508c5b55
+		summarizeBy: sum
+		sourceColumn: TotalDue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column Comment
+		dataType: string
+		lineageTag: 7fede20c-cb0c-40c3-9abf-f263cf771fef
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: db8bb594-c5bf-4996-95b9-fe61c98cc4db
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 83cb5e71-3649-4c53-be61-3c748cc09b37
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 27e59fff-b306-4a2d-acbd-c5b7b22e21b4
+			defaultHierarchy: LocalDateTable_8e949dd2-406b-4307-b84a-0a349501bff1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales SalesOrderHeader' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Sales", Item = "SalesOrderHeader"]}[Data]
+				in
+				  #"Navigation 2"
+

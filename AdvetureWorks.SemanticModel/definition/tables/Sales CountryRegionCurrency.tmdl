@@ -1,0 +1,43 @@
+table 'Sales CountryRegionCurrency'
+	lineageTag: 92dc8c9e-0292-40fb-bf47-7d947d44e0c5
+
+	column CountryRegionCode
+		dataType: string
+		lineageTag: 95b9aa10-a30e-4d18-81fe-1330da47d39d
+		summarizeBy: none
+		sourceColumn: CountryRegionCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyCode
+		dataType: string
+		lineageTag: 275a3200-b2af-4dcc-a104-08510ed24ffe
+		summarizeBy: none
+		sourceColumn: CurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: eea7b829-b242-4477-95be-1f6633462518
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 049211e6-2c17-4837-acf3-902458cd80bf
+			defaultHierarchy: LocalDateTable_c2c19d86-977c-45bd-824e-da6ea86415cb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales CountryRegionCurrency' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Sales", Item = "CountryRegionCurrency"]}[Data]
+				in
+				  #"Navigation 2"
+

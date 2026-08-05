@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, filter-modifier]
@@ -21,7 +22,7 @@ ALLEXCEPT(<table>, <column>[, <column>[, …]])
 
 ## Returns
 
-**table** — all rows of the base table, with filters removed except on the specified columns
+**table**: all rows of the base table, with filters removed except on the specified columns
 
 ## Examples
 
@@ -43,8 +44,8 @@ CALCULATE(
 
 ## Notes
 
-- The **first argument must be a base table reference** — not a calculated table or sub-expression.
-- Subsequent arguments must be **columns of that base table** — not arbitrary columns.
+- The **first argument must be a base table reference**: not a calculated table or sub-expression.
+- Subsequent arguments must be **columns of that base table**: not arbitrary columns.
 - Removes all context filters **except** those on the specified columns. Useful when you want to "slice by" specific dimensions (e.g., always keep Year context) while clearing everything else.
 - Contrast with `ALL`, which removes all filters entirely, and `ALLSELECTED`, which removes only visual-level filters.
 

@@ -1,0 +1,53 @@
+table 'HumanResources JobCandidate'
+	lineageTag: 0a07dd26-798b-44c8-a4ad-f1e209d65f3c
+
+	column JobCandidateID
+		dataType: int64
+		formatString: 0
+		lineageTag: 87a7e32b-d4a8-4b16-b6f8-270bfaa7f240
+		summarizeBy: count
+		sourceColumn: JobCandidateID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessEntityID
+		dataType: int64
+		formatString: 0
+		lineageTag: 25b8f337-c7bd-4c9a-a6e8-2179efdcd239
+		summarizeBy: none
+		sourceColumn: BusinessEntityID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resume
+		dataType: string
+		lineageTag: 7d25a8c3-060e-45ec-b003-246e052f6fbf
+		summarizeBy: none
+		sourceColumn: Resume
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3f3f46a1-54db-4929-927b-9f06d07ba5f7
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 35fd245d-5ad2-4f12-bcc5-a4c4c03070ba
+			defaultHierarchy: LocalDateTable_e7d05d46-6997-4daf-b772-527544e6a1cb.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'HumanResources JobCandidate' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "HumanResources", Item = "JobCandidate"]}[Data]
+				in
+				  #"Navigation 2"
+

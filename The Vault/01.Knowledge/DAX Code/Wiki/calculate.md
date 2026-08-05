@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, filter-context]
@@ -7,7 +8,7 @@ tags: [dax, function, filter-context]
 
 # CALCULATE
 
-> **Extended 2026-07-27** — context transition teaching from Advanced Power BI DAX Measures (Jesse Ruiz) and The DAX Concepts... (Daniel Olatunji)
+> **Extended 2026-07-27**: context transition teaching from Advanced Power BI DAX Measures (Jesse Ruiz) and The DAX Concepts... (Daniel Olatunji)
 
 ## Signature
 ```

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Is Cleaning Data More Painful Than Building Models?"
 source_url: https://medium.com/@t.gulab/is-cleaning-data-more-painful-than-building-models-5e270cc378f1
 note_type: source

@@ -50,7 +50,7 @@ Imagine a table with Region and Total Sales.
 - For Region = North → DAX sees a filter where Region = “North”.
 - For Region = South → DAX sees Region = “South”.
 - For the Total row → no filter, so it sums across all regions.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*BYkoeH4SXistLjoP8H4u0A.png)
+![](99.System/Attachments/1!BYkoeH4SXistLjoP8H4u0A.png.webp)
 
 Filter context narrows down the rows before the calculation happens.
 
@@ -65,7 +65,7 @@ North Sales = CALCULATE( SUM(Sales[Revenue]), Sales[Region] = “North” )
 ```
 - No matter what slicer you use, this measure always returns Sales for North only.
 - CALCULATE overrides the existing filter context.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*p-VNA1wYTeYR18qo6YZnHw.png)
+![](99.System/Attachments/1!p-VNA1wYTeYR18qo6YZnHw.png.webp)
 
 CALCULATE doesn’t just sum — it rewrites the filter context before running the formula.
 
@@ -77,7 +77,7 @@ Sales 2024 = CALCULATE( SUM(Sales[Revenue]), Sales[Year] = 2024 )
 - Adds a filter → Year = 2024.
 - Works alongside slicers (e.g., Region = North).
 - Final context = Region = North AND Year = 2024.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*YVvimH7-cQgVbuJizowMAg.png)
+![](99.System/Attachments/1!YVvimH7-cQgVbuJizowMAg.png.webp)
 
 When multiple filters are applied (slicers + CALCULATE), they combine to form the final filter context.
 
@@ -88,7 +88,7 @@ When multiple filters are applied (slicers + CALCULATE), they combine to form th
 
 👉 Key point: **Filter Context can exist without Row Context, but Row Context often becomes Filter Context via CALCULATE (context transition).**
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sRCYo4OmeTu15EEi7Img2g.png)
+![](99.System/Attachments/1!sRCYo4OmeTu15EEi7Img2g.png.webp)
 
 Row context evaluates one row at a time, while filter context defines a subset of rows for evaluation.
 

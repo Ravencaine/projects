@@ -22,6 +22,8 @@ Each knowledge base is one folder inside `01.Knowledge/`. The folder name matche
 └── CHANGELOG.md    — running log; top entry = current state
 ```
 
+**Valid KBs:** `Data Modeling` · `DAX Code` · `Excel` · `Power BI` · `Power Query` · `VBA`
+
 ---
 
 ## Section 1b — The Inbox
@@ -36,6 +38,8 @@ Valid status values: `pending` | `processing` | `archived` | `converted` | `reje
 
 Use `rejected` for source material reviewed and determined out of scope or irrelevant to any existing KB. The health check flags sources pending for more than 90 days as candidates for `rejected`; the user makes the rejection call.
 
+**Archive policy:** Sources stay in Inbox after notes are written. Archiving is optional and done only via `99.System/Scripts/safe_archive.py` — never raw `mv`. The script checks that notes exist in the KB before archiving; if notes are missing it blocks the move and exits non-zero.
+
 ### Inbox Routing Rules
 
 Before ingesting any source from the Inbox, auto-route by filename keyword:
@@ -45,7 +49,6 @@ Before ingesting any source from the Inbox, auto-route by filename keyword:
 | `Power BI`, `DAX`, `PowerPivot` | `01.Knowledge/Power BI/` or `DAX Code/` |
 | `Power Query`, `M code`, `Get Data` | `01.Knowledge/Power Query/` |
 | `Excel`, `VBA`, `xlsx`, `spreadsheet` | `01.Knowledge/Excel/` or `VBA/` |
-| PKM, `second brain`, `Zettelkasten` | `01.Knowledge/PKM/` |
 | `Data Model`, `star schema`, `dimension` | `01.Knowledge/Data Modeling/` |
 | Default (no match) | ask the user |
 

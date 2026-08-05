@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Why Totals Look Wrong in DAX (and How to Fix Them)"
 source_url: https://medium.com/write-your-world/why-totals-look-wrong-in-dax-and-how-to-fix-them-8b0506129c30
 note_type: source

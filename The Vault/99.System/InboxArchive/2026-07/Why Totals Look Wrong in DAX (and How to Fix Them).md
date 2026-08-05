@@ -81,7 +81,7 @@ The total isn’t the “average of percentages.” It’s the **percentage for 
 And that’s the golden rule:  
 👉 Totals are **re-evaluations**, not additions.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*6ufOA6iPizG8bgF75kAarQ.png)
+![](99.System/Attachments/1!6ufOA6iPizG8bgF75kAarQ.png.webp)
 
 The total isn’t the average of percentages — it’s the margin recalculated for the entire context.
 
@@ -115,7 +115,7 @@ Why this works:
 - `SUM` adds up columns in the current filter context.
 - `SUMX` evaluates each row with its own row context, then sums up the results.
 - At the total level, SUMX ensures row-by-row logic is preserved.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*d6igsVAr8QVQgF807q02lQ.png)
+![](99.System/Attachments/1!d6igsVAr8QVQgF807q02lQ.png.webp)
 
 SUM totals can mislead because they just add columns, while SUMX recalculates row by row, giving the correct total.
 
@@ -144,7 +144,7 @@ But here’s the trick:
 
 If you want a different behavior, you can adjust the logic in the `IF` block.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*5BhrO6Q6nEZrYeysXZ7PVA.png)
+![](99.System/Attachments/1!5BhrO6Q6nEZrYeysXZ7PVA.png.webp)
 
 HASONEVALUE lets you apply one formula for rows and a different one for totals
 
@@ -165,7 +165,7 @@ IF(
 
 This ensures the measure only returns values when a filter exists (i.e., not at the grand total).
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*C_7FxC8SZTGjzxZ6UhAKMA.png)
+![](99.System/Attachments/1!C_7FxC8SZTGjzxZ6UhAKMA.png.webp)
 
 Table showing totals replaced with BLANK until explicitly defined.
 
@@ -205,7 +205,7 @@ Result: The total now matched the business expectation.
 Moral of the story: **Know what the business means by “total.”**  
 Because DAX will always apply its own rule: recalculate, not add.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*CrX58othhvTeSTyqKg9xVQ.png)
+![](99.System/Attachments/1!CrX58othhvTeSTyqKg9xVQ.png.webp)
 
 Totals for Average Order Value can be misleading unless you use AVERAGEX to calculate per customer and then average them correctly
 
@@ -217,7 +217,7 @@ Totals for Average Order Value can be misleading unless you use AVERAGEX to calc
 - ✅ Use **AVERAGEX** for weighted averages.
 - ✅ Use **HASONEVALUE** or **ISFILTERED** to control behavior.
 - ✅ Educate users: totals aren’t wrong, they’re just **different math**.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sZNY3aYQGSO2hdOe7f_SbA.png)
+![](99.System/Attachments/1!sZNY3aYQGSO2hdOe7f_SbA.png.webp)
 
 Totals in DAX are not added-up rows — they are recalculated in a new filter context.
 

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Advanced Dimensional Modeling for Retail Product Variants Pt 3"
 source_url: "https://medium.com/@jjr8888/advanced-dimensional-modeling-for-retail-product-variants-pt-3-d02abbc97319"
 note_type: error
@@ -26,10 +27,10 @@ RetailPrice: 0   ← should be 19.99
 
 The price record in PriceDiscTable does not match the variant's dimensional attributes exactly. Common causes:
 
-1. **Price set at item level, not variant level** — PriceDiscTable.inventdimid is NULL; the price covers the item but the dimension join requires a variant-level price
-2. **Price dimensions don't match the dimension group** — e.g., a DonatedNS product has a price keyed on Colour+Style+Size, but only Colour+Style should be matched
-3. **Price has expired** — todate is in the past; the active date filter excludes it
-4. **Wrong module** — price record is module=2 (Purchase) but you're joining for Sales/Retail
+1. **Price set at item level, not variant level**: PriceDiscTable.inventdimid is NULL; the price covers the item but the dimension join requires a variant-level price
+2. **Price dimensions don't match the dimension group**: e.g., a DonatedNS product has a price keyed on Colour+Style+Size, but only Colour+Style should be matched
+3. **Price has expired**: todate is in the past; the active date filter excludes it
+4. **Wrong module**: price record is module=2 (Purchase) but you're joining for Sales/Retail
 
 ## Solution
 

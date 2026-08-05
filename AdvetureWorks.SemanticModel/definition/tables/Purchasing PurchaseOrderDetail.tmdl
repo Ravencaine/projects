@@ -1,0 +1,129 @@
+table 'Purchasing PurchaseOrderDetail'
+	lineageTag: d9639b41-7816-4790-9a76-393fd66b98fb
+
+	column PurchaseOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 19e237cb-a9c7-426b-975c-82fb1969bd1f
+		summarizeBy: none
+		sourceColumn: PurchaseOrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PurchaseOrderDetailID
+		dataType: int64
+		formatString: 0
+		lineageTag: e25243d6-3c56-4f31-9f62-138fe5968332
+		summarizeBy: count
+		sourceColumn: PurchaseOrderDetailID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7e400b3c-7954-4a75-a160-aac9d18e3a75
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		variation Variation
+			isDefault
+			relationship: 4ceb4bb7-f3f5-4280-a7b0-4e32473d7e94
+			defaultHierarchy: LocalDateTable_39ee99fc-8a36-40b2-a5ab-177b69185133.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderQty
+		dataType: int64
+		formatString: 0
+		lineageTag: 06d976c8-d7d9-47fe-8fde-b7d0b92fd6de
+		summarizeBy: sum
+		sourceColumn: OrderQty
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: c26f058d-2d7f-441e-abf4-2090b8e9115a
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 935d37a4-ee13-4825-b6cc-c3afe9c3f5c5
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column LineTotal
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: c8f26f2a-d1fb-4a8f-bc38-1f527ede3866
+		summarizeBy: sum
+		sourceColumn: LineTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column ReceivedQty
+		dataType: double
+		lineageTag: 0344b1c7-a804-47de-9e91-ca5d50f1be8e
+		summarizeBy: sum
+		sourceColumn: ReceivedQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RejectedQty
+		dataType: double
+		lineageTag: fbbc4c1b-69b6-476e-afb5-d9d046c4aee4
+		summarizeBy: sum
+		sourceColumn: RejectedQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StockedQty
+		dataType: double
+		lineageTag: 30a3bccf-693b-4f59-b9d4-623bcd3786ba
+		summarizeBy: sum
+		sourceColumn: StockedQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 49fe80d9-1c48-4d4d-b4de-22ef3be0797f
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 8fae1d87-b8c4-4e2e-9e09-7efe500a121f
+			defaultHierarchy: LocalDateTable_221726c8-8d01-4a10-87be-10316eb39a62.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Purchasing PurchaseOrderDetail' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Purchasing", Item = "PurchaseOrderDetail"]}[Data]
+				in
+				  #"Navigation 2"
+

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, time-intelligence]
@@ -44,7 +45,7 @@ YoY Growth = DIVIDE([Sales] - CALCULATE([Sales], PREVIOUSYEAR('Date'[Date])), CA
 
 ## Notes
 
-- All return a **table** — must be used inside CALCULATE
+- All return a **table**: must be used inside CALCULATE
 - PREVIOUS/NEXT WEEK require a calendar (ISO week dates)
 - `PREVIOUSYEAR` and `NEXTYEAR` accept `year_end_date` for fiscal years
 - Discouraged in visual calculations — likely returns meaningless results

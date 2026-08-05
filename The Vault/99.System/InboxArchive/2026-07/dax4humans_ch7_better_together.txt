@@ -1,0 +1,59 @@
+The goal of this calculation is to identify items that are ordered in conjunction with one another. Identifying items sold in the same order can assist with providing recommendations to future customers regarding what other items they may wish to purchase.
+To get started with this calculation, create a table called Better Together 1 using an Enter data query along with the following purchase data:
+Order_ID
+Item_Name
+Item_Qty
+1
+Kettle
+1
+2
+Kettle
+1
+2
+Iron
+1
+3
+Tomatoes
+2
+3
+Cucumber
+2
+4
+Kettle
+1
+4
+Iron
+1
+4
+Cucumber
+2
+5
+Cucumber
+2
+5
+Kettle
+1
+5
+Tomatoes
+1
+6
+Kettle
+2
+6
+Iron
+1
+Table 7.5: Purchase data.
+Alternatively, import the Better Together 1 sheet from the Excel spreadsheet, Chapter7_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+This table provides the minimum details necessary regarding orders including an Order_ID column that tracks the ID of an order, an Item_Name column that identifies the product purchased, and an Item_Qty column that lists the quantity of product purchased.
+To identify which items are sold together most frequently, create a table using the following formula:
+Better Together 2 =  VAR __Items = DISTINCT( 'Better Together 1'[Item_Name] )  VAR __Table =  FILTER(  GENERATE(  SELECTCOLUMNS( __Items, "__Item1", [Item_Name] ),  SELECTCOLUMNS( __Items, "__Item2", [Item_Name] )  ),  [__Item1]   )  VAR __Result =  ADDCOLUMNS(  __Table,  "Bought Together",  VAR __Table =  SUMMARIZE(  FILTER(  'Better Together 1',  [Item_Name] = [__Item1] ||  [Item_Name] = [__Item2]  ),  [Order_ID],  "__Count", COUNTROWS( 'Better Together 1' )  )  VAR __Result = COUNTROWS( FILTER( __Table, [__Count] > 1 ) ) + 0  RETURN  __Result  )   RETURN  __Result  This formula may look somewhat daunting so let’s break down how this formula works and why it is structured in this manner.
+We start by getting a distinct list of items using the DISTINCT function and store the result in the __Items variable. Next, we need to get a Cartesian product such that we have every item listed with every other item. To do this, we use the GENERATE function and simply use the __Items variable as our base table. Since GENERATE would error if there were two columns with the same name, we use the SELECTCOLUMNS function to rename the Item_Name column to __Item1 and __Item2. Finally, we filter out any rows where __Item1 and __Item2 are equal. This completes the creation of our base table, __Table.
+The base table has an issue where the same item pairs appear twice but in reversed order. For example, Iron and Kettle appear twice in the rows of the table, one where Iron is __Item1 and Kettle is __Item2 and another row where the opposite is true.
+To address this, we use a FILTER statement to compare the Item1 and Item2 columns, keeping only the rows where the value in the Item1 column is less than the value in the Item2 column. This has two primary effects. First, this removes rows where the values in the Item1 and Item2 columns are equal to one another. Second, this also removes duplicate rows where the values in the Item1 and Item2 columns are simply in reverse order.
+We are now able to construct the final table, __Result. This formula uses the ADDCOLUMN function to add a column to __Table1 called Bought Together. The Bought Together column is calculated by using the FILTER function to filter the original table, Better Together 1 for rows where the Item_Name matches either __Item1 or __Item2. The results are then grouped using the SUMMARIZE function on Order_ID and a __Count row is added that counts the rows in the Better Together 1 table using the COUNTROWS function.
+The final value for the Bought Together column is determined by counting the rows in the temporary table variable after filtering for a __Count greater than 1 and then adding 0. This ensures that we are not counting rows where just one product was sold as part of an order, such as Order_ID 1.
+The final result is shown here:
+Figure 7.4: Items bought together frequency.
+As you can see, six rows are returned, which also happens to be the same number of combinations possible given four items (n) and two samples (r) where order does not matter which is given by the following standard combinations formula:
+C(n,r)=(nr)=n!(r!(n−r)!)C(n,r) = \left( \frac{n}{r} \right) = \frac{n!}{(r!(n - r)!)}\ \
+Let’s next look at annual contract value or ACV.

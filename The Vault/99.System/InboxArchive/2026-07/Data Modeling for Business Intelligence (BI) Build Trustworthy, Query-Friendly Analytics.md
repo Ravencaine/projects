@@ -8,7 +8,7 @@ created: 2026-07-27
 description: "More"
 Processed: "Unprocessed"
 ---
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*NDO3xlg8pXPxPiyi.jpg)
+![](99.System/Attachments/0!NDO3xlg8pXPxPiyi.jpg.webp)
 
 In BI work, people often focus on dashboards first.
 

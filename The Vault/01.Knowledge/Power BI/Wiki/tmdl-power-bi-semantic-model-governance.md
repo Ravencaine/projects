@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Power BI is Finally Code: Automating Semantic Model Governance via TMDL"
 source_url: https://medium.com/datadriveninvestor/power-bi-is-finally-code-automating-semantic-model-governance-via-tmdl-eb7ba10d707c
 note_type: source

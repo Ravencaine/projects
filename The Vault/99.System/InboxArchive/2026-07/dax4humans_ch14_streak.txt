@@ -1,0 +1,47 @@
+My original DAX for identifying streaks in data was written in 2018 and has since gone through several revisions and evolutions. The core problem is akin to a DAX Index but with a twist, the index must restart under certain conditions. In short, the need is for an index that increments by one for each consecutive row that is in the same “group” but restarts each time that group changes between consecutive rows. To pull this off, you need a column that defines “before” and “after” such as an index or date column which might come from Power Query or DAX, as demonstrated in the previous section.
+To see how this can be done, use an Enter data query to create a table called Streaks using the following data or import the Streaks sheet from the Excel spreadsheet, Chapter14_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Animal
+Index
+Tiger
+1
+Tiger
+2
+Tiger
+3
+Tiger
+4
+Tiger
+5
+Lion
+6
+Lion
+7
+Lion
+8
+Tiger
+9
+Tiger
+10
+Elephant
+11
+Elephant
+12
+Elephant
+13
+Tiger
+14
+Tiger
+15
+Tiger
+16
+Table 14.11: Streaks data
+Now create the following measure:
+Cthulhu =  VAR __CurrentIndex = MAX( 'Streaks'[Index] )  VAR __CurrentGroup = MAX( 'Streaks'[Animal] )  VAR __InitialTable =  FILTER(  ALL( 'Streaks' ),  [Animal] = __CurrentGroup && [Index]   )  VAR __Table =  ADDCOLUMNS(  __InitialTable,  "__Diff",  (  [Index] -  MAXX(  FILTER(  ALL( 'Streaks' ),  [Index]   ),  [Index]  )  ) * 1.  )  VAR __Max = MAXX( __Table, [Index])  VAR __MaxStart = MAXX( FILTER( __Table, [__Diff] > 1 ), [Index] )  VAR __FinalTable = FILTER( __Table, [Index] >= __MaxStart)  VAR __Result =  SWITCH( TRUE(),  ISBLANK( __Max ), 1,  __Max = __CurrentIndex - 1, COUNTROWS( __FinalTable ) + 1,  1  ) RETURN  __Result  You may be curious about the odd name chosen for the measure, Cthulhu. Cthulhu is a fictional cosmic entity created by American writer H.P. Lovecraft. First introduced in the short story “The Call of Cthulhu” (1928), Cthulhu is so vast, alien, and incomprehensible that trying to understand or even perceive it shatters the human mind, driving people insane. This is how I felt over seven years ago when creating this approach, albeit a time when I was far less proficient in DAX.
+The Cthulhu measure presented here is effectively the same as the original measure created in 2018. The reasoning behind the measure was to calculate the difference in the Index column between rows for the same Animal or group, __Diff. The largest Index with a __Diff greater than 1 is therefore the start of the streak and thus with a bit of math, we can arrive at our desired index value.
+Years later, patron Alexis Olsen improved upon Cthulhu with the following:
+Local Group Index = VAR _CurrIndex = MAX ( 'Streaks'[Index] ) VAR _CurrGroup = MAX ( 'Streaks'[Animal] ) VAR _LocalGroupStart =  CALCULATE (  MAX ( 'Streaks'[Index] ),  ALLSELECTED ( 'Streaks' ),  'Streaks'[Index]   'Streaks'[Animal] <> _CurrGroup  ) VAR _LocalIndex = _CurrIndex - _LocalGroupStart RETURN  _LocalIndex  Obviously, this code is much more concise and cleaner than the original by maximizing the existence of a consecutive index column. However, both measures have the following issue, they rely on consecutive Index values between all rows. This means that neither measure works with nonconsecutive values for Index. This is an issue for sensor data or other types of data where a Date or DateTime value serves as the Index column. The other issue with the Local Group Index measure is that it uses the CALCULATE function. Kidding. Luckily, we can solve both problems with the following measure:
+Bride of Cthulhu =  VAR __CurrentIndex = MAX ( 'Streaks'[Index] )  VAR __CurrentGroup = MAX ( 'STreaks'[Animal] )  VAR __StreakStart =  MAXX (  FILTER(  ALL( 'Streaks' ),  [Index]  __CurrentGroup  ),  [Index]  )  VAR __LocalGroupCount =  COUNTROWS(  FILTER(  ALL( 'Streaks' ),  [Index]  __StreakStart  )  )  VAR __Result = __LocalGroupCount RETURN  __Result  This version does not rely on the Index column being consecutive and thus is the most general-purpose version of all the measures presented here. We can extend this concept of a repeating index to identify streaks within the data, such as the longest streak.
+Longest Streak =  VAR __Table =  ADDCOLUMNS(  'Streaks',  "__Cthulhu",  VAR __CurrentIndex = [Index]  VAR __CurrentGroup = [Animal]  VAR __StreakStart =  MAXX (  FILTER(  ALL( 'Streaks' ),  [Index]  __CurrentGroup  ),  [Index]  )  VAR __LocalGroupCount =  COUNTROWS(  FILTER(  ALL( 'Streaks' ),  [Index]  __StreakStart  )  )  VAR __Result = __LocalGroupCount  RETURN  __Result  )  VAR __Result =  IF(  HASONEVALUE( 'Streaks'[Animal] ),  MAXX( __Table, [__Cthulhu] ) & "",  MAXX( FILTER( __Table, [__Cthulhu] = MAXX( __Table, [Cthulhu] ) ), [Animal] )  ) RETURN  __Result  The majority of this measure is simply a column implementation of the Bride of Cthulhu measure as the __Cthulhu column. The code is identical other than __CurrentIndex and __CurrentGroup. The __Result returns either the longest streak number for individual animals or the animal that has the longest streak:
+Figure 14.5: Output of Longest Streak measure
+When I created the original measure for Cthulhu, I honestly did not think it had much applicability or would prove useful. I was dead wrong. Cthulhu has proven to be extremely popular, and I have found uses for it time and time again.
+Let’s move on from streaks and next look at another scenario that can become quite complex, multi-column aggregations.

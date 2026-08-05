@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "AdvetureWorks"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "91518829-ec17-4ee2-b534-1213b1fa39b5"
+  }
+}

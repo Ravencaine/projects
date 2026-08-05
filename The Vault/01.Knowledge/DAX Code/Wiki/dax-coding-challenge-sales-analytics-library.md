@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Data Engineering Coding Challenge (DAX)"
 source_url: "https://medium.com/@jjr8888/data-engineering-coding-challenge-dax-e6225dcc8d1f"
 note_type: reference
@@ -40,7 +41,7 @@ VAR PriorSales = [Previous Year Sales]
 VAR Growth = CurrentSales - PriorSales
 RETURN
 IF(
-    ISBLANK(PriorSales) || PriorSales = 0,
+    ISBLANK(PriorSales) | PriorSales = 0,
     BLANK(),
     DIVIDE(Growth, PriorSales)
 )
@@ -63,11 +64,11 @@ RETURN DIVIDE(CurrentSales, SegmentTotal)
 
 ## Key Teaching Points
 
-1. **Single source of truth** — reference `[Total Sales]` not `SUM(Sales[Amount])` in all other measures
-2. **VAR pattern** — evaluate once, reuse; makes debugging and logic clear
-3. **BLANK() not 0 for missing data** — BLANK propagates correctly in charts; 0 implies "measured and was zero"
-4. **ALL vs ALLEXCEPT** — ALL removes all category filters; ALLEXCEPT removes everything except Category (needed for within-segment %)
-5. **Date table requirement** — all time intelligence functions require a contiguous date table marked as a date table
+1. **Single source of truth**: reference `[Total Sales]` not `SUM(Sales[Amount])` in all other measures
+2. **VAR pattern**: evaluate once, reuse; makes debugging and logic clear
+3. **BLANK() not 0 for missing data**: BLANK propagates correctly in charts; 0 implies "measured and was zero"
+4. **ALL vs ALLEXCEPT**: ALL removes all category filters; ALLEXCEPT removes everything except Category (needed for within-segment %)
+5. **Date table requirement**: all time intelligence functions require a contiguous date table marked as a date table
 
 ## Related
 

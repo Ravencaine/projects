@@ -1,0 +1,170 @@
+The TRIMMEAN function is another useful Excel function that is unfortunately excluded from the DAX language. The TRIMMEAN function calculates the mean (average) of a set of numbers after excluding a specified percentage of data points from the top and bottom (read largest and smallest). Thus, the TRIMMEAN function is useful for removing outliers within data.
+To see how to create the TRIMMEAN function in DAX, use the following data in an Enter data query to create a table called TM in Power BI or alternatively, import the TM sheet from the Excel spreadsheet, Chapter14_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Value
+4
+5
+6
+7
+2
+3
+4
+5
+1
+2
+3
+Table 14.1: TM data
+Also, create the following table:
+Percents = GENERATESERIES( .1, 1.1, .1 )  Ensure that there is no relationship between the Percents table and the TM table.
+Now create the following measure:
+TRIMMEAN =  VAR __Table =  ADDCOLUMNS(  'TM',  "Rank", RANKX( 'TM', [Value] )  )  VAR __Percent = MAX( 'Percents'[Value] )  VAR __Result =  IF(  __Percent > 1,  BLANK(),  VAR __Count = COUNTROWS( __Table )  VAR __Points = ROUNDDOWN( __Count * __Percent, 0 )  VAR __Trim = IF( ISODD( __Points ), __Points - 1, __Points ) / 2  VAR __MaxRank = MAXX( __Table, [Rank] )  VAR __MinRank = MINX( __Table, [Rank] )  VAR __RanksTable =  ADDCOLUMNS(  ADDCOLUMNS(  GROUPBY(  __Table,  [Rank],  "Count", COUNTX( CURRENTGROUP(), [Value] ),  "Value", MAXX( CURRENTGROUP(), [Value] )  ),  "CBCount",  COUNTROWS(  FILTER( __Table, [Rank] >= EARLIER( [Rank] ) )  ),  "CTCount",  COUNTROWS(  FILTER( __Table, [Rank]   )  ),  "BWhile", __Trim - [CBCount],  "TWhile", __Trim - [CTCount]  )  VAR __MinBottom =  MAXX( FILTER( __RanksTable, [BWhile]   VAR __MinTop =  MAXX( FILTER( __RanksTable, [TWhile]   VAR __FinalBottomRankTable =  ADDCOLUMNS(  FILTER( __RanksTable, [BWhile] >= __MinBottom ),  "Product",  IF(  [BWhile] >= 0,  [Count] * [Value],  ([Count] + [BWhile]) * [Value]  )  )  VAR __FinalTopRankTable =  ADDCOLUMNS(  FILTER( __RanksTable, [TWhile] >= __MinTop ),  "Product",  IF(  [TWhile] >= 0,  [Count] * [Value],  ( [Count] + [TWhile] ) * [Value]  )  )  VAR __Bottom = SUMX( __FinalBottomRankTable, [Product] )  VAR __Top = SUMX( __FinalTopRankTable, [Product] )  VAR __Result =  DIVIDE(  SUMX( __Table, [Value] ) - __Bottom - __Top,  __Count - 2 * __Trim  )  RETURN  __Result  ) RETURN  __Result  Obviously, this calculation is quite complex. Let’s break down how this formula works. The first step is to rank the values in the data table. This is done using RANKX and produces the following table:
+Value
+Rank
+1
+11
+2
+9
+2
+9
+3
+7
+3
+7
+4
+5
+4
+5
+5
+3
+5
+3
+6
+2
+7
+1
+Table 14.2: Ranked TM data
+Using RANKX allows us to define “top” and “bottom”. We then get the desired percentage of points to exclude and store this value in the __Percent variable.
+Like the GAMMA measure from the previous section, we next check if the percentage is greater than one and if it is, we simply return BLANK as the operation is invalid. Otherwise, we calculate the desired trimmed mean.
+Calculating the trimmed mean starts by calculating how many points to trim off the top and bottom which is stored in the __Trim variable. This is a crucial operation as Excel’s TRIMMEAN function is quite specific in how it determines this number. Excel’s documentation states the following:
+TRIMMEAN rounds the number of excluded data points down to the nearest multiple of 2. If percent = 0.1, 10 percent of 30 data points equals 3 points. For symmetry, TRIMMEAN excludes a single value from the top and bottom of the data set.
+It should be noted that MROUND cannot be used here because MROUND does not round numbers the same as Excel’s TRIMMEAN function.
+The next step is calculating the __RanksTable variable. This table sets up what is essentially a double, concurrent while loop. The resulting table looks like the following:
+Rank
+Count
+Value
+CBCount
+CTCount
+BWhile
+TWhile
+11
+1
+1
+1
+11
+1
+-9
+9
+2
+2
+3
+10
+-1
+-8
+7
+2
+3
+5
+8
+-3
+-6
+5
+2
+4
+7
+6
+-5
+-4
+3
+2
+5
+9
+4
+-7
+-2
+2
+1
+6
+10
+2
+-8
+0
+1
+1
+7
+11
+1
+-9
+1
+Table 14.3: __RanksTable data
+Note that this is the table returned for percentages of 40% and 50%.
+The Rank and Value columns come from the __Table variable. The Count column holds the count of how many of the values appear in the original table. The CBCount (Cumulative Bottom Count) column is the total number of rows for all values that are less than or equal to the current Value. The CTCount (Cumulative Top Count) column is the opposite of the CBCount column, counting the total number of rows for all values that are greater than or equal to the current Value. Finally, the BWhile and TWhile columns implement while loop counters, subtracting the CBCount and CTCount values from the __Trim variable.
+We can now calculate the “exits” to the while loops by getting the maximum value in the BWhile and TWhile columns respectively where the value is less than or equal to 0. In the continuing example this returns -1 for the __MinBottom and 0 for the __MinTop.
+It is now time to calculate the __FinalBottomRankTable and __FinalTopRankTable variables. Continuing our example, the __FinalBottomRankTable looks like the following:
+Rank
+Count
+Value
+CBCount
+CTCount
+BWhile
+TWhile
+Product
+11
+1
+1
+1
+11
+1
+-9
+1
+9
+2
+2
+3
+10
+-1
+-8
+2
+Table 14.4: __FinalBottomRankTable data
+While the __FinalTopRankTable looks like the following:
+Rank
+Count
+Value
+CBCount
+CTCount
+BWhile
+TWhile
+Product
+2
+1
+6
+10
+2
+-8
+0
+6
+1
+1
+7
+11
+1
+-9
+1
+7
+Table 14.5: __ FinalTopRankTable data
+Both of these tables are filtered by their respective “exits”, __MinBottom and __MinTop respectively. The purpose of the Product column is to ensure that the correct number of points are removed from the data used to calculate the mean. This is necessary since the source data can contain duplicates of the same number. Looking at the __FinalBottomRankTable, one can see that while there are two rows in the original data with the value of 2, the Product column for this row contains 2 and not 4. This is because there are only 2 points being removed from both the top and bottom of the data and one point (Value = 1) has already been removed. This means that we only want to remove a single 2 and not both 2s.
+At this point, we are essentially home free. We simply need to add up the values for Product in both tables, __Bottom and __Top. We can then subtract these values from the sum of the Values column and then divide by the total number of points minus those that we have trimmed to arrive at our desired mean.
+Set the number of decimal points for the TRIMMEAN measure to 9 and then place the TRIMMEAN measure into a Table visual along with the Value column (not summarized):
+Figure 14.2: Results of the TRIMMEAN measure
+You can check the accuracy of these results compared to the TRIMMEAN function in Excel using the TRIMMEAN sheet from the Excel spreadsheet, Chapter14_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+A key takeaway from the TRIMMEAN analysis is that not all problems can be solved simply by filtering a table and then aggregating over that table. Sometimes problems need to be broken down into their component parts. Instead of filtering to a table and then using AVERAGEX, we can realize that an average is simply a sum divided by a count. Realizing this, we can devise alternative methods of achieving the desired result.
+This completes our recreation of Excel’s TRIMMEAN function in DAX. If you are interested in how to replicate additional Excel functions in DAX, this author once endeavored to create DAX equivalents for all Excel functions and was able to achieve 96% coverage. You can find these equivalents at the following link: https://community.fabric.microsoft.com/t5/Power-BI-Community-Blog/Excel-to-DAX-Translation/ba-p/1060991.
+Let’s switch gears and this time recreate Power Query’s fuzzy matching capabilities in DAX.

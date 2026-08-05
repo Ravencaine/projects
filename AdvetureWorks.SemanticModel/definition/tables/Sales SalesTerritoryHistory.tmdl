@@ -1,0 +1,83 @@
+table 'Sales SalesTerritoryHistory'
+	lineageTag: 96ffd7d8-ee6f-44ba-9524-43b210c725c5
+
+	column BusinessEntityID
+		dataType: int64
+		formatString: 0
+		lineageTag: 57f83479-855d-44c5-a9fd-3f717406b3e7
+		summarizeBy: none
+		sourceColumn: BusinessEntityID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6668d803-9ebb-4585-b3af-e3bc95d4c413
+		summarizeBy: none
+		sourceColumn: TerritoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 50156251-f740-421f-8f34-fa5d1a76fea5
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variation
+			isDefault
+			relationship: 82ed417f-3c8a-44f2-b47d-0e192c3991d6
+			defaultHierarchy: LocalDateTable_30bd7cf8-4708-4669-851b-f096cc439cbd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ece5a1b9-d306-4dbf-b5b9-ad97b2c939ad
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variation
+			isDefault
+			relationship: f9aec163-2cdd-4139-b6e2-f3f788cf4110
+			defaultHierarchy: LocalDateTable_cae23f0a-66eb-4022-a20d-35109e2aaa7d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: a4976d73-b695-4723-a45d-742f31add3de
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5021ec2f-3394-4391-b5e0-0c74565b1c32
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 98471609-7827-44c0-bde7-9adf01cbb12f
+			defaultHierarchy: LocalDateTable_48599974-1a81-4ee9-af30-0ffce521874e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales SalesTerritoryHistory' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Sales", Item = "SalesTerritoryHistory"]}[Data]
+				in
+				  #"Navigation 2"
+
+	annotation PBI_ResultType = Table
+

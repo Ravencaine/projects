@@ -8,7 +8,7 @@ created: 2026-07-27
 description: "More"
 Processed: "Unprocessed"
 ---
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*29GhNZKkHcP2zWjPkIxLiA.jpeg)
+![](99.System/Attachments/1!29GhNZKkHcP2zWjPkIxLiA.jpeg.webp)
 
 Introduction: Creating accurate and dynamic reports in Power BI can be an art. While Excel formulas offer simplicity, DAX provides the flexibility and power to handle complex aggregations, especially when working with hierarchical data structures. In this post, we’ll walk through our journey of constructing a sophisticated DAX formula to calculate the average transaction hours for equipment categories. We’ll compare this with the simplicity of Excel formulas to highlight the strengths and capabilities of DAX.
 

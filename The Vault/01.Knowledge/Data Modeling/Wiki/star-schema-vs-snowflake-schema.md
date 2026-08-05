@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Star Schema vs Snowflake Schema in Power BI"
 source_url: "https://medium.com/learning-data/star-schema-vs-snowflake-schema-in-power-bi-5711f294e584"
 note_type: comparison

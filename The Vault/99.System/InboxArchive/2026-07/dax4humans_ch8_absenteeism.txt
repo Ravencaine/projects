@@ -1,0 +1,87 @@
+Absenteeism measures the amount of time employees are unexpectedly unavailable for work. It is used here to distinguish between planned absences such as personal time off (PTO), holidays, family leave, and long-term disability versus employees calling in sick or simply not showing up for work. Absenteeism is an important metric to track both at an individual level and a department level since chronic absenteeism is a drain on overall organizational productivity.
+Absenteeism is generally measured in hours or days. The basic formula is to simply divide the number of hours or days absent by the total number of working hours or days within the same period. However, calculating absenteeism becomes more complex when calculating against a department or business unit since employees may be hired or leave during the period in question. In addition, absences may span different date periods, which also complicates the calculation.
+To get started calculating absenteeism, first complete the setup for the previous section, Employee Turnover Rate, including the Dates table, Calculations table and Employee table. Next, create the following Absences table using an Enter data query:
+Employee
+Start Date
+End Date
+Dan
+1/17/2024
+1/19/2024
+Mike
+6/3/2024
+6/4/2024
+Mike
+7/1/2024
+7/3/2024
+David
+3/4/2024
+3/6/2024
+David
+4/3/2024
+4/5/2024
+David
+5/6/2024
+5/8/2024
+David
+6/3/2024
+6/6/2024
+David
+7/3/2024
+7/5/2024
+David
+12/30/2024
+1/3/2025
+Table 8.2: Absentee data.
+Alternatively, import the Absences sheet from the Excel spreadsheet, Chapter8_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Create a one-to-many relationship between the Employees table and the Absences table. Your data model should look like the following:
+Figure 8.2: Absenteeism data model.
+Next, create the following measure in the Calculations table:
+Absenteeism =  VAR __Start = MIN( 'Dates'[Date] )  VAR __End = MAX( 'Dates'[Date] )  VAR __EmployeeContext = SELECTCOLUMNS( 'Employees', "__Employee", [Employee] )  VAR __Employees =  ADDCOLUMNS(  ADDCOLUMNS(  FILTER(  ALL( 'Employees'),  [Employee] IN __EmployeeContext &&  [Hire Date] = __Start  ),  "__Min", IF( [Hire Date] > __Start, [Hire Date], __Start ),  "__Max", IF( [Term Date]   ),  "__WorkDays", NETWORKDAYS( [__Min], [__Max] )  )  VAR __TotalDays = SUMX( __Employees, [__WorkDays] )  VAR __Absences =  ADDCOLUMNS(  ADDCOLUMNS(  FILTER(  ALL( 'Absences'),  [Employee] IN __EmployeeContext &&  (  ( [Start Date] >= __Start && [End Date]   ||  ( [Start Date] = __Start &&  [End Date]   )  ||  ( [Start Date] >= __Start && [Start Date]   && [End Date] > __End  )  ||  ( [Start Date] = __End )  )  ),  "__Min", IF( [Start Date]   "__Max", IF( [End Date] > __End, __End, [End Date] )  ),  "__WorkDays", NETWORKDAYS( [__Min], [__Max] )  )  VAR __AbsentDays = SUMX( __Absences, [__WorkDays] )  VAR __Result = DIVIDE( __AbsentDays, __TotalDays, 0 ) + 0 RETURN  __Result  Format the Absenteeism measure as a percentage with two decimal places. Create a Card visualization and place the Absenteeism measure in the Card visual’s Fields field well.
+Next, create a Matrix visualization. Place the Employee column from the Employees table in the Rows field well, the Absenteeism measure in the Values field well, and the Year column from the Dates table in the Columns field well. As you can see, this Absenteeism measure functions at the individual level as well as at the group level and different date periods.
+The complexity in this calculation comes from ensuring that only active employees are considered and only for the days that those employees are active within the period as well as covering the four different possible absence scenarios.
+The four different absence scenarios can be visualized as follows where the green squares represent non-absent days and the red squares represent absent days:
+Figure 8.3: Four different types of absences.
+For the calculation to work, each of these four scenarios must be accounted for within the measure’s logic.
+To tackle these challenges, we start by simply getting the minimum date in context (__Start) and the maximum date in context (__End). These dates represent the period’s start and period’s end.
+Next, we must tackle only analyzing employees for the days they were active within the period. To do this, we first create a single column table, __EmployeeContext, which is simply a list of the employees currently in context. We get this table because we wish to preserve the filter context of employees but remove all other context when calculating the __Employees table variable. This is not strictly necessary since no other tables, such as the Dates table, have relationships with our Employees table, but this is done for illustrative purposes to account for more complex semantic models which may have such relationships.
+Calculating the __Employees table variable involves three steps. First, we use FILTER and remove all filter contexts on the Employees table by using the ALL function. We reinsert the filter context from the Employees table by using a filter clause where we use the IN operator to ensure that we filter down to the rows in the Employees table where the value in the Employee column matches a row in our __EmployeeContext table. The second filter clause ensures that the employee was active during the period in question with a Hire Date that is less than or equal to the period end (__End) and a Term Date that is greater than or equal to the period start (__Start).
+The second step is to calculate the correct minimum and maximum dates for each employee within the period. For example, if an employee was hired three days after the start of the period, then we want to use the employee’s Hire Date as the minimum date since the two days at the start of the period should not be counted as days not absent.
+Similarly, if an employee leaves the company four days prior to the end of the period, then we want to use the Term Date for that employee versus the period’s end date. These are the calculations performed for the __Min and __Max columns within the first ADDCOLUMNS function that wraps our FILTER function.
+The third step is using our two new __Min and __Max columns to calculate the total days the employee was active within the period. This is the __WorkDays column in the outer ADDCOLUMNS function. The NETWORKDAYS function is used to calculate this number. The NETWORKDAYS function is useful here as it excludes weekends (Saturday and Sunday) by default and can also exclude holiday dates.
+While not used in this calculation, the fourth parameter of the NETWORKDAYS function controls excluded holiday dates. This parameter is simply a single column table of dates that should be excluded as holidays. The third parameter controls what is considered a weekend. There are many different possible values for this as shown in the following table:
+Parameter Value
+Days excluded as weekends
+1 or omitted
+Saturday, Sunday
+2
+Sunday, Monday
+3
+Monday, Tuesday
+4
+Tuesday, Wednesday
+5
+Wednesday, Thursday
+6
+Thursday, Friday
+7
+Friday, Saturday
+11
+Sunday only
+12
+Monday only
+13
+Tuesday only
+14
+Wednesday only
+15
+Thursday only
+16
+Friday only
+17
+Saturday only
+Table 8.3: NETWORKDAYS fourth parameter settings.
+Note that, unfortunately, there is no value that does not exclude at least one day. This means that businesses that operate seven days a week are unable to use the NETWORKDAYS function to calculate working days. Instead, the following calculation could be used in these circumstances:
+( [__Max] - [__Min] ) * 1.  If you still need to exclude holiday dates, then the following could be used instead:
+COUNTROWS( EXCEPT(  GENERATESERIES( [__Min], [__Max], 1 ), { DATE( 2024, 12, 25 ), DATE( 2025, 1, 1 ) } ) )  We can then total up all the working days for all employees in context within the period (__TotalDays) by simply using SUMX to sum the __WorkDays column within the __Employees table variable.
+The calculations for the __Absences table variable and __AbsentDays variable follow a similar pattern as the __Employees table variable and __TotalDays variable. The main difference is the filter clauses are more complex to account for the four different absence types. These are the four filter clauses separated by OR logic (||).
+Once the __AbsentDays are calculated, we can then simply divide the __AbsentDays by the __TotalDays to arrive at our __Result. Note that the __Result calculation includes a +0. This ensures that a value is returned for every calculation. This +0 can be excluded from the formula such that only employees with absences would be included in the Matrix visualization.

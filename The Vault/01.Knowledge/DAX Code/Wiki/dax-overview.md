@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: atomic
 tags: [dax, fundamentals]
@@ -16,7 +17,7 @@ DAX formulas include functions, operators, and values to perform advanced calcul
 ## Key Points
 
 - DAX formulas are used in **measures**, **calculated columns**, **calculated tables**, and **row-level security**
-- DAX always references a **complete column or table** — never individual cells or ranges
+- DAX always references a **complete column or table**: never individual cells or ranges
 - DAX can return either a **scalar value** or a **table**
 - Unlike Excel, DAX has **no named ranges** and requires fully qualified references
 - DAX is based on SQL Server Analysis Services — behaviour may differ from Excel in edge cases
@@ -25,9 +26,9 @@ DAX formulas include functions, operators, and values to perform advanced calcul
 ## Context
 
 DAX evaluates in one of two contexts:
-- **Row context** — current row (in calculated columns or iterators like SUMX)
-- **Filter context** — the set of rows visible due to report filters, slicers, and relationships
-- **Query context** — the subset implicitly retrieved for a formula based on the full filter context
+- **Row context**: current row (in calculated columns or iterators like SUMX)
+- **Filter context**: the set of rows visible due to report filters, slicers, and relationships
+- **Query context**: the subset implicitly retrieved for a formula based on the full filter context
 
 Understanding context is critical to writing correct and performant DAX.
 

@@ -1,0 +1,43 @@
+table 'Production Culture'
+	lineageTag: 2e0c07a6-af7e-4447-93ce-4852876884af
+
+	column CultureID
+		dataType: string
+		lineageTag: 0ff4909d-ab86-4191-b4f3-618850137d5a
+		summarizeBy: none
+		sourceColumn: CultureID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 6e8a4112-18c1-4878-919d-e2d223525b33
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4240d2b0-49e5-4569-b922-8dc144c10251
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: d50e397b-2600-49af-934f-baf372426d0c
+			defaultHierarchy: LocalDateTable_6c541c85-09c4-48aa-955c-be458f0da873.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production Culture' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "Culture"]}[Data]
+				in
+				  #"Navigation 2"
+

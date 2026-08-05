@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Mastering Power BI: Accurate Aggregation with DAX"
 source_url: https://medium.com/@markchen69/mastering-power-bi-accurate-aggregation-with-dax-f18f8c87a7ca
 note_type: source

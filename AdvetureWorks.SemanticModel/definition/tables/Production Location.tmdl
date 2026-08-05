@@ -1,0 +1,65 @@
+table 'Production Location'
+	lineageTag: 0aea792c-ad72-4a22-955d-6345826e0787
+
+	column LocationID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f7a69ea-b2b8-4471-90d0-0da92afe1cc8
+		summarizeBy: none
+		sourceColumn: LocationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 686864d4-1a4c-4c7b-92a2-45b8a1528a1f
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CostRate
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 23fa9125-152c-463a-8133-6c46a5723e29
+		summarizeBy: sum
+		sourceColumn: CostRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column Availability
+		dataType: double
+		lineageTag: e239d5d8-6748-42a7-bf28-843b4bedaf8f
+		summarizeBy: sum
+		sourceColumn: Availability
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1b27dc21-936b-4c45-94fd-313de81b42be
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 6628df4e-425f-4709-b8cc-219b07c1bc67
+			defaultHierarchy: LocalDateTable_57addfd1-5baa-4580-ad90-8c57ad69d87b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production Location' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "Location"]}[Data]
+				in
+				  #"Navigation 2"
+

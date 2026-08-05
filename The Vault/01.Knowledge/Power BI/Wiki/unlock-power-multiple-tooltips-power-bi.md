@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Unlock the Power of Multiple Tooltips in Power BI Reports"
 source_url: https://medium.com/@markchen69/unlock-the-power-of-multiple-tooltips-in-power-bi-reports-a44ebd6404c9
 note_type: source

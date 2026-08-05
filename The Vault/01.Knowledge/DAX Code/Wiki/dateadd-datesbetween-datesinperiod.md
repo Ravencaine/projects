@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, time-intelligence]
@@ -63,7 +64,7 @@ Q1 Range = CALCULATE([Sales], DATESBETWEEN('Date'[Date], DATE(2024,1,1), DATE(20
 
 ## Notes
 
-- All return a **table** — used as a CALCULATE filter argument
+- All return a **table**: used as a CALCULATE filter argument
 - Prefer DATESINPERIOD over DATESBETWEEN for standard intervals
 - Not supported in DirectQuery mode for calculated columns or RLS rules
 - Related: [[sameperiodlastyear]], [[datesmtd-datesqtd-datesytd]]

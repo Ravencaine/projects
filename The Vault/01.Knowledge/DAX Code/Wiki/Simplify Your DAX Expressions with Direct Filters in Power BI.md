@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Simplify Your DAX Expressions with Direct Filters in Power BI"
 source_url: https://medium.com/@markchen69/simplify-your-dax-expressions-with-direct-filters-in-power-bi-73894c374fea
 note_type: source

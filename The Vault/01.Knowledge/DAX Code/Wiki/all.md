@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, filter-modifier]
@@ -20,7 +21,7 @@ ALL([<table> | <column>[, <column>[, …]]])
 
 ## Returns
 
-**table** or **column values** — all rows / all values with filters removed from the specified arguments
+**table** or **column values**: all rows / all values with filters removed from the specified arguments
 
 ## Examples
 

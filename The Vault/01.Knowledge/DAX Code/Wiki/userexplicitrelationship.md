@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, relationship]
@@ -33,7 +34,7 @@ CALCULATE([Sales], USERELATIONSHIP('Sales'[ShipDate], 'Date'[Date]))
 
 ## Notes
 
-- Only works **inside `CALCULATE` or `CALCULATETABLE`** — cannot be used standalone.
+- Only works **inside `CALCULATE` or `CALCULATETABLE`**: cannot be used standalone.
 - Activates a relationship that is marked as **inactive** in the data model.
 - Useful when you need to filter by a different date (e.g., ship date vs. order date) than the active date relationship.
 - The relationship must already exist in the model; this function only toggles its active state for the current calculation.

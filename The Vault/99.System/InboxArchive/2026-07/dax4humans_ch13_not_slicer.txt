@@ -1,0 +1,31 @@
+Ordinarily, selecting items in a slicer filters other visuals to just the values selected in the slicer. However, there may be times when the reverse behavior is desired where selections in the slicer filter out the selected values. This type of NOT slicer or inverse slicer can be built using disconnected tables and DAX measures.
+To see how to create a NOT slicer, use the following data in an Enter data query to create a table called Products in Power BI or alternatively, import the Products sheet from the Excel spreadsheet, Chapter13_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Product
+Category
+Value
+One
+AA
+20
+Two
+BB
+30
+Three
+AB
+25
+Four
+AA
+20
+Five
+BB
+30
+Table 13.4: Products data
+Now create the following disconnected table using DAX:
+Categories = DISTINCT( 'Products'[Category] )  Next, create the following measure:
+NOT Selector =  VAR __Category = MAX( 'Products'[Category] )  VAR __Categories = DISTINCT( 'Categories'[Category] )  VAR __Result = IF( __Category IN __Categories, BLANK(), 1 ) RETURN  __Result  This measure is quite simple; it first stores the current value of the Category column in the Products table in a variable called __Category. Then, the DISTINCT function is used to get the unique values for the Category column from the Categories table which are stored in a variable called __Categories. We can then determine whether the current __Category is in the table of distinct __Categories values and if it is return BLANK, otherwise return 1.
+We can now create a Slicer visual using the Category column from the Categories table. We can also create a Table visual to display the Product and Category columns from the Products table. Finally, we can add the NOT Selector measure to the visual level filters for the Table visual and set the filter to Show items when the value is 1:
+Figure 13.9: NOT slicer in action
+As one can see, selecting AB and BB from the Category slicer filters out those values from the Table visual.
+We can extend this concept of a NOT Slicer to a NOT Aggregator by using the following measure:
+NOT Aggregator =  VAR __Categories = DISTINCT( 'Categories'[Category] )  VAR __Table = FILTER( 'Products', NOT( [Category] IN __Categories ) )  VAR __Result = SUMX( __Table, [Value] ) RETURN  __Result  Placing this measure into a Card visual displays the sum of the Products whose categories are not selected.
+Figure 13.10: NOT aggregator
+This completes another example demonstrating the utility of disconnected tables. However, the NOT Selector measure is really just a specific implementation of a more general concept, the Complex Selector, which we explore next.

@@ -1,0 +1,79 @@
+table 'Sales Customer'
+	lineageTag: f68fdebb-67b5-4e6f-b760-8af789ba98d6
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c0e3fd5-c20c-48f6-a807-3e2b0d303b83
+		summarizeBy: count
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PersonID
+		dataType: int64
+		formatString: 0
+		lineageTag: 00c042b7-7ae1-46c9-87af-0f47c713fc37
+		summarizeBy: none
+		sourceColumn: PersonID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3390652f-25cc-4f5f-8374-af6cd713d46b
+		summarizeBy: count
+		sourceColumn: StoreID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TerritoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: 30aa285c-adf8-4b70-bf92-4d466477aaf0
+		summarizeBy: none
+		sourceColumn: TerritoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountNumber
+		dataType: string
+		lineageTag: 6f5f8252-a47f-4c6d-8c27-39371dc313cb
+		summarizeBy: none
+		sourceColumn: AccountNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: cbd93fa3-9260-411f-bae9-9b0583ea0a2e
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a84d81b3-52f3-4311-8e6e-65c0c7636ef0
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: a787c6f4-67a1-4834-847a-e0bc7e14ecde
+			defaultHierarchy: LocalDateTable_e7981e89-749a-4745-96c9-b1f5b0b989b6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales Customer' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Sales", Item = "Customer"]}[Data]
+				in
+				  #"Navigation 2"
+

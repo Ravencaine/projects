@@ -12,7 +12,7 @@ Processed: "Unprocessed"
 
 A conversational technical guide to time-based calculations and aging analysis
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*TLOWexl0NWtuFyFI)
+![](99.System/Attachments/0!TLOWexl0NWtuFyFI.webp)
 
 Photo by Jack B on Unsplash
 

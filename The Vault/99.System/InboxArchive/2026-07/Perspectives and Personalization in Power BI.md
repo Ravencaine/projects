@@ -10,7 +10,7 @@ Processed: "Unprocessed"
 ---
 (Article for beginners)
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*BclchiGl4e52XbC0PJQ5Ww.png)
+![](99.System/Attachments/1!BclchiGl4e52XbC0PJQ5Ww.png.webp)
 
 Perspectives and personalization are two powerful features in Power BI that allow report viewers in Power BI service to customize report experiences according to their needs, without depending entirely on the developer or the report author. In this article, we will look into how they work in detail. An important thing to note is that — Personalization and Perspectives are **not security mechanisms like RLS and OLS**. They are just meant to improve usability and **provide a better end-user experience**.
 
@@ -21,68 +21,68 @@ Personalization allows report viewers to **customize visuals** according to thei
 Some modifications that viewers can do to the reports:  
 ✓ Change the visualization type:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*DSHfL40ZqfzJx6gH.png)
+![](99.System/Attachments/0!DSHfL40ZqfzJx6gH.png.webp)
 
 From a Stacked Column Chart, we can change it to (say) a line chart
 
 ✓ Swap out a measure or dimension:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*oBtnng-HOJqHurVw.png)
+![](99.System/Attachments/0!oBtnng-HOJqHurVw.png.webp)
 
 We can use Gross Sales column instead of Units Sold
 
 ✓ Add or remove a legend:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*NHEEqXAJNVJZxuYB.png)
+![](99.System/Attachments/0!NHEEqXAJNVJZxuYB.png.webp)
 
 ✓ Compare two or more measures:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*XhVFnVTVV0aCq6N3.png)
+![](99.System/Attachments/0!XhVFnVTVV0aCq6N3.png.webp)
 
 ✓ Change aggregations:
 
-![](https://miro.medium.com/v2/resize:fit:1396/format:webp/0*MiWmOcT19dc2dB3J.png)
+![](99.System/Attachments/0!MiWmOcT19dc2dB3J.png.webp)
 
 We can change the aggregation of a numerical column from (say) sum to average
 
 ✓ Change the placement of fields:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*jMgfDEFTqtxjx-9h.png)
+![](99.System/Attachments/0!jMgfDEFTqtxjx-9h.png.webp)
 
 We can change the order in which the columns occur in a table
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*w2HG-LYLnaatUwFu.png)
+![](99.System/Attachments/0!w2HG-LYLnaatUwFu.png.webp)
 
 We can move a field from legend to axis or interchange columns between axes
 
 Some exploration features that users can use:  
 ✓ Capture their changes:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*C5j-wL4gpnrMyz44n_ex1w.png)
+![](99.System/Attachments/1!C5j-wL4gpnrMyz44n_ex1w.png.webp)
 
 Personalize the visuals and save it as a personal bookmark (visible only to you)
 
 ✓ Share their changes:
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*BVIM9J3KXAyUIhl1.png)
+![](99.System/Attachments/0!BVIM9J3KXAyUIhl1.png.webp)
 
 With reshare permissions, when you share the report with a colleague, you can choose to include the personalization changes that you made. This does not overwrite the author’s version. If the colleague has editing permissions, they can save your personalized version as a new report.
 
 ✓ Reset all changes for the report:
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*XlX9BSu4XUy9AMHv.png)
+![](99.System/Attachments/0!XlX9BSu4XUy9AMHv.png.webp)
 
 Click on Reset to default button to undo all changes in the report and set it back to the author’s last saved view of the report
 
 ✓ Reset all changes for the visual:
 
-![](https://miro.medium.com/v2/resize:fit:1222/format:webp/0*p1IW_NvyRP5KhRMr.png)
+![](99.System/Attachments/0!p1IW_NvyRP5KhRMr.png.webp)
 
 Click on Reset this visual to remove all your changes to a particular visual and set it back to the author’s last saved view of that visual.
 
 ✓ Clear out recent changes:
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*aH0__aiTuFobefZk.png)
+![](99.System/Attachments/0!aH0__aiTuFobefZk.png.webp)
 
 Click on the eraser icon to clear all changes since you opened the Personalize pane.
 
@@ -100,7 +100,7 @@ Perspectives can be used to **choose a subset of a model** to provide a more **f
 • This feature is not supported for publish to web.  
 • Users cannot toggle between different perspectives in the Service; they only see the one assigned to the page by the author.
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-T29oJyUwfFYkrzgkYxfPQ.png)
+![](99.System/Attachments/1!-T29oJyUwfFYkrzgkYxfPQ.png.webp)
 
 A perspective created as a subset of the data model for use in the report
 
@@ -109,11 +109,11 @@ Here is how to create a perspective in Power BI desktop, for use in Power BI ser
 2) Go to those tables and columns that you want to add to perspectives and right click on them -> Show in perspectives -> choose the perspective.  
 3) Once you have added all the required columns or tables to the perspectives of your choice, save it to your model in Tabular Editor.
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*7uV5JW1eR4ninsn6.png)
+![](99.System/Attachments/0!7uV5JW1eR4ninsn6.png.webp)
 
 Now, when we open the report and go to the format pane of the page, an option called ‘Personalize visual’ appears. Turn it on and choose the perspective from the dropdown that you want to enable for that page. After you set the Perspective for the report page, the Personalize visuals experience for that page is filtered to the selected Perspective. You may choose to apply your perspective setting to all the pages too.
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*85VDJbgNWTj4mar7.png)
+![](99.System/Attachments/0!85VDJbgNWTj4mar7.png.webp)
 
 **Security in Perspectives:**
 

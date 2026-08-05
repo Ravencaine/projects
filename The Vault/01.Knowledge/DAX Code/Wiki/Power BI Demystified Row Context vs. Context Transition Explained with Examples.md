@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Power BI Demystified: Row Context vs. Context Transition Explained with Examples"
 source_url: https://medium.com/write-your-world/power-bi-demystified-row-context-vs-context-transition-explained-with-examples-d43576a74f22
 note_type: source
@@ -16,7 +17,7 @@ If you’ve ever written DAX in Power BI, you’ve probably hit this wall:
 - What does “row context” even mean?
 - And why does CALCULATE suddenly change everything?
 
-The answer lies in **context** — specifically, **Row Context** and **Context Transition**.
+The answer lies in **context**: specifically, **Row Context** and **Context Transition**.
 
 These two ideas are at the heart of DAX. Once you master them, the rest of Power BI feels far less confusing.
 

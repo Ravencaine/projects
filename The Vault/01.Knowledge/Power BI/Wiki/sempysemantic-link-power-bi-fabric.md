@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "The Python Library That Reads Your Power BI Models Like Data. Most Fabric Teams Have Never Opened It."
 source_url: https://medium.com/towards-artificial-intelligence/the-python-library-that-reads-your-power-bi-models-like-data-a8aa1408f2cd
 note_type: source
@@ -28,9 +29,9 @@ Two Ecosystems, One Capability
 
 Microsoft’s definition: Semantic Link connects Power BI semantic models with Synapse Data Science in Fabric. In practice it has two halves:
 
-**The SemPy Python library** — pandas-flavored. Its core object, `FabricDataFrame`, subclasses the pandas DataFrame and carries semantic metadata: when you read from a model, the data arrives knowing its data categories, relationships, and lineage.
+**The SemPy Python library**: pandas-flavored. Its core object, `FabricDataFrame`, subclasses the pandas DataFrame and carries semantic metadata: when you read from a model, the data arrives knowing its data categories, relationships, and lineage.
 
-**A Spark native connector** — the same model access from PySpark, Spark SQL, R, and Scala, for when you’re working at Spark scale.
+**A Spark native connector**: the same model access from PySpark, Spark SQL, R, and Scala, for when you’re working at Spark scale.
 
 Setup, in its entirety: nothing. It’s built into Fabric Runtime 1.2+ and natively supported in the pure Python notebook experience. (`%pip install -U semantic-link` if you want the latest version.)
 

@@ -1,0 +1,151 @@
+table 'Production WorkOrderRouting'
+	lineageTag: 398edf26-8110-4019-a53e-2d7fd778fbfb
+
+	column WorkOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 442dff35-5845-4a96-8605-12851b02b8d9
+		summarizeBy: none
+		sourceColumn: WorkOrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6665a760-31b1-446f-854c-d0376843e7c7
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OperationSequence
+		dataType: int64
+		formatString: 0
+		lineageTag: 421ff45a-691e-43b5-b379-6d0790c3504e
+		summarizeBy: sum
+		sourceColumn: OperationSequence
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationID
+		dataType: int64
+		formatString: 0
+		lineageTag: c746c63e-d1e8-40be-a494-3319e601d79a
+		summarizeBy: none
+		sourceColumn: LocationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScheduledStartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9c19b9c2-a3fb-4b75-a40c-8f1fcfcace80
+		summarizeBy: none
+		sourceColumn: ScheduledStartDate
+
+		variation Variation
+			isDefault
+			relationship: 9b8503fd-a95f-424b-8a2e-c242e7af6b95
+			defaultHierarchy: LocalDateTable_edc94282-0710-4e4f-9a11-3ea0604e8791.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScheduledEndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2c5f2ef0-e5ae-4e69-b3ab-ecd73e2af463
+		summarizeBy: none
+		sourceColumn: ScheduledEndDate
+
+		variation Variation
+			isDefault
+			relationship: fb35428f-0ddf-4e4b-9d39-321fb3c698d1
+			defaultHierarchy: LocalDateTable_40f01f53-29c6-4d40-806b-b655070881b7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualStartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3f4a7b7c-73d2-4b78-a18f-4c1c764dbf25
+		summarizeBy: none
+		sourceColumn: ActualStartDate
+
+		variation Variation
+			isDefault
+			relationship: 504b26f7-20c9-4f6b-8f27-fa028280a52f
+			defaultHierarchy: LocalDateTable_266a42e7-1ef0-431a-a134-e9547192c7db.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualEndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5efc1dd1-898b-47bd-9c6e-21759e785902
+		summarizeBy: none
+		sourceColumn: ActualEndDate
+
+		variation Variation
+			isDefault
+			relationship: 711df741-fe80-441b-a8a5-0d5fc2c8ba89
+			defaultHierarchy: LocalDateTable_7346c2d5-880d-4669-9a7c-4722b30455d2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActualResourceHrs
+		dataType: double
+		lineageTag: 75b1a848-cb0c-467a-9e0a-e3ac76aabed2
+		summarizeBy: sum
+		sourceColumn: ActualResourceHrs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PlannedCost
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: d010562b-4663-410d-8839-3deb996cc747
+		summarizeBy: sum
+		sourceColumn: PlannedCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column ActualCost
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 729c1913-3069-436e-8486-8fd8ce6560d5
+		summarizeBy: sum
+		sourceColumn: ActualCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3fdb0e40-57a0-4727-baf4-c1a6e8266b64
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 4ee28caa-1060-4b77-bd92-fd39238b17dc
+			defaultHierarchy: LocalDateTable_71f69f8f-167c-4e53-8598-5dea24b84b3f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production WorkOrderRouting' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "WorkOrderRouting"]}[Data]
+				in
+				  #"Navigation 2"
+

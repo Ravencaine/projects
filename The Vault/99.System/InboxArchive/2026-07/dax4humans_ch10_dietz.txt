@@ -1,0 +1,35 @@
+The modified Dietz method measures the historical performance of an investment portfolio with external flows. External flows are one-way transfers of money, securities, or other transactions into and out of an investment portfolio. Peter O. Dietz invented the method to simplify calculating the internal rate of return (IRR), which is computationally intensive.
+The formula for a modified Dietz return is the following:
+InvestmentGainorLoss AverageCapital  =(B−A−∑tT F(t)   A+∑tT ((T−t) T *F(t) )    \frac{Investment\ Gain\ or\ Loss}{Average\ Capital} = \ \frac{(\ B - A - \ \sum_{t}^{T}{F(t)}}{A + \ \sum_{t}^{T}\left( \frac{(\ T - t\ )}{T}*F(t) \right)}\
+The variables in this equation are the following:
+- A = Beginning investment balance
+- B = Ending investment balance
+- T = Total length of time of the investment
+- t = Time of an individual transactional flow
+- F(t) = Transactional flow at a particular time
+The term (T−t) T \frac{(\ T - t\ )}{T}   is known as the weighting factor and is the proportion of the time between when the flow occurred and the end of the investment period.
+To demonstrate calculating the modified Dietz return for an investment portfolio, use an Enter data query to create a Portfolio table using the following data or alternatively load the Portfolio sheet of the Excel file, Chapter10_Data.xlsx, available in the GitHub repository for this book.
+Date
+Category
+Value
+1/1/2024
+Initial Value
+$ 2,000.00
+3/31/2024
+Flow
+$ 1,000.00
+10/1/2024
+Flow
+$ (1,600.00)
+12/31/2024
+Ending Value
+$ 2,400.00
+Table 10.9: Portfolio data
+This table represents an initial investment of $2,000. An additional $1,000 was added three months later, $1,600 was withdrawn after nine months and the portfolio had an ending value of $2,400.
+Now create the following measure:
+Modified Dietz Return =  VAR __A = MAXX( FILTER( 'Portfolio', [Category] = "Initial Value" ), [Value] )  VAR __B = MAXX( FILTER( 'Portfolio', [Category] = "Ending Value" ), [Value] )  VAR __F = SUMX( FILTER( 'Portfolio', [Category] = "Flow" ), [Value] )  VAR __InitDate = MAXX( FILTER( 'Portfolio', [Category] = "Initial Value" ), [Date] )  VAR __EndDate = MAXX( FILTER( 'Portfolio', [Category] = "Ending Value" ), [Date] )  VAR __T = ( __EndDate - __InitDate ) * 1. + 1  VAR __Table =  ADDCOLUMNS(  FILTER( 'Portfolio', [Category] = "Flow" ),  "__WF", DIVIDE( ( __EndDate - [Date] ) * 1. + 1, __T ) * [Value]  )  VAR __WF = SUMX( __Table, [__WF] )  VAR __Return = DIVIDE( __B - __A - __F, __A + __WF, 0 ) RETURN  __Return  The measure formula is relatively straight-forward based upon the stated equation for calculating the modified Dietz return. The most complex component is the creation of the table variable, __Table, which adds the __WF column that multiples the weight (T−t) T \frac{(\ T - t\ )}{T}   by the Value of the flow. In this case, the weight is calculated based upon the number of days.
+Format the Modified Dietz Return as a Percentage. Next, create a Card visual to display the Modified Dietz Return measure and observe that the calculated value is 42.52%.
+As mentioned, the modified Dietz method has the advantage of not being as computationally intensive as IRR. In addition, the modified Dietz method’s primary advantage over time-weight return calculations is that calculation of the modified Dietz return does not require known portfolio valuations for every instance of a flow.
+For reference, here is a calculation for IRR using the XIRR DAX function for the same investment portfolio:
+IRR =  VAR __Table =  DATATABLE(  "Date", DATETIME, "Value", INTEGER,  {  { "1/1/2024", -2000 },  { "3/31/2024", -1000 },  { "10/1/2024", 1600 },  { "12/31/2024", 2400 }  }  )  VAR __Result = XIRR( __Table, [Value], [Date] ) RETURN  __Result  This calculation returns a value of 42.16%.
+This completes our exploration of the modified Dietz method or modified Dietz return. We next examine calculating compound interest.

@@ -8,7 +8,7 @@ created: 2026-07-27
 description: "More"
 Processed: "Unprocessed"
 ---
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*E6iHYQWXZML3WCTETCg1uQ.png)
+![](99.System/Attachments/1!E6iHYQWXZML3WCTETCg1uQ.png.webp)
 
 Generated with Gemini
 

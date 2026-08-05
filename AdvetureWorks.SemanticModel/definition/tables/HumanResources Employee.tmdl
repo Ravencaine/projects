@@ -1,0 +1,169 @@
+table 'HumanResources Employee'
+	lineageTag: 1460617f-f5b8-41f1-aade-2df4423d7a08
+
+	column BusinessEntityID
+		dataType: int64
+		formatString: 0
+		lineageTag: d80347a0-d0db-498e-92d4-0e022149c2fe
+		summarizeBy: none
+		sourceColumn: BusinessEntityID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NationalIDNumber
+		dataType: string
+		lineageTag: 0c04827c-81d5-4334-8255-d24700f9ee1a
+		summarizeBy: none
+		sourceColumn: NationalIDNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoginID
+		dataType: string
+		lineageTag: 877f1c78-c25e-4406-89fa-e5ddcc117301
+		summarizeBy: none
+		sourceColumn: LoginID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganizationNode
+		dataType: string
+		lineageTag: 6390abba-6fdf-4162-a0c4-446ab8f1d958
+		summarizeBy: none
+		sourceColumn: OrganizationNode
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganizationLevel
+		dataType: int64
+		formatString: 0
+		lineageTag: 0954fe7b-12b7-4bea-a158-c016f7e72fb8
+		summarizeBy: sum
+		sourceColumn: OrganizationLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column JobTitle
+		dataType: string
+		lineageTag: 2df74316-590e-42cd-80ab-7e0c69e9d270
+		summarizeBy: none
+		sourceColumn: JobTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column BirthDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2eec32ca-dc93-4ac1-9a8b-9dff87ae88c8
+		summarizeBy: none
+		sourceColumn: BirthDate
+
+		variation Variation
+			isDefault
+			relationship: bac28256-38ad-4fb0-a08a-977cd1a5b682
+			defaultHierarchy: LocalDateTable_44e47cf7-fc42-41e3-9d4f-c26994dcbfb8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MaritalStatus
+		dataType: string
+		lineageTag: 27d5e2d4-893a-4eaa-bbba-2eb3909e2927
+		summarizeBy: none
+		sourceColumn: MaritalStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 86166e33-57eb-43ee-b863-05b32fc20ab0
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column HireDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ea06ca32-68d8-4f14-bb9f-1cd90cc6363a
+		summarizeBy: none
+		sourceColumn: HireDate
+
+		variation Variation
+			isDefault
+			relationship: 4c883079-5532-494f-a34c-ffc9cac1cf36
+			defaultHierarchy: LocalDateTable_4de3578f-af16-4cf9-bd71-6c73bf7f9dbd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SalariedFlag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0b179c7b-2c3d-494c-8ac2-b27e0491cefd
+		summarizeBy: none
+		sourceColumn: SalariedFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column VacationHours
+		dataType: int64
+		formatString: 0
+		lineageTag: 42afe120-5d0f-4e10-a2b9-fe5b021ccc23
+		summarizeBy: sum
+		sourceColumn: VacationHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column SickLeaveHours
+		dataType: int64
+		formatString: 0
+		lineageTag: 589071c4-0230-41f6-8bf8-ec2619db2f51
+		summarizeBy: sum
+		sourceColumn: SickLeaveHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentFlag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 80a8ed72-ab4c-4c46-884a-499b4e8929ce
+		summarizeBy: none
+		sourceColumn: CurrentFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: d036976f-fd89-4cb6-b10d-32d4441c8f3b
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4761c85b-4edd-4e5c-ab01-f3270bf20fa9
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: e033b798-38ed-4562-a242-7faa0164974b
+			defaultHierarchy: LocalDateTable_76384d6f-27d5-4921-b8d7-3270a53e3ee1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'HumanResources Employee' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "HumanResources", Item = "Employee"]}[Data]
+				in
+				  #"Navigation 2"
+

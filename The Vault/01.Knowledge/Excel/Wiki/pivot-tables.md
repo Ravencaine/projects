@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: "Beyond VLOOKUP: Unleashing Excel's True Data Power for Business Analysis"
 source_url: https://medium.com/@harsh1995hg/beyond-vlookup-unleashing-excels-true-data-power-for-business-analysis-33e9c54a66c4
 note_type: function
@@ -48,7 +49,7 @@ A dynamic cross-tabulation of the source data. The output updates automatically 
 
 ## Notes
 
-- Pivot Tables require data in a **flat, tabular structure** — one row per record, one column per attribute. Messy source data should be cleaned in Power Query first.
+- Pivot Tables require data in a **flat, tabular structure**: one row per record, one column per attribute. Messy source data should be cleaned in Power Query first.
 - Refreshing the underlying data does not automatically refresh the pivot table — right-click the table and select "Refresh," or use "Refresh All" from the Data tab.
 - Calculated fields operate on the *aggregated* values, not the raw rows. For row-level calculations, add a calculated column to the source data instead.
 

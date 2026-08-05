@@ -10,7 +10,7 @@ Processed: "Unprocessed"
 ---
 ## Semantic Link — the SemPy library — ships preinstalled in every Fabric notebook. It can list every measure in your tenant’s models, evaluate them with filters from Python, run DAX programmatically, and validate your data against the relationships your model claims to have. I’ve used it to automate work that used to consume entire client weeks. Here’s the practitioner’s tour, with the code.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*PR8jNV1Ef7_nzPYOPiGA2Q.png)
+![](99.System/Attachments/1!PR8jNV1Ef7_nzPYOPiGA2Q.png.webp)
 
 Semantic Link (SemPy)
 
@@ -26,7 +26,7 @@ A scope note before we start: I’ve written before about automating Power BI ex
 
 ## What Semantic Link Actually Is
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*CCNSDIwQun-smlX5owSQew.png)
+![](99.System/Attachments/1!CCNSDIwQun-smlX5owSQew.png.webp)
 
 Two Ecosystems, One Capability
 
@@ -74,7 +74,7 @@ If you’ve ever wanted to ask “give me this measure, by these columns, with t
 
 ## The Three Use Cases That Pay for the Learning Curve
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cuTRxUZeYg0vMFh6UvYpZQ.png)
+![](99.System/Attachments/1!cuTRxUZeYg0vMFh6UvYpZQ.png.webp)
 
 The Three Use Cases That Pay for the Learning Curve
 
@@ -192,11 +192,11 @@ Honest scope limits, before you over-promise to your team:
 
 ## Practitioner Verdict
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*crJGtRRr1K15rX36BaofEA.png)
+![](99.System/Attachments/1!crJGtRRr1K15rX36BaofEA.png.webp)
 
 Practitioner Verdict
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*klMSz02-eeLnwjtS10cSJw.png)
+![](99.System/Attachments/1!klMSz02-eeLnwjtS10cSJw.png.webp)
 
 That last row is my actual theory for why adoption is so low. Semantic Link lives exactly on the seam between the Power BI developer (who owns the models but doesn’t open notebooks) and the data engineer (who lives in notebooks but treats semantic models as someone else’s deliverable). It belongs to whoever claims the seam.
 

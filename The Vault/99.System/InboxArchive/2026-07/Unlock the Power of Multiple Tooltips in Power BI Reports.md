@@ -44,7 +44,7 @@ Incorporating multiple tooltips in Power BI reports can significantly enhance th
 
 Unlock the potential of your Power BI reports today with the power of multiple tooltips. Happy reporting!
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*29GhNZKkHcP2zWjPkIxLiA.jpeg)
+![](99.System/Attachments/1!29GhNZKkHcP2zWjPkIxLiA.jpeg.webp)
 
 Share your thoughts and experiences with multiple tooltips in Power BI in the comments below. If you found this guide helpful, feel free to share it with your network on LinkedIn and Medium.
 

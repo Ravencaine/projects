@@ -1,0 +1,36 @@
+Tracking monthly financial metrics such as revenue is common within many organizations. It is also fairly common to accumulate such monthly numbers via period to date calculations such as quarter-to-date and year-to-date as shown in Chapter 3, Dates and Calendars.
+This calculation demonstrates how to reverse engineer monthly financial figures from accumulated year-to-date data. To demonstrate this technique, start by using an Enter data query to create a Year To Date table using the following data or alternatively load the Year To Date sheet of the Excel file, Chapter10_Data.xlsx, available in the GitHub repository for this book.
+Year
+Month
+Revenue YTD
+2024
+10
+$ 110,000,000.00
+2024
+11
+$ 122,000,000.00
+2024
+12
+$ 130,000,000.00
+2025
+1
+$ 12,000,000.00
+2025
+2
+$ 19,000,000.00
+2025
+3
+$ 31,000,000.00
+2025
+4
+$ 42,000,000.00
+Table 10.5: Year to date data
+This table tracks the cumulative year-to-date revenue for each month. Thus, the Revenue YTD resets in January 2025.
+Now create the following measure:
+Reverse YTD =  VAR __Year = MAX( 'Year To Date'[Year] )  VAR __Month = MAX( 'Year To Date'[Month] )  VAR __CurrentYTD = MAX( 'Year To Date'[Revenue YTD] )  VAR __PreviousYTD =  MAXX(  FILTER(  ALL( 'Year To Date' ),  [Year] = __Year && [Month] = __Month - 1  ),  [Revenue YTD]  )  VAR __Result = __CurrentYTD - __PreviousYTD RETURN  __Result  We start by getting the current Year, Month, and Revenue YTD in the __Year, __Month, and __CurrentYTD variables respectively. To get the previous row’s Revenue YTD, __PreviousYTD, we use the ALL function to remove all filters from the Year to Date table. We then FILTER that table for the row where the Year equals the current year, __Year, and the Month equals the current month, __Month, minus one. We use MAXX to retrieve the Revenue YTD for that row. Finally, we simply subtract the two values, __CurrentYTD and __PreviousYTD to get the monthly revenue number.
+Patron Recommendation
+Alexis Olson notes that the __PreviousYTD calculation assumes that we have the Revenue YTD for every month with no gaps.
+This calculation is rather simple but demonstrates a technique for comparing a current row to a previous row, which is a common requirement in various calculations.
+Placing the Reverse YTD measure into a Table visual along with un-summarized Year, Month, and Revenue YTD columns from the Year To Date table produces the following visualization:
+Figure 10.6: Reverse YTD measure in a Table visualization
+Let’s next take a look at comparing budgets to actuals.

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Stop Building Slow Power BI Reports: A Data Pro's Checklist"
 source_url: "https://medium.com/@foodarchitects/stop-building-slow-power-bi-reports-a-data-pros-checklist-53990dbe770c"
 note_type: workflow
@@ -16,12 +17,12 @@ Power BI models often accumulate columns that are never used in any visual, meas
 
 ## Workflow
 
-1. **Install Bravo for Power BI** — open-source tool available at microsoft.github.io/Bravo-for-Power-BI
+1. **Install Bravo for Power BI**: open-source tool available at microsoft.github.io/Bravo-for-Power-BI
 2. **Open your .pbix file** in Bravo
-3. **Run the Column Usage analyser** — Bravo highlights every field not used in any visual, measure, or calculated column
-4. **Review exceptions** — Surrogate keys and technical columns are typically flagged but are needed for joins; note these before removing
+3. **Run the Column Usage analyser**: Bravo highlights every field not used in any visual, measure, or calculated column
+4. **Review exceptions**: Surrogate keys and technical columns are typically flagged but are needed for joins; note these before removing
 5. **Remove flagged columns** in Power Query Editor or at source
-6. **Re-measure** — re-run Bravo to confirm size reduction and query performance improvement
+6. **Re-measure**: re-run Bravo to confirm size reduction and query performance improvement
 
 ## Common Unused Column Types
 

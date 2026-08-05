@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "The DAX Concepts that Actually Save You Time in Power BI"
 source_url: "https://medium.com/@jjr8888/the-dax-concepts-that-actually-save-you-time-in-power-bi-f193466f5b8f"
 note_type: source

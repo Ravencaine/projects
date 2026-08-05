@@ -3,5 +3,7 @@
     "99.System/InboxArchive/",
     "99.System/Vault Guides/",
     "99.System/Scripts/"
-  ]
+  ],
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true
 }

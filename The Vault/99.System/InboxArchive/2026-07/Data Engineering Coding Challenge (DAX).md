@@ -10,7 +10,7 @@ Processed: "Unprocessed"
 ---
 ## Sample Data Engineering Take Home Test with Solution
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*vSBTqrPubmhzqV2_)
+![](99.System/Attachments/0!vSBTqrPubmhzqV2_.webp)
 
 Photo by Scott Graham on Unsplash
 
@@ -46,7 +46,7 @@ Create these measures:
 
 Don’t look at the solution below until you tried it yourself…(scroll down for solution)
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*bn7knOx--vhQ4THD)
+![](99.System/Attachments/0!bn7knOx--vhQ4THD.webp)
 
 Photo by Aron Visuals on Unsplash
 

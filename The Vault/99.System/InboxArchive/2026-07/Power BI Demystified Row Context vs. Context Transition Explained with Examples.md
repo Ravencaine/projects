@@ -34,7 +34,7 @@ Sales[Profit] = Sales[Revenue] — Sales[Cost]
 
 👉 Here, Power BI loops over each row in the `Sales` table and calculates `Revenue - Cost` for that row.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*6sxCfesZNJ0rA-tJHzCFtQ.png)
+![](99.System/Attachments/1!6sxCfesZNJ0rA-tJHzCFtQ.png.webp)
 
 Row context means: evaluate the formula for each row individually
 
@@ -49,7 +49,7 @@ CALCULATE( SUM(Sales[Profit]) )
 ```
 - Here, CALCULATE takes the row context (if any) and **converts it into a filter**.
 - This is why measures behave differently than calculated columns — because CALCULATE changes the way context is applied.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*cW85youp4m9DHtJ4uzP0Rw.png)
+![](99.System/Attachments/1!cW85youp4m9DHtJ4uzP0Rw.png.webp)
 
 CALCULATE is the bridge that turns row context into filter context
 
@@ -67,7 +67,7 @@ Total Profit = SUM(Sales[Revenue]) — SUM(Sales[Cost])
 
 👉 This is why a column works row by row, but a measure changes when you slice by region.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*0mQHQu8egx05RkU6pb_WCg.png)
+![](99.System/Attachments/1!0mQHQu8egx05RkU6pb_WCg.png.webp)
 
 ## Example 2: Context Transition in Action
 
@@ -85,7 +85,7 @@ What happens here?
 
 That’s context transition at work.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ExGuSJptsEAeODLJ2iEDwQ.png)
+![](99.System/Attachments/1!ExGuSJptsEAeODLJ2iEDwQ.png.webp)
 
 ## Why This Matters
 

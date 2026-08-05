@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, iterator]
@@ -21,7 +22,7 @@ FILTER(<table>, <filter>)
 
 ## Returns
 
-**table** — a filtered table containing only rows where `<filter>` is `TRUE`
+**table**: a filtered table containing only rows where `<filter>` is `TRUE`
 
 ## Examples
 
@@ -44,7 +45,7 @@ FILTER(
 
 ## Notes
 
-- **Iterator function** — loops over every row in `<table>`, evaluating `<filter>` in the current row context. Can be expensive on large tables; prefer Boolean filter arguments in `CALCULATE` when possible.
+- **Iterator function**: loops over every row in `<table>`, evaluating `<filter>` in the current row context. Can be expensive on large tables; prefer Boolean filter arguments in `CALCULATE` when possible.
 - FILTER is needed when the filter condition **cannot** be expressed as a simple `Column = value` or `Column > value` (e.g., multi-column conditions, conditions referencing measures, or band/range filters).
 - Returns a table, so it must be used:
   - As a filter argument inside `CALCULATE` / `CALCULATETABLE`

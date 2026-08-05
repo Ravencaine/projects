@@ -1,0 +1,44 @@
+table 'Person ContactType'
+	lineageTag: 8e0ca830-d8a1-41ec-a4d3-0f0ac5f14eca
+
+	column ContactTypeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 37a40d39-af07-48fc-9f29-05dc67161e09
+		summarizeBy: none
+		sourceColumn: ContactTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 9aeddc57-4682-44b7-a572-1768f0719ed3
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6a5b5ac4-0e1a-47d0-9481-158e3a31fbe7
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 56608058-45d4-453a-bbb4-39125a2861e1
+			defaultHierarchy: LocalDateTable_55fee361-c0a0-480d-a4b1-fd43bbe32568.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Person ContactType' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Person", Item = "ContactType"]}[Data]
+				in
+				  #"Navigation 2"
+

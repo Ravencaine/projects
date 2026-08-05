@@ -1,0 +1,25 @@
+{
+  "id": "conv-1785438363206-muyjm8pjs",
+  "providerId": "claude",
+  "title": "Identify this content",
+  "titleGenerationStatus": "success",
+  "createdAt": 1785438363208,
+  "updatedAt": 1785438597906,
+  "lastResponseAt": 1785438429100,
+  "sessionId": "10f75792-0f90-46c2-bdf9-df16122dc9de",
+  "selectedModel": "haiku",
+  "providerState": {
+    "providerSessionId": "10f75792-0f90-46c2-bdf9-df16122dc9de"
+  },
+  "currentNote": "01.Knowledge/DAX Code/Wiki/5-senior-dax-patterns-source.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 32453,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 128,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 32581,
+    "percentage": 16
+  }
+}

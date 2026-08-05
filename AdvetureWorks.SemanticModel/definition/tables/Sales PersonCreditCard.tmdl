@@ -1,0 +1,45 @@
+table 'Sales PersonCreditCard'
+	lineageTag: 02102d88-8c42-44ea-85a8-8cc936eb1e60
+
+	column BusinessEntityID
+		dataType: int64
+		formatString: 0
+		lineageTag: d67f5760-e7e7-47b9-ab59-684a9c43d2c4
+		summarizeBy: none
+		sourceColumn: BusinessEntityID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditCardID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5567c764-a991-4f25-9547-fe5437ff961c
+		summarizeBy: none
+		sourceColumn: CreditCardID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0a0aef91-f970-4dc7-83bd-8581e50e05e0
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 84d90419-f86b-47b2-8534-8bee96c18325
+			defaultHierarchy: LocalDateTable_7f946563-21ad-454b-9ce4-ea1582301c1d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Sales PersonCreditCard' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Sales", Item = "PersonCreditCard"]}[Data]
+				in
+				  #"Navigation 2"
+

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "What is Filter Context in Power BI? A Complete Guide with Examples and Visuals"
 source_url: https://medium.com/write-your-world/what-is-filter-context-in-power-bi-a-complete-guide-with-examples-and-visuals-3cdab77a2c83
 note_type: source
@@ -53,7 +54,7 @@ Filter context narrows down the rows before the calculation happens.
 
 ## CALCULATE: Changing the Filter Context
 
-The most important function in DAX is **CALCULATE** — because it **modifies filter context**.
+The most important function in DAX is **CALCULATE**: because it **modifies filter context**.
 
 Example:
 

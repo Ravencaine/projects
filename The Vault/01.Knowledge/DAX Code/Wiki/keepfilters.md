@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, filter-modifier]
@@ -20,7 +21,7 @@ KEEPFILTERS(<expression>)
 
 ## Returns
 
-**table of values** — the filter expression, evaluated with both the new and existing filters combined (ANDed)
+**table of values**: the filter expression, evaluated with both the new and existing filters combined (ANDed)
 
 ## Examples
 

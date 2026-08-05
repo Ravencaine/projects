@@ -1,0 +1,92 @@
+table 'Production ProductReview'
+	lineageTag: 564b6425-c92f-4b2d-b1d2-0bf7720ebe11
+
+	column ProductReviewID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b12279e-5000-4d44-93cf-b9c25eee0a9e
+		summarizeBy: count
+		sourceColumn: ProductReviewID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 895bd4ff-4e34-4e0f-bec3-7abe552e6994
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReviewerName
+		dataType: string
+		lineageTag: e2a7ea04-6fd1-4f76-88fd-78b2f6b1a5dc
+		summarizeBy: none
+		sourceColumn: ReviewerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReviewDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: af92232a-3abe-41c5-9fe9-123d7651563c
+		summarizeBy: none
+		sourceColumn: ReviewDate
+
+		variation Variation
+			isDefault
+			relationship: fc942e55-3b5d-43ea-9766-4f7f97108ac5
+			defaultHierarchy: LocalDateTable_663a4002-6793-4f94-b6ea-e0d85c428ca5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailAddress
+		dataType: string
+		lineageTag: 96f2205a-8f36-43c9-ad9b-383135e9dd56
+		summarizeBy: none
+		sourceColumn: EmailAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rating
+		dataType: int64
+		formatString: 0
+		lineageTag: 80339e02-fdf5-4a06-b000-6432347c7af5
+		summarizeBy: sum
+		sourceColumn: Rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comments
+		dataType: string
+		lineageTag: 82367840-5e3d-4b29-905c-b0b1d063604d
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ac17ac21-3ffc-4fd0-bd7b-60b41adbc27a
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: b8f972a7-cf1d-4de2-bd01-cbbacd8b5839
+			defaultHierarchy: LocalDateTable_8ebbe633-8aad-4724-adcb-76cf615ba17d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production ProductReview' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "ProductReview"]}[Data]
+				in
+				  #"Navigation 2"
+

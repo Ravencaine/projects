@@ -1,0 +1,85 @@
+A common spatial problem in manufacturing and distribution organizations is determining the smallest appropriate box size for shipping goods. The issue is compounded by the sizes for boxes and goods are not always given in the same dimensions. In other words, while a box may consider its longest measurement its length, a certain good or item might have its longest measurement be width. Thus, it can prove challenging to determine which goods or items might fit within which predetermined box sizes.
+To explore this topic in further detail, use an Enter data query to create a Box Sizes table in Power BI or, alternatively, import the Box Sizes sheet from the Excel spreadsheet, Chapter12_Data.xlsx which can be found in the Github repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Length
+Width
+Height
+Size
+Volume
+9.5
+6.5
+3.00
+F
+185.25
+15
+10
+4.00
+G
+600
+8
+8
+4.00
+H
+256
+12
+8
+4.00
+I
+384
+12
+8
+8.00
+J
+768
+19
+14
+4.00
+L
+1064
+19
+14
+8.00
+N
+2128
+19
+14
+12.00
+P
+3192
+24
+14
+4.00
+U
+1344
+24
+16
+16.00
+S
+6144
+Table 12.6: Box size data
+Now, use another Enter data query to create an Orders table in Power BI or, alternatively, import the Orders sheet from the Excel spreadsheet, Chapter12_Data.xlsx which can be found in the Github repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+UOM_LENGTH
+UOM_WIDTH
+UOM_HEIGHT
+1.27
+13.97
+19.05
+12
+4
+9
+6
+13
+22
+5
+6
+7
+7
+5
+6
+Table 12.7: Orders data
+Next, create the following measure:
+Box Size =  VAR __Height = MAX( 'Orders'[UOM_HEIGHT] )  VAR __Width = MAX( 'Orders'[UOM_WIDTH] )  VAR __Length = MAX( 'Orders'[UOM_LENGTH] )  VAR __Measure1 = MINX( {__Height, __Width, __Length }, [Value] )  VAR __Measure2 =  IF(  __Height = __Width && __Height = __Length,  __Height,  MINX(  EXCEPT(  { __Height, __Width, __Length },  { __Measure1 }  ),  [Value]  )  )  VAR __Measure3 = MAXX( { __Height, __Width, __Length }, [Value] )  VAR __BoxTable =  ADDCOLUMNS(  ADDCOLUMNS(  ADDCOLUMNS(  'Box Sizes',  "__Measure1", MINX( { [Height], [Width], [Length] }, [Value] )  ),  "__Measure2",  IF(  [Height] = [Width] && [Height] = [Length],  [Height],  MINX(  EXCEPT(  { [Height], [Width], [Length] },  { [__Measure1] }  ),  [Value]  )  )  ),  "__Measure3", MAXX( { [Height], [Width], [Length] }, [Value] )  )  VAR __Table1 =  ADDCOLUMNS(  __BoxTable,  "Fit1", IF( __Measure1   "Fit2", IF( __Measure2   "Fit3", IF( __Measure3   )  VAR __Table =  FILTER(  __Table1,  [Fit1] = 1 && [Fit2] = 1 && [Fit3] = 1  )  VAR __MinBoxVolume = MINX( __Table, [Volume] )  VAR __Result = MAXX( FILTER( __Table, [Volume] = __MinBoxVolume ), [Size] ) RETURN  __Result  Due to the length of this formula, it is included as a text file BoxSize.txt which can be found in the Github repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+The main trick to the Box Size measure is standardizing the dimensions of both the boxes and the item to be shipped. This is done in such a way that __Measure1 will always contain the smallest dimension, __Measure2 the next smallest, and __Measure3 the largest. We then repeat this process using ADDCOLUMNS multiple times to similarly sort the box dimensions.
+Once this process is complete, we can confidently compare the sorted dimensions of the item and the boxes to determine which boxes are able to fit the item being shipped. From this, we can then determine the minimum volume of all suitable boxes, __MinBoxVolume, and from there retrieve the Size.
+We can visualize the results in a Table visual:
+Figure 12.13: Box Size measure
+This concludes our exploration of box sizes as well as our overall subject of distance and space calculations.

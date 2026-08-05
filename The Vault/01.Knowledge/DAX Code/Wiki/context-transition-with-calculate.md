@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Advanced Power BI DAX Measures for Retail Analytics Pt 2"
 source_url: "https://medium.com/@jjr8888/advanced-power-bi-dax-measures-for-retail-analytics-pt-2-7b00a1662317"
 note_type: atomic
@@ -16,7 +17,7 @@ The mechanism by which CALCULATE converts an active row context into an equivale
 
 ## Key Points
 
-- CALCULATE evaluates its expression argument **as a measure** — applying filter context, not row context
+- CALCULATE evaluates its expression argument **as a measure**: applying filter context, not row context
 - When CALCULATE runs inside an iterator, row context → filter context conversion happens automatically
 - Context transition can be expensive on large tables: each row triggers its own mini filter operation
 - This is why a measure reference inside SUMX behaves differently from a plain column reference

@@ -1,0 +1,48 @@
+Weighted averages are incredibly common calculations used across almost every sector and industry such as finance, education, economics, supply chain, environmental science, life sciences, manufacturing, and insurance. Common scenarios include the following:
+- Finance
+Portfolio Returns: Investors calculate the average return of a portfolio by weighting each asset's return by its proportion in the portfolio.
+- Weighted Average Cost of Capital (WACC): Companies use WACC to determine the average rate of return required by their investors, weighting the cost of equity and debt according to their proportions in the company's capital structure.
+- Education
+Grade Point Averages (GPA): Schools often calculate GPAs by weighting course grades based on credit hours or course difficulty, giving more significance to more important or intensive courses.
+- Assessment Scores: Teachers may weigh different assignments or exams differently when calculating final grades, reflecting the varying importance of each assessment.
+- Economics
+Consumer Price Index (CPI): CPI measures inflation by calculating a weighted average of prices of a basket of consumer goods and services, with weights based on their importance in household spending.
+- Gross Domestic Product (GDP): Weighted averages are used to adjust GDP figures to account for price changes, providing real GDP values.
+- Supply Chain
+Weighted Average Cost Method: Businesses calculate the cost of goods sold and ending inventory by averaging the costs of all similar items in inventory, weighted by the number of units purchased at each cost.
+- Demand Forecasting: Weighted moving averages help in forecasting demand by giving more weight to recent data, improving prediction accuracy.
+- Environmental Science
+Air Quality Index (AQI): AQI is calculated using weighted averages of various pollutant concentrations, with weights reflecting their health impacts.
+- Life Sciences
+Epidemiological Studies: Weighted averages adjust statistical analyses to account for population differences, such as age or sex distributions.
+- Dosage Calculations: Medication dosages may be determined using weighted averages based on patient factors like weight and age.
+- Insurance
+Premium Calculations: Insurers calculate premiums using weighted averages of risk factors, with higher weights assigned to factors that contribute more significantly to potential claims.
+- Loss Ratios: Weighted averages help assess the performance of different insurance products or customer segments.
+- Manufacturing
+Defect Rates: Manufacturing processes use weighted averages to calculate overall defect rates, weighting defects by severity or cost impact.
+- Supplier Performance: Companies assess suppliers using weighted criteria such as delivery time, quality, and cost.
+In concept, weighted averages are easy to conceptualize. You have a set of values that you wish to multiply by a corresponding set of weights and then determine the average from the results of this multiplication. A more formal definition would be to multiply each value by its corresponding weight, add the individual rows and then divide by the sum of the weights. Here is a simple example that you can load using an Enter data query as a table called Grades:
+Item
+Grade
+Weight
+Grade * Weight
+Homework
+80
+20%
+16
+Quizzes
+90
+30%
+27
+Final Exam
+70
+50%
+35
+Table 5.2: Weighted average calculation.
+Alternatively, import the Grades sheet from the Excel spreadsheet, Chapter5_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Here the values in the Weight column add up to 1 and the values in the Grade * Weight column add up to 78 so the weighted average is 78 divided by 1 or just 78.
+If you think that this seems like a reasonably trivial and straightforward calculation, you would be correct. It is thus bizarre that the default Power BI Desktop quick measure Weighted average by category inexplicably returns something akin to this DAX monstrosity:
+Grade weighted by Weight per Item = VAR __CATEGORY_VALUES = VALUES('Grades'[Item]) RETURN  DIVIDE(  SUMX(  KEEPFILTERS(__CATEGORY_VALUES),  CALCULATE(SUM('Grades'[Grade]) * SUM('Grades'[Weight]))  ),  SUMX(  KEEPFILTERS(__CATEGORY_VALUES),  CALCULATE(SUM('Grades'[Weight]))  )  )  Fortunately, there is a much more straightforward solution that uses the No CALCULATE approach:
+Weighted average =  VAR __Numerator = SUMX( 'Grades', [Grade] * [Weight] )  VAR __Denominator = SUMX( 'Grades', [Weight] )  VAR __Result = DIVIDE( __Numerator, __Denominator, 0 ) RETURN  __Result  If you were doubting the No CALCULATE approach to DAX, perhaps this comparison demonstrates the utility of the approach in making calculations much more straightforward and comprehendible.
+Let’s now move onto the subject of linear regression.

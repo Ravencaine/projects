@@ -1,0 +1,27 @@
+When it comes to DAX optimization, it is helpful to have some tools to help you analyze how your DAX code is performing. There are three primary tools that you should consider:
+- Performance Analyzer – This is a default pane built-in to Power BI Desktop that provides basic performance information.
+- DAX Studio – This is the OG of DAX optimization tools and can provide extremely detailed information about what is going on within the storage and formula engines. DAX Studio is free and can be downloaded here: https://daxstudio.org/downloads/.
+- Power Optimizer by TruViz – A newcomer to the DAX optimization world, this advanced tool uses AI and other cutting-edge techniques to recommend optimizations and best practices for your DAX code. When available, Power Optimizer can be downloaded from here: https://thepowertools.ai/. To a lesser extent, the Powerops tool from TruViz can also be useful for checking DAX code against best practices: https://powerops.app/.
+Since the Performance analyzer pane is built-in to Power BI Desktop, let’s take a look it first.
+To access the Performance analyzer pane in Power BI Desktop, follow these steps:
+- In Power BI Desktop, click the View tab in the ribbon.
+- In the Show panes section, click the Performance analyzer button.
+Figure 15.2: Performance analyzer pane
+To explore how the Performance analyzer works, import the Dates sheet from the Excel spreadsheet, Chapter15_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Now, create the following measure:
+Measure = COUNTROWS( 'Dates' )  Create a Card visual that uses this measure. In addition, create a Table visual with both the Year column from the Dates table and Measure.
+Now click the Start recording button in the Performance analyzer pane and then click the Refresh visuals button. In the Performance analyzer pane, click the + icons next to Card and Table to display results like the following:
+Figure 15.3: Performance analyzer timings
+The numbers displayed are the number of milliseconds required to complete the operations. In the image, the Card visual took a total of 41 milliseconds to display while the Table visual required 58 milliseconds to display. This total time is broken up into several categories as follows:
+- DAX query – The time to execute the DAX query. Static visuals such as text boxes or shapes generally do not execute a DAX query and thus will not display this category.
+- Visual display – How long to draw the visual. More complex visuals take longer to render, such as with the Card and Table visuals, the Table visual being more complex to render and thus takes longer.
+- Other – The time required to prepare queries, waiting on other visuals, and performing background tasks. Only so many DAX queries can be executed at a time and thus when many visuals are displayed on a page, this number can grow quite large.
+- Evaluated parameters – Only present if the field parameters preview feature is active, displays the time spent evaluating field parameters.
+From a DAX perspective, all we can really impact is the DAX query category and thus, this is the number we will be looking to optimize in the scenarios presented in this chapter.
+Clicking the Run in DAX query view presents the following queries respectively:
+Card:
+EVALUATE  ROW(  "Measure", 'Calculations'[Measure] )  Table: DEFINE  VAR __DS0Core =  SUMMARIZECOLUMNS(  ROLLUPADDISSUBTOTAL('Dates'[Year], "IsGrandTotalRowTotal"),  "Measure", 'Calculations'[Measure]  )  VAR __DS0PrimaryWindowed =  TOPN(502, __DS0Core, [IsGrandTotalRowTotal], 0, 'Dates'[Year], 1) EVALUATE  __DS0PrimaryWindowed ORDER BY  [IsGrandTotalRowTotal] DESC, 'Dates'[Year]  You may be wondering why this looks nothing like the code for Measure. That’s because you are looking at the actual DAX queries being executed. You can use these queries in DAX Studio to run a benchmark test to see how much time was spent in the SE versus the FE. In this case, the Table visual spends 100% of its time in the FE:
+Figure 15.4: DAX Studio benchmark
+While the ability to get detailed query information and timings are useful to a degree, they aren’t necessarily helpful in actually improving the DAX code. This is where tools like TruViz’s Power Optimizer really shine. Power Optimizer is built to help you optimize your entire semantic model including analyzing the performance of DAX calculations; identifying unused tables, columns, and measures; and visualizing relationships between measures, calculated columns, visuals, and pages. Even better, Power Optimizer identifies issues and suggests how to address and fix those issues:
+Figure 15.5: Performance Optimizer by TruViz
+Now that you understand the basics of the tools used for DAX optimization, let’s take a look at a real-world example of optimizing a DAX measure (query).

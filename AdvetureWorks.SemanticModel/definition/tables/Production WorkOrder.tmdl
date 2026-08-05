@@ -1,0 +1,123 @@
+table 'Production WorkOrder'
+	lineageTag: f2c93e17-cab3-4f38-ad8b-70171b4a2bd0
+
+	column WorkOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 0aee9fd3-4d71-44d6-9f34-a61ddf532cad
+		summarizeBy: none
+		sourceColumn: WorkOrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: f6464055-15c9-4518-b439-494ff41252bf
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderQty
+		dataType: int64
+		formatString: 0
+		lineageTag: eaa4e4a8-57b7-46fe-b4f8-752dccd121b5
+		summarizeBy: sum
+		sourceColumn: OrderQty
+
+		annotation SummarizationSetBy = Automatic
+
+	column StockedQty
+		dataType: int64
+		formatString: 0
+		lineageTag: 92217f7f-9215-4bac-97e4-f7bb54adbdf7
+		summarizeBy: sum
+		sourceColumn: StockedQty
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScrappedQty
+		dataType: int64
+		formatString: 0
+		lineageTag: 60b3e898-0031-4b32-80e8-2b32d145665e
+		summarizeBy: sum
+		sourceColumn: ScrappedQty
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 023c81fa-c346-4edf-8d18-3ed810719396
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variation
+			isDefault
+			relationship: 7baee528-a92f-4634-bf8c-73d7f3c1de43
+			defaultHierarchy: LocalDateTable_326d6546-958f-41f5-b82e-291fd8922cc5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1fe1d488-cdec-4463-9f72-530e138996a8
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variation
+			isDefault
+			relationship: fa1cc3da-481e-486e-87e9-57684db8fbc2
+			defaultHierarchy: LocalDateTable_fd23a7b0-8b31-46c3-9956-9b242bcd59f4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 278b2fe6-0f96-4d99-a438-2e70ea13f328
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		variation Variation
+			isDefault
+			relationship: 0566b925-3111-4a13-9125-032e452073eb
+			defaultHierarchy: LocalDateTable_1f2c7a26-ef21-411d-9600-3869c797caef.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScrapReasonID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e06adb7-40f2-422f-a0bd-032079888b82
+		summarizeBy: none
+		sourceColumn: ScrapReasonID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: daf686fd-15f8-4fa1-8fe3-62eea113d23f
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 2dd9b884-6588-4569-9dc0-b785a0cefbf9
+			defaultHierarchy: LocalDateTable_3aafc5de-d8c5-4998-9b8f-1f5d27a93223.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production WorkOrder' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "WorkOrder"]}[Data]
+				in
+				  #"Navigation 2"
+

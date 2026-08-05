@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, relationship]
@@ -35,7 +36,7 @@ RELATED('Date'[Year])
 
 ## Notes
 
-- Requires **row context** — typically used inside a calculated column or row-level expression.
+- Requires **row context**: typically used inside a calculated column or row-level expression.
 - Follows the **active relationship** from the many-side table to the one-side table.
 - Works in calculated columns and inside `CALCULATE` filter arguments.
 - **Cannot** fetch from the many-side of a one-to-many relationship (the relationship must go from the current table outward).

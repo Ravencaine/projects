@@ -1,6 +1,7 @@
 ---
 created: 2026-07-27
-source: "What 100 Hours of YouTube Won’t Teach You About Power BI in Production"
+updated: 2026-08-02
+source: "What 100 Hours of YouTube Won't Teach You About Power BI in Production"
 source_url: https://medium.com/code-like-a-girl/what-100-hours-of-youtube-wont-teach-you-about-power-bi-in-production-4dc44a68e85d
 note_type: source
 tags: [power-bi]
@@ -61,7 +62,7 @@ In reality, the first version of a dashboard is usually just the beginning of th
 
 Source: Image created by Author using Gemini
 
-These review cycles also taught me an important lesson about dashboard design. Many design decisions that seem reasonable from an analyst’s perspective may not work well for end users. I explored this topic in more detail in my previous article, [*Dashboard Design Lessons I Gained from Exploring 100+ Impressive Dashboard Examples*](https://code.likeagirl.io/dashboard-design-lessons-i-gained-from-exploring-100-impressive-dashboard-examples-25f31ee43ca3), where I shared practical design principles for creating dashboards that are easier to understand and act upon.
+These review cycles also taught me an important lesson about dashboard design. Many design decisions that seem reasonable from an analyst's perspective may not work well for end users. I explored this topic in more detail in my previous article, [*Dashboard Design Lessons I Gained from Exploring 100+ Impressive Dashboard Examples*](https://code.likeagirl.io/dashboard-design-lessons-i-gained-from-exploring-100-impressive-dashboard-examples-25f31ee43ca3), where I shared practical design principles for creating dashboards that are easier to understand and act upon.
 
 I quickly learned that dashboard development is highly iterative. A report that seems complete from a technical perspective may still require several rounds of refinement before it truly meets business needs.
 
@@ -105,8 +106,8 @@ In short, working with Power BI in production taught me three things:
 These small shifts in thinking completely change how you approach Power BI in production.
 
 
-You could also connect with me on [LinkedIn](https://www.linkedin.com/in/nvthuyhang/) to share your thoughts, ask questions, or discuss exciting data projects. Let’s keep exploring the exciting world of data together!
+You could also connect with me on [LinkedIn](https://www.linkedin.com/in/nvthuyhang/) to share your thoughts, ask questions, or discuss exciting data projects. Let's keep exploring the exciting world of data together!
 
-*If you enjoyed this article, don’t forget to hit the clap button up to 50 times!* ***👏*** *It* *helps more readers find this article, too.*
+*If you enjoyed this article, don't forget to hit the clap button up to 50 times!* ***👏*** *It* *helps more readers find this article, too.*
 
 > See also [[reports-semantic-models-power-bi-service]] for reference.

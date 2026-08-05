@@ -12,7 +12,7 @@ Processed: "Unprocessed"
 
 A conversational technical guide to building production-grade retail product dimensions
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*6nT4Pi8gtIbkurOL)
+![](99.System/Attachments/0!6nT4Pi8gtIbkurOL.webp)
 
 Photo by Nathália Rosa on Unsplash
 

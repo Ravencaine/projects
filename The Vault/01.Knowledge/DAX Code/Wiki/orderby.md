@@ -1,32 +1,48 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+
+created: 2026-07-28
+updated: 2026-08-02
+source: "[[beginning-big-data-with-power-bi-and-excel-2013-dunlop|Beginning Big Data with Power BI and Excel 2013]]"
+tags: ["dax", "function", "order-by", "sort", "dax-studio"]
 note_type: function
-tags: [dax, function, window]
+
 ---
 
-# ORDERBY
+# ORDERBY — Row Ordering in Iterators
 
-Defines the expressions that determine the sort order within each partition of a window function.
+Specifies the sort order for an iterator function result.
 
-## Syntax
+## Signature
 
 ```dax
-ORDERBY ( [<orderBy_expression>[, <order>[, <blanks>]][, ...]] )
+CONCATENATEX( <Table>, <Expression>, <Delimiter>, ORDERBY( <Column>, <Order> ) )
+```
+
+## Examples
+
+```dax
+Sorted Names := CONCATENATEX(
+    'Products',
+    'Products'[Name],
+    ", ",
+    'Products'[Name], ASC
+)
 ```
 
 ## Parameters
 
-| Term | Definition |
-|------|------------|
-| `orderBy_expression` | (Optional) Any scalar expression that will be used to sort the data within each partition. |
-| `order` | (Optional) ASC (ascending, default) or DESC (descending). Alternatives: 1/TRUE for ASC, 0/FALSE for DESC. |
-| `blanks` | (Optional) BLANKS DEFAULT (default — blanks ordered between zero and negatives for numbers, before strings for text) or BLANKS FIRST (blanks always first regardless of direction). |
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| Column | Column | Column to sort by. |
+| Order | ASC/DESC | Sort order. Default: ASC. |
 
-## Return Value
+## Notes
 
-This function does not return a value — it is used as a clause within window functions.
+- `ORDERBY()` must appear inside the iterator function, not after
+- Use `SKIP()` to exclude specific rows from ordering
+- DAX does not support ORDER BY outside of specific functions
 
-## Remarks
+## Related
 
-Defaults to ordering by every column in relation not already specified in PARTITIONBY when omitted. See OFFSET for usage examples.
+- [[CONCATENATEX]]
+- [[skip-keyword]]

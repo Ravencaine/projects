@@ -1,0 +1,94 @@
+Disconnected tables are tables in multi-table semantic models that are purposefully not connected (no relationships) to other tables within the model. While this may at first seem counterintuitive and decidedly against the “best practice” of using a star schema, disconnected tables are incredibly powerful, flexible, and useful in a wide variety of scenarios. The fact is, relationships between tables within Power BI are incredibly limited. Relationships in Power BI simply propagate filters from one table to another and these relationships only support exact matches between single columns.
+One might be asking yourself, “What in the world do disconnected tables have to do with DAX?”. The answer is quite a lot. This is because DAX can be used to form the “relationships” between these disconnected tables and the rest of the semantic model. This is a surprisingly flexible and powerful approach that can solve a multitude of problems, particularly when it comes to how users interact with reports and dashboards. Because the relationships are formed via DAX, there are almost no limits to what report authors can do with these relationships.
+It should be noted that there can be performance impacts when using DAX to relate disconnected tables to other tables in a semantic model. But, since using disconnected tables and DAX are the only ways to tackle certain problems, the performance impact is somewhat moot.
+In this section, we start with a simplified example of using a disconnected table. We then present a much more complex example. In addition, several of the other sections in this chapter as well as previous chapters also use disconnected tables.
+To understand how to use disconnected tables, start by using an Enter data query to create a table called Table1 in Power BI or alternatively, import the Table1 sheet from the Excel spreadsheet, Chapter13_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Item
+Value
+One
+1
+One
+1
+Two
+2
+Two
+2
+Three
+3
+Three
+3
+Table 13.1: Table1 data
+Create a duplicate of this table using the following DAX:
+Table2 = 'Table1'  Now create the following table:
+Table = DISTINCT( 'Table1'[Item] )  Finally, create a relationship between Table and Table1 based on the Item columns in each table. The final semantic model should look like the following:
+Figure 13.1: Simple disconnected table semantic model
+In this semantic model, Table2 is a disconnected table. Let’s now see what we can do with connected tables such as Table1 versus disconnected tables such as Table2.
+Creating a simple Table visual using the Item column from Table and the Sum of Value from Table1 produces the expected results:
+Figure 13.2: Simple table visual using connected tables
+Similarly, creating a simple Table visual using the Item column from Table and the Sum of Value from Table2 also produces the expected results:
+Figure 13.3: Simple table visual using disconnected tables
+Here, since there is no relationship between the two tables and thus no row filtering, the Sum of Value is 12 for all values of Item.
+Now create the following measure:
+Measure =  VAR __Item = MAX( 'Table'[Item] )  VAR __Result =  SWITCH( __Item,  "One",  SUMX(  FILTER( 'Table2', [Item] = "One" || [Item] = "Three" ),  [Value]  ),  "Two", SUMX( FILTER( 'Table2', [Item] = "Two" ), [Value] ),  BLANK()  ) RETURN  __Result  Add this measure to the second table visualization:
+Figure 13.4: Using a DAX measure to form a “relationship”
+As you can see, the DAX measure itself defines the relationship between Table and Table2. According to the measure, when the Item from Table is “One”, the rows in Table2 that are for One and Three are summed while if the Item from Table is “Two” then the rows in Table2 that are for Two are summed. Finally, if the Item from Table is “Three”, then a BLANK is returned.
+The preceding example is simply for demonstration purposes to show how measures can be used to define more complex relationships between tables than would otherwise be possible through standard table relationships. Let’s next look at a more practical example involving employee training.
+Use the following data in an Enter data query to create a table called Training in Power BI or alternatively, import the Training sheet from the Excel spreadsheet, Chapter13_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Employee
+Training
+Date
+Greg
+Training 1
+9/19/2024
+Brian
+Training 1
+9/19/2024
+Dennis
+Training 1
+9/19/2024
+Susan
+Training 1
+9/19/2024
+Deron
+Training 1
+9/19/2024
+Greg
+Training 2
+8/19/2024
+Brian
+Training 2
+8/19/2024
+Susan
+Training 2
+8/19/2024
+Greg
+Training 3
+7/19/2024
+Brian
+Training 3
+7/19/2024
+Dennis
+Training 3
+7/19/2024
+Susan
+Training 3
+7/19/2024
+Table 13.2: Training data
+Next, create a new table using the following DAX:
+Employees = DISTINCT( 'Training'[Employee] )  Relate the two tables based upon the Employee columns:
+Figure 13.5: Employee and Training tables
+Our goal is to easily identify which employees attended which training with a particular interest in employees that did not attend training. To accomplish this, we could create the following Matrix visual.
+Figure 13.6: Matrix visual showing training dates for employees
+We can improve on this visual by creating a measure that returns “Attended” or “Not Attended” respectively:
+Attendance = IF( MAX( 'Training'[Date] ) = BLANK(), "Not Attended", "Attended" )  Using the Attendance measure instead of the Date column from the Training table, our Matrix visual now looks like the following:
+Figure 13.7: Matrix visual using the Attendance measure
+However, what would be ideal is if we could use a Slicer to filter the Matrix visual to just those who attended training and those who did not attend training. However, we cannot use measures in a Slicer visual. Thus instead, create the following Attendance disconnected table using an Enter data query:
+Attendance
+Attended
+Not Attended
+Table 13.3: Attendance data
+Create a Slicer visual that uses the Attendance column from the Attendance table. Now, create the following measure:
+Attendance 2 =  VAR __Values = DISTINCT( 'Attendance'[Attendance] )  VAR __Attendance = [Attendance]  VAR __Result = IF( __Attendance IN __Values, __Attendance, BLANK() ) RETURN  __Result  Replace the Attendance measure in the Matrix visual with the Attendance 2 measure. You can now slice the Matrix visual using the Attendance slicer:
+Figure 13.8: Disconnected table used as a slicer
+Here the Attendance 2 measure forms the relationship between the disconnected table, Attendance, used in the Slicer visual and the Matrix visual. This easily allows the user to focus on the most critical information, the employees who did not attend specific training events.
+Hopefully, the utility of disconnected tables is now clear. Using DAX to form relationships between tables versus relying on standard relationships provides maximum flexibility and the ability to control the behavior of a report’s user interface. We explore another example of this in the next section by creating a NOT slicer.

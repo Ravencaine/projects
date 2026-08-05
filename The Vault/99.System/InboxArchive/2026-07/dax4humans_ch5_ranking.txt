@@ -1,0 +1,61 @@
+Ranking is a common activity within business intelligence and is useful for a variety of business scenarios such as:
+- Sales: Identifying the top-performing sales representatives or regions to understand success factors.
+- Customers: Ranking customers by purchase frequency or value to tailor marketing campaigns.
+- Suppliers: Ranking suppliers based on delivery times, quality, and cost to optimize the supply chain.
+- Financial: Ranking investment opportunities by potential return and risk profile.
+To continue exploring ranking, we need some data. Use an Enter data query and create a table called Ranking with the following data. Alternatively, import the Ranking sheet from the Excel spreadsheet, Chapter5_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Item
+Price
+Quantity
+Date
+Pickle
+3.99
+2
+1/2/2023
+Banana
+2.99
+3
+1/2/2023
+Pickle
+3.99
+4
+1/10/2023
+Banana
+2.99
+5
+1/11/2023
+Grapefruit
+4.99
+3
+1/14/2023
+Orange
+3.99
+3
+1/14/2023
+Table 5.1: Enter data query data.
+For years there was a single ranking function in DAX, RANKX. More recently, two additional ranking functions have been added, RANK.EQ, and RANK. We will briefly cover RANKX before covering the newer ranking functions.
+RANKX is often cited as one of the most confusing and complex functions in all of DAX. We will avoid most of this confusion and complexity by using simple scenarios of calculated columns. Create the following three calculated columns in the Ranking table.
+RANKX P*Q = RANKX( 'Ranking', [Price] * [Quantity] ) RANKX P Skip = RANKX( 'Ranking', [Price], , DESC ) RANKX P Dense = RANKX( 'Ranking', [Price], , DESC, Dense )  The first example, RANKX P*Q is the simplest RANKX formula possible. Only two of the possible five parameters are used. The first parameter is the table for the RANKX function to iterate over. The second parameter is the expression that generates the values that are ranked. In this case, the value to be ranked is the product of the Price and Quantity columns. RANKX iterates over each row of the table, calculating the value of the expression for each row and returns the ranks of each value as a whole number starting at 1 for either the highest value or lowest value. In the case of RANKX P*Q, all of the rankings are unique because the expression evaluates to a unique value for each row of the table.
+The sorting order for RANKX is controlled by the fourth parameter as can be seen in RANKX P Skip. The values for the fourth parameter are either DESC or ASC with the default being DESC. DESC sorts in descending order such that the highest value is assigned 1 as its rank. Note that there are only three distinct ranks for RANKX P Skip, 1, 2, and 5. There is only a single row with the highest value, 4.99 and this row is assigned a rank of 1. The next highest number in the table is 3.99 and the three rows with this value are assigned the rank of 2. The lowest number in the table is 2.99 and the two rows with this value are assigned the rank of 5. This rank of 5 comes from the fact that there are four higher ranked rows, one 1 and three 2’s. Thus, the next rank is 5.
+The last column, RANKX P Dense changes the default behavior of “skipping” ranks by specifying the fifth parameter as Dense. This fifth parameter can also be Skip, the default. With the Dense ranking, the two rows with the smallest value, 2.99 are ranked 3 instead of 5 as in RANKX P Skip.
+The third parameter of the RANKX function is seldom used. This third parameter specifies a value that should be ranked in relation to the other values returned by the second parameter.
+The RANK.EQ function is a port of the same function from Excel. This function operates identically to how RANKX works with using Skip as the fifth parameter. You can observe this by creating the following calculated column:
+Rank EQ = RANK.EQ( [Price], 'Ranking'[Price], DESC )  Here the three parameters are the expression to be ranked as the first parameter, a column reference against which ranks are determined as the second parameter, and the ranking order, either DESC or ASC as the third parameter.
+DAX’s latest ranking function, RANK is the function that you will likely want to learn and use for almost all your ranking in DAX. While the RANK function can appear confusing and daunting at first since there are no less than seven parameters, all of which are “optional”, there is seldom a need to stray outside of the base patterns that are presented here. To demonstrate the simplest version of RANK, create the following column:
+RANK P = RANK( DENSE, ORDERBY( 'Ranking'[Price], DESC ) )  The first parameter for the RANK function controls how ties are handled and can be either DENSE or the default, SKIP. The ORDERBY clause used as the second parameter is actually the third parameter. The second parameter is either a table expression over which ranks are determined for calculated columns and measures or an axis such as ROWS or COLUMNS when used in a visual calculation.
+The ORDERBY function in DAX specifies pairs of expressions and sorting direction. In this case the Price column is specified with an order of descending (DESC). More than one pair can be specified. For example, the following DAX calculated column expression is valid and sorts the rows first by Price in a descending order and then by Quantity in an ascending order:
+RANK P 2 = RANK( DENSE, ORDERBY( 'Ranking'[Price], DESC, 'Ranking'[Quantity], ASC ) )  Let’s move on to creating measures using RANK. To start, create a Table visual that includes the Item column from the Ranking table, the sum of the Price column, and the Quantity column set to Do not summarize. This creates a Table visual with all the rows from the Ranking table displayed.
+Now create the following measure and then place the measure into the Table visual:
+RANK P*Q = RANK( DENSE, ALL( 'Ranking' ), ORDERBY( [Price] * [Quantity], DESC ) )  Here we must use the ALL function in the second parameter in order to ensure that each row takes all of the rows of the table into account when ranking.
+The RANK function also makes ranking grouped values extremely easy, something that is rather daunting to do with the RANKX function. To see how this works, create the following measure and then place the measure into the Table visual:
+Rank Group =  RANK(  DENSE,  ALL( 'Ranking' ),  ORDERBY( 'Ranking'[Quantity], DESC ),  PARTITIONBY( 'Ranking'[Item] )  )  Here we have added a PARTIONBY clause to the RANK function. The PARTIONBY function specifies the columns containing the values that should partition the rows. By specifying the Item column, each individual value for Item is ranked as a group instead of ranked across all rows of the table.
+Finally, to demonstrate using RANK in a visual calculation, you can create the following visual calculation:
+Calculation = RANK( DENSE, ROWS, ORDERBY( [Sum of Price], DESC ) )  You may have to turn on the preview feature for visual calculations and restart Power BI Desktop. You can turn on preview features by navigating to File | Options and settings | Options and then selecting Preview features. Here, the main difference is that the axis, ROWS, is specified as the second parameter.
+Finally, we should discuss a common complaint that has plagued ranking in DAX since the very beginning and that is the subject of unique ranks. Notice that neither Dense nor Skip prevent ties. There have been many that have wished for a third option such as Unique, that would force unique rankings. There are some convoluted formulas that can manage this but they are either extremely complex or require additional columns, such as how the RANK P 2 column used both Price and Quantity.
+Luckily, there is a rather straight-forward formula for returning unique ranks that leverages our knowledge from working with text in Chapter 4. Create the following measure and then add this measure to the Table visualization:
+Rank Unique =  VAR __Row = MAX( 'Ranking'[Item] ) & "^" &  MAX( 'Ranking'[Price] ) & "^" &  MAX( 'Ranking'[Quantity] )  VAR __Path =  CONCATENATEX(  ALL( 'Ranking' ),  [Item] & "^" & [Price] & "^" & [Quantity],  "|",  [Price],  DESC  )  VAR __Table =  ADDCOLUMNS(  GENERATESERIES( 1, COUNTROWS( ALL( 'Ranking' ) ), 1 ),  "__Row", PATHITEM( __Path, [Value] )  )  VAR __Result = MAXX( FILTER( __Table, [__Row] = __Row ), [Value] ) RETURN  __Result  This measure ranks items based on the Price column without using the RANKX, RANK.EQ, or RANK functions. Adding this measure to the Table visual displays a unique rank for each row even though multiple rows have the same price. We accomplish this by first creating a row identifier with the __Row variable. Here we simply concatenate the information that makes a row unique using the concatenation operator (&) and separating the individual values with a caret (^).
+Next, we turn the same concatenation of values into a path (__Path) using CONCATENATEX. However, we use the fourth and fifth parameters of CONCATENATEX to specify how to sort the concatenated values. We specify sorting the values by the Price column in a descending manner (DESC).
+We then use GENERATESERIES to create a table with a Value column that counts from 1 to the number of rows in the Ranking table incrementing by 1. For each row, we grab the corresponding PATHITEM from our __Path variable.
+Finally, we simply need to “lookup” our __Row within __Table and return the corresponding Value by using MAXX combined with FILTER.
+While this approach may seem like a lot of work, it is relatively simple and straightforward to implement and uses a standard pattern. In addition, because none of DAX’s ranking functions are used, this technique can be used against virtual tables as well as physical tables in the semantic model.
+This concludes our exploration of ranking in DAX. We now move on to aggregating measures.

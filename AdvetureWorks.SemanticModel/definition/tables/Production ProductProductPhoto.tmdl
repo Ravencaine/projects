@@ -1,0 +1,54 @@
+table 'Production ProductProductPhoto'
+	lineageTag: f706b5bf-52c5-430f-a9be-4d5b54316a53
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 455f83e5-c345-4464-b4cd-13ddcc57dd9a
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductPhotoID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4405e84a-7c7e-4adf-b272-f2ab0a36bc8c
+		summarizeBy: none
+		sourceColumn: ProductPhotoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Primary
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c67cccd0-2978-4dc9-97eb-76cad3c96803
+		summarizeBy: none
+		sourceColumn: Primary
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 964cb699-0f91-4694-8935-07c42f6b1125
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 29580055-23f6-4871-85a4-4eb199b55391
+			defaultHierarchy: LocalDateTable_6afe5f98-f7c7-43ae-a952-ff1d85dafbdc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production ProductProductPhoto' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "ProductProductPhoto"]}[Data]
+				in
+				  #"Navigation 2"
+

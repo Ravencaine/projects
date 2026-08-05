@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Advanced Dimensional Modeling for Retail Product Variants"
 source_url: "https://medium.com/@jjr8888/advanced-dimensional-modeling-for-retail-product-variants-b4e6c1743382"
 note_type: atomic
@@ -25,7 +26,7 @@ A **dimension group** is a D365 F&O concept that defines which variant dimension
 
 When joining to pricing, the condition must match **exactly the attributes defined by the product's dimension group**. Mismatching the attribute set (e.g., joining on all four when only Style applies) causes prices to be missed or duplicates to appear.
 
-The join logic must be **conditional based on dimgroup.name** — typically via CASE expressions in the join predicate.
+The join logic must be **conditional based on dimgroup.name**: typically via CASE expressions in the join predicate.
 
 ## Examples
 

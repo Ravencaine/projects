@@ -1,0 +1,189 @@
+model Model
+	culture: en-GB
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-GB
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["HumanResources Department","HumanResources Employee","HumanResources EmployeeDepartmentHistory","HumanResources EmployeePayHistory","HumanResources JobCandidate","HumanResources Shift","Person Address","Person AddressType","Person BusinessEntity","Person BusinessEntityAddress","Person BusinessEntityContact","Person ContactType","Person CountryRegion","Person EmailAddress","Person Password","Person Person","Person PersonPhone","Person PhoneNumberType","Person StateProvince","Production BillOfMaterials","Production Culture","Production Document","Production Illustration","Production Location","Production Product","Production ProductCategory","Production ProductCostHistory","Production ProductDescription","Production ProductDocument","Production ProductInventory","Production ProductListPriceHistory","Production ProductModel","Production ProductModelIllustration","Production ProductModelProductDescriptionCulture","Production ProductPhoto","Production ProductProductPhoto","Production ProductReview","Production ProductSubcategory","Production ScrapReason","Production TransactionHistory","Production TransactionHistoryArchive","Production UnitMeasure","Production WorkOrder","Production WorkOrderRouting","Purchasing ProductVendor","Purchasing PurchaseOrderDetail","Purchasing PurchaseOrderHeader","Purchasing ShipMethod","Purchasing Vendor","Sales CountryRegionCurrency","Sales CreditCard","Sales Currency","Sales CurrencyRate","Sales Customer","Sales PersonCreditCard","Sales SalesOrderDetail","Sales SalesOrderHeader","Sales SalesOrderHeaderSalesReason","Sales SalesPerson","Sales SalesPersonQuotaHistory","Sales SalesReason","Sales SalesTaxRate","Sales SalesTerritory","Sales SalesTerritoryHistory","Sales ShoppingCartItem","Sales SpecialOffer"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'HumanResources Department'
+ref table DateTableTemplate_aa2b6130-c27d-48cd-b7f2-bca77b91d273
+ref table LocalDateTable_e3394bfd-2936-4676-a048-13e83b22cad6
+ref table 'HumanResources Employee'
+ref table LocalDateTable_44e47cf7-fc42-41e3-9d4f-c26994dcbfb8
+ref table LocalDateTable_4de3578f-af16-4cf9-bd71-6c73bf7f9dbd
+ref table LocalDateTable_76384d6f-27d5-4921-b8d7-3270a53e3ee1
+ref table 'HumanResources EmployeeDepartmentHistory'
+ref table LocalDateTable_7c9c7c61-6788-406d-92db-9d83bba36896
+ref table LocalDateTable_de931224-e264-4b39-bc9d-e1627d869dfa
+ref table LocalDateTable_c0a52844-95c0-4b80-8811-ff4c86d31cda
+ref table 'HumanResources EmployeePayHistory'
+ref table LocalDateTable_39048b64-3b93-48b3-b827-810a367a312a
+ref table LocalDateTable_68dc03bb-d82a-4bb6-9a27-0bb15f345a63
+ref table 'HumanResources JobCandidate'
+ref table LocalDateTable_e7d05d46-6997-4daf-b772-527544e6a1cb
+ref table 'HumanResources Shift'
+ref table LocalDateTable_6609ca07-5b18-4af8-b536-044f19d4b09b
+ref table 'Person Address'
+ref table LocalDateTable_b0185cd7-68da-4e6f-86c3-38aeb5ff076d
+ref table 'Person AddressType'
+ref table LocalDateTable_d3f6e96f-dae9-43d6-a974-72d2f97ab2f9
+ref table 'Person BusinessEntity'
+ref table LocalDateTable_1c80bf78-0860-4c1a-9750-0c244ac3ce07
+ref table 'Person BusinessEntityAddress'
+ref table LocalDateTable_6b719b6f-f225-44ac-b929-33993ae7a3c8
+ref table 'Person BusinessEntityContact'
+ref table LocalDateTable_3d8db281-b031-4355-9a31-1218c2b345e3
+ref table 'Person ContactType'
+ref table LocalDateTable_55fee361-c0a0-480d-a4b1-fd43bbe32568
+ref table 'Person CountryRegion'
+ref table LocalDateTable_7fbb432b-3d5c-4e40-8140-016563164068
+ref table 'Person EmailAddress'
+ref table LocalDateTable_c18dd684-5bca-4c4e-9eda-622ce7b93987
+ref table 'Person Password'
+ref table LocalDateTable_740fd1f7-da8d-4f87-bb02-905bfb48ed05
+ref table 'Person Person'
+ref table LocalDateTable_624f40bd-4690-42d2-b620-c9a03c15a9d3
+ref table 'Person PersonPhone'
+ref table LocalDateTable_a5c257bf-41ce-4a45-9e14-d880307fb0b9
+ref table 'Person PhoneNumberType'
+ref table LocalDateTable_dd433ca4-b5f7-4979-b0a2-699e320f7146
+ref table 'Person StateProvince'
+ref table LocalDateTable_3b581c89-8b6a-4f24-8893-bad5294a8d1e
+ref table 'Production BillOfMaterials'
+ref table LocalDateTable_0ca7cfc8-cde8-47be-8d6d-e38507c44957
+ref table LocalDateTable_d45be171-ff58-48e4-84c3-e586155c4633
+ref table LocalDateTable_c371bad2-a215-400e-a4dd-6d4eced37485
+ref table 'Production Culture'
+ref table LocalDateTable_6c541c85-09c4-48aa-955c-be458f0da873
+ref table 'Production Document'
+ref table LocalDateTable_579fb62f-ac0d-4c60-ab96-6a964f947e3b
+ref table 'Production Illustration'
+ref table LocalDateTable_50136067-6bf5-4c57-b59d-42e3010e2c0f
+ref table 'Production Location'
+ref table LocalDateTable_57addfd1-5baa-4580-ad90-8c57ad69d87b
+ref table 'Production Product'
+ref table LocalDateTable_8c92c8e2-17d3-4d80-82a8-a333d84c7db8
+ref table LocalDateTable_13a4e0dd-c694-408c-a06c-3d26da2485d1
+ref table LocalDateTable_3ebc2804-b622-44e0-9145-7425cca9e6f2
+ref table LocalDateTable_44a876f0-b9ed-4d1e-9454-ff61eaca2888
+ref table 'Production ProductCategory'
+ref table LocalDateTable_0b7d275a-b03c-4e2d-8089-f76129934397
+ref table 'Production ProductCostHistory'
+ref table LocalDateTable_66e394fb-4506-4728-b431-5f25c5daa56d
+ref table LocalDateTable_ee2e8472-bc57-4634-97df-6eb28176110a
+ref table LocalDateTable_411a1a3a-f7c7-4b6e-84aa-c307fd571ecf
+ref table 'Production ProductDescription'
+ref table LocalDateTable_ccec790b-dd43-424f-bdf0-54943882d4ab
+ref table 'Production ProductDocument'
+ref table LocalDateTable_5f1a9d7c-5f0c-46e0-91fd-ec07c263afa4
+ref table 'Production ProductInventory'
+ref table LocalDateTable_5a110005-26c4-47e4-b3a2-c0e6069d2925
+ref table 'Production ProductListPriceHistory'
+ref table LocalDateTable_e30bd9c2-842c-4e45-b110-69a5fadd4d8b
+ref table LocalDateTable_de048983-a15c-427e-a44a-47c9ae3e5f86
+ref table LocalDateTable_e7945e14-e530-48f9-bd4b-4474551f59c6
+ref table 'Production ProductModel'
+ref table LocalDateTable_c17334ff-61d8-4fe9-8170-734d752ba351
+ref table 'Production ProductModelIllustration'
+ref table LocalDateTable_b11a7f5b-5754-4a58-8fd8-3f698c55c5be
+ref table 'Production ProductModelProductDescriptionCulture'
+ref table LocalDateTable_db8f3925-8baf-416f-8259-cce345017c19
+ref table 'Production ProductPhoto'
+ref table LocalDateTable_6486f0ed-d4a7-4c4b-a671-4fbae00bd7ad
+ref table 'Production ProductProductPhoto'
+ref table LocalDateTable_6afe5f98-f7c7-43ae-a952-ff1d85dafbdc
+ref table 'Production ProductReview'
+ref table LocalDateTable_663a4002-6793-4f94-b6ea-e0d85c428ca5
+ref table LocalDateTable_8ebbe633-8aad-4724-adcb-76cf615ba17d
+ref table 'Production ProductSubcategory'
+ref table LocalDateTable_a8504f0d-e848-4faa-96a6-3d757a1351a7
+ref table 'Production ScrapReason'
+ref table LocalDateTable_e19fa0eb-2c95-4df3-9304-9c442e0c9ba5
+ref table 'Production TransactionHistory'
+ref table LocalDateTable_c7232d95-b598-4f8d-a9cb-e554a15db018
+ref table LocalDateTable_0d1eebb8-0629-465d-8014-4ffaa4eec9c9
+ref table 'Production TransactionHistoryArchive'
+ref table LocalDateTable_e1d96377-2672-411c-b5a2-80eba2b2e91e
+ref table LocalDateTable_50065991-80e4-480a-a468-c2449b1a61e4
+ref table 'Production UnitMeasure'
+ref table LocalDateTable_7b1479b7-1ff1-4be3-b721-c4fee24916ca
+ref table 'Production WorkOrder'
+ref table LocalDateTable_326d6546-958f-41f5-b82e-291fd8922cc5
+ref table LocalDateTable_fd23a7b0-8b31-46c3-9956-9b242bcd59f4
+ref table LocalDateTable_1f2c7a26-ef21-411d-9600-3869c797caef
+ref table LocalDateTable_3aafc5de-d8c5-4998-9b8f-1f5d27a93223
+ref table 'Production WorkOrderRouting'
+ref table LocalDateTable_edc94282-0710-4e4f-9a11-3ea0604e8791
+ref table LocalDateTable_40f01f53-29c6-4d40-806b-b655070881b7
+ref table LocalDateTable_266a42e7-1ef0-431a-a134-e9547192c7db
+ref table LocalDateTable_7346c2d5-880d-4669-9a7c-4722b30455d2
+ref table LocalDateTable_71f69f8f-167c-4e53-8598-5dea24b84b3f
+ref table 'Purchasing ProductVendor'
+ref table LocalDateTable_b7c48328-c843-448d-a936-e4fe3eb3c014
+ref table LocalDateTable_17f88aa0-df72-48e9-b37f-ca6548ac2160
+ref table 'Purchasing PurchaseOrderDetail'
+ref table LocalDateTable_39ee99fc-8a36-40b2-a5ab-177b69185133
+ref table LocalDateTable_221726c8-8d01-4a10-87be-10316eb39a62
+ref table 'Purchasing PurchaseOrderHeader'
+ref table LocalDateTable_57e54126-bc94-47c3-9af9-0f333043a128
+ref table LocalDateTable_4ea83ec9-9ebc-45fa-b299-d2d2e1d1801d
+ref table LocalDateTable_ec6a3dc5-dde8-49a4-9beb-3c03d77b1029
+ref table 'Purchasing ShipMethod'
+ref table LocalDateTable_0b4341be-a16e-4ae4-ba3c-8301e86304ce
+ref table 'Purchasing Vendor'
+ref table LocalDateTable_dc1253fa-fbd1-47f0-9787-1cca5fd995cb
+ref table 'Sales CountryRegionCurrency'
+ref table LocalDateTable_c2c19d86-977c-45bd-824e-da6ea86415cb
+ref table 'Sales CreditCard'
+ref table LocalDateTable_8bf0d72b-382d-4d02-83f3-2265d0109822
+ref table 'Sales Currency'
+ref table LocalDateTable_c4a79505-3ae3-4b5f-a3e3-a89dce404e46
+ref table 'Sales CurrencyRate'
+ref table LocalDateTable_3c190378-b0a8-44db-a8ad-dd9b8fe5287a
+ref table LocalDateTable_48322683-a036-43e6-a2fb-09f63adf4db5
+ref table 'Sales Customer'
+ref table LocalDateTable_e7981e89-749a-4745-96c9-b1f5b0b989b6
+ref table 'Sales PersonCreditCard'
+ref table LocalDateTable_7f946563-21ad-454b-9ce4-ea1582301c1d
+ref table 'Sales SalesOrderDetail'
+ref table LocalDateTable_4757fb23-ec91-4fcf-b263-6695b23c3e5a
+ref table 'Sales SalesOrderHeader'
+ref table LocalDateTable_8ca2057d-02c6-4b4b-a616-c32ae8e2d4c0
+ref table LocalDateTable_1dc3ac84-65a8-4369-85c9-9aaca2dbcf3c
+ref table LocalDateTable_95c08004-daab-4e04-bae3-9cf66e6a513e
+ref table LocalDateTable_8e949dd2-406b-4307-b84a-0a349501bff1
+ref table 'Sales SalesOrderHeaderSalesReason'
+ref table LocalDateTable_4c1c9077-f020-4dbe-8495-909cfbd18ed7
+ref table 'Sales SalesPerson'
+ref table LocalDateTable_d3fea102-e3ef-4058-b6f4-f59c307bf564
+ref table 'Sales SalesPersonQuotaHistory'
+ref table LocalDateTable_13e7e679-f0bf-4b7d-a475-de10e34bc9d9
+ref table LocalDateTable_5da536aa-9a35-4a06-b4e4-d475e61846fa
+ref table 'Sales SalesReason'
+ref table LocalDateTable_16b4529b-f1b8-4a9c-9b74-f25a677e60b4
+ref table 'Sales SalesTaxRate'
+ref table LocalDateTable_6bc17248-0f14-465e-a0ef-0c184ac8ac9f
+ref table 'Sales SalesTerritory'
+ref table LocalDateTable_37055824-833f-492e-8a52-dfec36203acf
+ref table 'Sales SalesTerritoryHistory'
+ref table LocalDateTable_30bd7cf8-4708-4669-851b-f096cc439cbd
+ref table LocalDateTable_cae23f0a-66eb-4022-a20d-35109e2aaa7d
+ref table LocalDateTable_48599974-1a81-4ee9-af30-0ffce521874e
+ref table 'Sales ShoppingCartItem'
+ref table LocalDateTable_24282417-2bb0-4806-82db-da9dab647179
+ref table LocalDateTable_8e793b1e-36e3-4b8c-a0bd-5107cdd2e040
+ref table 'Sales SpecialOffer'
+ref table LocalDateTable_b07ec4b1-57f6-4802-a4af-2c3a3d281ffd
+ref table LocalDateTable_5e51d5c1-619c-42e0-a933-6740e9d7fa52
+ref table LocalDateTable_b7e8e265-83fc-4f42-b464-017fb1c7cd50
+
+ref cultureInfo en-GB
+

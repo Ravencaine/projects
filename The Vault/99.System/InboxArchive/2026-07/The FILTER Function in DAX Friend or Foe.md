@@ -62,7 +62,7 @@ FILTER(
 
 Result: A table of only the sales rows where revenue > 1000.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*q3Z-zJ2cooZ_jM3T_0di5w.png)
+![](99.System/Attachments/1!q3Z-zJ2cooZ_jM3T_0di5w.png.webp)
 
 Input table → FILTER applied → Output table with fewer rows.
 
@@ -106,7 +106,7 @@ CALCULATE(
 
 Now CALCULATE applies the condition row by row, thanks to FILTER.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*yZA559ASH40_VjaiduDnQQ.png)
+![](99.System/Attachments/1!yZA559ASH40_VjaiduDnQQ.png.webp)
 
 Side-by-side comparison — CALCULATE with direct filter vs with FILTER.
 
@@ -141,7 +141,7 @@ CALCULATE(
     FILTER(Sales, Sales[Revenue] > Sales[Cost] * 1.2)
 )
 ```
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*aA3h8lHh_czHaooLxjaLIQ.png)
+![](99.System/Attachments/1!aA3h8lHh_czHaooLxjaLIQ.png.webp)
 
 table where FILTER selects only rows that pass a complex condition.
 
@@ -171,7 +171,7 @@ CALCULATE(
 
 - ✅ Use **direct filter arguments** when possible.
 - ✅ Use FILTER only when the logic can’t be written directly.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*egUoQElU4abgilaKj5nJTg.png)
+![](99.System/Attachments/1!egUoQElU4abgilaKj5nJTg.png.webp)
 
 Performance comparison chart — Direct filter (faster) vs FILTER (slower).
 
@@ -227,7 +227,7 @@ CALCULATE(
  )
 )
 ```
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*M-KjCwTteV5sf7qpJlriLQ.png)
+![](99.System/Attachments/1!M-KjCwTteV5sf7qpJlriLQ.png.webp)
 
 Dashboard showing “High Performers” highlighted using FILTER logic.
 

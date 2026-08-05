@@ -12,7 +12,7 @@ Processed: "Unprocessed"
 
 A conversational technical guide to building dynamic join logic for variant products
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*0SewuhFRwLKJ92F3)
+![](99.System/Attachments/0!0SewuhFRwLKJ92F3.webp)
 
 Photo by nrd on Unsplash
 

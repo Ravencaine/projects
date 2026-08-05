@@ -10,7 +10,7 @@ Processed: "Unprocessed"
 ---
 ## Let the reader pick which segment is easy to read — it drops to the baseline in color, everything else fades to grey. Works on any category with 2 or more segments (status, size, material, whatever you stack).
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*TlFRkQScEvSJirYbjIr3cQ.jpeg)
+![](99.System/Attachments/1!TlFRkQScEvSJirYbjIr3cQ.jpeg.webp)
 
 Cover Image — Highlight a Segment in a 100% Stacked Chart and Move It to the Baseline
 
@@ -93,7 +93,7 @@ DATATABLE (
 
 > **If your categories don’t sort correctly alphabetically** (e.g. S/M/L/XL/XXL, or Low/Medium/High), add a second literal column in the same `DATATABLE` — e.g. `"Sort Order", INTEGER` with `{ "Value A", 1 }, { "Value B", 2 }, …` — then set **Category → Column tools → Sort by column → Sort Order.**
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*HPHM2F9T7VEptYo8)
+![](99.System/Attachments/0!HPHM2F9T7VEptYo8.webp)
 
 Figure 4.1: Creating the highlight selector table
 
@@ -175,7 +175,7 @@ The legend would show “Position 1 / 2 / 3…”, not your real category names 
 
 ## Wiring it up in the report
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*nYmrvyKi0aFy2saX)
+![](99.System/Attachments/0!nYmrvyKi0aFy2saX.webp)
 
 Figure 8.1: Building the chart
 
@@ -196,7 +196,7 @@ Now picking a category in the slicer should drop that segment to the baseline in
 
 ## Optional — a custom tooltip
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*qNdWHaaq42f8VIbr)
+![](99.System/Attachments/0!qNdWHaaq42f8VIbr.webp)
 
 Figure 10.1: Creating a custom tooltip
 

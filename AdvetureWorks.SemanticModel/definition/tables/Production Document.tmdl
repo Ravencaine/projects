@@ -1,0 +1,128 @@
+table 'Production Document'
+	lineageTag: 92aaf13c-786d-431c-84f2-376c0f9cee1b
+
+	column DocumentNode
+		dataType: string
+		lineageTag: 5f8de37f-be6b-4378-a4bd-3b4dc2874dc3
+		summarizeBy: none
+		sourceColumn: DocumentNode
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocumentLevel
+		dataType: int64
+		formatString: 0
+		lineageTag: ac0147b5-1fd4-439a-a341-54372c0a6335
+		summarizeBy: sum
+		sourceColumn: DocumentLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: c1fd8819-71d8-4736-b4a0-4846724897fe
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Owner
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b7037d4-25fd-41f7-86f1-c968b85fcbcf
+		summarizeBy: none
+		sourceColumn: Owner
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolderFlag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a384dd6a-d0a9-40e6-bf17-2b3fac43e9bb
+		summarizeBy: none
+		sourceColumn: FolderFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column FileName
+		dataType: string
+		lineageTag: 9edda87f-20b9-46a9-a187-0f013bf03aba
+		summarizeBy: none
+		sourceColumn: FileName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FileExtension
+		dataType: string
+		lineageTag: 6489544d-fbcf-4549-99c1-3b4358a9fc1a
+		summarizeBy: none
+		sourceColumn: FileExtension
+
+		annotation SummarizationSetBy = Automatic
+
+	column Revision
+		dataType: string
+		lineageTag: fb3f20a2-7667-4537-a107-79bab175a449
+		summarizeBy: none
+		sourceColumn: Revision
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChangeNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b3d9f0c-a437-47de-a314-afd667d1aece
+		summarizeBy: sum
+		sourceColumn: ChangeNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: int64
+		formatString: 0
+		lineageTag: 47d5693d-1126-43b2-b1e8-d72154599eba
+		summarizeBy: sum
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocumentSummary
+		dataType: string
+		lineageTag: e644432a-cabb-413b-9e3b-166b444736c4
+		summarizeBy: none
+		sourceColumn: DocumentSummary
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: 8e94b99e-d4a5-450d-9eec-c01c9715d93e
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0cf0c75a-c92f-4745-9f65-a6768470260b
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: bee5404d-d2b5-44ed-bb00-a156f8fe4a92
+			defaultHierarchy: LocalDateTable_579fb62f-ac0d-4c60-ab96-6a964f947e3b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production Document' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "Document"]}[Data]
+				in
+				  #"Navigation 2"
+

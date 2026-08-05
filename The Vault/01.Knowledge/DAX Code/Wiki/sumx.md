@@ -1,53 +1,61 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+created: 2026-07-27
+updated: 2026-08-02
+source: "Iterators in DAX: SUMX, AVERAGEX, RANKX"
 note_type: function
-tags: [dax, function, aggregation]
+tags: [dax, sumx, iterator, function]
 ---
 
-# SUMX
+# SUMX Function
+
+Iterates over a table row-by-row, evaluates an expression for each row, then sums the results. The most common DAX iterator.
 
 ## Signature
 
 ```dax
-SUMX(<table>, <expression>)
+SUMX ( <Table>, <Expression> )
 ```
 
 ## Parameters
 
-| Parameter | Description |
-|-----------|-------------|
-| `<table>` | The table to iterate over. |
-| `<expression>` | The expression evaluated per row to produce the value to sum. |
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `<Table>` | table | Table or table expression to iterate |
+| `<Expression>` | scalar | Expression evaluated per row — must return a scalar value |
 
 ## Returns
 
-A decimal number representing the sum of the evaluated expression across all rows.
+A single scalar value (the sum of the per-row expression results).
 
 ## Examples
 
 ```dax
--- Sum of quantity multiplied by price per row
-SUMX('Sales', 'Sales'[Quantity] * 'Sales'[Price])
+-- Row-by-row: Quantity x Price, then sum
+Total Revenue =
+SUMX (
+    Sales,
+    Sales[Quantity] * Sales[Price]
+)
 
--- With a filter applied via CALCULATE
-SUMX(
-    CALCULATE('Sales', 'Sales'[Region] = "West"),
-    'Sales'[Quantity] * 'Sales'[Price]
+-- Profit: Revenue - Cost per row, then sum
+Total Profit =
+SUMX (
+    Sales,
+    Sales[Revenue] - Sales[Cost]
 )
 ```
 
 ## Notes
 
-- **Iterator function** — loops over table rows, introducing row context for each iteration.
-- The `<expression>` is evaluated in row context — column references refer to the current row.
-- Use when the sum requires a **row-level calculation** (e.g., Quantity × Price).
-- BLANK rows in the expression result are **skipped** — not treated as zero.
-- Logical values and text in the expression result are **ignored**.
-- For simple column totals without row-level computation, prefer `SUM`.
+- SUMX creates **row context**: Expression can reference columns of Table directly
+- If Expression contains CALCULATE, context transition occurs
+- **Common anti-pattern:** SUMX(Sales, Sales[Amount]) — replace with SUM(Sales[Amount]) for 27x faster
+- **Performance rule:** If the expression is just a single column reference, use SUM instead
 
 ## Related
 
-- [[sum]] — simple column sum without row-level computation
-- [[calculate]] — often used to pre-filter the table before iteration
-- [[filter]] — used to narrow the iterated table
+- [[sum]]
+- [[averagex]]
+- [[rankx]]
+- [[iterator-vs-aggregator-comparison]]
+- [[sumx-vs-sum-gotcha]] — anti-pattern gotcha

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Perspectives and Personalization in Power BI"
 source_url: https://medium.com/@2020ec0712/perspectives-and-personalization-in-power-bi-ba0c3fc545e5
 note_type: source

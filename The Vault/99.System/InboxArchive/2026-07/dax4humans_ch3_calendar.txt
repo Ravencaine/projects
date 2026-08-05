@@ -1,0 +1,26 @@
+Many Power BI semantic models include a calendar table which, in its simplest form, is just a list of dates. In fact, if a semantic model is more complex than a single table, the next table added is likely a calendar or dates table. Calendar tables are not usually created using DAX but rather in a SQL data warehouse or via Power Query (M). However, we will use DAX to create a calendar table so that you can become familiar with some of the basic date functions within DAX. That said, DAX calendar/date tables are not generally a good idea for a variety of reasons.
+To create a basic calendar, do the following:
+- Select the Modeling tab of the ribbon and then choose New table from the Calculations section.
+- Enter the following DAX code in the formula bar:
+Dates = CALENDAR( DATE( 2020, 1, 1 ), DATE( 2030, 12, 31 ) )
+- Press the Enter key to create the table.
+- Switch to the Table view in Power BI Desktop and note that the Dates table contains a single column of dates called Date.
+- Right-click the Date column header and choose New column.
+- Use the following DAX code in the formula bar and press the Enter key to create the column:
+Year = YEAR( [Date] )
+- Create the following six additional columns:
+Month = FORMAT( [Date], "mmmm" ) MonthSort = MONTH( [Date] ) Weekday = FORMAT( [Date], "dddd" ) WeekdaySort = WEEKDAY( [Date], 2 ) Weeknum = WEEKNUM( [Date], 2 ) Day = DAY( [Date] )  The FORMAT function has a variety of different format strings that can return different portions of a date as text, such as the month name and the weekday name for date as done here with “mmmm” and “dddd” respectively. Additional format strings can be found here: https://learn.microsoft.com/en-us/dax/format-function-dax.
+The MONTH function simply returns the month number of a year (1 – 12) for the specified date. The WEEKDAY and WEEKNUM functions return the weekday number (1 – 7) and week number of the year (1 – 53) respectively. The second parameter, in this case 2, determines the day the week starts on. 2 indicates that the week starts on Monday (1) and ends on Sunday (7).
+- Select the Month column by clicking on the header for the column.
+- On the Column tools tab of the ribbon, select Sort by column in the Sort section.
+- Select the MonthSort column.
+Figure 3.3: Sort by column.
+- Set the Weekday column to have a sort by column of WeekdaySort.
+Setting the Sort by column for text columns overrides the default sorting behavior of Power BI, which is alphabetical, to ensure that text columns such as months are sorted correctly when displayed in visuals.
+Patron Recommendations
+Brian Julius notes that adding a custom Sort by column to a column brings that custom Sort by column into the filter context, and now in order to remove filters from that field you must remove the filters for the original column name as well as the Sort by column.
+While not important for the No CACULATE approach, DAX “time intelligence” functions work best when the calendar table is marked as a date table. To do this, right-click the Dates table in the Data pane and choose Mark as date table. In the Mark as date table dialog box, toggle the Mark as date table setting to On and then for the Choose the date column setting, choose the Date column:
+Figure 3.4: Mark as date table dialog
+When finished, click the Save button.
+This completes the creation of a basic calendar table. However, note that, as we will see in the next section, calendar tables can be quite extensive with many additional columns. In addition, not all companies operate on a standard Gregorian calendar but often have custom fiscal calendars that start on June 1st, for example, and may also run 445 calendars where quarters have 13 weeks grouped into two 4-week months and one 5-week month.
+In general, DAX’s “time intelligence” functions, which are supposedly designed for complex date calculations, are generally incapable of dealing with custom fiscal calendars. For example, PREVIOUSQUARTER and similar DAX functions always assume a standard calendar. Therefore, the No CALCULATE approach to DAX eschews DAX’s time intelligence functions for an alternative approach, offsets.

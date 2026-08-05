@@ -1,0 +1,13 @@
+With the concepts of filtering, X aggregators and variables understood, we are now equipped to present a single pattern that can be used for most DAX calculations. In fact, you were already introduced to this pattern in the previous section Leveraging Variables. However, we will formally introduce and explain the pattern here.
+To demonstrate this pattern, we will create a measure that sums the Total Cost column for all rows except rows where the Item is Pickle. To implement this measure, follow these steps:
+- These instructions continue from the previous section, Leveraging Variables. If you have not completed that section, simply download and open LeveragingVariables.pbix from the Chapter 1 folder of the following GitHub repository: https://github.com/gdeckler/DAX-For-Humans/tree/main/book
+- Click on the Report view.
+- In the Data fly-out pane, right-click the Table table and choose New measure.
+- In the formula bar, replace the text with the following formula and then press the Enter key:
+Sum Total Cost No Pickle =  VAR __ExcludeItem = "Pickle"  VAR __Table = FILTER( 'Table', 'Table'[Item] <> __ExcludeItem )  VAR __Result = SUMX( __Table, [Total Cost] ) RETURN  __Result
+- Replace the measure in the Fields field well of the Card visual with the new Sum Total Cost No Pickle measure. The result should be 38.89.
+The DAX pattern can be described thusly:
+- Create one or more VAR’s depending upon the requirements of the calculation. In this case, we wish to exclude Pickle rows, so we create a variable that consists of the text “Pickle”.
+- Create a table VAR that filters and potentially groups the rows as required by the calculation. In this case, we wish to exclude rows where the item is “Pickle”, so we construct a simple DAX expression using the FILTER function.
+- Use an X aggregator to perform a calculation over the rows of the table variable. In this case we wish to sum the Total Cost column, so we use the SUMX function with the table variable __Table as the first parameter and the Total Cost column as the second parameter.
+It must be stressed that this is the basic, simple form of the No CALCUALTE DAX pattern. However, this basic pattern can be extended to dozens of lines of DAX code to solve complex problems as we will see throughout the rest of this book.

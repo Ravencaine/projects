@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, time-intelligence]
@@ -52,7 +53,7 @@ Sales Same Qtr Last Year = CALCULATE([Sales], PARALLELPERIOD('Date'[Date], -1, Q
 
 ## Notes
 
-- All return a **table** — use inside CALCULATE
+- All return a **table**: use inside CALCULATE
 - SAMEPERIODLASTYEAR does not support fiscal year offsets
 - PARALLELPERIOD fills gaps (if context has Mar 1–10, shifting back by YEAR gives Mar 1–10 of prior year even if those days don't exist)
 - Not supported in DirectQuery mode for calculated columns or RLS rules

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "m-code.pdf"
 note_type: gotcha
 tags: ["power-query", "power-bi", "text", "case"]
@@ -8,7 +9,7 @@ tags: ["power-query", "power-bi", "text", "case"]
 
 # Text Comparison Is Case-Sensitive in M; Power BI Normalizes on Load
 
-M's text comparison operators are **always case-sensitive**. "Foo" and "foo" are never equal in M expressions. However, when data is loaded into Power BI Desktop's data model, text values are **normalized** — the data model treats "Foo", "foo", and "FOO" as the same value regardless of capitalization.
+M's text comparison operators are **always case-sensitive**. "Foo" and "foo" are never equal in M expressions. However, when data is loaded into Power BI Desktop's data model, text values are **normalized**: the data model treats "Foo", "foo", and "FOO" as the same value regardless of capitalization.
 
 ## Expected Behaviour
 

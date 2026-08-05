@@ -1,0 +1,70 @@
+table 'HumanResources EmployeePayHistory'
+	lineageTag: 8e1e4e59-f004-4005-98f4-c03cd23ee581
+
+	column BusinessEntityID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c8ab239-b769-4ffb-bdfd-80440607f634
+		summarizeBy: none
+		sourceColumn: BusinessEntityID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RateChangeDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4dc96569-439f-46bc-ae1b-0f330c6bb44e
+		summarizeBy: none
+		sourceColumn: RateChangeDate
+
+		variation Variation
+			isDefault
+			relationship: 6291706d-b5d3-4578-9d7a-662d8b3dc0ab
+			defaultHierarchy: LocalDateTable_39048b64-3b93-48b3-b827-810a367a312a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rate
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 82a871c3-bfd4-442d-a639-4a457a3649ea
+		summarizeBy: sum
+		sourceColumn: Rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column PayFrequency
+		dataType: int64
+		formatString: 0
+		lineageTag: f4ab5001-0e0f-4ce2-8a16-4d348430713d
+		summarizeBy: sum
+		sourceColumn: PayFrequency
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ad7f4c99-c761-4150-962f-2aae351e6f27
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 44af6b7b-8803-4532-8871-2d5134719fda
+			defaultHierarchy: LocalDateTable_68dc03bb-d82a-4bb6-9a27-0bb15f345a63.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'HumanResources EmployeePayHistory' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "HumanResources", Item = "EmployeePayHistory"]}[Data]
+				in
+				  #"Navigation 2"
+

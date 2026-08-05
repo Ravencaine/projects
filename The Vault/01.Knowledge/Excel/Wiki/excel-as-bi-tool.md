@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: "Beyond VLOOKUP: Unleashing Excel's True Data Power for Business Analysis"
 source_url: https://medium.com/@harsh1995hg/beyond-vlookup-unleashing-excels-true-data-power-for-business-analysis-33e9c54a66c4
 note_type: atomic
@@ -19,8 +20,8 @@ Excel's advanced data features (Power Query, Pivot Tables, Conditional Formattin
 - **Power Query** handles the ETL layer: connect to any data source, apply repeatable transformations, and refresh on a schedule — eliminating manual copy-paste and formula errors.
 - **Pivot Tables** provide instant aggregation across any combination of dimensions — replace hundreds of `SUMIF` formulas with a single drag-and-drop structure.
 - **Conditional Formatting** adds a visual layer so outliers, trends, and threshold breaches are visible without scanning cells.
-- **No new software required** — all capabilities are built into Excel 2016 and later. Existing team members can adopt them without learning a new platform.
-- **Reproducible pipelines** — unlike formula-heavy sheets, Power Query steps replay automatically on new data, making reports self-updating.
+- **No new software required**: all capabilities are built into Excel 2016 and later. Existing team members can adopt them without learning a new platform.
+- **Reproducible pipelines**: unlike formula-heavy sheets, Power Query steps replay automatically on new data, making reports self-updating.
 
 ## Examples
 

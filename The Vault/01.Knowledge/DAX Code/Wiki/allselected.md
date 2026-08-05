@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, filter-modifier]
@@ -7,7 +8,7 @@ tags: [dax, function, filter-modifier]
 
 # ALLSELECTED
 
-> **Extended 2026-07-27** — slicer-awareness teaching from Advanced Power BI DAX Measures (Jesse Ruiz)
+> **Extended 2026-07-27**: slicer-awareness teaching from Advanced Power BI DAX Measures (Jesse Ruiz)
 
 ## Signature
 ```
@@ -22,7 +23,7 @@ ALLSELECTED([<table> | <column>[, <column>[, …]]])
 
 ## Returns
 
-**table** or **column values** — values as they exist after slicer/filter pane selections, but before the visual-level filter
+**table** or **column values**: values as they exist after slicer/filter pane selections, but before the visual-level filter
 
 ## Examples
 
@@ -46,8 +47,8 @@ DIVIDE(
 
 - **`ALL` vs `ALLSELECTED`**:
   - `ALL` removes **all** filters including visual-level filters, slicers, and filter pane selections — returns the grand total.
-  - `ALLSELECTED` removes only the **visual-level filter** — preserves slicer and filter pane selections, but ignores which rows the visual has filtered out.
-- Use `ALLSELECTED` for calculating **ratios against the full visual context** — e.g., "what % of the visible data does this row represent?"
+  - `ALLSELECTED` removes only the **visual-level filter**: preserves slicer and filter pane selections, but ignores which rows the visual has filtered out.
+- Use `ALLSELECTED` for calculating **ratios against the full visual context**: e.g., "what % of the visible data does this row represent?"
 - A common pitfall: `ALLSELECTED` inside nested `CALCULATE` calls can behave unexpectedly due to its dependency on the visual query context.
 
 ## Related

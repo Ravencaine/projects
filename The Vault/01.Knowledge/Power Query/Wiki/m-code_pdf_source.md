@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "m-code.pdf"
 note_type: source
 tags: ["power-query", "m-language", "microsoft", "documentation"]
@@ -31,9 +32,9 @@ The Microsoft Power Query M Language Reference is the authoritative documentatio
 
 ## Notable Details
 
-- Text comparison in M is **always case-sensitive** — "Foo" ≠ "foo" in expressions
+- Text comparison in M is **always case-sensitive**: "Foo" ≠ "foo" in expressions
 - When data loads into Power BI's data model, case is **normalized** on the data model layer, creating a disconnect
-- Lists and records use **lazy evaluation** — expressions inside them are not evaluated until accessed
+- Lists and records use **lazy evaluation**: expressions inside them are not evaluated until accessed
 - Operators have **operand-dependent meaning**: `+` does number addition, text concatenation, and date arithmetic depending on types
 - `#table()` has no direct literal form — tables are always constructed via functions
 - The `meta` operator attaches metadata records to any value without changing its value

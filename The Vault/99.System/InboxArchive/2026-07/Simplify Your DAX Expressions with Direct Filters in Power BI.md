@@ -110,7 +110,7 @@ SalesForSpecificProduct = CALCULATE(
     Sales[ProductID] = 123
 )
 ```
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*fcUGO8-tbKzoV29Aikf8Vg.jpeg)
+![](99.System/Attachments/1!fcUGO8-tbKzoV29Aikf8Vg.jpeg.webp)
 
 By leveraging direct filters within the `CALCULATE` function, you can make your DAX expressions more concise, readable, and potentially more efficient. This technique is particularly useful in complex reports where maintaining clarity and performance is crucial.
 

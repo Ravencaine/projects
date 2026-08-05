@@ -14,7 +14,7 @@ But after working with Fabric pipelines, Lakehouse, Warehouse, notebooks, semant
 
 **Microsoft Fabric is not just one tool. It is a complete data platform.**
 
-![MS FABRIC](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*LVY5ZBp3QTaet6neGy4rpA.png)
+![MS FABRIC](99.System/Attachments/MS_FABRIC.webp)
 
 MS FABRIC
 
@@ -44,7 +44,7 @@ Instead of using many separate tools for different stages of the data process, F
 → Semantic model  
 → Power BI report
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*w1IR9akfF06ei8XuAGCMiw.png)
+![](99.System/Attachments/1!w1IR9akfF06ei8XuAGCMiw.png.webp)
 
 This is why Fabric is useful for modern data teams. It gives data engineers, analysts, and reporting teams a shared platform to work on the same data journey.
 
@@ -56,7 +56,7 @@ OneLake is the unified data lake for Microsoft Fabric. Microsoft describes it as
 
 The easiest way to understand OneLake is to think of it as the central storage layer behind Fabric.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*H9xX1v_BC46mQSwmSJ0DdQ.png)
+![](99.System/Attachments/1!H9xX1v_BC46mQSwmSJ0DdQ.png.webp)
 
 Instead of each team creating separate copies of data in different systems, OneLake helps bring data into one shared storage foundation.
 
@@ -73,7 +73,7 @@ OneLake helps reduce that confusion by giving Fabric a common storage layer.
 
 A Lakehouse in Fabric combines the flexibility of a data lake with the querying capabilities of a data warehouse. Microsoft explains that a Lakehouse can store structured and unstructured data in one place, manage it with Delta Lake, and allow analysis through Spark and SQL.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*X9XG1L7HnG1xkuZSy4EY-A.png)
+![](99.System/Attachments/1!X9XG1L7HnG1xkuZSy4EY-A.png.webp)
 
 In practical terms, a Lakehouse is useful when you want to store files, tables, and transformed data during the data engineering process.
 
@@ -103,7 +103,7 @@ For data engineers, pipelines are one of the most important parts of Fabric.
 
 Fabric Data Factory helps move and transform data from different sources into destinations like Lakehouse or Warehouse. Microsoft says Data Factory supports data integration across many sources and helps turn scattered data into useful insights.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*LJK1byrbE3DAlM82aH_lyQ.png)
+![](99.System/Attachments/1!LJK1byrbE3DAlM82aH_lyQ.png.webp)
 
 A pipeline can be used to:
 
@@ -137,7 +137,7 @@ A Warehouse in Fabric is useful when your data is structured and ready for SQL-b
 
 The Lakehouse is often used during the engineering and transformation stage, while the Warehouse is commonly used for curated, business-ready reporting tables.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KIw6YWz_lhDKz3LtUd6B8g.png)
+![](99.System/Attachments/1!KIw6YWz_lhDKz3LtUd6B8g.png.webp)
 
 For example, after cleaning and transforming data in the Lakehouse, the final output may be loaded into a Warehouse so reporting teams can easily query it.
 
@@ -157,7 +157,7 @@ Once data is cleaned and ready, reporting teams usually need a semantic model.
 
 A semantic model helps define relationships, measures, and business-friendly structures for Power BI reporting. Microsoft documentation explains that semantic models can be created and managed on Fabric Lakehouse or Warehouse tables.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ICxiVF9jIfyYuXAq3hxV5w.png)
+![](99.System/Attachments/1!ICxiVF9jIfyYuXAq3hxV5w.png.webp)
 
 This layer is important because raw tables are not always easy for business users to understand.
 
@@ -216,7 +216,7 @@ Let’s say a company receives operational data from a SQL Server database.
 
 A simple Fabric solution could look like this:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*bmvdA3HRIDaYgDaHvKdyDw.png)
+![](99.System/Attachments/1!bmvdA3HRIDaYgDaHvKdyDw.png.webp)
 
 First, a Data Factory pipeline copies the required tables from SQL Server into a Lakehouse.
 

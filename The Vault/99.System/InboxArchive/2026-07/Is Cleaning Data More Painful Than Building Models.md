@@ -10,7 +10,7 @@ Processed: "Unprocessed"
 ---
 — A Data Analyst’s Perspective from 20+ Years in the Field
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*F4DOCfk9UHb6qSOFEfB3Tg.png)
+![](99.System/Attachments/1!F4DOCfk9UHb6qSOFEfB3Tg.png.webp)
 
 When people imagine data analysis, they picture sleek dashboards, powerful machine learning models, and stories hidden in numbers. What they don’t picture is the hours spent elbow-deep in messy spreadsheets, duplicate entries, missing values, and typos that would make your head spin.
 
@@ -22,7 +22,7 @@ Let’s explore why.
 
 If you’ve taken any online data course, you’ve likely worked with a dataset like this:
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*yb1C9yuWAFIy0l8YJnVhDA.png)
+![](99.System/Attachments/1!yb1C9yuWAFIy0l8YJnVhDA.png.webp)
 
 Looks nice, right? Every row has values. Columns are consistent. No random symbols. No missing fields.
 
@@ -33,7 +33,7 @@ It’s the equivalent of practicing surgery on a plastic mannequin — you get t
 
 Now let me show you a slice of real-world student data I once encountered:
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*CRJDf9jDFGPX-ZsM45_KRA.png)
+![](99.System/Attachments/1!CRJDf9jDFGPX-ZsM45_KRA.png.webp)
 
 Notice the chaos?
 

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, time-intelligence]
@@ -35,7 +36,7 @@ Year End Revenue = CLOSINGBALANCEYEAR([Revenue], 'Date'[Date],, "06/30")
 
 - Evaluates the expression at the **last date** of the period in the current context
 - `year_end_date` defaults to December 31
-- **Discouraged in visual calculations** — likely returns meaningless results
+- **Discouraged in visual calculations**: likely returns meaningless results
 - Week functions require a calendar (ISO week date table)
 - Not supported in DirectQuery mode for calculated columns or RLS rules
 - Related: [[openingbalanceyear]]

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "The FILTER Function in DAX: Friend or Foe?"
 source_url: https://medium.com/write-your-world/the-filter-function-in-dax-friend-or-foe-667d5f92eaa9
 note_type: source
@@ -125,7 +126,7 @@ CALCULATE(
 ```c
 CALCULATE(
  SUM(Sales[Revenue]),
- FILTER(Sales, Sales[Region] = “North” || Sales[Region] = “South”)
+ FILTER(Sales, Sales[Region] = “North” | Sales[Region] = “South”)
 )
 ```
 

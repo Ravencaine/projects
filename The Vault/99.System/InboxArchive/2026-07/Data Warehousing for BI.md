@@ -12,7 +12,7 @@ If BI is about making better decisions, data warehousing is the system that make
 
 In real companies, data comes from many places: product databases, marketing platforms, payment systems, spreadsheets, and logs. Without a warehouse, every team builds reports differently, numbers do not match, and leadership loses confidence in analytics.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*GlSfJ6h_eoMVAlY4.jpg)
+![](99.System/Attachments/0!GlSfJ6h_eoMVAlY4.jpg.webp)
 
 This post explains the core ideas behind data warehousing in a practical way: what it is, how it works end to end, and what trade-offs teams make in production.
 
@@ -57,7 +57,7 @@ A typical warehouse architecture has five stages:
 3. Raw layer: Data is stored in its original form with minimal changes, so you can trace issues back to the source if needed.
 4. Transformation/modeling: Data is cleaned, joined, and structured into analytics-friendly tables (such as fact and dimension tables).
 5. Consumption: The final data is used in dashboards, SQL queries, and business reports.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*rj-d7rZhOUpYdYEs.png)
+![](99.System/Attachments/0!rj-d7rZhOUpYdYEs.png.webp)
 
 The key design idea is separation of concerns:
 

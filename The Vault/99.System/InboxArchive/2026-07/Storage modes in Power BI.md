@@ -10,17 +10,17 @@ Processed: "Unprocessed"
 ---
 (Article for beginners)
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*7wsgP90Uwi3sre39bsRPyQ.png)
+![](99.System/Attachments/1!7wsgP90Uwi3sre39bsRPyQ.png.webp)
 
 In Power BI, when you start building [semantic models](https://medium.com/@2020ec0712/reports-semantic-models-and-power-bi-service-ce8639e5cf69) or reports, the first step is to ‘Get data’. While there are many different data sources from which you can get the data (example Excel spreadsheets or CSV files, SQL server, Azure SQL databases, Dataverse, Fabric OneLake etc.), there are three ways in which you can fetch and store them in your.pbix file— direct query mode, import mode and composite.
 
 Direct query mode:
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*d-j-chUWQQViTTLL6duoSg.png)
+![](99.System/Attachments/1!d-j-chUWQQViTTLL6duoSg.png.webp)
 
 Direct query mode involves querying the data source directly each time. Data is **not stored locally** in the model. As a result, depending on the source and the size of data, the querying could take time. When the number of rows of data to be loaded is very large, direct query mode is recommended because we **don’t need to worry about the memory size** requirements — theoretically, the amount of data that can be loaded through direct query is unlimited. The best part about direct query is that, since the data is fetched directly from the source, regular **manual refreshes are not required**. As and when data changes in the source, the data model in the Power BI file also reflects the changes. So, when the data is changing rapidly and **real-time data** is required in dashboards, direct query is the go-to choice. The downside of direct query storage mode is that its **features are sometimes limited**, as compared to import mode. This is because, what we write as DAX or transform using power query, needs to be translated to SQL to query the source and some complex logic cannot be translated. Another thing to keep in mind is that a **constant connection** with the source is necessary for the data to be available in the Power BI file.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*gbrhLNbb2a4t-KDZ26z5Dw.png)
+![](99.System/Attachments/1!gbrhLNbb2a4t-KDZ26z5Dw.png.webp)
 
 Import mode:
 
@@ -32,7 +32,7 @@ In a star schema data model, there are one or two fact tables and they have mass
 
 The three storage modes — Direct query mode, Import mode and Composite model are used in building the data models in both [semantic model](https://medium.com/@2020ec0712/reports-semantic-models-and-power-bi-service-ce8639e5cf69) files as well as report files that have data in them. Although **live connection is not a storage mode**, it is generally associated with them. Thin reports or live connected reports have only visuals in them. Their data is stored in semantic model files published to Power BI service.
 
-![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*9qpC8uW4SWl0NYSs)
+![](99.System/Attachments/0!9qpC8uW4SWl0NYSs.webp)
 
 A simple way to summarize is:  
 **Import mode** — Data and Model belong to the Power BI file.

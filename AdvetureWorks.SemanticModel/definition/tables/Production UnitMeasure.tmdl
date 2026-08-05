@@ -1,0 +1,43 @@
+table 'Production UnitMeasure'
+	lineageTag: 76ba97b2-9cff-404f-8596-24b312ef22e6
+
+	column UnitMeasureCode
+		dataType: string
+		lineageTag: b28f9c61-2789-447e-96ad-b21e71cda0fe
+		summarizeBy: none
+		sourceColumn: UnitMeasureCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: e28aa5a6-34cc-41c3-b349-735d3ca8374e
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 70303511-1625-4a2a-82f9-af199c3dca65
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 6e8a708a-2527-420a-af94-182625758ebe
+			defaultHierarchy: LocalDateTable_7b1479b7-1ff1-4be3-b721-c4fee24916ca.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production UnitMeasure' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "UnitMeasure"]}[Data]
+				in
+				  #"Navigation 2"
+

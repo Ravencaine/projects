@@ -1,20 +1,50 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+
+created: 2026-07-28
+updated: 2026-08-02
+source: "[[beginning-big-data-with-power-bi-and-excel-2013-dunlop|Beginning Big Data with Power BI and Excel 2013]]"
+tags: ["dax", "function", "table", "intersect", "set"]
 note_type: function
-tags: [dax, function, table]
+
 ---
 
-# INTERSECT
+# INTERSECT — Row Overlap
 
-Applies to: Calculated column Calculated table Measure Visual calculation Returns the row intersection of two tables, retaining duplicates.
+Returns the rows that appear in both tables.
 
-## Syntax
+## Signature
 
 ```dax
-INTERSECT(<table_expression1>, <table_expression2>)
+INTERSECT( <LeftTable>, <RightTable> )
 ```
 
-## Remarks
+## Parameters
 
-Intersect is not commutative. In general, Intersect(T1, T2) will have a different result set than Intersect(T2, T1). Duplicate rows are retained. If a row appears in table_expression1 and table_expression2, it and all duplicates in table_expression_1 are included in the result set. The column names will match the column names in table_expression1.
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| LeftTable | Table | First table. |
+| RightTable | Table | Table to intersect with. |
+
+## Returns
+
+Rows that exist in both tables.
+
+## Examples
+
+```dax
+Common Customers :=
+INTERSECT(
+    CALCULATETABLE( VALUES( 'Customers'[CustomerID] ), 'Sales'[Year] = 2024 ),
+    CALCULATETABLE( VALUES( 'Customers'[CustomerID] ), 'Sales'[Year] = 2023 )
+)
+```
+
+## Notes
+
+- Matches by column values, not row position
+- Column names must match across tables
+
+## Related
+
+- [[UNION]]
+- [[except]]

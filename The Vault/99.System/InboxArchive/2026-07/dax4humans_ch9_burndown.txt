@@ -1,0 +1,115 @@
+Burndown charts provide a useful way to visualize the work being performed on a project compared to an idealized or expected work schedule. Burndown charts calculate the cumulative amount of work on a project and subtracts that amount from the total work for the entire project.
+To demonstrate burndown charts, use an Enter data query to enter the following data into a table named Project or download Chapter9_Data.xlsx from the GitHub repository for this book and import the data on the Project sheet.
+ID
+Project
+Phase
+Name
+Work
+Start
+Finish
+%
+PV
+EV
+3
+Project
+Phase 1
+Task 1
+24
+1/13/2025
+1/13/2025
+1
+2040
+2040
+4
+Project
+Phase 1
+Task 2
+160
+1/14/2025
+1/27/2025
+1
+14400
+14400
+5
+Project
+Phase 1
+Task 3
+40
+1/28/2025
+2/3/2025
+1
+3400
+3400
+7
+Project
+Phase 2
+Task 4
+240
+2/4/2025
+2/24/2025
+0.75
+21600
+16200
+8
+Project
+Phase 2
+Task 5
+200
+2/25/2025
+3/30/2025
+0.5
+19000
+9500
+9
+Project
+Phase 2
+Task 6
+160
+3/31/2025
+4/27/2025
+0.25
+13600
+3400
+11
+Project
+Phase 3
+Task 7
+120
+4/28/2025
+5/4/2025
+0
+9800
+0
+12
+Project
+Phase 3
+Task 8
+240
+5/5/2025
+5/25/2025
+0
+18000
+0
+13
+Project
+Phase 3
+Task 9
+80
+5/26/2025
+6/8/2025
+0
+6000
+0
+Table 9.1: Project data
+In addition, create a Dates table using the following DAX code:
+Dates = CALENDAR( DATE( 2024, 1, 1 ), DATE( 2025, 12, 31 ) )  Finally, import the Hours sheet from the Chapter9_Data.xlsx file available in the GitHub repository for this book into a table called Hours.
+Create a relationship between the ID columns in both the Project table and the Hours table. Ensure that the Dates table is not connected to either table. Your semantic model should look like the following:
+Figure 9.1: Semantic model relationships
+Now create the following measure:
+Idealized Burndown =  VAR __Date = MAX( 'Dates'[Date] )  VAR __StartDate = MINX( 'Project', 'Project'[Start] )  VAR __FinishDate = MAXX( 'Project', 'Project'[Finish] )  VAR __TotalProjectHours = SUMX( ALL( 'Project' ), 'Project'[Work] )  VAR __IdealHoursPerDay =  DIVIDE(  __TotalProjectHours,  ( __FinishDate - __StartDate ) + 1,  0  )  VAR __IdealConsumedHours = __IdealHoursPerDay * ( ( __Date - __StartDate ) + 1 )  VAR __Result =  IF(  __Date  __FinishDate,  BLANK(),  __TotalProjectHours - __IdealConsumedHours  ) RETURN  __Result  The Idealized Burndown measure calculates the total amount of hours of work for the project and then divides this number by the total number of days for the project. This calculation provides the expected average number of hours of work needed to be performed per day to complete the project within the expected timeline. Thus, for any given day, the idealized number of hours consumed is the average number of work hours per day multiplied by the number of days since the start of the project.
+Note that the Idealized Burndown measure does not exclude weekends. You can use NETWORKDAYS in the denominator for the __IdealHoursPerDay variable to address this if necessary.
+Burndown =  VAR __ReportingDate = DATE( 2025, 4, 1 )  VAR __Date = MAX( 'Dates'[Date] )  VAR __StartDate = MINX( 'Project', 'Project'[Start] )  VAR __FinishDate = MAXX( 'Project', 'Project'[Finish] )  VAR __TotalProjectHours = SUMX( ALL( 'Project' ), 'Project'[Work] )  VAR __TotalConsumedHours =  SUMX(  FILTER(  ALL('Hours'),  'Hours'[Date]   ),  'Hours'[Hours])  VAR __Result =  IF(  __Date  __ReportingDate,  BLANK(),  __TotalProjectHours - __TotalConsumedHours  ) RETURN  __Result  The Burndown measure is similar to the Idealized Burndown measure except for the calculation of the consumed hours, __TotalConsumedHours. Instead of calculating an idealized number of hours, we instead calculate the cumulative total number of hours worked up until the current date in context. This is done by using FILTER and ALL to return all rows within the Hours table where the Date column is less than or equal to the current __Date in context and then summing the Hours column using SUMX.
+Once these two measures are created, create a Line chart using the Date column from the Dates table as the X-axis and the Idealized Burndown and Burndown measures as the Y-axis.
+Figure 9.2: Burndown chart
+Here we can see that initially, more work was being done on the project compared to what was expected. However, towards the end of March, project work stalled and now less work has been done compared to the expected consumption of work hours.
+This completes our exploration of burndown charts. Next, we explore the topic of planned and earned value.

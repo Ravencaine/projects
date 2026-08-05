@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "m-code.pdf"
 note_type: atomic
 tags: ["m-language", "functions"]
@@ -13,7 +14,7 @@ In M, a function is a value like any other. Functions are created with the `=>` 
 ## Key Points
 
 - A function is written: `(param1, param2) => expression`
-- Functions are **values** — they can be stored, passed, and returned
+- Functions are **values**: they can be stored, passed, and returned
 - When invoked, arguments are substituted for parameters in the body
 - M's library is a collection of function values
 - Functions capture their lexical environment (closure)

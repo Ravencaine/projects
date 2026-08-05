@@ -10,7 +10,7 @@ Processed: "Unprocessed"
 ---
 ## A Game Changer for Power BI
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*El1K6AfJhrlMA5fc.png)
+![](99.System/Attachments/0!El1K6AfJhrlMA5fc.png.webp)
 
 [https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview](https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview)
 
@@ -64,7 +64,7 @@ That simple shift changed how I approached reporting.
 
 ## Understanding the Layers Before Visualization
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*LfCAC2AIHiNdUnT1.png)
+![](99.System/Attachments/0!LfCAC2AIHiNdUnT1.png.webp)
 
 [https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture](https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture)
 

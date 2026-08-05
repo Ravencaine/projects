@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, time-intelligence]
@@ -43,7 +44,7 @@ Sales FYTD = CALCULATE([Sales], DATESYTD('Date'[Date], "06/30"))
 
 ## Notes
 
-- All return a **table of dates** — must be used as a filter inside CALCULATE
+- All return a **table of dates**: must be used as a filter inside CALCULATE
 - `DATESYTD` is the most common; `year_end_date` is essential for fiscal year reporting
 - `DATESWTD` requires a calendar table (ISO week dates) — does not work with standard date columns
 - Not supported in DirectQuery mode for calculated columns or RLS rules

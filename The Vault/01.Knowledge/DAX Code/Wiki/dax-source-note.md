@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: source
 tags: [dax, reference, microsoft-learn]
@@ -40,9 +41,9 @@ tags: [dax, reference, microsoft-learn]
 | Window Functions | 9 | INDEX, OFFSET, WINDOW, RANKX, ROWNUMBER, ORDERBY, PARTITIONBY, MATCHBY, etc. |
 
 ### Additional Articles
-- **DAX Queries** — EVALUATE syntax, DEFINE, ORDER BY, START AT
-- **DAX Glossary** — Core terminology
-- **User-Defined Functions (UDF)** — Preview feature documentation
+- **DAX Queries**: EVALUATE syntax, DEFINE, ORDER BY, START AT
+- **DAX Glossary**: Core terminology
+- **User-Defined Functions (UDF)**: Preview feature documentation
 
 ## Ingestion Notes
 
@@ -55,7 +56,7 @@ tags: [dax, reference, microsoft-learn]
 ## Key Notes for This Source
 
 - The document uses 7-note articles for best practices (BLANK handling, FILTER, SELECTEDVALUE, COUNTROWS, variables, error handling, window functions) — these are the highest-value ingestion targets alongside the function reference
-- The UDF feature is documented as **preview** — the API may change
+- The UDF feature is documented as **preview**: the API may change
 - DAX queries (EVALUATE, DEFINE, etc.) are documented in the reference section
 - ~380 functions remain as bulk references not individually written — target for future batch ingestion sessions
 

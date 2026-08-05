@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: concept
 tags: [dax, logical-functions, if, switch, and, or, not]
@@ -60,14 +61,14 @@ AND(<logical1>, <logical2>)
 OR(<logical1>, <logical2>)
 ```
 
-Both take exactly two arguments. For multiple conditions, use && and || instead:
+Both take exactly two arguments. For multiple conditions, use && and | instead:
 
 ```dax
 -- AND equivalent
 [Qty] > 10 && [Price] < 100
 
 -- OR equivalent
-[Status] = "Active" || [Status] = "Trial"
+[Status] = "Active" | [Status] = "Trial"
 ```
 
 ### NOT
@@ -97,7 +98,7 @@ Is Deleted = FALSE()
 | Operator | Description | Example |
 |----------|-------------|---------|
 | `&&` | AND | `[A] > 0 && [B] > 0` |
-| `||` | OR | `[A] > 0 || [B] > 0` |
+| `|` | OR | `[A] > 0 | [B] > 0` |
 | `IN` | Set membership | `[Color] IN {"Red", "Blue"}` |
 
 ## NOT IN Pattern

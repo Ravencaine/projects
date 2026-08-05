@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Advanced Dimensional Modeling for Retail Product Variants"
 source_url: "https://medium.com/@jjr8888/advanced-dimensional-modeling-for-retail-product-variants-b4e6c1743382"
 note_type: atomic
@@ -24,7 +25,7 @@ D365 F&O has no single `Products` table. Product data spans 12+ interconnected t
 - Barcodes per variant → InventItemBarcode
 - Which variant attributes apply → EcoResProductDimensionGroup (defines the dimension group per product)
 
-The join logic must be **dynamic based on dimension group** — join on too many attributes and prices are missed; join on too few and duplicates appear.
+The join logic must be **dynamic based on dimension group**: join on too many attributes and prices are missed; join on too few and duplicates appear.
 
 ## Examples
 

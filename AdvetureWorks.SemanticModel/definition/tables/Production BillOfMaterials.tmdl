@@ -1,0 +1,109 @@
+table 'Production BillOfMaterials'
+	lineageTag: 712f06bf-b905-45bf-92af-40453fda054e
+
+	column BillOfMaterialsID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7363614e-c25d-4c1a-8da3-a9d713ab577d
+		summarizeBy: count
+		sourceColumn: BillOfMaterialsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductAssemblyID
+		dataType: int64
+		formatString: 0
+		lineageTag: 0cb51b49-f0a4-48b4-959a-c4bcb95d8434
+		summarizeBy: count
+		sourceColumn: ProductAssemblyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComponentID
+		dataType: int64
+		formatString: 0
+		lineageTag: 78129ce7-4abf-4c97-ad7c-9187b89339ac
+		summarizeBy: none
+		sourceColumn: ComponentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 81adb07b-1973-4bf5-bd31-9a6e20228c26
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variation
+			isDefault
+			relationship: cb8a0bbb-dc84-456d-95eb-81a4c8191f6d
+			defaultHierarchy: LocalDateTable_0ca7cfc8-cde8-47be-8d6d-e38507c44957.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: df58ec73-3d4a-4a61-a21f-39012eca784b
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variation
+			isDefault
+			relationship: 2c3e2c3b-9fb6-4bec-b9b8-6372b44f42ec
+			defaultHierarchy: LocalDateTable_d45be171-ff58-48e4-84c3-e586155c4633.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitMeasureCode
+		dataType: string
+		lineageTag: 149827ba-588b-410a-8d74-d8520fc42490
+		summarizeBy: none
+		sourceColumn: UnitMeasureCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column BOMLevel
+		dataType: int64
+		formatString: 0
+		lineageTag: 8dd26c5c-dd94-4bab-9312-774b49de1a70
+		summarizeBy: sum
+		sourceColumn: BOMLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column PerAssemblyQty
+		dataType: double
+		lineageTag: c5fd2d77-5793-405f-b180-028a27955173
+		summarizeBy: sum
+		sourceColumn: PerAssemblyQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7aafc571-d271-49bc-895d-6ae93f6010b2
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 0b5d635c-ec7e-47ee-b5cf-9a95d98b90e8
+			defaultHierarchy: LocalDateTable_c371bad2-a215-400e-a4dd-6d4eced37485.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production BillOfMaterials' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "BillOfMaterials"]}[Data]
+				in
+				  #"Navigation 2"
+

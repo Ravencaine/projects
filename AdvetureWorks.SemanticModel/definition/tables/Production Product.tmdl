@@ -1,0 +1,253 @@
+table 'Production Product'
+	lineageTag: d63f334f-8be5-4bc5-8d7b-5388aabba4b8
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8089f888-6932-4d50-b3fd-8e3f9b113024
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: db12d44a-387d-4cba-ac9f-9ec740a596a5
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductNumber
+		dataType: string
+		lineageTag: 95388f63-513a-4ce4-8ea7-860efd9b198e
+		summarizeBy: none
+		sourceColumn: ProductNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MakeFlag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f1157288-6e8d-4b1f-9404-9fd570a32ce5
+		summarizeBy: none
+		sourceColumn: MakeFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinishedGoodsFlag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 23c39bcb-3d3b-4dd0-94ff-940f8bf93255
+		summarizeBy: none
+		sourceColumn: FinishedGoodsFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: string
+		lineageTag: 9a3a5df7-1882-4ea3-9fea-87a0e19823c3
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column SafetyStockLevel
+		dataType: int64
+		formatString: 0
+		lineageTag: 653f409e-460e-43c3-a13a-5c06fefa9553
+		summarizeBy: sum
+		sourceColumn: SafetyStockLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReorderPoint
+		dataType: int64
+		formatString: 0
+		lineageTag: ac7427b0-2cfe-41a9-b339-745679ef5598
+		summarizeBy: sum
+		sourceColumn: ReorderPoint
+
+		annotation SummarizationSetBy = Automatic
+
+	column StandardCost
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 7624c92e-00d0-482b-80d4-400c46e89395
+		summarizeBy: sum
+		sourceColumn: StandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column ListPrice
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: b107a26b-c3bb-46cb-9561-782ddb071977
+		summarizeBy: sum
+		sourceColumn: ListPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column Size
+		dataType: string
+		lineageTag: 5b772c33-7d68-453a-bb1e-9bf776cda01d
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation SummarizationSetBy = Automatic
+
+	column SizeUnitMeasureCode
+		dataType: string
+		lineageTag: 1ea2b5c5-5f03-421f-8103-807a0cdfa50e
+		summarizeBy: none
+		sourceColumn: SizeUnitMeasureCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeightUnitMeasureCode
+		dataType: string
+		lineageTag: 231bb66e-a55c-43bd-8ae6-2631dd8ac223
+		summarizeBy: none
+		sourceColumn: WeightUnitMeasureCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: double
+		lineageTag: a62edec4-9315-4c8e-9556-29f24ec76503
+		summarizeBy: sum
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DaysToManufacture
+		dataType: int64
+		formatString: 0
+		lineageTag: cb3b8f6d-570c-40ea-836e-3ceaee2bda72
+		summarizeBy: sum
+		sourceColumn: DaysToManufacture
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductLine
+		dataType: string
+		lineageTag: ba47d888-343d-462a-9e10-47369cb23922
+		summarizeBy: none
+		sourceColumn: ProductLine
+
+		annotation SummarizationSetBy = Automatic
+
+	column Class
+		dataType: string
+		lineageTag: 0c8303eb-4a62-4a94-90bc-e6eb5b14de20
+		summarizeBy: none
+		sourceColumn: Class
+
+		annotation SummarizationSetBy = Automatic
+
+	column Style
+		dataType: string
+		lineageTag: a7984cee-9047-47cd-9d46-99759ce6aff9
+		summarizeBy: none
+		sourceColumn: Style
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: cae59e54-3396-4e11-89d8-5dee266ac8a3
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductModelID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6dddd56e-c27a-4226-9e84-3688d6c2e3b2
+		summarizeBy: none
+		sourceColumn: ProductModelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SellStartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7e2cf6cd-6224-446f-9d30-56c382d8ea1e
+		summarizeBy: none
+		sourceColumn: SellStartDate
+
+		variation Variation
+			isDefault
+			relationship: b410b17c-028b-41bc-ae3d-45d8bd76cf45
+			defaultHierarchy: LocalDateTable_8c92c8e2-17d3-4d80-82a8-a333d84c7db8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column SellEndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f324f307-a974-41f7-9263-caa51d3c27c2
+		summarizeBy: none
+		sourceColumn: SellEndDate
+
+		variation Variation
+			isDefault
+			relationship: fa82fc0f-91a9-4329-a4fa-8e97ef215b73
+			defaultHierarchy: LocalDateTable_13a4e0dd-c694-408c-a06c-3d26da2485d1.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiscontinuedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 701daf65-9de0-4b59-9f9f-e0f6e766eab1
+		summarizeBy: none
+		sourceColumn: DiscontinuedDate
+
+		variation Variation
+			isDefault
+			relationship: 8ad146ec-354a-4162-b0a9-911d2b68890d
+			defaultHierarchy: LocalDateTable_3ebc2804-b622-44e0-9145-7425cca9e6f2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: 3264ed9b-f4a7-4746-8e54-fbacbe1f472a
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3f4f2bc4-0b63-468a-8430-4129fd59435e
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 49912227-2fee-4c35-86e7-768923af91dd
+			defaultHierarchy: LocalDateTable_44a876f0-b9ed-4d1e-9454-ff61eaca2888.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production Product' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "Product"]}[Data]
+				in
+				  #"Navigation 2"
+

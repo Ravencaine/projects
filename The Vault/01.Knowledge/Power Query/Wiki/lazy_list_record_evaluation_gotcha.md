@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "m-code.pdf"
 note_type: gotcha
 tags: ["m-language", "evaluation", "performance"]
@@ -26,7 +27,7 @@ No error occurs — the list is created successfully. The `error "boom"` express
 
 ## Why It Happens
 
-Lists and records use **lazy evaluation** — items are computed only on demand. This is an optimization for large datasets.
+Lists and records use **lazy evaluation**: items are computed only on demand. This is an optimization for large datasets.
 
 ## How to Handle It
 

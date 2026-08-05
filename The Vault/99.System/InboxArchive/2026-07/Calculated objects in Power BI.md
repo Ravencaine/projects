@@ -12,7 +12,7 @@ Processed: "Unprocessed"
 
 Data Analysis Expressions (DAX) is a very powerful language used for modeling in Power BI. There are four standard, explicit calculated objects (in terms of DAX) in Power BI — Calculated columns, Calculated tables, Measures and Calculation groups.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*iARepUe70UdNh6YOgmY4AQ.png)
+![](99.System/Attachments/1!iARepUe70UdNh6YOgmY4AQ.png.webp)
 
 Calculated columns:
 
@@ -57,4 +57,4 @@ To get started with these calculated objects, a basic understanding of DAX is re
 
 To summarize what we saw in this article:
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*A1gteyf4W18HKZaCKMw-rg.png)
+![](99.System/Attachments/1!A1gteyf4W18HKZaCKMw-rg.png.webp)

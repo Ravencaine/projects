@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Advanced Power BI DAX Measures for Retail Analytics Pt 1"
 source_url: "https://medium.com/@jjr8888/advanced-power-bi-dax-measures-for-retail-analytics-pt-1-297936931171"
 note_type: gotcha
@@ -28,7 +29,7 @@ AVERAGE(A, B, C) = (100 + 0 + BLANK) / ? = BLANK -- BLANK propagates
 ## Why It Happens
 
 - DAX aggregation functions (SUM, AVERAGE, COUNT, etc.) **ignore BLANK rows** in both numerator and denominator
-- A literal `0` is a **measured value** — it participates in the count and sum
+- A literal `0` is a **measured value**: it participates in the count and sum
 - The `IF(ISBLANK(...), 0, ...)` pattern converts a missing value to an explicit zero — which is sometimes intentional and sometimes a mistake
 
 ## How to Handle It

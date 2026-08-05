@@ -1,58 +1,41 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+
+created: 2026-07-28
+updated: 2026-08-02
+source: "[[beginning-big-data-with-power-bi-and-excel-2013-dunlop|Beginning Big Data with Power BI and Excel 2013]]"
+tags: ["dax", "function", "query", "evaluate", "dax-studio"]
 note_type: function
-tags: [dax, function, query]
+
 ---
 
-# EVALUATE
+# EVALUATE — DAX Query Execution
 
-Executes a DAX query and returns a result table.
+Returns a table from a DAX query. Used in DAX Studio, SSMS, and direct queries.
 
 ## Signature
 
 ```dax
-EVALUATE <table_expression>
+EVALUATE <TableExpression>
 ```
 
 ## Examples
 
 ```dax
--- Return all products
-EVALUATE 'Product'
-
--- Return filtered table
-EVALUATE
-FILTER('Product', 'Product'[List Price] > 100)
-
--- Grouped aggregation
 EVALUATE
 SUMMARIZECOLUMNS(
     'Product'[Category],
-    'Date'[Year],
-    "Total Sales", SUM(Sales[Amount])
+    "Sales", SUM( 'Sales'[Amount] )
 )
-ORDER BY 'Product'[Category], 'Date'[Year]
+ORDER BY [Sales] DESC
 ```
-
-## EVALUATE Options
-
-| Keyword | Purpose |
-|---------|---------|
-| `ORDER BY` | Sort results |
-| `START AT` | Specify the starting value for ORDER BY |
-| `DEFINE` | Define local measures, variables, tables |
-| `TOPNSKIP` | Skip N rows then return top M |
-| `EVALUATEANDLOG` | Return result and log to profiler |
 
 ## Notes
 
-- EVALUATE is the primary keyword for DAX queries in DAX Studio, Power BI, and SSMS
-- A query can include multiple EVALUATE statements, each returning a separate result set
-- DEFINE creates measures that are local to the query — useful for testing without polluting the model
-- EVALUATEANDLOG is for profiling and debugging — returns the value and logs it
+- `EVALUATE` is the DAX equivalent of `SELECT` in SQL
+- Combine with `ORDER BY`, `START AT`, `TOPN`
+- Used in DAX Studio for testing queries before embedding in Power BI
 
 ## Related
 
-- [[dax-queries]]
-- [[summarizecolumns]]
+- [[dax-performance-optimization-techniques]]
+- [[performance-analyzer-debugging]]

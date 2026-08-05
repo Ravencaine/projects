@@ -1,0 +1,68 @@
+table 'Production ProductModel'
+	lineageTag: e49108bc-1def-4e56-b741-6a3164b09e02
+
+	column ProductModelID
+		dataType: int64
+		formatString: 0
+		lineageTag: b2b674b7-23ae-4c9b-b964-0fdd7af5445b
+		summarizeBy: none
+		sourceColumn: ProductModelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 19dd21d6-312c-462f-8606-682ea451b5dd
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CatalogDescription
+		dataType: string
+		lineageTag: cfebe61a-0697-4a4c-ad2e-8ee2e7f7de1a
+		summarizeBy: none
+		sourceColumn: CatalogDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column Instructions
+		dataType: string
+		lineageTag: ee482dc2-b92b-4f2e-b9dc-9e1d9e6461c7
+		summarizeBy: none
+		sourceColumn: Instructions
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: 80785538-da89-457e-b576-1b9c3956bad3
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8fecd7cc-970a-479e-a33b-4e51e70bfdc4
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: e802bda4-0e7d-4882-a488-4bc32c8485ce
+			defaultHierarchy: LocalDateTable_c17334ff-61d8-4fe9-8170-734d752ba351.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production ProductModel' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "ProductModel"]}[Data]
+				in
+				  #"Navigation 2"
+

@@ -38,4 +38,4 @@ Keep it Light: While it’s tempting to pack in data, remember that tooltips are
 
 Stay Dynamic: Use the fields from the primary visual to inform the tooltip content, creating a responsive experience.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*kcU_kcYLnpMD33l-8DxYLg.jpeg)
+![](99.System/Attachments/1!kcU_kcYLnpMD33l-8DxYLg.jpeg.webp)

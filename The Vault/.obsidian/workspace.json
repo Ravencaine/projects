@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2b4ef03ff1814b7a",
+        "id": "44f0204fba030c81",
         "type": "tabs",
         "children": [
           {
-            "id": "65fb339232bea149",
+            "id": "8561dc91b1b50708",
             "type": "leaf",
-            "pinned": true,
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "pinned": true,
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -78,10 +76,52 @@
             }
           }
         ]
+      },
+      {
+        "id": "727e0d228baa43bd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3975df9a860d0925",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1.4019828977761004,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Local graph"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 332
   },
   "right": {
     "id": "018c275678f6b701",
@@ -90,6 +130,7 @@
       {
         "id": "76db75e84a9b4aeb",
         "type": "tabs",
+        "dimension": 36.502347417840376,
         "children": [
           {
             "id": "905aba765e85d4b1",
@@ -143,6 +184,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "01.Knowledge/DAX Code/Wiki/5-dax-performance-patterns-reference.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -200,14 +242,52 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "6e0e8b1a414bf64f",
+            "type": "leaf",
+            "state": {
+              "type": "smart-env-status-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "smart-env-status-view"
+            }
+          },
+          {
+            "id": "69a1df369461b404",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 7
+      },
+      {
+        "id": "49bc83a74ce76112",
+        "type": "tabs",
+        "dimension": 63.497652582159624,
+        "children": [
+          {
+            "id": "65fb339232bea149",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,46 +297,59 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Toggle Footer Connections": false,
+      "smart-connections:Smart Connections: Open random connection": false
     }
   },
-  "active": "65fb339232bea149",
+  "active": "30a382f52ab3688f",
   "lastOpenFiles": [
-    "01.Knowledge/Power Query/Wiki/replacer_functions.md",
-    "01.Knowledge/Power Query/Wiki/record_functions.md",
-    "01.Knowledge/Power Query/Wiki/name_description.md",
-    "01.Knowledge/Power Query/Wiki/missingfield_usenull.md",
-    "01.Knowledge/Power Query/Wiki/missingfield_ignore.md",
-    "01.Knowledge/Power Query/Wiki/local_fixed_and_utc_variants_of_current_time_functions.md",
-    "01.Knowledge/Power Query/Wiki/list_transformmany.md",
-    "01.Knowledge/Power Query/Wiki/list_transform.md",
-    "01.Knowledge/Power Query/Wiki/list_times.md",
-    "01.Knowledge/Power Query/Wiki/list_sum.md",
-    "01.Knowledge/Power Query/Wiki/duration_minutes.md",
-    "01.Knowledge/Power Query/Wiki/db2_database.md",
-    "01.Knowledge/Power Query/Wiki/custom_date_and_time_format_strings.md",
-    "01.Knowledge/Power Query/Wiki/comparer_functions.md",
-    "01.Knowledge/Power Query/Wiki/combiner_functions.md",
-    "01.Knowledge/Data Modeling/Wiki/variant-complexity-problem-d365-fo.md",
-    "01.Knowledge/Data Modeling/Wiki/union-all-pattern-simple-variant-products.md",
-    "01.Knowledge/Data Modeling/Wiki/surrogate-keys-vs-composite-keys.md",
-    "01.Knowledge/Data Modeling/Wiki/stop-building-slow-power-bi-reports-source.md",
-    "01.Knowledge/Data Modeling/Wiki/simple-vs-variant-products.md",
-    "01.Knowledge/Data Modeling/Wiki/replicated-table-distribution.md",
-    "01.Knowledge/Data Modeling/Wiki/pricing-cte-with-row-number-deduplication.md",
-    "01.Knowledge/Data Modeling/Wiki/power-bi-correct-granularity-and-scd.md",
-    "01.Knowledge/Data Modeling/Wiki/missing-prices-debug-root-cause.md",
-    "01.Knowledge/Data Modeling/Wiki/medallion-architecture.md",
-    "01.Knowledge/Data Modeling/Wiki/materialized-views-vs-regular-views-cetas.md",
-    "The-Vault",
-    "99.System/InboxArchive/2026-07/dax.pdf",
-    "99.System/InboxArchive/2026-07/m-code_extracted.txt",
-    "00.Inbox/m-code_extracted.txt",
-    "99.System/InboxArchive/2026-07/m-code.pdf",
-    "00.Inbox/m-code_functions.json",
-    "00.Inbox/dax_missing_raw.json",
-    "00.Inbox/_Archive/2026-07/dax_extracted.txt",
-    "00.Inbox/_Archive/2026-07/dax.pdf",
-    "00.Inbox/_Archive/2026-07"
+    "99.System/InboxArchive/2026-08/5 Data Cleaning Mistakes That Ruin Your Dashboard.md",
+    "01.Knowledge/Data Modeling/Wiki/Data-Cleaning-Pipeline-Flow.md",
+    "99.System/Attachments/To_keep_your_projects_organized,_visualize_your_data_cleaning_pipeline_like.webp",
+    "99.System/Attachments/Storing_Images_in_Your_Model.png",
+    "99.System/Attachments/Using_Web_Images.png",
+    "99.System/Attachments/import_images_into_your_Power_BI_report.png",
+    "99.System/Attachments/Using_SVG_Images.png",
+    "99.System/Attachments/ALL.png",
+    "99.System/Attachments/RemoveFliter.png",
+    "99.System/Attachments/All_Function_Dax_filter-1.gif",
+    "99.System/Attachments/All_Function_Dax_filter.gif",
+    "99.System/Attachments/All_Function_.png",
+    "00.Inbox/5 Data Cleaning Mistakes That Ruin Your Dashboard (And How to Avoid Them).md",
+    "00.Inbox/Calculation Groups in Power BI.md",
+    "01.Knowledge/Power BI/Wiki/Author-Esther.md",
+    "01.Knowledge/Power BI/Wiki/Data-Driven-UI-Card-Tuples.md",
+    "01.Knowledge/Power BI/Wiki/CSS-Flip-Card-Dash.md",
+    "01.Knowledge/Power BI/Wiki/Two-Layer-Area-Line-Micro-Chart.md",
+    "01.Knowledge/Power BI/Wiki/chart-base-plotly.md",
+    "01.Knowledge/Power BI/Wiki/Component-First-Dashboard-Design.md",
+    "01.Knowledge/Power BI/Wiki/Data-UI-Separation-Principle.md",
+    "01.Knowledge/Power BI/Wiki/Source-Flip-Card-KPI-Dashboard-Dash-Plotly.md",
+    "00.Inbox/CROSSFILTER Function Control Relationships in Power BI DAX.md",
+    "00.Inbox/DAX IF.EAGER Function in Power BI.md",
+    "00.Inbox/Using Field Parameters in Power BI.md",
+    "00.Inbox/Understanding the VALUE DAX function in Power BI.md",
+    "00.Inbox/Virtual tables in Power BI.md",
+    "00.Inbox/Dynamic Row-level Security in Power BI.md",
+    "00.Inbox/Dynamic Single Slicer using DAX logic.md",
+    "00.Inbox/ALL, ALLSELECTED and ALLEXCEPT DAX Filter Function.md",
+    "00.Inbox/MAX and MIN functions in Power BI.md",
+    "00.Inbox/Power Automate to refresh a Power BI report.md",
+    "00.Inbox/KEEPFILTERS DAX Function in Power BI.md",
+    "00.Inbox/RELATED DAX Function in Power BI.md",
+    "00.Inbox/Mastering the LOOKUPVALUE DAX Function in Power BI.md",
+    "00.Inbox/ALL and REMOVEFILTERS in Power BI.md",
+    "99.System/Attachments/Using Visual Calculation Avg 3 Month Sales - variant 2.csv",
+    "99.System/Attachments/Using Visual Calculation Avg 3 Month Sales.pbix",
+    "99.System/Attachments/Using Visual Calculation Avg 3 Month Sales.csv",
+    "99.System/Attachments/More Power to Your Users with Field Parameters.pbix",
+    "99.System/Attachments/Mastering Bubble Charts in Power BI.pbix",
+    "99.System/Attachments/How I Built a Modern Oblique Area Chart in Power BI.pbix",
+    "99.System/Attachments",
+    "99.System/Scripts/scan_for_downloads.py",
+    "99.System/InboxArchive/2026-08",
+    "01.Knowledge/DAX Code/Wiki/5-senior-dax-patterns-source.md.tmp.15068.58a574e28269"
   ]
 }

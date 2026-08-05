@@ -1,0 +1,79 @@
+table 'Production ProductInventory'
+	lineageTag: 12a8df67-158c-46dc-86ee-234567f68ad7
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 229d682e-385d-41e8-abfd-22b5f97c8246
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7812b60c-974a-4a52-9532-cd082512b8de
+		summarizeBy: none
+		sourceColumn: LocationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Shelf
+		dataType: string
+		lineageTag: df0a4184-ca47-4679-8035-a9e0e5aa507a
+		summarizeBy: none
+		sourceColumn: Shelf
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bin
+		dataType: int64
+		formatString: 0
+		lineageTag: 72628395-2902-4829-b407-414618930d4b
+		summarizeBy: sum
+		sourceColumn: Bin
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b395433-25c8-43c8-ac3f-8e9a914c2ea9
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: a9fbc248-5cc0-4b97-810b-4cd0d1d6a8d7
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: eba06a46-a4f6-4a3c-810c-c0e983abcfb9
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 2d162f5d-ec2b-4794-84a4-905f35d7805d
+			defaultHierarchy: LocalDateTable_5a110005-26c4-47e4-b3a2-c0e6069d2925.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production ProductInventory' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "ProductInventory"]}[Data]
+				in
+				  #"Navigation 2"
+

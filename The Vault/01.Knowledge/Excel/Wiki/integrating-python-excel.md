@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Integrating Python into Excel: A New Era of Data Analysis"
 source_url: https://medium.com/@markchen69/integrating-python-into-excel-a-new-era-of-data-analysis-211e25377693
 note_type: source

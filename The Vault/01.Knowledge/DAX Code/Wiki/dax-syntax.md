@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: reference
 tags: [dax, reference, syntax]
@@ -44,7 +45,7 @@ DAX functions follow: `FunctionName(arg1, arg2, ...)` — arguments separated by
 
 ### Whitespace and Case
 
-- DAX is **not case-sensitive** — `SUM`, `Sum`, `sum` are equivalent
+- DAX is **not case-sensitive**: `SUM`, `Sum`, `sum` are equivalent
 - Whitespace is ignored: line breaks and spaces are equivalent to a single space
 - Comments: `--` for single-line
 

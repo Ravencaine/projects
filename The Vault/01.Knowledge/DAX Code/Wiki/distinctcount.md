@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, aggregation]
@@ -35,7 +36,7 @@ CALCULATE(DISTINCTCOUNT('Sales'[ProductKey]), 'Sales'[Amount] > 0)
 
 ## Notes
 
-- Counts **unique values INCLUDING BLANK** — blank is treated as a distinct value.
+- Counts **unique values INCLUDING BLANK**: blank is treated as a distinct value.
 - Use `DISTINCTCOUNTNOBLANK` to exclude blank from the count.
 - The **only** argument is a column — pass a table expression (like `DISTINCTCOUNT(FILTER(...))`) using `DISTINCTCOUNTNOBLANK` or `COUNTROWS(DISTINCT(...))` instead.
 - **Not supported** in DirectQuery mode for calculated columns or row-level security (RLS) rules.

@@ -1,0 +1,34 @@
+Offsets are a superior method for performing complex DAX date calculations versus DAX’s built-in “time intelligence” functions. The primary reason is that the use of offsets works with both standard calendars and custom fiscal calendars. But what are offsets? Simply stated, offsets work like a number line where the present period is 0, future periods are positive integers, and past periods are negative integers. Offsets can be visualized as follows:
+Figure 3.5: Offsets.
+To get a better understanding of offsets, create the following column in your Dates table:
+Year Offset =  VAR __Current = YEAR( TODAY() )  VAR __Result = [Year] - __Current RETURN  __Result  Note that this column returns -1 for dates in last year and 1 for dates in next year. The current year’s dates return 0. Thus, it should be obvious now that to perform a calculation such as a year-to-date total for the current year that the filter would simply be all rows where the Year Offset column is 0 and the Date column is less than today’s date.
+A more general version of DAX offsets is the following:
+Month Offset =  VAR __Today = TODAY()  VAR __Current = YEAR( __Today ) * 100 + MONTH( __Today )  VAR __Table =  SUMMARIZE(  ADDCOLUMNS(  'Dates',  "__Value", YEAR( [Date] ) * 100 + MONTH( [Date] )  ),  [__Value]  )  VAR __Row = YEAR( [Date] ) * 100 + MONTH( [Date] )  VAR __Result =  IF(  __Row   COUNTROWS(  FILTER(  __Table,  [__Value] >= __Row && [__Value]   )  ) * -1,  COUNTROWS(  FILTER(  __Table,  [__Value]  __Current  )  ) + 0  ) RETURN  __Result  In this formula, the __Current variable is calculated such that the year value for today’s date is multiplied by 100 and then added to the numeric month value for today’s date producing a value such as 202503 for March 2025, for example.
+Next a table variable (__Table) is created that adds the same type of column to the table and then summarizes the table by that column. Then, the same calculation is performed for the present row in the __Row variable.
+Finally, the result is calculated simply by checking if the __Row value is less than the __Current value. If so, the __Table variable is filtered appropriately, the number of rows counted, and then the result multiplied by -1. If __Row is larger to or equal than __Current, the __Table variable is filtered appropriately, counted, and 0 is added.
+This formula is a general version as it can also work with year offsets and week number offsets with minor changes. For example, to create a Weeknum Offset column, simply replace the MONTH functions in the formula with WEEKNUM functions using 2 as the second parameter.
+While this is a book on DAX, as alluded to in the previous section, Creating a Calendar, it is not generally considered best practice to build date tables in DAX. Instead, such date tables are generally created in the data sources themselves using SQL, for example, or created in Power Query (M). Melissa de Korte has a robust Power Query (M) date table function. To demonstrate its use, do the following:
+- Navigate to the following link: https://forum.enterprisedna.co/t/extended-date-table-power-query-m-function/6390.
+- Copy the code for the fnDateTable function.
+- In Power BI Desktop, choose Get data from the Home tab of the ribbon in the Data section.
+- Choose Blank query.
+- In Power Query Editor, choose Advanced Editor from the Query section of the Home tab.
+- Use Ctrl+A to select all of the code.
+- Use Ctrl+V to paste the fnDateTable code.
+- Click the Done button.
+- Rename the query fxCalendar.
+- Select the fxCalendar query in the Queries pane.
+- Enter a StartDate of 1/1/2020 ( January 1st, 2020 ), an EndDate of 12/31/2030 ( December 31st, 2030 ), and a FYStartMonthNum of 6:
+Figure 3.6: fxCalendar function.
+- Click the Invoke button.
+- Rename the Invoked Function query in the Queries pane to Calendar.
+- Click the Close & Apply.
+- In the Table view, set the sort by column for Month Name to Month.
+In Table view back in Power BI Desktop, notice that this Calendar table has many more columns than our simple date table, Dates. In fact, there are 60 columns in total with many offset columns such as:
+- CurrYearOffset
+- CurrQuarterOffset
+- CurrMonthOffset
+- CurrWeekOffset
+- CurrDayOffset
+In addition, there are offset columns for ISO (International Organization for Standardization) dates and a Fiscal CurrYearOffset column as well. The ISO columns reference ISO 8601 which is an international standard for date and time-related data.
+Now that you understand offsets, let’s next move on to demonstrating how to use offsets in complex date calculations.

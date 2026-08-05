@@ -1,0 +1,43 @@
+table 'Person CountryRegion'
+	lineageTag: d411a22f-1124-4be0-8815-ffac9bfa8e0b
+
+	column CountryRegionCode
+		dataType: string
+		lineageTag: c0cda74d-3c13-4606-bc05-3162f1f597d7
+		summarizeBy: none
+		sourceColumn: CountryRegionCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 125af5b2-ae29-4f93-a734-cba778c26866
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fa2c61a7-81b7-4b66-9056-83b1937e8fd2
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 4ffd8e0f-fb95-4b4c-8fdc-17f38ef305b8
+			defaultHierarchy: LocalDateTable_7fbb432b-3d5c-4e40-8140-016563164068.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Person CountryRegion' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Person", Item = "CountryRegion"]}[Data]
+				in
+				  #"Navigation 2"
+

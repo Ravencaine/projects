@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Microsoft Fabric: The Missing Piece in My Power BI Journey"
 source_url: https://medium.com/towards-data-engineering/learning-microsoft-fabric-changed-the-way-i-think-about-power-bi-556c08f3d021
 note_type: source
@@ -9,7 +10,7 @@ tags: [power-bi]
 ## A Game Changer for Power BI
 
 
-[https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview](https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview)
+[https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview
 
 When I first started working with Power BI, my focus was simple. Connect to the data source. Build the data model. Write DAX measures. Design visuals. Publish the report. Like many Power BI developers, I was primarily focused on the final output: dashboards that answered business questions.
 
@@ -62,7 +63,7 @@ That simple shift changed how I approached reporting.
 ## Understanding the Layers Before Visualization
 
 
-[https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture](https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture)
+[https://learn.microsoft.com/en-us/fabric/onelake/onelake-medallion-lakehouse-architecture
 
 One of the biggest lessons wasn’t learning what a Lakehouse or Pipeline does. It was understanding why these layers exist. Earlier, I looked at Power BI as the place where data was prepared, modeled, and visualized.
 

@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "m-code.pdf"
 note_type: reference
 tags: ["m-language", "dates", "duration"]
@@ -52,5 +53,5 @@ Duration.TotalHours(#duration(1, 2, 30, 0))   // 26.5
 
 ## Related
 
-- [[duration_support]] — Duration.* functions
+- duration_support — Duration.* functions
 - [[standard_date_and_time_format_strings]] — formatting durations

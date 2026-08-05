@@ -1,0 +1,35 @@
+Simple linear regression is a statistical method used to model and analyze the relationship between two or more variables. One variable is the dependent variable while one or more variables are the independent variables. The goal is to create a linear equation that can predict the value of the dependent variable based on the values of the independent variables.
+Visually, linear regression can be represented as follows:
+Figure 5.3: Linear regression.
+Here, the red line represents a “best fit” line that minimizes the vertical distances between the known data points and the line. Generally, the ordinary least squares method is used to establish the relationship between the variables and calculate the equation of the line.
+Luckily, DAX includes two functions that implement the least squares method, LINEST and LINESTX. Both functions can be used to return a single row table that includes the information about a regression line. To demonstrate, enter the following data into an Enter data query and save as a table called Advertising:
+Advertising Spend ($ thousands)
+Sales ($ thousands)
+Index
+10
+25
+1
+15
+30
+2
+20
+45
+3
+25
+55
+4
+30
+65
+5
+Table 5.3: Advertising and Sales dollars.
+Alternatively, import the Advertising sheet from the Excel spreadsheet, Chapter5_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+Create a table using the following formula:
+Regression =  LINEST(  'Advertising'[Sales ($ thousands)],  'Advertising'[Advertising Spend ($ thousands)]  )  A table is returned with ten columns, the most important of which are Slope, Intercept, and CoefficientOfDetermination. The Slope and Intercept define the equation of the line while CoefficientOfDetermination measures how correlated the two variables are. This value is between 0 and 1 with a value of 1 being perfect correlation and a value of 0 being no correlation.
+Note that with both the LINEST and LINESTX functions that the y value (the dependent variable) is the first parameter while the second parameter is the x value (the independent variable). Also, you do not need to use a static calculated table when using these functions, these functions can also be used to create a table variable (VAR) within a measure such that the table is dynamic.
+The equation of a line is generally expressed as the following formula:
+y = mx + b
+Where m is the slope and b is the intercept. We can therefore construct the following measure:
+Regression Line =  VAR __Slope = MAX( 'Regression'[Slope1] )  VAR __Intercept = MAX( 'Regression'[Intercept] )  VAR __x = MAX( 'Advertising'[Advertising Spend ($ thousands)] )  VAR __Result = __Slope * __x + __Intercept RETURN  __Result  Note that if we were using a dynamic table variable for our LINEST function instead of a static, calculated table, we could use the MAXX function combined with SELECTCOLUMNS to retrieve our slope and intercept values.
+With a bit of formatting magic, we can then visualize the results in a Line chart:
+Figure 5.4: Linear regression line.
+The dots represent the known values while the line is created by the Regression Line measure. This completes our exploration of linear regression for now. Let’s next turn our attention to formatting numbers.

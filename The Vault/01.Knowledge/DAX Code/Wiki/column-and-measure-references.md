@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: concept
 tags: [dax, fundamentals, column-reference, measure-reference, syntax]
@@ -38,7 +39,7 @@ Measures are model-level objects. They must be referenced by name (or fully qual
 
 ### Scope of Measures
 
-A measure is evaluated in the current **filter context** — it has no row context unless called from within one (e.g., inside CALCULATE in a calculated column, where context transition occurs).
+A measure is evaluated in the current **filter context**: it has no row context unless called from within one (e.g., inside CALCULATE in a calculated column, where context transition occurs).
 
 ### Circular References
 

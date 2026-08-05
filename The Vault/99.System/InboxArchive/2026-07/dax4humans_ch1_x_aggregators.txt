@@ -1,0 +1,13 @@
+In the section, Creating a DAX Measure, we briefly discussed the concept of DAX aggregation functions such as AVERAGE, SUM, COUNT, MIN, MAX, etc. Each of these DAX aggregations functions has an equivalent “X” version, AVERAGEX, SUMX, COUNTX, MINX, MAXX, etc.
+The difference between these functions is that the basic aggregation functions only accept a column reference as a single parameter. The “X” versions, however, require two parameters. The first parameter can be a table reference or DAX expression that returns a table. The second parameter is any DAX expression resulting in a scalar (single value).
+Therefore, the following two DAX formulas are equivalent to one another:
+SUM( 'Table'[Price] ) SUMX( 'Table', 'Table'[Price] )  In fact, the DAX SUM function is actually just sugar syntax for the DAX SUMX function. And, in general, the X aggregation functions are much more flexible than their non-X counterparts. For example, if we wish to create a measure that returns the minimum Total Cost for items that are not Pickle, we can create the following measure:
+Min Total Cost Not Pickle =  MINX(  FILTER( 'Table', 'Table'[Item] <> "Pickle" ),  [Total Cost]  )  Note, to format your DAX formula as shown, use Shift+Enter keys to move to a new line and use the Tab key to indent.
+To see this measure in action, follow these steps:
+- These instructions continue from the previous section, Filtering. If you have not completed that section, simply download and open Filtering.pbix from the Chapter 1 folder of the following GitHub repository:
+https://github.com/gdeckler/DAX-For-Humans/tree/main/book
+- Click on the Report view.
+- Click on the Card visual.
+- Replace the Average Total Cost measure in the Fields field well with the Min Total Cost Not Pickle measure by dragging and dropping the measure from the Data fly-out pane into the Fields field well.
+Note that the Card visual displays 8.97, which is the minimum Total Cost for rows that are not Pickle in the data.
+We have now learned a second critical component regarding thinking in DAX, column selection. The X aggregation functions allow us to filter the rows of a table and then select a particular column over which to aggregate values. We have one last DAX concept to introduce before presenting a DAX pattern that can solve most problems and that concept is variables.

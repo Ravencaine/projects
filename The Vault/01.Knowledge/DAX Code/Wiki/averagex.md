@@ -1,20 +1,60 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+created: 2026-07-27
+updated: 2026-08-02
+source: "Iterators in DAX: SUMX, AVERAGEX, RANKX"
 note_type: function
-tags: [dax, function, aggregation]
+tags: [dax, averagex, iterator, function]
 ---
 
-# AVERAGEX
+# AVERAGEX Function
 
-Applies to: Calculated column Calculated table Measure Visual calculation Calculates the average (arithmetic mean) of a set of expressions evaluated over a table.
+Iterates over a table row-by-row, evaluates an expression per row, then returns the average of those values. Used for weighted averages where simple AVERAGE gives the wrong result.
 
-## Syntax
+## Signature
 
 ```dax
-AVERAGEX(<table>,<expression>)
+AVERAGEX ( <Table>, <Expression> )
 ```
 
-## Remarks
+## Parameters
 
-The AVERAGEX function enables you to evaluate expressions for each row of a table, and then take the resulting set of values and calculate its arithmetic mean. Therefore, the function takes a table as its first argument, and an expression as the second argument. In all other respects, AVERAGEX follows the same rules as AVERAGE. You cannot include non-numeric or null cells. Both the table and expression arguments are required.
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `<Table>` | table | Table or table expression to iterate |
+| `<Expression>` | scalar | Expression evaluated per row |
+
+## Returns
+
+The arithmetic mean of the per-row expression results.
+
+## Examples
+
+```dax
+-- Weighted average price: Revenue / Quantity per row, then average
+Weighted Avg Price =
+AVERAGEX (
+    Sales,
+    Sales[Revenue] / Sales[Quantity]
+)
+
+-- Average days to ship per order
+Avg Days to Ship =
+AVERAGEX (
+    Sales,
+    Sales[DaysToShip]
+)
+-- Note: AVERAGE(Sales[DaysToShip]) is faster for simple column average
+```
+
+## Notes
+
+- AVERAGEX ignores BLANK rows but includes 0 values in the average
+- **Common anti-pattern:** AVERAGEX(Sales, Sales[DaysToShip]) — replace with AVERAGE(Sales[DaysToShip]) for 34x faster
+- Use AVERAGEX when the per-row expression computes a derived value (ratio, compound calculation)
+
+## Related
+
+- [[sumx]]
+- [[average]]
+- [[rankx]]
+- [[iterator-vs-aggregator-comparison]]

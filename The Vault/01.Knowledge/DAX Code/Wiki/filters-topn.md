@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: function
 tags: [dax, function, table]
@@ -52,7 +53,7 @@ TOPN(
 
 ## Notes
 
-- FILTERS returns a **column of filter values** — typically used with COUNTROWS or in CALCULATE
+- FILTERS returns a **column of filter values**: typically used with COUNTROWS or in CALCULATE
 - FILTERS: not supported in DirectQuery mode for calculated columns or RLS rules
 - TOPN can have multiple ORDER BY columns for tie-breaking
 - TOPN is often used inside CALCULATETABLE to create a filtered set

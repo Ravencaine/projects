@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: concept
 tags: [dax, visual-calculations, preview]
@@ -51,6 +52,6 @@ Visual calculations use standard DAX syntax but can reference:
 
 ## Related
 
-- [[treatas]]
+- [[cross-fact-treatas-virtual-relationships]]
 - [[calculate]]
 - [[dax-overview]]

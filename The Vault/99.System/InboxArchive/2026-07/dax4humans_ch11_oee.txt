@@ -1,0 +1,22 @@
+Overall equipment effectiveness or OEE is a measure of how efficiently resources are being utilized compared with their maximum potential. Thus, OEE is important for maximizing the effectiveness and efficiency of resources such as manufacturing equipment.
+OEE is actually a combination of three other KPIs, availability, performance, and quality. In a manufacturing scenario, availability is a measure of uptime while performance measures speed/capacity, and finally quality measures good parts produced versus bad parts. Each of these individual metrics, availability, performance, and quality are measured as percentages and OEE simply multiplies these percentages together.
+To evaluate calculating OEE, start by completing the section Mean Time Between Failure if you have not already done in order to import the MTBF table. The MTBF table lists when machines were unavailable due to repairs or maintenance.
+Next, create the following table:
+Machines = DISTINCT( 'MTBF'[MachineName] )  This table simply lists the distinct machine names.
+Now, import the Production sheet of the Excel spreadsheet, Chapter11_Data.xlsx which can be found in the GitHub repository for this book: https://github.com/gdeckler/DAX-For-Humans/tree/main/book.
+The Production table has data as follows:
+Figure 11.12: Production data
+This table is at the date level of granularity. Here the Capacity column denotes the total daily capacity of the machine. The Actual column indicates how many “widgets” were produced while the Good column indicates how many of those widgets passed quality standards.
+It may be interesting to note that the Production table was originally created using this DAX formula:
+Production =  VAR __Machines =  { ( "Machine1", 1000 ),  ( "Machine2", 800 ),  ( "Machine3", 1200 ),  ( "Machine4", 500 ),  ( "Machine5", 1000 ),  ( "Machine6", 800 ),  ( "Machine7", 750 ),  ( "Machine8", 1000 ),  ( "Machine9", 120 ),  ( "Machine10", 500 ),  ( "Machine11", 750 ) }  VAR __Calendar = CALENDAR( DATE( 2022,1,1 ), DATE( 2025,12,31 ) )  VAR __Table =  ADDCOLUMNS(  ADDCOLUMNS(  SELECTCOLUMNS(  GENERATE( __Machines, __Calendar ),  "MachineName", [Value1],  "Capacity", [Value2],  "Date", [Date]  ),  "Actual", RANDBETWEEN( [Capacity] * .8, [Capacity] )  ),  "Good", RANDBETWEEN( [Actual] * .9, [Actual] )  ) RETURN  __Table  Create relationships between the Machines table and the MTBF and Production tables using the common MachineName columns. Your semantic model should look like the following:
+Figure 11.13: OEE semantic model
+We can now construct our Availability measure as follows:
+Availability =  VAR __Start = DATE( 2022, 1, 1 )  VAR __End = DATE( 2025, 12, 31 )  VAR __OperatingHours = DATEDIFF( __Start, __End, HOUR )  VAR __Machines = COUNTROWS( 'Machines' )  VAR __Table =  ADDCOLUMNS(  'MTBF',  "__Hours", DATEDIFF( [RepairStarted], [RepairCompleted], HOUR )  )  VAR __TotalDowntime = SUMX( __Table, [__Hours] )  VAR __TotalOperatingHours = __OperatingHours * __Machines  VAR __Result =  DIVIDE( __TotalOperatingHours - __TotalDowntime, __TotalOperatingHours ) RETURN  __Result  This measure is extremely similar to the MTTR measure from the section Mean Time Between Failure. Here we calculate the total downtime by not filtering preventative maintenance rows and summing the __Hours of repair time. We also make the same simplifying assumptions regarding operating hours as we did with the Simple MTBF (Hours) measure in the section Mean Time Between Failure.
+To calculate performance, we use the following measure:
+Performance =  DIVIDE(  SUMX('Production', [Actual] ),  SUMX('Production', [Capacity] ),  0  )  Here we simply divide the Actual number of widgets produced by the total Capacity of the machines.
+The Quality measure is similar:
+Quality =  DIVIDE(  SUMX('Production', [Good] ),  SUMX('Production', [Actual] ),  0  )  Here, we simply divide the number of Good widgets by the number of Actual widgets produced.
+Finally, the OEE measure simply multiplies these three measures together:
+OEE = [Availability] * [Performance] * [Quality]  We can visualize all of these measures as follows:
+Figure 11.14: OEE visualizations
+This concludes our exploration of OEE. We now move on to Days of Supply.

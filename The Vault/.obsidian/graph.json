@@ -1,10 +1,10 @@
 {
   "collapse-filter": false,
   "search": "path:01.Knowledge  ",
-  "showTags": true,
+  "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
-  "showOrphans": false,
+  "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
     {
@@ -95,6 +95,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.19450022690615862,
+  "scale": 0.01826926608416915,
   "close": true
 }

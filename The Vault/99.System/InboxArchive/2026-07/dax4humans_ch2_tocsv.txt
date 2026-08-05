@@ -1,0 +1,21 @@
+Troubleshooting and debugging are common topics when discussing any language and DAX is no different. There are times, especially with more complex calculations, that the results of a DAX formula may not make sense and you will need to determine the cause of the incorrect results. This is where the No CALCULATE method shines as opposed to using the CALCULATE function.
+Create the following measure and place it into a Card visual:
+Sum Total Cost Grapefruit and also Pickle =  VAR __Item1 = "Grapefruit"  VAR __Item2 = "Pickle"  VAR __Table = FILTER( 'Table', 'Table'[Item] = __Item1 )  VAR __Table1 = FILTER( __Table, 'Table'[Item] = __Item2 )  VAR __Result = SUMX( __Table1, [Total Cost] ) RETURN  __Result  For this measure, if we want to understand the BLANK value being displayed in the Card visual, we can troubleshoot the measure by modifying the RETURN statement. For example, instead of returning __Result, we could instead return the following:
+COUNTROWS( __Table )  The COUNTROWS function simply counts the number of rows in a table. In this case the result is 1. Subsequently, we could again modify the RETURN statement to the following:
+COUNTROWS( __Table1 )  Now the Card visual displays (Blank). Thus, we know that there are no rows present in the __Table1 variable.
+We can take this troubleshooting a step further by actually visualizing the underlying data within our table variables. This can be done using the TOCSV function. This time, modify the RETURN statement to the following:
+TOCSV( __Table )  Now the Card visual displays the following:
+Figure 2.1: Card visual produced by using TOCSV.
+Here we can clearly see that the __Table variable contains a single row for the Item “Grapefruit”.
+Note that you may have to reduce the font size for the Callout value and resize the Card visual. To adjust the Callout value, select the Card visual and then follow the steps in Figure 2.2:
+Figure 2.2: Formatting the Callout value.
+The TOCSV function takes a table and returns it as text in Comma Separated Value (CSV) format. The TOCSV function takes up to four parameters:
+- Table – (Required) A table, table variable (VAR) or table expression
+- MaxRows – (Optional whole number) The maximum number of rows to return. The default is 10 rows.
+- Delimiter – (Optional text string) The column delimiter. The default is a comma ( “,” ).
+- IncludeHeaders – (Optional logical true/false) Whether column headers are included. The default is true or TRUE().
+Patron Recommendation
+Henrik Vestergaard suggests using a Table visual instead of a Card visual when troubleshooting as the Table visual left-aligns text. In addition, using the Consolas font can be advantageous since that font is monospaced.
+Now consider a similar CALCULATE formula:
+Sum Total Cost Grapefruit and also Pickle C =  CALCULATE(  CALCULATE(  SUM( 'Table'[Total Cost] ),  'Table'[Item] = "Grapefruit"  ),  'Table'[Item] = "Pickle"  )  Because the formula is written in a single step, there is no native way to analyze the individual components of the formula. Attempting to modify the formula to be two separate CALCULATE statements would fundamentally alter the calculation and return different results. Instead, third party tools are required to analyze the individual aspects of the formula. This essentially makes the CALCULATE function a “black box” where you simply have to “know” how it works. But that is far easier said than done as you will see in Chapter 16, AI, Debugging, and CALCULATE.
+Now that you understand basic DAX debugging, we move on to exploring additional core DAX concepts, starting with looking up values.

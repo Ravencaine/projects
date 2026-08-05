@@ -1,20 +1,58 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+
+created: 2026-07-28
+updated: 2026-08-02
+source: "[[beginning-big-data-with-power-bi-and-excel-2013-dunlop|Beginning Big Data with Power BI and Excel 2013]]"
+tags: ["dax", "function", "table", "select", "column"]
 note_type: function
-tags: [dax, function, table]
+
 ---
 
-# SELECTCOLUMNS
+# SELECTCOLUMNS — Column Selection
 
-Applies to: Calculated column Calculated table Measure Visual Returns a table with selected columns from the table and new columns specified by the
+Adds or selects columns from a table expression.
 
-## Syntax
+## Signature
 
 ```dax
-SELECTCOLUMNS(<Table>, [<Name>], <Expression>, [<Name>], …)
+SELECTCOLUMNS( <Table>, [<Name1>], <Expression1>, [<Name2>], <Expression2>, ... )
 ```
 
-## Remarks
+## Parameters
 
-SELECTCOLUMNS has the same signature as ADDCOLUMNS, and has the same behavior except that instead of starting with the Table specified, SELECTCOLUMNS starts with an empty table before adding columns.
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| Table | Table | Source table. |
+| Name | Text | Output column name. |
+| Expression | Any | Column expression. |
+
+## Examples
+
+```dax
+-- Rename and project columns
+Compact :=
+SELECTCOLUMNS(
+    'Sales',
+    "SaleID", 'Sales'[ID],
+    "Amount", 'Sales'[Amount]
+)
+
+-- Create a lookup table
+Lookup :=
+SELECTCOLUMNS(
+    'Product',
+    "Key", 'Product'[ProductID],
+    "Label", 'Product'[Name]
+)
+```
+
+## Notes
+
+- Adds columns rather than removing them
+- Useful for renaming columns and creating projection tables
+- Combined with FILTER() for context-aware column selection
+
+## Related
+
+- [[GENERATESERIES]]
+- [[ADDCOLUMNS]]

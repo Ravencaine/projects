@@ -1,5 +1,6 @@
 ---
 created: 2026-07-26
+updated: 2026-08-02
 source: dax.pdf
 note_type: atomic
 tags: [dax, fundamentals, context]
@@ -7,7 +8,7 @@ tags: [dax, fundamentals, context]
 
 # DAX Context
 
-DAX formulas evaluate within a **context** — the set of conditions that determines which rows are visible and what values are used in calculations.
+DAX formulas evaluate within a **context**: the set of conditions that determines which rows are visible and what values are used in calculations.
 
 ## Definition
 
@@ -18,7 +19,7 @@ Context is the set of data that is active for evaluation. Without context, a DAX
 ### Row Context
 
 Row context iterates over rows. It exists in:
-- **Calculated columns** — each row is evaluated with its own context
+- **Calculated columns**: each row is evaluated with its own context
 - **Iterator functions** (SUMX, MAXX, etc.) — explicitly loop over rows
 
 Row context automatically includes the current row's values. `RELATED()` can follow relationships to fetch related rows.

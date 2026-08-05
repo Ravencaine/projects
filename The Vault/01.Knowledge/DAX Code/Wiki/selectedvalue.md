@@ -1,11 +1,15 @@
 ---
-created: 2026-07-26
-source: dax.pdf
+created: 2026-07-29
+updated: 2026-08-02
+source: "[[Author-Isabelle-Bittar|Isabelle Bittar]]"
 note_type: function
-tags: [dax, function, filter]
+tags: [filter-context, slicer, selected-value]
+related: [SWITCH, VALUES, FILTER]
 ---
 
 # SELECTEDVALUE
+
+Returns the single value selected by a slicer or filter context, or a specified alternate result when multiple values are selected or no value is selected.
 
 ## Signature
 
@@ -15,33 +19,61 @@ SELECTEDVALUE(<column>[, <alternateResult>])
 
 ## Parameters
 
-| Parameter | Description |
-|-----------|-------------|
-| `column` | A column reference |
-| `alternateResult` | *(optional)* Value to return when there is no selection or multiple selections |
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `column` | Column reference | The column to read the selected value from |
+| `alternateResult` | Scalar (optional) | Value to return when 0 or >1 values are selected |
 
 ## Returns
 
-The **single selected value** if exactly one value is in the current filter context; otherwise `alternateResult` or `BLANK()`.
+A single scalar value from `column` if exactly one value is selected; otherwise returns `alternateResult` (or `BLANK` if omitted).
 
 ## Examples
 
+**Read slicer selection:**
 ```dax
--- Return the selected year, defaulting to 2020
-SELECTEDVALUE('Date'[Year], 2020)
+Selected Stage Order =
+VAR _SelectedStage = SELECTEDVALUE(JobReqs[Current Stage])
+RETURN _SelectedStage
+```
 
--- Apply a 10% markup to sales of red products only
-IF(SELECTEDVALUE(Product[Color]) = "Red", [Sales] * 1.1, [Sales])
+**Read slicer with alternate result:**
+```dax
+Selected Period = SELECTEDVALUE(Period[Period], "1M")
+```
+
+**Use with SWITCH to branch on user selection:**
+```dax
+Minimum Date =
+VAR _MaxDate = [Maximum Date]
+VAR _SelectedPeriod = SELECTEDVALUE(Period[Period])
+VAR _MinimumDate =
+    SWITCH(
+        TRUE(),
+        _SelectedPeriod = "1W", _MaxDate - 7,
+        _SelectedPeriod = "1M", EDATE(_MaxDate, -1),
+        _SelectedPeriod = "6M", EDATE(_MaxDate, -6),
+        _SelectedPeriod = "1Y", EDATE(_MaxDate, -12)
+    )
+RETURN _MinimumDate
+```
+
+**Build a label from two columns:**
+```dax
+Description =
+SELECTEDVALUE('Key'[Full Name]) & " - " & SELECTEDVALUE('Key'[Description])
 ```
 
 ## Notes
 
-- Returns `BLANK()` when zero or multiple values are selected.
-- Preferred over the `HASONEVALUE` + `VALUES` pattern.
-- `alternateResult` is returned when there are multiple **or** no selections.
+- Use `SELECTEDVALUE` instead of `VALUES(<column>)` when you expect exactly one value — it cleanly handles the multi-value case without returning a table.
+- Often paired with `SWITCH(TRUE(), ...)` to branch logic based on the user's slicer choice.
+- In Isabelle Bittar's articles, `SELECTEDVALUE` appears in nearly every interactive technique — it's the primary way to read user input from slicers.
+- If the column has no filter (nothing selected), returns `alternateResult` if provided, otherwise `BLANK`.
+- When multiple values are selected (e.g., multi-select slicer), returns `alternateResult` — use this to guard against ambiguous context.
 
 ## Related
 
-- [[hasonevalue]]
-- [[values]]
-- [[use-selectedvalue-instead-of-values]]
+- [[SWITCH]] — branch logic on the returned value
+- [[VALUES]] — returns a table of selected values
+- [[FILTER]] — explicit row filtering

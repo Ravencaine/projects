@@ -1,0 +1,74 @@
+table 'Purchasing ShipMethod'
+	lineageTag: 2c032e1b-70ff-42a5-bef5-88d0b9311050
+
+	column ShipMethodID
+		dataType: int64
+		formatString: 0
+		lineageTag: aa0f4f15-5f11-4daf-9c98-f21f3e581d91
+		summarizeBy: none
+		sourceColumn: ShipMethodID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 4181b10b-a52a-4b31-a487-4399af91cb32
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipBase
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 0836d4a0-1e41-4214-bf21-4217250f3c8f
+		summarizeBy: sum
+		sourceColumn: ShipBase
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column ShipRate
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: e95e0be1-324d-48a1-b6d8-7b1ff393ea28
+		summarizeBy: sum
+		sourceColumn: ShipRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column rowguid
+		dataType: string
+		lineageTag: 63acd948-945b-4c4e-b754-163ad31c0db7
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9785b225-95b1-49cf-9a16-c7dfc4693710
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 72329da2-d217-4537-875d-b0191ff326d3
+			defaultHierarchy: LocalDateTable_0b4341be-a16e-4ae4-ba3c-8301e86304ce.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Purchasing ShipMethod' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Purchasing", Item = "ShipMethod"]}[Data]
+				in
+				  #"Navigation 2"
+

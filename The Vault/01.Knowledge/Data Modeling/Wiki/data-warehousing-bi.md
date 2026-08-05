@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Data Warehousing for BI"
 source_url: https://medium.com/@hanxuyang0826/data-warehousing-for-bi-09aea2e53c34
 note_type: source

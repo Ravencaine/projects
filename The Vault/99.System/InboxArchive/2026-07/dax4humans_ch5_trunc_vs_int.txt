@@ -1,0 +1,32 @@
+There are a surprising number of functions for rounding in DAX. These include:
+- INT
+- TRUNC
+- ROUND
+- ROUNDDOWN
+- ROUNDUP
+- MROUND
+- CEILING
+- ISO.CEILING
+- FLOOR
+- EVEN
+- ODD
+- CURRENCY
+Let’s explore the subtleties between these various functions.
+We covered the basics of INT and TRUNC in the last section. These two functions work identically for positive numbers, returning just the integer portion of a number. However, for negative numbers, INT effectively rounds the number down to the next whole integer while TRUNC truncates the number to just the integer portion of the number.
+To demonstrate this behavior, create the following table:
+Decimals = GENERATESERIES( -15, 15.01, .01 )  Notice how, perhaps oddly, 15.01 is not included in the table. This is a “quirk” of GENERATESERIES when using a decimal value as an increment due to imprecision. Now create the following two columns:
+Int = INT( [Value] ) Trunc = TRUNC( [Value] )  Notice that for 0 and all positive numbers that both INT and TRUNC return the same value. However, for negative numbers TRUNC always returns one more than INT unless the number is exactly an integer such as -2 in our table.
+Next, let’s explore the next three functions, ROUND, ROUNDDOWN, and ROUNDUP by creating the following three columns:
+Round = ROUND( [Value], 1 ) Round Down = ROUNDDOWN( [Value], 1 ) Round Up = ROUNDUP( [Value], 1 )  For each of these functions, the first parameter is the number to round, and the second parameter is the number of decimals to round the number to. You may be surprised at how these functions handle rounding negative numbers. For example, ROUNDUP rounds the negative numbers to be more negative and ROUNDDOWN rounds the negative numbers to be less negative which may strike you as odd. However, the proper way to consider the rounding performed is that ROUNDUP rounds numbers away from zero and ROUNDDOWN rounds numbers to be closer to zero.
+The ROUND function acts the same way as well. The difference between ROUND and ROUNDUP is that the ROUND function rounds numbers away from zero based on whether the number to the right of the specified number of digits (second parameter) is 5 or more then the number is rounded up (away from zero) else the number is rounded down (towards zero). Conversely, ROUNDUP and ROUNDDOWN always round up or down respectively.
+In all cases if 0 is specified for the number of digits, then the number is rounded to the appropriate integer. It is also possible to specify a negative number for the number of digits. For example, create the following column:
+Round Negative = ROUND( [Value], -1 )  Specifying a negative number rounds the number to the left of the decimal point instead of the right of the decimal point.
+Let’s next look at MROUND. Create the following column:
+MRound = IF( [Value]   MROUND returns an error if the signs of the two parameters are not the same. The first parameter is the number to round, and the second parameter is a multiple. MROUND rounds a number to the nearest multiple of the specified number (second parameter). This is done by rounding away from zero if the remainder after dividing the first parameter by the second parameter is equal to or greater than half the second parameter. You can also specify a decimal for MROUND’s second parameter.
+Let’s now look at the CEILING, ISO.CEILING, and FLOOR functions by creating the following three columns:
+Ceiling = IF( [Value]  ISO Ceiling = ISO.CEILING( [Value], -.05 ) Floor = IF( [Value]   If necessary, increase the number of decimals displayed to two for these columns. All of these functions are similar to MROUND in that they round the specified number (first parameter) up to the nearest specified multiple (second parameter). However, unlike MROUND, the two numbers do not need to have the same sign. Both CEILING and ISO.CEILING work with both negative and positive numbers when the multiple is positive. CEILING generates an error if the multiple is negative and the value being rounded is positive while ISO.CEILING does not exhibit this behavior.
+Both CEILING and ISO.CEILING act exactly the same when the multiple is zero or a positive number. In addition, both functions return the same number when the value being rounded is a positive number. The only difference between the two functions shows up when the value being rounded and the specified multiple are both negative. In this case, CEILING rounds numbers away from zero while ISO.CEILING rounds numbers towards zero.
+The FLOOR function can be thought of as the opposite of the CEILING function in that it rounds numbers down instead of up. Otherwise, it has the same properties as the CEILING function.
+Let’s explore the last three functions, EVEN, ODD, and CURRENCY by creating the following three columns:
+Even = EVEN( [Value] ) Odd = ODD( [Value] ) Currency = CURRENCY( [Value] )  EVEN and ODD round numbers away from zero to the nearest even or odd integer respectively. CURRENCY returns the value in currency format but also performs rounding up to the fifth significant decimal. In other words, this is akin to using the ROUND function with a second parameter of 4.
+This completes our coverage of the extensive rounding capabilities in DAX. Let’s next take a closer look at the MOD function.

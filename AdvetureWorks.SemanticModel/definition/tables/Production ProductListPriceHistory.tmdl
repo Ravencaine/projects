@@ -1,0 +1,75 @@
+table 'Production ProductListPriceHistory'
+	lineageTag: 0a7f76ac-ad34-4812-a810-2501ff87479e
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 673be550-452f-49ab-ba6f-923406e5314c
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 42c67fb0-2cce-4ded-8431-862338fe8e97
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variation
+			isDefault
+			relationship: 276c7bcd-dd21-4de8-8387-31e499775628
+			defaultHierarchy: LocalDateTable_e30bd9c2-842c-4e45-b110-69a5fadd4d8b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dc664b58-9668-4431-a01f-edd9ef8e9a06
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variation
+			isDefault
+			relationship: d6dc8eb8-aca8-4996-8434-413a9ce2de3a
+			defaultHierarchy: LocalDateTable_de048983-a15c-427e-a44a-47c9ae3e5f86.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ListPrice
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 3135ad7a-7234-4282-b144-7e158eed1363
+		summarizeBy: sum
+		sourceColumn: ListPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 054ba34f-f0a5-4dcb-9557-39c9e2763265
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 7859f43a-a3c6-4fa2-8179-8e6fab04ae20
+			defaultHierarchy: LocalDateTable_e7945e14-e530-48f9-bd4b-4474551f59c6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Production ProductListPriceHistory' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Production", Item = "ProductListPriceHistory"]}[Data]
+				in
+				  #"Navigation 2"
+

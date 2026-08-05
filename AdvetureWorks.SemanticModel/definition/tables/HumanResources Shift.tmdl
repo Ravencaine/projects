@@ -1,0 +1,66 @@
+table 'HumanResources Shift'
+	lineageTag: f3a24056-1aaf-4dae-9356-2c2ffbcceba4
+
+	column ShiftID
+		dataType: int64
+		formatString: 0
+		lineageTag: c6934df8-90c4-4e8e-9ad0-4330d22b95cf
+		summarizeBy: none
+		sourceColumn: ShiftID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: dec4f993-b7fc-4244-b013-4ed3401d055d
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartTime
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 940ac997-fca9-4bbe-8bb5-70bd7f5b9393
+		summarizeBy: none
+		sourceColumn: StartTime
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column EndTime
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 84411108-34eb-4fef-afaf-c693e251544f
+		summarizeBy: none
+		sourceColumn: EndTime
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 66671088-a859-4530-a517-af883492d2dc
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 1abc6f31-0d76-402d-874b-8e36ecc88051
+			defaultHierarchy: LocalDateTable_6609ca07-5b18-4af8-b536-044f19d4b09b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'HumanResources Shift' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "HumanResources", Item = "Shift"]}[Data]
+				in
+				  #"Navigation 2"
+

@@ -1,6 +1,7 @@
 ---
 created: 2026-07-27
-source: "ALL, ALLEXCEPT, ALLSELECTED, and REMOVEFILTERS in Power BI: What’s the Difference?"
+updated: 2026-08-02
+source: "ALL, ALLEXCEPT, ALLSELECTED, and REMOVEFILTERS in Power BI What's the Difference.md"
 source_url: https://medium.com/write-your-world/all-allexcept-allselected-and-removefilters-in-power-bi-whats-the-difference-9a088a60a95e
 note_type: source
 tags: [dax-code]

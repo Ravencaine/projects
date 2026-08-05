@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "🏛️ Data Warehouse Architectures: Inmon vs. Kimball vs. Data Vault 2.0"
 source_url: https://medium.com/@ahmedabdulwahid.data/%EF%B8%8F-data-warehouse-architectures-inmon-vs-kimball-vs-data-vault-2-0-4b199bae264f
 note_type: source
@@ -62,7 +63,7 @@ Instead of normalizing data, Kimball splits the data world into two simple, dist
 
 🔹 **Dimension Tables (The Context):** These tables surround the Fact table, containing rich, descriptive textual attributes (the *Who, What, Where, and When*). `Dim_Customer` contains `first_name`, `email`, `income_bracket`, `city`, etc.
 
-- **Conformed Dimensions (The Glue):** To prevent isolated silos when you build multiple Star Schemas, Kimball relies on **Conformed Dimensions** — dimension tables that are standardized and shared across different Fact tables. ***Example****:* `Dim_Customer` is joined to both `Fact_Sales` and `Fact_Support_Tickets`.
+- **Conformed Dimensions (The Glue):** To prevent isolated silos when you build multiple Star Schemas, Kimball relies on **Conformed Dimensions**: dimension tables that are standardized and shared across different Fact tables. ***Example****:* `Dim_Customer` is joined to both `Fact_Sales` and `Fact_Support_Tickets`.
 - **Slowly Changing Dimensions (SCDs):** To track historical context changes (e.g., a customer moving from New York to Chicago), Kimball uses specific techniques like **SCD Type 2**, which adds a new row with `valid_from` and `valid_to` timestamps rather than overwriting existing data.
 
 ## 🚀 Why You’ll Love It:

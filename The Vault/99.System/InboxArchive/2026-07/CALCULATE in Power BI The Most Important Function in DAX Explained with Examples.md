@@ -44,7 +44,7 @@ North Sales = CALCULATE( SUM(Sales[Revenue]), Sales[Region] = “North” )
 ```
 - Without CALCULATE → SUM(Sales\[Revenue\]) depends on slicers.
 - With CALCULATE → always calculates sales for Region = North.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*0fCx947XUfFmweRhf7KICg.png)
+![](99.System/Attachments/1!0fCx947XUfFmweRhf7KICg.png.webp)
 
 CALCULATE overrides the current context with Region=North.
 
@@ -60,7 +60,7 @@ CALCULATE(
 ```
 - CALCULATE applies *both* filters.
 - Final context = Region=North AND Year=2024.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*NMAP5XNZDA-7GRGjVhdQdw.png)
+![](99.System/Attachments/1!NMAP5XNZDA-7GRGjVhdQdw.png.webp)
 
 Using CALCULATE with ALL removes filters, letting you calculate values across all rows regardless of slicers
 
@@ -73,7 +73,7 @@ All Region Sales = CALCULATE( SUM(Sales[Revenue]), ALL(Sales[Region]) )
 ```
 - Ignores Region filter, even if a slicer is applied.
 - Useful for percent-of-total calculations.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_xdl0-hbh2QV397UBZ5inw.png)
+![](99.System/Attachments/1!_xdl0-hbh2QV397UBZ5inw.png.webp)
 
 Using CALCULATE with ALL removes filters, letting you calculate values across all rows regardless of slicers
 
@@ -86,7 +86,7 @@ Profit by Row = SUMX( Sales, CALCULATE( Sales[Revenue] — Sales[Cost] ) )
 ```
 - SUMX creates row context.
 - CALCULATE turns it into filter context, enabling the expression inside.
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*oum1pasUVBb1qApQnZS8Kw.png)
+![](99.System/Attachments/1!oum1pasUVBb1qApQnZS8Kw.png.webp)
 
 When CALCULATE is used in row context, it triggers context transition — converting row context into filter context
 

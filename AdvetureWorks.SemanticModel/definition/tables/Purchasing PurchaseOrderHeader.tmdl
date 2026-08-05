@@ -1,0 +1,153 @@
+table 'Purchasing PurchaseOrderHeader'
+	lineageTag: ff2d1680-8f56-4c34-813f-7ce68e598d1b
+
+	column PurchaseOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 159fb2a5-30ef-4a4f-8380-b82aaa5265ca
+		summarizeBy: none
+		sourceColumn: PurchaseOrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisionNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: f5b57966-559e-4108-975c-e885439f71ed
+		summarizeBy: sum
+		sourceColumn: RevisionNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: int64
+		formatString: 0
+		lineageTag: cee0e498-b8da-4bd5-b2f6-8eb7b647ca78
+		summarizeBy: sum
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e98abbf-8d21-45d3-9279-5ab2eb729fe3
+		summarizeBy: none
+		sourceColumn: EmployeeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VendorID
+		dataType: int64
+		formatString: 0
+		lineageTag: 39e7f9ae-7db7-485d-931b-2646e3b2fa2d
+		summarizeBy: none
+		sourceColumn: VendorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipMethodID
+		dataType: int64
+		formatString: 0
+		lineageTag: 80b2df67-1f78-4a60-8c25-6100b8df62cd
+		summarizeBy: none
+		sourceColumn: ShipMethodID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3c7e0faf-8f85-4ed2-9942-05cf45c589d9
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		variation Variation
+			isDefault
+			relationship: f4cda517-a9e8-470c-9c31-c65dd4b17136
+			defaultHierarchy: LocalDateTable_57e54126-bc94-47c3-9af9-0f333043a128.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e3eeab0a-6915-464f-970a-798358517502
+		summarizeBy: none
+		sourceColumn: ShipDate
+
+		variation Variation
+			isDefault
+			relationship: c1783032-8de8-4e5f-95d0-dc842b4841c5
+			defaultHierarchy: LocalDateTable_4ea83ec9-9ebc-45fa-b299-d2d2e1d1801d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubTotal
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: f0872457-f1fb-472b-9e0d-0bd2f078f683
+		summarizeBy: sum
+		sourceColumn: SubTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column TaxAmt
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: e30a5af8-805e-453c-a034-5e64f24d83e1
+		summarizeBy: sum
+		sourceColumn: TaxAmt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column Freight
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 482feb9c-25cc-4af0-b423-06b809211eb7
+		summarizeBy: sum
+		sourceColumn: Freight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column TotalDue
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 6e057130-2f80-4eab-94a3-0b137a40e5df
+		summarizeBy: sum
+		sourceColumn: TotalDue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7b9c52f6-5b25-47af-809e-12d8869584a6
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 6db77773-d5ce-4231-9d97-4b14ebab74a6
+			defaultHierarchy: LocalDateTable_ec6a3dc5-dde8-49a4-9beb-3c03d77b1029.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Purchasing PurchaseOrderHeader' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Purchasing", Item = "PurchaseOrderHeader"]}[Data]
+				in
+				  #"Navigation 2"
+

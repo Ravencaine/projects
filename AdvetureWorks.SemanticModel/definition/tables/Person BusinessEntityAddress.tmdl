@@ -1,0 +1,62 @@
+table 'Person BusinessEntityAddress'
+	lineageTag: 5fcee560-4504-407e-9e4f-4ff1a15f231c
+
+	column BusinessEntityID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b617639-9d38-49b7-b336-bb6904f382c4
+		summarizeBy: none
+		sourceColumn: BusinessEntityID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressID
+		dataType: int64
+		formatString: 0
+		lineageTag: c7bc495a-fb04-481b-bdb6-57a5c84d580d
+		summarizeBy: none
+		sourceColumn: AddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressTypeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a3d2ce3-5503-48b8-826e-c6578604f460
+		summarizeBy: none
+		sourceColumn: AddressTypeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: 2cf0f7ba-e77d-4388-9a9d-b1c5dd79f7c6
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7d079258-b54d-414b-99d7-ca002cc506b9
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: cec7a15b-8b19-4fce-9db3-f21b20708528
+			defaultHierarchy: LocalDateTable_6b719b6f-f225-44ac-b929-33993ae7a3c8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Person BusinessEntityAddress' = m
+		mode: import
+		source =
+				let
+				  Source = Sql.Databases("(localdb)\MSSQLLocalDB"),
+				  #"Navigation 1" = Source{[Name = "AdventureWorks2025"]}[Data],
+				  #"Navigation 2" = #"Navigation 1"{[Schema = "Person", Item = "BusinessEntityAddress"]}[Data]
+				in
+				  #"Navigation 2"
+

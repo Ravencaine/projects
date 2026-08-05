@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Mastering Excel: How to Copy Without Incrementing"
 source_url: https://medium.com/@markchen69/mastering-excel-how-to-copy-without-incrementing-65a4b508d22b
 note_type: source

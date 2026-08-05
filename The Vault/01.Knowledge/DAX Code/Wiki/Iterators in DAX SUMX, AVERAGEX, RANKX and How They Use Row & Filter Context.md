@@ -1,5 +1,6 @@
 ---
 created: 2026-07-27
+updated: 2026-08-02
 source: "Iterators in DAX: SUMX, AVERAGEX, RANKX and How They Use Row & Filter Context"
 source_url: https://medium.com/write-your-world/iterators-in-dax-sumx-averagex-rankx-and-how-they-use-row-filter-context-711bfa11297a
 note_type: source
@@ -118,7 +119,7 @@ Here’s the tricky part:
 
 - Iterators create **row context**.
 - But row context alone cannot filter other tables.
-- When CALCULATE is involved inside an iterator, it triggers **context transition** — converting row context into filter context.
+- When CALCULATE is involved inside an iterator, it triggers **context transition**: converting row context into filter context.
 
 Example:
 

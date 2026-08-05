@@ -2844,6 +2844,10 @@ M function: downloads an image URL and returns it as a Base64 data URL string. W
 
 | [[Power-Query-Base64-Conversion-Reference.md]] | Power Query Base64 Conversion — Key Concepts
 
+| [[Binary-ToText-Base64-Power-Query.md]] | Binary.ToText — Power Query Binary to Base64
+
+Binary.ToText(binary, BinaryFormat.Base64), complete Folder connector M pattern, Base64 vs Hex.
+
 Web.Contents, Binary.ToText, BinaryEncoding.Base64 — the M functions for converting images to Base64 in Power Query.
 
 Copy-paste Python snippet: sklearn IsolationForest with HourGroup bucketing, pd.get_dummies(), and merge-back to full dataset.

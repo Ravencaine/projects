@@ -1903,3 +1903,12 @@ last_audit: 2026-07-29
 | Ignoring-Outliers-Detection-Action.md | Data Modeling | 2026-08-05 | yes | 0 | 0 |
 | Dashboard-Health-Checklist.md | Data Modeling | 2026-08-05 | yes | 0 | 0 |
 | Data-Cleaning-Pipeline-Flow.md | Data Modeling | 2026-08-05 | yes | 0 | 0 |
+| 5-Powerful-Ways-Import-Images-Boniface-Muchendu-source.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Local-Image-Insert-Power-BI.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Web-Image-URL-Measure.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| ImageBB-Hosting-Service.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Binary-Base64-Image-Model.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| SVG-Images-Power-BI.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| 5-Image-Import-Methods-Compared.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Image-URL-Data-Category.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Binary-ToText-Base64-Power-Query.md | Power Query | 2026-08-05 | yes | 0 | 0 |

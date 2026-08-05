@@ -2003,6 +2003,38 @@ DAX measures returning hex strings for conditional formatting — enables single
 
 | [[Reusable-Project-Assets.md]] | Reusable Project Assets: Don't Start From Scratch
 
+| [[5-Powerful-Ways-Import-Images-Boniface-Muchendu-source.md]] | 5 Powerful Ways Import Images Power BI (Boniface Muchendu)
+
+Source note: local upload, web image URL, image hosting, binary/base64, SVG — comparison of all 5 methods.
+
+| [[Local-Image-Insert-Power-BI.md]] | Local Image Import: Insert → Image
+
+Insert ribbon, static logos/branding, PBIX size impact, limitations.
+
+| [[Web-Image-URL-Measure.md]] | Web Image URL via Measure
+
+DAX measure + Image URL data category, table visual rendering, hotlinking requirement.
+
+| [[ImageBB-Hosting-Service.md]] | ImageBB — Image Hosting Service
+
+Free image hosting, direct URL generation, URL format for Power BI.
+
+| [[Binary-Base64-Image-Model.md]] | Binary/Base64 in Model
+
+Folder connector, Binary.ToText base64 encoding, character limit (~32K), offline availability.
+
+| [[SVG-Images-Power-BI.md]] | SVG Images in Power BI
+
+SVG XML in DAX measure, data:image/svg+xml;utf8 prefix, dynamic colour via DAX, scalability.
+
+| [[5-Image-Import-Methods-Compared.md]] | 5 Image Import Methods Compared
+
+Decision matrix: storage, offline, performance, character limit, dynamic — with decision guide.
+
+| [[Image-URL-Data-Category.md]] | Image URL Data Category
+
+Modelling ribbon → Data category → Image URL, text type requirement, data URI formats.
+
 Building a library of DAX, M, HTML, and template assets. GitHub preferred over master PBIX files.
 
 Setting a dashboard as the first screen users see when they open a published Power BI App.

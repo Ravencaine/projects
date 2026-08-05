@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: What Bump Charts Tell You That Line Charts Hide
 note_type: gotcha
 tags: [powerbi, gotcha, data-visualization, bump-chart, rank, tie, missing-data, prep]

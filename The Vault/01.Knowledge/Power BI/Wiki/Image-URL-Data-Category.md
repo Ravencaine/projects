@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: 5 Powerful Ways Import Images Power BI (Boniface Muchendu)
 note_type: atomic
 tags: [power-bi, data-category, image-url, model, measure, modelling]

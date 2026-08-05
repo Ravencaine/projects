@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: BI Tools in Focus Navigating the Fine Line Between Dashboards and Reports
 source_url: https://medium.com/@isabittar/bi-tools-in-focus-navigating-the-fine-line-between-dashboards-and-reports-d35f630aa003
 author: Isabelle Bittar

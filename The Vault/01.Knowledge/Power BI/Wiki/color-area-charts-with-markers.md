@@ -1,7 +1,10 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 note_type: pattern
 tags: [power-bi, visual-design, area-chart, conditional-formatting, markers]
+source: unknown
+
 ---
 
 # Color Area Charts with Markers

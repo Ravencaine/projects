@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: What Dumbbell Charts Tell You That Grouped Bars Hide
 note_type: pattern
 tags: [powerbi, pattern, data-visualization, aggregate-overlay, dumbbell, boxplot, micro-macro, summary]

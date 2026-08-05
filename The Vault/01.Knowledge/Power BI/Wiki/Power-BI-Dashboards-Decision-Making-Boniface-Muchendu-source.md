@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: Power BI Dashboards Decision-Making (Boniface Muchendu)
 source_url: https://databear.com/power-of-power-bi-dashboards/
 note_type: source

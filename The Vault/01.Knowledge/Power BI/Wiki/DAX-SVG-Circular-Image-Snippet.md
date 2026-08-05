@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: Circular Images in Power BI (Isabelle Bittar)
 note_type: snippet
 tags: [dax, svg, base64, image, circular, snippet]

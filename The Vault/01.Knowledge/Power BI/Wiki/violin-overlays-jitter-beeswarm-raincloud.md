@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: What Violin Plots Tell You That Boxplots Hide
 note_type: pattern
 tags: [powerbi, pattern, data-visualization, violin-plot, overlay, jitter, beeswarm, rug, raincloud]

@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: How to Do Anomaly Detection in Power BI (Isabelle Bittar)
 note_type: snippet
 tags: [python, pandas, sklearn, isolation-forest, anomaly-detection, one-hot, snippet]

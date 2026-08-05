@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "How I Built a Modern Oblique Area Chart in Power BI Using Only Native Visuals.md"
 note_type: atomic
 tags: [error-bands, error-band, white-out-mask, analytics-pane, area-chart, line-chart, decorative, oblique]

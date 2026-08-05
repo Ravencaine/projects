@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: 4 Tips Work Efficiently Power BI (Isabelle Bittar)
 note_type: atomic
 tags: [power-bi, workflow, asset-library, github, dax, m-code, template, productivity]

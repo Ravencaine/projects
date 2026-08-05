@@ -1,6 +1,6 @@
 ---
 created: 2026-07-26
-updated: 2026-08-02
+updated: 2026-08-05
 note_type: index
 tags: [vba, index]
 ---
@@ -13,8 +13,6 @@ This is the index for the VBA knowledge base. 1 notes grouped by type.
 
 | Note | Description |
 |------|-------------|
-| [[QUESTIONS.md]] | Open Questions
+| [[QUESTIONS.md]] | Open Questions |
 
 (None yet — questions surface here after ingestion, health checks, or during note-writing.)
-
-Open questi |

@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Enhancing Accessibility Developing Translated Views in Multilingual Power BI Reports.md
 note_type: workflow
 tags: [powerbi, internationalization, localization, field-parameters, dax, accessibility]

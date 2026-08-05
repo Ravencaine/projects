@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: One UDF to Build All Your SVG Pills in Power BI
 note_type: atomic
 tags: [dax, udf, design-principle, architecture, svg]

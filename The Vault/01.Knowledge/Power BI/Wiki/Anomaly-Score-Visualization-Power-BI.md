@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: How to Do Anomaly Detection in Power BI (Isabelle Bittar)
 note_type: atomic
 tags: [anomaly-detection, visualization, conditional-formatting, power-bi, ux, dashboard]

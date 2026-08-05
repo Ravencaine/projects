@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: Blank Values in Power BI Reports (Boniface Muchendu)
 note_type: comparison
 tags: [dax, comparison, blank, isblank, card-visual, quick-fix]

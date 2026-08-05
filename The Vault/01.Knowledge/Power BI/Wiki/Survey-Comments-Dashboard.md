@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "Analyzing Survey Comments in Power BI Using AI.md"
 note_type: workflow
 tags: [powerbi, dashboard, survey-comments, theme-overview, sentiment-distribution, trend-analysis, text-search, conditional-formatting, svg]

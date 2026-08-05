@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "Stop Copy-Pasting DAX: The Power of Measure Branching in Power BI"
 note_type: atomic
 tags: [dax, measure-branching, naming-conventions, best-practices, beginner]

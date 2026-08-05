@@ -1,7 +1,10 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 note_type: atomic
 tags: [dax, overtime, highlight, flag, employee-data]
+source: unknown
+
 ---
 
 # High OT Flag for Highlight (DAX)

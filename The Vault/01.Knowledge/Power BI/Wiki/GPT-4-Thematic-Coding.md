@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "Analyzing Survey Comments in Power BI Using AI.md"
 note_type: pattern
 tags: [llm, gpt-4, openai, prompt-engineering, thematic-coding, theme-extraction, sentiment-scoring, closed-set-classification]

@@ -8,6 +8,17 @@ source: system:changelog
 
 All notable changes to this knowledge base are documented here.
 
+## 2026-08-05 — Health check (delta, vault-wide)
+
+Audit: vault-wide wikilink analysis. VBA KB has 3 notes (1 wiki + 2 stale nav entries from empty INDEX.md).
+Auto-fixed: 0 (VBA KB had no new notes).
+
+New articles drafted: 0
+
+Pending judgement:
+- vba-kb-empty: VBA KB has 3 INDEX entries (stale nav) vs 1 wiki note. Either clear the stale INDEX entries or begin populating the VBA KB.
+- missing-questions.md: No KB has a QUESTIONS.md file yet
+
 ## 2026-08-02 — Health check (full, first ever)
 
 Audit: 0 of 0 articles read. KB is empty (no wiki files yet).

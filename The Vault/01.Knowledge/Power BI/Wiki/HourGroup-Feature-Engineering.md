@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: How to Do Anomaly Detection in Power BI (Isabelle Bittar)
 note_type: atomic
 tags: [feature-engineering, hour-group, time-bucketing, anomaly-detection, python]

@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Build a Visual Explorer in Power BI — Let Users Choose What and How They See Data
 source_url: https://medium.com/microsoft-power-bi/build-a-visual-explorer-in-power-bi-let-users-choose-what-and-how-they-see-data-d19d35c765e8
 author: Isabelle Bittar

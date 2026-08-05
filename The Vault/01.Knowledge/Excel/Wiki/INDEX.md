@@ -7,7 +7,7 @@ tags: [excel, index]
 
 # Excel — Knowledge Base Index
 
-This is the index for the Excel knowledge base. 46 notes grouped by type.
+This is the index for the Excel knowledge base. 54 notes grouped by type.
 
 ## Formulas & Functions  (26 notes)
 
@@ -121,6 +121,30 @@ Multi-condition counting for segmented task analysis. |
 | [[xlookup-multi-criteria-concatenation.md]] | XLOOKUP Multi-Criteria via Concatenation
 
 XLOOKUP was designed for single-criterion lookups. |
+| [[insert-basic-formulas-spire-xls.md]] | Insert Basic Formulas (Spire.XLS)
+
+`.Formula` property for arithmetic, cell references, range references.
+| [[insert-array-formulas-spire-xls.md]] | Array Formulas via FormulaArray (Spire.XLS)
+
+`FormulaArray` + `CalculateAllValue()` for LINEST and matrix operations.
+| [[insert-named-ranges-spire-xls.md]] | Named Ranges in Spire.XLS
+
+`NameRanges.Add()` for self-documenting, maintainable formulas.
+| [[format-formula-cells-spire-xls.md]] | Format Formula Cells (Spire.XLS)
+
+Background colour, borders, and number formats on formula cells.
+| [[cross-sheet-formula-references-spire-xls.md]] | Cross-Sheet Formula References (Spire.XLS)
+
+`SheetName!CellRange` syntax for multi-worksheet formulas.
+| [[subtotal-function-excel.md]] | SUBTOTAL (Excel)
+
+Aggregate with hidden-row awareness; function codes 1–11 and 101–111.
+| [[spire-xls-python-api-reference.md]] | Spire.XLS Python API Quick Reference
+
+Cheat sheet: imports, Workbook lifecycle, cell ops, named ranges.
+| [[automate-excel-formulas-python-alle-y-source.md]] | Automate Excel Formulas with Python (Alle Y)
+
+Source: Spire.XLS article — arithmetic, built-in, array, named-range formulas.
 
 ## Data Analysis  (8 notes)
 
@@ -271,6 +295,54 @@ Summarizes data with key calculated values:
  |
 | [[mark-chen-mastering-excel-superpower-source.md]] | Mastering Excel's Superpower: FILTER, UNIQUE, SORT, and CHOOSE (a.k.a. |
 | [[mark-chen-multi-criteria-lookup-source.md]] | Multi-Criteria Lookups — Mark Chen
+
+| [[10-Excel-Data-Cleaning-Hacks-DigitalBYKewat-source.md]] | 10 Excel Data Cleaning Hacks (DigitalBYKewat)
+
+Source note: 10 hacks — TRIM/CLEAN, Flash Fill, duplicate highlighting, Excel Table, text case, Find & Replace, Text to Columns, blank highlighting, Data Validation, 3-min checklist.
+
+| [[TRIM-CLEAN-Functions.md]] | TRIM and CLEAN Functions
+
+TRIM removes spaces, CLEAN removes non-printable ASCII. CLEAN(TRIM()) combo. CHAR(160) limitation — use SUBSTITUTE.
+
+| [[Flash-Fill-Ctrl-E.md]] | Flash Fill: Ctrl+E Pattern
+
+Ctrl+E pattern detection — one manual example, Excel fills the rest. Use cases: name formatting, email extraction, phone formatting. Static values, not formulas.
+
+| [[Highlight-Duplicates-Conditional-Formatting.md]] | Highlight Duplicates with Conditional Formatting
+
+Home → Conditional Formatting → Duplicate Values. Inspect before Remove Duplicates — legitimate duplicates vs errors.
+
+| [[Excel-Table-Ctrl-T.md]] | Excel Table: Ctrl+T
+
+Ctrl+T converts range to Excel Table. Auto-expanding formulas, filter dropdowns, structured references, row shading.
+
+| [[Text-Case-Functions.md]] | Text Case Functions: PROPER/UPPER/LOWER
+
+PROPER capitalises each word, UPPER all caps, LOWER all lower. Prevents case-splitting in Pivot Tables. Combine with TRIM.
+
+| [[Find-Replace-Ctrl-H.md]] | Find & Replace: Ctrl+H
+
+Ctrl+H Replace All for NULL/N/A/Unknown placeholders. Workflow, common values, when NOT to use.
+
+| [[Text-to-Columns.md]] | Text to Columns
+
+Data → Text to Columns, Delimited mode. Comma, Space, Pipe separators. Power Query equivalent: Split Column → By Delimiter.
+
+| [[Highlight-Blank-Cells.md]] | Highlight Blank Cells via Conditional Formatting
+
+New Rule → Blanks. Bright fill on blank cells. Blank vs empty string "". Limits.
+
+| [[Data-Validation-Dropdown.md]] | Data Validation: Prevent Bad Inputs
+
+Data → Data Validation → List. Dropdown restrict inputs, Input Message, Error Alert. Named range option.
+
+| [[3-Minute-Data-Cleaning-Checklist.md]] | 3-Minute Data Cleaning Checklist
+
+7-step 3-minute routine: Backup → TRIM → Duplicates → Standardise → Blanks → Table → Verify totals.
+
+| [[Data-Cleaning-Keyboard-Shortcuts.md]] | Data Cleaning Keyboard Shortcuts
+
+Ctrl+T, Ctrl+E, Ctrl+H, Ctrl+Arrow, Ctrl+Shift+L, Alt+=, F4 — with context for each step.
 
 > Type: tutorial
 > Author: Mark Chen

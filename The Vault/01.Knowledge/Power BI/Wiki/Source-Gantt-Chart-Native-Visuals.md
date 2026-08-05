@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "How to Build a Gantt Chart in Power BI Using Only Core Visuals.md"
 source_url: "https://medium.com/the-bi-corner/%EF%B8%8F-how-to-build-a-gantt-chart-in-power-bi-using-only-core-visuals-6d27e1e56d13"
 note_type: source

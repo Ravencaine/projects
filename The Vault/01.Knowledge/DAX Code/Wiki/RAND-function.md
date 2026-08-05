@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: RAND() and RAND.BETWEEN() Tips (Boniface Muchendu)
 note_type: function
 tags: [dax, function, random, rand, volatile]

@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: When a Line Chart Misleads (And What to Use Instead)
 note_type: gotcha
 tags: [powerbi, gotcha, data-visualization, line-chart, time-axis, irregular-intervals, datetime]

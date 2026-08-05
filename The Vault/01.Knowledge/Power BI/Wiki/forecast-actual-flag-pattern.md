@@ -1,7 +1,10 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 note_type: pattern
 tags: [power-bi, dax, forecast, conditional-flag, comparison]
+source: unknown
+
 ---
 
 # Forecast vs Actual Flag Pattern

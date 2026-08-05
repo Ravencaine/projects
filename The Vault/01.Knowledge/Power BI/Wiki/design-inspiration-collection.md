@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: How to Design Attractive Power BI Reports
 note_type: pattern
 tags: [powerbi, design, pattern, inspiration, tools]

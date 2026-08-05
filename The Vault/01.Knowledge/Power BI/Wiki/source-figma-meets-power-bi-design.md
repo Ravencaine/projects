@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Figma Meets Power BI Revolutionizing Report Design.md
 note_type: source
 tags: [powerbi, figma, design, svg, tutorial]

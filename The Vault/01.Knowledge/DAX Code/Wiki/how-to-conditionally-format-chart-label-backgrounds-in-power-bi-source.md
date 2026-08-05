@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: How to Conditionally Format Chart Label Backgrounds in Power BI
 source_url: https://medium.com/microsoft-power-bi/how-to-conditionally-format-chart-label-backgrounds-in-power-bi-no-fx-no-problem-1c4efd74c726
 author: Isabelle Bittar

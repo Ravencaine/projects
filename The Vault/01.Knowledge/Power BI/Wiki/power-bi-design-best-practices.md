@@ -1,7 +1,10 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 note_type: pattern
 tags: [power-bi, dax, design-best-practices, report-layout, dashboard]
+source: unknown
+
 ---
 
 # Power BI Design Best Practices

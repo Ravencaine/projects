@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Streamline Data Exploration with a Custom Slicer/Filter Pane in Power BI
 note_type: pattern
 tags: [powerbi, pattern, slicer, filter, bookmark, action, panel, ui, ux]

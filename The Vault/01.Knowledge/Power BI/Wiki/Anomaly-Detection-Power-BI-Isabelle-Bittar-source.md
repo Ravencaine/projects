@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: How to Do Anomaly Detection in Power BI (Isabelle Bittar)
 source_url: https://medium.com/the-bi-corner/how-to-do-anomaly-detection-in-power-bi-no-external-tools-needed-b12973e58b2b
 note_type: source

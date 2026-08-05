@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Elevate Your Power BI Bar Charts with 6 Simple Improvements.md
 note_type: workflow
 tags: [powerbi, bar-chart, visualization, formatting, dax]

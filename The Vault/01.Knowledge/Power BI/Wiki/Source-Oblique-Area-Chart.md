@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "How I Built a Modern Oblique Area Chart in Power BI Using Only Native Visuals.md"
 source_url: "https://medium.com/the-bi-corner/how-i-built-a-modern-oblique-area-chart-in-power-bi-using-only-native-visuals-c0986d0c6753"
 note_type: source

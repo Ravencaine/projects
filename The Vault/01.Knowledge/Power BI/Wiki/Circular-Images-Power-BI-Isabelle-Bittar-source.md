@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: Circular Images in Power BI (Isabelle Bittar)
 source_url: https://medium.com/microsoft-power-bi/how-to-create-circular-images-in-power-bi-that-actually-render-properly-6d51849415d6
 note_type: source

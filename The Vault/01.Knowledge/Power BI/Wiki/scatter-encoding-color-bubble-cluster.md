@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: What Scatter Plots Tell You That Summary Statistics Hide
 note_type: pattern
 tags: [powerbi, pattern, data-visualization, scatter-plot, encoding, color, shape, bubble, cluster, centroid]

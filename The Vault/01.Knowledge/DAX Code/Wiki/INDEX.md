@@ -7,7 +7,7 @@ tags: [dax, index]
 
 # DAX Code - Knowledge Base Index
 
-This is the index for the DAX Code knowledge base. 872 notes grouped by type.
+This is the index for the DAX Code knowledge base. 879 notes grouped by type.
 
 ## Conceptual Atomics  (429 notes)
 
@@ -22,10 +22,10 @@ Five anti-patterns responsible for 78% of slow DAX measures, found in  |
 > Author: Gulab Chand Tejwani
 > Published: 2025-07-14
 > URL: htt |
-| [[Author-Gulab-Chand-Tejwani.md]] | Gulab Chand Tejwani
+| [[Author-Gulab-Chand-Tejwani]] | Gulab Chand Tejwani
 
 Power BI practitioner and author of the empirical DAX performance study: I Analyzed 5,000 DAX Measu |
-| [[Author-Md-Mizanur-Rahman-Nayan.md]] | Md Mizanur Rahman Nayan — DAX Author
+| [[Author-Md-Mizanur-Rahman-Nayan]] | Md Mizanur Rahman Nayan — DAX Author
 
 PL-300 Certified Power BI practitioner. |
 | [[DIVIDE.md]] | DIVIDE
@@ -1616,8 +1616,27 @@ FORMAT() converts numeric output to text; breaks sorting and numeric downstream 
 | [[non-additive-measures-audit.md]] | Non-Additive Measures Audit
 
 Detect non-additive fields via information_schema query; replace with additive components; semantic layer fix speeds queries 14sec to 1.2sec |
+| [[calculation-items-apply-only-to-measure-references.md]] | Calculation Items Apply Only to Measure References
 
-## Conceptual Atomics  (429 notes) — Dynamic KPI Cards (Bittar, 2025)
+CG items activate only on direct measure references — silently skipped on constants and non-measure expressions.
+| [[cg-precedence-application-not-evaluation.md]] | CG Precedence = Application Order, Not Evaluation Order
+
+Higher precedence CG applies first — controls transformation chain, not evaluation stack.
+| [[report-filter-vs-measure-cg-behaviour.md]] | Report Filter vs Measure: Different CG Application Behaviour
+
+Same CG produces different results depending on report filter vs measure invocation — precedence governs only in report filter path.
+| [[nested-calculate-does-not-change-cg-application-order.md]] | Nested CALCULATE Does Not Change CG Application Order
+
+Nesting CALCULATE with CG args cannot override precedence — the CG fires following precedence regardless.
+| [[measure-that-applies-cg-overrides-precedence.md]] | Measure That Applies a CG Overrides Precedence
+
+A measure with CALCULATE + CG internally fires that CG at measure evaluation time, bypassing precedence.
+| [[avoiding-pitfalls-calculation-groups-precedence-ferrari-source.md]] | Avoiding Pitfalls in Calculation Groups Precedence (Ferrari)
+
+Detect non-additive fields via information_schema query; replace with additive components; semantic layer fix speeds queries 14sec to 1.2sec |
+| [[measure-branching-naming-conventions.md]] | Measure Branching Naming Conventions
+
+Use [[calculation-items-apply-only-to-measure-references]] pattern — name the branch target, not the modifier — for measures that apply CGs internally.
 
 || Note | Description |
 ||------|-------------|
@@ -3777,6 +3796,50 @@ Appending +0 to a measure coerces blank to 0 via BLANK+0=0. Chart-unsafe — con
 IF's first argument is boolean — passing a measure directly treats BLANK as FALSE. Compact alternative to ISBLANK.
 
 | [[Choosing-Blank-Value-Strategy.md]] | Choosing a Blank Value Strategy
+
+| [[ALL-REMOVEFILTERS-Power-BI-Boniface-Muchendu-source.md]] | ALL and REMOVEFILTERS in Power BI (Boniface Muchendu)
+
+Source note: ALL and REMOVEFILTERS definitions, syntax, return values, comparison.
+
+| [[ALL-Function-DAX.md]] | ALL() DAX
+
+Removes filters and returns a table/column. Syntax, return value, ALL as table expression in SUMX.
+
+| [[REMOVEFILTERS-Function-DAX.md]] | REMOVEFILTERS() DAX
+
+Removes filters, returns nothing. Syntax, no-return-value limitation, SUMX incompatibility.
+
+| [[ALL-vs-REMOVEFILTERS.md]] | ALL vs REMOVEFILTERS
+
+Side-by-side: return value, SUMX compatibility, modern DAX idiom preference.
+
+| [[Removing-Slicer-Filters-ALL.md]] | Removing Slicer Filters with ALL
+
+| [[ALL-ALLSELECTED-ALLEXCEPT-Boniface-Muchendu-source.md]] | ALL, ALLSELECTED and ALLEXCEPT DAX Filter Function (Boniface Muchendu)
+
+Source note: ALLSELECTED (query-level vs external filters), ALLEXCEPT (table-first, selective keep), comparison matrix.
+
+| [[ALLSELECTED-Function-DAX.md]] | ALLSELECTED() DAX
+
+Query-level filter removal, keeps external slicer selections. Syntax, external vs query-level filter distinction, % of page total.
+
+| [[ALLEXCEPT-Function-DAX.md]] | ALLEXCEPT() DAX
+
+Removes all table filters except specified columns. Table-first parameter order. All-regions-but-one-year pattern.
+
+| [[ALL-ALLSELECTED-ALLEXCEPT-Comparison.md]] | ALL vs ALLSELECTED vs ALLEXCEPT
+
+| [[SWITCH-REPT-UNICHAR-Custom-Sorting.md]] | SWITCH + REPT(UNICHAR(8203)) Custom Measure Sorting
+
+REPT(UNICHAR(8203)) zero-width space prefix trick for sorting non-numeric text by numeric rank in Power BI.
+
+| [[Survey-Sentiment-Scorecard.md]] | Survey Sentiment Scorecard: AVG + SWITCH
+
+AVERAGE(SentimentScore) + SWITCH(TRUE()) with REPT/UNICHAR for sortable sentiment labels. Thresholds and cross-filter behaviour.
+
+Side-by-side: filter behaviour matrix, decision guide, syntax comparison, % of grand/page/year denominators.
+
+CALCULATE + ALL pattern, multiple tables, % of total pattern, REMOVEFILTERS equivalent.
 
 Comparison of +0, Card Visual, and IF approaches — chart-safety, custom text, scope.
 

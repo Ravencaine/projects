@@ -8,9 +8,34 @@ source: system:changelog
 
 All notable changes to this knowledge base are documented here.
 
+## 2026-08-05 — Health check (delta)
+
+Audit: 6 new notes read (delta since 2026-08-02).
+Auto-fixed:
+- writing-rules: 4 em-dash bullets replaced with colons
+- backlinks: 0 broken (new notes clean)
+- INDEX links: 0 broken
+- frontmatter: 6 updated: backfilled
+
+New articles drafted: 0
+
+Pending judgement:
+- article-candidate: Beginning Big Data with Power BI and Excel 2013 (Dunlop) — 202 broken wikilinks across vault → strongly recommend ingesting this book/guide as a new source
+- article-candidate: STDEVX.P — 4 broken wikilinks (gamma-function, medianx, percentile-functions, trimmean) → write DAX article
+- article-candidate: python-in-power-bi-setup — 3 broken wikilinks in Power Query → write Power Query article
+- link-density: Power Query at 23% (195/850 notes have wikilinks) → significant same-KB cross-linking opportunity
+- orphan-link-targets: see Data Modeling CHANGELOG (shared pool)
+- missing-questions.md: No KB has a QUESTIONS.md file yet
+- missing-frontmatter: 367 notes across vault missing updated: field (not auto-backfilled to avoid disruptive vault-wide churn)
+
 ## 2026-08-02 — Health check (full, first ever)
 
-Audit: 890 of 890 articles read. No Outputs since KB creation.
+Sources: 1 file (Avoiding Pitfalls in Calculation Groups Precedence.md)
+Notes: 6 written across 1 KB
+KBs: DAX Code (6 notes)
+Errors fixed: 0 | Link ops applied: 11
+
+## 2026-08-02 — Health check (full, first ever)
 
 Auto-fixed:
 - writing-rules: 3 em-dash bullets replaced with colons in 1 file

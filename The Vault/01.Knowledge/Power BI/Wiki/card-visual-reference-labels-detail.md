@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Next-Level Dashboard Design With Power BI's New Card Visual With Reference Labels
 note_type: pattern
 tags: [powerbi, pattern, card-visual, reference-labels, detail, conditional-formatting]

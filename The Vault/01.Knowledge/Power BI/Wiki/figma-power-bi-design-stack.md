@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Figma Meets Power BI Revolutionizing Report Design.md
 note_type: atomic
 tags: [powerbi, figma, design, visualization, ui-ux]

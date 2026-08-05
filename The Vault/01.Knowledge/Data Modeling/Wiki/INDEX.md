@@ -243,7 +243,7 @@ A Medium article by Bill Donofrio presenting a 10-point che |
 
 Source note: duplicate records, inconsistent date formats, missing values, inconsistent categories, ignoring outliers — with PQ/SQL fixes and a 5-point health checklist.
 
-| [[Author-DigitalBYKewat.md]] | DigitalBYKewat
+| [[Author-DigitalBYKewat]] | DigitalBYKewat
 
 Medium author focused on data cleaning and Power Query. 1 source in vault.
 

@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: 10 Ways to Use Emojis in Power BI
 source_url: https://medium.com/microsoft-power-bi/10-ways-to-use-emojis-in-power-bi-2ca11c16d99e
 author: Isabelle Bittar

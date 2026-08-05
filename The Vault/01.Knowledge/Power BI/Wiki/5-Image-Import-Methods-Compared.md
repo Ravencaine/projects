@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: 5 Powerful Ways Import Images Power BI (Boniface Muchendu)
 note_type: comparison
 tags: [power-bi, image, comparison, base64, svg, web-image, performance]

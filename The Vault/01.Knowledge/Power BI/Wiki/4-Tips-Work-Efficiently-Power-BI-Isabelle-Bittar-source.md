@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: 4 Tips Work Efficiently Power BI (Isabelle Bittar)
 source_url: https://medium.com/the-bi-corner/4-tips-to-work-efficiently-in-power-bi-5a691a460d5f
 note_type: source

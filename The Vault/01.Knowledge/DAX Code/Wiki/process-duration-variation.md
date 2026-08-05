@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Level Up Your Dashboards With Power BI's New & Improved Chart Data Labels
 note_type: function
 tags: [dax, measure, variance]

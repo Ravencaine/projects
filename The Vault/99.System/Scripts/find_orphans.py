@@ -57,6 +57,7 @@ EXTERNAL_SOURCES = {
     "dax_for_humans_extracted.txt",
     "m-code_extracted.txt",
     "m-code_full.txt",
+    "unknown",          # notes with no identifiable source file
 }
 
 # ── helpers ────────────────────────────────────────────────────────────────────

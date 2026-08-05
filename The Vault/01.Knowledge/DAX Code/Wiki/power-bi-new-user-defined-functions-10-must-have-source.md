@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Power BI New User Defined Functions 10 Must-Have You'll Use in Every Report
 source_url: https://medium.com/microsoft-power-bi/power-bis-new-user-defined-functions-10-must-have-you-ll-use-in-every-report-616523e70a65
 author: Isabelle Bittar

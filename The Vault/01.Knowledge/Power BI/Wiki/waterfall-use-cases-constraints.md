@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Why a Waterfall Chart is a Diagnostic Tool, Not Just a Dashboard Decoration
 note_type: pattern
 tags: [powerbi, pattern, data-visualization, waterfall-chart, use-cases]

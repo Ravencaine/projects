@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: Blank Values in Power BI Reports (Boniface Muchendu)
 note_type: atomic
 tags: [power-bi, card-visual, blank, no-dax, built-in]

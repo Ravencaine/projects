@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "Building an Interactive Flip Card KPI Dashboard with Dash, Plotly and CSS.md"
 source_url: "https://medium.com/@esthersm/building-an-interactive-flip-card-kpi-dashboard-with-dash-plotly-css-6ad367b165f5"
 note_type: source

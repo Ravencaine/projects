@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: The New Image Visual in Power BI Is a Quiet Game Changer
 note_type: atomic
 tags: [power-bi, image-visual, accessibility, alt-text, screen-reader, inclusive-design]

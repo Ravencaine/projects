@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: Blank Values in Power BI Reports (Boniface Muchendu)
 source_url: https://databear.com/blank-values-in-power-bi-reports/
 note_type: source

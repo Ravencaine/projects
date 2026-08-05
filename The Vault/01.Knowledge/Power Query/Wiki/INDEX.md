@@ -2846,6 +2846,10 @@ M function: downloads an image URL and returns it as a Base64 data URL string. W
 
 | [[Binary-ToText-Base64-Power-Query.md]] | Binary.ToText — Power Query Binary to Base64
 
+| [[Text-Transform-M-Power-Query.md]] | Text Transform M Functions in Power Query
+
+M equivalents: Text.Trim, Text.Clean, Text.Proper, Text.Upper, Text.Lower. Text.Clean handles CHAR(160) — broader than Excel CLEAN.
+
 Binary.ToText(binary, BinaryFormat.Base64), complete Folder connector M pattern, Base64 vs Hex.
 
 Web.Contents, Binary.ToText, BinaryEncoding.Base64 — the M functions for converting images to Base64 in Power Query.

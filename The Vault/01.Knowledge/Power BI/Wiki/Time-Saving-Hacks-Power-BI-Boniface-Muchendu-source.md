@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: 3 Time-Saving Hacks for Power BI Development (Boniface Muchendu)
 source_url: https://databear.com/3-time-saving-hacks-for-power-bi-development/
 note_type: source

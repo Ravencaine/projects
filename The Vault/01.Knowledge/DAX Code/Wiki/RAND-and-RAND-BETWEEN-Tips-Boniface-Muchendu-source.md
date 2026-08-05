@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: RAND() and RAND.BETWEEN() Tips (Boniface Muchendu)
 source_url: https://databear.com/rand-and-rand-between-functions/
 note_type: source

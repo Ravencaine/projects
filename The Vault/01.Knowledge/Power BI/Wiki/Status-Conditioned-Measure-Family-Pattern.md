@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "How to Build a Gantt Chart in Power BI Using Only Core Visuals.md"
 note_type: pattern
 tags: [powerbi, dax, pattern, conditional-measures, status-coloring, color-by-status]

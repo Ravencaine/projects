@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "My Favorite Way to Forecast in Power BI.md"
 note_type: pattern
 tags: [python, power-query, statsmodels, holt-winters, exponential-smoothing, forecasting, time-series, seasonal, additive-trend, per-department-loop]

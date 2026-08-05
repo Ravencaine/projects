@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: How to Build a Correlation Matrix in Power BI Using Only DAX
 note_type: function
 tags: [dax, correlation, matrix, selector, tooltip]

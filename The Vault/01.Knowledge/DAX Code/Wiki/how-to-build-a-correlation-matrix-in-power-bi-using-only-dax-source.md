@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: How to Build a Correlation Matrix in Power BI Using Only DAX
 source_url: https://medium.com/microsoft-power-bi/how-to-build-a-correlation-matrix-in-power-bi-using-only-dax-ab611a19a194
 note_type: source

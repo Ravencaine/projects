@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "My Favorite Way to Forecast in Power BI.md"
 source_url: "https://medium.com/the-bi-corner/my-favorite-way-to-forecast-in-power-bi-634d1221df24"
 note_type: source

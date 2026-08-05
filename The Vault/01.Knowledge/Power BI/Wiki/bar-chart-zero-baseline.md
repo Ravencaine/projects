@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Why Simple Bar Charts Are Harder Than They Look
 note_type: pattern
 tags: [powerbi, pattern, data-visualization, bar-chart, baseline, axis, zero]

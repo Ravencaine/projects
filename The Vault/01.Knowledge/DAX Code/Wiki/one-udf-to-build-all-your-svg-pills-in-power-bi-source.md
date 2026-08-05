@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: One UDF to Build All Your SVG Pills in Power BI
 source_url: https://medium.com/microsoft-power-bi/one-udf-to-build-all-your-svg-pills-in-power-bi-43da8ca9058e
 note_type: source

@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: How to Conditionally Format Chart Label Backgrounds in Power BI
 note_type: pattern
 tags: [powerbi, pattern, chart, label, conditional-formatting]

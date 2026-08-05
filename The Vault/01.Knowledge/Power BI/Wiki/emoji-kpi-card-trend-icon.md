@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: 10 Ways to Use Emojis in Power BI
 note_type: pattern
 tags: [power-bi, emoji, kpi, trend, dax, format, visualization]

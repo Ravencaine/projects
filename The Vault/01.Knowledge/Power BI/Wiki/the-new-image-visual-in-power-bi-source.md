@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: The New Image Visual in Power BI Is a Quiet Game Changer
 source_url: https://medium.com/microsoft-power-bi/the-new-image-visual-in-power-bi-is-a-quiet-game-changer-heres-why-it-matters-more-than-you-3b7724a699b1
 author: Isabelle Bittar

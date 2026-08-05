@@ -1912,3 +1912,62 @@ last_audit: 2026-07-29
 | 5-Image-Import-Methods-Compared.md | Power BI | 2026-08-05 | yes | 0 | 0 |
 | Image-URL-Data-Category.md | Power BI | 2026-08-05 | yes | 0 | 0 |
 | Binary-ToText-Base64-Power-Query.md | Power Query | 2026-08-05 | yes | 0 | 0 |
+| 10-Excel-Data-Cleaning-Hacks-DigitalBYKewat-source.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| TRIM-CLEAN-Functions.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| Flash-Fill-Ctrl-E.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| Highlight-Duplicates-Conditional-Formatting.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| Excel-Table-Ctrl-T.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| Text-Case-Functions.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| Find-Replace-Ctrl-H.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| Text-to-Columns.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| Highlight-Blank-Cells.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| Data-Validation-Dropdown.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| 3-Minute-Data-Cleaning-Checklist.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| Data-Cleaning-Keyboard-Shortcuts.md | Excel | 2026-08-05 | yes | 0 | 0 |
+| Text-Transform-M-Power-Query.md | Power Query | 2026-08-05 | yes | 0 | 0 |
+| ALL-REMOVEFILTERS-Power-BI-Boniface-Muchendu-source.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| ALL-Function-DAX.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| REMOVEFILTERS-Function-DAX.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| ALL-vs-REMOVEFILTERS.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| Removing-Slicer-Filters-ALL.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| ALL-ALLSELECTED-ALLEXCEPT-Boniface-Muchendu-source.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| ALLSELECTED-Function-DAX.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| ALLEXCEPT-Function-DAX.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| ALL-ALLSELECTED-ALLEXCEPT-Comparison.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| Analyzing-Survey-Comments-AI-Power-BI-Isabelle-Bittar-source.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Python-GPT4-Survey-Enrichment-Workflow.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Survey-AI-Dashboard-Components.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| REPT-UNICHAR-Measure-Sorting-Isabelle.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| GPT4-API-Survey-Cost.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| SWITCH-REPT-UNICHAR-Custom-Sorting.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| Survey-Sentiment-Scorecard.md | DAX Code | 2026-08-05 | yes | 0 | 0 |
+| Arrow-Charts-Power-BI-Boniface-Muchendu-source.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Arrow-Chart-Build-Line-Marker-ErrorBar.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Dual-Measure-Conditional-Formatting-Positive-Negative.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Period-over-Period-DAX-Measures-Arrow-Chart.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Error-Bars-Power-BI-Native.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Auto-Refresh-SharePoint-Excel-Power-BI-Boniface-Muchendu-source.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| SharePoint-Excel-Web-Connector-Power-BI.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Power-BI-OAuth2-Org-Account-Authentication.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Power-BI-Auto-Refresh-Schedule-SharePoint.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+| Power-BI-SharePoint-Refresh-Frequency-MS-Learn.md | Power BI | 2026-08-05 | yes | 0 | 0 |
+|| 2026-08-05 | Automate Excel Formulas and Functions with Python A Complete Guide | Excel | pattern | insert-basic-formulas-spire-xls | yes | 0 | 1 |
+|| 2026-08-05 | Automate Excel Formulas and Functions with Python A Complete Guide | Excel | pattern | insert-array-formulas-spire-xls | yes | 0 | 1 |
+|| 2026-08-05 | Automate Excel Formulas and Functions with Python A Complete Guide | Excel | pattern | insert-named-ranges-spire-xls | yes | 0 | 1 |
+|| 2026-08-05 | Automate Excel Formulas and Functions with Python A Complete Guide | Excel | pattern | format-formula-cells-spire-xls | yes | 0 | 1 |
+|| 2026-08-05 | Automate Excel Formulas and Functions with Python A Complete Guide | Excel | pattern | cross-sheet-formula-references-spire-xls | yes | 0 | 1 |
+|| 2026-08-05 | Automate Excel Formulas and Functions with Python A Complete Guide | Excel | function | subtotal-function-excel | yes | 0 | 1 |
+|| 2026-08-05 | Automate Excel Formulas and Functions with Python A Complete Guide | Excel | reference | spire-xls-python-api-reference | yes | 0 | 1 |
+|| 2026-08-05 | Automate Excel Formulas and Functions with Python A Complete Guide | Excel | source | automate-excel-formulas-python-alle-y-source | yes | 0 | 1 |
+|| 2026-08-05 | Automating PowerBI Deployments with GitHub Actions A Complete Guide | Power BI | workflow | power-bi-cicd-pipeline-github-actions | yes | 0 | 0 |
+|| 2026-08-05 | Automating PowerBI Deployments with GitHub Actions A Complete Guide | Power BI | pattern | azure-ad-app-registration-power-bi-service-principal | yes | 0 | 0 |
+|| 2026-08-05 | Automating PowerBI Deployments with GitHub Actions A Complete Guide | Power BI | snippet | connect-powerbi-serviceaccount-service-principal | yes | 0 | 0 |
+|| 2026-08-05 | Automating PowerBI Deployments with GitHub Actions A Complete Guide | Power BI | pattern | pbix-deploy-create-or-overwrite | yes | 0 | 0 |
+|| 2026-08-05 | Automating PowerBI Deployments with GitHub Actions A Complete Guide | Power BI | error | workspace-not-found-pbix-deploy | yes | 0 | 0 |
+|| 2026-08-05 | Automating PowerBI Deployments with GitHub Actions A Complete Guide | Power BI | source | automating-powerbi-deployments-github-actions-hannecke-source | yes | 0 | 0 |
+|| 2026-08-05 | Avoiding Pitfalls in Calculation Groups Precedence | DAX Code | source | avoiding-pitfalls-calculation-groups-precedence-ferrari-source | yes | 0 | 2 |
+|| 2026-08-05 | Avoiding Pitfalls in Calculation Groups Precedence | DAX Code | atomic | calculation-items-apply-only-to-measure-references | yes | 0 | 2 |
+|| 2026-08-05 | Avoiding Pitfalls in Calculation Groups Precedence | DAX Code | atomic | cg-precedence-application-not-evaluation | yes | 0 | 2 |
+|| 2026-08-05 | Avoiding Pitfalls in Calculation Groups Precedence | DAX Code | atomic | report-filter-vs-measure-cg-behaviour | yes | 0 | 2 |
+|| 2026-08-05 | Avoiding Pitfalls in Calculation Groups Precedence | DAX Code | gotcha | nested-calculate-does-not-change-cg-application-order | yes | 0 | 2 |
+|| 2026-08-05 | Avoiding Pitfalls in Calculation Groups Precedence | DAX Code | gotcha | measure-that-applies-cg-overrides-precedence | yes | 0 | 2 |

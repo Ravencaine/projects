@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Power BI New User Defined Functions 10 Must-Have You'll Use in Every Report
 note_type: function
 tags: [dax, udf, variance, target, comparison, power-bi]

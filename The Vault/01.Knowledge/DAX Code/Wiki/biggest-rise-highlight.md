@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: How to Build Dynamic KPI Cards in Power BI Using Only Core Visuals
 note_type: pattern
 tags: [dax, pattern, variance, highlight, unit]

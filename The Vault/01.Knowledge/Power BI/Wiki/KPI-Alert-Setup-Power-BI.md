@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: Power BI Dashboards Decision-Making (Boniface Muchendu)
 note_type: atomic
 tags: [power-bi, dashboard, kpi, alert, card-visual, threshold, notification]

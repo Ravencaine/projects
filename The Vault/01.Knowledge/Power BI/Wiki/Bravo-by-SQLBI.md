@@ -1,5 +1,6 @@
 ---
 created: 2026-08-05
+updated: 2026-08-05
 source: 3 Time-Saving Hacks for Power BI Development (Boniface Muchendu)
 note_type: reference
 tags: [power-bi, tool, bravosqlbi, time-intelligence, dax-formatting, data-model]

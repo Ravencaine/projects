@@ -1,5 +1,6 @@
 ---
 created: 2026-08-04
+updated: 2026-08-05
 source: "Building an Interactive Flip Card KPI Dashboard with Dash, Plotly and CSS.md"
 note_type: pattern
 tags: [plotly, pattern, micro-chart, area-chart, layered-traces, dashboard]

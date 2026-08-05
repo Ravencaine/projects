@@ -7,7 +7,7 @@ tags: [powerbi, index]
 
 # Power BI — Knowledge Base Index
 
-This is the index for the Power BI knowledge base. 352 notes grouped by type.
+This is the index for the Power BI knowledge base. 362 notes grouped by type.
 
 ## Data Modeling & Relationships  (166 notes)
 
@@ -989,7 +989,14 @@ Power BI has no fx option for Data label → Background color. Workaround: dual-
 A tooltip page that displays a scatter chart of the two variables in the hovered matrix cell. |
 
 ## KPI & Cards
-| [[line-chart-visual.md]] | Line Chart Visual
+
+|| [[emoji-kpi-card-dax-patterns.md]] | Emoji Kpi Card Dax Patterns
+
+DAX patterns for emoji-driven KPI cards: SWITCH(TRUE()) returning directional (📈/📉), tier (🟢/🟡/🔴), alert (⚠️/💡), and ranking (🥇) emoji labels. |
+|| [[forecast-actual-flag-pattern.md]] | Forecast Actual Flag Pattern
+
+IF/BLANK pattern for binary conditional formatting in line charts. Arrow chart, target vs actual, forecast vs budget. |
+|| [[line-chart-visual.md]] | Line Chart Visual
 
 Plots a continuous variable over time or a sequential category, revealing trends and seasonality. |
 | [[matplotlib-box-plot-python-visual.md]] | matplotlib Box Plot in Python Visual
@@ -1460,6 +1467,29 @@ Keep in Excel: Simple |
 A single visual field well setting can generate 1,000+ Storage Engin |
 | [[storage-modes-power-bi.md]] | (Article for beginners)
 
+## Automation & CI/CD  (8 notes)
+
+| Note | Description |
+|------|-------------|
+| [[power-bi-cicd-pipeline-github-actions.md]] | Power BI CI/CD Pipeline via GitHub Actions
+
+End-to-end YAML workflow for deploying .pbix files to Power BI Service via service principal auth.
+| [[azure-ad-app-registration-power-bi-service-principal.md]] | Azure AD App Registration for Power BI Service Principal
+
+Create an app registration, grant Power BI API permissions, assign workspace Contributor access.
+| [[connect-powerbi-serviceaccount-service-principal.md]] | PowerShell: Connect-PowerBIServiceAccount (Service Principal)
+
+`Connect-PowerBIServiceAccount -ServicePrincipal` with `PSCredential` built from client ID + secret.
+| [[pbix-deploy-create-or-overwrite.md]] | PBIX Deployment Logic: Create or Overwrite
+
+Check `Get-PowerBIReport` existence → `New-PowerBIReport` with `-ConflictAction CreateOrOverwrite`.
+| [[workspace-not-found-pbix-deploy.md]] | Workspace Not Found — GitHub Actions PBIX Deployment
+
+Error when `WORKSPACE_NAME` doesn't match or service principal lacks workspace access.
+|| [[automating-powerbi-deployments-github-actions-hannecke-source.md]] | Automating PowerBI Deployments with GitHub Actions (Hannecke)
+
+Source: Azure AD service principal + `MicrosoftPowerBIMgmt` + GitHub Actions for PBIX deployment. |
+
 ## Report Design & Methodology  (Bittar, 2024)
 
 || Note | Description |
@@ -1494,6 +1524,12 @@ Load data at startup from CSV/API/database; pass to components as parameters. Ne
 | [[Component-First-Dashboard-Design.md]] | Component-First Dashboard Design
 
 Build dashboards from small, reusable, single-responsibility components rather than monolithic page-level layouts. Components receive data as parameters and have no knowledge of sibling components. Adding a new KPI card requires a new data tuple, not new component code. Esther 2026 |
+| [[power-bi-design-best-practices.md]] | Power Bi Design Best Practices
+
+Report design principles: visual hierarchy, colour psychology, accessibility, layout rhythm, KPI composition. |
+| [[color-area-charts-with-markers.md]] | Color Area Charts With Markers
+
+Apply conditional formatting to area chart data points and marker styles to encode secondary KPI signals. |
 
 ## Microsoft Fabric & Advanced  (30 notes)
 
@@ -1619,7 +1655,7 @@ Specific, high-context Cursor AI prompts that drove the 48-hour PowerBI-Ontology
 
 | Note | Description |
 |------|-------------|
-| [[Author-Isabelle-Bittar.md]] | Isabelle Bittar
+| [[Author-Isabelle-Bittar]] | Isabelle Bittar
 
 Independent business consultant specializing in BI and data science. |
 | [[Source-Oblique-Area-Chart.md]] | Source — Modern Oblique Area Chart in Power BI
@@ -1637,10 +1673,10 @@ Verbatim source article by Isabelle Bittar (2025-08-02); powers [[Gantt-Chart-Na
 | [[Source-Flip-Card-KPI-Dashboard-Dash-Plotly.md]] | Source — Flip Card KPI Dashboard (Dash, Plotly, CSS)
 
 Verbatim source article by Esther (2026-04-11); powers [[Data-UI-Separation-Principle]], [[Component-First-Dashboard-Design]], [[chart-base-plotly]], [[Two-Layer-Area-Line-Micro-Chart]], [[CSS-Flip-Card-Dash]], and [[Data-Driven-UI-Card-Tuples]]. |
-| [[Author-Esther.md]] | Esther
+| [[Author-Esther]] | Esther
 
 Python developer writing on Medium about dashboard architecture, reusable UI components, and CSS-driven interaction with Dash and Plotly. |
-| [[Author-Janvi-Gupta.md]] | Janvi Gupta — Power BI Masterclass Author
+| [[Author-Janvi-Gupta]] | Janvi Gupta — Power BI Masterclass Author
 
 Profile
 
@@ -1897,7 +1933,7 @@ Conditional formatting pills, key metric cards, and interactive bar charts drive
 
 Source note: Power Query Base64 + DAX SVG pattern for circular table images — separates image data from presentation.
 
-| [[Author-Isabelle-Bittar.md]] | Isabelle Bittar
+| [[Author-Isabelle-Bittar]] | Isabelle Bittar
 
 Independent BI and data science consultant (KI Data Science). Sources: Isolation Forest anomaly detection, circular SVG images. Specialises in Python in Power Query, SVG in DAX, dashboard UX.
 
@@ -1927,7 +1963,7 @@ viewBox, circle cx/cy/r, image width/height, preserveAspectRatio — SVG dimensi
 
 Source note: centralised DAX repos, JSON themes, external tooling (Bravo, Tabular Editor, DAX Studio).
 
-| [[Author-Boniface-Muchendu.md]] | Boniface Muchendu
+| [[Author-Boniface-Muchendu]] | Boniface Muchendu
 
 Power BI consultant at DataBear. Sources: RAND() article, time-saving hacks.
 
@@ -2032,6 +2068,66 @@ SVG XML in DAX measure, data:image/svg+xml;utf8 prefix, dynamic colour via DAX, 
 Decision matrix: storage, offline, performance, character limit, dynamic — with decision guide.
 
 | [[Image-URL-Data-Category.md]] | Image URL Data Category
+
+| [[Analyzing-Survey-Comments-AI-Power-BI-Isabelle-Bittar-source.md]] | Analyzing Survey Comments in Power BI Using AI (Isabelle Bittar)
+
+Source: GPT-4 enrichment + Power BI dashboard. Colab notebook, PBIX, cost $2.99 for 500 comments.
+
+| [[Python-GPT4-Survey-Enrichment-Workflow.md]] | Python + GPT-4 Survey Enrichment Workflow
+
+8-step Colab notebook: install, auth, batch theme extraction (1 GPT-4 call), per-comment tagging (N calls), sentiment scoring 1-5 (N calls), CSV export.
+
+| [[Survey-AI-Dashboard-Components.md]] | Survey AI Dashboard Components
+
+6 sections: Theme Overview, Sentiment Distribution, Theme Analysis bar, Trend line, Search/Cross-filtering, Detailed Answers table.
+
+| [[REPT-UNICHAR-Measure-Sorting-Isabelle.md]] | REPT/UNICHAR Measure Sorting — Isabelle Bittar (Medium)
+
+Medium reference: REPT(UNICHAR(8203)) zero-width space sorting technique.
+
+| [[GPT4-API-Survey-Cost.md]] | GPT-4 API Survey Cost
+
+| [[Arrow-Charts-Power-BI-Boniface-Muchendu-source.md]] | Arrow Charts in Power BI Enhancing Data Visualization (Boniface Muchendu)
+
+Source: Arrow chart build — line + conditional-format markers + error bar arrows for period-over-period change.
+
+| [[Arrow-Chart-Build-Line-Marker-ErrorBar.md]] | Arrow Chart: Line + Marker Conditional Formatting + Error Bars
+
+Step-by-step: line chart base, dual IF/BLANK series, marker conditional formatting, error bar arrows, labels.
+
+| [[Dual-Measure-Conditional-Formatting-Positive-Negative.md]] | Dual-Measure Conditional Formatting: Positive/Negative Split
+
+IF/BLANK pattern for binary conditional formatting in line charts. Arrow chart, target vs actual, forecast vs budget.
+
+| [[Period-over-Period-DAX-Measures-Arrow-Chart.md]] | Period-over-Period DAX Measures for Arrow Charts
+
+Current Qtr, Prev Qtr (PARALLELPERIOD), % change, positive/negative series DAX. Time intelligence variations.
+
+| [[Error-Bars-Power-BI-Native.md]] | Error Bars in Power BI Charts (Native Feature)
+
+| [[Auto-Refresh-SharePoint-Excel-Power-BI-Boniface-Muchendu-source.md]] | Auto-Refresh SharePoint Excel Data in Power BI (Boniface Muchendu)
+
+Source: SharePoint Online → Power BI via Web connector + OAuth2. No gateway needed. Auto-refresh ~hourly.
+
+| [[SharePoint-Excel-Web-Connector-Power-BI.md]] | SharePoint Excel Web Connector Power BI
+
+Step-by-step: copy SharePoint file URL, Web connector, org account auth, load/transform data, publish.
+
+| [[Power-BI-OAuth2-Org-Account-Authentication.md]] | Power BI OAuth2 Org Account Authentication
+
+OAuth2 vs Windows/anonymous/API key. Privacy level Organizational. Token expiry, service accounts, troubleshooting.
+
+| [[Power-BI-Auto-Refresh-Schedule-SharePoint.md]] | Power BI Auto-Refresh Schedule SharePoint
+
+~Hourly auto-refresh (Power BI managed). On-demand Refresh Now, daily limits (Pro: 8/dataset). Refresh History. No gateway.
+
+| [[Power-BI-SharePoint-Refresh-Frequency-MS-Learn.md]] | Power BI SharePoint Refresh Frequency (MS Learn)
+
+MS Learn reference: 60-minute auto-refresh, OAuth2 required, cloud source = no gateway.
+
+Native error bar feature: bounds (constant/custom), direction, arrow style, marker propagation. Used in Arrow Charts.
+
+$2.99 for 500 comments. Cost components: batch theme extraction + N per-comment calls. ROI vs manual tagging. GPT-4o-mini optimisation.
 
 Modelling ribbon → Data category → Image URL, text type requirement, data URI formats.
 

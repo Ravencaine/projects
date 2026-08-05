@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-05
 source: Build a Visual Explorer in Power BI — Let Users Choose What and How They See Data.md
 note_type: workflow
 tags: [powerbi, time-filter, field-parameters, user-defined-functions, slicer]

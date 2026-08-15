@@ -1,53 +1,42 @@
 ---
-created: 2026-08-01
-updated: 2026-08-02
-source: "My Power BI Report Took 14 Seconds to Load. Here's Everything I Did to Get It Under 2.md"
+created: 2026-08-08
+updated: 2026-08-08
+source: 11 Power BI Tips
 note_type: atomic
-tags: [power-bi, date, performance, intermediate, best-practice]
+tags: [power-bi, data-modeling, date-table, best-practice]
 ---
 
-# Auto Date/Time: Disable It, Build One DimDate
+# Auto Date Time Disable
 
-Power BI silently creates a hidden date table for every date column in your model. Turn this off and build one shared date dimension.
+Turn off Power BI's automatic hidden date tables to take control of your data model.
 
-## The Problem with Auto Date/Time
+## Definition
 
-On a model with 12 date columns, Power BI creates 12 invisible date tables — each adding overhead to refresh and memory. Hidden, undocumented, and unnecessary.
+When a date column is added to a Power BI model, Power BI auto-creates hidden date tables behind the scenes. Each date column gets its own auto-generated table. For quick reports this is convenient, but in a real semantic model this creates bloat — multiple hidden tables that impact performance and obscure your intentional data model.
 
-## How to Disable It
+## Key Points
 
-**File → Options → Data Load** → uncheck **Auto Date/Time**
+- Auto Date Time creates **hidden, separate date tables** for every date column — not a shared calendar
+- Multiple date columns in a single model = multiple hidden date tables (one per column)
+- DAX Studio shows the bloat: a model with 5 date columns creates 5 hidden date tables
+- **Global setting** (File → Options → Data Load): turns off Auto Date Time for all future `.pbix` files
+- **Current file setting**: turns it off only for the active file
+- **Mark as Date Table**: designates a central date table, reducing the hidden table count by 1 per date column connected to it
+- Switching relationships from integer keys to actual date columns further reduces hidden tables
+- **Warning**: disabling after building visuals with auto hierarchies will break those visuals — test before flipping
 
-Do this in every production model. Microsoft recommends it.
+## Examples
 
-## The Replacement: One Shared DimDate
+**Global disable:**
+File → Options → Data Load → Auto Date Time → uncheck
 
-```dax
-DimDate =
-ADDCOLUMNS (
-    CALENDAR ( DATE ( 2022, 1, 1 ), DATE ( 2026, 12, 31 ) ),
-    "Year",        YEAR ( [Date] ),
-    "Month",       FORMAT ( [Date], "MMM" ),
-    "MonthNumber", MONTH ( [Date] ),
-    "Quarter",     "Q" & QUARTER ( [Date] ),
-    "YearMonth",   FORMAT ( [Date], "YYYY-MM" )
-)
-```
+**Mark as Date Table:**
+Right-click a date column → Calendar Options → Mark as Date Table → choose the full date column → Save
 
-Mark as Date Table: Table Tools → Mark as Date Table → select the Date column.
-
-## DateTime Columns: Split Instead of Keep
-
-Full DateTime accurate to the millisecond = thousands of unique values per day. Wrecks compression.
-
-**Split into:**
-- `Date` column → date only (lower cardinality, compresses well)
-- `Time` column → time only (only if genuinely needed for analysis)
-
-If the original DateTime is needed for precise timestamps, keep it. If you only report by day, keep only the date.
+**Switch relationships:**
+Change relationship from integer key to full date column → reduces hidden tables
 
 ## Related
 
-- [[vertipaq-column-cardinality]] — DateTime split as a cardinality reduction case
-- [[role-playing-date-calculated-columns]] — handling multiple date columns (OrderDate, ShipDate)
-- [[ecommerce-model-step-by-step]] — DimDate built as part of the e-commerce model
+- [[Measure-Table-Dedicated]] — another model hygiene pattern
+- [[auto-date-time-hidden-bloat]] — existing note on the bloat problem

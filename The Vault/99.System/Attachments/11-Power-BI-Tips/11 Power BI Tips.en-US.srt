@@ -1,0 +1,1536 @@
+1
+00:00:00,679 --> 00:00:02,489
+Yooo, what is up everyone?
+
+2
+00:00:03,472 --> 00:00:06,032
+Power BI people love to share tips.
+
+3
+00:00:06,572 --> 00:00:08,962
+Some of them are genuinely useful.
+
+4
+00:00:09,212 --> 00:00:10,762
+Some of them, pretty clever.
+
+5
+00:00:10,972 --> 00:00:14,872
+Some solve problems though that
+shouldn't exist in the first place, and
+
+6
+00:00:15,382 --> 00:00:19,241
+a few of them are absolutely bananas.
+
+7
+00:00:19,541 --> 00:00:22,539
+So I pulled together one, two,
+three, four, five, six, seven, eight,
+
+8
+00:00:22,539 --> 00:00:26,192
+nine, ten, 11 Power BI tips that
+people swear by, and I ranked them
+
+9
+00:00:26,192 --> 00:00:29,541
+from 11 all the way to number one.
+
+10
+00:00:29,682 --> 00:00:33,321
+I'm looking at how useful they
+are, how surprising they are,
+
+11
+00:00:33,502 --> 00:00:37,211
+and whether I'd actually use
+them in a real Power BI project.
+
+12
+00:00:37,281 --> 00:00:38,342
+You know how we like to do.
+
+13
+00:00:38,362 --> 00:00:39,162
+Let's get into this.
+
+14
+00:00:39,781 --> 00:00:43,652
+Coming in at number 11,
+turn off auto date time.
+
+15
+00:00:43,851 --> 00:00:46,352
+When you add a date column
+to a Power BI model, Power BI
+
+16
+00:00:46,641 --> 00:00:49,951
+automatically creates these hidden
+date tables behind the scenes.
+
+17
+00:00:50,051 --> 00:00:53,812
+And for a quick report, that's
+fine, but once you start building
+
+18
+00:00:53,882 --> 00:00:58,051
+a real semantic model, you wanna
+take control of your date table.
+
+19
+00:00:58,241 --> 00:01:01,851
+And you can see how I have this
+full date column in my model.
+
+20
+00:01:01,912 --> 00:01:06,002
+If I check it, you'll see I have
+all of these different values,
+
+21
+00:01:06,002 --> 00:01:07,581
+year, quarter, month, day.
+
+22
+00:01:07,722 --> 00:01:10,251
+And if I go to booking date,
+you can see I have another one.
+
+23
+00:01:10,451 --> 00:01:14,351
+If I go to guest satisfaction,
+I have another date.
+
+24
+00:01:14,351 --> 00:01:18,841
+And for every one of those, if I
+connect to DAX Studio, and it's
+
+25
+00:01:18,871 --> 00:01:22,792
+creating these hidden two, three,
+four, five date tables for me.
+
+26
+00:01:22,911 --> 00:01:24,062
+So how do you get rid of these?
+
+27
+00:01:24,062 --> 00:01:25,521
+Well, there's a couple
+of things you can do.
+
+28
+00:01:25,771 --> 00:01:29,421
+So if you go over to your model, the
+first thing you can do is create a
+
+29
+00:01:29,421 --> 00:01:32,591
+date table, establish relationships,
+so you can use that central date table.
+
+30
+00:01:32,641 --> 00:01:34,141
+That's a topic for another day.
+
+31
+00:01:34,281 --> 00:01:39,371
+And if I right-click right here, I can
+go to calendar options, say, mark as date
+
+32
+00:01:39,371 --> 00:01:42,161
+table, turn it on, choose my full date.
+
+33
+00:01:42,231 --> 00:01:43,591
+And remember we had five before.
+
+34
+00:01:43,691 --> 00:01:44,612
+I'm gonna click Save.
+
+35
+00:01:44,641 --> 00:01:46,482
+You see how that went away right there.
+
+36
+00:01:46,551 --> 00:01:47,751
+See how this is a date now.
+
+37
+00:01:47,752 --> 00:01:50,241
+And if I go back to DAX
+Studio, you can see I'm down
+
+38
+00:01:50,241 --> 00:01:51,591
+to four, one, two, three, four.
+
+39
+00:01:51,771 --> 00:01:53,101
+How do I get rid of the other ones?
+
+40
+00:01:53,201 --> 00:01:54,581
+Let's go back to Power BI Desktop.
+
+41
+00:01:54,661 --> 00:01:55,891
+You can do a couple of things.
+
+42
+00:01:55,951 --> 00:01:59,861
+You can go File, Option Settings and
+Options, and there's two locations.
+
+43
+00:01:59,862 --> 00:02:03,311
+There's in the global and the current
+file, you can do data load and data load.
+
+44
+00:02:03,331 --> 00:02:06,771
+So on data load, I can turn off
+auto date time in the global.
+
+45
+00:02:06,792 --> 00:02:10,611
+That means for every subsequent Power BI
+Desktop file that I open, it's not gonna
+
+46
+00:02:10,612 --> 00:02:12,741
+create those hidden date tables for you.
+
+47
+00:02:12,801 --> 00:02:16,661
+And if I do it right here, it's
+going to turn it off just for this
+
+48
+00:02:16,762 --> 00:02:18,111
+local file, this current file.
+
+49
+00:02:18,111 --> 00:02:20,151
+So I'm gonna uncheck it, click OK.
+
+50
+00:02:20,402 --> 00:02:22,641
+And then if I go back
+here, they're all gone.
+
+51
+00:02:22,821 --> 00:02:24,111
+Now, I'm gonna turn it back on.
+
+52
+00:02:24,262 --> 00:02:25,821
+You can see all my date tables are there.
+
+53
+00:02:25,961 --> 00:02:30,012
+And so if I go here, right now,
+my relationship to my date table
+
+54
+00:02:30,031 --> 00:02:31,771
+is on keys, integer values.
+
+55
+00:02:31,861 --> 00:02:34,952
+But if I switch them up, because I
+actually have dates, so if I switch
+
+56
+00:02:34,982 --> 00:02:40,011
+this to stay date, and I switch this
+to full date, which is my actual date,
+
+57
+00:02:40,081 --> 00:02:43,332
+I click Apply, and we go back to DAX
+Studio, you'll see I'm down to three.
+
+58
+00:02:43,441 --> 00:02:47,631
+And as I continue to iterate through this,
+it'll get rid of all those date tables.
+
+59
+00:02:47,682 --> 00:02:51,231
+One warning, if you already
+use one of these automatic date
+
+60
+00:02:51,232 --> 00:02:55,161
+hierarchies in a visual, turning
+this off can break that visual.
+
+61
+00:02:55,321 --> 00:02:58,411
+So don't just flip-flop and switch
+and hope for the best, right?
+
+62
+00:02:58,432 --> 00:02:59,981
+Check it out, test, validate.
+
+63
+00:03:00,051 --> 00:03:01,171
+And this is good hygiene.
+
+64
+00:03:01,182 --> 00:03:02,452
+It helps to reduce clutter.
+
+65
+00:03:02,452 --> 00:03:05,040
+It gives you one- Consistent
+date table, and it puts you in
+
+66
+00:03:05,040 --> 00:03:06,700
+control of the intelligence.
+
+67
+00:03:06,810 --> 00:03:07,680
+Let's see what's next.
+
+68
+00:03:08,270 --> 00:03:13,509
+Replacing those deeply nested if
+statements with SWITCH and TRUE.
+
+69
+00:03:13,759 --> 00:03:16,730
+I have a table here with property
+name, and so I have two measures.
+
+70
+00:03:16,759 --> 00:03:18,009
+One, that's an IF.
+
+71
+00:03:18,150 --> 00:03:19,289
+It's pretty straightforward.
+
+72
+00:03:19,370 --> 00:03:23,940
+If it's not in scope, if it's not at the
+property level, show portfolio total.
+
+73
+00:03:23,979 --> 00:03:27,039
+But if I'm in the context of the
+property, if total revenue is greater
+
+74
+00:03:27,040 --> 00:03:28,760
+than thirty-five million, exceptional.
+
+75
+00:03:28,770 --> 00:03:30,019
+Twenty-five million, strong.
+
+76
+00:03:30,030 --> 00:03:32,110
+Greater than or equal to
+fifteen million, moderate.
+
+77
+00:03:32,179 --> 00:03:33,369
+Otherwise, display low.
+
+78
+00:03:33,600 --> 00:03:35,980
+I'm gonna add this to the
+table, and you'll see it's
+
+79
+00:03:35,989 --> 00:03:37,200
+actually telling me something.
+
+80
+00:03:37,200 --> 00:03:40,959
+I have some properties that are strong,
+moderate, low, exceptional, and you can
+
+81
+00:03:40,960 --> 00:03:44,650
+see that if I'm not in the scope, it
+shows portfolio total, and this works.
+
+82
+00:03:44,730 --> 00:03:50,869
+But imagine every time I add another
+IF, I get deeper and deeper in the IF.
+
+83
+00:03:50,960 --> 00:03:53,489
+So I'm gonna replace this with a SWITCH.
+
+84
+00:03:53,649 --> 00:03:56,409
+So much easier to write and
+so much easier to understand.
+
+85
+00:03:56,419 --> 00:03:57,189
+Here's my SWITCH.
+
+86
+00:03:57,199 --> 00:03:58,029
+Here's my TRUE.
+
+87
+00:03:58,100 --> 00:04:00,630
+And so if it's not in
+scope, show portfolio total.
+
+88
+00:04:00,699 --> 00:04:03,339
+Otherwise, follow the same
+rules, and if none of these
+
+89
+00:04:03,339 --> 00:04:05,569
+conditions meet, show low, right?
+
+90
+00:04:05,589 --> 00:04:08,439
+So I'm gonna add this, and
+it does the exact same thing.
+
+91
+00:04:08,679 --> 00:04:11,280
+There's one important detail here.
+
+92
+00:04:11,349 --> 00:04:13,050
+The order matters.
+
+93
+00:04:13,359 --> 00:04:17,809
+SWITCH stops at the first condition
+that evaluates to TRUE, so I
+
+94
+00:04:17,809 --> 00:04:20,899
+need to start with the highest
+threshold and work my way down.
+
+95
+00:04:21,059 --> 00:04:24,099
+So let's say in my SWITCH statement I
+said, "If total revenue is greater than
+
+96
+00:04:24,099 --> 00:04:27,789
+fifteen million," a property with forty
+million would satisfy that condition,
+
+97
+00:04:27,840 --> 00:04:29,329
+and Power BI would return moderate.
+
+98
+00:04:29,529 --> 00:04:34,909
+This one may not seem bananas, but once
+conditional logic starts growing and
+
+99
+00:04:34,919 --> 00:04:41,765
+growing and growing, SWITCH TRUE makes the
+intent a whole lot easier to see No DAX.
+
+100
+00:04:43,635 --> 00:04:47,596
+DAX should not be the first answer
+to every problem you encounter.
+
+101
+00:04:47,846 --> 00:04:50,816
+So take a look at my total revenue column.
+
+102
+00:04:50,976 --> 00:04:55,525
+This works, but the business
+rule itself is absolutely static.
+
+103
+00:04:55,585 --> 00:04:59,226
+The revenue is room revenue plus
+experience revenue, plus other
+
+104
+00:04:59,226 --> 00:05:01,575
+revenue, minus discount amount.
+
+105
+00:05:01,676 --> 00:05:04,716
+That row-level calculation
+does not need filter context.
+
+106
+00:05:04,866 --> 00:05:09,145
+So I can create net revenue upstream
+in SQL, Power Query, or the warehouse.
+
+107
+00:05:09,205 --> 00:05:14,035
+So if I go over to my SQL Server,
+you can see I've created a computed
+
+108
+00:05:14,046 --> 00:05:16,226
+column that does the exact same logic.
+
+109
+00:05:16,395 --> 00:05:19,876
+Room revenue, experience revenue,
+other revenue, minus discount amount.
+
+110
+00:05:20,055 --> 00:05:23,135
+And then if I go to Power
+Query, I can go to Booking, and
+
+111
+00:05:23,136 --> 00:05:24,796
+I can go find those columns.
+
+112
+00:05:24,955 --> 00:05:29,515
+Room revenue, this, and this, and I
+can do some maths and say sum these
+
+113
+00:05:29,515 --> 00:05:32,975
+two, then I can subtract that one from
+it, and I get the exact same result.
+
+114
+00:05:33,155 --> 00:05:36,175
+Regardless of the approach I take,
+then I can do a new measure, so
+
+115
+00:05:36,175 --> 00:05:39,815
+instead of writing that DAX, I can
+say total, and I know I already
+
+116
+00:05:39,815 --> 00:05:43,056
+have one, equals SUM net revenue.
+
+117
+00:05:43,385 --> 00:05:44,515
+That's all I need to write.
+
+118
+00:05:44,675 --> 00:05:49,605
+Measures, ratios, calculations that depend
+on filter context, they belong in DAX.
+
+119
+00:05:50,266 --> 00:05:54,625
+Cleanup, static classification,
+and repeatable row-level business
+
+120
+00:05:54,625 --> 00:05:56,986
+rules often belong upstream.
+
+121
+00:05:57,006 --> 00:06:00,835
+I think it's Roach's maxim or
+Maxim's Roachum, something like that.
+
+122
+00:06:00,925 --> 00:06:06,166
+That distinction absolutely matters Use
+Power Query parameters to move between
+
+123
+00:06:06,166 --> 00:06:08,096
+development, tests, and production.
+
+124
+00:06:08,316 --> 00:06:10,136
+Let's go over into Power Query.
+
+125
+00:06:10,256 --> 00:06:11,436
+So we're gonna choose Transform.
+
+126
+00:06:11,556 --> 00:06:13,906
+And the first thing we're gonna do
+is create a couple of parameters.
+
+127
+00:06:13,966 --> 00:06:17,205
+We're gonna say Manage Parameters,
+and we're gonna do New, and
+
+128
+00:06:17,205 --> 00:06:18,225
+we're gonna say Server Name.
+
+129
+00:06:18,445 --> 00:06:20,815
+We're gonna add another
+one called Database Name.
+
+130
+00:06:20,976 --> 00:06:26,196
+And I already have 'em, so the
+database name is Northstar Public,
+
+131
+00:06:26,316 --> 00:06:30,746
+and then the server name, we're gonna
+go over to Management Studio, not
+
+132
+00:06:30,746 --> 00:06:32,525
+'cause I'm lazy, I'm just efficient.
+
+133
+00:06:32,575 --> 00:06:33,866
+And I'm gonna copy this, okay?
+
+134
+00:06:33,876 --> 00:06:36,515
+And then we're gonna go back over
+here, and we're gonna paste this in.
+
+135
+00:06:36,665 --> 00:06:39,395
+And one thing I like to
+do is really type cast.
+
+136
+00:06:39,395 --> 00:06:42,345
+So I'm gonna say this is
+text, and this is text.
+
+137
+00:06:42,525 --> 00:06:44,815
+And what I'm gonna do is say OK.
+
+138
+00:06:44,875 --> 00:06:49,455
+And then I'm gonna go to View,
+and we have to allow parameters,
+
+139
+00:06:49,465 --> 00:06:50,696
+so you need to check that box.
+
+140
+00:06:50,796 --> 00:06:51,966
+And then we'll go back here.
+
+141
+00:06:51,966 --> 00:06:55,256
+We're gonna go to Data Source Settings,
+and we're gonna change this source.
+
+142
+00:06:55,456 --> 00:06:58,846
+And so instead of hard-coded values,
+we're gonna use Parameter, Server
+
+143
+00:06:58,846 --> 00:07:01,275
+Name, Parameter, Database Name.
+
+144
+00:07:01,765 --> 00:07:02,535
+Click OK.
+
+145
+00:07:02,775 --> 00:07:03,505
+Click Close.
+
+146
+00:07:03,715 --> 00:07:04,865
+It'll take a little bit.
+
+147
+00:07:04,925 --> 00:07:05,525
+There we go.
+
+148
+00:07:05,595 --> 00:07:09,355
+If we go into the advanced editor, what
+you'll see is server and database name.
+
+149
+00:07:09,435 --> 00:07:10,376
+Changes it everywhere.
+
+150
+00:07:10,545 --> 00:07:13,806
+You can go into each one, and if
+you take a look at the first step
+
+151
+00:07:13,875 --> 00:07:16,235
+in the code, you'll notice that
+it's server and database name.
+
+152
+00:07:16,356 --> 00:07:19,495
+Now, the query is not
+tied to one environment.
+
+153
+00:07:19,606 --> 00:07:22,795
+When I need to move from
+development to test or production,
+
+154
+00:07:22,865 --> 00:07:26,016
+I change parameter value instead
+of rewriting the entire query.
+
+155
+00:07:26,176 --> 00:07:29,376
+This is not something that
+every report needs, but once
+
+156
+00:07:29,376 --> 00:07:33,006
+you are working across multiple
+environments, hard-coded connection
+
+157
+00:07:33,006 --> 00:07:35,315
+information gets old really fast.
+
+158
+00:07:35,775 --> 00:07:39,325
+When I'm developing my Power BI
+semantic models, I don't want
+
+159
+00:07:39,435 --> 00:07:41,405
+every row from a very large table.
+
+160
+00:07:41,435 --> 00:07:45,605
+I may only need enough to build a
+transformation, validate the model,
+
+161
+00:07:45,645 --> 00:07:47,205
+and make sure everything works.
+
+162
+00:07:47,215 --> 00:07:50,155
+So what I do is I'm gonna
+create a couple of parameters.
+
+163
+00:07:50,155 --> 00:07:54,145
+I'm gonna create one called Test
+Mode, and I make it true/false,
+
+164
+00:07:54,145 --> 00:07:55,276
+and I'm gonna set it to false.
+
+165
+00:07:55,875 --> 00:07:59,236
+And then I create another one
+called Test Row Count, and then
+
+166
+00:07:59,236 --> 00:08:01,315
+I'm gonna make this one a decimal.
+
+167
+00:08:01,355 --> 00:08:03,725
+And what I'm gonna do is
+set it to 10, and click OK.
+
+168
+00:08:03,785 --> 00:08:06,655
+And then what I'm gonna do is I'm
+gonna create a new blank query.
+
+169
+00:08:06,695 --> 00:08:11,616
+And inside that blank query, all I'm gonna
+do is paste the query that I've created.
+
+170
+00:08:11,715 --> 00:08:13,756
+And what you'll see, I'm
+using my server parameters.
+
+171
+00:08:13,955 --> 00:08:15,275
+I'm doing a little M here.
+
+172
+00:08:15,275 --> 00:08:19,015
+I say, "If it's test rows, only
+show the first however many
+
+173
+00:08:19,015 --> 00:08:20,585
+rows I put in," in my case, 10.
+
+174
+00:08:20,785 --> 00:08:23,245
+So if it's true, only show 10 rows.
+
+175
+00:08:23,445 --> 00:08:25,206
+Otherwise, return the entire table.
+
+176
+00:08:25,445 --> 00:08:27,855
+So you can see it's returning
+lots of data right now.
+
+177
+00:08:27,856 --> 00:08:31,786
+So what I'm gonna do, I'm gonna
+switch this from false to true,
+
+178
+00:08:31,985 --> 00:08:33,126
+and watch what's gonna happen.
+
+179
+00:08:33,356 --> 00:08:34,565
+It only returned 10 rows.
+
+180
+00:08:34,606 --> 00:08:38,605
+If I go here and switch this,
+it's only gonna return 20 rows.
+
+181
+00:08:38,835 --> 00:08:42,516
+Now I can work against a smaller data
+set while I'm developing, then turn
+
+182
+00:08:42,516 --> 00:08:45,185
+Test Mode off before the full refresh.
+
+183
+00:08:45,246 --> 00:08:46,815
+There is one important nuance.
+
+184
+00:08:47,015 --> 00:08:49,075
+You need to pay attention to
+query folding and where the
+
+185
+00:08:49,165 --> 00:08:51,145
+row reduction actually happens.
+
+186
+00:08:51,246 --> 00:08:55,245
+If Power Query pulls the entire
+data set across the network and
+
+187
+00:08:55,285 --> 00:09:00,255
+only then keeps 20 rows or 10
+rows, you didn't really save much.
+
+188
+00:09:00,405 --> 00:09:04,638
+The goal is to push that reduction back
+to the source whenever the connector
+
+189
+00:09:04,688 --> 00:09:06,238
+and transformation supports it.
+
+190
+00:09:06,398 --> 00:09:09,648
+This is a small pattern, but on
+a large data set, it can save a
+
+191
+00:09:09,678 --> 00:09:14,920
+lot of time waiting Coming in at
+number six, the measure table.
+
+192
+00:09:15,010 --> 00:09:17,500
+So in this model, I have measures
+spread across two tables.
+
+193
+00:09:17,500 --> 00:09:20,910
+I have them on the guest
+satisfaction table, and I
+
+194
+00:09:20,920 --> 00:09:22,189
+have them on my booking table.
+
+195
+00:09:22,469 --> 00:09:24,439
+So let's go back here.
+
+196
+00:09:24,549 --> 00:09:27,550
+Let's go to modeling, and we're
+gonna do a new table, and I'm gonna
+
+197
+00:09:27,550 --> 00:09:34,339
+call this measures equal data table,
+and I'm gonna say place folder.
+
+198
+00:09:34,509 --> 00:09:35,759
+I'm gonna make it an integer.
+
+199
+00:09:35,909 --> 00:09:39,599
+And then inside of there,
+I'm gonna do one, one.
+
+200
+00:09:39,610 --> 00:09:40,699
+I messed up right here.
+
+201
+00:09:41,339 --> 00:09:42,159
+Integer, comma.
+
+202
+00:09:42,209 --> 00:09:43,599
+So this creates my table.
+
+203
+00:09:43,709 --> 00:09:47,610
+Now, I can go to my model view,
+and I can start moving my measures.
+
+204
+00:09:47,689 --> 00:09:50,949
+And so I can go here, and I
+can say change this to measure.
+
+205
+00:09:51,029 --> 00:09:52,219
+I hide this column.
+
+206
+00:09:52,360 --> 00:09:53,150
+Easy.
+
+207
+00:09:53,240 --> 00:09:53,740
+There we go.
+
+208
+00:09:53,740 --> 00:09:56,479
+And now I can move all my
+measures to this table.
+
+209
+00:09:56,560 --> 00:09:59,589
+Nothing was wrong with having all
+my measures spread across the table.
+
+210
+00:09:59,639 --> 00:10:01,029
+Now they're all in one location.
+
+211
+00:10:01,029 --> 00:10:03,730
+If you start getting too many
+measures in a table, you can use
+
+212
+00:10:03,730 --> 00:10:07,479
+display folders for revenue, for
+occupancy, for different things.
+
+213
+00:10:07,509 --> 00:10:11,539
+Some developers also prefer keeping
+measures within the related fact
+
+214
+00:10:11,540 --> 00:10:13,089
+table, and that's a good thing.
+
+215
+00:10:13,249 --> 00:10:18,359
+This does not make the model faster, but a
+clean model is a whole lot easier to what?
+
+216
+00:10:18,589 --> 00:10:19,089
+Maintain.
+
+217
+00:10:19,559 --> 00:10:20,579
+We're getting to the good stuff.
+
+218
+00:10:20,639 --> 00:10:23,119
+Bulk editing in the model view.
+
+219
+00:10:23,239 --> 00:10:24,639
+Look at this.
+I have several measures.
+
+220
+00:10:24,749 --> 00:10:28,530
+Room revenue, total revenue,
+total revenue previous year.
+
+221
+00:10:28,729 --> 00:10:31,329
+Now, I could choose room revenue,
+and I can go to format and
+
+222
+00:10:31,330 --> 00:10:32,519
+then change it one at a time.
+
+223
+00:10:32,589 --> 00:10:37,719
+But I can also do multi-select, 'cause I
+know these are all currencies, and I can
+
+224
+00:10:37,720 --> 00:10:40,099
+say currency and set my decimal place.
+
+225
+00:10:40,269 --> 00:10:44,349
+And now if I select them individually, you
+can see that the formatting is applied.
+
+226
+00:10:44,369 --> 00:10:46,400
+Now what I can also do… Check this out.
+
+227
+00:10:46,559 --> 00:10:49,829
+I'll go here and say select all measures.
+
+228
+00:10:49,829 --> 00:10:50,154
+Right?
+
+229
+00:10:50,154 --> 00:10:53,170
+All my measures are selected, and I'm
+gonna go to general, and I'm gonna
+
+230
+00:10:53,220 --> 00:10:55,479
+move all of them to my measure table.
+
+231
+00:10:55,629 --> 00:10:57,929
+You can use this for other
+compatible properties beyond
+
+232
+00:10:57,929 --> 00:11:01,490
+formatting, like display folders,
+summarizations, and other metadata.
+
+233
+00:11:01,749 --> 00:11:04,650
+This can save a ridiculous
+number of clicks.
+
+234
+00:11:04,970 --> 00:11:10,099
+Coming in at number four is the ability
+to use TMDL to stop rebuilding the same
+
+235
+00:11:10,099 --> 00:11:12,569
+semantic model logic over and over again.
+
+236
+00:11:12,679 --> 00:11:13,379
+Take a look at this.
+
+237
+00:11:13,389 --> 00:11:13,990
+Here's my model.
+
+238
+00:11:14,049 --> 00:11:18,329
+And I have measures like ADR,
+total revenue, and RevPAR.
+
+239
+00:11:18,379 --> 00:11:22,179
+And you can see I've already started
+building in some time intelligence.
+
+240
+00:11:22,279 --> 00:11:26,500
+And you'll have to repeat building that
+logic over and over and over again.
+
+241
+00:11:26,549 --> 00:11:27,519
+But take a look at this.
+
+242
+00:11:27,569 --> 00:11:30,740
+Let me go over to my TMDL view,
+and I'm gonna paste in some code.
+
+243
+00:11:30,950 --> 00:11:33,440
+And so you can see that I'm
+creating a calculation group.
+
+244
+00:11:33,629 --> 00:11:36,919
+One thing you gotta do before you
+do this is you need to go over
+
+245
+00:11:36,919 --> 00:11:39,989
+to the model view, and you need
+to discourage implicit measures.
+
+246
+00:11:39,999 --> 00:11:41,859
+So we're gonna discourage
+implicit measures.
+
+247
+00:11:41,929 --> 00:11:43,619
+Now you c- you have this chunk of code.
+
+248
+00:11:43,629 --> 00:11:47,449
+Now watch this when I apply this, and
+I need to refresh so my calculation
+
+249
+00:11:47,450 --> 00:11:48,879
+group gets all the information.
+
+250
+00:11:48,950 --> 00:11:52,879
+So now, instead of doing this over and
+over again, watch, I'll get rid of this.
+
+251
+00:11:53,099 --> 00:11:56,429
+I'll add my calculation
+group to the column.
+
+252
+00:11:56,469 --> 00:11:57,080
+That's okay.
+
+253
+00:11:57,309 --> 00:11:57,899
+No fret.
+
+254
+00:11:57,950 --> 00:11:58,589
+And then look.
+
+255
+00:11:58,669 --> 00:12:01,510
+I have all the changes
+automatically built in.
+
+256
+00:12:01,569 --> 00:12:02,059
+Think about it.
+
+257
+00:12:02,059 --> 00:12:04,040
+I don't have to write that
+code over and over again.
+
+258
+00:12:04,040 --> 00:12:06,949
+If I get rid of this and say, "Look,
+let's just use this for bookings,"
+
+259
+00:12:07,040 --> 00:12:10,200
+it automatically works for bookings
+or any other measure in my model.
+
+260
+00:12:10,239 --> 00:12:13,527
+You still need to check the table
+names- Column references, dependencies,
+
+261
+00:12:13,548 --> 00:12:15,867
+and formats before applying anything.
+
+262
+00:12:15,887 --> 00:12:18,137
+But the next model doesn't
+have to start from zero.
+
+263
+00:12:18,228 --> 00:12:22,318
+You can keep reusing the Temdo starter
+blocks for the model objects you
+
+264
+00:12:22,318 --> 00:12:24,907
+create over, and over, and over again.
+
+265
+00:12:24,907 --> 00:12:28,187
+Review them, share them, and
+apply them where they make sense.
+
+266
+00:12:28,328 --> 00:12:28,718
+All right.
+
+267
+00:12:28,718 --> 00:12:33,537
+Some of you may laugh at number three,
+and that's Control G in Power Query.
+
+268
+00:12:33,548 --> 00:12:34,048
+Hear me out.
+
+269
+00:12:34,267 --> 00:12:39,327
+So go to Transform, and let's say
+you have this very large table, like
+
+270
+00:12:39,327 --> 00:12:42,387
+Booking right here, and you can see
+there's lots of columns in Booking,
+
+271
+00:12:42,447 --> 00:12:45,977
+and I can go search for whatever column
+I'm trying to get to, but guess what?
+
+272
+00:12:46,048 --> 00:12:47,087
+How many of you have done this?
+
+273
+00:12:47,147 --> 00:12:48,897
+Control G. There's the columns.
+
+274
+00:12:48,947 --> 00:12:49,967
+I wanna go to Stay Date.
+
+275
+00:12:50,007 --> 00:12:50,767
+I click Okay.
+
+276
+00:12:50,877 --> 00:12:53,367
+It automatically brings
+me that, to that column.
+
+277
+00:12:53,437 --> 00:12:55,488
+Control G, I wanna go to Guest Key.
+
+278
+00:12:55,548 --> 00:12:58,057
+It auto-magically brings
+me to that column.
+
+279
+00:12:58,057 --> 00:13:00,427
+I wanna find a column buried
+somewhere in the middle.
+
+280
+00:13:00,617 --> 00:13:03,837
+I could keep scrolling until I
+eventually find it, or I can just
+
+281
+00:13:03,838 --> 00:13:05,608
+press Control G and there it goes.
+
+282
+00:13:05,978 --> 00:13:08,117
+Coming in at number two
+is field parameters.
+
+283
+00:13:08,117 --> 00:13:11,867
+Field parameters let the person using
+the report dynamically change which
+
+284
+00:13:11,897 --> 00:13:15,377
+dimensions or measures appear in a visual.
+
+285
+00:13:15,437 --> 00:13:16,147
+Check this out.
+
+286
+00:13:16,238 --> 00:13:19,957
+I have a clustered bar chart, and
+you can see I have total revenue
+
+287
+00:13:19,957 --> 00:13:24,568
+by property name, but I want my
+users to switch this by region,
+
+288
+00:13:24,568 --> 00:13:26,198
+property type, and booking channel.
+
+289
+00:13:26,427 --> 00:13:29,608
+I could build four visuals
+and try to fit them all on the
+
+290
+00:13:29,608 --> 00:13:31,258
+page, or I can go to modeling.
+
+291
+00:13:31,397 --> 00:13:35,397
+I can choose new field parameter,
+and then what I can do is I
+
+292
+00:13:35,397 --> 00:13:37,097
+will choose… Let me see.
+
+293
+00:13:37,107 --> 00:13:39,417
+Property name, booking channels.
+
+294
+00:13:39,518 --> 00:13:40,877
+Choose channel name.
+
+295
+00:13:40,948 --> 00:13:42,588
+Let's get one more in here.
+
+296
+00:13:42,607 --> 00:13:43,117
+Region.
+
+297
+00:13:43,268 --> 00:13:44,337
+Search for region.
+
+298
+00:13:44,448 --> 00:13:45,518
+Where's region at?
+
+299
+00:13:45,707 --> 00:13:47,877
+There we go, and I'm gonna choose region.
+
+300
+00:13:48,037 --> 00:13:48,697
+Click Create.
+
+301
+00:13:48,827 --> 00:13:50,507
+It's gonna add that as a slicer.
+
+302
+00:13:50,537 --> 00:13:51,657
+It's oh-so small.
+
+303
+00:13:51,728 --> 00:13:53,107
+We'll do a quick format of this.
+
+304
+00:13:53,457 --> 00:13:58,267
+And so what I'm gonna do is go here, and
+instead of using property name, I should
+
+305
+00:13:58,268 --> 00:13:59,678
+have gave my parameter a better name.
+
+306
+00:13:59,728 --> 00:14:00,967
+I'm gonna drop it right there.
+
+307
+00:14:01,057 --> 00:14:05,507
+And now what I can do is choose property
+name, choose channel, choose region.
+
+308
+00:14:05,687 --> 00:14:07,007
+But it doesn't stop there.
+
+309
+00:14:07,217 --> 00:14:11,327
+I can also go back to modeling, and
+I can choose a new field parameter.
+
+310
+00:14:11,397 --> 00:14:12,617
+I'm gonna give this one a better name.
+
+311
+00:14:13,077 --> 00:14:15,457
+And then what I'm gonna do is
+go to my measure table, 'cause
+
+312
+00:14:15,457 --> 00:14:16,827
+everything's in the right place.
+
+313
+00:14:16,847 --> 00:14:22,457
+Bookings, occupancy rate, total revenue,
+any of the measures I wanna add, right?
+
+314
+00:14:22,487 --> 00:14:26,198
+Click Create, and then instead
+of using total revenue, drop that
+
+315
+00:14:26,198 --> 00:14:28,187
+right there, and now watch this.
+
+316
+00:14:28,467 --> 00:14:31,277
+The entire thing is completely dynamic.
+
+317
+00:14:31,347 --> 00:14:35,887
+Now, the user can change both
+the category and the calculation.
+
+318
+00:14:36,418 --> 00:14:39,127
+I'm gonna say it, this is insane amazing.
+
+319
+00:14:39,267 --> 00:14:40,318
+Drum roll, please.
+
+320
+00:14:41,657 --> 00:14:46,867
+Coming in at number one, Control
+Shift L. Inside Temdo View
+
+321
+00:14:46,978 --> 00:14:48,317
+are the DAX formula editor.
+
+322
+00:14:48,528 --> 00:14:52,277
+So if we go here and do a quick
+search, you can see I have a few
+
+323
+00:14:52,278 --> 00:14:57,137
+measures that are prefixed with AVG,
+and I wanna rename them to Average.
+
+324
+00:14:57,228 --> 00:15:00,987
+So I just so happen to have a script
+on my clipboard of all three of them.
+
+325
+00:15:01,037 --> 00:15:01,657
+Watch this.
+
+326
+00:15:02,028 --> 00:15:03,147
+I'm gonna double-click here.
+
+327
+00:15:03,397 --> 00:15:06,447
+I'm gonna do Control Shift
+L. It highlights them all.
+
+328
+00:15:07,404 --> 00:15:08,894
+And it changes them all.
+
+329
+00:15:08,954 --> 00:15:14,234
+And then I say apply, and now if I look
+for average, all the abbreviations for all
+
+330
+00:15:14,264 --> 00:15:17,634
+four measures went from AVG to average.
+
+331
+00:15:18,024 --> 00:15:18,524
+Bananas.
+
+332
+00:15:19,204 --> 00:15:22,433
+You do need to pay attention
+to the exact text you select.
+
+333
+00:15:22,553 --> 00:15:28,044
+If that text appears inside names you did
+not intend to change, Power BI is going
+
+334
+00:15:28,044 --> 00:15:29,934
+to select those for you, so be careful.
+
+335
+00:15:30,003 --> 00:15:34,304
+And there is definitely someone who
+thinks one of these should not have made
+
+336
+00:15:34,304 --> 00:15:39,383
+the list at all, but based on practical
+value, surprise, and how often I would
+
+337
+00:15:39,493 --> 00:15:42,454
+actually use each one, that's my order.
+
+338
+00:15:42,644 --> 00:15:45,514
+And as always, thanks for watching,
+and we'll see you in the queue.
+

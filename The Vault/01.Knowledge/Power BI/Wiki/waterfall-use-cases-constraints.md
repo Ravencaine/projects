@@ -9,9 +9,9 @@ tags: [powerbi, pattern, data-visualization, waterfall-chart, use-cases]
 # Waterfall Use Cases + Constraints: When to Use, When to Skip
 
 **Use waterfall when:**
-- **Build-up** — showing how smaller pieces add up to a total market size
-- **Movement over time** — bridging headcount or revenue from January to December
-- **Diagnosing a gap** — missed or beat a target; need to show exactly which categories drove the difference
+- **Build-up:** showing how smaller pieces add up to a total market size
+- **Movement over time:** bridging headcount or revenue from January to December
+- **Diagnosing a gap:** missed or beat a target; need to show exactly which categories drove the difference
 
 **Skip waterfall when:**
 - Just comparing final values — the journey doesn't matter → simple bar chart

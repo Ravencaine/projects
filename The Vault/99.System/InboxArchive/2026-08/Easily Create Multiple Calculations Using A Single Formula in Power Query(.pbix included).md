@@ -4,7 +4,7 @@ source: "https://medium.com/microsoft-power-bi/easily-create-multiple-calculatio
 author:
   - "[[Shashanka Shekhar]]"
 published: 2026-07-30
-created: 2026-08-02
+created: 2026-08-03
 description: "Working with Power Query often involves creating multiple calculations across different columns or scenarios. Instead of writing separate formulas for each, you can streamline the process by leveraging a single formula to generate multiple outputs. This approach not only saves time but also ensures consistency in your data transformation workflows."
 Processed: "Unprocessed"
 ---
@@ -91,7 +91,7 @@ Click on Close & Apply in the upper right column in Home tab
 - Now in a **Table** visualization you can add the columns from new table for further analysis.
 ![](99.System/Attachments/1!BljNaWLFmv6saUfT1-VphA.gif)
 
-> Download the data for the KPI from this [link](https://drive.google.com/file/d/1aTKHmQsP6__zJonEheM8Yl83huNK3sLU/view?usp=sharing).
+> Download the data for the KPI from this [link](https://drive.google.com/file/d/1Kkhyu--606no5MOzmcGlItddQJpuTO5t/view?usp=sharing).
 > 
 > Download the PBIX file from this [link](https://drive.google.com/file/d/1Kkhyu--606no5MOzmcGlItddQJpuTO5t/view?usp=sharing).
 

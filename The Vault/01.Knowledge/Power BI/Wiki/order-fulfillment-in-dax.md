@@ -3,7 +3,7 @@
 created: 2026-07-28
 updated: 2026-08-02
 source: "[[beginning-big-data-with-power-bi-and-excel-2013-dunlop|Beginning Big Data with Power BI and Excel 2013]]"
-tags: ["power-bi", "pattern", "operations", "order-fulfillment", "supply-chain", "pipeline"]
+tags: [power-bi, pattern, operations, order-fulfillment, supply-chain, pipeline]
 note_type: pattern
 
 ---

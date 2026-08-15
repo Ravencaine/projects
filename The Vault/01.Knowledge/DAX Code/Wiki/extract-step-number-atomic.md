@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-02
 source: The Same-Day Trap: Calculating "Days in Status" in Power BI
 note_type: atomic
 tags: [dax, atomic, value, left, find, extract, step, number, status]

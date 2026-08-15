@@ -1,50 +1,8 @@
+# Power Query — CHANGELOG
 
+## 2026-08-13 — Ingestion batch
 
-## 2026-08-03 — Health check (delta, automated)
-
-Audit: 840 articles read.
-Auto-fixed:
-- writing-rules: 0 em-dash → colon fixes across 0 files
-- frontmatter: 1 files backfilled with updated: 2026-08-03
-
-Pending judgement:
-- external URLs: skipped (Cloudflare timeouts on URL validation)
-
----
-created: 2026-07-26
----
-
-## 2026-08-02 — INDEX.md Created
-
-**Trigger:** Complete vault health check.
-**Action:** First-time INDEX.md created — all wiki notes now indexed and grouped by category.
-**Also fixed:** || patch artifacts in Power BI INDEX, em-dash bullet violations (see DAX Code CHANGELOG for vault-wide stats).
-
-
-# CHANGELOG
-
-## 2026-07-29 — Forensic Health Check + Remediation
-
-**Trigger:** User requested forensic health check.
-
-**Finding:** m-code.pdf (2026-07-27) showed as "archived" in _INGESTED.md but file was still in inbox. Registry was updated; shutil.move never ran. 775 m-code.pdf notes not registered in NewNotesTracker.md.
-
-**Remediated:**
-- Moved m-code.pdf → InboxArchive/2026-07/ (alongside dax.pdf, DAX for Humans.epub)
-- Registered 775 m-code.pdf notes in NewNotesTracker.md
-- Frontmatter quality verified: clean across Power Query KB
-
-## 2026-07-26 — PDF extraction (m-code.pdf)
-
-Sources: 1 file archived → 99.System/InboxArchive/2026-07/
-Notes: 742 written
-Notes: m-code.pdf extracted via pdfplumber. 687 Power Query M functions, 18 M function category consolidations, 31 M concepts, 1 source note, 1 INDEX, 1 QUESTIONS. Full coverage of Power Query M language: table, text, date/time, number, list, record, binary, and type functions.
-
-*(No entries yet.)*
-Pending judgement:
-- external URLs (3 genuinely broken): microsoft-fabric-missing-piece.md — 2× malformed MS Learn URLs (fixed); world-happiness-dataset-workflow.md — GitHub raw 404 (fixed)
-- external URLs (144 kanerika.com SEO scrapers): 503 from any bot — links work in browser, not from server
-- external URLs (4 logo.clearbit.com): DNS fail — fictional company examples, expected broken
-- external URLs (4 LinkedIn): bot-blocked (405/999) — links work in browser
-- external URLs (2 packtpub.com): bot-blocked (403)
-- external URLs (14 misc): ColorOracle, Ko-Fi, AppSource, Azure blog timeout, etc.
+Sources: 1 file archived → 99.System/InboxArchive/2026-08/
+Notes: 10 written across 1 KB
+KBs: Power Query (10 notes)
+Errors fixed: 0 | Link ops applied: 0

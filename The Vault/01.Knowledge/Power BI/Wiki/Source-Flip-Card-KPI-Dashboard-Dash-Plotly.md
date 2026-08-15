@@ -23,13 +23,13 @@ The article builds a KPI dashboard in Dash/Plotly/CSS where each card flips on c
 
 ## Key Claims
 
-1. **Data separation from UI** — reading from CSV files at startup via `read_csv()` rather than hardcoding values keeps the UI clean and makes switching to an API or database a one-line change.
-2. **Consistent chart system via `chart_base()`** — a single Python function returning a shared Plotly layout dict (`plotly_dark` template, transparent backgrounds, zero margins, hidden axes, fixed height) eliminates layout duplication across all chart builders.
-3. **Two-layer micro-charts** — layering a transparent `fill="tozeroy"` scatter trace under a `lines+markers` scatter trace creates a modern area-chart feel with depth and clearer trend reading.
-4. **CSS handles interaction** — the flip animation uses CSS `transform: rotateY(180deg)` with `backface-visibility: hidden`; the only Dash callback is a state toggle (`n_clicks % 2`) that adds/removes the `flipped` class name.
-5. **Data-driven UI** — cards are defined as a list of tuples `(card_id, title, value, subtitle, back_fig, front_fig)` and rendered with a single list comprehension over `dbc.Row/dbc.Col`. Adding a new card requires only a new tuple, not a new component.
-6. **Responsive layout** — `dbc.Row([dbc.Col(flip_card(*c), xs=12, sm=8, md=4) for c in CARDS])` adapts to 1-column (mobile), 2-column (tablet), 3-column (desktop).
-7. **"Build components, not pages"** — the author's closing principle: a usable dashboard shows less, makes it interactive, makes it intuitive.
+1. **Data separation from UI:** reading from CSV files at startup via `read_csv()` rather than hardcoding values keeps the UI clean and makes switching to an API or database a one-line change.
+2. **Consistent chart system via `chart_base()`:** a single Python function returning a shared Plotly layout dict (`plotly_dark` template, transparent backgrounds, zero margins, hidden axes, fixed height) eliminates layout duplication across all chart builders.
+3. **Two-layer micro-charts:** layering a transparent `fill="tozeroy"` scatter trace under a `lines+markers` scatter trace creates a modern area-chart feel with depth and clearer trend reading.
+4. **CSS handles interaction:** the flip animation uses CSS `transform: rotateY(180deg)` with `backface-visibility: hidden`; the only Dash callback is a state toggle (`n_clicks % 2`) that adds/removes the `flipped` class name.
+5. **Data-driven UI:** cards are defined as a list of tuples `(card_id, title, value, subtitle, back_fig, front_fig)` and rendered with a single list comprehension over `dbc.Row/dbc.Col`. Adding a new card requires only a new tuple, not a new component.
+6. **Responsive layout:** `dbc.Row([dbc.Col(flip_card(*c), xs=12, sm=8, md=4) for c in CARDS])` adapts to 1-column (mobile), 2-column (tablet), 3-column (desktop).
+7. **"Build components, not pages":** the author's closing principle: a usable dashboard shows less, makes it interactive, makes it intuitive.
 
 ## Notable Details
 
@@ -42,12 +42,28 @@ The article builds a KPI dashboard in Dash/Plotly/CSS where each card flips on c
 
 ## Extracted Notes
 
-- [[Data-UI-Separation-Principle]] — `atomic` — separating data loading from UI definition enables swap-in of APIs/databases without touching component code.
-- [[Component-First-Dashboard-Design]] — `atomic` — building reusable components instead of pages makes dashboards scalable and easier to extend.
-- [[chart-base-plotly]] — `function` — shared `chart_base()` helper returning a consistent Plotly layout dict, eliminating layout duplication across all chart builders.
-- [[Two-Layer-Area-Line-Micro-Chart]] — `pattern` — layering a transparent `fill="tozeroy"` scatter trace under a `lines+markers` trace for modern dashboard micro-charts.
-- [[CSS-Flip-Card-Dash]] — `pattern` — CSS `rotateY(180deg)` + `backface-visibility: hidden` for 3D flip; Dash callback handles only the class-toggle state, not the animation.
-- [[Data-Driven-UI-Card-Tuples]] — `pattern` — defining card geometry as data tuples and rendering with list comprehension; adding a card is a new tuple, not a new component.
+**Atomics (2):**
+
+- [[Data-UI-Separation-Principle]] — separating data loading from UI definition enables swap-in of APIs/databases without touching component code.
+- [[Component-First-Dashboard-Design]] — building reusable components instead of pages makes dashboards scalable and easier to extend.
+
+**Functions (2):**
+
+- [[chart-base-plotly]] — shared `chart_base()` helper returning a consistent Plotly layout dict, eliminating layout duplication across all chart builders.
+- [[hex-to-rgba-python]] — `hex_to_rgba()` colour utility — converts a hex string (`#RRGGBB`) to an `rgba(r,g,b,alpha)` string with configurable alpha, used for semi-transparent area fills without maintaining parallel colour tables.
+
+**Patterns (4):**
+
+- [[Two-Layer-Area-Line-Micro-Chart]] — layering a transparent `fill="tozeroy"` scatter trace under a `lines+markers` trace for modern dashboard micro-charts.
+- [[CSS-Flip-Card-Dash]] — CSS `rotateY(180deg)` + `backface-visibility: hidden` for 3D flip; Dash callback handles only the class-toggle state, not the animation.
+- [[Data-Driven-UI-Card-Tuples]] — defining card geometry as data tuples and rendering with list comprehension; adding a card is a new tuple, not a new component.
+- [[generic-dash-callback-splat]] — `*[Output(...)]` and `*[Input(...)]` splat operators in a `@callback` decorator to scale outputs/inputs with `len(CARDS)` automatically; same pattern works for any N-of-N Dash wiring.
+
+**Gotchas (3 — second-pass extractions):**
+
+- [[plotly-layout-mutation-gotcha]] — `update_layout()` mutates the dict you pass in; reusing a single `chart_base()` constant across charts causes layout bleed. Fix: return a fresh dict from a function.
+- [[autorange-reversed-horizontal-bar-top]] — Plotly `go.Bar(orientation="h")` puts the first data item at the **bottom** by default; use `yaxis=dict(autorange="reversed")` to put it on top (the way ranking readers expect).
+- [[hoverinfo-skip-on-base-trace]] — a hidden `fill="tozeroy"` trace still produces duplicate hover labels unless it sets `hoverinfo="skip"`; route hover handling entirely through the visible top trace.
 
 ## Metadata
 

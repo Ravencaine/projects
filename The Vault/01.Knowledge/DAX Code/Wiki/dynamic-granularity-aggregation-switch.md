@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-02
 source: Power BI Time Hacks: Mastering Dynamic Date Views
 note_type: pattern
 tags: [dax, pattern, switch, selectedvalue, field-parameter, dynamic-aggregation, calendar]

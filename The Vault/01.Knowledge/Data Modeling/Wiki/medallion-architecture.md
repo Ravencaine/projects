@@ -46,7 +46,18 @@ A retail organisation ingesting POS data:
 2. **Silver:** events deduplicated, schema-enforced, joined to product dimension — a Synapse serverless table
 3. **Gold:** daily sales aggregates by store/date/product written as a Delta Lake table for Power BI DirectQuery
 
+## Fabric / OneLake Implementation
+
+In Microsoft Fabric, OneLake serves as the single logical data lake for all Fabric workloads. The medallion layers map directly to OneLake:
+
+- **Bronze:** OneLake default layer — raw files (Parquet, CSV, JSON) landed via Fabric Data Factory or notebooks
+- **Silver:** Fabric Spark notebooks or Dataflow Gen2 transform and write back to OneLake Silver container
+- **Gold:** OneLake shortcuts expose Gold layer directly to Power BI Direct Lake mode — no separate warehouse required
+
+Power BI connects to Gold layer via **Direct Lake mode**, querying OneLake files directly without importing into memory. This eliminates the import/refresh cycle for large datasets and is the primary advantage of using medallion architecture in Fabric over traditional Power BI import.
+
 ## Related
 
 - [[data-lake-vs-data-warehouse]] — where medallion fits in the lake/warehouse landscape
 - [[batch-processing-vs-stream-processing]] — ingestion patterns that feed the Bronze layer
+- [[fabric-is-a-complete-data-platform]] — Fabric as end-to-end platform context

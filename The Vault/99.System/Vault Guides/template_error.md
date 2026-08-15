@@ -2,7 +2,7 @@
 created: YYYY-MM-DD
 source: <source>
 note_type: error
-tags: []
+tags: [tag1, tag2]
 ---
 
 # <Error Name>

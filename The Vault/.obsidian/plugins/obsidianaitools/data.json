@@ -1,0 +1,77 @@
+{
+  "claude": {
+    "id": "claude-code-acp",
+    "displayName": "Claude Agent",
+    "command": "C:\\Users\\krlsa\\AppData\\Roaming\\npm\\claude-agent-acp.cmd",
+    "args": [],
+    "env": []
+  },
+  "codex": {
+    "id": "codex-acp",
+    "displayName": "Codex",
+    "command": "",
+    "args": [],
+    "env": []
+  },
+  "gemini": {
+    "id": "gemini-cli",
+    "displayName": "Gemini CLI",
+    "command": "",
+    "args": [
+      "--experimental-acp"
+    ],
+    "env": []
+  },
+  "customAgents": [],
+  "activeAgentId": "claude-code-acp",
+  "autoAllowPermissions": false,
+  "autoMentionActiveNote": true,
+  "debugMode": false,
+  "nodePath": "C:\\Program Files\\nodejs\\node.exe",
+  "exportSettings": {
+    "defaultFolder": "AI Tools",
+    "filenameTemplate": "agent_client_{date}_{time}",
+    "autoExportOnNewChat": false,
+    "autoExportOnCloseChat": false,
+    "openFileAfterExport": true,
+    "includeImages": true,
+    "imageLocation": "obsidian",
+    "imageCustomFolder": "AI Tools"
+  },
+  "windowsWslMode": false,
+  "sendMessageShortcut": "enter",
+  "quickPrompts": [],
+  "displaySettings": {
+    "autoCollapseDiffs": false,
+    "diffCollapseThreshold": 10,
+    "maxNoteLength": 10000,
+    "maxSelectionLength": 10000
+  },
+  "savedSessions": [
+    {
+      "sessionId": "89915a0b-679d-496d-8ab2-7fa04f2c9ef0",
+      "agentId": "claude-code-acp",
+      "cwd": "C:\\Users\\krlsa\\Documents\\00 Projects\\The Vault",
+      "title": "test",
+      "createdAt": "2026-08-06T16:37:08.833Z",
+      "updatedAt": "2026-08-06T16:37:08.833Z"
+    },
+    {
+      "sessionId": "cc8e725d-14da-4e39-8bd0-f41f9398ef82",
+      "agentId": "claude-code-acp",
+      "cwd": "C:\\Users\\krlsa\\Documents\\00 Projects\\The Vault",
+      "title": "test",
+      "createdAt": "2026-08-06T16:35:50.898Z",
+      "updatedAt": "2026-08-06T16:35:50.899Z"
+    }
+  ],
+  "hasCompletedOnboarding": true,
+  "lastSeenPluginVersion": "0.9.7",
+  "compatWarningDismissed": {},
+  "agentUpdateDismissed": {
+    "claude-code-acp": "0.66.0"
+  },
+  "apiKey": "sk-1c8e05ca9d2e485abebba805f5eb6dda",
+  "baseUrl": "https://chat.obsidianaitools.com",
+  "model": "MiniMax-M2.1"
+}

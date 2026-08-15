@@ -24,8 +24,8 @@ These exploration sections are especially valuable on client projects with heavy
 
 Create two field parameters:
 
-- **Metric** — Sales, Profit, Target, Variations, Costs, etc.
-- **Dimension** — Region, Category, Customer Segment, Product Type, Sales Channel
+- **Metric:** Sales, Profit, Target, Variations, Costs, etc.
+- **Dimension:** Region, Category, Customer Segment, Product Type, Sales Channel
 
 Each parameter allows users to switch between different fields without modifying visuals directly.
 

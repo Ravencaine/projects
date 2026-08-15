@@ -2,46 +2,47 @@
 
 This is the parent project folder. It serves as the workspace root for all sub-projects under `Documents/00 Projects/`.
 
-> **DoubleHelix rules:** This project inherits its knowledge-base protocols from the DoubleHelix vault. See below for active skills and vault paths.
+> **The Vault:** This project uses `The Vault/` as the active Obsidian knowledge base. All skills, MCP servers, and ingestion workflows point to it.
 
-## Active Skills
+## Active Vault
 
-The following skills are available from anywhere in this project:
+**`The Vault/`** — `C:\Users\krlsa\Documents\00 Projects\The Vault`
+
+| Path | Purpose |
+|------|---------|
+| `00.Inbox/` | Raw source material — unedited |
+| `01.Knowledge/` | 7 topic knowledge bases (see below) |
+| `99.System/Vault Guides/` | Ingestion skill + 11 note templates |
+| `00.Inbox/_INGESTED.md` | Ingestion registry |
+
+### Knowledge Bases
+
+`Data Modeling` · `DAX Code` · `Excel` · `Power Automate` · `Power BI` · `Power Query` · `VBA`
+
+### MCP Server
+
+`obsidian-vault` → `The Vault/` (configured in `~/.hermes/config.yaml` and `~/AppData/Local/Hermes/config.yaml`)
+
+## Active Skills (Hermes)
+
+The following skills are registered as Hermes skills (invoke with `/<skill-name>`):
 
 | Skill | Purpose |
 |-------|---------|
-| `/note-ingestion` | Ingest source material into the DoubleHelix knowledge base. Full protocol: see `SKILL_note_ingestion.md`. Triggered by: "ingest this", "add to knowledge base", "create a note from this", etc. |
-| `/doublehelix-batch-ingestion` | Process the next 5 queued articles from `batch_queue_next.md`. Triggered by: "ingest the batch", "process the queue". |
-| `/llm-wiki` | Query the DoubleHelix vault and produce a written report. Triggered by: "what do I know about X", "search the KB for Z", "find notes about X". |
-| `/kb-scaffold` | Scaffold a new knowledge base folder with full structure. Triggered by: "create a new KB", "new knowledge base". |
-| `/inbox-maintenance` | Clean the DoubleHelix Inbox — remove duplicates, sanitize filenames. Triggered by: "clean inbox", "tidy inbox", "sanitize filenames". |
-| `/wiki-linker` | Build a deterministic link graph over DoubleHelix notes and inject discovered [[wikilinks]] as a "Referenced By" section. Triggered by: "build the link graph", "enrich links", "add missing wikilinks", "wiki-link". |
-| `/knowledge-base-health-check` | Audit a DoubleHelix knowledge base, auto-fix drift, flag judgement calls. Triggered by: "run a health check", "audit the [name] KB". |
+| `/note-ingestion` | Ingest source material into the active vault. Full protocol: `99.System/Vault Guides/SKILL_note_ingestion.md`. Triggered by: "ingest this", "add to knowledge base", "create a note from this", etc. |
+| `/knowledge-base-health-check` | Audit the active vault's knowledge bases, auto-fix drift, flag judgement calls. Triggered by: "run a health check", "audit the [name] KB". |
 | `/epub-utility-skill` | Extract text/content from EPUB files. |
 | `/pdf-ocr-utility` | OCR scanned PDFs, create searchable PDFs. |
 | `/video-transcriber-skill` | Transcribe videos, create Obsidian notes from video sources. |
 
-## DoubleHelix Protocol
-
-The DoubleHelix knowledge base is at `DoubleHelix/`. Its note ingestion protocol is the authoritative reference for creating notes — loaded via `/note-ingestion`.
-
-Key paths (relative to `DoubleHelix/`):
-- **Inbox:** `00.Inbox/` — raw source material arrives here
-- **Archive:** `99.System/InboxArchive/YYYY-MM/` — ingested sources archived here
-- **Registry:** `00.Inbox/_INGESTED.md` — tracks all ingested sources
-- **Knowledge bases:** `01.Knowledge/` — organized by topic
-- **Templates:** `99.System/Vault Guides/template_*.md`
-- **Wiki-linker adapter:** `.tools/wiki-compiler-adapter/` — build link graphs over the vault
-- **Ingest skill:** registered as `note-ingestion` (invoke with `/note-ingestion` — Hermes resolves by name, not path)
-
-## MCP Servers
-
-- **obsidian-vault** — points to `DoubleHelix/`; use for vault reads/writes
-- **powerbi-modeling-mcp** — Power BI data modeling tools
-
 ## Vault-Wide Rules
 
-- **RULE-1:** When `/note-ingestion` is triggered, follow the skill protocol. Do not improvise note structures or skip classification.
+- **RULE-1:** When `/note-ingestion` is triggered, load the skill and follow the protocol. Do not improvise note structures or skip classification.
 - **RULE-2:** Split aggressively. No cap on notes created. Every distinct concept gets its own note.
 - **RULE-3:** Before writing, check if a similar note already exists. Extend it rather than duplicate.
-- **RULE-4:** Archive source only after ALL notes are written and saved. Never archive a partially-ingested source.
+- **RULE-4:** No files in the vault root. Every file belongs in a named subfolder — never create loose files at `The Vault/` level.
+- **RULE-5:** Never create new folders without explicit permission. If a folder is needed, ask first. Do not infer or assume.
+- **RULE-6:** Archive only via `99.System/Scripts/safe_archive.py` — never raw `mv` or shutil.move. The script verifies that notes exist in the KB before archiving. If no notes are found it exits non-zero and the source stays in Inbox. Archive is optional: sources can remain in Inbox indefinitely after notes are written.
+- **RULE-7:** Delete temporary one-off scripts when they have completed their task. Never leave throwaway scripts sitting in the workspace.
+- **RULE-8:** Permanent reusable code (Python scripts, utilities, tools) goes in `99.System/Scripts/`. Ask before creating new files in that folder. Never put temporary scripts there.
+- **RULE-9:** After every ingestion session, run `find_orphans.py` to catch notes that weren't added to INDEX.md or whose `source:` frontmatter is wrong/missing. Run: `python 99.System/Scripts/find_orphans.py`. Exit code 1 means orphans found — fix them before declaring the session done.

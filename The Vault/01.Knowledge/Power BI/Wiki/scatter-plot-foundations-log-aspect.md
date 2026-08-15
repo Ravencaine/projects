@@ -16,7 +16,7 @@ Every point needs a valid X and Y value. Nulls treated as zeros, mixed units, du
 **2. Choose scale deliberately — linear vs log.**
 The choice is analytical, not cosmetic:
 - **Linear scale:** absolute differences are meaningful (x + 10)
-- **Log-log scale:** if a log-log transformation straightens a curve, you may have found a **power-law relationship** — a fundamental discovery about the data's nature
+- **Log-log scale:** if a log-log transformation straightens a curve, you may have found a **power-law relationship:** a fundamental discovery about the data's nature
 - **Log-x or log-y:** single-axis log when one variable spans orders of magnitude
 - Ask: "Am I interested in absolute or relative differences?" The scale answers that implicitly.
 

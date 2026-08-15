@@ -41,7 +41,7 @@ Use emojis to teach new users what actions are available:
 | 🔴 | Issue or alert |
 | 🧭 | Next action or recommendation |
 
-Consistent use across reports builds an organizational **visual language** — a small step toward better data culture.
+Consistent use across reports builds an organizational **visual language:** a small step toward better data culture.
 
 ## Related
 

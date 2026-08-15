@@ -73,7 +73,7 @@ Add `Date` to the X-axis and all three measures (`Average Vital`, `Max Vital`, `
 
 ### 3. Constrain the Y-axis with `Max Graph Area` / `Min Graph Area`
 
-These two measures inflate the natural min/max by 5% so the chart gets head/foot room. **Use these as the chart's Y-axis min and max** — not the natural Max Vital / Min Vital — so the chart edges don't slam against the top of the plot area:
+These two measures inflate the natural min/max by 5% so the chart gets head/foot room. **Use these as the chart's Y-axis min and max:** not the natural Max Vital / Min Vital — so the chart edges don't slam against the top of the plot area:
 
 ```dax
 Max Graph Area =
@@ -99,8 +99,8 @@ Assign both to the chart's Y-axis Minimum / Maximum via **Field value** (Visuali
 
 In the **Analytics** pane of the visualization, create error bars:
 
-- **Max Vital series** — Upper bound = `Max Graph Area`, Lower bound = `Max Vital`
-- **Min Vital series** — Upper bound = `Min Vital`, Lower bound = `Min Graph Area`
+- **Max Vital series:** Upper bound = `Max Graph Area`, Lower bound = `Max Vital`
+- **Min Vital series:** Upper bound = `Min Vital`, Lower bound = `Min Graph Area`
 - Enable only the **Error Band** option (not the line/bar caps). Set style to **Fill**. Set fill color to **white**. Transparency = **0%**.
 
 Then set the **line color** of both `Max Graph Area` and `Min Graph Area` series to **white** so the helper series disappear.

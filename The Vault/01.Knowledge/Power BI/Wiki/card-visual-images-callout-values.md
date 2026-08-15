@@ -11,8 +11,8 @@ tags: [powerbi, pattern, card-visual, image, icon]
 Each callout value in the new card visual can display an icon/image to its left or right.
 
 **Two image sources:**
-1. **Upload** — local image file stored in the PBIX
-2. **Image URL** — remote URL fetched at render time
+1. **Upload:** local image file stored in the PBIX
+2. **Image URL:** remote URL fetched at render time
 
 **Settings:**
 - `Image Type` → select `Image` or `Image URL` per series

@@ -1,43 +1,42 @@
 ---
-created: 2026-08-02
-updated: 2026-08-05
-source: How to Build Dynamic KPI Cards in Power BI Using Only Core Visuals
+created: 2026-08-06
+updated: 2026-08-06
+source: Button Slicer Level Up Your Power BI Reports!
 note_type: atomic
-tags: [powerbi, slicer, button, ui]
+tags: [button-slicer, power-bi, new-card-visual, visual-design]
 ---
 
 # Button Slicer
 
-A slicer visual in Power BI rendered as a list of clickable buttons instead of the default dropdown or list format.
+An interactive filtering control in Power BI that renders slicer items as styled buttons instead of a traditional list.
+
+<!-- one-line description: A slicer visual that displays filter options as interactive, styled buttons using the New Card visual -->
 
 ## Definition
 
-The Button Slicer is a slicer type (available from November 2023+) that displays its values as a set of formatted button tiles. It is used to drive DAX logic via `SELECTEDVALUE()` — the button selection changes the active filter context, which SWITCH statements read to alter measure outputs, chart axes, or text labels.
+The Button Slicer uses the **New Card visual** (preview feature) configured in slicer mode. Each slicer item renders as an individual button with its own shape, color, image, and conditional formatting — replacing the plain vertical list of the standard slicer.
 
 ## Key Points
 
-- Each button represents one value from a **disconnected helper table** — no relationship to the data model required
-- The slicer header becomes the section title (e.g. "Key Observations")
-- The Callout value label is bound to a DAX measure, so button text is fully dynamic
-- Conditional formatting (fill, border, hover) is applied per-button for visual polish
-- The underlying field drives `SELECTEDVALUE(HelperTable[Field])` in measures — selecting a button changes the return value of SELECTEDVALUE
+- Requires **File → Options → Preview features → "New card visual"** to be enabled
+- The "New slicer" in the visualization pane is actually a New Card visual in slicer mode
+- Each button supports four states: **Default, Hover, Pressed, Selected:** each independently formatable
+- Supports **images** via image URL fields (requires Data category → Image URL on the column)
+- Supports **conditional formatting** rules tied to data values (thresholds, saturation, color)
+- Supports **drill-through** page navigation via button actions
+- Shape options include rectangle, rounded rectangle, ellipse, and custom shapes
 
 ## Examples
 
-Binding a highlight measure to the Callout value label:
-```
-SELECTEDVALUE(Highlights[Order])  → returns 1, 2, 3, or 4
-SWITCH(
-    SELECTEDVALUE(Highlights[Order]),
-    1, [High OT Flag Highlight],
-    2, [Biggest Rise Highlight],
-    3, [Top Unit Highlight],
-    4, [Lowest Fill Rate Highlight]
-)
-```
+- E-commerce report: product photos on buttons → click to filter product gallery
+- Sales dashboard: region flags as button images → click to filter by country
+- HR report: department buttons with gold highlight for top-performing teams
+- KPI dashboard: period buttons that dim unselected periods for visual focus
+
+See also [[Image-URL-Data-Category]] for the data model requirement to display images in slicers.
 
 ## Related
 
-- [[Highlights-Table-Unconnected-Helper-Table]]
-- [[Dynamic-Chart-SWITCH-on-Button-Slicer]]
-- [[New-Power-BI-Slicer-Features]]
+- [[Create-a-Button-Slicer]] — step-by-step workflow
+- [[New-Power-BI-Slicer-Features]] — general new slicer capabilities
+- [[conditional-formatting-via-dax]] — conditional formatting techniques

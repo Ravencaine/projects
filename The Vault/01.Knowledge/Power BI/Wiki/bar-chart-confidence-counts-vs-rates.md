@@ -14,8 +14,8 @@ Most bar chart issues are question failures, not design failures.
 A solid rectangular bar implies certainty. Real-world data is rarely solid. A bar based on n=3 looks identical to a bar based on n=3,000.
 
 **Honest encoding for estimates:**
-1. **Show the N** — add sample size to the label (e.g., "n=47 per region"). Changes how readers interpret the result.
-2. **Add error bars** — show Standard Deviation or 95% Confidence Interval when data supports it.
+1. **Show the N:** add sample size to the label (e.g., "n=47 per region"). Changes how readers interpret the result.
+2. **Add error bars:** show Standard Deviation or 95% Confidence Interval when data supports it.
 3. **Reading rule:** If error bars overlap significantly, there is no winner. A taller bar with wide overlapping error bars may not be meaningfully different from a shorter one.
 
 **Counts vs. Rates (normalization trap):**

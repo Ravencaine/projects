@@ -17,7 +17,7 @@ The **Error Band** control (Analytics pane → Error bars → enable only "Error
 
 1. Set fill style to **Fill**.
 2. Set the fill color to **white** (or whatever colour matches the *background outside the plot area*).
-3. Set **Transparency = 0%** — fully opaque.
+3. Set **Transparency = 0%:** fully opaque.
 4. Bind the upper/lower bounds to deliberately inflated values that extend beyond the natural data range.
 
 The painted region looks like a solid blank rectangle, but it only covers the parts of the chart between the bounds — so it can be used to mask specific edges, corners, or ranges while leaving the rest of the chart intact.
@@ -45,9 +45,9 @@ Anything above `Max Vital` and anything below `Min Vital` becomes solid white. T
 
 ### Example 2 — Sketch ideas
 
-- **Letterboxed chart** — fill the top and bottom 10% of a tall chart white to leave only the middle band visible, mimicking a 16:9 cinematic crop on a chart meant to be embedded in a wider page.
-- **Notched sparkline** — fill the extreme left and right tails of a sparkline white to leave only the active data window.
-- **Rounded-corner card chart** — fill the four corners with white after overlaying a card-shaped background PNG to fake `border-radius` on a chart (Power BI does not support rounded plot areas natively).
+- **Letterboxed chart:** fill the top and bottom 10% of a tall chart white to leave only the middle band visible, mimicking a 16:9 cinematic crop on a chart meant to be embedded in a wider page.
+- **Notched sparkline:** fill the extreme left and right tails of a sparkline white to leave only the active data window.
+- **Rounded-corner card chart:** fill the four corners with white after overlaying a card-shaped background PNG to fake `border-radius` on a chart (Power BI does not support rounded plot areas natively).
 
 ## When to Use
 

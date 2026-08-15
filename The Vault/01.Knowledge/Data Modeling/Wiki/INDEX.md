@@ -115,7 +115,7 @@ Two patterns for combining batch and stream processing to serve both historical 
 | [[materialized-views-vs-regular-views-cetas]] | Materialized Views vs Regular Views (CETAS)
 
 Performance strategy for pre-computing complex dimension views — choosing b |
-| [[medallion-architecture]] | Medallion Architecture (Bronze / Silver / Gold)
+| [[medallion-architecture]] | Medallion Architecture (Bronze / Silver / Gold) ⭐ extended 2026-08-13
 
 A layered data lake organisation pattern that progressively cleanses an |
 | [[missing-prices-debug-root-cause]] | Missing Prices (Debug + Root Cause)
@@ -150,9 +150,32 @@ A table distribution strategy for Azure Synapse dedicated SQL Pool that broadcas
 | [[role-playing-dimension]] | Role-Playing Dimension
 
 A dimensional modelling pattern where the same dimension table is joined to a fact table multipl |
+| [[shared-dimensions-multi-fact]] | Shared Dimensions with Multiple Fact Tables
+
+Use one set of shared dimensions across all fact tables — not one dimension per fact |
+| [[conformed-dimensions]] | Conformed Dimensions
+
+Identical dimension definitions shared across fact tables, enabling cross-fact aggregation |
+
+Shared dimensions reduce model size, speed refresh, and enable clean cross-fact reporting |
+|| [[pitfall-duplicating-dimensions]] | Pitfall: Duplicating Dimensions Per Fact Table
+
+Creates separate dimension copies per fact — bloats model, slows refresh, breaks cross-fact reports |
+|| [[pitfall-consolidated-fact-tables]] | Pitfall: Consolidated (Appended) Fact Tables
+
+Appending fact tables into one creates blank values from unmatched fact-specific keys |
+|| [[implementing-star-schema-multi-fact]] | Implementing Star Schema with Multiple Fact Tables
+
+6-step workflow: identify shared dims, import once, create relationships, test cross-fact |
 | [[simple-vs-variant-products]] | Simple vs Variant Products
 
 The two fundamental product types in a retail dimension — each requiring different join and  |
+| [[handling-multiple-fact-tables-in-power-bi-source]] | Handling Multiple Fact Tables in Power BI — Source
+
+Article by Boniface Muchendu (DataBear) on multi-fact star schema; extracted 5 notes |
+| [[kimball-dimensional-modeling-case-study-baylas-2026.md]] | Kimball Dimensional Modeling Case Study — Baylas 2026
+
+Real-world data warehouse from scratch using Kimball + medallion + ELT; covers methodology choice, three-layer architecture, common cleansing problems, dimensional decisions, and data quality philosophy |
 | [[slow-power-bi-report-optimization-workflow]] | Source: Stop Building Slow Power BI Reports — A Data Pro's Checklist
 
 > Type: article
@@ -196,16 +219,34 @@ Detecting conflicting concept definitions across multiple Power BI dashboards an
 | [[schema-drift-column-rename-loss]] | Schema Drift — Column Rename $4.6M Loss
 
 Column rename causes AI agent to receive NULL values, resulting in $4.6M routing failure — prevented by drift detection |
-## Relationships & Cardinality  (2 notes)
+| [[Data-Modeling-Mistake-Missing-Date-Table]] | Data Modeling Mistake: Missing Dedicated Date Table — Fix Pattern |
+
+## Data Quality  (3 notes)
+
+| Note | Description |
+|------|-------------|
+| [[unique-key-that-isnt-primary-key-verification.md]] | Primary Key Verification — When a Unique Key Is Not Unique
+
+Always verify column uniqueness assumptions with COUNT(*) vs COUNT(DISTINCT); a non-unique key silently overwrites wrong rows in upsert logic |
+| [[same-code-different-meanings-code-column-reliability.md]] | Same Code, Different Meanings — Code Column Reliability
+
+Code columns can accumulate inconsistent meanings over time; exclude unreliable codes and use cleaned text as the natural key instead |
+| [[flag-and-preserve-data-quality-philosophy.md]] | Flag and Preserve — Data Quality Philosophy
+
+Never silently discard non-matching values; add is_matched flags and preserve raw values; transforms data quality from one-time cleanup into continuous improvement |
+
+## Relationships & Cardinality  (3 notes)
 
 | Note | Description |
 |------|-------------|
 | [[many-to-many-bridge-table-pattern]] | Many-to-Many Bridge Table Pattern
 
 A data modelling pattern that resolves survey response many-to-many relationships cle |
-| [[powerpivot-data-model-load-access-diagram-view-relationships]] | PowerPivot Data Model: Load from Access, Diagram View, Relationships
+| [[powerpivot-data-model-load-access-diagram-view-relationships]] | PowerPivot Data Model: Load from Access, Diagram View, Relationships |
 
 A step-by-step pattern for loading multiple relate |
+| [[Data-Modeling-Mistake-Broken-Relationships]] | Data Modeling Mistake: Broken Relationships — Symptoms and Fix Pattern |
+| [[Data-Modeling-Mistake-Bi-Directional-Filtering]] | Data Modeling Mistake: Overusing Bi-Directional Filtering — Fix Pattern |
 
 ## Architecture  (2 notes)
 
@@ -214,7 +255,47 @@ A step-by-step pattern for loading multiple relate |
 | [[data-lake-vs-data-warehouse]] | Data Lake vs Data Warehouse
 
 Two foundational storage patterns for analytical workloads — each optimised for different s |
-| [[data-warehouse-architectures-inmon-kimball-datavault]] | You just landed a job as a Data Architect, and you’re tasked with building the company’s brand-new data warehouse. |
+| [[data-warehouse-architectures-inmon-kimball-datavault]] | You just landed a job as a Data Architect
+| [[inmon-vs-kimball-vs-data-vault-decision-framework.md]] | Inmon vs Kimball vs Data Vault — Decision Framework
+
+Three methodologies compared: Inmon (top-down/3NF/EDW), Kimball (bottom-up/fact–dimension), Data Vault (Hubs/Links/Satellites) — fit depends on team size, speed, source volatility, and regulation |
+| [[medallion-architecture-raw-cleansed-dimensional.md]] | Medallion Architecture: Raw / Cleansed / Dimensional Layers |
+| [[Medallion-Architecture-Fabric.md]] | Medallion Architecture — Fabric: OneLake Direct Lake Extension |
+| [[Star-Schema-Fabric.md]] | Star Schema in Fabric: Anti-Patterns and Best Practices |
+
+Three-layer data warehouse architecture: raw (bronze) stores source-as-is; cleansed (silver) standardizes and establishes CDC; dimensional (gold) is the Kimball fact/dimension model for BI. |
+||| [[Source-Do-You-Really-Need-Medallion-Architecture.md]] | Do You Really Need Medallion Architecture? |
+| [[Medallion-Architecture-Layer-Selection-Pattern.md]] | Medallion Architecture Layer Selection Pattern
+| Bronze→Silver→Gold vs Landing→Curated→Analytics: driven by source schema volatility, team count, shared platform, data volume. Measure before adding layers. |
+| [[Medallion-Materialization-Overhead-Gotcha.md]] | Medallion Materialization Overhead Gotcha
+| Each materialized layer = ownership + maintenance + storage + monitoring boundary. Accumulation = more storage, orchestration, complexity. |
+| [[Avoid-Architecture-by-Habit-Gotcha.md]] | Avoid Architecture by Habit Gotcha
+| Teams implement Bronze→Silver→Gold without evaluating fit. Ask: schema change freq, team count, shared platform, need for intermediate datasets. |
+| [[Semantic-Model-Replaces-Gold-Layer.md]] | Semantic Model Replaces Gold Layer Aggregates Pattern
+| Power BI semantic model can calculate measures dynamically. Gold layer aggregates needed only for external tools, large datasets, cross-platform analytics. |
+| [[Materialized-Views-Data-Quality-Pattern.md]] | Materialized Views for Data Quality — Curated Layer Pattern
+| Fabric Lakehouse materialized views enforce NOT NULL, value constraints, positive values directly in Curated layer — eliminates separate Silver layer. |
+| [[Layers-Equal-Responsibility-Boundaries.md]] | Layers = Responsibility Boundaries Atomic
+| Each layer must have a distinct, unambiguous responsibility. If removing a layer hurts no one, it may not need to exist. Goal = clarity, not more layers. |
+| [[cdc-column-selection-created-vs-updated-vs-etl-date.md]] | CDC Column Selection — Created vs Updated vs ETL Date
+
+For upsert tables use updated date; for insert-only use created date; never use ETL run date — this decision propagates into every downstream load |
+| [[indexing-strategy-defer-until-schema-complete.md]] | Indexing Strategy — Defer Until Schema Complete
+
+Add indexes after schema is stabilized but before BI reporting begins; tie every decision to a concrete join or filter scenario; factor table write frequency into index count |, and you’re tasked with building the company’s brand-new data warehouse. |
+
+| [[junk-dimension-combine-vs-separate.md]] | Junk Dimension — Combine vs Separate Decision
+
+Combine low-cardinality related attributes into one table when always queried together; keep universal conformed dimensions (date, location) separate |
+| [[bridge-tables-many-to-many-list-unpivoting.md]] | Bridge Tables — Many-to-Many and List Unpivoting
+
+Intermediate table for many-to-many fact–dimension relationships; UNNEST comma-separated lists into rows; never assume two independent list columns are index-parallel |
+| [[multi-source-merge-archive-priority-load-sequencing.md]] | Multi-Source Merge — Archive Priority and Load Sequencing
+
+Archive version always takes priority; three-step load sequence: upsert archive, delete old active, upsert active — prevents silent double-counting |
+| [[surrogate-key-pragmatism-when-to-use-natural-keys.md]] | Surrogate Key Pragmatism — When to Use Natural Keys
+
+Use surrogate keys for low-cardinality dimensions; use natural keys (source UUID) for high-volume fact tables — avoids unnecessary lookup overhead |
 
 ## Concepts  (2 notes)
 
@@ -237,6 +318,9 @@ A Medium article by Jesse Ruiz presenting three conceptual da |
 | [[stop-building-slow-power-bi-reports-source]] | Stop Building Slow Power BI Reports: A Data Pro's Checklist
 
 A Medium article by Bill Donofrio presenting a 10-point che |
+| [[Author-Yadullah-Abidi]] | Yadullah Abidi
+
+MakeUseOf contributor — PostgreSQL, database design, Docker, Python, LLM integration. |
 | [[pl-line-structure-reference]] | P&L Line Structure Reference
 
 | [[5-Data-Cleaning-Mistakes-DigitalBYKewat-source.md]] | 5 Data Cleaning Mistakes That Ruin Your Dashboard (DigitalBYKewat)
@@ -276,3 +360,45 @@ Min/max QA check before publishing, median vs mean, data entry error investigati
 8-step ordered pipeline: Duplicate Check → Missing Value → Standardize → Validate → Outliers → Clean → Dashboard → Decisions.
 
 Standard account code ranges (100s-600s) and P&L section structure for corporate financial statements |
+
+| [[source-excel-postgres-weekend-yadullah.md]] | Excel was my Database for 15 Years, and Postgres ended that in a Weekend — Source
+
+Excel → Postgres migration; Yadullah Abidi, MakeUseOf 2026-07-29. |
+||| [[postgres-constraint-enforcement.md]] | Postgres Constraint Enforcement Pattern
+
+UNIQUE/NOT NULL/FOREIGN KEY/type constraints enforce data quality; VLOOKUP silent failure vs FK engine rejection. |
+||| [[normalized-tables-vs-flat-rows.md]] | Normalized Tables vs Flat Rows Atomic
+
+Schema design exposes duplicate/inconsistent data; same entity multiple times (spacing, case). |
+||| [[excel-to-postgres-migration-workflow.md]] | Excel to Postgres Migration Workflow
+
+Sketch schema → Docker Compose → pandas cleanup → psycopg2 insert → constraints catch bad data. |
+||| [[constraints-catch-bad-data-not-bad-formatting.md]] | Constraints Catch Bad Data Not Bad Formatting Atomic
+
+Constraints reject wrong types, orphans, duplicates — NOT inconsistent text (yes/Y/true); clean before insert. |
+||| [[database-schema-first-migration.md]] | Database Schema First Migration Pattern
+
+Design normalized schema before migration code; schema sketch is first data quality audit. |
+
+## Sources
+
+| Note | Description |
+|------|-------------|
+| [[Source-5-Mistakes-in-Power-BI-Data-Modeling]] | 5 Mistakes in Power BI Data Modeling (Anurodh Kumar, 2026-05-04) |
+
+## Imported from Raindrop / Medium Reading List
+- [[CHANGELOG|Changelog]]
+- [[modscape-an-ai-powered-data-modeling-tool-i-built|Modscape: An AI-Powered Data Modeling Tool I Built]]
+
+
+## Imported from Raindrop / Medium Reading List
+- [[dimensional-modeling-for-retail-product-variants-b4e6c1743382|Dimensional Modeling For Retail Product Variants B4e6c1743382]]
+- [[dimensional-modeling-for-retail-product-variants-pt-d02abbc97319|Dimensional Modeling For Retail Product Variants Pt D02abbc97319]]
+- [[dimensional-modeling-for-retail-product-variants-pt-efd14c680c3c|Dimensional Modeling For Retail Product Variants Pt Efd14c680c3c]]
+- [[graphing-unleashing-multi-dimensional-insights-in-one-power-bi-visual-a8c4e4a9b5|Graphing Unleashing Multi Dimensional Insights In One Power Bi Visual A8c4e4a9b5e4]]
+- [[or-dimension-the-all-in-one-guide-to-reading-data-model-and-nailing-the-intervie|Or Dimension The All In One Guide To Reading Data Model And Nailing The Interview 4d580d8fb0af]]
+- [[power-bi-introduction-to-data-modeling-0410bdb8c080|Power Bi Introduction To Data Modeling 0410bdb8c080]]
+- [[power-bi-introduction-to-data-modeling-part-c48c9043280f|Power Bi Introduction To Data Modeling Part C48c9043280f]]
+- [[star-schema-fact-tables-are-more-powerful-than-you-think-and-how-to-master-them-|Star Schema Fact Tables Are More Powerful Than You Think And How To Master Them Ac4739124da8]]
+- [[your-power-bi-slow-10-ways-to-optimize-your-data-model-6f3cc2f98398|Your Power Bi Slow 10 Ways To Optimize Your Data Model 6f3cc2f98398]]
+[[CHANGELOG]]

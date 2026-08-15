@@ -1,10 +1,10 @@
 ---
 title: "Easily Remove Blank Rows in a Table using Power Query(.pbix included)"
-source: "https://medium.com/@shashanka.shekhar02/easily-remove-blank-rows-in-a-table-using-power-query-pbix-included-780c4bd164a8"
+source: "https://medium.com/microsoft-power-bi/easily-remove-blank-rows-in-a-table-using-power-query-pbix-included-780c4bd164a8"
 author:
   - "[[Shashanka Shekhar]]"
 published: 2026-08-03
-created: 2026-08-03
+created: 2026-08-12
 description: "Cleaning and preparing data is one of the most common tasks in Power Query. Blank rows often sneak into tables during imports or merges, and if left unchecked, they can distort analysis, cause errors, or simply make reports look untidy. Fortunately, Power Query provides straightforward techniques to identify and eliminate these unnecessary rows, ensuring your dataset remains clean and reliable."
 Processed: "Unprocessed"
 ---
@@ -17,7 +17,7 @@ Processed: "Unprocessed"
 
 This is what we wish to achieve from left to right.
 
-![](99.System/Attachments/1!xzFb4BGFJnSt8XBr42rycg.png.webp)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*xzFb4BGFJnSt8XBr42rycg.png)
 
 **🎁** [**Get friend links for all of our 1500> Power BI learning articles here**](https://powerbi-masterclass.short.gy/learning-database?utm_source=medium&utm_medium=medium-post&utm_campaign=database-medium-post-start) **🎁**
 
@@ -31,7 +31,7 @@ Happy learning!
 
 The table is called **Dynamic\_Skip\_Rows.**
 
-![](99.System/Attachments/1!w8iU6ftqKQMFH9qA7hIdOw.png.webp)
+![](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*w8iU6ftqKQMFH9qA7hIdOw.png)
 
 The table is essentially a **training/course allocation record**, showing which students are enrolled in which advanced technical courses. The validation metrics highlight **data completeness and quality issues** in Columns 2 and 3, which may need cleaning before analysis.
 
@@ -39,7 +39,7 @@ The table is essentially a **training/course allocation record**, showing which 
 
 - In the **Home tab** press on the **Transform Data in the Queries section.**
 - It will open the **Power Query** window.
-![](99.System/Attachments/0!38YAru3jY2G2lI6U.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*38YAru3jY2G2lI6U.gif)
 
 In the Home tab press on the Transform Data in the Queries section
 
@@ -47,7 +47,7 @@ In the Home tab press on the Transform Data in the Queries section
 
 - Select the **Dynamic\_Skip\_Rows** table in Queries**.**
 - Click on **Advanced Editor tab.**
-![](99.System/Attachments/1!14F7wAne2xYQO8vud8hyKw.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*14F7wAne2xYQO8vud8hyKw.gif)
 
 Select the Dynamic\_Skip\_Rows table in Queries
 
@@ -66,22 +66,22 @@ in
     PromotedHeaders
 ```
 - All the blank rows got removed.
-![](99.System/Attachments/1!3oy_d8LooBdCSMJ0xX4tPw.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3oy_d8LooBdCSMJ0xX4tPw.gif)
 
 Now press Advanced Editor in Home tab and replace existing code with given code
 
 ## 4\. Applying The Changes And Completion:
 
 - Click on **Close & Apply** in the upper right column.
-![](99.System/Attachments/1!D5vG3JjFP1K6_Ctv7b3xlA.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*D5vG3JjFP1K6_Ctv7b3xlA.gif)
 
 - In the **Report view**, you will find the new table Invoked Function in the **Data** section on the right side**.**
 - Now in a **Table** visualization you can add the columns from new table for further analysis.
-![](99.System/Attachments/1!IhAh-GvyI-TcTph6Aa4Tmw.gif)
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*IhAh-GvyI-TcTph6Aa4Tmw.gif)
 
 > Download the data for the KPI from this [link](https://drive.google.com/file/d/18rVaub7tCQ5_5-qyjXO2B73r33AXud2x/view?usp=sharing).
 > 
-> Download the PBIX file from this [link](https://drive.google.com/file/d/18rVaub7tCQ5_5-qyjXO2B73r33AXud2x/view?usp=sharing).
+> Download the PBIX file from this [link](https://drive.google.com/file/d/1m1YVco3OegJri1ZFaa4TpglJS7vUBmIH/view?usp=sharing).
 
 ## [Shashanka Shekhar - Medium](https://medium.com/@shashanka.shekhar02?source=post_page-----780c4bd164a8---------------------------------------)
 

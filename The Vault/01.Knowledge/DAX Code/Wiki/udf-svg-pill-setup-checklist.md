@@ -56,7 +56,7 @@ DEFINE
     RETURN UDF_EncodeSVG(_svg)
 ```
 
-**Click "Update model with changes"** — this is required for the UDFs to be callable from measures.
+**Click "Update model with changes":** this is required for the UDFs to be callable from measures.
 
 ## Step 2 — Color Palette Measures
 

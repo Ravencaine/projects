@@ -56,3 +56,4 @@ Data Validation is advisory — a user can copy-paste a value that bypasses the 
 
 - [[Find-Replace-Ctrl-H]] — clean up existing typo variants first, then apply Data Validation
 - [[Highlight-Duplicates-Conditional-Formatting]] — review duplicates before applying validation rules
+- [[Excel-Table-Ctrl-T]] — apply Data Validation immediately after creating an Excel Table to lock down input

@@ -1,12 +1,25 @@
 ---
 created: 2026-08-02
-updated: 2026-08-02
+updated: 2026-08-11
 source: system:changelog
 ---
 
 # CHANGELOG
 
 All notable changes to this knowledge base are documented here.
+
+## 2026-08-11 — Health check (delta)
+
+Audit: 16 delta notes read. Delta since 2026-08-05.
+
+Auto-fixed:
+- writing-rules: 3 em-dash bullets replaced with colons across 3 files
+- frontmatter: 9 `updated:` fields backfilled
+
+New articles drafted: 0
+
+Pending judgement:
+- none
 
 ## 2026-08-05 — Health check (delta, vault-wide)
 

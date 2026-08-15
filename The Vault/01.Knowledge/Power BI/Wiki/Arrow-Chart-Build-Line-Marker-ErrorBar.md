@@ -13,7 +13,7 @@ Full build recipe for an Arrow chart in Power BI: a line chart with conditionall
 ## Step 1: Start with a Line Chart
 
 1. Plot your data as a **standard column chart** first to verify the data shape
-2. Convert to a **Line chart** — line charts provide clearer data points for marker manipulation
+2. Convert to a **Line chart:** line charts provide clearer data points for marker manipulation
 3. Add your time/category axis and the values you want to track
 
 ## Step 2: Create Period Comparison Measures

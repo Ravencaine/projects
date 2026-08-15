@@ -26,13 +26,13 @@ A 7-step repeatable routine to clean any new file in 3 minutes — turning chaot
 
 ## Why the Order Matters
 
-1. **Backup first** — you need an untouched copy if something goes wrong
-2. **TRIM before anything else** — spaces break VLOOKUP, merges, and duplicates
-3. **Duplicates after TRIM** — TRIM may create new duplicates by normalising spaces
-4. **Standardise after duplicates** — case/format fixes are cleaner once duplicates are resolved
-5. **Highlight blanks after standardising** — blanks may appear or disappear after format changes
-6. **Table after cleaning** — Table auto-expands the cleaned range, not the messy range
-7. **Verify totals last** — confirm the cleaned data makes sense before publishing
+1. **Backup first:** you need an untouched copy if something goes wrong
+2. **TRIM before anything else:** spaces break VLOOKUP, merges, and duplicates
+3. **Duplicates after TRIM:** TRIM may create new duplicates by normalising spaces
+4. **Standardise after duplicates:** case/format fixes are cleaner once duplicates are resolved
+5. **Highlight blanks after standardising:** blanks may appear or disappear after format changes
+6. **Table after cleaning:** Table auto-expands the cleaned range, not the messy range
+7. **Verify totals last:** confirm the cleaned data makes sense before publishing
 
 ## The Rule
 

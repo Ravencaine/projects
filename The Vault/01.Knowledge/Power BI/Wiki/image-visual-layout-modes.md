@@ -22,9 +22,9 @@ The revamped Image visual finally gives designers the layout controls standard i
 
 ## Design Impact
 
-- No more **warped logos** — Fit preserves aspect ratio
-- No more **stretched icons** — Scale responsively prevents distortion
-- No more **2-px border frustrations** — exact pixel control per element
+- No more **warped logos:** Fit preserves aspect ratio
+- No more **stretched icons:** Scale responsively prevents distortion
+- No more **2-px border frustrations:** exact pixel control per element
 - **Consistent rendering** across pages, devices, and canvas sizes
 
 ## Related

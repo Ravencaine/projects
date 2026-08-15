@@ -1,2 +1,66 @@
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+
+# Large binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.pak
+*.iso
+*.img
+
+# Archives (often large)
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.xz
+*.bz2
+
+# Videos / media
+*.mp4
+*.mkv
+*.mov
+*.avi
+*.wmv
+*.webm
+*.flv
+
+# Audio
+*.mp3
+*.wav
+*.flac
+*.ogg
+*.m4a
+
+# Images (large)
+*.psd
+*.ai
+*.sketch
+
+# Databases / caches
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Node
+node_modules/
+.pnp
+.pnp.js
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb

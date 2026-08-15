@@ -1,5 +1,107 @@
 
 
+## 2026-08-09 — Isabelle Bittar (KI Data Science) batch
+
+Sources: 1 file (Modern Oblique Area Chart Native Visuals, 2025-07-23) → 99.System/InboxArchive/2026-08/
+Notes: 5 written (DAX Code)
+KBs: DAX Code (5 notes)
+Author: Isabelle Bittar (KI Data Science) — new author
+
+New notes (Isabelle Bittar — Oblique Area Chart):
+- [[Measure-Type-Filter-Pattern]] — pattern — CALCULATE + FILTER on Measure Type text column; Average/Max/Min in one table
+- [[MAXX-MINX-ALL-Date-Dynamic-Range]] — atomic — MAXX(ALL(Date), [Max Vital]) removes date filter; sees full range regardless of context
+- [[Dynamic-Graph-Area-Buffer]] — pattern — Max+5% / Min-5%; buffer zone for white fill + dynamic Y-axis range
+- [[VAR-for-Intermediate-Measure-Calculation]] — atomic — VAR stores intermediate result; RETURN uses it; standard DAX multi-step pattern
+
+
+
+Sources: 3 files (Fix Incorrect Totals — Boniface Muchendu / Data Bear; From 59 Copy Pasted Measures to One Library — Fabric Community Blog / powerbiweekly, 2026-07-01; Find the products in the top 10 every year with DAX — Russo & Ferrari / SQLBI) → 99.System/InboxArchive/2026-08/
+Notes: 20 written (19 DAX Code + 1 Power BI)
+KBs: DAX Code (19 notes), Power BI (1 note)
+- [[Fix-Incorrect-Totals-SUMX-SUMMARIZE-Pattern]] — pattern — SUMX(SUMMARIZE(... CALCULATE(MAX/MIN/AVERAGE))) for correct totals in table/matrix
+- [[Totals-Wrong-Row-Context-Missing]] — atomic — total row evaluates under broader filter context; MAX/MIN/AVERAGE return global aggregate instead of sum of per-group values
+- [[Fix-Incorrect-Totals-Workflow]] — workflow — Power BI visual-level steps
+
+New notes (Fabric Community — DAX UDFs GA, 2026-07-01):
+- [[Source-DAX-UDFs-GA-59-Measures-to-One-Library]] — source — DAX UDFs (GA June 2026); 59-measure → ~20-UDF migration; typed parameters; value vs expression passing modes; TMDL version control; 5 dev entry points; compat level 1702
+- [[DAX-UDFs-vs-Calculation-Groups]] — atomic — UDFs change how logic is computed; calculation groups change which measure is selected; complementary
+- [[Value-vs-Expression-Parameter-Types]] — atomic — Value (NUMERIC etc.) evaluates eagerly; Expression (AnyRef, CalendarRef) passes unevaluated expression for CALCULATE control; wrong type = silent context bug
+- [[DAX-UDFs-Require-Compatibility-1702]] — atomic — UDFs unavailable below compat level 1702; FUNCTION block fails silently
+- [[dwp.SafeDivide]] — function — parameterized safe division; 6 copy-paste → 1 function; both NUMERIC params
+- [[dwp.ABCBand]] — function — ABC classification with optional TierA/TierB defaults (0.8/0.95); named-override syntax at call site
+- [[dwp.CurrencyAwareGrowth]] — function — AnyRef param + CALCULATE(MeasureExpr) gives correct context transition; NUMERIC param silently returns wrong total
+- [[Measure-Library-to-UDF-Migration]] — pattern — audit → categorize params → define with defaults → document → TMDL Git → deploy
+- [[DAX-UDF-Development-Environments]] — workflow — 5 entry points: DAX Query View, TMDL View, Model Explorer, XMLA/SSMS, Semantic Link Labs
+- [[Five-Minute-UDF-Audit]] — workflow — count duplicate IF(DIVIDE) → SafeDivide candidates; hardcoded SWITCH thresholds → banding UDF candidates
+- [[DAX-UDFs-Dont-Replace-Calculation-Groups]] — gotcha — UDFs and calculation groups solve different problems; don't make one do the other's job
+- [[AnyRef-Expression-Parameter-Bug]] — gotcha — NUMERIC param for measure evaluates too early; CALCULATE has no effect; total silently wrong; fix: AnyRef + CALCULATE
+- [[DAX-UDFs-Enable-AI-Copilot-Adoption]] — atomic — typed documented UDFs are the contract AI needs to use models correctly
+
+New notes (SQLBI — Top 10 Every Year):
+- [[Source-SQLBI-Top-10-Every-Year]] — source — SQLBI article
+- [[Evergreen-Top-N-Products]] — atomic — evergreen products: top-N appearing in ≥Coverage% of years
+- [[TopN-ProductKey-Override-Gotcha]] — gotcha — BestProds filter replaces outer ProductKey filter without KEEPFILTERS
+- [[Local.ComputeForBestProds]] — function — DAX UDF: evaluates any expression only for evergreen top-N products
+
+Extended notes:
+- [[query-measure-function-workflow]] — added TopN-ProductKey-Override-Gotcha + Evergreen-Top-N-Products
+- [[evergreen-top-n-products-pattern]] — added TopN-ProductKey-Override-Gotcha + Source-SQLBI-Top-10-Every-Year
+- [[groupby-sumx-currentgroup-constant-count-pattern]] — added TOPN-per-group (inside GENERATE) + slicer-aware wrapping + UDF-callable sort-expression idioms
+- [[generate]] — added generative semantics explanation + CALCULATETABLE+ALLSELECTED wrapping variant
+- [[currentgroup]] — added SUMX(CURRENTGROUP(), 1) count-via-constant idiom + variations table
+- [[Author-Marco-Russo-Alberto-Ferrari]] — added 5th source (Source-Find-Top-10-Products-Every-Year-DAX, 2025-11-03)
+
+Errors fixed: 0 | Link ops applied: 0
+
+## 2026-08-08 — Ingestion batch
+
+Sources: 1 file (Analyzing the Performance Impact of Visual Calculations — SQLBI, Russo & Ferrari) — pending archive
+Notes: 6 written (5 new + 1 extended) across 1 KB
+KBs: DAX Code
+Attachments: 5 PNGs (server timing screenshots, stored in Attachments/Visual-Calculations-Performance/)
+
+New notes:
+- [[Source-Analyzing-Visual-Calculations-Performance]] — source note
+- [[PREVIOUS-YoY-VC-Pattern]] — snippet — ready-to-use PREVIOUS(COLUMNS) YoY% for visual calculations
+- [[VC-Densification-Performance-Overhead]] — atomic — densification mechanism and performance numbers
+- [[VC-vs-Measure-Performance-Decision]] — pattern — decision tree for VC vs measure approach
+- [[VC-vs-Measure-Benchmark-Snippet]] — snippet — Contoso benchmark: VC 6s vs Measure 13s (small), VC 62s vs Measure 15.6s (large)
+- [[SUMMARIZECOLUMNS-Blank-Elimination-VC-Densification]] — pattern — blank elimination vs densification interaction
+
+Extended notes:
+- [[previous-next-period]] — added PREVIOUS VC variant section (distinct from PREVIOUSDAY/PREVIOUSMONTH family)
+
+Errors fixed: 0 | Link ops applied: 0
+
+## 2026-08-08 — Ingestion batch
+
+Sources: 1 file (Create calculation groups in Power BI — Microsoft Learn) — pending archive
+Notes: 6 written (4 new + 2 extended) across 1 KB
+KBs: DAX Code
+
+New notes:
+- [[Source-Create-Calculation-Groups-Power-BI]] — source note
+- [[CG-Creation-Power-BI-Model-View]] — workflow — create CG via Power BI Desktop Model View
+- [[CG-Dynamic-Format-String]] — pattern — dynamic format strings on calculation items
+- [[CG-Variant-Data-Type-Gotcha]] — gotcha — variant data type side effect when CGs are added
+- [[ISNUMERIC-Guard-Pattern-for-CG]] — pattern — ISNUMERIC guard for non-numeric measures in CGs
+- [[SELECTEDMEASURE-Function]] — function — DAX placeholder for CG expressions
+
+Extended notes:
+- [[Calculation-Groups]] — added Gotchas section (variant type, ISNUMERIC guard, implicit measures)
+- [[Create-a-Calculation-Group]] — added Power BI Desktop Model View as alternative creation path
+- [[TMDL-Syntax-Calculation-Group-Properties]] — added basic CG creation TMDL syntax from MS Learn
+
+Errors fixed: 0 | Link ops applied: 0
+
+## 2026-08-06 — Ingestion batch (×3)
+
+Sources: 3 files → 99.System/InboxArchive/2026-08/ (Calculation Groups in Power BI, Empty/Multiple Selection in CG, Controlling Format Strings in CG)
+Notes: 13 written across 1 KB (DAX Code)
+1 note extended: SELECTEDMEASURE.md
+Attachments downloaded: Implementing-Calculation-Groups-Gif-1.mp4, Slicer-From-Calculation-Group.mp4
+Errors fixed: 0 | Link ops applied: 0
+
 ## 2026-08-03 — Health check (delta, automated)
 
 Audit: 10 articles read (all modified today 2026-08-03) + 5 random.

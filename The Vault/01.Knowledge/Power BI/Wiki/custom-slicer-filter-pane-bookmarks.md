@@ -12,12 +12,12 @@ A collapsible filter panel built from shapes and bookmarks that hides on the can
 
 **6-step build:**
 
-1. **Filter button** — place an icon image on the canvas; assign a "Go to page" or "Bookmark" action to it
-2. **Panel skeleton** — on a dedicated section/page: background rectangle (styled), close button image (Flaticon or similar), transparent full-dashboard shape (to catch outside clicks)
-3. **Slicers** — add all required slicers inside the panel; ensure they are ordered in front of the transparent background shape
-4. **Bookmarks** — two bookmarks per page: "Filter Open" (panel visible, `Data=Off`, `All Visuals=Off`) and "Filter Close" (panel hidden); assign "Filter Open" to the icon action, "Filter Close" to the transparent background action
-5. **Applied filter indicator** — DAX measure showing current slicer selections; display at top of dashboard so users know what is filtered when panel is closed
-6. **Cross-page sync** — copy panel shapes to each page; new bookmarks per page; copy slicers separately (not inside the shape group) to enable the synchronization option
+1. **Filter button:** place an icon image on the canvas; assign a "Go to page" or "Bookmark" action to it
+2. **Panel skeleton:** on a dedicated section/page: background rectangle (styled), close button image (Flaticon or similar), transparent full-dashboard shape (to catch outside clicks)
+3. **Slicers:** add all required slicers inside the panel; ensure they are ordered in front of the transparent background shape
+4. **Bookmarks:** two bookmarks per page: "Filter Open" (panel visible, `Data=Off`, `All Visuals=Off`) and "Filter Close" (panel hidden); assign "Filter Open" to the icon action, "Filter Close" to the transparent background action
+5. **Applied filter indicator:** DAX measure showing current slicer selections; display at top of dashboard so users know what is filtered when panel is closed
+6. **Cross-page sync:** copy panel shapes to each page; new bookmarks per page; copy slicers separately (not inside the shape group) to enable the synchronization option
 
 **Key design rules:**
 - Synchronize slicers across pages so filter state persists

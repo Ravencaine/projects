@@ -1,21 +1,79 @@
 ---
-created: 2026-07-26
-updated: 2026-08-02
-source: dax.pdf
+created: 2026-08-09
+updated: 2026-08-09
+source: "DAX IF.EAGER Function in Power BI.md"
+source_url: https://databear.com/dax-if-eager-function-in-power-bi/
 note_type: function
-tags: [dax, function, dax]
+tags: [dax, function, conditional, if.eager, eager, evaluation, performance, databear, boniface-muchendu]
 ---
 
 # IF.EAGER
 
-Applies to: Calculated column Calculated table Measure Visual calculation Checks a condition, and returns one value when TRUE, otherwise it returns a second
+Evaluates both branch expressions regardless of the condition result. Eager evaluation ensures each measure in the branches is computed exactly once — unlike IF which evaluates ResultIfFalse twice (once for the condition, once as the return value).
 
 ## Syntax
 
 ```dax
-IF.EAGER(<logical_test>, <value_if_true>[, <value_if_false>])
+IF.EAGER(<LogicalTest>, <ResultIfTrue> [, <ResultIfFalse>])
 ```
 
-## Remarks
+## Parameters
 
-The IF.EAGER function can return a variant data type if value_if_true and value_if_false are of different data types, but the function attempts to return a single data type if both value_if_true and value_if_false are of numeric data types. In the latter case, the IF.EAGER function will implicitly convert data types to accommodate both values.
+| Parameter | Description |
+|-----------|-------------|
+| `LogicalTest` | Any expression returning TRUE or FALSE |
+| `ResultIfTrue` | Returned when LogicalTest is TRUE |
+| `ResultIfFalse` | Returned when LogicalTest is FALSE |
+
+## Returns
+
+One of the two result values depending on the condition.
+
+## IF vs IF.EAGER
+
+| Function | TRUE branch evaluation | FALSE branch evaluation |
+|----------|----------------------|----------------------|
+| `IF` | Evaluates ResultIfTrue once | Evaluates ResultIfFalse twice (condition + return) |
+| `IF.EAGER` | Evaluates ResultIfTrue once | Evaluates ResultIfFalse once |
+
+## Example
+
+```dax
+Bigger each month =
+IF.EAGER(
+    [Last month] > [This month],
+    [Last month],
+    [This month]
+)
+```
+
+## When to Use IF.EAGER
+
+- Both branches contain measure references that are expensive to compute
+- The same measure appears in both branches
+- Branch evaluation cost is comparable to the condition overhead
+- Measure references are complex enough that double evaluation is measurable
+
+## When NOT to Use IF.EAGER
+
+- Branches contain simple arithmetic or column references (negligible cost)
+- Using variables captures branch values cleanly (IF with VAR):
+
+```dax
+Bigger and better =
+VAR ThisMonth = [This month]
+VAR LastMonth  = [Last month]
+RETURN
+    IF(
+        LastMonth > ThisMonth,
+        LastMonth,
+        ThisMonth
+    )
+```
+
+The VAR approach evaluates each measure exactly once and makes the intent explicit. Prefer this pattern for clarity unless profiling shows IF.EAGER is necessary.
+
+## Related
+
+- [[if]] — standard IF (lazy evaluation)
+- [[dax-performance-patterns]] — broader performance considerations

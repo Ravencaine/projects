@@ -16,14 +16,14 @@ Display pairwise Pearson correlation coefficients between N numeric variables in
 
 ## Components
 
-1. **`VariablesX` / `VariablesY`** — disconnected calculated tables (DATATABLE) listing variable names
-2. **`Correlation`** — core Pearson measure using `SUMMARIZE`, `ADDCOLUMNS`, `SWITCH`, `SUMX`, `SQRT`, `AVERAGEX`
-3. **`Correlation (Lower Triangle, No Diagonal)`** — display modifier hiding the upper triangle and diagonal
-4. **Color palette measures** — `_Color *` static color string measures
-5. **`Correlation Color (Buckets)`** — background color per correlation bucket
-6. **`Correlation Font Color`** — font color (white on dark buckets, black on light)
-7. **Tooltip page** — scatter chart with `X Value`, `Y Value`, `Scatter Title`, `Scatter Subtitle (HTML)`
-8. **`Selected X Name` / `Selected Y Name`** — captures the currently selected row/column variable name
+1. **`VariablesX` / `VariablesY`:** disconnected calculated tables (DATATABLE) listing variable names
+2. **`Correlation`:** core Pearson measure using `SUMMARIZE`, `ADDCOLUMNS`, `SWITCH`, `SUMX`, `SQRT`, `AVERAGEX`
+3. **`Correlation (Lower Triangle, No Diagonal)`:** display modifier hiding the upper triangle and diagonal
+4. **Color palette measures:** `_Color *` static color string measures
+5. **`Correlation Color (Buckets)`:** background color per correlation bucket
+6. **`Correlation Font Color`:** font color (white on dark buckets, black on light)
+7. **Tooltip page:** scatter chart with `X Value`, `Y Value`, `Scatter Title`, `Scatter Subtitle (HTML)`
+8. **`Selected X Name` / `Selected Y Name`:** captures the currently selected row/column variable name
 
 ## Structure
 

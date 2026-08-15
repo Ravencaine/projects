@@ -85,9 +85,11 @@
 || 2026-07-29 | DAX for Humans (Deckler, Packt 2025) | DAX Code | comparison | when-measure-library-architecture-is-essential |
 || 2026-07-29 | DAX for Humans (Deckler, Packt 2025) | DAX Code | pattern | customer-acquisition-cost-cac-dax |
 || 2026-07-29 | DAX for Humans (Deckler, Packt 2025) | DAX Code | pattern | x-aggregators-sumx-minx-maxx |---
-last_updated: 2026-07-28
-last_audit: 2026-08-03  # 2026-08-03
-last_audit: 2026-07-29
+last_updated: 2026-08-06
+last_audit: 2026-08-13
+last_audit: 2026-08-13
+last_audit: 2026-08-13
+last_audit: 2026-08-13
 # (updated: all 209 Dunlop notes passed full frontmatter audit)
 ---
 
@@ -1971,3 +1973,581 @@ last_audit: 2026-07-29
 || 2026-08-05 | Avoiding Pitfalls in Calculation Groups Precedence | DAX Code | atomic | report-filter-vs-measure-cg-behaviour | yes | 0 | 2 |
 || 2026-08-05 | Avoiding Pitfalls in Calculation Groups Precedence | DAX Code | gotcha | nested-calculate-does-not-change-cg-application-order | yes | 0 | 2 |
 || 2026-08-05 | Avoiding Pitfalls in Calculation Groups Precedence | DAX Code | gotcha | measure-that-applies-cg-overrides-precedence | yes | 0 | 2 |
+|| [[avoiding-pitfalls-calculation-groups-precedence-source]](01.Knowledge/DAX Code/Wiki/avoiding-pitfalls-calculation-groups-precedence-source.md) | DAX Code | yes | 0 | 1 | 0 |
+|| [[calculation-item-applies-only-to-measure-reference]](01.Knowledge/DAX Code/Wiki/calculation-item-applies-only-to-measure-reference.md) | DAX Code | yes | 0 | 0 | 0 |
+|| [[precedence-controls-application-not-evaluation]](01.Knowledge/DAX Code/Wiki/precedence-controls-application-not-evaluation.md) | DAX Code | yes | 0 | 0 | 0 |
+|| [[nested-calculate-does-not-change-application-order]](01.Knowledge/DAX Code/Wiki/nested-calculate-does-not-change-application-order.md) | DAX Code | yes | 0 | 0 | 0 |
+|| [[measure-applied-calculation-item-overrides-precedence]](01.Knowledge/DAX Code/Wiki/measure-applied-calculation-item-overrides-precedence.md) | DAX Code | yes | 0 | 0 | 0 |
+|| [[measure-calculate-calc-item-breaks-precedence]](01.Knowledge/DAX Code/Wiki/measure-calculate-calc-item-breaks-precedence.md) | DAX Code | yes | 0 | 1 | 0 |
+|| [[just2times10-measure-overrides-precedence]](01.Knowledge/DAX Code/Wiki/just2times10-measure-overrides-precedence.md) | DAX Code | yes | 0 | 1 | 0 |
+|| [[sqlbi-calculation-groups-article-map]](01.Knowledge/DAX Code/Wiki/sqlbi-calculation-groups-article-map.md) | DAX Code | yes | 0 | 1 | 0 |
+|| [[dynamic-auto-sorting-bar-chart-excel]](01.Knowledge/Excel/Wiki/dynamic-auto-sorting-bar-chart-excel.md) | Excel | yes | 0 | 0 | 0 |
+|| [[large-data-table-ux-power-bi]](01.Knowledge/Power BI/Wiki/large-data-table-ux-power-bi.md) | Power BI | yes | 0 | 0 | 0 |
+|| [[bookmarks-in-power-bi-complete-guide]](01.Knowledge/Power BI/Wiki/bookmarks-in-power-bi-complete-guide.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+|| [[kpi-card-arrow-color-from-growth]](01.Knowledge/DAX Code/Wiki/kpi-card-arrow-color-from-growth.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+|| [[kpi-card-growth-summary-text]](01.Knowledge/DAX Code/Wiki/kpi-card-growth-summary-text.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+|| [[kpi-card-growth-percent-divide]](01.Knowledge/DAX Code/Wiki/kpi-card-growth-percent-divide.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+|| [[kpi-card-context-preserving-measures]](01.Knowledge/DAX Code/Wiki/kpi-card-context-preserving-measures.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+|| [[kpi-card-html-content-dax]](01.Knowledge/Power BI/Wiki/kpi-card-html-content-dax.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+|| [[kimball-dimensional-modeling-case-study-baylas-2026]](01.Knowledge/Data Modeling/Wiki/kimball-dimensional-modeling-case-study-baylas-2026.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[inmon-vs-kimball-vs-data-vault-decision-framework]](01.Knowledge/Data Modeling/Wiki/inmon-vs-kimball-vs-data-vault-decision-framework.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[medallion-architecture-raw-cleansed-dimensional]](01.Knowledge/Data Modeling/Wiki/medallion-architecture-raw-cleansed-dimensional.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[cdc-column-selection-created-vs-updated-vs-etl-date]](01.Knowledge/Data Modeling/Wiki/cdc-column-selection-created-vs-updated-vs-etl-date.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[unique-key-that-isnt-primary-key-verification]](01.Knowledge/Data Modeling/Wiki/unique-key-that-isnt-primary-key-verification.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[same-code-different-meanings-code-column-reliability]](01.Knowledge/Data Modeling/Wiki/same-code-different-meanings-code-column-reliability.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[flag-and-preserve-data-quality-philosophy]](01.Knowledge/Data Modeling/Wiki/flag-and-preserve-data-quality-philosophy.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[junk-dimension-combine-vs-separate]](01.Knowledge/Data Modeling/Wiki/junk-dimension-combine-vs-separate.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[bridge-tables-many-to-many-list-unpivoting]](01.Knowledge/Data Modeling/Wiki/bridge-tables-many-to-many-list-unpivoting.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[multi-source-merge-archive-priority-load-sequencing]](01.Knowledge/Data Modeling/Wiki/multi-source-merge-archive-priority-load-sequencing.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[indexing-strategy-defer-until-schema-complete]](01.Knowledge/Data Modeling/Wiki/indexing-strategy-defer-until-schema-complete.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+|| [[surrogate-key-pragmatism-when-to-use-natural-keys]](01.Knowledge/Data Modeling/Wiki/surrogate-key-pragmatism-when-to-use-natural-keys.md) | Data Modeling | 2026-08-06 | yes | 0 | 0 |
+
+|| [[Button-Slicer]](01.Knowledge/Power BI/Wiki/Button-Slicer.md) | Power BI | 2026-08-06 | yes | 0 | 1 |
+|| [[Create-a-Button-Slicer]](01.Knowledge/Power BI/Wiki/Create-a-Button-Slicer.md) | Power BI | 2026-08-06 | yes | 0 | 1 |
+|| [[Conditional-Button-Slicer]](01.Knowledge/Power BI/Wiki/Conditional-Button-Slicer.md) | Power BI | 2026-08-06 | yes | 0 | 1 |
+|| [[Button-Slicer-Formatting-Options]](01.Knowledge/Power BI/Wiki/Button-Slicer-Formatting-Options.md) | Power BI | 2026-08-06 | yes | 0 | 1 |
+|| [[Source-Button-Slicer-Level-Up-Your-Power-BI-Reports]](01.Knowledge/Power BI/Wiki/Source-Button-Slicer-Level-Up-Your-Power-BI-Reports.md) | Power BI | 2026-08-06 | yes | 0 | 1 |
+
+| [[Calculation-Groups]](01.Knowledge/DAX Code/Wiki/Calculation-Groups.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Create-a-Calculation-Group]](01.Knowledge/DAX Code/Wiki/Create-a-Calculation-Group.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Calculation-Group-External-Tools]](01.Knowledge/DAX Code/Wiki/Calculation-Group-External-Tools.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Source-Calculation-Groups-in-Power-BI]](01.Knowledge/DAX Code/Wiki/Source-Calculation-Groups-in-Power-BI.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Claude-Power-BI-MCP-Integration]](01.Knowledge/Power BI/Wiki/Claude-Power-BI-MCP-Integration.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Connect-Claude-to-Power-BI-via-MCP]](01.Knowledge/Power BI/Wiki/Connect-Claude-to-Power-BI-via-MCP.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[7-AI-Prompts-for-Power-BI-MCP]](01.Knowledge/Power BI/Wiki/7-AI-Prompts-for-Power-BI-MCP.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Source-Claude-Power-BI-MCP-Integration]](01.Knowledge/Power BI/Wiki/Source-Claude-Power-BI-MCP-Integration.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Conditional-Formatting-in-Multi-Row-Card-Visuals]](01.Knowledge/Power BI/Wiki/Conditional-Formatting-in-Multi-Row-Card-Visuals.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[UNICHAR-based-Conditional-Formatting-Pattern]](01.Knowledge/Power BI/Wiki/UNICHAR-based-Conditional-Formatting-Pattern.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Add-Conditional-Formatting-to-Multi-Row-Card]](01.Knowledge/Power BI/Wiki/Add-Conditional-Formatting-to-Multi-Row-Card.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[UNICHAR-Icon-Codes-Reference]](01.Knowledge/Power BI/Wiki/UNICHAR-Icon-Codes-Reference.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Source-Conditional-Formatting-in-Power-BI-Multi-Row-Card-Visuals]](01.Knowledge/Power BI/Wiki/Source-Conditional-Formatting-in-Power-BI-Multi-Row-Card-Visuals.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Conditional-Formatting-in-Power-BI]](01.Knowledge/Power BI/Wiki/Conditional-Formatting-in-Power-BI.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Conditional-Formatting-Types-Quick-Reference]](01.Knowledge/Power BI/Wiki/Conditional-Formatting-Types-Quick-Reference.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Source-Conditional-Formatting-in-Power-BI]](01.Knowledge/Power BI/Wiki/Source-Conditional-Formatting-in-Power-BI.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Author-Annamarie-Van-Wyk]](01.Knowledge/Power BI/Wiki/Author-Annamarie-Van-Wyk.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Conditional-Color-Coding-Line-Charts-in-Power-BI]](01.Knowledge/Power BI/Wiki/Conditional-Color-Coding-Line-Charts-in-Power-BI.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Line-Chart-Overlay-Pattern-for-Conditional-Color]](01.Knowledge/Power BI/Wiki/Line-Chart-Overlay-Pattern-for-Conditional-Color.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Build-a-Conditionally-Color-Coded-Line-Chart]](01.Knowledge/Power BI/Wiki/Build-a-Conditionally-Color-Coded-Line-Chart.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Source-Conditionally-Color-Coding-Line-Charts-in-Power-BI]](01.Knowledge/Power BI/Wiki/Source-Conditionally-Color-Coding-Line-Charts-in-Power-BI.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Controlling-Calculation-Group-Selection]](01.Knowledge/DAX Code/Wiki/Controlling-Calculation-Group-Selection.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Calculation-Group-Multiple-Selection-Pattern]](01.Knowledge/DAX Code/Wiki/Calculation-Group-Multiple-Selection-Pattern.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Calculation-Group-No-Selection-Default-Pattern]](01.Knowledge/DAX Code/Wiki/Calculation-Group-No-Selection-Default-Pattern.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[TMDL-Syntax-Calculation-Group-Properties]](01.Knowledge/DAX Code/Wiki/TMDL-Syntax-Calculation-Group-Properties.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Source-Controlling-Empty-or-Multiple-Selections-in-Calculation-Groups]](01.Knowledge/DAX Code/Wiki/Source-Controlling-Empty-or-Multiple-Selections-in-Calculation-Groups.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Author-Marco-Russo-Alberto-Ferrari]](01.Knowledge/DAX Code/Wiki/Author-Marco-Russo-Alberto-Ferrari.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Format-String-Expression-in-Calculation-Groups]](01.Knowledge/DAX Code/Wiki/Format-String-Expression-in-Calculation-Groups.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Currency-Conversion-Format-String-Pattern]](01.Knowledge/DAX Code/Wiki/Currency-Conversion-Format-String-Pattern.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Source-Controlling-Format-Strings-in-Calculation-Groups]](01.Knowledge/DAX Code/Wiki/Source-Controlling-Format-Strings-in-Calculation-Groups.md) | DAX Code | 2026-08-06 | yes | 0 | 0 |
+
+| [[Countdown-Timer-in-Power-BI]](01.Knowledge/Power BI/Wiki/Countdown-Timer-in-Power-BI.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Power-BI-Countdown-Timer-Patterns]](01.Knowledge/Power BI/Wiki/Power-BI-Countdown-Timer-Patterns.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+
+| [[Source-Countdown-Timer-in-Power-BI-Beginner-to-Advanced-Guide]](01.Knowledge/Power BI/Wiki/Source-Countdown-Timer-in-Power-BI-Beginner-to-Advanced-Guide.md) | Power BI | 2026-08-06 | yes | 0 | 0 |
+| Source-Crafting-Compelling-Impactful-Power-BI-Reports | Power BI | 2026-08-08 | yes | 0 | 0 |
+| Report-Structural-Integrity | Power BI | 2026-08-08 | yes | 0 | 0 |
+| Data-Accuracy-and-Reliability | Power BI | 2026-08-08 | yes | 0 | 0 |
+| Power-BI-Interactive-Features | Power BI | 2026-08-08 | yes | 0 | 0 |
+| Source-Create-Calculation-Groups-Power-BI | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| CG-Creation-Power-BI-Model-View | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| CG-Dynamic-Format-String | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| CG-Variant-Data-Type-Gotcha | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| ISNUMERIC-Guard-Pattern-for-CG | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| selectedmeasure | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| Source-Analyzing-Visual-Calculations-Performance | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| PREVIOUS-YoY-VC-Pattern | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| VC-Densification-Performance-Overhead | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| VC-vs-Measure-Performance-Decision | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| VC-vs-Measure-Benchmark-Snippet | DAX Code | 2026-08-08 | yes | 0 | 0 |
+| SUMMARIZECOLUMNS-Blank-Elimination-VC-Densification | DAX Code | 2026-08-08 | yes | 0 | 0 |
+
+
+
+
+| Source-5-Power-BI-Slicer-Tricks-Goodly | Power BI | 2026-08-08 | yes | 0 | 3 |
+| Slicer-Default-Selection-Current-Month | Power BI | 2026-08-08 | yes | 0 | 0 |
+| Slicer-Apply-All-Clear-All-Buttons | Power BI | 2026-08-08 | yes | 0 | 0 |
+| Field-Parameters-Show-Values | Power BI | 2026-08-08 | yes | 0 | 0 |
+| Slicer-Highlight-vs-Filter | Power BI | 2026-08-08 | yes | 0 | 2 |
+| Field-Parameters-KPI-Hierarchy | Power BI | 2026-08-08 | yes | 0 | 0 |
+| Slicer-Highlight-Measure-IN-VALUES-Snippet | Power BI | 2026-08-08 | yes | 0 | 1 |
+| Disconnected-Table-Slicer-Pattern | Power BI | 2026-08-08 | yes | 0 | 1 |
+| Source-6-Excel-Features-Tony-Phillips | Excel | 2026-08-08 | yes | 0 | 0 |
+| Source-Creating-a-Custom-KPI-Scorecard-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 13 |
+| KPI-Scorecard-UNICHAR-SWITCH-Workflow | Power BI | 2026-08-09 | yes | 0 | 4 |
+| UNICHAR-KPI-Indicator-SWITCH-Pattern | Power BI | 2026-08-09 | yes | 0 | 2 |
+| Source-Creating-a-Drillthrough-Button-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Drillthrough-Page-Button-Setup | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Drillthrough-Page-DT-Prefix | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Creating-Functions-for-the-Like-for-Like-DAX-Pattern | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Model-Dependent-vs-Model-Independent-UDFs | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| DaxPatterns-LikeForLike-Library | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Local-Wrapper-UDF-Pattern | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| UDF-Generalization-Workflow | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Source-CROSSFILTER-Function-Control-Relationships-in-Power-BI-DAX | Power BI | 2026-08-09 | yes | 0 | 0 |
+| CROSSFILTER-Oneway-Directional-Options | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Data-Analysis-Expressions-DAX-in-Power-BI | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| FILTER-Dimension-Not-Fact-Performance | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Virtual-Table-Debugging-via-Calculated-Tables | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-Calendar-Based-Time-Intelligence | Power BI | 2026-08-09 | yes | 0 | 0 |
+| [[Source-SQLBI-Top-10-Every-Year]](01.Knowledge/DAX Code/Wiki/Source-SQLBI-Top-10-Every-Year.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[Evergreen-Top-N-Products]](01.Knowledge/DAX Code/Wiki/Evergreen-Top-N-Products.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[TopN-ProductKey-Override-Gotcha]](01.Knowledge/DAX Code/Wiki/TopN-ProductKey-Override-Gotcha.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[Local.ComputeForBestProds]](01.Knowledge/DAX Code/Wiki/Local.ComputeForBestProds.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+
+| Calendar-Based-Time-Intelligence-Column-Deletion-Gotcha | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-Row-Context-Explained-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-Context-Transition-Explained-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-Fusion-Techniques-to-Maximize-Power-BI-Performance | Power BI | 2026-08-09 | yes | 0 | 0 |
+| IF.EAGER | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-User-Defined-Functions-vs-Calculation-Groups | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| UDF-vs-Calculation-Groups-Comparison | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-Query-View-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-Query-View-in-Power-BI-2 | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Button-Slicer-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Day-Level-Slicer-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Modern-Visual-Defaults-and-Customizing-Theme-Preview | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-X-Functions-in-Power-BI-Explained | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Source-Dynamic-Row-level-Security-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Enhance-Your-Power-BI-Reports-with-Slicer-Panels | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Slicer-Panel-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Error-Handling-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Excel-Integration-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Dynamic-Power-BI-Reports-Using-Parameters | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Do-You-Need-a-Silver-Layer-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Dynamic-Data-Masking-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Dynamic-Format-Strings-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Essential-Box-Plots-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Enhancing-Power-BI-Reports-with-AI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| AI-Assisted-Report-Building-Accessibility-Drift-Gotcha | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-Fundamentals-Part-3-Havens | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Storage-Engine-vs-Formula-Engine-Comparison | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-vs-Excel-Formulas | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Excel-vs-DAX-Cell-Based-vs-Context-Driven | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Source-Deep-dive-conditional-formatting-lines-legends | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Dynamic-Single-Slicer-using-DAX-logic | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Dynamic-Single-Slicer-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Dynamic-Single-Slicer-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Date-Picker-Slicer-Preview | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Last-Full-Month-Date-Picker-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Compact-Date-Picker-Slicer-Formatting-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Date-Range-Beyond-Available-Data | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Partial-Month-Decline-Gotcha | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Future-Dates-Date-Table-Gotcha | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Date-Picker-Slicer-Dual-Summary-Model | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Tooltip-Options-Generally-Available | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Tooltip-Type-Selection-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Sentence-Format-Template-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Drillable-Hierarchy-Sentence-Tooltip-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Field-Parameters-Sentence-Tooltip-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Data-Tooltip-vs-Help-Tooltip | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Report-Page-Tooltip-Non-Interactive-Limitation | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Designing-for-Impact-6-Ideas | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Content-Hierarchy-Planning-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Dashboard-Container-Layout-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Summary-Overview-Page-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Non-Data-Savvy-User-Design-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| White-Space-Progressive-Disclosure-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Design-Trends-in-Power-BI-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Designing-for-Vulnerability-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Toolbar-Centralization-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Drill-Downs-Unfamiliar-to-Users-Gotcha | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Design-Trends-Raise-Expectations-Gotcha | Power BI | 2026-08-09 | yes | 0 | 0 |
+| End-User-vs-Sponsor-vs-Developer | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Container-Over-Content-Atomic | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Do-You-Really-Need-Medallion-Architecture | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Medallion-Architecture-Layer-Selection-Pattern | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Medallion-Materialization-Overhead-Gotcha | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Avoid-Architecture-by-Habit-Gotcha | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Semantic-Model-Replaces-Gold-Layer | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Materialized-Views-Data-Quality-Pattern | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Layers-Equal-Responsibility-Boundaries | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Source-Dynamic-formatting-ISINSCOPE-ISATLEVEL | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| SWITCH-Level-Dispatch-Pattern | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| ISINSCOPE-Per-Level-Conditional-Formatting | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| ISATLEVEL-Visual-Calculation | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| COLLAPSE-COLLAPSEALL-Hierarchy-Navigation | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| SWITCH-Specificity-Ordering | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| ISINSCOPE-vs-ISATLEVEL-Architectural-Location | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| REMOVEFILTERS-vs-ALLSELECTED-for-Per-Level-Rules | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| SWITCH-Condition-Order-Matters-Gotcha | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Choose-ISINSCOPE-vs-ISATLEVEL-Workflow | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Synoptic-Panel-Level-Detection-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Document-Dataflows-Gen1-CoWork | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Document-Dataflows-Gen1-with-CoWork-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| CoWork-Skill-from-Input-Output-Samples | Power BI | 2026-08-09 | yes | 0 | 0 |
+| CoWork-Skill-Quality-Report | Power BI | 2026-08-09 | yes | 0 | 0 |
+| CoWork-vs-Copilot-Agent | Power BI | 2026-08-09 | yes | 0 | 0 |
+| CoWork-Skill-Guardrails | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Dataflows-Gen1-Legacy-Status | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Skill-Guardrails-Design-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Invoked-Function-Separate-Table-Atomic | Power Query | 2026-08-09 | yes | 0 | 0 |
+| Source-Remove-Blank-Rows-Power-Query | Power Query | 2026-08-09 | yes | 0 | 0 |
+| Filter-Blank-Rows-SelectRows-Atomic | Power Query | 2026-08-09 | yes | 0 | 0 |
+| Blank-Row-One-Column-vs-All-Columns-Atomic | Power Query | 2026-08-09 | yes | 0 | 0 |
+| Remove-Blank-Rows-Advanced-Editor-Workflow | Power Query | 2026-08-09 | yes | 0 | 0 |
+| Source-Custom-Icons-Power-BI-Tables | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Custom-Icons-JSON-Theme-Cell-Element-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| SVG-to-Theme-URL-Transformation | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Custom-Icons-vs-SVG-Columns | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Icon-Sizing-Limitation | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Embed-Custom-Icons-Theme-Workflow | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Icons-Numerical-Values-Min-Max-Gotcha | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Supported-Icon-Formats | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-HTML-CSS-Joining-Forces-FP20 | Power BI | 2026-08-09 | yes | 0 | 0 |
+| HTML-Measure-Integration-Pattern | Power BI | 2026-08-09 | yes | 0 | 0 |
+| HTML-Shape-Measure-Template | Power BI | 2026-08-09 | yes | 0 | 0 |
+| HTML-Style-Tags-in-DAX | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Font-Awesome-DAX-Icon-Measure | Power BI | 2026-08-09 | yes | 0 | 0 |
+| SUBSTITUTE-Placeholder-Chaining | Power BI | 2026-08-09 | yes | 0 | 0 |
+| HTML-Content-Visual-Setup | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Dynamic-HTML-Conditional-Styling | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Enhance-Data-Modelling-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Measures-Repository-Underscore-Table | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Home-Table-Property-Move-Measures | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Summarize-by-None-Prevent-Auto-Aggregation | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Measures-Repository-Setup | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Display-Folder-Organization | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-Excel-Postgres-Weekend-Yadullah | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Postgres-Constraint-Enforcement | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Normalized-Tables-vs-Flat-Rows | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Excel-to-Postgres-Migration | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Constraints-Catch-Bad-Data-Not-Bad-Formatting | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Database-Schema-First-Migration | Data Modeling | 2026-08-09 | yes | 0 | 0 |
+| Excel-VLOOKUP-Fragility | Excel | 2026-08-09 | yes | 0 | 0 |
+| Excel-Optional-Safeguards | Excel | 2026-08-09 | yes | 0 | 0 |
+| Excel-Analysis-Not-Storage | Excel | 2026-08-09 | yes | 0 | 0 |
+| Source-Decomposition-Tree-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Decomposition-Tree-Setup | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Decomposition-Tree-Filter-Drillthrough | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Decomposition-Tree-Analyze-Field-Requires-Aggregate | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Decomposition-Tree-AI-Splits-Limitations | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Decomposition-Tree-Limits | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-New-Matrix-Visual-Layouts-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Matrix-Layout-Setup | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Matrix-Cash-Flow-PL-Report | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Matrix-Compact-Layout-Default | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Matrix-Outline-Layout-Column-Based | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Matrix-Tabular-Layout-No-Blank-Rows | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Source-DAX-Query-View-Power-BI | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| DAX-Query-View-Nov-2023-Preview | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| DAX-Query-View-UI-Components | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Quick-Queries-Right-Click-Templates | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Quick-Queries-Column-Statistics | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Define-Evaluate-Measures-In-Place | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Define-With-References-And-Evaluate | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| DAX-Query-View-Enable | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| EVALUATE-Basic-Query-Run | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Quick-Queries | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Format-Comment-Search | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Source-Filtering-Measures-Through-Slicers | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Measure-Cannot-Be-Filtered-Granularity-Required | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Measure-as-Filter-in-Visual-Filter-Pane | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| SELECTEDMEASURE-Local-Function-Parameter | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| FilterProductsBasedOnMeasure-Local-Function | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| FilterTableBasedOnMeasure-Granularity-SWITCH | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Slicer-Filter-Measure-Implementation | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Flexible-Slicer-With-Granularity | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| Source-Filters-in-Power-BI-Everything-You-Need-to-Know | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Filter-Levels-in-Power-BI | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Filter-Types-Overview | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Apply-Filters-to-Visuals | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Filter-Best-Practices | Power BI | 2026-08-09 | yes | 0 | 0 |
+| Custom-Number-Formats | Excel | 2026-08-08 | yes | 0 | 0 |
+| Slicer-Excel-Tables | Excel | 2026-08-08 | yes | 0 | 0 |
+| Power-Query-Get-Transform | Excel | 2026-08-08 | yes | 0 | 0 |
+| Excel-Table-Ctrl-T | Excel | 2026-08-05 | yes | 0 | 1 (slicer link added) |
+| Data-Validation-Dropdown | Excel | 2026-08-05 | yes | 0 | 1 (table link added) |
+| conditional-formatting | Excel | 2026-07-26 | yes | 0 | 2 (custom-formatting + slicer links added) |
+| Source-11-Power-BI-Tips-Guy-in-a-Cube | Power BI | 2026-08-08 | yes | 0 | new |
+| Auto-Date-Time-Disable | Power BI | 2026-08-08 | yes | 0 | new |
+| SWITCH-TRUE-vs-Nested-IF | Power BI | 2026-08-08 | yes | 0 | new |
+| Calculate-Upstream-vs-DAX | Power BI | 2026-08-08 | yes | 0 | new |
+| Power-Query-Parameters-Environment-Switch | Power BI | 2026-08-08 | yes | 0 | new |
+| Test-Mode-Parameters-Development | Power BI | 2026-08-08 | yes | 0 | new |
+| Measure-Table-Dedicated | Power BI | 2026-08-08 | yes | 0 | new |
+| Bulk-Edit-Measure-Properties-Model-View | Power BI | 2026-08-08 | yes | 0 | new |
+| TMDL-Calculation-Groups | Power BI | 2026-08-08 | yes | 0 | new |
+| Ctrl-G-Power-Query-Column-Navigate | Power BI | 2026-08-08 | yes | 0 | new |
+| Field-Parameters-Dynamic-Visuals | Power BI | 2026-08-08 | yes | 0 | new |
+| Ctrl-Shift-L-Bulk-Rename-DAX | Power BI | 2026-08-08 | yes | 0 | new |
+| Source-AI-Power-BI-Workflow-DropMaterializedView | Power BI | 2026-08-08 | yes | 0 | new |
+| PBIR-Power-BI-Report-Format-JSON | Power BI | 2026-08-08 | yes | 0 | new |
+| Power-BI-AI-Agent-CLI-Reload | Power BI | 2026-08-08 | yes | 0 | new |
+| AI-Written-PowerShell-Scripts-Design-Automation | Power BI | 2026-08-08 | yes | 0 | new |
+| Source-ABC-Analysis-HowToPowerBI | Power BI | 2026-08-08 | yes | 0 | new |
+| ABC-Classification-Chart-Visual-Calculations | Power BI | 2026-08-08 | yes | 0 | new |
+| Visual-Calculations-COLLAPSESUM | Power BI | 2026-08-08 | yes | 0 | new |
+| Visual-Calculations-RUNNINGSUM-ORDER-BY | Power BI | 2026-08-08 | yes | 0 | new |
+| Visual-Calculations-NEXT | Power BI | 2026-08-08 | yes | 0 | new |
+| ABC-Group-Thresholds-Stacked-Columns | Power BI | 2026-08-08 | yes | 0 | new |
+| Source-Geometric-Mean-SQLServerCentral | Power BI/DAX | 2026-08-08 | yes | 0 | new |
+| Geometric-Mean-Power-Query | Power BI/DAX | 2026-08-08 | yes | 0 | new |
+| Geometric-Mean-Multi-Reviewer-Rankings | Power BI/DAX | 2026-08-08 | yes | 0 | new |
+| Geometric-Mean-Formula | Power BI/DAX | 2026-08-08 | yes | 0 | new |
+| Geometric-Mean-Zero-Negative-Limitation | Power BI/DAX | 2026-08-08 | yes | 0 | new |
+| Source-Choosing-Right-Charts-SelectDistinct | Power BI | 2026-08-08 | yes | 0 | new |
+| Line-Chart-Trend-Over-Time | Power BI | 2026-08-08 | yes | 0 | new |
+| Bar-Column-Chart-Comparing-Groups | Power BI | 2026-08-08 | yes | 0 | new |
+| Pie-Donut-Chart-Parts-Whole | Power BI | 2026-08-08 | yes | 0 | new |
+| Scatter-Plot-Relationship-Variables | Power BI | 2026-08-08 | yes | 0 | new |
+| Chart-Selection-Decision-Flow | Power BI | 2026-08-08 | yes | 0 | new |
+| Reducing-Chart-Clutter-Power-BI | Power BI | 2026-08-08 | yes | 0 | new |
+| [[Restore-Hidden-Panes-Workflow]](01.Knowledge/Power BI/Wiki/Restore-Hidden-Panes-Workflow.md) | Power BI | 2026-08-09 | yes | 0 | 0 |
+| [[Hidden-Pane-Fix-Checklist]](01.Knowledge/Power BI/Wiki/Hidden-Pane-Fix-Checklist.md) | Power BI | 2026-08-09 | yes | 0 | 0 |
+| [[Fix-Incorrect-Totals-SUMX-SUMMARIZE-Pattern]](01.Knowledge/DAX Code/Wiki/Fix-Incorrect-Totals-SUMX-SUMMARIZE-Pattern.md) | DAX Code | 2026-08-09 | no | 0 | 0 |
+| [[Totals-Wrong-Row-Context-Missing]](01.Knowledge/DAX Code/Wiki/Totals-Wrong-Row-Context-Missing.md) | DAX Code | 2026-08-09 | no | 0 | 0 |
+| [[Fix-Incorrect-Totals-Workflow]](01.Knowledge/Power BI/Wiki/Fix-Incorrect-Totals-Workflow.md) | Power BI | 2026-08-09 | yes | 0 | 0 |
+| [[Source-DAX-UDFs-GA-59-Measures-to-One-Library]](01.Knowledge/DAX Code/Wiki/Source-DAX-UDFs-GA-59-Measures-to-One-Library.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[DAX-UDFs-vs-Calculation-Groups]](01.Knowledge/DAX Code/Wiki/DAX-UDFs-vs-Calculation-Groups.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[Value-vs-Expression-Parameter-Types]](01.Knowledge/DAX Code/Wiki/Value-vs-Expression-Parameter-Types.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[DAX-UDFs-Require-Compatibility-1702]](01.Knowledge/DAX Code/Wiki/DAX-UDFs-Require-Compatibility-1702.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[dwp.SafeDivide]](01.Knowledge/DAX Code/Wiki/dwp.SafeDivide.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[dwp.ABCBand]](01.Knowledge/DAX Code/Wiki/dwp.ABCBand.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[dwp.CurrencyAwareGrowth]](01.Knowledge/DAX Code/Wiki/dwp.CurrencyAwareGrowth.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[Measure-Library-to-UDF-Migration]](01.Knowledge/DAX Code/Wiki/Measure-Library-to-UDF-Migration.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[DAX-UDF-Development-Environments]](01.Knowledge/DAX Code/Wiki/DAX-UDF-Development-Environments.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[Five-Minute-UDF-Audit]](01.Knowledge/DAX Code/Wiki/Five-Minute-UDF-Audit.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[DAX-UDFs-Dont-Replace-Calculation-Groups]](01.Knowledge/DAX Code/Wiki/DAX-UDFs-Dont-Replace-Calculation-Groups.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[AnyRef-Expression-Parameter-Bug]](01.Knowledge/DAX Code/Wiki/AnyRef-Expression-Parameter-Bug.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[DAX-UDFs-Enable-AI-Copilot-Adoption]](01.Knowledge/DAX Code/Wiki/DAX-UDFs-Enable-AI-Copilot-Adoption.md) | DAX Code | 2026-08-09 | yes | 0 | 0 |
+| [[Source-Excel-to-Power-BI-Roadmap-DigitalBYKewat]](01.Knowledge/Power BI/Wiki/Source-Excel-to-Power-BI-Roadmap-DigitalBYKewat.md) | Power BI | 2026-08-09 | yes | 0 | 0 |
+| [[Excel-to-Power-BI-4-Week-Roadmap]](01.Knowledge/Power BI/Wiki/Excel-to-Power-BI-4-Week-Roadmap.md) | Power BI | 2026-08-09 | yes | 0 | 0 |
+| [[Excel-Skills-Transfer-to-Power-BI]](01.Knowledge/Power BI/Wiki/Excel-Skills-Transfer-to-Power-BI.md) | Power BI | 2026-08-09 | yes | 0 | 0 |
+| [[The-Aha-Moment-Refresh-Updates-Everything]](01.Knowledge/Power BI/Wiki/The-Aha-Moment-Refresh-Updates-Everything.md) | Power BI | 2026-08-09 | yes | 0 | 0 |
+| [[Power-Query-Equals-Excels-Superpower]](01.Knowledge/Power Query/Wiki/Power-Query-Equals-Excels-Superpower.md) | Power Query | 2026-08-09 | yes | 0 | 0 |
+| [[Author-DigitalBYKewat]](01.Knowledge/Power BI/Author-DigitalBYKewat.md) | Power BI | 2026-08-09 | yes | 0 | 0 |
+| [[Source-5-Boring-Excel-Functions-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-5-Boring-Excel-Functions-Mynda-Treacy.md) | Excel | 2026-08-09 | no | 0 | 0 |
+| [[ABS-Absolute-Value]](01.Knowledge/Excel/Wiki/ABS-Absolute-Value.md) | Excel | 2026-08-09 | no | 0 | 0 |
+| [[SIGN-Function-OR-Logic-SUMPRODUCT]](01.Knowledge/Excel/Wiki/SIGN-Function-OR-Logic-SUMPRODUCT.md) | Excel | 2026-08-09 | no | 0 | 0 |
+| [[REPT-In-Cell-Bar-Charts]](01.Knowledge/Excel/Wiki/REPT-In-Cell-Bar-Charts.md) | Excel | 2026-08-09 | no | 0 | 0 |
+| [[TRUNC-vs-INT-Negative-Numbers]](01.Knowledge/Excel/Wiki/TRUNC-vs-INT-Negative-Numbers.md) | Excel | 2026-08-09 | no | 0 | 0 |
+| [[CELL-Function-Dynamic-Worksheet-Name]](01.Knowledge/Excel/Wiki/CELL-Function-Dynamic-Worksheet-Name.md) | Excel | 2026-08-09 | no | 0 | 0 |
+| [[Author-Mynda-Treacy]](01.Knowledge/Excel/Author-Mynda-Treacy.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[Source-5-Hidden-Excel-Formula-Rules-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-5-Hidden-Excel-Formula-Rules-Mynda-Treacy.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[Helper-Columns-Build-for-Humans]](01.Knowledge/Excel/Wiki/Helper-Columns-Build-for-Humans.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[Boolean-Logic-Replaces-IF]](01.Knowledge/Excel/Wiki/Boolean-Logic-Replaces-IF.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[LET-Makes-Formulas-Readable]](01.Knowledge/Excel/Wiki/LET-Makes-Formulas-Readable.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[LAMBDA-Custom-Functions-via-Name-Manager]](01.Knowledge/Excel/Wiki/LAMBDA-Custom-Functions-via-Name-Manager.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[Think-in-Arrays-Not-Rows]](01.Knowledge/Excel/Wiki/Think-in-Arrays-Not-Rows.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[Source-6-Better-Alternatives-to-IF-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-6-Better-Alternatives-to-IF-Mynda-Treacy.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[IFS-vs-Nested-IF-Order-Matters]](01.Knowledge/Excel/Wiki/IFS-vs-Nested-IF-Order-Matters.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[XLOOKUP-vs-IF-for-Lookup-Tables]](01.Knowledge/Excel/Wiki/XLOOKUP-vs-IF-for-Lookup-Tables.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[SWITCH-vs-IF-One-Value-Multiple-Matches]](01.Knowledge/Excel/Wiki/SWITCH-vs-IF-One-Value-Multiple-Matches.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[CHOOSE-for-Position-Based-Mapping]](01.Knowledge/Excel/Wiki/CHOOSE-for-Position-Based-Mapping.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[SUMIFS-COUNTIFS-Replace-IF-Helper-Columns]](01.Knowledge/Excel/Wiki/SUMIFS-COUNTIFS-Replace-IF-Helper-Columns.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[LET-for-Deduplication]](01.Knowledge/Excel/Wiki/LET-for-Deduplication.md) | Excel | 2026-08-09 | yes | 0 | 0 |
+| [[Source-10-Custom-Number-Formatting-Tricks-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-10-Custom-Number-Formatting-Tricks-Mynda-Treacy.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Four-Section-Number-Format-Structure]](01.Knowledge/Excel/Wiki/Four-Section-Number-Format-Structure.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Scale-Numbers-to-K-or-M]](01.Knowledge/Excel/Wiki/Scale-Numbers-to-K-or-M.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Inline-Colors-in-Number-Format]](01.Knowledge/Excel/Wiki/Inline-Colors-in-Number-Format.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Pass-Fail-via-Number-Format]](01.Knowledge/Excel/Wiki/Pass-Fail-via-Number-Format.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Hide-Zero-Values-with-Format]](01.Knowledge/Excel/Wiki/Hide-Zero-Values-with-Format.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Symbol-Arrows-in-Number-Format]](01.Knowledge/Excel/Wiki/Symbol-Arrows-in-Number-Format.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Phone-Number-Format-Preserving-Zeroes]](01.Knowledge/Excel/Wiki/Phone-Number-Format-Preserving-Zeroes.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Custom-Date-Formats]](01.Knowledge/Excel/Wiki/Custom-Date-Formats.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Inline-Units-via-Number-Format]](01.Knowledge/Excel/Wiki/Inline-Units-via-Number-Format.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Hide-All-Cell-Values-Format]](01.Knowledge/Excel/Wiki/Hide-All-Cell-Values-Format.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Leading-Trailing-Characters-in-Format]](01.Knowledge/Excel/Wiki/Leading-Trailing-Characters-in-Format.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Source-Advanced-Conditional-Formatting-Formulas-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-Advanced-Conditional-Formatting-Formulas-Mynda-Treacy.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Mixed-References-for-Row-Formatting]](01.Knowledge/Excel/Wiki/Mixed-References-for-Row-Formatting.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[ISBLANK-Double-Unary-for-Row-Validation]](01.Knowledge/Excel/Wiki/ISBLANK-Double-Unary-for-Row-Validation.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[SEARCH-for-Keyword-Detection-in-CF]](01.Knowledge/Excel/Wiki/SEARCH-for-Keyword-Detection-in-CF.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[TODAY-for-Dynamic-Date-Alerts]](01.Knowledge/Excel/Wiki/TODAY-for-Dynamic-Date-Alerts.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[COUNTIF-Expanding-Range-for-Duplicates]](01.Knowledge/Excel/Wiki/COUNTIF-Expanding-Range-for-Duplicates.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[COUNTIFS-for-Multi-Column-Duplicates]](01.Knowledge/Excel/Wiki/COUNTIFS-for-Multi-Column-Duplicates.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[MOD-SUBTOTAL-for-Filter-Aware-Banding]](01.Knowledge/Excel/Wiki/MOD-SUBTOTAL-for-Filter-Aware-Banding.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Rule-Priority-in-CF-Manager]](01.Knowledge/Excel/Wiki/Rule-Priority-in-CF-Manager.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Source-Dynamic-Excel-Report-4-Formulas-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-Dynamic-Excel-Report-4-Formulas-Mynda-Treacy.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[UNIQUE-SORT-Dynamic-Dropdowns]](01.Knowledge/Excel/Wiki/UNIQUE-SORT-Dynamic-Dropdowns.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[FILTER-Boolean-AND-OR-Logic]](01.Knowledge/Excel/Wiki/FILTER-Boolean-AND-OR-Logic.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Dependent-Dropdown-via-FILTER-UNIQUE-SORT]](01.Knowledge/Excel/Wiki/Dependent-Dropdown-via-FILTER-UNIQUE-SORT.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[GROUPBY-CHOOSECOLS-TAKE-Top-N-Summary]](01.Knowledge/Excel/Wiki/GROUPBY-CHOOSECOLS-TAKE-Top-N-Summary.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[SPILL-Error-Cell-in-Spill-Range]](01.Knowledge/Excel/Wiki/SPILL-Error-Cell-in-Spill-Range.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[No-Dynamic-Arrays-Inside-Formatted-Tables]](01.Knowledge/Excel/Wiki/No-Dynamic-Arrays-Inside-Formatted-Tables.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Excel-365-Version-Requirements-Dynamic-Functions]](01.Knowledge/Excel/Wiki/Excel-365-Version-Requirements-Dynamic-Functions.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Source-Automated-Excel-Database-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-Automated-Excel-Database-Mynda-Treacy.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Form-Database-Automation-Architecture]](01.Knowledge/Excel/Wiki/Form-Database-Automation-Architecture.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[XMATCH-for-Form-Level-Duplicate-Detection]](01.Knowledge/Excel/Wiki/XMATCH-for-Form-Level-Duplicate-Detection.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[COUNTA-UNIQUE-for-Duplicate-Warning-Banner]](01.Knowledge/Excel/Wiki/COUNTA-UNIQUE-for-Duplicate-Warning-Banner.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Data-Entry-Form-Best-Practices]](01.Knowledge/Excel/Wiki/Data-Entry-Form-Best-Practices.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Office-Scripts-Form-Database-Automation]](01.Knowledge/Excel/Wiki/Office-Scripts-Form-Database-Automation.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Source-Dynamic-Drop-Down-Lists-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-Dynamic-Drop-Down-Lists-Mynda-Treacy.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Auto-Updating-Dropdowns-via-Excel-Table]](01.Knowledge/Excel/Wiki/Auto-Updating-Dropdowns-via-Excel-Table.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Named-Ranges-TOCOL-Cross-Sheet-Dropdowns]](01.Knowledge/Excel/Wiki/Named-Ranges-TOCOL-Cross-Sheet-Dropdowns.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Cascading-Dropdowns-SORT-FILTER-XLOOKUP]](01.Knowledge/Excel/Wiki/Cascading-Dropdowns-SORT-FILTER-XLOOKUP.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[XLOOKUP-AutoFill-Related-Data-from-Dropdown]](01.Knowledge/Excel/Wiki/XLOOKUP-AutoFill-Related-Data-from-Dropdown.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[FILTER-UNIQUE-SORT-Excluding-Dropdown-Items]](01.Knowledge/Excel/Wiki/FILTER-UNIQUE-SORT-Excluding-Dropdown-Items.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[TOCOL-Ignore-Blanks-for-Clean-Dropdown-Lists]](01.Knowledge/Excel/Wiki/TOCOL-Ignore-Blanks-for-Clean-Dropdown-Lists.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Search-as-You-Type-in-Modern-Excel-Dropdowns]](01.Knowledge/Excel/Wiki/Search-as-You-Type-in-Modern-Excel-Dropdowns.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Source-Excel-File-Protection-Tricks-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-Excel-File-Protection-Tricks-Mynda-Treacy.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Unlock-Input-Cells-Protect-Sheet-Workflow]](01.Knowledge/Excel/Wiki/Unlock-Input-Cells-Protect-Sheet-Workflow.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Locked-Hidden-Protect-Sheet]](01.Knowledge/Excel/Wiki/Locked-Hidden-Protect-Sheet.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Protect-Sheet-vs-Protect-Workbook]](01.Knowledge/Excel/Wiki/Protect-Sheet-vs-Protect-Workbook.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Very-Hidden-Sheets-VBA-Editor]](01.Knowledge/Excel/Wiki/Very-Hidden-Sheets-VBA-Editor.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Document-Inspector-Remove-Personal-Information]](01.Knowledge/Excel/Wiki/Document-Inspector-Remove-Personal-Information.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Encrypt-Workbook-with-Password]](01.Knowledge/Excel/Wiki/Encrypt-Workbook-with-Password.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Excel-Protection-Methods-Security-Comparison]](01.Knowledge/Excel/Wiki/Excel-Protection-Methods-Security-Comparison.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Source-HYPERLINK-Function-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-HYPERLINK-Function-Mynda-Treacy.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[CELL-address-Dynamic-Cell-Reference-Retrieval]](01.Knowledge/Excel/Wiki/CELL-address-Dynamic-Cell-Reference-Retrieval.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[HYPERLINK-Syntax-Sheet-Name-Quoting]](01.Knowledge/Excel/Wiki/HYPERLINK-Syntax-Sheet-Name-Quoting.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Sheet-Navigation-TOC-HYPERLINK]](01.Knowledge/Excel/Wiki/Sheet-Navigation-TOC-HYPERLINK.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[File-Folder-Hyperlinks]](01.Knowledge/Excel/Wiki/File-Folder-Hyperlinks.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Dynamic-Hyperlink-XLOOKUP-CELL]](01.Knowledge/Excel/Wiki/Dynamic-Hyperlink-XLOOKUP-CELL.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Broken-File-Paths-HYPERLINK-Does-Not-Validate]](01.Knowledge/Excel/Wiki/Broken-File-Paths-HYPERLINK-Does-Not-Validate.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[CtrlK-Static-vs-Formula-Dynamic-Hyperlink]](01.Knowledge/Excel/Wiki/CtrlK-Static-vs-Formula-Dynamic-Hyperlink.md) | Excel | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Source-Oblique-Area-Chart-Native-Visuals-Isabelle-Bittar]](01.Knowledge/Power BI/Wiki/Source-Oblique-Area-Chart-Native-Visuals-Isabelle-Bittar.md) | Power BI | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Measure-Type-Filter-Pattern]](01.Knowledge/DAX Code/Wiki/Measure-Type-Filter-Pattern.md) | DAX Code | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[MAXX-MINX-ALL-Date-Dynamic-Range]](01.Knowledge/DAX Code/Wiki/MAXX-MINX-ALL-Date-Dynamic-Range.md) | DAX Code | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Dynamic-Graph-Area-Buffer]](01.Knowledge/DAX Code/Wiki/Dynamic-Graph-Area-Buffer.md) | DAX Code | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[VAR-for-Intermediate-Measure-Calculation]](01.Knowledge/DAX Code/Wiki/VAR-for-Intermediate-Measure-Calculation.md) | DAX Code | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Error-Bars-White-Fill-Zones]](01.Knowledge/Power BI/Wiki/Error-Bars-White-Fill-Zones.md) | Power BI | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[PNG-Background-Behind-Chart]](01.Knowledge/Power BI/Wiki/PNG-Background-Behind-Chart.md) | Power BI | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Dynamic-Y-Axis-Min-Max-via-Measures]](01.Knowledge/Power BI/Wiki/Dynamic-Y-Axis-Min-Max-via-Measures.md) | Power BI | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Custom-Tooltip-Page-Hidden-Measures]](01.Knowledge/Power BI/Wiki/Custom-Tooltip-Page-Hidden-Measures.md) | Power BI | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Oblique-Area-Chart-Native-Visuals-End-to-End]](01.Knowledge/Power BI/Wiki/Oblique-Area-Chart-Native-Visuals-End-to-End.md) | Power BI | 2026-08-09 | yes | 0 | 0 | 0 | 0 |
+| [[Author-Isabelle-Bittar]](01.Knowledge/Power BI/Wiki/Author-Isabelle-Bittar.md) | Power BI | 2026-08-09 | no | 0 | 0 |
+| [[HTML-KPI-Card-CSS-Composition-Pattern]](01.Knowledge/Power BI/Wiki/HTML-KPI-Card-CSS-Composition-Pattern.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[KPI-Card-Pulse-Glow-Animation]](01.Knowledge/Power BI/Wiki/KPI-Card-Pulse-Glow-Animation.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Progress-Bar-Indicator-CSS-Trick]](01.Knowledge/Power BI/Wiki/Progress-Bar-Indicator-CSS-Trick.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[KPI-Card-DAX-Measure-Full-HTML-CSS]](01.Knowledge/Power BI/Wiki/KPI-Card-DAX-Measure-Full-HTML-CSS.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[10-CSS-KPI-Card-Techniques-Reference]](01.Knowledge/Power BI/Wiki/10-CSS-KPI-Card-Techniques-Reference.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Esther-10-CSS-Tricks-KPI-Card]](01.Knowledge/Power BI/Wiki/Source-Esther-10-CSS-Tricks-KPI-Card.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[VIP-Email-to-Teams-Alert-Flow]](01.Knowledge/Power Automate/Wiki/VIP-Email-to-Teams-Alert-Flow.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Westendorp-Tagging-Framework]](01.Knowledge/Power BI/Wiki/Source-Westendorp-Tagging-Framework.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Bryant-ChatGPT-Copilot-Workflow]](01.Knowledge/Power BI/Wiki/Source-Bryant-ChatGPT-Copilot-Workflow.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Bittar-Latest-Month-Slicer-Trick]](01.Knowledge/Power BI/Wiki/Source-Bittar-Latest-Month-Slicer-Trick.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Sanskarmali-Spreadsheet-Analytics]](01.Knowledge/Power BI/Wiki/Source-Sanskarmali-Spreadsheet-Analytics.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Ruiz-Retail-DAX-Pt1]](01.Knowledge/DAX Code/Wiki/Source-Ruiz-Retail-DAX-Pt1.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Ruiz-Retail-DAX-Pt2]](01.Knowledge/DAX Code/Wiki/Source-Ruiz-Retail-DAX-Pt2.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Ruiz-Retail-DAX-Pt3]](01.Knowledge/DAX Code/Wiki/Source-Ruiz-Retail-DAX-Pt3.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[PDF-Form-Processing-to-SharePoint-Excel]](01.Knowledge/Power Automate/Wiki/PDF-Form-Processing-to-SharePoint-Excel.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Weekly-Status-Report-Aggregator]](01.Knowledge/Power Automate/Wiki/Weekly-Status-Report-Aggregator.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Multi-Level-Document-Approval-Engine]](01.Knowledge/Power Automate/Wiki/Multi-Level-Document-Approval-Engine.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Email-Attachment-Archiver-to-SharePoint]](01.Knowledge/Power Automate/Wiki/Email-Attachment-Archiver-to-SharePoint.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Flagged-Email-to-Planner-Task]](01.Knowledge/Power Automate/Wiki/Flagged-Email-to-Planner-Task.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Onboarding-Offboarding-User-Access-Flow]](01.Knowledge/Power Automate/Wiki/Onboarding-Offboarding-User-Access-Flow.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Stale-File-Cleanup-Bot]](01.Knowledge/Power Automate/Wiki/Stale-File-Cleanup-Bot.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Calendar-Deep-Work-Time-Blocker]](01.Knowledge/Power Automate/Wiki/Calendar-Deep-Work-Time-Blocker.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Gunarathinam-Power-BI-Data-Validation]](01.Knowledge/Power Automate/Wiki/Source-Gunarathinam-Power-BI-Data-Validation.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[AI-Builder-Prediction-Approval-Routing]](01.Knowledge/Power Automate/Wiki/AI-Builder-Prediction-Approval-Routing.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[SQL-to-Report-End-to-End-Automation]](01.Knowledge/Power Automate/Wiki/SQL-to-Report-End-to-End-Automation.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Wedodo-Routine-Task-Automation]](01.Knowledge/Power Automate/Wiki/Source-Wedodo-Routine-Task-Automation.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Belanger-Email-Processing]](01.Knowledge/Power Automate/Wiki/Source-Belanger-Email-Processing.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Arunachalam-AI-Builder-Approval]](01.Knowledge/Power Automate/Wiki/Source-Arunachalam-AI-Builder-Approval.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Okezie-Quarterly-Financial-Case-Study]](01.Knowledge/Power BI/Wiki/Source-Okezie-Quarterly-Financial-Case-Study.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Treemap-Beats-Bar-Chart-15-Plus-Categories]](01.Knowledge/Power BI/Wiki/Treemap-Beats-Bar-Chart-15-Plus-Categories.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Cascading-Slicers-Mirror-Hierarchical-Data]](01.Knowledge/Power BI/Wiki/Cascading-Slicers-Mirror-Hierarchical-Data.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Two-Page-Dashboard-UX-Pattern]](01.Knowledge/Power BI/Wiki/Two-Page-Dashboard-UX-Pattern.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Mitalimunot-Product-Hierarchy]](01.Knowledge/Power BI/Wiki/Source-Mitalimunot-Product-Hierarchy.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Failed-Flow-Monitoring-Alerting]](01.Knowledge/Power Automate/Wiki/Failed-Flow-Monitoring-Alerting.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Power-Automate-Flow-Design-Principles]](01.Knowledge/Power Automate/Wiki/Power-Automate-Flow-Design-Principles.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Kaklotar-10-Power-Automate-Flows]](01.Knowledge/Power Automate/Wiki/Source-Kaklotar-10-Power-Automate-Flows.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[ISNUMBER-SelectedMeasure-Guard-Pattern]](01.Knowledge/DAX Code/Wiki/ISNUMBER-SelectedMeasure-Guard-Pattern.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Calculation-Group-Time-Intelligence-Reference]](01.Knowledge/DAX Code/Wiki/Calculation-Group-Time-Intelligence-Reference.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Calculation-Groups-vs-UDFs-Tradeoffs]](01.Knowledge/Power BI/Wiki/Calculation-Groups-vs-UDFs-Tradeoffs.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Bittar-Calculation-Groups]](01.Knowledge/Power BI/Wiki/Source-Bittar-Calculation-Groups.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Two-Layer-AI-Workflow-ChatGPT-Copilot-Power-BI]](01.Knowledge/Power BI/Wiki/Two-Layer-AI-Workflow-ChatGPT-Copilot-Power-BI.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[KPI-Card-Context-Principle]](01.Knowledge/Power BI/Wiki/KPI-Card-Context-Principle.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Endurance-Improvement-FIRSTDATE-LASTDATE-Pattern]](01.Knowledge/DAX Code/Wiki/Endurance-Improvement-FIRSTDATE-LASTDATE-Pattern.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Source-James-Bryant-ChatGPT-Copilot-Power-BI]](01.Knowledge/Power BI/Wiki/Source-James-Bryant-ChatGPT-Copilot-Power-BI.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Know-Your-Audience-First-Design-Principle]](01.Knowledge/Power BI/Wiki/Know-Your-Audience-First-Design-Principle.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Chart-Selection-by-Purpose-and-Data-Type]](01.Knowledge/Power BI/Wiki/Chart-Selection-by-Purpose-and-Data-Type.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Harrison-Data-Visualisation-Best-Practice]](01.Knowledge/Power BI/Wiki/Source-Harrison-Data-Visualisation-Best-Practice.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Date-Table-Must-Be-Marked-Requirement]](01.Knowledge/DAX Code/Wiki/Date-Table-Must-Be-Marked-Requirement.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Time-Shift-Functions-DATEADD-SAMEPERIODLASTYEAR-PARALLELPERIOD]](01.Knowledge/DAX Code/Wiki/Time-Shift-Functions-DATEADD-SAMEPERIODLASTYEAR-PARALLELPERIOD.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Running-Total-Functions-TOTALMTD-TOTALQTD-TOTALYTD]](01.Knowledge/DAX Code/Wiki/Running-Total-Functions-TOTALMTD-TOTALQTD-TOTALYTD.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Rolling-Window-Functions-DATESINPERIOD]](01.Knowledge/DAX Code/Wiki/Rolling-Window-Functions-DATESINPERIOD.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Custom-Date-Range-DATESBETWEEN]](01.Knowledge/DAX Code/Wiki/Custom-Date-Range-DATESBETWEEN.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Time-Intelligence-Is-CALCULATE-With-Date-Table]](01.Knowledge/DAX Code/Wiki/Time-Intelligence-Is-CALCULATE-With-Date-Table.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Jeseena-DAX-Time-Intelligence]](01.Knowledge/DAX Code/Wiki/Source-Jeseena-DAX-Time-Intelligence.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Rolling-Average-AVERAGEX-DATESINPERIOD-Pattern]](01.Knowledge/DAX Code/Wiki/Rolling-Average-AVERAGEX-DATESINPERIOD-Pattern.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Growth-Rate-Pattern-DIVIDE-Prior-Period]](01.Knowledge/DAX Code/Wiki/Growth-Rate-Pattern-DIVIDE-Prior-Period.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[YTD-vs-Cumulative-Total-Reset-Behaviour]](01.Knowledge/DAX Code/Wiki/YTD-vs-Cumulative-Total-Reset-Behaviour.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Sisodia-DAX-Time-Intelligence-YTD-Rolling-Averages]](01.Knowledge/DAX Code/Wiki/Source-Sisodia-DAX-Time-Intelligence-YTD-Rolling-Averages.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Lightweight-Workflows-Power-BI-Automate-Conceptual-Model]](01.Knowledge/Power Automate/Wiki/Lightweight-Workflows-Power-BI-Automate-Conceptual-Model.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Power-Automate-Parse-JSON-Schematization-Discipline]](01.Knowledge/Power Automate/Wiki/Power-Automate-Parse-JSON-Schematization-Discipline.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[SharePoint-List-Sync-Orchestration-Pattern]](01.Knowledge/Power Automate/Wiki/SharePoint-List-Sync-Orchestration-Pattern.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Inactive-Record-Flag-Instead-of-Delete]](01.Knowledge/Power Automate/Wiki/Inactive-Record-Flag-Instead-of-Delete.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[Scoped-DAX-EVALUATE-SELECTCOLUMNS-Query-Pattern]](01.Knowledge/DAX Code/Wiki/Scoped-DAX-EVALUATE-SELECTCOLUMNS-Query-Pattern.md) | DAX Code | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Westendorp-Lightweight-Workflows-Power-BI-Automate]](01.Knowledge/Power Automate/Wiki/Source-Westendorp-Lightweight-Workflows-Power-BI-Automate.md) | Power Automate | 2026-08-10 | yes | 0 | 0 |
+| [[IMPORTCSV-IMPORTTEXT-Reference]](01.Knowledge/Excel/Wiki/IMPORTCSV-IMPORTTEXT-Reference.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[IMPORTCSV-CHOOSECOLS-GROUPBY-Summarization-Pattern]](01.Knowledge/Excel/Wiki/IMPORTCSV-CHOOSECOLS-GROUPBY-Summarization-Pattern.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Treacy-IMPORTCSV-IMPORTTEXT]](01.Knowledge/Excel/Wiki/Source-Treacy-IMPORTCSV-IMPORTTEXT.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[REPT-Function]](01.Knowledge/Excel/Wiki/REPT-Function.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[In-Cell-Bar-Chart-REPT]](01.Knowledge/Excel/Wiki/In-Cell-Bar-Chart-REPT.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[Progress-Bar-REPT-LET]](01.Knowledge/Excel/Wiki/Progress-Bar-REPT-LET.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[Star-Rating-REPT]](01.Knowledge/Excel/Wiki/Star-Rating-REPT.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[REPT-Rounds-Decimals-Down]](01.Knowledge/Excel/Wiki/REPT-Rounds-Decimals-Down.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[REPT-vs-Conditional-Formatting-Data-Bars]](01.Knowledge/Excel/Wiki/REPT-vs-Conditional-Formatting-Data-Bars.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[Monospaced-Font-for-REPT-Bars]](01.Knowledge/Excel/Wiki/Monospaced-Font-for-REPT-Bars.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[Source-REPT-In-Cell-Charts-Mynda-Treacy]](01.Knowledge/Excel/Wiki/Source-REPT-In-Cell-Charts-Mynda-Treacy.md) | Excel | 2026-08-10 | yes | 0 | 0 |
+| [[Dynamic-KPI-Scale-Disconnected-Table-SWITCH]](01.Knowledge/Power BI/Wiki/Dynamic-KPI-Scale-Disconnected-Table-SWITCH.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Dynamic-Format-String-Implementation]](01.Knowledge/Power BI/Wiki/Dynamic-Format-String-Implementation.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Dynamic-Format-vs-Fixed-Display-Units]](01.Knowledge/Power BI/Wiki/Dynamic-Format-vs-Fixed-Display-Units.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Multi-Currency-Dynamic-Format-SWITCH]](01.Knowledge/Power BI/Wiki/Multi-Currency-Dynamic-Format-SWITCH.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Keep-Base-Measure-Whole]](01.Knowledge/Power BI/Wiki/Keep-Base-Measure-Whole.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Source-KPI-Scale-Dynamic-Formatting-Natarajan]](01.Knowledge/Power BI/Wiki/Source-KPI-Scale-Dynamic-Formatting-Natarajan.md) | Power BI | 2026-08-10 | yes | 0 | 0 |
+| [[Source-Going-CRAZY-Power-BI-Slicers-Muchendu]](01.Knowledge/Power BI/Wiki/Source-Going-CRAZY-Power-BI-Slicers-Muchendu.md) | Power BI | 2026-08-10 | yes | | |
+| [[Slicer-Techniques-Overview-Power-BI]](01.Knowledge/Power BI/Wiki/Slicer-Techniques-Overview-Power-BI.md) | Power BI | 2026-08-10 | yes | | |
+| [[Excel-to-Google-My-Maps-Integration]](01.Knowledge/Excel/Wiki/Excel-to-Google-My-Maps-Integration.md) | Excel | 2026-08-10 | yes | | |
+| [[Source-Google-Maps-Excel-Integration-Tony-Phillips]](01.Knowledge/Excel/Wiki/Source-Google-Maps-Excel-Integration-Tony-Phillips.md) | Excel | 2026-08-10 | yes | | |
+| [[fabric-is-a-complete-data-platform]](01.Knowledge/Power%20BI/Wiki/fabric-is-a-complete-data-platform.md) | Power BI | 2026-08-13 | yes | 0 | 0 | |
+| [[skipping-lakehouse-causes-problems]](01.Knowledge/Power%20BI/Wiki/skipping-lakehouse-causes-problems.md) | Power BI | 2026-08-13 | yes | 0 | 0 | |
+| [[direct-lake-vs-import-vs-directquery]](01.Knowledge/Power%20BI/Wiki/direct-lake-vs-import-vs-directquery.md) | Power BI | 2026-08-13 | yes | 0 | 0 | |
+| [[poor-data-modeling-still-breaks-fabric]](01.Knowledge/Power%20BI/Wiki/poor-data-modeling-still-breaks-fabric.md) | Power BI | 2026-08-13 | yes | 0 | 0 | |
+| [[fabric-governance-cannot-be-afterthought]](01.Knowledge/Power%20BI/Wiki/fabric-governance-cannot-be-afterthought.md) | Power BI | 2026-08-13 | yes | 0 | 0 | |
+| [[fabric-end-to-end-pipeline-workflow]](01.Knowledge/Power%20BI/Wiki/fabric-end-to-end-pipeline-workflow.md) | Power BI | 2026-08-13 | yes | 0 | 0 | |
+| [[Source-5-Mistakes-Beginners-Microsoft-Fabric]](01.Knowledge/Power%20BI/Wiki/Source-5-Mistakes-Beginners-Microsoft-Fabric.md) | Power BI | 2026-08-13 | yes | 0 | 0 | |
+| [[End-to-End-Fabric-Pipeline]](01.Knowledge/Power%20BI/Wiki/End-to-End-Fabric-Pipeline.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Direct-Lake-vs-Import-vs-DirectQuery]](01.Knowledge/Power%20BI/Wiki/Direct-Lake-vs-Import-vs-DirectQuery.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Fabric-Governance-Setup]](01.Knowledge/Power%20BI/Wiki/Fabric-Governance-Setup.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Medallion-Architecture-Fabric]](01.Knowledge/Data%20Modeling/Wiki/Medallion-Architecture-Fabric.md) | Data Modeling | 2026-08-13 | yes | 0 | 0 |
+| [[Star-Schema-Fabric]](01.Knowledge/Data%20Modeling/Wiki/Star-Schema-Fabric.md) | Data Modeling | 2026-08-13 | yes | 0 | 0 |
+| [[Data-Modeling-Mistake-Broken-Relationships]](01.Knowledge/Data Modeling/Wiki/Data-Modeling-Mistake-Broken-Relationships.md) | Data Modeling | 2026-08-13 | yes | 0 | 0 |
+| [[Data-Modeling-Mistake-Bi-Directional-Filtering]](01.Knowledge/Data Modeling/Wiki/Data-Modeling-Mistake-Bi-Directional-Filtering.md) | Data Modeling | 2026-08-13 | yes | 0 | 0 |
+| [[Data-Modeling-Mistake-Missing-Date-Table]](01.Knowledge/Data Modeling/Wiki/Data-Modeling-Mistake-Missing-Date-Table.md) | Data Modeling | 2026-08-13 | yes | 0 | 0 |
+| [[Source-5-Mistakes-in-Power-BI-Data-Modeling]](01.Knowledge/Data Modeling/Wiki/Source-5-Mistakes-in-Power-BI-Data-Modeling.md) | Data Modeling | 2026-08-13 | yes | 0 | 0 |
+| [[Data-Modeling-Mistake-calculated-Columns-vs-Measures]](01.Knowledge/DAX Code/Wiki/Data-Modeling-Mistake-calculated-Columns-vs-Measures.md) | DAX Code | 2026-08-13 | yes | 0 | 0 |
+| [[Report-Design-Mistake-Too-Many-Visuals]](01.Knowledge/Power BI/Wiki/Report-Design-Mistake-Too-Many-Visuals.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Report-Design-Mistake-Filters-and-Slicers]](01.Knowledge/Power BI/Wiki/Report-Design-Mistake-Filters-and-Slicers.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Source-5-Mistakes-to-Avoid-in-Power-BI]](01.Knowledge/Power BI/Wiki/Source-5-Mistakes-to-Avoid-in-Power-BI.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Power-BI-PL-Dashboard-Xero-to-Power-BI]](01.Knowledge/Power BI/Wiki/Power-BI-PL-Dashboard-Xero-to-Power-BI.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Power-BI-PL-Matrix-Formatting]](01.Knowledge/Power BI/Wiki/Power-BI-PL-Matrix-Formatting.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Source-Power-BI-PL-Dashboard-Elle-Harrison]](01.Knowledge/Power BI/Wiki/Source-Power-BI-PL-Dashboard-Elle-Harrison.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Page-Navigator-Build-in-Power-BI]](01.Knowledge/Power BI/Wiki/Page-Navigator-Build-in-Power-BI.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Navigation-Approaches-Figma-vs-Native-vs-Page-Navigator]](01.Knowledge/Power BI/Wiki/Navigation-Approaches-Figma-vs-Native-vs-Page-Navigator.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+| [[Source-Design-Meets-Data-Power-BI-Navigation-Ethan-Guyant]](01.Knowledge/Power BI/Wiki/Source-Design-Meets-Data-Power-BI-Navigation-Ethan-Guyant.md) | Power BI | 2026-08-13 | yes | 0 | 0 |
+
+
+
+

@@ -2,7 +2,7 @@
 created: YYYY-MM-DD
 source: <source>
 note_type: gotcha
-tags: []
+tags: [tag1, tag2]
 ---
 
 # <Gotcha Name>

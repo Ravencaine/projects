@@ -16,9 +16,9 @@ Map each correlation value to a background and font color based on fixed |r| buc
 
 ## Components
 
-1. **Color palette measures** — `_Color *` static string measures returning hex color values
-2. **`Correlation Color (Buckets)`** — background color per bucket
-3. **`Correlation Font Color`** — font color per bucket (white on dark backgrounds, black on light)
+1. **Color palette measures:** `_Color *` static string measures returning hex color values
+2. **`Correlation Color (Buckets)`:** background color per bucket
+3. **`Correlation Font Color`:** font color per bucket (white on dark backgrounds, black on light)
 
 ## Color Palette Measures
 

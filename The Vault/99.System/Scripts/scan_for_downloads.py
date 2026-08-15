@@ -71,8 +71,18 @@ GDRIVE_RE = re.compile(
 
 
 def classify_link(url: str) -> tuple[str, str] | None:
-    """Return (kind, confidence) if URL looks like a download link, else None."""
-    parsed = urlparse(url)
+    """Return (kind, confidence) if URL looks like a download link, else None.
+
+    Returns None (silently) for URLs that fail to parse — e.g. M-expression
+    placeholders like ``https://[tenant].sharepoint.com/...`` where ``[tenant]``
+    is a substitution token, not a real URL.
+    """
+    try:
+        parsed = urlparse(url)
+    except ValueError:
+        # Malformed URL (e.g. bracketed IPv6 fragment, template placeholder).
+        # Not a downloadable link we can classify — skip silently.
+        return None
     netloc = parsed.netloc.lower()
     path   = parsed.path.lower()
     full   = (netloc + path).lower()

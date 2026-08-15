@@ -30,7 +30,7 @@ RETURN
 - Returns `BLANK()` when `XName <= YName`. This condition removes:
   - The **diagonal** (where X = Y, e.g., Performance Rating vs. Performance Rating = 1)
   - The **upper triangle** (where X > Y in alphabetical order)
-- Returns `r` only for the **lower triangle** — where X precedes Y alphabetically.
+- Returns `r` only for the **lower triangle:** where X precedes Y alphabetically.
 
 ## Effect on the Matrix Visual
 

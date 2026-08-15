@@ -2,7 +2,7 @@
 created: YYYY-MM-DD
 source: <source>
 note_type: workflow
-tags: []
+tags: [tag1, tag2]
 ---
 
 # <Workflow Name>

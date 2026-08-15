@@ -3,7 +3,7 @@
 created: 2026-07-28
 updated: 2026-08-02
 source: "[[beginning-big-data-with-power-bi-and-excel-2013-dunlop|Beginning Big Data with Power BI and Excel 2013]]"
-tags: ["dax", "pattern", "graph", "transitive-closure", "hierarchy", "network"]
+tags: [dax, pattern, graph, transitive-closure, hierarchy, network]
 note_type: pattern
 
 ---

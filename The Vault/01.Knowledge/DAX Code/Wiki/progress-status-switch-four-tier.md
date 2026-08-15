@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-02
 source: Power BI: Elevating Data Visualization with Custom Measure Sorting
 note_type: pattern
 tags: [dax, pattern, switch, sorting, progress, status]

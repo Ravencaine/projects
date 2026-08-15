@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-02
 source: Power BI Time Hacks: Mastering Dynamic Date Views
 note_type: atomic
 tags: [dax, atomic, max, calculate, filter, date, calendar]

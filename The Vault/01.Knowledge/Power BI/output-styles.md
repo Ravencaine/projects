@@ -1,0 +1,43 @@
+---
+title: "Output styles"
+source: "https://code.claude.com/docs/en/output-styles"
+author: "code.claude.com"
+date: "2026-08-11"
+tags: [imported, power-bi]
+created: "2026-08-11"
+---
+
+> Adapt Claude Code for uses beyond software engineering
+
+Output styles - Claude Code Docs Documentation Index Fetch the complete documentation index at: /docs/llms.txt Use this file to discover all available pages before exploring further. Skip to main content Output styles change how Claude responds, not what Claude knows. They modify the system prompt to set role, tone, and output format. Use one when you keep re-prompting for the same voice or format every turn, or when you want Claude to act as something other than a software engineer. A custom output style adds your instructions to the system prompt and lets you choose whether to keep Claude Code’s built-in software engineering instructions. Keep them when you’re changing how Claude communicates but still coding, like always answering with a diagram. Leave them out when Claude isn’t doing software engineering at all, like a writing assistant or data analyst. For instructions about your project, conventions, or codebase, use CLAUDE.md instead. ​ Built-in output styles Claude Code’s Default output style is the existing system prompt, designed to help you complete software engineering tasks efficiently. There are three additional built-in output styles: Proactive : Claude executes immediately, makes reasonable assumptions instead of pausing for routine decisions, and prefers action over planning. This is stronger autonomous-execution guidance than auto mode applies, and it works without changing your permission mode, so you still see permission prompts before tools run. Explanatory : Provides educational “Insights” in between helping you complete software engineering tasks. Helps you understand implementation choices and codebase patterns. Learning : Collaborative, learn-by-doing mode where Claude will not only share “Insights” while coding, but also ask you to contribute small, strategic pieces of code yourself. Claude Code will add  markers in your code for you to implement. ​ Change your output style Pick a style in one of these ways: Terminal : run  and select Output style to pick a style from a menu. Claude Code saves your selection to  at the local project level . Desktop app : set the  field in a settings file, for example  , the file the terminal menu writes. When you run  there, Claude Code opens Settings > Claude Code rather than a menu. The standalone  command was deprecated in v2.1.73 and removed in v2.1.91. Use  or edit the  setting directly. To set a style without the menu, edit the  field directly in a settings file: Output style is part of the system prompt, which Claude Code reads once at session start. Changes take effect after  or a new session. See How Claude Code uses prompt caching for what an output style change does to the cache. ​ Create a custom output style A custom output style is a Markdown file: frontmatter for metadata, then the instructions to add to the system prompt. 1 Create a Markdown file Save it at one of three levels. The file name becomes the style name unless you set  in the frontmatter. User:  Project:  Managed policy:  inside the managed settings directory Project output styles load from every  between the working directory and the repository root. When more than one of these nested directories defines a style with the same name, Claude Code uses the one closest to the working directory. 2 Add frontmatter and instructions Decide whether to keep Claude Code’s software engineering instructions. Set  if you’re changing how Claude communicates but still want it coding the same way. Leave it out if Claude won’t be doing software engineering. This example leads every explanation with a diagram while keeping Claude’s coding behavior: 3 Switch to your style Run  in the terminal and select your style under Output style , or set  in a settings file to the style’s name. It takes effect after  or the next time you start a session. Plugins can also ship output styles in an  directory. ​ Frontmatter Output style files support these frontmatter fields: Frontmatter Purpose Default  Name of the output style, if not the file name Inherits from file name  Description of the output style, shown in the  picker None  Keep Claude Code’s built-in software engineering instructions   Plugin output styles only: apply this style automatically whenever the plugin is enabled, without requiring users to select it. Overrides the user’s  setting. If multiple enabled plugins set this, Claude Code uses the first one loaded.  ​ How output styles work Output styles directly modify Claude Code’s system prompt. Claude Code adds each output style’s custom instructions to the end of the system prompt. All output styles trigger reminders for Claude to adhere to the output style instructions during the conversation. Custom output styles leave out Claude Code’s built-in software engineering instructions, such as how to scope changes, write comments, and verify work, unless  is set to  . Output styles apply to the main conversation only: a subagent runs its own system prompt , so styles don’t change how subagents respond. A fork is the exception, because it inherits the parent’s full system prompt. Token usage depends on the style. Adding instructions to the system prompt increases input tokens, though prompt caching reduces this cost after the first request in a session. The built-in Explanatory and Learning styles produce longer responses than Default by design, which increases output tokens. For custom styles, output token usage depends on what your instructions tell Claude to produce. ​ Comparisons to related features Several features customize how Claude Code behaves. Output styles modify the system prompt directly and apply to every response. The others add instructions without changing the default system prompt, or scope them to a specific task. Feature How it works Use it when Output styles Modifies the system prompt You want a different role, tone, or default response format every turn CLAUDE.md Adds a user message after the system prompt Claude should always know your project convent
+
+## Code / Examples
+
+```
+TODO(human)
+```
+```
+/config
+```
+```
+.claude/settings.local.json
+```
+```
+outputStyle
+```
+```
+.claude/settings.local.json
+```
+```
+/config
+```
+```
+/output-style
+```
+```
+/config
+```
+
+
+---
+*Source: [code.claude.com](https://code.claude.com/docs/en/output-styles)*

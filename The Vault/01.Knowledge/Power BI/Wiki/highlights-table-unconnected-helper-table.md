@@ -16,10 +16,10 @@ The Highlights table maps button clicks to numeric "Order" values that SWITCH st
 
 ## Components
 
-1. **Power Query table** — single column `Order` with values 1, 2, 3, 4 (one per highlight)
-2. **Button slicer** — bound to `Highlights[Order]`, formatted as a vertical list of buttons
-3. **Callout value label** — bound to a SWITCH-based DAX measure that returns the appropriate text
-4. **Supporting DAX measures** — one measure per highlight, each returning a formatted text string
+1. **Power Query table:** single column `Order` with values 1, 2, 3, 4 (one per highlight)
+2. **Button slicer:** bound to `Highlights[Order]`, formatted as a vertical list of buttons
+3. **Callout value label:** bound to a SWITCH-based DAX measure that returns the appropriate text
+4. **Supporting DAX measures:** one measure per highlight, each returning a formatted text string
 
 ## Structure
 

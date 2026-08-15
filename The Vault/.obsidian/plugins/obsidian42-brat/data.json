@@ -1,0 +1,29 @@
+{
+  "pluginList": [
+    "dsebastien/obsidian-ai-editor",
+    "UltimateAI-org/aitoolsforobsidian"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "dsebastien/obsidian-ai-editor",
+      "version": "latest"
+    },
+    {
+      "repo": "UltimateAI-org/aitoolsforobsidian",
+      "version": "latest"
+    }
+  ],
+  "themesList": [],
+  "updateAtStartup": true,
+  "updateThemesAtStartup": true,
+  "enableAfterInstall": true,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": true,
+  "globalTokenName": "",
+  "personalAccessToken": "",
+  "selectLatestPluginVersionByDefault": false,
+  "allowIncompatiblePlugins": false
+}

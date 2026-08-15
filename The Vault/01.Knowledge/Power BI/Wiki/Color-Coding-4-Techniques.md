@@ -56,9 +56,9 @@ Dynamic Color =
 
 ## Technique 4 — Overlay Charts (Line/Area Color)
 
-Native per-series formatting does not support conditional coloring. Use two overlaid charts.
+Native per-series formatting does not support conditional coloring. Use two overlaid chart series.
 
-See: [[Dynamic-Line-Area-Chart-Color]]
+See: [[Line-Chart-Overlay-Pattern-for-Conditional-Color]]
 
 ## Summary Table
 
@@ -79,5 +79,5 @@ See: [[Dynamic-Line-Area-Chart-Color]]
 ## Related
 
 - [[SWITCH]] — core DAX function for all conditional coloring
-- [[Dynamic-Line-Area-Chart-Color]] — Technique 4 overlay
+- [[Line-Chart-Overlay-Pattern-for-Conditional-Color]] — Technique 4 overlay
 - [[Color-Area-Charts-With-Markers]] — combining color with markers and target lines

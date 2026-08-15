@@ -35,7 +35,7 @@ Boniface Muchendu walks through the end-to-end process of connecting Power BI to
 
 - The connection is via the **Web** connector, not SharePoint Online List
 - The file URL is copied from the SharePoint file details pane (information icon → Path section)
-- Privacy level must be set to **Organizational** — not Public or Private
+- Privacy level must be set to **Organizational:** not Public or Private
 - After publishing from Power BI Desktop, re-authenticate the dataset in Power BI Service (OAuth2)
 - Power BI Desktop file is local; the live data connection to SharePoint is maintained in the published dataset
 

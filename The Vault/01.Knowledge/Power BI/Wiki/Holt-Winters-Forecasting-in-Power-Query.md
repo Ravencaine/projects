@@ -16,18 +16,18 @@ Run a **Holt-Winters Exponential Smoothing** model inside Power Query — a per-
 Power BI's built-in Forecasting visual is convenient but inflexible: it only works on a line chart, hides the underlying forecast values, and provides no confidence intervals for further analysis. Putting the forecasting model inside Power Query (as a Python script step) gives you:
 
 - **Full access to forecast values** for DAX-driven actual-vs-forecast comparisons, custom KPIs, anomaly flags.
-- **Any visual** — bar, area, table, matrix — not just line charts.
-- **Multiple series in one script** — loop per category, one output table.
-- **No Premium required** — only a Python runtime + `statsmodels` on the local machine.
-- **Refreshes with the data** — re-running the script on each refresh generates fresh forecasts.
+- **Any visual:** bar, area, table, matrix — not just line charts.
+- **Multiple series in one script:** loop per category, one output table.
+- **No Premium required:** only a Python runtime + `statsmodels` on the local machine.
+- **Refreshes with the data:** re-running the script on each refresh generates fresh forecasts.
 
 ## Components
 
 - **Data table** with at minimum: `Date`, a numeric metric to forecast (e.g. `TurnoverRate`), and a grouping column (e.g. `Department`).
-- **`statsmodels.tsa.holtwinters.ExponentialSmoothing`** — the model. Add `trend='add'` and `seasonal='add'` for the typical HR/retail monthly setup.
-- **Pandas loop** — one model per group, then concatenate original + forecast into a single DataFrame.
-- **`Forecast` flag column** — boolean, `True` for forecast rows, `False` for historical. This is the linchpin that lets DAX differentiate actual vs predicted.
-- **Power Query "Run Python script" step** — the integration glue. The table passes in as `dataset`; the script returns a single DataFrame.
+- **`statsmodels.tsa.holtwinters.ExponentialSmoothing`:** the model. Add `trend='add'` and `seasonal='add'` for the typical HR/retail monthly setup.
+- **Pandas loop:** one model per group, then concatenate original + forecast into a single DataFrame.
+- **`Forecast` flag column:** boolean, `True` for forecast rows, `False` for historical. This is the linchpin that lets DAX differentiate actual vs predicted.
+- **Power Query "Run Python script" step:** the integration glue. The table passes in as `dataset`; the script returns a single DataFrame.
 
 ## Structure
 
@@ -95,9 +95,9 @@ Bittar's HR example:
 
 Three report views built on top of the loaded table:
 
-1. **Last 3 months + next 12 months** — focused turn-around chart with recent history + forecast.
-2. **All historical values** — long-window trend analysis.
-3. **Year-end summary** — per-department anticipated turnover + expected headcount.
+1. **Last 3 months + next 12 months:** focused turn-around chart with recent history + forecast.
+2. **All historical values:** long-window trend analysis.
+3. **Year-end summary:** per-department anticipated turnover + expected headcount.
 
 ## Variations
 

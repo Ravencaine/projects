@@ -28,7 +28,7 @@ Core SVG concepts used when generating SVG strings inside DAX measures for Power
 ## Notes
 
 - Power BI requires the data URI prefix (`data:image/svg+xml;utf8,`) on the DAX measure output — without it, Power BI treats the string as plain text
-- **External image URLs inside SVGs are blocked by Power BI** — always use Base64 data URLs for the image content
+- **External image URLs inside SVGs are blocked by Power BI:** always use Base64 data URLs for the image content
 - `preserveAspectRatio="xMidYMid slice"` is the most reliable setting for circular crops: it centers the image (`xMidYMid`) and fills the circle by cropping (`slice`), preventing letterboxing
 - `viewBox` units are independent of CSS pixel values — `"0 0 150 60"` means a 150×60 coordinate system; the actual rendered size in the visual is controlled by the table column's image height setting
 - The `xmlns` attribute is mandatory: `xmlns="http://www.w3.org/2000/svg"` — without it, some Power BI renderers reject the SVG

@@ -68,11 +68,11 @@ Define a color palette and two color measures for cell background and font color
 
 ## Key Takeaways
 
-- **100% DAX** — no Python, R, or external services.
-- **Fully interactive** — responds to all report filters and slicers.
-- **Interactive tooltip** — scatter plot with trend line shows individual observations behind each correlation.
-- **Scalable** — add/remove variables by editing the DATATABLE entries.
-- **Context-aware** — colors remain meaningful under filtered contexts because bucket thresholds are fixed, not gradient-based.
+- **100% DAX:** no Python, R, or external services.
+- **Fully interactive:** responds to all report filters and slicers.
+- **Interactive tooltip:** scatter plot with trend line shows individual observations behind each correlation.
+- **Scalable:** add/remove variables by editing the DATATABLE entries.
+- **Context-aware:** colors remain meaningful under filtered contexts because bucket thresholds are fixed, not gradient-based.
 
 ## Related
 

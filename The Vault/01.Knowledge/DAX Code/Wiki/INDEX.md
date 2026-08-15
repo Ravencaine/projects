@@ -1650,6 +1650,318 @@ DAX handles Unicode emoji in string literals correctly at expression level; rend
 
 DATESINPERIOD for rolling N-month windows: anchor via StartDate, sign of Number controls direction — compared to Max Date rolling window pattern |
 
+## Conceptual Atomics — Orphan Entries
+
+| [[ALL-vs-ALLSELECTED]] | ALL vs ALLSELECTED — Filter Context Scope
+
+`ALL` ignores all filters. `ALLSELECTED` respects the current user slicer context. Choosing the wrong one causes measures to return either the grand total or the wrong filtered value. |
+| [[BLANK-vs-Zero]] | BLANK() vs 0 — Behaviour in Aggregations
+
+`BLANK()` and `0` are semantically different in DAX. `BLANK()` represents missing or unknown data and is excluded from most aggregations. `0` is an actual zero value and is included. Confusing them produces incorrect totals. |
+| [[CG-Creation-Power-BI-Model-View]] | CG Creation — Power BI Desktop Model View
+
+Create a calculation group directly in Power BI Desktop using Model View — no external tools required. |
+| [[CG-Dynamic-Format-String]] | CG Dynamic Format String Pattern
+
+Calculation items can override the format of the underlying measure using a dynamic format string expression. |
+| [[COLLAPSE-COLLAPSEALL-Hierarchy-Navigation]] | COLLAPSE / COLLAPSEALL Hierarchy Navigation Pattern
+
+Navigate hierarchical data in visual calculations using COLLAPSE and COLLAPSEALL functions. |
+| [[Calculation-Group-External-Tools]] | Calculation Group External Tools
+
+Quick reference for the three external tools required for working with Calculation Groups: Tabular Editor, ALM Toolkit, and BDS. |
+| [[Calculation-Group-No-Selection-Default-Pattern]] | Calculation Group No-Selection Default Pattern
+
+DAX pattern for `noSelectionExpression` — applies a default calculation when the user has made no selection in the calculation group slicer. |
+| [[Choose-ISINSCOPE-vs-ISATLEVEL-Workflow]] | Choose ISINSCOPE vs ISATLEVEL Workflow
+
+Workflow for choosing between ISINSCOPE and ISATLEVEL based on whether you need to detect hierarchy level or visual aggregation scope. |
+| [[Conditional-Variance-Display-Hide-Minus-100]] | Conditional Variance Display — Hide -100% When No Prior Period
+
+When a store has no budget assigned, a naive `Actual / Budget - 1` variance formula produces a misleading -100%. This pattern returns BLANK instead. |
+| [[Controlling-Calculation-Group-Selection]] | Controlling Calculation Group Selection
+
+Two new calculation group properties — `multipleOrEmptySelectionExpression` and `noSelectionExpression` — give authors explicit control over what happens when users select multiple or no items. |
+| [[Currency-Conversion-Format-String-Pattern]] | Currency Conversion Format String Pattern
+
+DAX pattern for using the *Format String Expression* on a Currency Conversion calculation item to dynamically apply locale-specific currency symbols. |
+| [[DAX-Measure-Best-Practices]] | DAX Measure Best Practices
+
+Never drag a column directly onto a visual and rely on implicit aggregation. Write explicit measures. Keep measures focused. Use CALCULATE intentionally. |
+| [[DAX-UDF-Development-Environments]] | DAX UDF Development Environment Options
+
+Five entry points for building, testing, and deploying DAX UDFs. None are interactive debuggers; all require a validate-by-running workflow. |
+| [[DAX-UDFs-Enable-AI-Copilot-Adoption]] | DAX UDFs Enable AI Copilot Adoption
+
+Beyond personal productivity, typed documented UDFs are the contract that makes AI code generation reliable and audit-friendly. |
+| [[DAX-UDFs-Require-Compatibility-1702]] | DAX UDFs Require Compatibility Level 1702+
+
+UDFs are only available on database **compatibility level 1702 or higher**. Attempting to deploy to a lower compatibility level produces an error. |
+| [[DAX-UDFs-vs-Calculation-Groups]] | DAX UDFs vs Calculation Groups
+
+UDFs and calculation groups solve **different problems:** they are complementary tools, not substitutes. UDFs encapsulate business logic; CGs handle time intelligence and format overrides. |
+| [[DAX-VAR-RETURN-Pattern]] | DAX VAR/RETURN Pattern for Readability
+
+DAX measures with multiple calculation steps should use the VAR/RETURN pattern to name intermediate results, making formulas self-documenting and avoiding repeated evaluation. |
+| [[DIVIDE-Safe-Division]] | DIVIDE() — Safe Division with BLANK on Zero or Blank
+
+`DIVIDE(<numerator>, <denominator>[, <alternateresult>])` performs safe division, returning BLANK instead of an error when the denominator is zero or blank. |
+| [[DaxPatterns-LikeForLike-Library]] | Like-for-Like UDF Library (DaxPatterns.LikeForLike)
+
+A three-function model-independent library for like-for-like comparison across any metric and time granularity, eliminating the need for separate measures per KPI. |
+| [[Dynamic-Graph-Area-Buffer]] | Dynamic Graph Area Buffer (×1.05/−5%)
+
+Add ±5% padding above the maximum and below the minimum vital values when setting Y-axis range to prevent values sitting on the chart border. |
+| [[Evergreen-Top-N-Products]] | Evergreen Top-N Products
+
+A product qualifies as "evergreen" when it appears in the top-N list in at least X consecutive periods. |
+| [[Excel-vs-DAX-Cell-Based-vs-Context-Driven]] | Excel vs DAX — Cell-Based vs Context-Driven
+
+DAX formulas operate on entire columns at once, not individual cells. This fundamental difference changes how you think about formulas, references, and context. |
+| [[FILTER-Dimension-Not-Fact-Performance]] | FILTER: Filter Dimension Tables, Not Fact Tables
+
+When using `FILTER` inside CALCULATE, always apply it to the smallest table possible. Filtering the fact table forces the engine to scan all rows. |
+| [[Five-Minute-UDF-Audit]] | Five-Minute UDF Audit
+
+Count these three things in your semantic model to find UDF candidates before writing any code: repeated patterns, magic numbers, and copy-paste chains. |
+| [[Fix-Incorrect-Totals-SUMX-SUMMARIZE-Pattern]] | Fix Incorrect Totals — SUMX + SUMMARIZE Pattern
+
+Corrects the total row in table/matrix visuals when using non-additive aggregations by replacing SUM with SUMX over a SUMMARIZE grouping. |
+| [[Format-String-Expression-in-Calculation-Groups]] | Format String Expression in Calculation Groups
+
+Each calculation item has two DAX properties: the *Expression* (controls the calculation) and the *Format String Expression* (controls how the result is displayed). |
+| [[Geometric-Mean-Formula]] | Geometric Mean — Definition & Formula
+
+The geometric mean of *n* values is the *n*th root of their product. It is always less than or equal to the arithmetic mean. |
+| [[Geometric-Mean-Zero-Negative-Limitation]] | Geometric Mean — Zero and Negative Values Limitation
+
+The geometric mean **breaks when any value in the dataset is zero or negative**. Use the arithmetic mean as a fallback in these cases. |
+| [[ISATLEVEL-Visual-Calculation]] | ISATLEVEL Visual Calculation Pattern
+
+Use ISATLEVEL in visual calculations to detect the current hierarchy depth and conditionally apply formatting or calculations per level. |
+| [[ISINSCOPE-Per-Level-Conditional-Formatting]] | ISINSCOPE Per-Level Conditional Formatting Pattern
+
+Apply different conditional formatting rules at different hierarchy levels using ISINSCOPE to detect the current visual level. |
+| [[ISINSCOPE-vs-ISATLEVEL-Architectural-Location]] | ISINSCOPE vs ISATLEVEL — Architectural Location
+
+ISINSCOPE and ISATLEVEL are both level-detection functions but live in different layers: ISINSCOPE is a **model function**; ISATLEVEL is a **visual calculation function**. |
+| [[ISNUMERIC-Guard-Pattern-for-CG]] | ISNUMERIC Guard Pattern for Calculation Groups
+
+Use `ISNUMERIC()` inside a calculation item expression to check whether the active measure returns a numeric value before attempting arithmetic operations. |
+| [[Inventory-Aging-Buckets-Pattern]] | Inventory Aging Buckets Pattern
+
+Segment inventory sales into weekly age buckets (0–1 week, 1–2 weeks, 2–3 weeks, 3–5 weeks, 5+ weeks) to track inventory velocity. |
+| [[KPI-Card-Clean-Display-Dash-for-Blank]] | KPI Card Clean Display — Return " - " for Blank
+
+KPI cards show BLANK as an empty space. Returning `" - "` makes it explicit that no data is available, improving the user experience. |
+| [[Local-Wrapper-UDF-Pattern]] | Local.* UDF Wrapper Pattern
+
+Use the `Local.` prefix for model-dependent wrapper functions that call model-independent core functions. The wrapper owns the schema; the core owns the math. |
+| [[Local-ComputeForBestProds]] | Local.ComputeForBestProds
+
+A DAX user-defined function that evaluates an expression only for products appearing in the top-N by the current visual's measure. |
+| [[MAXX-MINX-ALL-Date-Dynamic-Range]] | MAXX/MINX + ALL over Date for Dynamic Range
+
+`MAXX(ALL('Vital Stats'[Date]), [Max Vital])` computes the overall maximum across all dates visible in the current context for dynamic axis scaling. |
+| [[Measure-Library-to-UDF-Migration]] | Measure Library → UDF Library Migration
+
+Systematic approach for refactoring a folder of copy-pasted measures into a typed, documented UDF library using a three-stage migration workflow. |
+| [[Model-Dependent-vs-Model-Independent-UDFs]] | Model-Dependent vs Model-Independent UDFs
+
+The fundamental distinction in DAX user-defined function design: model-dependent UDFs reference specific table/column names; model-independent UDFs accept column references as parameters. |
+| [[PREVIOUS-YoY-VC-Pattern]] | PREVIOUS-based YoY% Visual Calculation Pattern
+
+Ready-to-use visual calculation for Year-over-Year percentage change using `PREVIOUS` and `DIVIDE`. |
+| [[Performance-Analyzer-vs-DAX-Studio]] | Performance Analyzer vs DAX Studio
+
+Power BI's built-in Performance Analyzer and DAX Studio serve different diagnostic needs: Performance Analyzer for end-user impact; DAX Studio for deep query analysis. |
+| [[REMOVEFILTERS-vs-ALLSELECTED-for-Per-Level-Rules]] | REMOVEFILTERS vs ALLSELECTED for Per-Level Rules
+
+Use REMOVEFILTERS inside CALCULATE for per-level conditional formatting because it removes filters without returning a table. Use ALLSELECTED only when you need to respect external slicers. |
+| [[SE-FE-Performance-Model]] | SE/FE Performance Model: The Warehouse Analogy
+
+The Storage Engine (SE) and Formula Engine (FE) have fundamentally different performance characteristics. Think of the SE as a warehouse (fast, parallel, dumb) and the FE as an office (slow, sequential, smart). |
+| [[SUMMARIZECOLUMNS-Blank-Elimination-VC-Densification]] | SUMMARIZECOLUMNS Blank Elimination + VC Densification
+
+`SUMMARIZECOLUMNS` and visual calculations have opposing strategies for handling missing combinations. Understanding this prevents unexpected totals. |
+| [[SWITCH-Level-Dispatch-Pattern]] | SWITCH-Level-Dispatch Pattern
+
+Dispatch to different calculation branches based on the current hierarchy level detected by ISINSCOPE, enabling per-level custom behavior in the same formula. |
+| [[SWITCH-Specificity-Ordering]] | SWITCH Specificity-Ordering Pattern
+
+SWITCH evaluates conditions top-to-bottom. Put more specific conditions first to avoid incorrect matches from overly general patterns. |
+| [[Scoped-DAX-EVALUATE-SELECTCOLUMNS-Query-Pattern]] | Scoped Dataset Pattern: EVALUATE + SELECTCOLUMNS + ALLSELECTED
+
+Before any Power Automate logic runs, the contract population is constrained using ALLSELECTED to respect the current visual's filter context. |
+| [[Sell-Through-Rate-Pattern]] | Sell-Through Rate Pattern
+
+Calculate what percentage of produced or donated goods actually sold. Used in retail and nonprofit inventory analysis. |
+| [[Storage-Engine-vs-Formula-Engine-Comparison]] | Storage Engine vs Formula Engine — DAX Query Processing
+
+Storage Engine handles simple scans and aggregations at high speed and low memory cost. Formula Engine handles complex logic that cannot be pushed down. |
+| [[Storage-Engine-vs-Formula-Engine]] | Storage Engine (SE) vs Formula Engine (FE)
+
+Power BI's query engine is split into two distinct engines — the fast, parallel Storage Engine that scans VertiPaq data, and the slower but more powerful Formula Engine that handles complex DAX logic. |
+| [[TMDL-Syntax-Calculation-Group-Properties]] | TMDL Syntax for Calculation Group Properties
+
+Reference for writing `multipleOrEmptySelectionExpression` and `noSelectionExpression` in TMDL format for calculation group configuration. |
+| [[Totals-Wrong-Row-Context-Missing]] | Why Totals Are Wrong: Row Context Missing at Total
+
+The total row in a table or matrix visual operates under a fundamentally different context than row values — it lacks the row context that the formula depends on. |
+| [[UDF-Generalization-Workflow]] | UDF Generalization: From Pattern to Reusable Library
+
+Refactor a working DAX pattern into a model-independent user-defined function by replacing hardcoded table/column references with parameter inputs. |
+| [[UDF-vs-Calculation-Groups-Comparison]] | UDF vs Calculation Groups
+
+UDFs and calculation groups serve fundamentally different purposes. Confusing them leads to over-engineered solutions for simple problems. |
+| [[VAR-for-Intermediate-Measure-Calculation]] | VAR for Intermediate Measure Calculation
+
+DAX VAR stores the result of an intermediate expression in a named variable, then references it multiple times — avoiding repeated calculation and improving readability. |
+| [[VC-Densification-Performance-Overhead]] | VC Densification Performance Overhead
+
+Visual calculations require the DAX engine to **densify** the virtual table — adding rows for missing combinations. This has a measurable CPU cost on large datasets. |
+| [[VC-vs-Measure-Performance-Decision]] | Measure vs Visual Calc Performance Decision Pattern
+
+Use this decision framework to choose between a model measure and a visual calculation: if the logic is model-wide, use a measure; if it is visual-only, use a visual calc. |
+| [[Value-vs-Expression-Parameter-Types]] | Value vs Expression Parameter Types
+
+DAX UDFs have two fundamentally different parameter-passing modes. Choosing the wrong type silently changes semantics and produces incorrect results. |
+| [[Virtual-Table-Debugging-via-Calculated-Tables]] | Virtual Table Debugging via Calculated Tables
+
+When a virtual table expression (FILTER, SUMMARIZE, ADDCOLUMNS, etc.) produces unexpected results, materialize it as a calculated table to inspect the rows directly. |
+| [[abc-analysis-dax-pattern]] | ABC Classification — DAX Pattern
+
+Classify items into A/B/C buckets based on cumulative % contribution using DAX measures and a SWITCH boundary pattern. |
+| [[alt-text-udf-workflow]] | Alt Text UDF Library — Usage Workflow
+
+How to load and use the Juls Power BI Alt Text UDF library in a Power BI model. |
+| [[averagevital]] | AverageVital
+
+Returns the average value for a selected vital sign from the Vital Stats table. |
+| [[bulletchartalttext]] | BulletChartAltText
+
+DAX UDF generating screen-reader-friendly alt text for a bullet/target chart visual in Power BI. |
+| [[calculation-item-applies-only-to-measure-reference]] | Calculation Items Apply Only to Measure References
+
+A calculation item is applied only when it encounters a **measure reference** in the visual — constants and non-measure expressions are silently skipped. |
+| [[dax-query-view-enable-workflow]] | DAX Query View Enable Workflow
+
+Workflow for enabling the DAX Query View preview feature in Power BI Desktop. |
+| [[dax-query-view-november-2023-preview]] | DAX Query View November 2023 Preview Feature Atomic
+
+Preview feature that exposes DAX query view — a built-in DAX query editor inside Power BI Desktop. |
+| [[dax-query-view-ui-components]] | DAX Query View UI Components Atomic
+
+DAX Query View UI components: query editor, results pane, query plan, and server timings. |
+| [[define-evaluate-measures-in-place]] | Define Evaluate Measures In Place Atomic
+
+DAX Query View supports inline DEFINE MEASURE inside EVALUATE queries — no separate model step required. |
+| [[define-with-references-and-evaluate]] | Define With References And Evaluate Atomic
+
+Using DEFINE with referenced measures in DAX Query View — a workflow for prototyping before committing to the model. |
+| [[dwp-ABCBand]] | dwp.ABCBand — Parameterized ABC Classification UDF
+
+Converts a cumulative percentage to an ABC classification tier. Replaces hardcoded SWITCH statements scattered across measures with a single parameterized function. |
+| [[dwp-CurrencyAwareGrowth]] | dwp.CurrencyAwareGrowth — AnyRef Expression Parameter
+
+Demonstrates the correct use of an `AnyRef` expression parameter for context-correct measure evaluation inside a UDF. |
+| [[dwp-SafeDivide]] | dwp.SafeDivide — Parameterized Safe Division UDF
+
+Replaces all ad-hoc `IF(Denominator=0, BLANK(), DIVIDE(...))` patterns across a measure library with a single typed, documented function call. |
+| [[evaluate-basic-query-run-workflow]] | EVALUATE Basic Query Run Workflow
+
+Basic workflow for running EVALUATE queries in DAX Query View to test table expressions before committing them to calculated columns or tables. |
+| [[evergreen-top-n-products-pattern]] | Evergreen Top-N Products Pattern
+
+Find the products that consistently rank in the top N across multiple time periods — "evergreen" products that maintain relevance. |
+| [[filterproductsbasedonmeasure-local-function]] | FilterProductsBasedOnMeasure Local Function Pattern
+
+A local model-dependent UDF that filters a product table to only those products whose aggregated measure value meets a threshold. |
+| [[filtertablebasedonmeasure-granularity-switch]] | FilterTableBasedOnMeasure Granularity SWITCH Pattern
+
+Switch between filtering at different granularity levels (product, category, region) based on user selection using a disconnected parameter table. |
+| [[flexible-slicer-with-granularity-workflow]] | Flexible Slicer With Granularity Workflow
+
+A disconnected slicer drives both the granularity (daily/weekly/monthly) and the measure expression — one table, multiple behaviors. |
+| [[format-comment-search-workflow]] | Format Comment Search Workflow
+
+DAX Query View workflow for finding all notes and documentation comments in a semantic model using the search feature. |
+| [[generate-inside-calculatetable-allselected-atomic]] | GENERATE Inside CALCULATETABLE with ALLSELECTED
+
+`GENERATE` computes its second table expression in the *current row context* of the first table — combining ALLSELECTED with GENERATE lets you build responsive virtual tables. |
+| [[groupby-sumx-currentgroup-constant-count-pattern]] | GROUPBY + SUMX(CURRENTGROUP(), 1) — Counting Rows in Current Group
+
+`GROUPBY` does not accept aggregators directly — it requires iterating over `CURRENTGROUP()` with an X-iterator such as SUMX. |
+| [[just2times10-measure-overrides-precedence]] | Just2Times10 — Measure That Applies a Calculation Item via CALCULATE
+
+A pattern demonstrating how a measure that applies a calculation item via CALCULATE overrides the model's CG precedence rules. |
+| [[kpi-card-arrow-color-from-growth]] | KPI Card: Arrow and Color from Growth
+
+Return an arrow symbol and hex color code based on whether a growth value is positive or negative. |
+| [[kpi-card-context-preserving-measures]] | KPI Card: Context-Preserving Measure Design
+
+Design KPI measures that react naturally to slicer and chart selections — without generating unexpected subtotals or grand totals. |
+| [[kpi-card-growth-summary-text]] | KPI Card: Growth Summary Text
+
+Turn a growth percentage into a plain-language sentence describing the trend direction and magnitude. |
+| [[maxgrapharea]] | MaxGraphArea
+
+Returns the upper Y-axis boundary for a line chart, calculated as the global maximum plus a 5% buffer. |
+| [[maxvital]] | MaxVital
+
+Returns the maximum value for a selected vital sign from the Vital Stats table. |
+| [[measure-applied-calculation-item-overrides-precedence]] | Measure-Applied Calculation Item Overrides Group Precedence
+
+When a measure **internally** applies a calculation item via CALCULATE, it overrides the model's CG precedence — firing that item regardless of precedence order. |
+| [[measure-as-filter-in-visual-filter-pane]] | Measure as Filter in Visual Filter Pane Atomic
+
+Measures can be placed in the visual-level filter pane to control visual behavior based on dynamic thresholds. |
+| [[measure-cannot-be-filtered-granularity-required]] | Measure Cannot Be Filtered Granularity Required Atomic
+
+Measures that aggregate at a different grain than the visual's axis require careful filter context management to avoid incorrect results. |
+| [[mingrapharea]] | MinGraphArea
+
+Returns the lower Y-axis boundary for a line chart, calculated as the global minimum minus a 5% buffer. |
+| [[minvital]] | MinVital
+
+Returns the minimum value for a selected vital sign from the Vital Stats table. |
+| [[nested-calculate-does-not-change-application-order]] | Nested CALCULATE Does Not Change Calculation Item Application Order
+
+Nesting CALCULATE functions does **not** change the order in which calculation items are applied — the CG precedence rules still govern. |
+| [[progressbaralttext]] | ProgressBarAltText
+
+DAX UDF generating screen-reader-friendly alt text for a progress bar visual in Power BI. |
+| [[query-measure-function-workflow]] | Query → Measure → Function Workflow for Non-Trivial DAX
+
+A three-stage authoring protocol for DAX measures that manipulate tables: prototype in DAX Query View, promote to model measure, generalize into a UDF. |
+| [[quick-queries-right-click-templates]] | Quick Queries Right Click Templates Atomic
+
+Right-click templates in DAX Query View for common queries: TOPN, SUMMARIZECOLUMNS, CALCULATETABLE, and more. |
+| [[quick-queries-workflow]] | Quick Queries Workflow
+
+Workflow for using DAX Query View's quick query templates to inspect model structure and data patterns without writing full queries. |
+| [[ratingdotsalttext]] | RatingDotsAltText
+
+DAX UDF generating screen-reader-friendly alt text for a star/dot rating visual in Power BI. |
+| [[selectedmeasure-local-function-parameter]] | SELECTEDMEASURE Local Function Parameter Atomic
+
+Using SELECTEDMEASURE() inside a UDF to reference whichever measure the user has placed in the visual — enables truly generic formatting UDFs. |
+| [[slicer-filter-measure-implementation-workflow]] | Slicer Filter Measure Implementation Workflow
+
+Place a measure on the visual-level filter pane to filter the entire visual based on a disconnected slicer selection. |
+| [[sparkbarsalttext]] | SparkBarsAltText
+
+DAX UDF generating screen-reader-friendly alt text for a sparkline bar pattern in Power BI. |
+| [[sqlbi-calculation-groups-article-map]] | SQLBI Calculation Groups — Article Map
+
+Complete list of SQLBI articles in the Calculation Groups series, as documented and cross-referenced in this knowledge base. |
+| [[statuspillalttext]] | StatusPillAltText
+
+DAX UDF generating screen-reader-friendly alt text for a status indicator pill/badge visual in Power BI. |
+| [[variancechipalttext]] | VarianceChipAltText
+
+DAX UDF generating screen-reader-friendly alt text for a variance chip/badge visual in Power BI. |
+
 ## Measures — Dynamic KPI Card (Bittar, 2025)
 
 || Note | Description |
@@ -2076,6 +2388,69 @@ VAR composes naturally with `CALCULATE` and `FILTER` — variables store interme
 | [[dax-measure-to-business-rule-extraction.md]] | DAX Measure → Business Rule Extraction
 
 Converting DAX CALCULATE/IF/SWITCH measures into structured business rule JSON for AI agent consumption |
+## Date & Time — Orphan Entries
+
+| [[Calculation-Group-Time-Intelligence-Reference]] | Time Intelligence via Calculation Groups — SELECTEDVALUE Pattern
+
+Calculation groups eliminate the need for separate YoY/MoM/QoQ measures per KPI. A single time-selection drives all KPIs simultaneously. |
+| [[Calculation-Groups]] | Calculation Groups
+
+A Tabular/DAX feature that lets a single Calculation Item apply a time-intelligence or format transformation to any measure without duplicating DAX logic. |
+| [[Create-a-Calculation-Group]] | Create a Calculation Group
+
+Build a reusable time-intelligence Calculation Group in Power BI using Tabular Editor or Model View. |
+| [[Custom-Date-Range-DATESBETWEEN]] | Custom Date Range: DATESBETWEEN + DATE
+
+`DATESBETWEEN` returns exactly the dates between two specified endpoints, inclusive — useful for arbitrary date ranges beyond standard periods. |
+| [[DATESBETWEEN-Dynamic-Date-Ranges]] | DATESBETWEEN — Dynamic Date Range Filtering
+
+`DATESBETWEEN(<date_column>, <start_date>, <end_date>)` returns a table of dates between two boundaries. Either end can be a DAX expression for dynamic ranges. |
+| [[Date-Table-Must-Be-Marked-Requirement]] | A Proper Marked Date Table Is a Prerequisite for All Time Intelligence
+
+Every DAX time intelligence function requires a dedicated, correctly marked Date table. Without it, results are unpredictable or silently wrong. |
+| [[Dynamic-Goal-Selection-via-SELECTEDVALUE]] | Dynamic Goal Selection via SELECTEDVALUE
+
+Detect what time granularity the user is viewing (day, month, year, or custom range) and use SELECTEDVALUE to return the matching goal value from a disconnected parameter table. |
+| [[Endurance-Improvement-FIRSTDATE-LASTDATE-Pattern]] | Endurance Improvement: FIRSTDATE + LASTDATE Percentage Change
+
+Compare an entity's first recorded value against its most recent value, then return the percentage change as a performance metric. |
+| [[Growth-Rate-Pattern-DIVIDE-Prior-Period]] | Growth Rate Pattern: DIVIDE + CALCULATE + Time Shift
+
+Growth rate calculations follow a consistent structure: `(current − prior) / prior`. Use DIVIDE to handle zero priors safely. |
+| [[ISNUMBER-SelectedMeasure-Guard-Pattern]] | ISNUMBER Guard for Calculation Items
+
+Every calculation item that performs numeric operations must guard against non-numeric measures using ISNUMBER — otherwise the result is an error. |
+| [[MAXX-MINX-ALL-Date-Dynamic-Range]] | MAXX/MINX + ALL over Date for Dynamic Range
+
+`MAXX(ALL('Date'[Date]), [MaxValue])` computes the overall maximum across all dates visible in the current context. |
+| [[Rolling-Average-AVERAGEX-DATESINPERIOD-Pattern]] | Rolling Average: AVERAGEX + DATESINPERIOD
+
+Rolling averages smooth seasonal fluctuations and one-time spikes, revealing the underlying trend. Use AVERAGEX over DATESINPERIOD for a clean implementation. |
+| [[Rolling-Window-Functions-DATESINPERIOD]] | Rolling Window Functions: DATESINPERIOD + LASTDATE
+
+`DATESINPERIOD` returns a sliding window of dates ending or starting at a given anchor. Use LASTDATE as the anchor for a rolling-window approach. |
+| [[Running-Total-Functions-TOTALMTD-TOTALQTD-TOTALYTD]] | Running Total Functions: TOTALMTD / TOTALQTD / TOTALYTD
+
+TOTAL* and DATES* versions do the same thing — cumulative totals from period start to current context date. Choose based on preference for clarity. |
+| [[SAMEPERIODLASTYEAR-YoY-Pattern]] | SAMEPERIODLASTYEAR YoY Pattern
+
+Use `CALCULATE` + `ALL` + `SAMEPERIODLASTYEAR` to compare the current filtered period against the equivalent period last year. |
+| [[STARTOFMONTH-Date-Anchoring]] | STARTOFMONTH — Anchor to First Day of Month
+
+`STARTOFMONTH(<date_column>)` returns the first date of the month in the current filter context — useful as an anchor for period-relative calculations. |
+| [[Time-Intelligence-Functions-Reference]] | Time Intelligence Functions Reference
+
+DAX built-in time intelligence functions for period-based calculations. All require a correctly marked Date table. |
+| [[Time-Intelligence-Is-CALCULATE-With-Date-Table]] | Time Intelligence Is CALCULATE With a Specially Constructed Date Table Filter
+
+Every DAX time intelligence function is a thin wrapper around `CALCULATE` with a date table filter. Understanding this makes troubleshooting easy. |
+| [[Time-Shift-Functions-DATEADD-SAMEPERIODLASTYEAR-PARALLELPERIOD]] | Time Shift Functions: DATEADD vs SAMEPERIODLASTYEAR vs PARALLELPERIOD
+
+Three functions that shift the date context backward or forward in time. The choice affects how partial periods are handled. |
+| [[kpi-card-growth-percent-divide]] | KPI Card: Growth % via DIVIDE
+
+Calculate period-over-period growth as a ratio using `DIVIDE`, avoiding division-by-zero errors with a BLANK fallback. |
+
 ## Date & Time  (73 notes)
 
 | Note | Description |
@@ -2657,6 +3032,24 @@ DISTINCTCOUNT-based order count: distinct customer orders vs. line item rows |
 | [[average-order-value-dax.md]] | Average Order Value (AOV) DAX Measure
 
 DIVIDE-based average revenue per order: key metric for purchasing behavior analysis |
+## Statistical — Orphan Entries
+
+| [[BLANK-vs-Zero]] | BLANK() vs 0 — Behaviour in Aggregations
+
+`BLANK()` and `0` are semantically different in DAX. `BLANK()` represents missing or unknown data and is excluded from most aggregations. `0` is an actual zero value and is included. Confusing them produces incorrect totals. |
+| [[Measure-Type-Filter-Pattern]] | Measure Type Filter Pattern (Average/Max/Min)
+
+When a single column stores multiple metric types as text values (e.g. "Average", "Max", "Min"), use SELECTEDVALUE to detect the type and SWITCH to apply the correct aggregation. |
+| [[Return-Zero-vs-BLANK-for-Buckets]] | Return 0 for Buckets, BLANK for Single Values
+
+When a measure represents an individual bucket or category that may legitimately have no data, return BLANK — not 0 — to avoid distorting chart totals. |
+| [[groupby-sumx-currentgroup-constant-count-pattern]] | GROUPBY + SUMX(CURRENTGROUP(), 1) — Counting Rows in Current Group
+
+`GROUPBY` does not accept aggregators directly — it requires iterating over `CURRENTGROUP()` with an X-iterator such as SUMX. |
+| [[quick-queries-column-statistics]] | Quick Queries Column Statistics Atomic
+
+DAX Query View quick query templates for inspecting column cardinality, data types, and distribution statistics. |
+
 ## Statistical  (72 notes)
 
 | Note | Description |
@@ -3021,6 +3414,15 @@ Minimum test cases to validate a UDF before trusting it in production. |
 
 Using LEFT, RIGHT, MID, FIND, and SEARCH together to parse and extract text. |
 
+## Text — Orphan Entries
+
+| [[CONCATENATEX]] | Concatenates the result of an expression evaluated for each row of a table, using a specified delimiter between each concatenated value. |
+| [[CONTAINSSTRING]] | Returns TRUE if a text string contains a specified substring. Case-insensitive by default. |
+| [[EDATE]] | Returns the date that is the specified number of months before or after a start date. |
+| [[FORMAT]] | Converts a value to text in a specified format. Essential for dynamic labels, KPI card text, and any text concatenation that includes numbers or da... |
+| [[IF-Implicit-Blank-Check-Pattern]] | DAX IF evaluates the first argument in a boolean context. Passing a measure directly — without wrapping in ISBLANK — treats a blank return as FALSE... |
+| [[UNICHAR]] | Returns the Unicode character corresponding to a code point. Used in DAX to render arrows, symbols, and icons inside text boxes, card visuals, and ... |
+
 ## Table Manipulation  (39 notes)
 
 ## Patterns — Dynamic KPI Highlights  (Bittar, 2025)
@@ -3191,6 +3593,12 @@ Creating a time dimension table for minute-level or hour-level granularity. |
 | [[window-functions-orderby-partitionby-matchby.md]] | Window Functions: ORDERBY, PARTITIONBY, MATCHBY
 
 ORDERBY, PARTITIONBY, and MATCHBY are companion functions used exclusiv |
+
+## Financial — Orphan Entries
+
+| [[Calculation-Group-Multiple-Selection-Pattern]] | Calculation Group Multiple Selection Pattern
+
+DAX pattern for `multipleOrEmptySelectionExpression` — intercepts when ≥2 calculation items are selected simultaneously to apply a different aggregation. |
 
 ## Financial  (54 notes)
 
@@ -3366,6 +3774,39 @@ Applies to: Calculated column Calculated table Measure Visual calculation Return
 Applies to: Calculated column Calculated table Measure Visual calculation Returns the annual yield of a securi |
 
 ## Bitwise  (5 notes)
+
+## Gotchas — Orphan Entries
+
+| [[AnyRef-Expression-Parameter-Bug]] | AnyRef Expression Parameter Bug — Wrong Type Cause
+
+Passing a measure as a value parameter (NUMERIC) instead of an expression parameter (AnyRef) causes the measure to be evaluated too early — in the caller's filter context. The result is silently wrong. |
+| [[CG-Variant-Data-Type-Gotcha]] | CG Variant Data Type Gotcha
+
+When a calculation group is added to a semantic model, all existing measures automatically gain variant type — accepting string, integer, and Boolean inputs across the same value parameter. |
+| [[DAX-UDFs-Dont-Replace-Calculation-Groups]] | DAX UDFs Don't Replace Calculation Groups
+
+UDFs and calculation groups are **complementary:** they solve different problems, not the same one. A UDF cannot replicate CG's ability to intercept measure evaluation. |
+| [[FILTER-ALL-Inside-CALCULATE-AntiPattern]] | FILTER(ALL()) Inside CALCULATE — Row-Context Anti-Pattern
+
+Placing `FILTER(ALL())` inside `CALCULATE` forces the Formula Engine to iterate row-by-row — the slowest possible DAX pattern. Replace with direct filter arguments. |
+| [[Five-DAX-Pitfalls-and-Fixes]] | 5 Common DAX Pitfalls and Fixes
+
+Five frequent DAX mistakes: BLANK vs zero, row context without context transition, context transition on measures, circular references, and measure granularity mismatches. |
+| [[SWITCH-Condition-Order-Matters-Gotcha]] | SWITCH Condition Order Gotcha
+
+SWITCH evaluates conditions top-to-bottom. Placing a generic condition before a specific one causes incorrect matches and unexpected results. |
+| [[TopN-ProductKey-Override-Gotcha]] | TopN ProductKey Override Gotcha
+
+When using a top-N-by-period result table as a filter in `CALCULATE`, the table's granularity can override the fact table context if not wrapped in KEEPFILTERS. |
+| [[YTD-vs-Cumulative-Total-Reset-Behaviour]] | YTD Is Not the Same as a Cumulative Total — They Reset Differently
+
+YTD resets at the start of each year. A cumulative total accumulates across all time. Confusing them produces wrong totals at year boundaries. |
+| [[measure-calculate-calc-item-breaks-precedence]] | Measure + CALCULATE + Calculation Group Breaks Precedence
+
+You carefully set calculation group precedence in your model, but a user creates a measure using CALCULATE + CG and the precedence is ignored. This is by design. |
+| [[topn-filter-context-leak-matrix-gotcha]] | TOPN/CALCULATE Filter-Context Leak in Matrices
+
+A `TOPN`-based measure that runs in a matrix returns 1 for every row instead of the expected ranking — caused by filter context leaking through the TOPN. |
 
 ## Gotchas  (Bittar, 2025)
 
@@ -3577,13 +4018,42 @@ DAX function categories: Aggregation, Filter (CALCULATE), Time Intelligence, Dat
 | [[dax-real-world-use-cases.md]] | DAX Real-World Use Cases
 
 Dynamic KPIs (CALCULATE), YoY growth (SAMEPERIODLASTYEAR), ABC analysis (RANKX+SWITCH), RLS (USERPRINCIPALNAME) |
-## Relationships & Data Modeling  (1 notes)
+## Relationships & Data Modeling — Orphan Entries
+
+| [[allcrossfiltered]] | Clear all filters which are applied to a table, including cross-filters from bidirectional relationships. |
+| [[crossfilter]] | Specifies the direction of the cross-filter relationship between two tables for a DAX query. |
+| [[userelationship]] | Specifies the relationship to be used in a specific calculation as though it were the active relationship. |
+
+## Relationships & Data Modeling  (2 notes)
 
 | Note | Description |
 |------|-------------|
-| [[allcrossfiltered.md]] | ALLCROSSFILTERED
+| [[allcrossfiltered.md]] | ALLCROSSFILTERED |
+| [[Data-Modeling-Mistake-calculated-Columns-vs-Measures]] | Data Modeling Mistake: Overusing Calculated Columns — When Columns Are Wrong vs Correct |
 
-Applies to: Calculated column Calculated table Measure Visual calculation Clear all filters which are  |
+## Debugging & Evaluation — Orphan Entries
+
+| [[DAX-Studio-Debug-Workflow]] | DAX Studio Performance Debugging Workflow
+
+Step-by-step workflow for diagnosing slow DAX queries using DAX Studio — from connecting to the model, capturing Server Timings, and reading the Query Plan. |
+| [[IF.EAGER]] | IF.EAGER
+
+Evaluates both branch expressions regardless of the condition result. Eager evaluation guarantees the measure is always fully calculated — useful for forcing measure evaluation order. |
+| [[Query-Plan-Analysis]] | Query Plan Analysis
+
+Reading the Query Plan panel in DAX Studio to identify structural problems in a DAX expression — such as unnecessary iterators, missing filter pushdown, or materialization. |
+| [[Server-Timings-Interpretation]] | Server Timings Interpretation
+
+Reading the Server Timings panel in DAX Studio to identify whether a slow query is CPU-bound (Formula Engine), I/O-bound (Storage Engine), or blocked by VertiPaq compression. |
+| [[VC-vs-Measure-Benchmark-Snippet]] | VC vs Measure Benchmark Snippet (Contoso 23M-row model)
+
+Specific benchmark numbers from the SQLBI article comparing visual calculation performance against model measures on a large production dataset. |
+| [[Virtual-Table-Debugging-via-Calculated-Tables]] | Virtual Table Debugging via Calculated Tables
+
+When a virtual table expression produces unexpected results, materialize it as a calculated table to inspect the rows directly — the most effective DAX debugging technique. |
+| [[precedence-controls-application-not-evaluation]] | Precedence Controls Application Order, Not Evaluation Order
+
+Calculation group **precedence** determines which calculation item is applied **first** in a chain — it does not control when evaluation happens. |
 
 ## Debugging & Evaluation  (8 notes)
 
@@ -3613,6 +4083,76 @@ Using Power BI Performance Analyzer to identify slow visuals and DAX bottlenecks
 | [[tocsv.md]] | TOCSV
 
 Applies to: Calculated column Calculated table Measure Visual Returns a table as a string in CSV format. |
+
+## Governance & Metadata — Orphan Entries
+
+| [[info.alternateofdefinitions]] | DAX query — Returns a table with information about each alternate of definition in the semantic model. |
+| [[info.annotations]] | DAX query — Returns a table with information about each annotation in the semantic model. |
+| [[info.attributehierarchies]] | DAX query — Returns a table with information about each attribute hierarchy in the semantic model. |
+| [[info.calcdependency]] | DAX query — Returns a table with information about each calculation dependency in the semantic model. |
+| [[info.calculationgroups]] | DAX query — Returns a table with information about each calculation group in the semantic model. |
+| [[info.calculationitems]] | DAX query — Returns a table with information about each calculation item in each calculation group. |
+| [[info.calendarcolumngroups]] | DAX query — Returns a table with information about each calendar column group in the semantic model. |
+| [[info.calendarcolumnreferences]] | DAX query — Returns a table with information about each calendar column reference in the semantic model. |
+| [[info.calendars]] | DAX query — Returns a table with information about each calendar in the semantic model. |
+| [[info.catalogs]] | DAX query — Returns a table with information about each catalog in the semantic model. |
+| [[info.changedproperties]] | DAX query — Returns a table with information about each changed property in the semantic model. |
+| [[info.columnpartitionstorages]] | DAX query — Returns a table with information about each column partition storage in the semantic model. |
+| [[info.columnpermissions]] | DAX query — Returns a table with information about each column permission in the semantic model. |
+| [[info.columns]] | DAX query — Returns a table with information about each column in the semantic model. |
+| [[info.columnstorages]] | DAX query — Returns a table with information about each column storage in the semantic model. |
+| [[info.csdlmetadata]] | DAX query — Returns the CSDL metadata for the semantic model. |
+| [[info.cultures]] | DAX query — Returns a table with information about each culture in the semantic model. |
+| [[info.datacoveragedefinitions]] | DAX query — Returns a table with information about each data coverage definition in the semantic model. |
+| [[info.datasources]] | DAX query — Returns a table with information about each data source in the semantic model. |
+| [[info.dependencies]] | DAX query — Returns a table with information about each dependency in the semantic model. |
+| [[info.detailrowsdefinitions]] | DAX query — Returns a table with information about each detail rows definition in the semantic model. |
+| [[info.dictionarystorages]] | DAX query — Returns a table with information about each dictionary storage in the semantic model. |
+| [[info.excludedartifacts]] | DAX query — Returns a table with information about each excluded artifact in the semantic model. |
+| [[info.expressions]] | DAX query — Returns a table with information about each expression in the semantic model. |
+| [[info.extendedproperties]] | DAX query — Returns a table with information about each extended property in the semantic model. |
+| [[info.formatstringdefinitions]] | DAX query — Returns a table with information about each format string definition in the semantic model. |
+| [[info.functions]] | DAX query — Returns a table with information about each function available in DAX. |
+| [[info.groupbycolumns]] | DAX query — Returns a table with information about each group-by column in the semantic model. |
+| [[info.hierarchies]] | DAX query — Returns a table with information about each hierarchy in the semantic model. |
+| [[info.hierarchystorages]] | DAX query — Returns a table with information about each hierarchy storage in the semantic model. |
+| [[info.kpis]] | DAX query — Returns a table with information about each KPI in the semantic model. |
+| [[info.levels]] | DAX query — Returns a table with information about each level in the semantic model. |
+| [[info.linguisticmetadata]] | DAX query — Returns a table with information about linguistic metadata in the semantic model. |
+| [[info.measures]] | DAX query — Returns a table with information about each measure in the semantic model. |
+| [[info.model]] | DAX query — Returns a table with information about the model in the semantic model. |
+| [[info.objecttranslations]] | DAX query — Returns a table with information about each object translation in the semantic model. |
+| [[info.parquetfilestorages]] | DAX query — Returns a table with information about each Parquet file storage in the semantic model. |
+| [[info.partitions]] | DAX query — Returns a table with information about each partition in the semantic model. |
+| [[info.partitionstorages]] | DAX query — Returns a table with information about each partition storage in the semantic model. |
+| [[info.perspectivecolumns]] | DAX query — Returns a table with information about each perspective column in the semantic model. |
+| [[info.perspectivehierarchies]] | DAX query — Returns a table with information about each perspective hierarchy in the semantic model. |
+| [[info.perspectivemeasures]] | DAX query — Returns a table with information about each perspective measure in the semantic model. |
+| [[info.perspectives]] | DAX query — Returns a table with information about each perspective in the semantic model. |
+| [[info.perspectivetables]] | DAX query — Returns a table with information about each perspective table in the semantic model. |
+| [[info.properties]] | DAX query — Returns a table with information about each property in the semantic model. |
+| [[info.querygroups]] | DAX query — Returns a table with information about each query group in the semantic model. |
+| [[info.refreshpolicies]] | DAX query — Returns a table with information about each refresh policy in the semantic model. |
+| [[info.relatedcolumndetails]] | DAX query — Returns a table with information about each related column detail in the semantic model. |
+| [[info.relationshipindexstorages]] | DAX query — Returns a table with information about each relationship index storage in the semantic model. |
+| [[info.relationships]] | DAX query — Returns a table with information about each relationship in the semantic model. |
+| [[info.relationshipstorages]] | DAX query — Returns a table with information about each relationship storage in the semantic model. |
+| [[info.rolememberships]] | DAX query — Returns a table with information about each role membership in the semantic model. |
+| [[info.roles]] | DAX query — Returns a table with information about each role in the semantic model. |
+| [[info.segmentmapstorages]] | DAX query — Returns a table with information about each segment map storage in the semantic model. |
+| [[info.segmentstorages]] | DAX query — Returns a table with information about each segment storage in the semantic model. |
+| [[info.storagefiles]] | DAX query — Returns a table with information about each storage file in the semantic model. |
+| [[info.storagefolders]] | DAX query — Returns a table with information about each storage folder in the semantic model. |
+| [[info.storagetablecolumns]] | DAX query — Returns a table with information about all table storage columns in the semantic model. |
+| [[info.storagetables]] | DAX query — Returns a table with information about each storage table in the semantic model. |
+| [[info.tablepermissions]] | DAX query — Returns a table with information about each table permission in the semantic model. |
+| [[info.tables]] | DAX query — Returns a table with information about each table in the semantic model. |
+| [[info.tablestorages]] | DAX query — Returns a table with information about each table storage in the semantic model. |
+| [[info.userdefinedfunctions]] | DAX query — Returns a table with information about each user-defined function in the semantic model. |
+| [[info.variations]] | DAX query — Returns a table with information about each variation in the semantic model. |
+| [[info.view.columns]] | Returns a table with information about each column visible in the DAX Query View of the semantic model. |
+| [[info.view.relationships]] | Returns a table with information about the relationships in the DAX Query View of the model. |
+| [[info.view.tables]] | Returns a table with information about the tables in the DAX Query View of the model. |
 
 ## Governance & Metadata  (5 notes)
 
@@ -3649,6 +4189,10 @@ REPT(UNICHAR(8203), N) prepends N invisible ZWSP characters; U+200B; used for cu
 || [[progress-status-switch-four-tier.md]] | Progress Status SWITCH: Four-Tier Sequence via UNICHAR Padding
 
 Ahead/On schedule/Slightly behind/Behind SWITCH with 4/3/2/1 ZWSP prefixes → sort order: Ahead→On→Slightly→Behind |
+
+## AI & Advanced Analytics — Orphan Entries
+
+| [[ai-assisted-dax-development]] | Using large language models to generate accurate, context-aware DAX code by feeding them the BIM file. |
 
 ## AI & Advanced Analytics  (9 notes)
 
@@ -3846,3 +4390,41 @@ Comparison of +0, Card Visual, and IF approaches — chart-safety, custom text, 
 Using RAND.BETWEEN() to generate realistic random test data during development.
 
 _isLatestStatus=ISBLANK(nextDate); status IN activeStatuses; days_in_status>threshold; all three must be TRUE; use in conditional formatting |
+
+## Authors & Sources
+
+| Note | Description |
+|------|-------------|
+| [[Author-Akash-Dash]] | Akash Dash |
+| [[Author-Boniface-Muchendu]] | Boniface Muchendu |
+| [[Author-Dibyanshu-Sharma]] | Dibyanshu Sharma |
+| [[Author-Elle-Harrison]] | Elle Harrison |
+| [[Author-Marco-Russo-Alberto-Ferrari]] | Marco Russo & Alberto Ferrari (SQLBI) |
+| [[Author-Reid-Havens]] | Reid Havens |
+| [[isabelle-bittar]] | Isabelle Bittar |
+| [[juls-bi]] | Juls |
+| [[avoiding-pitfalls-calculation-groups-precedence-source]] | Avoiding Pitfalls in Calculation Groups Precedence (SQLBI) |
+| [[Source-Analyzing-Visual-Calculations-Performance]] | Analyzing the Performance Impact of Visual Calculations (SQLBI) |
+| [[Source-Calculation-Groups-in-Power-BI]] | Calculation Groups in Power BI (Data Bear) |
+| [[Source-Controlling-Empty-or-Multiple-Selections-in-Calculation-Groups]] | Controlling Empty or Multiple Selections in Calculation Groups (SQLBI) |
+| [[Source-Controlling-Format-Strings-in-Calculation-Groups]] | Controlling Format Strings in Calculation Groups (SQLBI) |
+| [[Source-Create-Calculation-Groups-Power-BI]] | Create Calculation Groups in Power BI (MS Learn) |
+| [[Source-Creating-Functions-for-the-Like-for-Like-DAX-Pattern]] | Creating Functions for the Like-for-Like DAX Pattern |
+| [[Source-Dash-DAX-Studio-Performance-Part1]] | How DAX Studio Helped Us Reduce Power BI Report Load Time in Production — Part 1 of 2 |
+| [[Source-Data-Analysis-Expressions-DAX-in-Power-BI]] | Data Analysis Expressions (DAX) in Power BI |
+| [[Source-DAX-Fundamentals-Part-3-Havens]] | DAX Fundamentals Part 3: The Patterns That Make Reports Work (Havens Consulting) |
+| [[source-dax-query-view-power-bi]] | Exploring the New DAX Query View in Power BI (Data Bear) |
+| [[Source-DAX-UDFs-GA-59-Measures-to-One-Library]] | DAX UDFs GA — 59 Measures to One Library |
+| [[Source-DAX-User-Defined-Functions-vs-Calculation-Groups]] | DAX UDFs vs Calculation Groups (SQLBI) |
+| [[Source-DAX-vs-Excel-Formulas]] | DAX vs Excel Formulas: What's the Real Difference? (Elle Harrison / Select Distinct) |
+| [[Source-DAX-X-Functions-in-Power-BI-Explained]] | DAX X Functions in Power BI Explained (Data Bear) |
+| [[Source-Dynamic-formatting-ISINSCOPE-ISATLEVEL]] | Dynamic formatting by hierarchy level with ISINSCOPE and ISATLEVEL (SQLBI) |
+| [[source-filtering-measures-through-slicers]] | Filtering Measures Through Slicers (SQLBI) |
+| [[Source-Find-Top-10-Products-Every-Year-DAX]] | Find the products in the top 10 every year with DAX (SQLBI) |
+| [[Source-Jeseena-DAX-Time-Intelligence]] | DAX Time Intelligence: Where Context Pays Off (Jeseena) |
+| [[Source-power-bi-alt-text-udf-library-v1-1-0]] | Power BI Alt Text UDF Library v1.1.0 |
+| [[Source-Ruiz-Retail-DAX-Pt1]] | Retail DAX Measures Pt 1 (Ruiz) |
+| [[Source-Ruiz-Retail-DAX-Pt2]] | Retail DAX Measures Pt 2 (Ruiz) |
+| [[Source-Ruiz-Retail-DAX-Pt3]] | Retail DAX Measures Pt 3 (Ruiz) |
+| [[Source-Sisodia-DAX-Time-Intelligence-YTD-Rolling-Averages]] | DAX Time Intelligence: YTD, Rolling Averages, and Comparisons (Sisodia) |
+| [[Source-SQLBI-Top-10-Every-Year]] | SQLBI — Find the Products in the Top 10 Every Year with DAX |

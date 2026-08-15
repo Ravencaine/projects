@@ -1,86 +1,62 @@
 ---
 title: "Conditional Formatting in Power BI"
-source: "https://databear.com/conditional-formatting-in-power-bi/"
+source: "https://medium.com/write-your-world/conditional-formatting-in-power-bi-ff9a60d908b7"
 author:
-  - "[[Annamarie Van Wyk]]"
-published: 2024-06-04
-created: 2026-08-04
-description: "In this blog post, I’ll cover the basics and provide practical examples of conditional formatting in Power BI."
+  - "[[Anurodh Kumar]]"
+published: 2025-06-27
+created: 2026-08-12
+description: "More"
 Processed: "Unprocessed"
 ---
-Let’s dive into the world of **conditional formatting in Power BI**. Whether you’re a seasoned Power BI user or just getting started, understanding how to apply conditional formatting can significantly enhance your visualizations. In this blog post, I’ll cover the basics and provide practical examples.
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*yONoP_df8QhMAVuappRXCQ.png)
 
-**Conditional formatting** allows you to dynamically change the appearance of elements in your Power BI visuals based on specific conditions. You can emphasize certain data points, highlight outliers, or create custom formatting rules—all without writing complex DAX expressions. Another reason why conditional formatting in Power BI is powerful is its ability to dynamically adapt to changes in data. As your dataset evolves, the formatting rules remain in place, ensuring that your visualizations always reflect the most relevant insights. Moreover, by using custom expressions and rules, you can create sophisticated formatting logic that goes beyond simple color changes, allowing for more nuanced and context-aware designs.
+image by Anurodh Kumar
 
-### Applying Conditional Formatting in Power BI
+Conditional Formatting in Power BI allows you to dynamically change the appearance of visuals (colors, icons, font styles, etc.) based on the data values. It enhances visual storytelling and draws attention to important insights.
 
-**1\. Select Your Visual**: Start by choosing the table or matrix visualization you want to format.
+## Where You Can Apply Conditional Formatting
 
-![TableMatrix](99.System/Attachments/TableMatrix.png)
+### You can apply it to:
 
-**2\. Choose the Field**: On the data pane, choose the data you want in your table. I used sales by day.
+- Tables & Matrix visuals
+- Card & KPI visuals
+- Column & bar charts (using data colors)
+- Gauge & multi-row cards (limited options)
+- Slicers and buttons (via Field Value formatting)
 
-![TableSalesByDay](99.System/Attachments/TableSalesByDay.png)
+## Types of Conditional Formatting
 
-**3\. Decide on the criteria of your conditional formatting:** In my example I want to add condition formatting to the sales on days that it was higher than 6000.
+### 1\. Background Color
 
-**4\. Pick Your Formatting Type**:
+Apply different cell background colors based on numeric thresholds or field values.
 
-1. - **Background Color**: Change the background color of cells.
-		- **Font Color**: Modify the font color of text within cells.
-		- **Data Bars**: Represent values as horizontal bars within cells.
+### 2\. Font Color
 
-**5\. Applying conditional formatting in Power BI:** Click on your table and navigate to the formatting pane, you will see the option so Cell elements, this is where you choose the field that will have the conditional formatting applied and also what type you want to choose.
+Change text color based on values (e.g., negative numbers in red).
 
-![Cell_Elements](99.System/Attachments/Cell_Elements.png)
+### 3\. Data Bars
 
-Once you’ve switched the slider to ON, it will by default apply the basic for of the conditional formatting for the type. To configure your rules you need to go to the fx (formula) button
+Shows horizontal bars inside cells to represent relative size of values.
 
-![FXButton](99.System/Attachments/FXButton.png)
+### 4\. Icons
 
-Then you get this screen.
+Add icons like arrows, checkmarks, or traffic lights based on value rules.
 
-![Background Colour](99.System/Attachments/Background_Colour.png)
+## 5\. Field Value Formatting
 
-In my example I want to apply a rule. This is how I am configuring my example.
+Dynamically change color, font, or URL based on a column value (text-based hex color codes like #FF0000).
 
-![Rules in Conditional Formatting](99.System/Attachments/Rules_in_Conditional_Formatting.png)
+## How to Apply Conditional Formatting (Example: Table Visual)
 
-You can apply this to any of the conditional formatting types. See the example of the different type below.
+1. Click on a Table or Matrix visual.
+2. Hover over the field in Values, click the down arrow (▼).
+3. Select Conditional formatting > \[Type\] (e.g., Background color).
+4. Choose: Color by Rules (e.g., if value > 100, color = green) Gradient (from min to max value) Based on another field (e.g., use a % field to color a sales field)
 
-#### Background Colour
+## Example Use Case
 
-![Background Colour eg](99.System/Attachments/Background_Colour_eg.png)
+### Sales Target Achievement (%):
 
-#### Font Colour
-
-![Font Colour](99.System/Attachments/Font_Colour.png)
-
-#### Icon added
-
-![Icon](99.System/Attachments/Icon.png)
-
-**Practical Examples**
-
-1. **Sales Performance**:
-	- Apply a green background to cells with sales above the average.
-		- Use red font for sales below the average.
-		- Add data bars to visualize sales distribution.
-2. **KPI Tracking**:
-	- Highlight KPIs that meet or exceed targets using custom colors.
-		- Show KPI icons (e.g., thumbs up or down) based on performance.
-3. **Conditional Web Links**:
-	- Turn URLs into clickable links within your table or matrix.
-		- For instance, link product names to their respective web pages.
-
-Remember that conditional formatting enhances readability and draws attention to critical insights. Experiment with different options to find what works best for your specific use case.
-
-In summary, conditional formatting in Power BI empowers you to create visually appealing and informative reports. Whether you’re analyzing sales data, tracking KPIs, or building interactive dashboards, mastering this feature will take your Power BI skills to the next level!
-
-More information on how to format your report can be found [here](https://learn.microsoft.com/en-us/power-bi/visuals/service-tips-and-tricks-for-color-formatting?tabs=powerbi-desktop).
-
-Feel free to experiment and make your reports shine!
-
-Data Bear’s website is a valuable resource for anyone seeking [Power BI training](https://databear.com/power-bi-training/) and other data-related services. Their expertise, practical workshops, and commitment to empowering users make them a top choice for enhancing data skills and leveraging Power BI effectively.
-
-Don’t forget to check out our [training](https://databear.com/power-bi-training/) page and become a Power BI expert.
+- ≥ 90% → Green background
+- 70–89% → Yellow background
+- < 70% → Red background

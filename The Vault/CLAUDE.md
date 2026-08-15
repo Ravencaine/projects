@@ -22,7 +22,7 @@ Each knowledge base is one folder inside `01.Knowledge/`. The folder name matche
 └── CHANGELOG.md    — running log; top entry = current state
 ```
 
-**Valid KBs:** `Data Modeling` · `DAX Code` · `Excel` · `Power BI` · `Power Query` · `VBA`
+**Valid KBs:** `Data Modeling` · `DAX Code` · `Excel` · `Power Automate` · `Power BI` · `Power Query` · `VBA`
 
 ---
 
@@ -51,6 +51,8 @@ Before ingesting any source from the Inbox, auto-route by filename keyword:
 | `Excel`, `VBA`, `xlsx`, `spreadsheet` | `01.Knowledge/Excel/` or `VBA/` |
 | `Data Model`, `star schema`, `dimension` | `01.Knowledge/Data Modeling/` |
 | Default (no match) | ask the user |
+
+**MANDATORY video check:** Before ingesting any source, scan for YouTube/video URLs (`youtube.com`, `youtu.be`, `.mp4`, `.mkv`). If a video is found, run `video-transcriber-skill` first — ingest the full transcript, never captions.
 
 Route rules run BEFORE the Pass 1 inventory. When a source spans multiple domains, list all target KBs and ask the user to confirm the primary routing.
 

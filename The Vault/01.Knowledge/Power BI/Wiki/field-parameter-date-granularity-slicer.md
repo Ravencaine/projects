@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-02
 source: Power BI Time Hacks: Mastering Dynamic Date Views
 note_type: pattern
 tags: [powerbi, pattern, field-parameter, dynamic-axis, date-granularity, slicer]
@@ -10,7 +11,7 @@ tags: [powerbi, pattern, field-parameter, dynamic-axis, date-granularity, slicer
 A field parameter exposing all columns from a calendar table enables a single slicer to switch the X-axis granularity between Daily, Weekly, and Monthly views.
 
 **Setup:**
-1. **Modeling → New parameter → Fields** — select all columns from the Calendar table (e.g. `'Calendar'[Daily]`, `'Calendar'[Weekly]`, `'Calendar'[Monthly]`)
+1. **Modeling → New parameter → Fields:** select all columns from the Calendar table (e.g. `'Calendar'[Daily]`, `'Calendar'[Weekly]`, `'Calendar'[Monthly]`)
 2. Enable **`Add slicer to this page`** in the parameter dialog — creates a native slicer on the canvas
 3. Format the slicer (new slicer visual, formatting options) to match the report theme
 

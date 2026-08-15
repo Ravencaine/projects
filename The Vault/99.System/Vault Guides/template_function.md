@@ -2,7 +2,7 @@
 created: YYYY-MM-DD
 source: <source>
 note_type: function
-tags: []
+tags: [tag1, tag2]
 ---
 
 # <Function Name>

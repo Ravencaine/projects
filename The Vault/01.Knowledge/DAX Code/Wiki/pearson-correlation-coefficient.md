@@ -20,9 +20,9 @@ r = Σ[(Xi - μX)(Yi - μY)] / √[ Σ(Xi - μX)² × Σ(Yi - μY)² ]
 
 ## Key Points
 
-- **+1** — perfect positive correlation: variables increase together
-- **0** — no linear relationship
-- **-1** — perfect negative correlation: one increases as the other decreases
+- **+1:** perfect positive correlation: variables increase together
+- **0:** no linear relationship
+- **-1:** perfect negative correlation: one increases as the other decreases
 - The value is symmetric: `r(X, Y) = r(Y, X)`
 - The diagonal of a correlation matrix is always 1 (a variable correlates perfectly with itself)
 - Sensitive to outliers: extreme values can pull r toward ±1 even with few data points

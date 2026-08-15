@@ -182,7 +182,17 @@ Signature
 | [[cdm_contents.md]] | Cdm.Contents
 
 This function is unavailable in the current context. |
-| [[chen-python-power-query-source.md]] | Python in Power Query — Mark Chen
+| [[group-by.md]] | Group By |
+| [[merge-queries.md]] | Merge Queries |
+| [[unpivot-columns.md]] | Unpivot Columns |
+| [[split-column-by-delimiter.md]] | Split Column by Delimiter |
+| [[change-data-types.md]] | Change Data Types |
+| [[remove-empty-error-rows.md]] | Remove Empty / Error Rows |
+| [[fill-down-up.md]] | Fill Down / Up |
+| [[trim-and-clean-text.md]] | Trim and Clean Text |
+| [[replace-values.md]] | Replace Values |
+| [[remove-duplicates.md]] | Remove Duplicates |
+| [[chen-python-power-query-source.md]] | Python in Power Query — Mark Chen |
 
 > Type: practical guide / intermediate
 > Author: Mark Chen
@@ -2168,13 +2178,37 @@ Efficiency, consistency, scalability, flexibility, and optimization from one-rec
 | [[multiple-calculations-single-formula-source.md]] | Multiple Calculations Single Formula Power Query — Source
 
 Beginner tutorial: record literal syntax for multi-column output in one Power Query Custom Column step |
-## Transformations  (72 notes)
+||| [[invoked-function-separate-table-atomic.md]] | Invoked Function Separate Table Atomic
+
+After Close & Apply, expanded record columns appear in the Data pane under the query-named table — internally "Invoked Function" in M. Same semantic model table; no separate relationship. |
+||| [[binaryformat_group.md]] | BinaryFormat.Group
+
+Groups binary key/value pairs with consistent key and value formats. Used for parsing binary file formats in Power Query. |
+## Transformations  (76 notes)
 
 | Note | Description |
 |------|-------------|
-| [[binaryformat_group.md]] | BinaryFormat.Group
+| [[source-remove-blank-rows-power-query.md]] | Remove Blank Rows Power Query — Source
 
-The parameters are as follows: The binaryFormat parameter specifies the binary format of the key val |
+Beginner tutorial: Table.SelectRows filter to remove blank rows from CSV/Excel imports. Shashanka Shekhar / Medium 2026-08-03. |
+| [[filter-blank-rows-selectrows-atomic.md]] | Filter Blank Rows with Table.SelectRows Atomic
+
+| Table.SelectRows(Source, each ([Column2] <> "" and [Column2] <> null)) — core M formula; <> "" + <> null both needed. |
+| [[blank-row-one-column-vs-all-columns-atomic.md]] | Blank Row — One Column vs All Columns Gotcha
+
+Filter checks only one column; other columns may still be blank. Multi-column datasets need broader scope. |
+| [[remove-blank-rows-advanced-editor-workflow.md]] | Remove Blank Rows Advanced Editor Workflow
+
+5-step workflow: Transform Data → Advanced Editor → add Table.SelectRows filter step → verify → Close & Apply. |
+|| [[Top-10-Power-Query-Data-Cleaning-Tasks.md]] | Top 10 Power Query Data Cleaning Tasks
+
+Quick-reference table: Remove Duplicates, Replace Values, Trim/Clean Text, Fill Down/Up, Remove Blank/Error Rows, Change Data Types, Split Column, Unpivot, Merge Queries, Group By — with menu paths and use cases. |
+|| [[Fill-Down-Up-Direction-Matters.md]] | Fill Down / Up — Direction Matters
+
+Fill Down fills blanks using the value above; Fill Up fills using the value below. Wrong direction propagates values into wrong rows. |
+|| [[Wrong-Data-Type-Silently-Breaks-Visuals.md]] | Wrong Data Type Silently Breaks Visuals
+
+Wrong data type assignment is silent — no warning, but visuals misbehave. Numbers as text break aggregations; dates as text break sorting. Set types immediately and validate. |
 | [[binaryformat_transform.md]] | BinaryFormat.Transform
 
 Returns a binary format that will transform the values read by another binary format. |
@@ -2627,6 +2661,9 @@ M function categories: Table, Text, Date/Duration, List, Record, Number, Logical
 | [[m-language-real-world-use-cases.md]] | M Language Real-World Use Cases
 
 Data cleaning with Table.Distinct/Date.FromText, multi-source merge with Table.NestedJoin, custom parameterized functions |
+| [[Source-Multiple-Calculations-Single-Formula-Power-Query.md]] | Multiple Calculations from a Single Formula in Power Query
+
+Source article by Shashanka Shekhar on Medium demonstrating how to perform multiple calculations in a single Power Query formula step. |
 ## Python Integration  (6 notes)
 
 | Note | Description |
@@ -2842,6 +2879,14 @@ Null-drop → feature engineering → one-hot encoding → fit → merge-back. T
 
 M function: downloads an image URL and returns it as a Base64 data URL string. Wraps Web.Contents + Binary.ToText + BinaryEncoding.Base64.
 
+| [[URL-to-Base64-Power-Query.md]] | URL-to-Base64 — Power Query M Function
+
+M function: downloads an image URL and returns it as a Base64 data URL string. Includes MIME prefix (jpeg/png/gif). Foundation for SVG circular image pattern.
+
+| [[URL-to-Base64-Compressed-Power-Query.md]] | URL-to-Base64-Compressed — Power Query M Function
+
+M function: downloads, resizes via resize.now API (128×128), then Base64-encodes an image URL. Avoids the 32k character limit that breaks raw base64 in Power BI text columns.
+
 | [[Power-Query-Base64-Conversion-Reference.md]] | Power Query Base64 Conversion — Key Concepts
 
 | [[Binary-ToText-Base64-Power-Query.md]] | Binary.ToText — Power Query Binary to Base64
@@ -2858,3 +2903,78 @@ Copy-paste Python snippet: sklearn IsolationForest with HourGroup bucketing, pd.
 
 > Type: comparison guide / beginner
 > Author: Md Mizanu |
+
+| [[Power-Query-Equals-Excels-Superpower.md]] | Power Query Equals Excel's Superpower
+
+Power Query automates repetitive manual cleaning: delete blanks, fix spellings, split columns, merge tables — replayable via Refresh. Replaces the Monday morning copy-paste workflow. Week 2 focus of the Excel → Power BI 4-week roadmap. |
+
+## Workflows — Power Query DevOps (Guy in a Cube, 2026-08)
+
+||| [[power-query-test-mode-parameters]] | Power Query Test Mode Parameters
+
+TestMode (true/false) + TestRowCount parameters → Table.FirstN wrapper → limits rows during dev. Watch query folding for performance. |
+
+||| [[power-query-dev-test-prod-parameters]] | Power Query Dev/Test/Prod Parameters
+
+ServerName + DatabaseName parameters replace hardcoded connection strings. Change parameter value → all queries update. |
+
+
+## Imported from Raindrop / Medium Reading List
+- [[CHANGELOG|Changelog]]
+
+
+## Imported from Raindrop / Medium Reading List
+- [[3-easy-ways-to-rename-columns-in-power-query-go-analytics|3 Easy Ways to Rename Columns in Power Query – Go Analytics]]
+- [[avoid-the-1-mistake-that-leads-to-ineffective-reports-in-power-bi-go-analytics|Avoid the #1 Mistake That Leads to Ineffective Reports in Power BI – Go Analytics]]
+- [[creating-a-measures-table-in-power-bi-and-why-you-should-go-analytics|Creating a Measures Table in Power BI (And Why You Should) – Go Analytics]]
+- [[duplicate-vs-reference-in-power-query|Duplicate vs Reference in Power Query]]
+- [[how-to-append-queries-in-power-query-power-bi-excel-go-analytics|[How To] Append Queries in Power Query (Power BI & Excel) – Go Analytics]]
+- [[how-to-change-data-source-location-in-power-query-go-analytics|[How To] Change Data Source Location in Power Query – Go Analytics]]
+- [[how-to-reduce-data-tables-using-group-by-in-power-query-go-analytics|How To Reduce Data Tables Using 'Group By' in Power Query – Go Analytics]]
+- [[how-to-remove-unwanted-columns-in-power-query-editor-go-analytics|[How To] Remove Unwanted Columns in Power Query Editor – Go Analytics]]
+- [[how-to-replace-column-values-in-power-query-go-analytics|[How To] Replace Column Values in Power Query – Go Analytics]]
+- [[merging-queries-in-power-query-go-analytics|Merging Queries in Power Query – Go Analytics]]
+- [[replace-multiple-column-values-in-one-step-in-power-query-go-analytics|Replace Multiple Column Values in One Step in Power Query – Go Analytics]]
+- [[replacing-column-values-that-dont-match-a-string-in-power-query-go-analytics|Replacing Column Values That Don't Match a String in Power Query – Go Analytics]]
+- [[splitting-column-values-in-power-query-go-analytics|Splitting Column Values in Power Query – Go Analytics]]
+- [[understanding-data-types-in-power-query-power-bi-excel-go-analytics|Understanding Data Types in Power Query (Power BI & Excel) – Go Analytics]]
+
+
+## Imported from Raindrop / Medium Reading List
+- [[bi-power-query-part-create-star-schema-ed730095666|Bi Power Query Part Create Star Schema Ed730095666]]
+- [[bi-power-query-part-data-cleaning-b350c19c6e20|Bi Power Query Part Data Cleaning B350c19c6e20]]
+- [[bi-power-query-relative-folder-path-for-source-files-e1b17befe333|Bi Power Query Relative Folder Path For Source Files E1b17befe333]]
+- [[column-with-multiple-values-in-few-clicks-in-power-query-pbix-included-6af9c8805|Column With Multiple Values In Few Clicks In Power Query Pbix Included 6af9c880593b]]
+- [[create-multiple-calculations-using-single-formula-in-power-query-pbix-included-e|Create Multiple Calculations Using Single Formula In Power Query Pbix Included E4c71b1e6835]]
+- [[groupby-and-aggregate-values-in-power-query-pbix-included-4aaea2111ed6|Groupby And Aggregate Values In Power Query Pbix Included 4aaea2111ed6]]
+- [[hot-encoding-categorical-columns-in-power-query-pbix-included-6bd5ac94743b|Hot Encoding Categorical Columns In Power Query Pbix Included 6bd5ac94743b]]
+- [[how-to-append-queries-in-power-query-power-bi-excel-go-analytics|[How To] Append Queries in Power Query (Power BI & Excel) – Go Analytics]]
+- [[how-to-change-data-source-location-in-power-query-go-analytics|[How To] Change Data Source Location in Power Query – Go Analytics]]
+- [[how-to-remove-unwanted-columns-in-power-query-editor-go-analytics|[How To] Remove Unwanted Columns in Power Query Editor – Go Analytics]]
+- [[how-to-replace-column-values-in-power-query-go-analytics|[How To] Replace Column Values in Power Query – Go Analytics]]
+- [[line-break-complex-multiline-column-using-power-query-pbix-included-782235edc7eb|Line Break Complex Multiline Column Using Power Query Pbix Included 782235edc7eb]]
+- [[minmax-scale-numeric-values-in-power-query-pbix-included-a7f07660d0d0|Minmax Scale Numeric Values In Power Query Pbix Included A7f07660d0d0]]
+- [[numeric-values-using-power-query-pbix-included-1bccbf579e31|Numeric Values Using Power Query Pbix Included 1bccbf579e31]]
+- [[outlook-mailbox-to-excel-via-power-query-select-distinct-465641ec9ab2|Outlook Mailbox To Excel Via Power Query Select Distinct 465641ec9ab2]]
+- [[power-bi-transforming-data-with-power-query-editor-0822b52ffd8c|Power Bi Transforming Data With Power Query Editor 0822b52ffd8c]]
+- [[power-query-changed-the-way-think-about-scalable-data-models-2dc0d7bed7fc|Power Query Changed The Way Think About Scalable Data Models 2dc0d7bed7fc]]
+- [[power-query-lies-to-you-the-000-row-profiling-gap-a994bcf2079e|Power Query Lies To You The 000 Row Profiling Gap A994bcf2079e]]
+- [[remove-blank-rows-in-table-using-power-query-pbix-included-780c4bd164a8|Remove Blank Rows In Table Using Power Query Pbix Included 780c4bd164a8]]
+- [[remove-duplicate-records-using-power-query-pbix-included-31acfaeef242|Remove Duplicate Records Using Power Query Pbix Included 31acfaeef242]]
+- [[to-easily-standardize-data-using-power-query-pbix-included-5f73df56e4cd|To Easily Standardize Data Using Power Query Pbix Included 5f73df56e4cd]]
+- [[wish-knew-when-started-using-power-query-building-the-foundation-for-scalable-fb|Wish Knew When Started Using Power Query Building The Foundation For Scalable Fb71ee402e56]]
+[[3-easy-ways-to-rename-columns-in-power-query-go-analytics]]
+[[CHANGELOG]]
+[[avoid-the-1-mistake-that-leads-to-ineffective-reports-in-power-bi-go-analytics]]
+[[creating-a-measures-table-in-power-bi-and-why-you-should-go-analytics]]
+[[duplicate-vs-reference-in-power-query]]
+[[how-to-append-queries-in-power-query-power-bi-excel-go-analytics]]
+[[how-to-change-data-source-location-in-power-query-go-analytics]]
+[[how-to-reduce-data-tables-using-group-by-in-power-query-go-analytics]]
+[[how-to-remove-unwanted-columns-in-power-query-editor-go-analytics]]
+[[how-to-replace-column-values-in-power-query-go-analytics]]
+[[merging-queries-in-power-query-go-analytics]]
+[[replace-multiple-column-values-in-one-step-in-power-query-go-analytics]]
+[[replacing-column-values-that-dont-match-a-string-in-power-query-go-analytics]]
+[[splitting-column-values-in-power-query-go-analytics]]
+[[understanding-data-types-in-power-query-power-bi-excel-go-analytics]]

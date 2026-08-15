@@ -28,7 +28,7 @@ Do NOT use when:
 
 ## Components
 
-- A **base value measure** — what every status-conditioned measure wraps (e.g., `Task Duration`, `Sales Amount`, `Open Ticket Count`).
+- A **base value measure:** what every status-conditioned measure wraps (e.g., `Task Duration`, `Sales Amount`, `Open Ticket Count`).
 - A **category column** with a small fixed set of string values (e.g., `Projects[Status]`).
 - `SELECTEDVALUE(<category column>)` — returns the active category for the current filter context, or BLANK if multiple/no values are selected.
 - `IF(SELECTEDVALUE(...) = "<status>", <base value>)` — the gating wrapper for each measure in the family.

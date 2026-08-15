@@ -45,10 +45,10 @@ Start on paper or directly in Figma. Focus on information layout, element types,
 ### Step 3: Sketching in Figma
 
 Build the design using:
-- **Rounded rectangles** — KPI card backgrounds. Format: Corner Radius 16, gradient fill, drop shadow (via Effects → +).
-- **Rectangles with corner radius** — oval/circular buttons.
-- **Text tool (T)** — labels, headers. Inter font by default, adjustable weight and size.
-- **Images** — import logos, resize via Width (W) and Height (H) in the Properties panel.
+- **Rounded rectangles:** KPI card backgrounds. Format: Corner Radius 16, gradient fill, drop shadow (via Effects → +).
+- **Rectangles with corner radius:** oval/circular buttons.
+- **Text tool (T):** labels, headers. Inter font by default, adjustable weight and size.
+- **Images:** import logos, resize via Width (W) and Height (H) in the Properties panel.
 
 Group and rename elements in the Layers Panel before exporting.
 

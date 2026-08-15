@@ -1,0 +1,137 @@
+---
+created: 2026-08-11
+updated: 2026-08-11
+source: How I Built a Calendar Heatmap in Power BI with Plotly.js.md
+note_type: pattern
+tags: [powerbi, plotly, heatmap, html-content, visualization]
+---
+
+# Calendar Heatmap — Plotly.js in Power BI
+
+Build a GitHub-style 7×53 calendar heatmap inside Power BI using a DAX measure, HTML Content visual, and Plotly.js.
+
+## Purpose
+
+Visualize daily activity over a full year as a grid where color encodes intensity — revealing patterns of consistency, dips, and trends that tables and line charts miss. Replicates GitHub's contribution graph.
+
+## Components
+
+- DAX: `CONCATENATEX` to emit a JSON-like array string from a date+value table
+- HTML Content visual: hosts the self-contained HTML/JS block
+- Plotly.js: loaded from CDN, renders the heatmap
+
+## Structure
+
+### Part 1 — DAX JSON bridge
+
+```dax
+GitHub Heatmap HTML =
+VAR JsonData =
+    CONCATENATEX(
+        calendar_3years_2022_2024,
+        "{date:'" & FORMAT(calendar_3years_2022_2024[Date], "yyyy-mm-dd") & "',value:" & calendar_3years_2022_2024[Value] & "}",
+        ","
+    )
+RETURN
+"
+<!-- Container -->
+<div id='heatmap' style='width:100%;height:450px;'></div>
+
+<script>
+(function(){
+    function loadPlotly(callback){
+        if(typeof Plotly !== 'undefined'){
+            callback();
+        } else {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.plot.ly/plotly-2.27.0.min.js';
+            script.onload = callback;
+            document.head.appendChild(script);
+        }
+    }
+
+    loadPlotly(function(){
+        var rawData = [" & JsonData & "];
+
+        // ISO week number (1-53)
+        function getISOWeek(date) {
+            const d = new Date(date);
+            d.setHours(0,0,0,0);
+            d.setDate(d.getDate() + 3 - (d.getDay() + 6) % 7);
+            const week1 = new Date(d.getFullYear(),0,4);
+            return 1 + Math.round(((d - week1) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+        }
+
+        // Monday=1 ... Sunday=7
+        function getDayNumber(date){
+            let d = new Date(date);
+            let day = d.getDay();
+            return day === 0 ? 7 : day;
+        }
+
+        var weeks = 53;
+        var days = 7;
+
+        // Create 7x53 matrix (rows=days, cols=weeks)
+        var z = Array.from({length: days}, () => Array(weeks).fill(null));
+
+        // Fill matrix
+        rawData.forEach(row => {
+            var week = getISOWeek(row.date);
+            var day = getDayNumber(row.date);
+            z[day-1][week-1] = row.value;
+        });
+
+        var trace = {
+            type: 'heatmap',
+            z: z,
+            x: Array.from({length: weeks},(_,i)=>i+1),
+            y: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+            colorscale: 'Viridis',  // or 'Blues', 'RdYlGn', 'Cividis', custom
+            hovertemplate: '<b>Week %{x}</b><br>%{y}<br>Value %{z}<extra></extra>',
+            colorbar: { title: 'Activity' }
+        };
+
+        var layout = {
+            title: 'GitHub-Style Calendar Heatmap',
+            xaxis: { title: 'Week Number', side:'bottom' },
+            yaxis: { title: '', autorange:'reversed' },  // Monday on top
+            height: 400
+        };
+
+        Plotly.newPlot('heatmap',[trace],layout);
+    });
+})();
+</script>
+"
+```
+
+## Data Requirements
+
+The source table (`calendar_3years_2022_2024`) must have at minimum:
+- `Date` — a date column (DAX FORMAT → `"yyyy-mm-dd"`)
+- `Value` — the numeric measure to visualize per day
+
+## Color Scale Options
+
+| Scale | Best for |
+|-------|----------|
+| `Viridis` | Perceptually balanced, colorblind-safe |
+| `Blues` | Soft, minimal look |
+| `RdYlGn` | Highlight low vs high contrast |
+| `Cividis` | Colorblind-optimized alternative to Viridis |
+| Custom | Match company branding via Plotly custom scale |
+
+## Variations
+
+- **Multi-year:** append additional year data to the source table; the 53-column matrix covers up to 371 days
+- **Filtered view:** wrap `rawData` with a `filter()` call to restrict to a selected date range
+- **Cell size:** adjust `height: 400` in layout and `style='height:450px'` on container div
+- **Tooltip:** modify `hovertemplate` to include the actual date string
+
+## Related
+
+- [[Build-Calendar-Heatmap-Power-BI]] — `workflow`
+- [[GitHub-Heatmap-DAX-HTML-Snippet]] — `snippet`
+- [[JS-Day-Index-Sunday-0-Gotcha]] — `gotcha`
+- [[Heatmap-Pattern-Recognition-Principle]] — `atomic`

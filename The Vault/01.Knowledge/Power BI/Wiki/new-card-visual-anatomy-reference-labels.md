@@ -18,9 +18,9 @@ The new card visual (released November 2023) layers three content zones top-to-b
          Detail            ← optional interpretive sub-value (variances, deltas)
 ```
 
-**Callout Values** — primary KPI values dropped into the `Data` field well; each becomes a card in the layout grid.
+**Callout Values:** primary KPI values dropped into the `Data` field well; each becomes a card in the layout grid.
 
-**Reference Labels** — sub-indicators added per series under the `Reference labels` tab; each has a title (editable to custom text via `Content → Custom`) and an optional `Detail` field for additional DAX measures.
+**Reference Labels:** sub-indicators added per series under the `Reference labels` tab; each has a title (editable to custom text via `Content → Custom`) and an optional `Detail` field for additional DAX measures.
 
 **Key constraint:** Detail sub-values cannot be dynamically colored via `fx` — workaround is conditional formatting on the detail's own measure, applied before it is referenced in the card.
 

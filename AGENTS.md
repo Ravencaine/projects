@@ -11,17 +11,17 @@ This is the parent project folder. It serves as the workspace root for all sub-p
 | Path | Purpose |
 |------|---------|
 | `00.Inbox/` | Raw source material — unedited |
-| `01.Knowledge/` | 6 topic knowledge bases (see below) |
-| `99.System/Vault Guides/` | Ingestion skill + 9 note templates |
+| `01.Knowledge/` | 7 topic knowledge bases (see below) |
+| `99.System/Vault Guides/` | Ingestion skill + 11 note templates |
 | `00.Inbox/_INGESTED.md` | Ingestion registry |
 
 ### Knowledge Bases
 
-`Data Modeling` · `DAX Code` · `Excel` · `Power BI` · `Power Query` · `VBA`
+`Data Modeling` · `DAX Code` · `Excel` · `Power Automate` · `Power BI` · `Power Query` · `VBA`
 
 ### MCP Server
 
-`obsidian-vault` → `The Vault/` (configured in `~/.hermes/config.yaml`)
+`obsidian-vault` → `The Vault/` (configured in `~/.hermes/config.yaml` and `~/AppData/Local/Hermes/config.yaml`)
 
 ## Active Skills (Hermes)
 
@@ -42,7 +42,7 @@ The following skills are registered as Hermes skills (invoke with `/<skill-name>
 - **RULE-3:** Before writing, check if a similar note already exists. Extend it rather than duplicate.
 - **RULE-4:** No files in the vault root. Every file belongs in a named subfolder — never create loose files at `The Vault/` level.
 - **RULE-5:** Never create new folders without explicit permission. If a folder is needed, ask first. Do not infer or assume.
-- **RULE-6:** Archive only via `99.System/Scripts/safe_archive.py` — never raw `mv` or shutil.move. The script verifies that notes exist in the KB before archiving. If no notes are found it exits non-zero and the source stays in Inbox. Archive is optional: sources can remain in Inbox indefinitely after notes are written.
+- **RULE-6:** Archive immediately after a clean post-ingest audit (find_orphans.py exit 0). No exceptions. Use `99.System/Scripts/safe_archive.py` — never raw `mv` or shutil.move. If the source filename is not in `_INGESTED.md`, add the registry entry first (file, added date, KB, status=archived, location), then archive. After archiving, delete any temp files from the Inbox.
 - **RULE-7:** Delete temporary one-off scripts when they have completed their task. Never leave throwaway scripts sitting in the workspace.
 - **RULE-8:** Permanent reusable code (Python scripts, utilities, tools) goes in `99.System/Scripts/`. Ask before creating new files in that folder. Never put temporary scripts there.
 - **RULE-9:** After every ingestion session, run `find_orphans.py` to catch notes that weren't added to INDEX.md or whose `source:` frontmatter is wrong/missing. Run: `python 99.System/Scripts/find_orphans.py`. Exit code 1 means orphans found — fix them before declaring the session done.

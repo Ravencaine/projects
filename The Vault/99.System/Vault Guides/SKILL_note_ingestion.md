@@ -24,6 +24,64 @@ Every note has exactly one type. Pick the most specific fit.
 
 ### Pass 1 — Discovery & Inventory
 
+**MANDATORY: Check for video sources FIRST.**
+
+Before anything else, scan the source for embedded YouTube/video URLs:
+- Does the file contain `youtube.com/watch?v=`, `youtu.be/`, or other video URLs in frontmatter or body?
+- Does the source `note_type` or metadata indicate it is a video?
+
+If **YES** — the source is a video or contains a video link:
+1. Load `video-transcriber-skill` and invoke it on the URL first
+2. Wait for the transcript note to be written to `00.Inbox/`
+3. **Then ingest the transcript note** (not the original article link) using this same protocol
+4. This ensures full transcripts — not captions — are the authoritative ingested source
+5. **Wikilink the video file in the transcript source note body** — embed with `![[filename.ext]]`
+   at the top of the body, and add `video_file: 99.System/Attachments/Video/<filename>` to frontmatter.
+   Also add a `transcript:` frontmatter field pointing to the transcript note.
+
+If **NO** — proceed to the inventory scan below.
+
+---
+
+**MANDATORY: Check for downloadable file attachments.**
+
+After the video check, run `scan_for_downloads.py` on the source:
+
+```bash
+python 99.System/Scripts/scan_for_downloads.py --verbose <source_file>
+```
+
+Focus on high-confidence detections — `.pbix`, `.xlsx`, `.pbip`, `.pqx`, `.zip`, `.csv`,
+`.py`, `.ipynb`, `.sql`, `.dax`, `.m` files — not inline images served from CDNs
+(images on `lwfiles.mycourse.app`, `cdn-images-*.medium.com`, `cloudinary.com`,
+`community.powerbi.com`, etc. are content, not attachments).
+
+For any real downloadable asset found:
+1. Download it to `99.System/Attachments/` (use a subfolder that matches the file type:
+   `PowerBI/`, `Excel/`, `Data/`, `Code/`)
+2. Add `download_file: 99.System/Attachments/<type>/<filename>` to the source note frontmatter
+3. **Wikilink the file in the source note body** — add `[[99.System/Attachments/<type>/<filename>]]`
+   in the **Notable Details** section and in the **Metadata table** (Attachments row). This is
+   required, not optional. Files without wikilinks in the body are invisible to Obsidian's
+   backlink graph and cannot be opened from the note.
+4. If the asset is a `.pbix`/`.pbip` or `.xlsx`/`.xlsm`/`.xlsb` that contains reusable
+   DAX/M code or techniques, ingest that file as a separate note (see Section 4 for split rules)
+5. If the asset is a compressed archive, extract it and scan for nested content notes
+
+---
+
+**CRITICAL: Scan across ALL note types for every source — never default to source-only.**
+
+Every source contains multiple extractable concepts. At minimum, always ask for each source:
+- Is there a named **function** (DAX, M, Python)?
+- Is there a named **pattern** (recipe, technique)?
+- Is there a **gotcha** (counterintuitive behaviour)?
+- Is there a **workflow** (step-by-step process)?
+- Is there a **comparison** (A vs B)?
+- Is there a distinct **atomic** (principle, mental model)?
+
+**Default to extract, not skip.** If unsure, extract it. You can merge later; you cannot recover missed extraction after archiving.
+
 Scan the source across ALL 9 note types BEFORE writing anything. Produce an inventory table:
 
 ```
@@ -163,7 +221,26 @@ The frontmatter must be valid YAML. Do not add custom fields outside this block 
 
 ---
 
-## Section 5b — Unicode Filename Normalization
+## Section 5b — Tags Format (Obsidian-Required)
+
+Every `tags:` field in frontmatter must use Obsidian's native format — **unquoted lowercase hyphenated tags inside a bare YAML list**:
+
+```yaml
+tags: [power-bi, data-modeling, dax]
+```
+
+**Never use YAML-quoted strings inside tags:**
+
+```yaml
+# WRONG — Obsidian will not render these as tags
+tags: ["power-bi", "data-modeling"]
+tags: ['power-bi', 'data-modeling']
+tags: ["power-bi", 'data-modeling']
+```
+
+**Why it matters:** YAML parses `["foo"]` as a list containing a single quoted string — Obsidian's tag parser expects raw unquoted identifiers. Quoted tags render as plain text, not clickable tags.
+
+**Rule:** `replace_all: true` for the entire `tags:` field in every template and skill file so newly written notes always use the correct format.
 
 If the Inbox source filename contains any non-ASCII character (em-dash, curly quotes, emoji, mathematical Unicode, etc.), **normalize it to ASCII before writing it into any `source:` field or any `source` column in `_INGESTED.md`**.
 
@@ -203,7 +280,7 @@ Run these before delivering any note:
 6. No truncated code blocks (blocks should be complete and runnable).
 7. No links to non-existent files or notes.
 8. File name matches the note's subject (snake_case for the filename).
-9. Tags are lowercase and hyphenated if multi-word.
+9. Tags are lowercase and hyphenated if multi-word, and **unquoted** (no `"..."` or `'...'` inside the brackets).
 10. No duplicate headings in the same note.
 11. Note is filed under the correct KB.
 12. Note was added to the target KB's INDEX.md under the correct section.
@@ -230,29 +307,56 @@ Author note : <yes|no — write one if author has 2+ sources or is a recognised 
 Saturation  : <M items found | clean>
 ```
 
-**After the summary block**, run `find_orphans.py` to verify no notes were left as orphans:
+After all notes are written, run the post-ingest audit:
 
-```
+```bash
 python 99.System/Scripts/find_orphans.py
 ```
 
-Exit 0 = clean. Exit 1 = orphans found — fix the `source:` frontmatter on each orphan note to match the actual Inbox/Archive filename, then re-run until clean.
+- **Exit 0 (clean):** Archive the source immediately. No exceptions — clean means ready.
+- **Exit 1 (orphans found):** Fix the `source:` frontmatter on each orphan note, re-run until clean, then archive.
 
-**The source file stays in `00.Inbox/` after the summary block.** Archive is a separate, optional step — not a completion gate. Nothing is lost if a source stays in the Inbox.
+**Archive order is fixed — do not deviate.** The correct sequence is:
 
-### Manual Archive (Optional)
+1. Write all notes.
+2. Update each note's KB `INDEX.md`.
+3. Run `find_orphans.py` until exit 0.
+4. **If the registry row in `00.Inbox/_INGESTED.md` does not yet exist for this source**, add it now with `status: pending` (the script reads the row but does not require it pre-exist).
+5. **If the registry row already exists with `status: archived`, change it back to `pending` before running `safe_archive.py`.** The script short-circuits on `status: archived` and skips the file move.
+6. Run `safe_archive.py` with just the filename (no path):
+   ```bash
+   python 99.System/Scripts/safe_archive.py "<filename.md>"
+   ```
+   The script's final step is what writes `status: archived` to the registry and moves the file into `99.System/InboxArchive/YYYY-MM/`.
+7. **Verify the file actually moved.** Confirm `00.Inbox/<filename>.md` no longer exists and `99.System/InboxArchive/YYYY-MM/<filename>.md` exists. A success message from `safe_archive.py` is necessary but not sufficient — the script can print success on a `status: archived` short-circuit without ever touching the file.
+8. **Verify the registry row** now reads `status: archived` (script writes this as step 5 of its own run).
 
-When you want to clean up the Inbox, run `99.System/Scripts/safe_archive.py` — never use raw `mv` or shutil.move directly. The script verifies that notes exist before archiving and refuses to move the source if they don't.
+**Failure-mode table:**
 
-Archive triggers (any of these):
-- User says "archive" or "clean up inbox"
-- Batch ingest is complete and the user requests cleanup
-- The Inbox exceeds 50 files and you proactively offer to archive
+| Symptom | Cause | Fix |
+|---------|-------|-----|
+| `safe_archive.py` prints "INFO: Source already marked 'archived' in registry" and the file stays in Inbox | Registry row was set to `archived` before the script ran | Edit `_INGESTED.md` row back to `pending`, re-run `safe_archive.py` |
+| `safe_archive.py` prints "BLOCKED: No notes found" | No note's `source:` frontmatter matches the filename exactly (including Unicode normalisation — see Section 5b) | If the source was rejected: archive manually (see below). If genuinely no notes: add `source:` to at least one note's frontmatter, re-run |
+| `safe_archive.py` errors with `Source not found in Inbox` | Passed a path (`00.Inbox/foo.md`) instead of just the filename | Pass `foo.md` only |
 
-When archiving:
-1. Call `safe_archive.py` — it exits non-zero if notes are missing
-2. `safe_archive.py` moves the source file and updates `_INGESTED.md` status to `archived` atomically
-3. Delete any temporary extracted files (e.g., `*_extracted.txt`) from the Inbox after archiving
+**Rejected sources (no notes to reference):** `safe_archive.py` blocks because it requires at least one note's `source:` field to match. Archive manually:
+
+```bash
+PYTHONIOENCODING=utf-8 py -3 -c "
+import shutil, pathlib
+src = pathlib.Path('00.Inbox/<filename.md>')
+dest = pathlib.Path('99.System/InboxArchive/YYYY-MM/<filename.md>')
+shutil.move(str(src), str(dest))
+print('Moved to', dest)
+"
+```
+
+After archiving, verify the file is gone from Inbox and exists in the archive folder.
+| `safe_archive.py` errors with `Source not found in Inbox` | Passed a path (`00.Inbox/foo.md`) instead of just the filename | Pass `foo.md` only |
+| File moved but registry row still says `pending` | Race / partial failure | Re-run `safe_archive.py`; it will move nothing (file gone) but will still update the registry row |
+| `status: archived` row exists but archive folder is empty | The pre-fix bug above — short-circuit on already-archived row | Reset row to `pending`, re-run |
+
+After archiving, delete any temporary extracted files (e.g., `*_extracted.txt`) from the Inbox.
 
 ---
 
@@ -274,6 +378,13 @@ When archiving:
 14. File a note in the wrong KB.
 15. Leave notes without adding them to INDEX.md.
 16. Ignore contradictions between new source content and existing notes.
+17. Ingest a video source (YouTube, local video) without running `video-transcriber-skill` first — always transcribe, never ingest captions as the authoritative source.
+18. Skip the downloadable-attachments check — always run `scan_for_downloads.py --verbose` on every source before starting the inventory scan.
+19. Leave downloaded files unwikilinked in the source note body — every downloaded file must appear as `[[path]]` in both the Notable Details section and the Metadata table.
+20. Pre-mark the `_INGESTED.md` row for the source as `status: archived` before running `safe_archive.py` — the script short-circuits on that status and skips the file move. Set `pending` first; let the script set `archived`.
+21. Trust `safe_archive.py`'s success message without verifying the file actually left Inbox — the script can print success on a `status: archived` short-circuit without ever moving the file. Verify `00.Inbox/<filename>.md` is gone and `99.System/InboxArchive/YYYY-MM/<filename>.md` exists.
+22. Run `safe_archive.py` with a path (`00.Inbox/foo.md`) — pass the filename only (`foo.md`).
+23. Skip the post-archive verification step — always check Inbox → Archive movement AND registry status, in that order.
 
 ---
 

@@ -36,7 +36,7 @@ Data → Text to Columns splits a single column of text into multiple columns us
 
 ## Power Query Equivalent
 
-In Power Query, split by delimiter using **Split Column → By Delimiter** — this is repeatable and preserves the transformation for future refreshes.
+In Power Query, split by delimiter using **Split Column → By Delimiter:** this is repeatable and preserves the transformation for future refreshes.
 
 ```
 Home → Split Column → By Delimiter

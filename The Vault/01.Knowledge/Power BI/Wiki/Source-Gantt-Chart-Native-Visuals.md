@@ -23,13 +23,13 @@ Power BI has no native Gantt-chart visual, but the appearance of one can be repr
 
 ## Key Claims
 
-1. A Gantt chart can be reproduced in Power BI using **only native visuals** — no custom visual, no AppSource download — by overlaying a bar chart on a column chart and aligning their axes.
+1. A Gantt chart can be reproduced in Power BI using **only native visuals:** no custom visual, no AppSource download — by overlaying a bar chart on a column chart and aligning their axes.
 2. The column chart's job is purely to **own the X-axis date scale** (set to `Min Calendar Date` / `Max Project Date` bounds). Its own columns are made 100% transparent so the bar chart layered on top becomes the visible chart.
 3. The bar chart carries the actual task durations. To align bars with the timeline, an explicit **Date Start Buffer** measure (DATEDIFF of calendar minimum to task start) is added as a second, transparent series that pushes each bar to the correct horizontal position.
-4. Color-by-status is implemented as a **5-measure family** — one measure per status (Not Started, Delayed, Pending, In Progress, Completed), each gated by `IF(SELECTEDVALUE(...)=...)`. Drop the family onto the bar-chart X-axis and assign each series its own color.
+4. Color-by-status is implemented as a **5-measure family:** one measure per status (Not Started, Delayed, Pending, In Progress, Completed), each gated by `IF(SELECTEDVALUE(...)=...)`. Drop the family onto the bar-chart X-axis and assign each series its own color.
 5. A **today reference line** is added via the column chart's Analytics pane → X-Axis Constant Line, with a `Today = TODAY()` measure. Color, width, and shade-area-with-transparency are formatting choices that make the line legible without dominating the chart.
 6. Custom Y-axis labels are built from two measures: a vertical-bar `"Task Status Bar = " | ""` character colored by status, plus a `Task Label` measure that prepends a SWITCH-driven emoji (Planning = 🗂️, Design = 🎨, Execution = ⚙️, Testing = 🔍, Deployment = 🚀) to the task name.
-7. The hardest part is **alignment** — the right end of the bar chart must be flush with the right end of the column chart, and the left start of the bar chart with the first vertical gridline of the column chart's X-axis. Adding `Task Start Date` and `Task End Date` to the tooltip helps verify alignment interactively.
+7. The hardest part is **alignment:** the right end of the bar chart must be flush with the right end of the column chart, and the left start of the bar chart with the first vertical gridline of the column chart's X-axis. Adding `Task Start Date` and `Task End Date` to the tooltip helps verify alignment interactively.
 
 ## Notable Details
 

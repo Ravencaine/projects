@@ -1,8 +1,9 @@
 ---
 created: 2026-07-27
-updated: 2026-08-02
+updated: 2026-08-14
 source: "Advanced Dimensional Modeling for Retail Product Variants"
 source_url: "https://medium.com/@jjr8888/advanced-dimensional-modeling-for-retail-product-variants-b4e6c1743382"
+download_file: 99.System/Attachments/Code/sqlqueries_optimized_Retail_New_DeltaLake.sql
 note_type: source
 tags: [d365, retail, product-dimension, dimensional-modeling]
 ---
@@ -32,7 +33,7 @@ The series tackles the most complex dimension in a retail star schema: the produ
 
 ## Notable Details
 
-- Source code context: `codebase/_copy/sqlqueries/_optimized/_Retail/_New/_DeltaLake.sql` lines 4–222 (DIM_AllItems view)
+- Download: [[99.System/Attachments/Code/sqlqueries_optimized_Retail_New_DeltaLake.sql]] — SQL source file for this series (DIM_AllItems view + optimised CTEs)
 - Dimension groups observed: 'Donated' (Colour+Style+Size), 'DonatedNS' (Colour+Style), 'DonatedS' (Style), 'Retail Kit' (Config)
 - The 1900-01-01 sentinel date in todate = permanent/future price (no end date)
 - UNION ALL over UNION for combining simple and variant product branches
@@ -64,6 +65,7 @@ Links to notes derived from this source:
 | Field | Value |
 |-------|-------|
 | Source file | Advanced Dimensional Modeling for Retail Product Variants.md (+ Pt 2 + Pt 3) |
-| Archived at | 99.System/InboxArchive/2026-07/ |
+| Archived at | [[99.System/InboxArchive/2026-07/Advanced Dimensional Modeling for Retail Product Variants.md]] |
+| Download | [[99.System/Attachments/Code/sqlqueries_optimized_Retail_New_DeltaLake.sql]] |
 | Ingestion date | 2026-07-27 |
 | Word count | ~2,400 (parts combined) |

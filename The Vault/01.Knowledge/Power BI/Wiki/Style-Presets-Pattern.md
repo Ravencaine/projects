@@ -58,9 +58,9 @@ Use cases:
 
 Three presets for a column chart — all defined in one theme:
 
-- **ColumnDetailedChartLabels** — rich display: drop shadow, visible data labels, no gridlines
-- **ColumnDetailedChartNoLabels** — structural display: no labels, dashed gridlines
-- **ColumnSimpleChart** — minimal embedded: no labels, no axes, no borders, no shadow
+- **ColumnDetailedChartLabels:** rich display: drop shadow, visible data labels, no gridlines
+- **ColumnDetailedChartNoLabels:** structural display: no labels, dashed gridlines
+- **ColumnSimpleChart:** minimal embedded: no labels, no axes, no borders, no shadow
 
 ## Variations
 

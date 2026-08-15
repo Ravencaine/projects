@@ -16,13 +16,13 @@ Quantify the linear relationship between two numeric variables as a single value
 
 ## Components
 
-- **`SUMMARIZE`** — builds per-employee row context
-- **`ADDCOLUMNS`** — adds X and Y numeric columns
-- **`SWITCH (TRUE())`** — maps variable name strings to their numeric values
-- **`FILTER`** — removes rows with blank X or Y
-- **`AVERAGEX`** — computes mean of X and mean of Y
-- **`SUMX`** — computes numerator (covariance sum) and denominator (sqrt of product of variance sums)
-- **`SQRT`** — denominator correction
+- **`SUMMARIZE`:** builds per-employee row context
+- **`ADDCOLUMNS`:** adds X and Y numeric columns
+- **`SWITCH (TRUE())`:** maps variable name strings to their numeric values
+- **`FILTER`:** removes rows with blank X or Y
+- **`AVERAGEX`:** computes mean of X and mean of Y
+- **`SUMX`:** computes numerator (covariance sum) and denominator (sqrt of product of variance sums)
+- **`SQRT`:** denominator correction
 
 ## Structure
 

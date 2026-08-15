@@ -22,8 +22,8 @@ Render pill-shaped visual badges inside a table or matrix visual without externa
 
 **Two UDFs, one model:**
 
-1. **`UDF_EncodeSVG`** — URL-encodes any raw SVG string so Power BI can render it
-2. **`UDF_SVGPillCanvas`** — draws the pill (rect + optional dot + text), then calls `UDF_EncodeSVG`
+1. **`UDF_EncodeSVG`:** URL-encodes any raw SVG string so Power BI can render it
+2. **`UDF_SVGPillCanvas`:** draws the pill (rect + optional dot + text), then calls `UDF_EncodeSVG`
 
 **Separation of concerns:**
 - UDFs handle only *drawing* (geometry, padding, rounded corners)

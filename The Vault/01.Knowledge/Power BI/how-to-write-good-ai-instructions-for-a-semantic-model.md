@@ -1,0 +1,28 @@
+---
+title: "How to write good AI instructions for a semantic model"
+source: "https://tabulareditor.com/blog/how-to-write-good-ai-instructions-for-a-semantic-model"
+author: "tabulareditor.com"
+date: "2026-08-11"
+tags: [imported, reading-list, reading-list]
+created: "2026-08-11"
+---
+
+> Write AI instructions that steer Copilot and Fabric data agents: what to include, what to leave out, and how to iterate on them with real user feedback.
+
+How to write good AI instructions for a semantic model How to write good AI instructions for a semantic model Published: July 7, 2026 | Updated: July 28, 2026 Kurt Buhler Head of Innovation Kurt Buhler is Head of Innovation at Tabular Editor, where he researches and communicates what's next for semantic models and BI — from technical best practices to agentic development. Kurt emphasizes a user-centric focus, helping data professionals cut through the noise to build robust, useful solutions that matter. Power BI AI Semantic Model Agents Key takeaways AI instructions can steer Copilot and data agents: They're a freeform text field on the semantic model that provide model-specific context to get better results for with conversational BI experiences, mainly. They aren’t automatically exposed or read by coding agents like GitHub Copilot or Claude Code without using special prompts, tools, or scripts. You can edit them in Power BI Desktop or external tools. Writing good context for AI is an important skill: As a data professional, you should understand what context AI needs to use your data, both for conversational BI and agentic development . Writing good context for AI is the most straightforward way to get better results, not just for AI instructions but also agent documentation, memory, and skills. This is not a task that you can offload to AI if you expect to get meaningfully good results. Inform AI instructions with evidence from users and query logs: Don't just guess what's useful for instructions; you must engage with users to ensure that you can provide instructions that accurately describe the parts of your business process that the semantic model represents. If possible, also gather then analyze data from query and agent logs to identify failure or clarification points where you can tighten instructions to try and get better results. Iterate and improve AI instructions, incrementally: Regularly test with Copilot and data agents yourself, but most importantly touch base with users, then refine the instructions based on that feedback. Ideally, you should set up an automated evaluation that measures how instructions lead to improvements in AI-generated queries and responses. This summary is produced by the author, and not by AI. What are AI instructions and why are they important? In a semantic model you can specify freeform text instructions, which are automatically read by Copilot and data agents to steer their behavior and outputs. You can think of AI instructions like a description for your entire semantic model; a specific text where you write in 10,000 characters or less some key points that an agent needs to query your semantic model, effectively. Providing these instructions is one of the most important ways to steer and improve Copilot so that it works the way you want, and more importantly, the way that users expect: To get a semantic model ready for AI, there are many development tasks that are always necessary to produce a good model. These include ensuring that you work toward a star schema with good modelling practices, follow good naming conventions, and create accurate, useful descriptions. As we have discussed before, following the best practices for a semantic model ensures that you get the most out of it with or without AI. However, there are also tasks that are specific to AI consumption, and which only pay dividends if you’ll use Copilot or data agents: AI data schemas let you disable fields that an agent shouldn’t see or use in queries. This is particularly useful if you have many report-specific objects. AI instructions are the model-level, free-form context that we discuss in this article. Verified answers let you configure specific approved responses for Copilot based on a specific visual. Verified answers require the most time and effort to set up, since you need to create the visual and pair it with certain phrases; it’s usually only worth doing with highly recurring and important questions that need a specific visual response. You add AI instructions in Power BI desktop from the “Prep data for AI” menu: As mentioned, AI instructions are just text. Here, they are styled as markdown syntax with  used for headings and so forth, but that’s not mandatory. NOTE AI instructions are one part of the Prep data for AI experience in Power BI, alongside AI data schemas (the subset of fields the AI should prioritize) and verified answers (validated responses to common questions). This article focuses on instructions, but the three work together. AI instructions aren't read automatically by coding agents (such as Claude Code, Codex, or GitHub Copilot) that use MCP servers , CLI tools, or APIs. To use AI instructions in these tools, you must explicitly specify this in your prompts, agent memory files, or MCP server configuration. How to edit AI instructions You can add and manage the AI instructions for a semantic model in several places: Power BI Desktop: When you click on “Prep your data fo
+
+## Code / Examples
+
+```
+#
+```
+```
+te
+```
+```
+fab
+```
+
+
+---
+*Source: [tabulareditor.com](https://tabulareditor.com/blog/how-to-write-good-ai-instructions-for-a-semantic-model)*

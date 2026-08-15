@@ -22,12 +22,12 @@ The revamped Image visual in Power BI acts as a reusable, dynamic design system 
 
 ## Design System Components Possible
 
-- **Dynamic status dots** — color changes by rule (low/medium/high risk)
-- **Help button with nudge animation** — discoverable onboarding UX
-- **Navigation bar** — SVG icons that highlight the active page
-- **Category logos** — switches automatically based on user selection
-- **Dynamic rating stars** — for surveys, feedback, HR dashboards
-- **KPI icons** — status-aware, filter-reactive icons
+- **Dynamic status dots:** color changes by rule (low/medium/high risk)
+- **Help button with nudge animation:** discoverable onboarding UX
+- **Navigation bar:** SVG icons that highlight the active page
+- **Category logos:** switches automatically based on user selection
+- **Dynamic rating stars:** for surveys, feedback, HR dashboards
+- **KPI icons:** status-aware, filter-reactive icons
 
 ## Architecture
 

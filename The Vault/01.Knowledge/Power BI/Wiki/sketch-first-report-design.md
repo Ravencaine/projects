@@ -12,12 +12,12 @@ Low-fidelity paper sketches → high-fidelity Figma drafts before touching Power
 
 ## Phases
 
-1. **Low-fidelity sketch** — paper or Figma, rough layout, emphasis on narrative flow
-2. **Quick data glance** — Power BI, basic connections, drag-and-drop charts; no data modeling investment
-3. **Inspiration collection** — Dribbble, Behance, Figma Community, Envato
-4. **Higher-fidelity sketch** — Figma, refining shapes, text, images
-5. **Color + typography** — apply brand palette and fonts
-6. **Socialize WIP** — gather feedback from end-users, not just BI devs
+1. **Low-fidelity sketch:** paper or Figma, rough layout, emphasis on narrative flow
+2. **Quick data glance:** Power BI, basic connections, drag-and-drop charts; no data modeling investment
+3. **Inspiration collection:** Dribbble, Behance, Figma Community, Envato
+4. **Higher-fidelity sketch:** Figma, refining shapes, text, images
+5. **Color + typography:** apply brand palette and fonts
+6. **Socialize WIP:** gather feedback from end-users, not just BI devs
 
 ## Key Principle
 

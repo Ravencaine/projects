@@ -24,7 +24,7 @@ No parameters.
 
 ## Remarks
 
-- `RAND()` is a **volatile function** — it returns a new value on every evaluation
+- `RAND()` is a **volatile function:** it returns a new value on every evaluation
 - It has no seed parameter — the sequence cannot be reproduced
 - Volatility means it is re-evaluated on every interaction (slicer change, filter, refresh), which affects performance
 - See [[RAND-Volatile-Gotcha]] for implications

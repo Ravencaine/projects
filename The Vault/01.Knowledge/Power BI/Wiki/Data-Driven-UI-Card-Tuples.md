@@ -67,10 +67,10 @@ def flip(*clicks):
 
 ## Variations
 
-- **Dict-based cards** — use a list of dicts `{"card_id": "c1", "title": "Revenue", ...}` instead of tuples for self-documenting field names and easier slicing.
-- **Grouped sections** — nest lists: `[dbc.Col([flip_card(*c) for c in group], md=4) for group in CARD_GROUPS]`.
-- **Filtered cards** — apply a filter before rendering: `[flip_card(*c) for c in CARDS if c[3].startswith("↑")]`.
-- **Power BI analogue** — the same pattern in Power BI: define card data as a measure/column set, bind a KPI card visual to it via field well, and use a slicer to filter which cards are visible.
+- **Dict-based cards:** use a list of dicts `{"card_id": "c1", "title": "Revenue", ...}` instead of tuples for self-documenting field names and easier slicing.
+- **Grouped sections:** nest lists: `[dbc.Col([flip_card(*c) for c in group], md=4) for group in CARD_GROUPS]`.
+- **Filtered cards:** apply a filter before rendering: `[flip_card(*c) for c in CARDS if c[3].startswith("↑")]`.
+- **Power BI analogue:** the same pattern in Power BI: define card data as a measure/column set, bind a KPI card visual to it via field well, and use a slicer to filter which cards are visible.
 
 ## Related
 

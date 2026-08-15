@@ -16,6 +16,8 @@
     "file_exclusions": "Untitled",
     "folder_exclusions": ""
   },
+  "gitignore_exclusions": [],
+  "gitignore_exclusions_updated_at": 0,
   "language": "en",
   "re_import_wait_time": 13,
   "smart_chat_threads": {
@@ -55,7 +57,8 @@
         "render_markdown": true,
         "show_full_path": false
       }
-    }
+    },
+    "footer_connections_list_component_key": "connections_list_v3"
   },
   "context_items": {
     "template_preset": "xml_structured",
@@ -72,7 +75,8 @@
   "lookup_lists": {
     "results_collection_key": "smart_blocks",
     "score_algo_key": "similarity",
-    "results_limit": 20
+    "results_limit": 20,
+    "get_results_action_key": "lookup_list_get_results"
   },
   "smart_contexts": {
     "template_preset": "xml_structured",
@@ -80,6 +84,6 @@
     "template_after": "</context>"
   },
   "embedding_models": {
-    "default_model_key": "transformers#1785430487598"
+    "default_model_key": "transformers#1786478830245"
   }
 }

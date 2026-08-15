@@ -4,7 +4,7 @@ created: 2026-07-29
 updated: 2026-08-02
 source: DAX for Humans (Greg Deckler, Packt 2025)
 note_type: pattern
-tags: ["dax", "pattern", "debugging", "evaluateandlog", "logging", "diagnostic"]
+tags: [dax, pattern, debugging, evaluateandlog, logging, diagnostic]
 
 ---
 

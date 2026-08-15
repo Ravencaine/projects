@@ -10,11 +10,11 @@ tags: [powerbi, pattern, data-visualization, violin-plot, grouped, split, compar
 
 When data has subgroups within each main category, two structural choices:
 
-**Grouped violins** — multiple narrow violins placed side by side within each main category (e.g., bike vs car delivery times within each city).
+**Grouped violins:** multiple narrow violins placed side by side within each main category (e.g., bike vs car delivery times within each city).
 
 Use when: 2–4 subgroups per category; want to compare both within-category and between-category patterns.
 
-**Split violins** — one violin per category, left half = subgroup A, right half = subgroup B.
+**Split violins:** one violin per category, left half = subgroup A, right half = subgroup B.
 
 Use when: exactly 2 subgroups; direct head-to-head comparison (before vs after, treatment vs control); saves horizontal space vs grouped.
 

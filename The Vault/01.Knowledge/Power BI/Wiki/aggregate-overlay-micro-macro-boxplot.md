@@ -12,8 +12,8 @@ When a chart has too many series to read individually, layering an aggregate sum
 
 **Two reading modes on one chart:**
 
-- **Micro** — faint individual lines/dots show each category's trajectory
-- **Macro** — bold overlay line shows mean or median trend across all categories
+- **Micro:** faint individual lines/dots show each category's trajectory
+- **Macro:** bold overlay line shows mean or median trend across all categories
 
 **Adding a boxplot overlay** answers the question: "Is this improvement broad-based or driven by one outlier?"
 - Boxplot on top of the dots shows the spread of values at each time point

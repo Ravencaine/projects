@@ -1,12 +1,33 @@
 ---
 created: 2026-08-02
-updated: 2026-08-02
+updated: 2026-08-11
 source: system:changelog
 ---
 
 # CHANGELOG
 
 All notable changes to this knowledge base are documented here.
+
+## 2026-08-11 — Health check (delta)
+
+Audit: 20 delta notes read. Delta since 2026-08-06.
+
+Auto-fixed:
+- writing-rules: 4 em-dash bullets replaced with colons across 4 files
+- INDEX links: 3 orphaned notes added to Excel INDEX.md (In-Cell-Bar-Chart-REPT, REPT-In-Cell-Bar-Charts, integrating-python-excel-source)
+- frontmatter: 32 `updated:` fields backfilled
+
+New articles drafted: 0
+
+Pending judgement:
+- excel-index-extras: Excel INDEX header still shows 54 notes (needs +3, now 57) — auto-fixed this run
+
+## 2026-08-06 — Ingestion batch
+
+Sources: 1 file → 99.System/InboxArchive/2026-08/
+Notes: 12 written across 1 KB
+KBs: Data Modeling (12 notes: 1 source, 4 reference, 4 atomic, 3 pattern)
+Errors fixed: 0 | Link ops applied: 0
 
 ## 2026-08-05 — Health check (delta, vault-wide)
 

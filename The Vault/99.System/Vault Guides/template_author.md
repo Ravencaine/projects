@@ -3,7 +3,7 @@ created: YYYY-MM-DD
 source: <source>
 source_url: <url or empty>
 note_type: author
-tags: []
+tags: [tag1, tag2]
 ---
 
 # <Author Name>

@@ -65,3 +65,5 @@ Apply the desired format, set the range (typically the full column of data), and
 
 - [[pivot-tables]] — commonly the data source for conditional formatting dashboards
 - [[excel-as-bi-tool]] — visual insight as part of the Excel BI toolkit
+- [[Custom-Number-Formats]] — custom formats and CF solve different problems: display vs data reaction
+- [[Slicer-Excel-Tables]] — slicers provide visual filtering alongside CF's visual intelligence

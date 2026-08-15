@@ -24,10 +24,10 @@ Design the visual layout — KPI card backgrounds, buttons, logos, text placehol
 
 Key Figma tools used:
 - **Frame** tool — set to `1280 × 720` (TV size) as the canvas
-- **Rounded rectangle** — for KPI card backgrounds (Corner Radius: 16, gradient fill, drop shadow)
+- **Rounded rectangle:** for KPI card backgrounds (Corner Radius: 16, gradient fill, drop shadow)
 - **Rectangle** with corner radius — for oval buttons
 - **Text tool** (T) — for labels and headers; Inter font used by default, adjustable in Properties panel
-- **Image** — import logo images, resize via Width (W) and Height (H) in Properties panel
+- **Image:** import logo images, resize via Width (W) and Height (H) in Properties panel
 
 ### 2. Export as SVG
 
@@ -51,7 +51,7 @@ Add KPI cards, charts, slicers, and other native Power BI visuals on top of the 
 
 ## Key Rules
 
-- Export format must be **SVG** — not PNG or JPG — for crisp scaling on any display density.
+- Export format must be **SVG:** not PNG or JPG — for crisp scaling on any display density.
 - Set canvas background transparency to **0%** in Power BI; otherwise the SVG may appear washed out.
 - Figma canvas size **1280 × 720** matches the Power BI default page size exactly.
 - Group and name Figma layers for easier alignment in Power BI.

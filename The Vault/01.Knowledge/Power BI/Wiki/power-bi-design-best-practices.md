@@ -14,7 +14,7 @@ Report and dashboard layout principles that improve readability, performance, an
 ## Visual Layout
 
 ### Grid and Alignment
-- Use a **8px baseline grid** — Power BI snap-to-grid helps
+- Use a **8px baseline grid:** Power BI snap-to-grid helps
 - Keep visuals aligned; misalignment signals sloppy data
 - Leave breathing room: minimum 4px between visual borders
 
@@ -33,7 +33,7 @@ Report and dashboard layout principles that improve readability, performance, an
 ```
 
 ### Color Consistency
-- **One accent color** — use sparingly for callouts and KPIs
+- **One accent color:** use sparingly for callouts and KPIs
 - **Neutral backgrounds** for most visuals; let data provide the color
 - **Max 5 colors** per visual, max 7 per report
 
@@ -64,7 +64,7 @@ Report and dashboard layout principles that improve readability, performance, an
 
 ## Accessibility
 
-- Ensure **color is not the only differentiator** — pair with labels or patterns
+- Ensure **color is not the only differentiator:** pair with labels or patterns
 - Use **alt text** on every visual (Right-click → Edit alt text)
 - Minimum **3:1 contrast ratio** for text and shapes
 

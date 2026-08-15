@@ -8,7 +8,7 @@ tags: [dax, pattern, svg, pill, priority, dot-color, switch]
 
 # Task Priority Pill — Neutral Pill + Dot Color Carries the Signal
 
-A priority pill with neutral background/border where the **dot color carries the signal** — High→dark red, Medium→amber, Low→green.
+A priority pill with neutral background/border where the **dot color carries the signal:** High→dark red, Medium→amber, Low→green.
 
 ```dax
 Task Priority Pill :=

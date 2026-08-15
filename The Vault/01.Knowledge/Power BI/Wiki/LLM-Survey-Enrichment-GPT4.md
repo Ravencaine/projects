@@ -17,7 +17,7 @@ Open-ended survey responses are rich but unstructured. Manual thematic coding is
 
 ## Components
 
-- **OpenAI Python client** — `openai.OpenAI(api_key=...)`, model `gpt-4`.
+- **OpenAI Python client:** `openai.OpenAI(api_key=...)`, model `gpt-4`.
 - **Pandas DataFrame** of comments (`df["Comment"]`).
 - **Two distinct LLM calls per comment** (theme tag + sentiment score), plus **one shared call** that runs once over the whole corpus (theme extraction).
 - **`tqdm.pandas()`** for the per-comment iterations so progress is visible on long runs.

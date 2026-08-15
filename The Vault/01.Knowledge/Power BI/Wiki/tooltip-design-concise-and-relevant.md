@@ -4,6 +4,7 @@ updated: 2026-08-02
 source: "From Messy to Masterpiece The Ultimate Power BI Dashboard Checklist .md"
 note_type: atomic
 tags: [dashboard-design, tooltips, user-guidance, power-bi]
+source_url:
 ---
 
 # Tooltip Design — Concise and Relevant
@@ -21,6 +22,16 @@ A tooltip is an on-demand detail layer. It should supplement the visual, not rep
 - **Contextual**: use the primary visual's fields to inform tooltip content — dynamic, not static
 - **Readable**: do not overcrowd the tooltip card — a single clear metric beats a dense table
 - **Do not use tooltips as the primary data communication channel**: labels should always be sufficient without hovering
+
+## Tooltip Design for Report Clarity
+
+Van Zyl frames tooltips as a **presentation layer** concern — they are part of the overall user experience strategy, not just a formatting option:
+
+- Tooltips should present *supplementary* information — context, correlation, annotation — not the primary data value
+- Over-stuffed tooltips force the user to hover for information that should be visible on the chart
+- A well-designed tooltip enhances engagement without creating a dependency
+
+> Source: [[Source-Crafting-Compelling-Impactful-Power-BI-Reports]] — Althea Van Zyl, 2024-07-09
 
 ## Related
 

@@ -45,6 +45,7 @@ KB_NAMES = [
     "Data Modeling",
     "DAX Code",
     "Excel",
+    "Power Automate",
     "Power BI",
     "Power Query",
     "VBA",
@@ -58,19 +59,27 @@ EXTERNAL_SOURCES = {
     "m-code_extracted.txt",
     "m-code_full.txt",
     "unknown",          # notes with no identifiable source file
+    # Known articles with no Inbox file
+    "conditional formatting in power bi (van wyk / data bear)",
 }
 
 # ── helpers ────────────────────────────────────────────────────────────────────
 
 def parse_frontmatter(text: str) -> dict:
-    m = re.match(r"^---\s*\n(.*?)\n---", text, re.DOTALL)
+    m = re.match(r"^---\s*\n(.*)\n---", text, re.DOTALL)
     if not m:
         return {}
     result = {}
     for line in m.group(1).splitlines():
-        if ":" not in line:
+        stripped = line.lstrip()
+        if not stripped:
+            continue  # skip blank lines
+        # Skip indented continuation lines (list items under top-level keys)
+        if line[0] in (" ", "\t"):
             continue
-        key, _, val = line.partition(":")
+        if ":" not in stripped:
+            continue
+        key, _, val = stripped.partition(":")
         result[key.strip()] = val.strip().strip('"').strip("'")
     return result
 
@@ -86,7 +95,7 @@ def get_indexed_wikilinks(kb: str) -> set[str]:
     stems = set()
     for m in re.finditer(r"\[\[(.+?)(?:\|.*?)?\]\]", text):
         link = m.group(1)
-        stems.add(Path(link).stem)  # strip .md if present
+        stems.add(Path(link).stem.lower())  # strip .md, case-insensitive
     return stems
 
 
@@ -257,6 +266,14 @@ def is_external_source_name(val: str, all_sources: set[str] | None = None) -> bo
         words = val_lower.split()
         if len(words) <= 3 and not any(c in val_lower for c in ["article", "guide", "tutorial", "how to", "using", "with", "pdf"]):
             return True
+    # Bare author names used as source: field in author notes
+    author_bare_names = [
+        "boniface muchendu", "elle harrison", "reid havens",
+        "jake dudly", "juls", "annamarie van", "yadullah",
+        "yash", "shashanka", "janvi", "nadiya modi",
+    ]
+    if val_lower.strip() in author_bare_names or any(f"{a.split()[0]} {a.split()[-1][0]}" in val_lower or a.split()[0] in val_lower for a in author_bare_names):
+        return True
 
     # Book / course / known virtual source titles
     book_indicators = [
@@ -312,11 +329,13 @@ def scan_all_notes(verbose: bool = False) -> dict[str, dict]:
                 continue
             fm = parse_frontmatter(text)
             source_val = fm.get("source", "")
+            source_type_val = fm.get("source_type", "")
             notes[str(note_path)] = {
                 "kb":     kb,
                 "name":   note_path.name,
                 "stem":   note_path.stem,           # without .md
                 "source": source_val,
+                "source_type": source_type_val,
             }
             if verbose:
                 print(f"  [scan] {kb}/{note_path.name}  source={source_val!r}")
@@ -338,7 +357,8 @@ def find_index_orphans(notes: dict[str, dict], verbose: bool = False) -> list[di
         if note_path_obj.name in ("INDEX.md", "CHANGELOG.md", "QUESTIONS.md"):
             continue
         indexed = indexed_by_kb[info["kb"]]
-        if info["stem"] not in indexed:
+        note_stem_lower = info["stem"].lower()
+        if note_stem_lower not in indexed:
             orphans.append({
                 "type":    "INDEX orphan",
                 "kb":      info["kb"],
@@ -360,6 +380,8 @@ def find_source_orphans(notes: dict[str, dict], all_sources: set[str],
         if note_path_obj.name in ("INDEX.md", "CHANGELOG.md", "QUESTIONS.md"):
             continue
         src = info["source"].strip()
+        src_type = info.get("source_type", "").strip()
+        # file-download sources have no article file — the PBIX/CSV IS the source
         if not src:
             orphans.append({
                 "type":  "SOURCE orphan (empty)",
@@ -369,12 +391,16 @@ def find_source_orphans(notes: dict[str, dict], all_sources: set[str],
                 "note_source_field": src,
             })
             if verbose:
+
                 print(f"  [orphan] SOURCE (empty): {info['kb']}/{info['name']}")
             continue   # empty source = orphan
         if src.lower() in EXTERNAL_SOURCES or src.lower().startswith("system:"):
             continue   # known external/virtual source — always valid
-        if is_external_source_name(src, all_sources):
+        if is_external_source_name(val=src, all_sources=all_sources):
             continue   # matches a real archive file (e.g. m-code.pdf, dax.pdf)
+        # file-download sources: the PBIX/CSV file IS the source — not an orphan
+        if src_type == "file-download":
+            continue
         if not source_matches_file(src, all_sources):
             orphans.append({
                 "type":  "SOURCE orphan (file missing)",
@@ -438,13 +464,31 @@ def find_registry_orphans(notes: dict[str, dict], registry: dict[str, dict],
                 # Stop-words ("and", "with", "the", etc.) don't count toward the threshold.
                 stop_words = {"and", "the", "with", "in", "for", "of", "to", "a", "an", "is", "it"}
                 content_reg = {t for t in reg_tokens if t not in stop_words}
-                content_matches = sum(1 for t in content_reg if t in ref_lower)
-                if content_matches >= max(2, len(content_reg) - 2):
+                # Split hyphenated tokens on hyphens so 'decision-making' becomes
+                # {'decision', 'making'} on both sides. The note's source: form uses
+                # spaces while the registry uses hyphens (or vice versa); without
+                # this split, hyphens never match anything.
+                reg_subtokens = set()
+                for t in content_reg:
+                    reg_subtokens.update(t.split("-"))
+                reg_subtokens -= {""}
+                # Threshold: 60% of content tokens (ceil), min 2. The old
+                # `len(content_reg) - 2` rule was too tight for author-attributed
+                # sources where the note's source: drops the article subtitle and
+                # appends "(Author Name)". E.g. registry "How to Do Anomaly
+                # Detection in Power BI (No External Tools Needed)" → note
+                # "How to Do Anomaly Detection in Power BI (Isabelle Bittar)".
+                import math
+                threshold = max(2, math.ceil(0.6 * len(reg_subtokens)))
+                # Word-in-token containment: each registry sub-token is a substring
+                # of ref. Handles merged-into-one-word tokens.
+                content_matches = sum(1 for t in reg_subtokens if t in ref_lower)
+                if content_matches >= threshold:
                     matched = True
                     break
-                # Token overlap (split on spaces and hyphens)
-                overlap = len(reg_tokens & ref_token_set)
-                if overlap >= max(3, len(reg_tokens) - 2):  # allow up to 1 missing token
+                # Token overlap (split on spaces and hyphens on both sides).
+                overlap = len(reg_subtokens & ref_token_set)
+                if overlap >= threshold:
                     matched = True
                     break
             if matched:

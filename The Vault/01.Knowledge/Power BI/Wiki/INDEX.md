@@ -1,22 +1,55 @@
 ---
 created: 2026-07-26
-updated: 2026-08-02
+updated: 2026-08-06
 note_type: index
 tags: [powerbi, index]
 ---
 
 # Power BI — Knowledge Base Index
 
-This is the index for the Power BI knowledge base. 362 notes grouped by type.
+This is the index for the Power BI knowledge base. 371 notes grouped by type.
 
-## Data Modeling & Relationships  (166 notes)
+## Data Visualization & Charts
 
 | Note | Description |
 |------|-------------|
 | [[Advanced-KPI-Cards.md]] | Advanced KPI Cards (Power BI)
 
 Build multi-element KPI cards using the Card visual, Shape objects, and DAX measures that |
-| [[Bar-to-Area-Conversion.md]] | Bar-to-Area Conversion Hack
+|| [[Power-BI-Visual-Selection-Guide.md]] | Power BI Visual Selection Guide
+
+Quick-reference matching 5 visuals (bar, line, pie, card, table/matrix) to analytical questions. |
+| [[Source-5-Most-Used-Visuals-in-Power-BI-Kumar.md]] | Source: 5 Most Used Visuals in Power BI (Kumar)
+
+Source note — Anurodh Kumar article on 5 core Power BI visuals and when to use each. |
+|| [[Error-Bar-Data-Flags.md]] | Error Bar Data Flags
+
+Add contextual vertical flag labels to column charts using invisible anchor series + error bars + conditional BLANK(). |
+|| [[Error-Bar-Rounded-Bars.md]] | Error Bar Rounded Bars
+
+Add pill-shaped rounded end caps to bar charts using error bars with filled-circle markers. |
+|| [[Error-Bar-Dumbbell-Chart.md]] | Error Bar Dumbbell Chart
+
+Range chart (min–max spread per category) using 3 invisible series + 3 error bars on a clustered bar chart. |
+|| [[Error-Bar-Boxplot.md]] | Error Bar Boxplot
+
+Full boxplot (min, Q1, median, Q3, max, avg) using stacked columns + error bar whiskers + layered markers. |
+|| [[Error-Bars-as-Invisible-Anchors.md]] | Error Bars as Invisible Anchors
+
+Error bars as drawing primitives attached to invisible (100% transparent) series. |
+|| [[Dummy0-Lower-Bound-Anchor.md]] | Dummy0 Lower-Bound Anchor
+
+`Dummy0 = 0` measure as lower bound — anchors error bars to the chart baseline. |
+|| [[Error-Bar-Configuration-Reference.md]] | Error Bar Configuration Reference
+
+Full reference: Type, Relationship, Bar, and Marker settings for all error bar options. |
+|| [[Error-Bar-Series-Spacing-Alignment.md]] | Error Bar Series Spacing Alignment
+
+Reduce series spacing and use Overlap to align invisible anchor series with data columns. |
+|| [[Source-Error-Bars-in-Power-BI-datatraining.md]] | Source: 4 Ways to Use Error Bars in Power BI
+
+Source note — datatraining article on 4 creative error bar use cases. |
+|| [[Bar-to-Area-Conversion.md]] | Bar-to-Area Conversion Hack
 
 Build a bar chart with conditional formatting, then convert it to an area chart — Power BI  |
 | [[Custom-Fonts-via-Theme-JSON.md]] | Custom Fonts via Theme JSON
@@ -25,14 +58,21 @@ Applies custom font families across all report pages by editing and reimporting 
 | [[Dynamic-Alerts.md]] | Dynamic Alerts (CONCATENATEX + HTML Content)
 
 Creates an interactive alert system where a DAX measure generates an HTML  |
-| [[Gestalt-Principles.md]] | Gestalt Principles (5 Named Laws)
+|| [[GitHub-Style-Calendar-Heatmap-Pattern.md]] | GitHub-Style Calendar Heatmap Pattern (DAX + Plotly.js)
+
+Combines DAX CONCATENATEX + HTML Content visual + Plotly.js to render a GitHub-style calendar heatmap — 7×53 grid, Viridis color scale, slicer-responsive. |
+|| [[Gestalt-Principles.md]] | Gestalt Principles (5 Named Laws)
 
 Five perceptual principles from Gestalt psychology that explain how users visually gr |
+| [[Power-BI-UX-7-Features.md]] | Power BI UX: 7 Key Features
+
+Seven Power BI features that significantly improve the user experience of a dashboard — from navigation to accessibility. |
+| [[Power-BI-Interactive-Features.md]] | Power BI Interactive Features Pattern
+
+Drill-down, filters, and slicers as a unified self-service exploration pattern. |
 | [[New-Power-BI-Slicer-Features.md]] | New Power BI Slicer Features (November 2023+)
 
 The new Power BI slicer (released November 2023) adds substantial formatt |
-| [[Power-BI-UX-7-Features.md]] | Power BI UX: 7 Key Features
-
 Seven Power BI features that significantly improve the user experience of a dashboard — fro |
 | [[Power-Graphing.md]] | Power Graphing (Table as Chart)
 
@@ -56,11 +96,14 @@ Open questi |
 Source
 
 - Article: "Alerts in Action: Powering Real-Time Insigh |
-| [[Source-Crafting-Data-Narratives.md]] | Crafting Data Narratives: The Art of Power BI Reporting
+| [[Report-Structural-Integrity.md]] | Report Structural Integrity
+
+- Article: "Crafting Data Narratives: The Art of Power BI Reporting" — [[Source-Crafting-Data-Narratives]]
 
 Source
 
-- Article: "Crafting Data Narratives: The Art of Power  |
+- Article: "Crafting Compelling and Impactful Power BI Reports" — [[Source-Crafting-Compelling-Impactful-Power-BI-Reports]]
+
 | [[The-3-30-300-Rule.md]] | The 3-30-300 Rule (Dashboard Design)
 
 A UX design heuristic borrowed from urban planning that allocates a user's time bu |
@@ -193,6 +236,12 @@ Three metrics for evaluating a Custom Vision model's accuracy: |
 | [[custom-vision-workflow.md]] | Custom Vision Workflow — Build → Train → Publish
 
 Step-by-step process for building a Custom Vision model and integratin |
+| [[Donut Chart Use Cases.md]] | Donut Chart Use Cases
+
+Part-to-whole visualization patterns for 7 scenarios (category contribution, market share, budget, segmentation, sentiment, regional, HR) — with category count limits and center-label tip. |
+| [[Donut Chart Limitations.md]] | Donut Chart Limitations
+
+When NOT to use donut charts: too many categories, exact values needed, time-series, negative values, near-equal segments. |
 | [[data-model-5-common-problems-fixes.md]] | Data Model: 5 Common Problems and Fixes
 
 Five problems that catch every beginner. |
@@ -202,7 +251,7 @@ Build the model, then test it before building any visuals. |
 | [[data-modeling-foundation-for-ai-quality.md]] | Data Modeling Is the Foundation for AI Quality
 
 AI features in Power BI — Copilot, Q&A, Key Influencers — read your data |
-| [[data-modeling-part1-janvi-source.md]] | Data Modeling Part 1 — Janvi Gupta
+| [[Data-Accuracy-and-Reliability.md]] | Data Accuracy and Reliability
 
 > Type: tutorial / beginner guide
 > Author: Janvi Gupta
@@ -331,10 +380,19 @@ Machine learning trains models not by programming rules, but by letting the  |
 | [[mcp-power-bi-modeling-preview-caveats.md]] | MCP Power BI Modeling Preview: Key Caveats
 
 Microsoft's Power BI Modeling MCP server is in public preview. |
-| [[mcp-power-bi-semantic-model-workflow.md]] | MCP Power BI Semantic Model Workflow
+|| [[mcp-power-bi-semantic-model-workflow.md]] | MCP Power BI Semantic Model Workflow
 
 Using Model Context Protocol (MCP) to connect an AI assistant to Power BI semantic |
-| [[mitigating-bias-in-ml-datasets.md]] | Mitigating Bias in ML Datasets
+|| [[Claude-Power-BI-MCP-Integration.md]] | Claude Power BI MCP Integration
+
+Using MCP to connect Claude AI to Power BI Desktop — AI-assisted DAX generation, hierarchies, metadata population, and model optimisation |
+|| [[Connect-Claude-to-Power-BI-via-MCP.md]] | Connect Claude to Power BI via MCP
+
+Step-by-step: VS Code + Power BI MCP extension + Claude Desktop config → connect to open .pbix |
+|| [[7-AI-Prompts-for-Power-BI-MCP.md]] | 7 AI Prompts for Power BI MCP
+
+Reference card: 7 prompts for DAX generation, field renaming, display folders, hierarchies, descriptions, data type optimisation, and data dictionary auto-generation |
+|| [[mitigating-bias-in-ml-datasets.md]] | Mitigating Bias in ML Datasets
 
 Bias in training data causes models to reinforce unfair patterns. |
 | [[model-accuracy-plateau.md]] | Model Accuracy Plateaus Before You Think
@@ -475,8 +533,14 @@ Three underline styles in the Q&A text box indicate the model's confidence in ma
 Three fundamental ML task types: predicting a number, predicting a category, |
 | [[relationship-types-one-to-many-many-to-many.md]] | Relationship Types: One-to-Many, Many-to-Many, and More
 
-Relationships are the invisible bridges that let Power BI look  |
-| [[reports-semantic-models-power-bi-service.md]] | (Article for beginners)  
+| Relationships are the invisible bridges that let Power BI look  |
+||| [[CROSSFILTER-Oneway-Directional-Options.md]] | CROSSFILTER Oneway Directional Options
+
+`ONEWAY_LEFTFILTERSRIGHT` and `ONEWAY_RIGHTFILTERSLEFT` — explicit directional filter control for one-to-one relationships; contrast with `BOTH` (full bidirectionality) and `ONEWAY` (many-to-one). |
+||| [[Source-CROSSFILTER-Function-Control-Relationships-in-Power-BI-DAX.md]] | CROSSFILTER Function: Control Relationships in Power BI DAX
+
+Verbatim source: CROSSFILTER inside CALCULATE to override relationship direction for a specific measure; Customer → Product → Reseller Sales bridging example; Boniface Muchendu, DataBear 2022-10-15. |
+||| [[reports-semantic-models-power-bi-service.md]] | (Article for beginners)
 When I first started to learn Power BI, I did not know that something called Power BI service  |
 | [[role-playing-date-calculated-columns.md]] | Role-Playing Dates: Multiple Date Columns
 
@@ -564,7 +628,13 @@ Consumer, Corporate, Home Office: understanding purchasing behavior by segment |
 | [[calendar-table-time-intelligence.md]] | Calendar Table for Time Intelligence
 
 Dedicated date dimension table enabling YTD, YoY, and period-over-period comparisons in DAX |
-| [[retail-sales-dataset-schema.md]] | Retail Sales Dataset Schema
+|| [[Countdown-Timer-in-Power-BI.md]] | Countdown Timer in Power BI
+
+Three techniques: beginner (DATEDIFF static), intermediate (SELECTEDVALUE per-row), advanced (NOW() + integer arithmetic for live days/hours/min/sec) |
+|| [[Power-BI-Countdown-Timer-Patterns.md]] | Power BI Countdown Timer Patterns
+
+DAX patterns for all three levels: conditional formatting, auto page refresh setup, compact/non-zero-only display variants |
+|| [[retail-sales-dataset-schema.md]] | Retail Sales Dataset Schema
 
 Canonical column inventory for a retail sales fact table and dimension tables |
 | [[high-sales-does-not-mean-high-profit.md]] | High Sales Does Not Mean High Profit
@@ -588,6 +658,27 @@ MonthName sorts A-Z unless Sort by Column is configured |
 | [[date-table-post-creation-checklist.md]] | Date Table Post-Creation Checklist
 
 Pre-publish checklist for verifying a Date Table is correctly configured |
+| [[apply-filters-to-visuals-workflow.md]] | Apply Filters to Visuals Workflow
+
+Add a field as a filter to a specific visual, page, or the entire report. Four-step workflow. |
+| [[Date-Picker-Slicer-Dual-Summary-Model.md]] | Date Picker Slicer — Dual Summary Model
+
+Dual summary model: two disconnected date tables connected to separate visuals, enabling independent date ranges without cross-filtering. |
+| [[filter-best-practices.md]] | Filter Best Practices
+
+Atomic notes on Power BI filter best practices: avoid bidirectional cross-filtering, prefer report-level filters, use measure-based filters for complex scenarios. |
+| [[filter-levels-in-power-bi.md]] | Filter Levels in Power BI
+
+Power BI has four filter scopes: Visual-level, Page-level, Report-level, and Drillthrough — each progressively broader in scope. |
+| [[filter-types-overview.md]] | Filter Types Overview
+
+Power BI supports six filter types: Basic, Advanced, Top N, Relative Date, Numeric, and Relative Time. |
+| [[measures-repository-underscore-table.md]] | Measures Repository Underscore Table
+
+A hidden table prefixed with "_" containing all DAX measures, organized into display folders for a clean Fields pane. |
+| [[Future-Dates-Date-Table-Gotcha.md]] | Future Dates in Date Table — Misleading Relative Range Gotcha
+
+The Date Picker slicer's "Before today" relative filter includes future dates stored in the date table — users expect no data but see blanks, not zeros. |
 ## DAX & Measures  (53 notes)
 
 | [[pearson-correlation-coefficient.md]] | Pearson Correlation Coefficient
@@ -599,10 +690,22 @@ Two identical DATATABLE calculated tables serving as the row and column axes for
 | [[pearson-correlation-measure.md]] | Pearson Correlation Measure
 
 DAX measure computing the Pearson correlation coefficient between two variables selected in a Matrix visual's rows and columns via SELECTEDVALUE and SWITCH. |
-| [[lower-triangle-no-diagonal-correlation.md]] | Lower Triangle, No Diagonal Correlation
+|| [[CONCATENATEX-JSON-Bridge.md]] | CONCATENATEX JSON Bridge (DAX → JS)
+
+DAX pattern that serialises a table into a JavaScript-readable JSON array — bridges tabular DAX data into the HTML Content visual's JavaScript context. |
+|| [[getISOWeek-JavaScript.md]] | getISOWeek — JavaScript ISO Week Number
+
+Returns ISO 8601 week number (1–53) for a date. Used to map calendar dates to the horizontal axis of a calendar heatmap. |
+|| [[getDayNumber-JavaScript.md]] | getDayNumber — JavaScript Weekday Index
+
+Maps JavaScript getDay() (Sunday=0) to ISO Monday=1...Sunday=7 for GitHub-style heatmap matrix indexing. |
+|| [[Plotly-Heatmap-Snippet.md]] | Plotly.js CDN Loader + Heatmap Trace
+
+Boilerplate for loading Plotly from CDN and rendering a heatmap inside the HTML Content visual — dynamic loader guard, Viridis default, reversed y-axis. |
+|| [[lower-triangle-no-diagonal-correlation.md]] | Lower Triangle, No Diagonal Correlation
 
 DAX measure wrapping the core Correlation measure to display only the lower triangle and hide the diagonal (XName <= YName → BLANK). |
-| [[correlation-color-buckets.md]] | Correlation Color Buckets
+|| [[correlation-color-buckets.md]] | Correlation Color Buckets
 
 DAX measures for bucket-based conditional coloring of correlation matrix cells using fixed thresholds rather than Power BI's built-in gradient. |
 | [[scatter-tooltip-x-y-value-measures.md]] | Scatter Tooltip X/Y Value Measures
@@ -643,10 +746,31 @@ By default, Power BI only profiles the first 1,000 rows — real data quality is
 | [[compound-interest-in-dax.md]] | Compound Interest in DAX
 
 Calculating compound growth over time. |
-| [[conditional-formatting-via-dax.md]] | Conditional Formatting via DAX
+|| [[conditional-formatting-via-dax.md]] | Conditional Formatting via DAX
 
 Using DAX measures to dynamically control Power BI conditional formatting. |
-| [[cost-performance-index-cpi-in-dax.md]] | Cost Performance Index (CPI) in DAX
+|| [[Conditional-Formatting-in-Multi-Row-Card-Visuals.md]] | Conditional Formatting in Multi-Row Card Visuals
+
+Multi-Row Card lacks built-in conditional formatting. DAX + UNICHAR measure workaround: icon characters (circles, arrows) baked into the measure itself |
+|| [[UNICHAR-based-Conditional-Formatting-Pattern.md]] | UNICHAR-based Conditional Formatting Pattern
+
+DAX pattern: UNICHAR() + IF() + FORMAT() + ISBLANK() to build icon indicators for visuals without conditional formatting support |
+|| [[Add-Conditional-Formatting-to-Multi-Row-Card.md]] | Add Conditional Formatting to Multi-Row Card
+
+Step-by-step: create the UNICHAR measure in Power BI Desktop, apply to Multi-Row Card, handle blanks, switch to arrows |
+|| [[UNICHAR-Icon-Codes-Reference.md]] | UNICHAR Icon Codes Reference
+
+Quick reference: circle codes (11044, 128308), arrow codes (9650, 9660), emoji status codes — with example DAX snippets |
+|| [[Conditional-Formatting-in-Power-BI.md]] | Conditional Formatting in Power BI
+
+Built-in Power BI feature for dynamic table/matrix formatting — background color, font color, data bars, icons, web links via Format pane. |
+||| [[Source-Deep-dive-conditional-formatting-lines-legends.md]] | Deep dive: conditional formatting for lines and legends
+
+Lines, legends, markers, segments: gradient, rules, field value. Min/max marker highlight via DAX measure. Card as central legend. Field parameters + colour columns. Microsoft Fabric 2026-08-04. |
+|| [[Conditional-Formatting-Types-Quick-Reference.md]] | Conditional Formatting Types Quick Reference
+
+All five formatting types with Format pane paths, rule configuration options, and at-a-glance quick reference table |
+|| [[cost-performance-index-cpi-in-dax.md]] | Cost Performance Index (CPI) in DAX
 
 Measuring cost efficiency by comparing earned value to actual cost. |
 | [[cost-variance-in-dax.md]] | Cost Variance in DAX
@@ -836,7 +960,16 @@ Match the chart type to the story you want to tell, not to the data type or the 
 | [[Color-Coding-4-Techniques.md]] | Color-Coding 4-Technique Reference
 
 A comprehensive reference of four conditional formatting techniques in Power BI, ran |
-| [[Color-Theory-for-Dashboards.md]] | Color Theory for Dashboards
+|| [[Conditional-Color-Coding-Line-Charts-in-Power-BI.md]] | Conditional Color-Coding Line Charts in Power BI
+
+Line charts lack built-in conditional formatting. Overlay two measure series (positive/negative) with static colors — returns BLANK() when condition not met |
+|| [[Line-Chart-Overlay-Pattern-for-Conditional-Color.md]] | Line Chart Overlay Pattern for Conditional Color
+
+Full DAX pattern: Price measures, disconnected Calendar table, two color-series IF() measures with BLANK(), visual configuration |
+|| [[Build-a-Conditionally-Color-Coded-Line-Chart.md]] | Build a Conditionally Color-Coded Line Chart
+
+Step-by-step: create the measures, Calendar table, add to visual, set colors BEFORE adjusting IF() logic, polish |
+|| [[Color-Theory-for-Dashboards.md]] | Color Theory for Dashboards
 
 A practical guide to choosing and applying color in Power BI reports — covering color model |
 | [[Data-Narratives-Report-Design.md]] | Data Narratives Report Design (7-Step Process)
@@ -993,6 +1126,15 @@ A tooltip page that displays a scatter chart of the two variables in the hovered
 || [[emoji-kpi-card-dax-patterns.md]] | Emoji Kpi Card Dax Patterns
 
 DAX patterns for emoji-driven KPI cards: SWITCH(TRUE()) returning directional (📈/📉), tier (🟢/🟡/🔴), alert (⚠️/💡), and ranking (🥇) emoji labels. |
+||| [[KPI-Scorecard-UNICHAR-SWITCH-Workflow.md]] | KPI Scorecard — UNICHAR + SWITCH Matrix Pattern
+
+End-to-end workflow: KPI Value → KPI Status (threshold) → KPI Indicator (UNICHAR arrows) → KPI Color → Matrix conditional formatting. Replaces the built-in KPI visual. |
+||| [[UNICHAR-KPI-Indicator-SWITCH-Pattern.md]] | UNICHAR KPI Indicator — Three-Measure Chain
+
+Reusable composition: KPI Status (−1/0/1) → UNICHAR arrow → KPI Color name. Separates threshold logic, icon rendering, and color driving into composable single-purpose measures. |
+||| [[kpi-card-html-content-dax.md]] | KPI Card with HTML Content and DAX
+
+HTML Content custom visual driven by DAX measures for full layout control while remaining fully interactive with report slicers and chart selections — Esther 2026 |
 || [[forecast-actual-flag-pattern.md]] | Forecast Actual Flag Pattern
 
 IF/BLANK pattern for binary conditional formatting in line charts. Arrow chart, target vs actual, forecast vs budget. |
@@ -1075,6 +1217,41 @@ Y-axis scale too tight for detail labels — fix: set Maximum to MaxValue + 35% 
 || [[sort-column-order-table.md]] | Sort Column Order Table
 
 PQ/Excel lookup table with numeric sort key, connected to data model, used to enforce custom categorical order |
+||| [[HTML-KPI-Card-CSS-Composition-Pattern.md]] | HTML KPI Card — CSS Composition Pattern
+
+Combine 10 CSS techniques (flexbox, gradient, shadow, glow, hover) in a DAX measure for a modern HTML KPI card |
+||| [[KPI-Card-Pulse-Glow-Animation.md]] | KPI Card — Pulse Glow Animation
+
+CSS `::before` pseudo-element + `@keyframes pulse` for a breathing glow effect |
+||| [[Progress-Bar-Indicator-CSS-Trick.md]] | Progress Bar via CSS `::after` Fill
+
+Dynamic-width progress bar using `overflow: hidden` clip + inline DAX width |
+||| [[KPI-Card-DAX-Measure-Full-HTML-CSS.md]] | KPI Card DAX Measure — Full HTML/CSS Boilerplate
+
+Copy-paste DAX measure returning complete HTML KPI card: gradient, glow, progress bar, hover lift |
+||| [[10-CSS-KPI-Card-Techniques-Reference.md]] | 10 CSS KPI Card Techniques — Quick Reference
+
+All 10 techniques in a lookup table: gradient, border-radius, shadow, hierarchy, accent colour, progress bar, divider, icon, spacing, font |
+| [[Source-Esther-10-CSS-Tricks-KPI-Card.md]] | Source: Esther — 10 CSS Tricks KPI Card
+
+> Article · Esther · 2026-03-31 — CSS composition for HTML KPI cards via DAX
+|| [[Source-Calendar-Heatmap-Power-BI-Plotly.md]] | Source: Esther — Calendar Heatmap with Plotly.js
+
+Builds a GitHub-style calendar heatmap via DAX + HTML Content visual + Plotly.js — CONCATENATEX bridge, ISO week algorithm, Viridis heatmap. Powers [[GitHub-Style-Calendar-Heatmap-Pattern]], [[CONCATENATEX-JSON-Bridge]], [[getISOWeek-JavaScript]], [[getDayNumber-JavaScript]], [[Plotly-Heatmap-Snippet]], [[Pattern-Recognition-Over-Exact-Values]]. |
+|| [[Pattern-Recognition-Over-Exact-Values.md]] | Pattern Recognition > Exact Values (Atomic)
+
+A visualization is powerful when it reveals patterns — consistency, dips, spikes, habits — without requiring the viewer to read individual numbers. |
+| [[multi-row-card-best-practices.md]] | Multi-Row Card Best Practices
+| [[multi-row-card-as-kpi-summary.md]] | Multi-Row Card as KPI Summary
+| [[multi-row-card-as-profile-detail-panel.md]] | Multi-Row Card as Profile/Detail Panel
+| [[multi-row-card-as-product-snapshot.md]] | Multi-Row Card as Product Snapshot
+| [[multi-row-card-for-inventory-overview.md]] | Multi-Row Card for Inventory Overview
+| [[multi-row-card-for-customer-information.md]] | Multi-Row Card for Customer Information
+| [[multi-row-card-for-transaction-details.md]] | Multi-Row Card for Transaction/Invoice Details
+| [[multi-row-card-for-category-comparison.md]] | Multi-Row Card for Category Comparison
+| [[what-is-incremental-refresh.md]] | What Is Incremental Refresh
+| [[incremental-refresh-policy-configuration.md]] | Incremental Refresh Policy Configuration
+| [[incremental-refresh-vs-full-refresh.md]] | Incremental Refresh vs Full Refresh
 
 ## Card Visual & Reference Labels (Bittar, 2024)
 
@@ -1098,10 +1275,59 @@ Five-step end-to-end workflow for building a custom theme with style presets in 
 || [[Style-Presets-Visual-Hierarchy.md]] | Visual Styles Hierarchy in JSON Themes
 
 Power BI resolves visual formatting through a three-level inheritance chain in JSON themes |
-|| [[Style-Presets-Missing-Dropdown-Gotcha.md]] | Style Preset Dropdown Does Not Appear
+||| [[Style-Presets-Missing-Dropdown-Gotcha.md]] | Style Preset Dropdown Does Not Appear
 
-The Format > Style preset dropdown is missing from the visual's formatting pane — even thoug |
-|| [[Theme-JSON-Schema-IntelliSense.md]] | $schema IntelliSense for Power BI JSON Themes
+The Format > Style preset dropdown is missing from the visual's formatting pane — even though the theme has the preset defined. Verify visual version; older visuals may not support this feature. |
+||| [[Calendar-Based-Time-Intelligence-Column-Deletion-Gotcha.md]] | Deleting Calendar Columns Breaks Calendar-Based Time Intelligence
+||| [[source-custom-icons-power-bi-tables.md]] | Custom Icons Power BI Tables — Source
+
+JSON theme icons → Cell Element formatting; SVG, PNG, JPEG, GIF, Unicode, emoji, Base64; lightweight, no sort conflicts, no extra column. Bittar / KI Data Science 2024-12-31. |
+||| [[custom-icons-json-theme-cell-element-pattern.md]] | Custom Icons JSON Theme Cell Element Pattern
+
+Icon name in theme JSON + Cell Elements → Icon → By value/rules. Polish without extra model columns. |
+||| [[svg-to-theme-url-transformation.md]] | SVG to Theme URL Transformation Atomic
+
+4-step: single quotes → escape #→%23, spaces→%20 → remove whitespace → add data:image/svg+xml;utf8, prefix. |
+||| [[custom-icons-vs-svg-columns.md]] | Custom Icons vs SVG Columns Atomic
+
+Theme icons: lightweight, no sort conflicts, no column. SVG columns: scalable, detailed, text support. Choose by use case. |
+||| [[icon-sizing-limitation.md]] | Icon Sizing Limitation Atomic
+
+Theme icons always small — avoid detailed or text-embedded icons. Use SVG columns for complex designs. |
+||| [[embed-custom-icons-theme-workflow.md]] | Embed Custom Icons Theme Workflow
+
+5-step: export theme → transform SVG → add icons section → reload → apply via Cell Elements. |
+||| [[icons-numerical-values-min-max-gotcha.md]] | Icons — Numerical Values Min Max Gotcha
+
+Conditional formatting requires min/max; for trend icons use text measure intermediary. |
+||| [[supported-icon-formats.md]] | Supported Icon Formats Atomic
+
+SVG, PNG, JPEG, GIF, Unicode, emoji, Base64, Font Awesome. SVG recommended; Unicode/emoji require no URL encoding. |
+||| [[source-html-css-joining-forces-fp20.md]] | HTML & CSS Joining Forces FP20 — Source
+
+HTML Content visual (third-party) + DAX measures; styled text, custom shapes, Font Awesome icons via CDN; FP20 Analytics Challenge. Bittar / KI Data Science 2024-02-04. |
+||| [[html-measure-integration-pattern.md]] | HTML Measure Integration Pattern
+
+DAX measure returns HTML string; FORMAT/IF/VAR + HTML tags in quotes; HTML Content visual renders output. |
+||| [[html-shape-measure-template.md]] | HTML Shape Measure Template Pattern
+
+Reusable HTML/CSS shape template in DAX with {BG_COLOR}/{FONT_COLOR}/{TEXT} placeholders; SUBSTITUTE chain injects dynamic values. |
+||| [[html-style-tags-in-dax.md]] | HTML Style Tags in DAX Atomic
+
+<b>, <i>, <u>, <br>, <span[color]>, <div[font]> tags in DAX measures; can be chained in same quotes. |
+||| [[font-awesome-dax-icon-measure.md]] | Font Awesome DAX Icon Measure Pattern
+
+CDN link + {COLOR}/{ICON_CODE}/{SIZE} placeholders; fa-solid fa-arrow-trend-up etc; SUBSTITUTE chain for dynamic icons. |
+||| [[substitute-placeholder-chaining.md]] | SUBSTITUTE Placeholder Chaining Atomic
+
+Nested SUBSTITUTE for multi-placeholder templates; innermost template has all placeholders; each outer call resolves one. |
+||| [[html-content-visual-setup-workflow.md]] | HTML Content Visual Setup Workflow
+
+5-step: Get more visuals → search HTML Content → Add → add measure → render HTML. Third-party visual. |
+||| [[dynamic-html-conditional-styling.md]] | Dynamic HTML Conditional Styling Pattern
+
+IF → color/icon/text; SUBSTITUTE chain → HTML template; IF guard → BLANK when no data. KPI badges, status indicators. |
+| [[style-presets-visual-hierarchy.md]] | Visual Styles Hierarchy in JSON Themes
 
 Adding a `$schema` property to a Power BI JSON theme file enables IntelliSense — auto-comp |
 || [[new-card-visual-anatomy-reference-labels.md]] | New Card Visual Anatomy (November 2023+)
@@ -1146,10 +1372,16 @@ Bind actions to images: navigate pages, trigger tooltips, activate bookmarks, sh
 | [[image-visual-accessibility.md]] | Image Visual Accessibility — Alt Text, Screen Readers
 
 Alt text is front-and-center. Dynamic alt text via measure. Screen reader support for healthcare, public sector, enterprise. |
-| [[the-new-image-visual-in-power-bi-source.md]] | The New Image Visual in Power BI Is a Quiet Game Changer
+||| [[the-new-image-visual-in-power-bi-source.md]] | The New Image Visual in Power BI Is a Quiet Game Changer
 
 Isabelle Bittar on the revamped Image visual: dynamic binding, Fit/Fill/Cover/Crop, clickable actions, and accessibility. |
-| [[tewjani-visual-calculations-source.md]] | Visual Calculations GA — Tejwani
+||| [[Source-Enhancing-Power-BI-Reports-with-AI.md]] | Enhancing Power BI Reports with AI — Accessibility
+
+AI-assisted report building drifts from WCAG accessibility even with explicit prompts — LLM context window prioritises recent requests. Embed accessibility into prompt specification; pair with post-build auditing. Juls, Smart Frames 2026-07-01. |
+||| [[AI-Assisted-Report-Building-Accessibility-Drift-Gotcha.md]] | AI-Assisted Report Building — Accessibility Drift Gotcha
+
+LLM context window causes accessibility regressions across iterations; must continuously reinforce WCAG criteria throughout AI-assisted workflow. |
+||| [[tewjani-visual-calculations-source.md]] | Visual Calculations GA — Tejwani
 
 The May 2026 GA release of visual calculations and custom totals. |
 | [[tooltip-design-concise-and-relevant.md]] | Tooltip Design — Concise and Relevant
@@ -1188,6 +1420,19 @@ For two decades BI has migrated logic toward the center — |
 Core Limitation: No Reuse
 
 - Cannot copy to another visual
+
+| [[Source-11-Power-BI-Tips-Guy-in-a-Cube]] | Source | Guy in a Cube — 11 ranked Power BI tips |
+| [[Auto-Date-Time-Disable]] | atomic | Turn off Auto Date Time globally or per-file |
+| [[SWITCH-TRUE-vs-Nested-IF]] | pattern | Replace nested IF with SWITCH TRUE |
+| [[Calculate-Upstream-vs-DAX]] | atomic | Push static row-level rules to SQL/PQ |
+| [[Power-Query-Parameters-Environment-Switch]] | atomic | PQ parameters for dev/test/prod switching |
+| [[Test-Mode-Parameters-Development]] | atomic | Limit rows during development with parameters |
+| [[Measure-Table-Dedicated]] | atomic | Dedicated measure table for organization |
+| [[Bulk-Edit-Measure-Properties-Model-View]] | atomic | Multi-select to bulk-edit measure properties |
+| [[TMDL-Calculation-Groups]] | pattern | TMDL calculation groups for semantic model reuse |
+| [[Ctrl-G-Power-Query-Column-Navigate]] | atomic | Ctrl+G to jump to any column in PQ |
+| [[Field-Parameters-Dynamic-Visuals]] | pattern | Dynamic user-controlled visuals with field parameters |
+| [[Ctrl-Shift-L-Bulk-Rename-DAX]] | atomic | Ctrl+Shift+L bulk rename in DAX editor |
 - Cannot referen |
 | [[visual-calculations-usage-guide.md]] | Visual Calculations: When to Use vs. |
 | [[visual-canvas-reduction.md]] | Reducing Visuals and Slicers Per Page
@@ -1387,7 +1632,13 @@ OneDrive for Business and SharePoint Online are the primary cloud file stor |
 | [[data-source-documentation-practice.md]] | Data Source Documentation Practice
 
 Every Power BI solution depends on one or more data sources. |
-| [[data-source-troubleshooting-quick-reference.md]] | Data Source Troubleshooting Quick Reference
+||| [[Source-Data-Dictionary-in-Power-BI-INFO-VIEW.md]] | Data Dictionary in Power BI: Create One with INFO.VIEW
+
+Verbatim source: use INFO.VIEW.MEASURES/TABLES/COLUMNS/RELATIONSHIPS to build a dynamic model data dictionary; Boniface Muchendu, DataBear 2025-07-18. |
+||| [[INFO-VIEW-Combined-Data-Dictionary-Workflow.md]] | INFO.VIEW Combined Data Dictionary Workflow
+
+SELECTCOLUMNS + UNION pattern to merge INFO.VIEW.MEASURES, INFO.VIEW.TABLES, INFO.VIEW.COLUMNS, INFO.VIEW.RELATIONSHIPS into a single filterable DataDictionary table; add Type column for slicer filtering. |
+||| [[data-source-troubleshooting-quick-reference.md]] | Data Source Troubleshooting Quick Reference
 
 Four canonical connection problems and their root causes. |
 | [[direct-lake-vs-import.md]] | Direct Lake vs Import Mode
@@ -1417,16 +1668,54 @@ When connecting to most data sources, Power BI asks you to choose a connection m
 | [[on-premises-gateway-requirement.md]] | On-Premises Gateway Requirement
 
 The Power BI Gateway is the bridge between on-premises data sources (databases, file sh |
-| [[storage-mode-import-vs-directquery.md]] | Storage Mode: Import vs DirectQuery
+||| [[storage-mode-import-vs-directquery.md]] | Storage Mode: Import vs DirectQuery
 
-Before choosing Power Query or DAX, understand how data gets into Power BI — which  |
+Before choosing Power Query or DAX, understand how data gets into Power BI — which approach is right for each scenario. |
+||| [[Source-Excel-Integration-in-Power-BI.md]] | Excel Integration in Power BI: A Complete Guide
 
-| [[pbix-zip-archive-model-bim-structure.md]] | PBIX as ZIP Archive — model.bim Structure
+Five methods: import Power Pivot/Query models (disconnected), Excel as live source (gateway/OneDrive), publish from Excel (Upload/Export), upload via Power BI Service (Import/Excel Online), Analyze in Excel. Boniface Muchendu, DataBear 2025-06-23. |
+||| [[Source-Do-You-Need-a-Silver-Layer-in-Power-BI.md]] | Do You Need a Silver Layer in Power BI?
+
+Medallion Architecture debate: Silver justified for multi-team shared data; overengineering for single-team/single-source. Layers follow responsibilities, not trends. Boniface Muchendu, DataBear 2026-05-12. |
+||| [[Source-Dynamic-Power-BI-Reports-Using-Parameters.md]] | Dynamic Power BI Reports Using Parameters
+
+Excel-driven parameters: SQL SP → PQ function → Invoke Custom Function on Excel column → auto-refresh in Power BI Service via gateway. Boniface Muchendu, DataBear 2025-02-16. |
+||| [[pbix-zip-archive-model-bim-structure.md]] | PBIX as ZIP Archive — model.bim Structure
 
 .pbix files are ZIP archives containing the JSON semantic model; model.bim is the key extraction artifact |
 | [[power-bi-ai-agent-30-minutes-source.md]] | Power BI to AI Agent in 30 Minutes — Source
 
 Tutorial: extracting formal ontologies from Power BI .pbix using PowerBI-Ontology-Extractor, Fabric IQ export, and AI agent semantic contracts |
+||| [[data-modeling-part1-janvi-source.md]] | Data Modeling Part 1 — Janvi Gupta
+
+Source note: beginner guide on Power BI data modeling fundamentals by Janvi Gupta. |
+||| [[Source-5-Power-BI-Slicer-Tricks-Goodly.md]] | 5 Power BI Slicer Tricks To Build Professional Dashboards (Goodly)
+
+Video tutorial by Chandeep (Goodly) covering five slicer tricks: disconnected tables, apply/clear buttons, field parameters, highlighting, and more. |
+||| [[source-filters-in-power-bi-everything-you-need-to-know.md]] | Filters in Power BI: Everything You Need to Know
+
+Comprehensive source article by Boniface Muchendu (Data Bear) covering all filter types, scopes, and best practices. |
+||| [[source-decomposition-tree-power-bi.md]] | Exploring Data Analysis with Power BI's Decomposition Tree
+
+Source article by Boniface Muchendu (Data Bear) on using the Decomposition Tree visual for ad-hoc hierarchical analysis. |
+||| [[Source-KPI-Scale-Dynamic-Formatting-Natarajan.md]] | KPI Scale Dynamic Formatting — Natarajan M
+
+Dynamic Format Strings with disconnected Scale table for user-controlled KPI scale: Actuals/Thousands/Millions/Billions via slicer. Also multi-currency extension. Fabric Community Blog, Natarajan M, 2026-07-17. |
+||| [[Source-Dynamic-Format-Strings-in-Power-BI.md]] | Dynamic Format Strings in Power BI
+
+Source article by Annamarie Van Wyk (Data Bear) on using dynamic format strings to conditionally format measures in Power BI. |
+||| [[Source-Dynamic-Row-level-Security-in-Power-BI.md]] | Dynamic Row-level Security in Power BI
+
+Source article on implementing dynamic row-level security in Power BI using DAX username functions and relationship-based filtering. |
+||| [[Source-Error-Handling-in-Power-BI.md]] | Error Handling in Power BI: A Guide to Power Query and DAX
+
+Source article on handling errors in Power BI both in Power Query (try/otherwise) and DAX (error handling functions). |
+||| [[Source-Going-CRAZY-Power-BI-Slicers-Muchendu.md]] | Going CRAZY with Power BI Slicers
+
+Source article by Boniface Muchendu (Data Bear) on slicer configuration, cross-slicer filtering issues, and best practices. 2025-03-16. |
+||| [[source-new-matrix-visual-layouts-power-bi.md]] | Exploring New Matrix Visual Layouts in Power BI
+
+Source article by Boniface Muchendu (Data Bear) covering the new matrix visual layout options introduced in 2024. |
 ## Performance & Governance  (11 notes)
 
 | Note | Description |
@@ -1465,7 +1754,10 @@ Keep in Excel: Simple |
 | [[show-items-with-no-data-performance-impact.md]] | Show Items with No Data: Hidden Performance Killer
 
 A single visual field well setting can generate 1,000+ Storage Engin |
-| [[storage-modes-power-bi.md]] | (Article for beginners)
+||| [[Source-Dynamic-Data-Masking-in-Power-BI.md]] | Dynamic Data Masking in Power BI
+
+Critical: DAX-based column masking = obscurity, NOT security. Source column remains queryable. True masking requires OLS on the source column. RLS + OLS cannot be combined across roles. Jake Duddy 2026-05-11. |
+||| [[storage-modes-power-bi.md]] | (Article for beginners)
 
 ## Automation & CI/CD  (8 notes)
 
@@ -1489,6 +1781,15 @@ Error when `WORKSPACE_NAME` doesn't match or service principal lacks workspace a
 || [[automating-powerbi-deployments-github-actions-hannecke-source.md]] | Automating PowerBI Deployments with GitHub Actions (Hannecke)
 
 Source: Azure AD service principal + `MicrosoftPowerBIMgmt` + GitHub Actions for PBIX deployment. |
+||| [[Drillthrough-Page-Button-Setup.md]] | Drillthrough Page + Button Setup
+
+End-to-end: create hidden DT-prefixed page → add drillthrough fields → auto-generated back button → drillthrough button on source page. |
+||| [[Drillthrough-Page-DT-Prefix.md]] | Drillthrough Page Naming: DT Prefix
+
+Name drillthrough pages `DT <DimensionName>` (e.g., `DT Country`) so they are identifiable in the page list and unambiguous as button destinations. |
+|| [[bookmarks-in-power-bi-complete-guide.md]] | Bookmarks in Power BI — Complete Guide
+
+Captures report page state (visuals, filters, slicers, visibility, spotlight) and enables view-switching via buttons, Bookmark Navigator, and grouped bookmark sets — Muchendu 2024 |
 
 ## Report Design & Methodology  (Bittar, 2024)
 
@@ -1530,7 +1831,33 @@ Report design principles: visual hierarchy, colour psychology, accessibility, la
 | [[color-area-charts-with-markers.md]] | Color Area Charts With Markers
 
 Apply conditional formatting to area chart data points and marker styles to encode secondary KPI signals. |
+| [[Report-Design-Mistake-Too-Many-Visuals]] | Report Design Mistake: Too Many Visuals Per Page |
+| [[Report-Design-Mistake-Filters-and-Slicers]] | Report Design Mistake: Filters and Slicers Not Used Properly |
+| [[large-data-table-ux-power-bi.md]] | Large Data Table UX in Power BI |
 
+Transform a raw data dump table into a professional, interactive table using 10 UX techniques: visual hierarchy, status classification, color cues, tooltips, drill-through, Field Parameters, toggles, and export nudges — Bittar 2025 |
+| [[Power-BI-PL-Dashboard-Xero-to-Power-BI]] | P&L Dashboard Build: Xero → Excel → Power BI End-to-End |
+
+Three-stage pipeline: export from Xero (Chart of Accounts + Transactions) → clean in Excel → map + model + dynamic DAX measure in Power BI. Mapping tables with custom sort order control P&L section sequence. |
+| [[Power-BI-PL-Matrix-Formatting]] | P&L Matrix Formatting: Section Mapping + Conditional Formatting |
+
+Formatting recipe: section mapping tables, matrix grid styling, blank row spacing, conditional formatting on Gross Profit and Operating Profit totals, KPI sidebar with YTD cards. |
+| [[Page-Navigator-Build-in-Power-BI]] | Page Navigator Build in Power BI |
+
+Native Page Navigator component: positioning, sizing, state-based styling (Default/Hover/Press/Selected), and accent bar configuration for active-page indicator. |
+| [[Navigation-Approaches-Figma-vs-Native-vs-Page-Navigator]] | Navigation Approaches: Figma vs Native vs Page Navigator |
+
+Comparison of three navigation approaches: performance tradeoffs, maintenance burden, and design flexibility. Page Navigator lowest maintenance; Figma highest design control; Native shapes middle ground. |
+| [[Interactive-Tutorial-Workflow.md]] | Building Interactive Tutorials in Power BI |
+
+Step-by-step workflow for a guided, multi-step tutorial overlaid on a report page using Selection + Bookmarks + buttons — no DAX — Bittar 2024 |
+| [[Info-Bubble-Pattern.md]] | Info Bubble Pattern in Power BI
+
+Reusable UI pattern: grouped shapes + text + buttons + bookmarks to surface contextual guidance inline — Bittar 2024 |
+
+|| [[Theme-JSON-Schema-IntelliSense.md]] | $schema IntelliSense for Power BI JSON Themes
+
+Adding a $schema property to a Power BI JSON theme file enables IntelliSense — auto-complete, validation, and inline docs in any JSON editor. |
 ## Microsoft Fabric & Advanced  (30 notes)
 
 | Note | Description |
@@ -1600,12 +1927,51 @@ Bold BI implements NLA through three distinct AI features. |
 > Author: Gulab Chand Tejwani
 > Published: 2025-11-17
 > URL: http |
-| [[conversational-analytics-power-bi-qa-copilot.md]] | (Article for beginners)
+|| [[Source-Claude-Power-BI-MCP-Integration]] | Claude Power BI MCP Integration (Muchendu / Data Bear)
+
+Source: Data Bear blog by Boniface Muchendu — Claude + Power BI Desktop via MCP, 7 AI prompts, DAX generation, hierarchies, data dictionary. 2026-01-03. |
+||| [[Source-Conditional-Formatting-in-Power-BI-Multi-Row-Card-Visuals]] | Multi-Row Card Conditional Formatting (Muchendu / Data Bear)
+
+Source: Data Bear blog by Boniface Muchendu — DAX + UNICHAR workaround to add conditional formatting icons (circles, arrows) to Multi-Row Card visuals. 2024-03-17. |
+||| [[Source-Countdown-Timer-in-Power-BI-Beginner-to-Advanced-Guide]] | Countdown Timer Beginner to Advanced (Muchendu / Data Bear)
+
+Source: Data Bear blog by Boniface Muchendu — three countdown timer techniques: beginner DATEDIFF, intermediate SELECTEDVALUE, advanced NOW() + seconds arithmetic with auto page refresh. 2025-07-29. |
+||| [[Source-Conditional-Formatting-in-Power-BI]] | Conditional Formatting in Power BI (Van Wyk / Data Bear)
+
+Source: Data Bear blog by Annamarie Van Wyk — built-in Power BI conditional formatting for tables/matrices: background color, font color, data bars, icons, web links. 2024-06-04. |
+||| [[conversational-analytics-power-bi-qa-copilot.md]] | (Article for beginners)
 
 Power BI allows you to uncover insights from data using natural language. |
 | [[copilot-requires-premium-licensing.md]] | Copilot Requires Premium Licensing
 
 Copilot in Power BI is gated behind Power BI Premium or Premium Per User (PPU). |
+||| [[Source-Document-Dataflows-Gen1-CoWork.md]] | Document Dataflows Gen1 with CoWork (Simader / AI Vibes)
+
+Export JSON → Copilot → CoWork Skill (sample input + reference output = reusable skill); quality report 96/100; guardrails; legacy Gen1 documentation. Jasmin Simader / AI Vibes 2026-07-06. |
+||| [[Document-Dataflows-Gen1-with-CoWork-Workflow.md]] | Document Dataflows Gen1 with CoWork Workflow
+
+7-step workflow: export export.json → reference Word template → Copilot doc → CoWork skill → quality check → test → reuse. 341 credits (~$0.03). |
+||| [[CoWork-Skill-from-Input-Output-Samples.md]] | CoWork Skill from Input-Output Samples Pattern
+
+Sample input file + reference output file = reusable skill. CoWork learns the transformation. Better than prompting alone. Applicable to any structured documentation. |
+||| [[CoWork-Skill-Quality-Report.md]] | CoWork Skill Quality Report
+
+CoWork quality report: 4 criteria (timing, lanes, surprise handling, crowning) scored 0–100. Publish bar = 70. Risk level. 96/100 example. |
+||| [[CoWork-vs-Copilot-Agent.md]] | CoWork vs Copilot Agent
+
+Built-in validation against reference vs manual back-and-forth. CoWork self-checks; Agent requires human correction loop. |
+||| [[CoWork-Skill-Guardrails.md]] | CoWork Skill Guardrails
+
+Guardrails prevent: fabricating facts, asking for provided info, deviating from reference structure, false success, silent failure. |
+||| [[Dataflows-Gen1-Legacy-Status.md]] | Dataflows Gen1 Legacy Status
+
+Gen1 = legacy, not deprecated. No new features; no announced end-of-life. Document before migrating to Gen2 or another platform. |
+||| [[Skill-Guardrails-Design-Workflow.md]] | Skill Guardrails Design Workflow
+
+4-step guardrail design: identify failure modes → write specific imperatives → order by priority → test edge cases. Guardrail template. |
+||| [[Author-Jasmin-Simader.md]] | Jasmin Simader — Power BI with AI Vibes
+
+| YouTube channel: Power BI with AI Vibes. Focus: Copilot CoWork skills, Dataflows Gen1, AI-assisted documentation. |
 | [[data-analyst-responsibilities-ai-workflow.md]] | Data Analyst Responsibilities in the AI Workflow
 
 A data analyst connects data to insights: they connect, explore, visua |
@@ -1648,9 +2014,12 @@ Python library for extracting formal ontologies from Power BI .pbix semantic mod
 | [[powerbi-ontology-extractor-cli-reference.md]] | PowerBI-Ontology-Extractor CLI Reference
 
 Command-line interface for extraction, batch processing, and schema validation |
-| [[cursor-ai-prompts-tool-building.md]] | Cursor AI Prompts for Tool Building
+| [[cursor-ai-prompts-tool-building.md]] | Cursor AI Prompts for Tool Building |
+| [[End-to-End-Fabric-Pipeline.md]] | End-to-End Fabric Pipeline: Lakehouse-First Workflow |
+| [[Direct-Lake-vs-Import-vs-DirectQuery.md]] | Direct Lake vs Import vs DirectQuery — When to Use Each |
+| [[Fabric-Governance-Setup.md]] | Fabric Governance Setup: RBAC, RLS, Sensitivity Labels |
+| [[Source-5-Mistakes-Beginners-Microsoft-Fabric.md]] | Source: 5 Mistakes Beginners Make in Microsoft Fabric (Anurodh Kumar, 2026-05-03) |
 
-Specific, high-context Cursor AI prompts that drove the 48-hour PowerBI-Ontology-Extractor build |
 ## Author Notes  (15 notes)
 
 | Note | Description |
@@ -1658,7 +2027,13 @@ Specific, high-context Cursor AI prompts that drove the 48-hour PowerBI-Ontology
 | [[Author-Isabelle-Bittar]] | Isabelle Bittar
 
 Independent business consultant specializing in BI and data science. |
-| [[Source-Oblique-Area-Chart.md]] | Source — Modern Oblique Area Chart in Power BI
+||| [[Author-Riccardo-Perico]] | Riccardo Perico
+
+Power BI and DAX author on Medium; focuses on practical time intelligence and semantic modeling patterns. |
+||| [[Source-DAX-Calendar-Based-Time-Intelligence.md]] | DAX Calendar-Based Time Intelligence: What You Must Know Before Editing Your Model
+
+Verbatim source: calendar-based time intelligence column deletion gotcha; renaming preserves lineage, deleting breaks processing; Riccardo Perico, Medium 2025-11-20. |
+||| [[Source-Oblique-Area-Chart.md]] | Source — Modern Oblique Area Chart in Power BI
 
 Verbatim source article by Isabelle Bittar (2025-07-23); powers [[Oblique-Area-Chart]] and [[Error-Band-as-White-Out-Mask]]. |
 | [[Source-Analyzing-Survey-Comments-AI.md]] | Source — Analyzing Survey Comments in Power BI Using AI
@@ -1672,7 +2047,7 @@ Verbatim source article by Isabelle Bittar (2025-06-25); powers [[Holt-Winters-F
 Verbatim source article by Isabelle Bittar (2025-08-02); powers [[Gantt-Chart-Native-Visuals-Overlay-Pattern]], [[Status-Conditioned-Measure-Family-Pattern]], and [[Chart-Alignment-Between-Stacked-Visuals-Gotcha]]. |
 | [[Source-Flip-Card-KPI-Dashboard-Dash-Plotly.md]] | Source — Flip Card KPI Dashboard (Dash, Plotly, CSS)
 
-Verbatim source article by Esther (2026-04-11); powers [[Data-UI-Separation-Principle]], [[Component-First-Dashboard-Design]], [[chart-base-plotly]], [[Two-Layer-Area-Line-Micro-Chart]], [[CSS-Flip-Card-Dash]], and [[Data-Driven-UI-Card-Tuples]]. |
+Verbatim source article by Esther (2026-04-11); powers [[Data-UI-Separation-Principle]], [[Component-First-Dashboard-Design]] (atomics); [[chart-base-plotly]], [[hex-to-rgba-python]] (functions); [[Two-Layer-Area-Line-Micro-Chart]], [[CSS-Flip-Card-Dash]], [[Data-Driven-UI-Card-Tuples]], [[generic-dash-callback-splat]] (patterns); [[plotly-layout-mutation-gotcha]], [[autorange-reversed-horizontal-bar-top]], [[hoverinfo-skip-on-base-trace]] (gotchas). |
 | [[Author-Esther]] | Esther
 
 Python developer writing on Medium about dashboard architecture, reusable UI components, and CSS-driven interaction with Dash and Plotly. |
@@ -1723,14 +2098,54 @@ Full case study: 47 Excel files → 1 Power BI model. |
 > URL: https://mediu |
 | [[wasonga-natural-language-analytics-source.md]] | Natural Language Analytics — Florence Anyango Wasonga
 
-> Type: explainer / product feature guide
-> Author: Florence Anya |
+> Type: article
+> Author: Florence Anyango Wasonga
+> URL: https://medium.com
+|| [[Author-Jake-Duddy]] | Jake Duddy
+
+Power BI security: dynamic data masking, RLS vs OLS, semantic model security. Site: evaluationcontext.github.io. |
+| [[Author-Juls]] | Juls
+
+Power BI accessibility, AI-assisted development, WCAG compliance. Site: smart-frames.co.uk. |
+| [[Author-Janvi-Gupta]] | Janvi Gupta — Power BI Masterclass Author
+
+Profile
+
+Power BI educator and Medium publication author. |
+| [[author-nadiya-modi.md]] | Nadiya Modi
+
+Microsoft Certified Power BI Consultant specialising in Power BI, Microsoft Fabric, Business Intelligence,  |
+
+## Comparisons — Power BI / Fabric
+
+| Note | Description |
+|------|-------------|
+| [[direct-lake-vs-import-vs-directquery.md]] | Import vs DirectQuery vs Direct Lake Mode
+Direct Lake reads OneLake files directly; Import loads to memory; DirectQuery queries the source live. Fabric-specific comparison. |
 
 ## Patterns — Dynamic Date Granularity (Bittar, 2024)
 
-|| Note | Description |
-||------|-------------|
-|| [[field-parameter-date-granularity-slicer.md]] | Field Parameter for Date Granularity Selector
+| [[4-Tips-Work-Efficiently-Power-BI-Isabelle-Bittar-source.md]] | 4 Tips Work Efficiently Power BI (Isabelle Bittar)
+
+Source note: measure display folders, Selection/Bookmarks panels, Excel parameter files, reusable asset libraries.
+
+| [[Organizing-Measures-Display-Folders.md]] | Organizing Measures in Display Folders
+
+Creating a \_Measures table, deleting the column to make it a measures group, assigning display folders and subfolders in Model view.
+
+| [[Selection-Bookmarks-Panel-Organization.md]] | Selection and Bookmarks Panel Organization
+
+Naming convention for report elements, grouping shapes/visuals, bookmark group management by naming prefix.
+
+| [[Parameter-File-No-Hard-Coding.md]] | Parameter File: No Hard-Coding in DAX
+
+Excel parameter file → disconnected PQ table → CALCULATE(MAX, FILTER) in DAX. Business users update thresholds without republishing.
+
+| [[Color-Measures-Consistent-Theme.md]] | Color Measures: Consistent Theme Values |
+
+||| Note | Description |
+|||------|-------------|
+||| [[field-parameter-date-granularity-slicer.md]] | Field Parameter for Date Granularity Selector
 
 Modeling → New parameter → Fields; select all Calendar columns; "Add slicer" creates granularity slicer; SELECTEDVALUE(field_param) in measures branches logic by Daily/Weekly/Monthly |
 ## Patterns — Bar Chart Custom Axis Labels (Bittar, 2023)
@@ -1741,6 +2156,38 @@ Modeling → New parameter → Fields; select all Calendar columns; "Add slicer"
 
 Disable Y-axis and X-axis; add Empty=0 measure to X-axis for bar spacing; custom label measure = SELECTEDVALUE(category) & ": " & [metric]; tune Inner Padding and Minimum Category Width |
 
+
+## Patterns — Tooltip Customization (DataZoe, Bittar, 2025–2026)
+
+Tooltip options (GA, 2026-07-06): 5 tiers — Default → Field well → Tooltip fields only / Sentence format → Report page → Help tooltip. ISINSCOPE + SWITCH for drill-aware sentences. {Field} references in templates. |
+||| [[Source-Tooltip-Options-Generally-Available.md]] | Tooltip Options (Generally Available)
+
+5-tier progression: Default visual → Tooltip field well → Tooltip fields only / Sentence format (GA) → Report page tooltip → Help tooltip icon. Microsoft Fabric 2026-07-06. |
+||| [[Tooltip-Type-Selection-Workflow.md]] | Tooltip Type Selection — 5-Tier Decision Workflow
+
+Decision tree: default (auto), Tooltip field well (add fields), Tooltip fields only (curate), Sentence format (narrative), Report page tooltip (full custom). |
+||| [[Sentence-Format-Template-Pattern.md]] | Sentence Format Template Pattern
+
+`{FieldName}` field references in tooltip template; Power BI substitutes hovered value; Bold values toggle highlights substituted values. |
+||| [[Drillable-Hierarchy-Sentence-Tooltip-Pattern.md]] | Drillable Hierarchy Sentence Tooltip Pattern
+
+ISINSCOPE + SWITCH + SELECTEDVALUE measure in Tooltip field well → sentence reads correctly at every drill level. |
+||| [[Field-Parameters-Sentence-Tooltip-Pattern.md]] | Field Parameters in Sentence Tooltip Pattern
+
+`{FieldParameter}` = selected field name; `{FieldParameter Fields}` = value. One template works for any selected measure. |
+||| [[Data-Tooltip-vs-Help-Tooltip.md]] | Data Tooltip vs Help Tooltip — Dual Icon Distinction
+
+Data tooltip (hover data point) = what does this mean? Help tooltip (header icon) = how do I use this visual? |
+||| [[Report-Page-Tooltip-Non-Interactive-Limitation.md]] | Report Page Tooltip — Non-Interactive Limitation
+
+Report page tooltip is display-only — no slicers, no clicks. Use Drillthrough page (right-click) for interactive filtered views. |
+| [[stacked-chart-custom-tooltip.md]] | Stacked Chart Custom Tooltip Page
+
+Tooltip page with Matrix + Tooltip Position table + Ord Category/Value measures; Matrix required not Table. |
+| [[emoji-navigation-and-tooltip-nudges.md]] | Emoji Navigation Buttons & Tooltip Nudges
+
+Isabelle Bittar: 10 ways to embed emoji in labels, titles, axes, tables, KPIs, tooltips, and navigation for clearer visual communication. |
+| [[10-ways-to-use-emojis-in-power-bi-source.md]] | 10 Ways to Use Emojis in Power BI |
 
 ## Patterns — Custom Slicer Filter Pane (Bittar, 2023)
 
@@ -1823,6 +2270,48 @@ Boxplot+quartile=publication-ready; jittered=sanity check; beeswarm=all points v
 Grouped=side-by-side narrow violins per category (2–4 subgroups); split=one violin, left/right halves=two subgroups (before/after, A/B); exactly 2 subgroups only for split; use grouped for more |
 
 
+| [[Disconnected-Table-Slicer-Pattern.md]] | Disconnected Table (Slicer Pattern)
+
+A table that exists in the data model but has no active relationships to any other table. Used to build slicers that drive DAX measures without filtering visuals. |
+| [[Dynamic-KPI-Scale-Disconnected-Table-SWITCH.md]] | Dynamic KPI Scale via Disconnected Table + SWITCH
+
+Single measure toggles Actuals/Thousands/Millions/Billions via slicer. DATATABLE Scale + SELECTEDVALUE + SWITCH Dynamic Format String. No measure duplication. |
+| [[Multi-Currency-Dynamic-Format-SWITCH.md]] | Multi-Currency via Dynamic Format + SWITCH
+
+Extend Dynamic Format String to swap currency symbols ($, €, £, ¥) via disconnected Currency table and SWITCH. Single measure for all currencies. |
+| [[Dynamic-Format-String-Implementation.md]] | Dynamic Format String Implementation
+
+Step-by-step: create Scale DATATABLE, Selected Scale measure, base KPI measure (whole), then Measure Tools → Format → Dynamic → SWITCH format string. |
+| [[Dynamic-Format-vs-Fixed-Display-Units.md]] | Dynamic Format String vs Fixed Display Units
+
+Dynamic Format: user slicer control, no measure duplication, consistent across visuals. Fixed Display Units: zero setup, no self-service, forces single scale for all. |
+| [[Keep-Base-Measure-Whole.md]] | Keep Base Measure Whole — Don't Scale in DAX
+
+The base KPI measure must return the raw aggregate without division. Scaling goes in the format string, not in DAX. Scaling in DAX prevents showing Actuals from the same measure. |
+| [[Field-Parameters-KPI-Hierarchy.md]] | Field Parameters KPI Hierarchy
+
+Group Field Parameters measures into named hierarchies (e.g., Sales, Earnings) by adding extra columns to the generated Field Parameters table. |
+| [[Field-Parameters-Show-Values.md]] | Field Parameters: Show Values of Selected Field
+
+Use Field Parameters to add a secondary slicer that displays the values of the selected column (not just the column names). |
+| [[Slicer-Techniques-Overview-Power-BI.md]] | Slicer Techniques Overview (Power BI)
+
+Slicer types (dropdown/list/tile), selection modes, cross-slicer filtering troubleshooting, sync across pages, and Clear All button. Boniface Muchendu, Data Bear 2025. |
+| [[Slicer-Apply-All-Clear-All-Buttons.md]] | Slicer Apply All / Clear All Buttons
+
+Batch-apply or clear all slicers with a single click, preventing intermediate visual refreshes on slow models. |
+| [[Slicer-Default-Selection-Current-Month.md]] | Slicer Default Selection (Current Month)
+
+Auto-select the current or model-refresh month in a slicer after every data refresh. |
+| [[Slicer-Highlight-Measure-IN-VALUES-Snippet.md]] | Slicer Highlight Measure: SELECTEDVALUE + IN VALUES
+
+DAX measure that detects whether a row's value is selected in a disconnected table slicer, returning 1 if selected (for conditional formatting). |
+| [[Slicer-Highlight-vs-Filter.md]] | Slicer Highlight vs Filter
+
+Use a disconnected table to make a slicer highlight matching rows instead of filtering them out. Requires a disconnected table + conditional formatting. |
+| [[Synoptic-Panel-Level-Detection-Workflow.md]] | Synoptic Panel Level Detection Workflow
+
+Use ISINSCOPE and ISATLEVEL in DAX to detect the current aggregation level in a Synoptic Panel visual and apply dynamic formatting accordingly. |
 ## Gotchas — Line Chart Misleading Patterns (Lumiplot, 2026)
 
 || Note | Description |
@@ -1907,6 +2396,71 @@ Layer a transparent `fill="tozeroy"` `go.Scatter` under a `lines+markers` `go.Sc
 CSS `rotateY(180deg)` + `backface-visibility: hidden` for 3D flip animation with no JavaScript; Dash callback handles only the `flipped` class-toggle state (`n_clicks % 2`); generic callback via splat operators adapts to any number of cards; `perspective: 1000px` creates natural 3D depth; Esther 2026 |
 || [[Data-Driven-UI-Card-Tuples.md]] | Data-Driven UI — Card Geometry as Tuples
 
+Define the geometry and content of dashboard cards as data (a list of tuples) rather than as component code; render the full UI from a list comprehension; adding, removing, or reordering cards requires only a change to the data; pairs with the splat-operator generic callback pattern below to auto-scale Dash outputs/inputs. Esther 2026
+|| [[generic-dash-callback-splat.md]] | Generic Dash Callback via Splat (Variable-Cardinality Outputs/Inputs)
+
+`*[Output(...)]` and `*[Input(...)]` splat operators inside `@app.callback(...)` to scale outputs/inputs with `len(items)` at import time; the body receives `*clicks` and returns one element per Output in the same order; works for any N-of-N Dash wiring (cards, rows, tabs, dropdown options). Esther 2026
+|| [[chart-base-plotly.md]] | chart_base() — Consistent Plotly Layout Helper
+
+Shared Python function returning a fresh Plotly layout dict every call (dark template, transparent backgrounds, zero margins, hidden axes, fixed height); called by every chart builder to eliminate layout duplication; the fresh-dict pattern is the fix for the layout-mutation gotcha below. Esther 2026
+|| [[hex-to-rgba-python.md]] | hex_to_rgba() — Hex Color → RGBA String Converter
+
+Small utility converting a CSS-style hex string (`#RRGGBB`) to an `rgba(r,g,b,alpha)` string with a configurable alpha; used to derive semi-transparent fills from a base hex colour without maintaining parallel colour tables; primary consumer is the fill layer in `mini_area_line()`. Esther 2026
+||| [[Calendar-Heatmap-Plotly-Power-BI.md]] | Calendar Heatmap — Plotly.js in Power BI
+
+GitHub-style 7×53 heatmap: DAX JSON bridge via CONCATENATEX → JS 7×53 matrix → Plotly heatmap; Viridis or custom colorscale; yaxis autorange reversed puts Monday on top; hover via hovertemplate. Esther 2026-04-02
+||| [[Build-Calendar-Heatmap-Power-BI.md]] | Build Calendar Heatmap in Power BI
+
+Four-step workflow: prepare date+value table → create GitHub Heatmap HTML DAX measure → add HTML Content visual → connect slicers. Esther 2026-04-02
+||| [[GitHub-Heatmap-DAX-HTML-Snippet.md]] | GitHub Heatmap — Full DAX Measure
+
+Copy-paste DAX measure returning complete HTML+JS heatmap: CONCATENATEX JSON bridge + loadPlotly() + 7×53 matrix + getISOWeek() + getDayNumber() + Plotly.newPlot(). Esther 2026-04-02
+||| [[JS-Day-Index-Sunday-0-Gotcha.md]] | JS getDay() Returns Sunday = 0
+
+JavaScript Date.getDay() is Sunday=0, Monday=1...Saturday=6. Forgetting this remapping causes Sunday data to overwrite Monday in the heatmap matrix. Fix: `return day === 0 ? 7 : day`. Esther 2026-04-02
+||| [[Heatmap-Pattern-Recognition-Principle.md]] | Heatmaps Reveal Behavioral Patterns Tables Miss
+
+Calendar heatmap encodes daily intensity as color — eye reads whole year holistically for consistency, dips, and trends; Viridis/Cividis colorblind-safe; slicer-compatible. Esther 2026-04-02
+
+
+| [[Source-AI-Power-BI-Workflow-DropMaterializedView]] | Source | Edward Charles (Drop Materialized View) — AI agents + PBIR workflow |
+| [[PBIR-Power-BI-Report-Format-JSON]] | atomic | PBIR/PBI format exposes JSON report definitions |
+| [[Power-BI-AI-Agent-CLI-Reload]] | atomic | pbidesktop reload CLI for real-time Power BI Desktop refresh |
+| [[AI-Written-PowerShell-Scripts-Design-Automation]] | pattern | AI-written PS scripts for Power BI design automation |
+
+| [[Source-ABC-Analysis-HowToPowerBI]] | Source | Bas Dohmen — ABC/Pareto visual calculation chart |
+| [[ABC-Classification-Chart-Visual-Calculations]] | pattern | ABC/Pareto chart: stacked columns + Pareto line + ABC labels |
+| [[Visual-Calculations-COLLAPSESUM]] | atomic | COLLAPSESUM: aggregate collapsing current row context |
+| [[Visual-Calculations-RUNNINGSUM-ORDER-BY]] | atomic | RUNNINGSUM with ORDER BY for cumulative analysis |
+| [[Visual-Calculations-NEXT]] | atomic | NEXT: next-row value with ORDER BY |
+| [[ABC-Group-Thresholds-Stacked-Columns]] | snippet | IF/BLANK stacked columns with 100% overlap → ABC bands |
+
+| [[Source-Geometric-Mean-SQLServerCentral]] | Source | Dinesh Asanka — SQLServerCentral article |
+| [[Geometric-Mean-Power-Query]] | pattern | Two-step PQ: List.Product × Number.Power |
+| [[Geometric-Mean-Multi-Reviewer-Rankings]] | pattern | Multi-reviewer ranking aggregation |
+
+| [[Source-Choosing-Right-Charts-SelectDistinct]] | Source | Elle Harrison — SelectDistinct beginner chart guide |
+| [[Line-Chart-Trend-Over-Time]] | atomic | Line chart for tracking trends over time |
+| [[Bar-Column-Chart-Comparing-Groups]] | atomic | Bar/column chart for comparing groups |
+| [[Pie-Donut-Chart-Parts-Whole]] | atomic | Pie/donut: ≤4-5 slices only |
+| [[Scatter-Plot-Relationship-Variables]] | atomic | Scatter plot for two-variable relationships |
+| [[Chart-Selection-Decision-Flow]] | atomic | Decision tree for choosing chart type |
+| [[Reducing-Chart-Clutter-Power-BI]] | pattern | Clutter reduction: slicers, tooltips, minimal formatting |
+
+## Gotchas — Plotly & Dash Mechanics (Esther, 2026)
+
+|| Note | Description |
+||------|-------------|
+|| [[plotly-layout-mutation-gotcha.md]] | Plotly Mutates Layout Dicts in Place
+
+`fig.update_layout(**layout_dict)` mutates the dict you pass in; reusing a single `chart_base()` constant across charts causes layout bleed (axis settings, margins, `showlegend` from one chart leak into the next). Fix: return a fresh dict from a function on every call; nested dicts (`layout["xaxis"]`) must be re-built each call too. Esther 2026
+|| [[autorange-reversed-horizontal-bar-top.md]] | Plotly Horizontal Bar Chart: First Item at Bottom by Default
+
+`go.Bar(orientation="h")` puts the first data item at the **bottom** of the categorical Y-axis — the visual opposite of what ranking readers expect. Fix: `yaxis=dict(autorange="reversed")` on the layout (lightest fix); alternative is sorting/reversing the data array (but loses original input order downstream). Esther 2026
+|| [[hoverinfo-skip-on-base-trace.md]] | hoverinfo="skip" on Hidden Fill Trace Avoids Duplicate Hover Labels
+
+A `fill="tozeroy"` trace with `line=dict(width=0)` still produces hover labels by default; the two-layer micro-chart pattern therefore needs `hoverinfo="skip"` on the hidden base trace, with hover handling routed entirely through the visible top trace's `hovertemplate`. Without the skip, every data point gets duplicate/clashing tooltips. Esther 2026
+
 | [[Anomaly-Detection-Power-BI-Isabelle-Bittar-source.md]] | Anomaly Detection in Power BI (Isabelle Bittar)
 
 Source note for the hands-on case study: Python + Isolation Forest inside Power Query, employee expense anomaly flagging.
@@ -1933,17 +2487,26 @@ Conditional formatting pills, key metric cards, and interactive bar charts drive
 
 Source note: Power Query Base64 + DAX SVG pattern for circular table images — separates image data from presentation.
 
+| [[source-interactive-tutorials-that-stick.md]] | Building Interactive Tutorials That Stick (Isabelle Bittar)
+
+Source note: Interactive tutorial pattern using Selection + Bookmarks + buttons — no DAX. Powers [[Interactive-Tutorial-Workflow]] and [[Info-Bubble-Pattern]].
+
 | [[Author-Isabelle-Bittar]] | Isabelle Bittar
 
-Independent BI and data science consultant (KI Data Science). Sources: Isolation Forest anomaly detection, circular SVG images. Specialises in Python in Power Query, SVG in DAX, dashboard UX.
+Independent BI and data science consultant (KI Data Science). Sources: Isolation Forest anomaly detection, circular SVG images, interactive tutorials. Specialises in Python in Power Query, SVG in DAX, dashboard UX. |
+||| [[Source-Conditionally-Color-Coding-Line-Charts-in-Power-BI]] | Conditionally Color-Coding Line Charts (Bittar / KI Data Science)
 
-| [[Circular-Image-Power-BI-Table-Pattern.md]] | Circular Image in Power BI Table (SVG + Base64)
+Source: Medium by Isabelle Bittar — overlay series technique: two IF() measures returning BLANK() to conditionally color a line chart green/red based on price variation. 2025-04-26. |
+||| [[Circular-Image-Power-BI-Table-Pattern.md]] | Circular Image in Power BI Table (SVG + Base64)
 
-2-step pattern: Power Query converts image URL to Base64; DAX generates SVG with circular clipPath. No native image masking needed.
+2-step pattern: Power Query converts image URL to Base64; DAX generates SVG with circular clipPath. No native image masking needed. |
+||| [[DAX-SVG-Circular-Image-Snippet.md]] | DAX SVG Circular Image Measure — Copy-Paste
 
-| [[DAX-SVG-Circular-Image-Snippet.md]] | DAX SVG Circular Image Measure — Copy-Paste
+Drop-in DAX measure: generates a circular profile image SVG with Base64 embedding, clipPath, and grey background circle. |
 
-Drop-in DAX measure: generates a circular profile image SVG with Base64 embedding, clipPath, and grey background circle.
+| [[DAX-SVG-Circular-Image-3-Hacks-Snippet.md]] | DAX SVG Circular Image Measure (3 Hacks Version)
+
+Drop-in DAX measure: generates a circular SVG profile image using the compressed Base64 column from URL-to-Base64-Compressed. Uses `ImageCircle` variable naming, r=45 clip radius.
 
 | [[DAX-SVG-Profile-Card-Snippet.md]] | DAX SVG Profile Card Measure — Copy-Paste
 
@@ -1965,9 +2528,17 @@ Source note: centralised DAX repos, JSON themes, external tooling (Bravo, Tabula
 
 | [[Author-Boniface-Muchendu]] | Boniface Muchendu
 
-Power BI consultant at DataBear. Sources: RAND() article, time-saving hacks.
+Power BI consultant at DataBear. Sources: RAND() article, time-saving hacks. |
+||| [[Source-DAX-Row-Context-Explained-in-Power-BI.md]] | DAX Row Context Explained in Power BI
 
-| [[Time-Saving-Hacks-Power-BI-Workflow.md]] | Time-Saving Hacks for Power BI Development
+Verbatim source: row context = current row during iteration; iterator/calculated column creation; SELECTEDVALUE inside iterators; cardinality of table expressions; Boniface Muchendu, DataBear 2026-03-13. |
+||| [[Source-DAX-Context-Transition-Explained-in-Power-BI.md]] | DAX Context Transition Explained in Power BI
+
+Verbatim source: context transition = row context → filter context; CALCULATE trigger; REMOVEFILTERS to undo; KEEPFILTERS to preserve multi-column filters; monthly average problem; Boniface Muchendu, DataBear 2026-03-14. |
+||| [[Author-Annamarie-Van-Wyk]] | Annamarie Van Wyk
+
+Data Bear contributor covering Power BI visual design and conditional formatting. |
+|| [[Time-Saving-Hacks-Power-BI-Workflow.md]] | Time-Saving Hacks for Power BI Development
 
 The 3 hacks: centralise DAX/M snippets in GitHub, create reusable JSON themes, adopt Bravo + Tabular Editor + DAX Studio.
 
@@ -1982,14 +2553,24 @@ Advanced model editor: batch editing, C# scripting, Best Practice Analyzer, BIM 
 | [[DAX-Studio.md]] | DAX Studio
 
 DAX query tool: Server Timings profiler, query plan viewer, All Queries trace, query history.
+||| [[Source-DAX-Fusion-Techniques-to-Maximize-Power-BI-Performance.md]] | DAX Fusion Techniques to Maximize Power BI Performance
 
-| [[Power-BI-JSON-Theme.md]] | Power BI JSON Theme
+Verbatim source: regular Fusion vs horizontal Fusion; reduces storage engine round-trips; DAX Studio server timings for analysis; Boniface Muchendu, DataBear 2025-11-27. |
+||| [[Source-DAX-Query-View-in-Power-BI.md]] | DAX Query View in Power BI: Unlocking New Features
 
-JSON theme file structure, Visual Studio Code editing workflow, dataColors, visualStyles, textClasses.
+DAX Query View in Power BI Desktop: enable via Preview Features, DEFINE/EVALUATE, visual query inspection, measure authoring, Performance Analyzer integration. Boniface Muchendu, DataBear 2024-10-27. |
+||| [[Source-DAX-Query-View-in-Power-BI-2.md]] | DAX Query View in Power BI: Unlocking New Possibilities
 
-| [[DAX-Measure-Centralization-via-GitHub.md]] | DAX Measure Centralization via GitHub
+2025 update: Copilot, Live Connect/Direct Lake, web browser, OneLake integration. Boniface Muchendu, DataBear 2025-01-12. |
+||| [[Power-BI-JSON-Theme.md]] | Power BI JSON Theme
 
-| [[Blank-Values-Power-BI-Boniface-Muchendu-source.md]] | Blank Values in Power BI Reports (Boniface Muchendu)
+JSON theme file structure, Visual Studio Code editing workflow, dataColors, visualStyles, textClasses. |
+||| [[Source-Modern-Visual-Defaults-and-Customizing-Theme-Preview.md]] | Modern Visual Defaults and Customizing Theme (Preview)
+
+Fabric 2026-07-21: modern visual defaults (Fluent 2), new Customize theme pane (theme settings, colors, text, visual properties, page, filter pane), report-wide styling without per-visual formatting; JSON schema in VS Code with Copilot. |
+||| [[DAX-Measure-Centralization-via-GitHub.md]] | DAX Measure Centralization via GitHub
+
+|| [[Blank-Values-Power-BI-Boniface-Muchendu-source.md]] | Blank Values in Power BI Reports (Boniface Muchendu)
 
 Source note: three ways to handle blanks — +0 fix, New Card Visual setting, DAX IF.
 
@@ -2013,9 +2594,52 @@ Using a dashboard as an app entry point: text box welcome + button navigation + 
 
 | [[Dashboard-Bonus-Tips.md]] | Dashboard Bonus Tips
 
-Q&A natural language, dedicated mobile layouts, web page tiles — live external content on dashboards.
+Q&A natural language, dedicated mobile layouts, web page tiles — live external content on dashboards. |
 
-| [[Power-BI-App-Workspace-Landing-Setup.md]] | Power BI App Workspace Landing Page Setup
+Isabelle Bittar: 6 UX and accessibility design ideas for Power BI dashboards (2024-03-02). |
+||| [[Source-Designing-for-Impact-6-Ideas.md]] | Designing for Impact: 6 Ideas to Enhance UX and Accessibility
+
+6 design ideas: end-users (non-PBI, non-data-savvy), container over content, white space + progressive disclosure, design trends, designing for vulnerability, toolbar centralization. |
+||| [[Content-Hierarchy-Planning-Workflow.md]] | Content Hierarchy Planning — Information Structure to Navigation Workflow
+
+List all info → build hierarchy → map to nav panel → add summary page. |
+||| [[Dashboard-Container-Layout-Workflow.md]] | Dashboard Container Layout — Component Placement Workflow
+
+Layout components: nav menu, toolbar, KPIs, filter panel, key visualizations, support tools. Spend more time on layout than data work. |
+||| [[Summary-Overview-Page-Pattern.md]] | Summary/Overview Page Pattern
+
+KPI cards + key takeaways + detail buttons + alerts panel. First glance = health; second = why; third = dive in. |
+||| [[Non-Data-Savvy-User-Design-Pattern.md]] | Non-Data-Savvy User Design Pattern
+
+Simple visualizations (bar/line/KPI), drop-down slicers over drill-downs, embedded instructions for advanced features, test with real users. |
+||| [[White-Space-Progressive-Disclosure-Pattern.md]] | White Space & Progressive Disclosure Pattern
+
+"Less is less, more is more — in layers." Highlight main points + detail buttons for further exploration. |
+||| [[Design-Trends-in-Power-BI-Pattern.md]] | Design Trends in Power BI — Pattern Reference
+
+Light mode, responsive design, bold typography, micro-interactions, expanding color palettes. Match modern web/app expectations. |
+||| [[Designing-for-Vulnerability-Pattern.md]] | Designing for Vulnerability — Political & Emotional Sensitivity Pattern
+
+Emotional/psychological/situational vulnerabilities. Remove visible associations that create wrong conclusions. Displaying certain info can cause more harm than good. |
+||| [[Toolbar-Centralization-Pattern.md]] | Toolbar Centralization Pattern
+
+Centralize all user actions (filter, search, notifications) in one toolbar — top right. Streamlined UX, professional feel. |
+||| [[Drill-Downs-Unfamiliar-to-Users-Gotcha.md]] | Drill-Downs Unfamiliar to Non-Power-BI Users Gotcha
+
+Drill-down arrows not obvious to non-PBI users. Replace with drop-down slicers or add on-visual instructions. |
+||| [[Design-Trends-Raise-Expectations-Gotcha.md]] | Modern Design Trends Raise User Expectations Gotcha
+
+Users compare dashboards to consumer apps. Reports that don't match modern UX feel outdated even if data is excellent. |
+||| [[End-User-vs-Sponsor-vs-Developer.md]] | End-User vs Sponsor vs Developer — Design Audience
+
+Always design for end users — not sponsors, project managers, or BI developers. |
+||| [[Container-Over-Content-Atomic.md]] | Container Over Content — Layout Priority
+
+Spend more time on layout than on data. The best data is worthless if users can't find or act on it. |
+
+| [[Power-BI-App-Workspace-Landing-Setup.md]] | Power BI App Workspace Landing Page Setup |
+
+## Patterns — Slicer Panel Workflow (Bittar, Boniface, 2023–2025)
 
 | [[4-Tips-Work-Efficiently-Power-BI-Isabelle-Bittar-source.md]] | 4 Tips Work Efficiently Power BI (Isabelle Bittar)
 
@@ -2143,4 +2767,2041 @@ Power BI blocks external image URLs inside SVGs. The workaround: convert images 
 
 `n_estimators`, `contamination`, `random_state`, `max_samples` — key sklearn parameters at a glance.
 
-Define card content as a list of tuples `(card_id, title, value, subtitle, back_fig, front_fig)` and render with a list comprehension — `dbc.Row([dbc.Col(flip_card(*c), md=4) for c in CARDS])`; the generic Dash callback adapts automatically to `len(CARDS)` via splat operators; adding a new card is a new data tuple, not new component code |
+|| [[Button-Slicer.md]] | Button Slicer | An interactive filtering control that renders slicer items as styled buttons using the New Card visual. |
+|| [[Create-a-Button-Slicer.md]] | Create a Button Slicer | Step-by-step: enable preview feature, add visual, select field, style with shapes, colors, images, conditional formatting. |
+|| [[Conditional-Button-Slicer.md]] | Conditional Button Slicer | Button Slicer with appearance changes driven by data thresholds — gold for top performers, faded for underperformers. |
+|| [[Button-Slicer-Formatting-Options.md]] | Button Slicer Formatting Options | Quick reference: shape, color, border, state-specific, image, and call-out value formatting controls. |
+|| [[Source-Button-Slicer-Level-Up-Your-Power-BI-Reports.md]] | Button Slicer Level Up Your Power BI Reports! | Source: Data Bear blog by Boniface Muchendu — Button Slicer setup, styling, images, conditional formatting, drill-down. |
+|| [[Source-Creating-a-Custom-KPI-Scorecard-in-Power-BI.md]] | Creating a Custom KPI Scorecard in Power BI | Verbatim source: custom KPI scorecard via three-measure chain (KPI Value → Status → Indicator/Color) in Matrix visual; Boniface Muchendu, DataBear 2026-03-23. |
+||| [[Source-Creating-a-Drillthrough-Button-in-Power-BI.md]] | Creating a Drillthrough Button in Power BI | Verbatim source: drillthrough page setup, DT naming, button creation; Boniface Muchendu, DataBear 2023-06-03. |
+||| [[Source-Button-Slicer-in-Power-BI.md]] | Discover the Power of the New Button Slicer in Power BI
+
+Native button slicer: image integration, shape (rectangle/rounded), layout (grid/single-row), single/multi-select, button states (Default/Hover/Selected), callout values, effects (shadows/glow). Boniface Muchendu, DataBear 2024-10-26. |
+||| [[Source-Day-Level-Slicer-in-Power-BI.md]] | Day-Level Slicer in Power BI Using Native Features Only
+
+Button slicer + visual-level filter measure + single-row layout = 7-day focused date picker; no custom visuals. Boniface Muchendu, DataBear 2025-06-01. |
+||| [[Source-Enhance-Your-Power-BI-Reports-with-Slicer-Panels.md]] | Enhance Your Power BI Reports with Slicer Panels
+
+Group slicers + background rectangle + toggle button into one object; bookmarks (Data=off) to show/hide; hamburger-menu icon for UX. Boniface Muchendu, DataBear 2025-04-13. |
+||| [[Slicer-Panel-Workflow.md]] | Slicer Panel Workflow
+
+Dynamic format strings: one measure, multiple formats (currency/abbreviation/decimals) via DAX SWITCH in the Format expression box. Boniface Muchendu, DataBear 2024-03-02. |
+||| [[Source-Essential-Box-Plots-in-Power-BI.md]] | Essential Box Plots in Power BI
+
+Combo chart workaround (stacked column + line): PERCENTILE.INC × 2, MEDIANX, MAX, MIN measures; IQR = middle 50%. Boniface Muchendu, DataBear 2023-11-26. |
+||| [[Source-Dynamic-Single-Slicer-using-DAX-logic.md]] | Dynamic Single Slicer using DAX logic |
+||| [[Dynamic-Single-Slicer-Pattern.md]] | Dynamic Single Slicer — DAX Measures Table Pattern
+
+Disconnected AllMeasuresTable + Index column + SELECTEDVALUE + SWITCH = single slicer controlling multiple metrics. Boniface Muchendu, DataBear 2022-10-30. |
+||| [[Dynamic-Single-Slicer-Workflow.md]] | Dynamic Single Slicer — 5-Step Implementation Workflow
+|`_Measures` repository table, display folders, Summarize by None, model view tabs. Boniface Muchendu, DataBear 2024-03-31. |
+||| [[source-enhance-data-modelling-power-bi.md]] | Enhance Data Modelling Power BI — Source
+
+Enter Data → name `_Measures` → `Hide Me` column; underscore prefix sorts table to top; column content irrelevant. |
+||| [[home-table-property-move-measures.md]] | Home Table Property Move Measures Atomic
+
+Model View → select measure → Properties → Home Table → `_Measures`; consolidates existing measures without redefining. |
+||| [[summarize-by-none-prevent-auto-aggregation.md]] | Summarize by None Prevent Auto-Aggregation Atomic
+
+`Summarize by = None` prevents numeric auto-aggregation on Calendar Year, Month Name, categorical fields. |
+||| [[measures-repository-setup-workflow.md]] | Measures Repository Setup Workflow
+
+5-step: Enter Data → name `_Measures` → `Hide Me` → Load → hide column → create/move measures. |
+||| [[display-folder-organization-workflow.md]] | Display Folder Organization Workflow
+||| [[display-folder-organization-workflow.md]] | Display Folder Organization Workflow
+
+Model View → select measure → Display Folder property → type name; `\` for nested folders; Ctrl+multi for bulk. |
+
+||| [[decomposition-tree-setup-workflow.md]] | Decomposition Tree Setup Workflow
+
+Visualization pane → Analyze Field (measure) + Explain By (dimensions) → click + → pick dimension or AI split (cloud only). |
+
+||| [[decomposition-tree-filter-drillthrough-workflow.md]] | Decomposition Tree Filter and Drillthrough Workflow
+
+Slicers filter the tree dynamically; right-click node → Drill Through to detailed page. |
+
+||| [[decomposition-tree-analyze-field-requires-aggregate.md]] | Decomposition Tree Analyze Field Requires Aggregate Atomic
+
+Analyze Field accepts only a measure or aggregate — plain column will not render correctly. |
+
+||| [[decomposition-tree-ai-splits-limitations.md]] | Decomposition Tree AI Splits Limitations Atomic
+| [[decomposition-tree-ai-splits-limitations.md]] | Decomposition Tree AI Splits Limitations Atomic
+
+AI splits (High/Low Value) NOT supported: on-prem AS, Azure AS, PBIRS, Publish to Web. Manual + always works. |
+
+| [[decomposition-tree-limits.md]] | Decomposition Tree 50 Levels 5000 Data Points Atomic
+
+50 max hierarchical levels, 5,000 data points. Sufficient for most analyses; plan Explain By dimensions accordingly. |
+
+||| [[Source-Date-Picker-Slicer-Preview.md]] | Date Picker Slicer (Preview)
+
+Relative date ranges anchored to Last date; dual summary (filtered vs selected range); compact single-line formatting; persists on dashboard pins. Microsoft Fabric 2026-07-16. |
+
+| [[Last-Full-Month-Date-Picker-Workflow.md]] | Last Full Month — Date Picker Slicer Relative Range
+
+"Last N Months (Calendar) from Last date" — excludes incomplete current month automatically; rolls forward with data refresh. |
+
+| [[Compact-Date-Picker-Slicer-Formatting-Workflow.md]] | Compact Single-Line Date Picker — 9-Step Formatting
+
+9 steps: turn off header, slider, summaries; set font size 18; blue icon 30px; add clear-all icon button. Minimal report space. |
+
+| [[Date-Range-Beyond-Available-Data.md]] | Date Range Beyond Available Data — Filter Pane Override
+
+Filter pane: add fact column with "is not blank" in slicer's filter area → anchors relative range to last date with data, not date table max. |
+
+| [[Partial-Month-Decline-Gotcha.md]] | Partial Month Decline — Incomplete Current Month Gotcha
+
+Partial current month shows decline vs prior month even if prior month was full — use Last Full Month pattern or filter to exclude current month. |
+
+||| [[matrix-layout-setup-workflow.md]] | Matrix Layout Setup Workflow
+
+Format pane → Layout → Compact (default, indented) / Outline (column-based) / Tabular (no blank rows). |
+
+||| [[matrix-cash-flow-pl-report-workflow.md]] | Matrix Cash Flow P&L Report Workflow
+
+Rows: Category/Line Item; Columns: Period; Layout: Outline/Tabular; remove column totals; row totals at bottom. |
+
+||| [[matrix-compact-layout-default.md]] | Matrix Compact Layout Default Atomic
+
+Compact is new default; indented hierarchical rows; space efficient; similar to stepped layout. |
+
+||| [[matrix-outline-layout-column-based.md]] | Matrix Outline Layout Column Based Atomic
+
+Hierarchical data in separate columns; subtotals top/bottom toggle; no indentation. |
+
+||| [[Source-Oblique-Area-Chart-Native-Visuals-Isabelle-Bittar.md]] | Source: Modern Oblique Area Chart — Isabelle Bittar
+
+||| [[Error-Bars-White-Fill-Zones.md]] | Error Bars as White Fill Zones
+
+||| [[PNG-Background-Behind-Chart.md]] | PNG Background Behind Chart
+
+||| [[Dynamic-Y-Axis-Min-Max-via-Measures.md]] | Dynamic Y-Axis Min/Max via Measures
+
+||| [[Custom-Tooltip-Page-Hidden-Measures.md]] | Custom Tooltip Page for Hidden Measures
+
+||| [[Oblique-Area-Chart-Native-Visuals-End-to-End.md]] | Oblique Area Chart via Native Visuals (End-to-End)
+
+||| [[matrix-tabular-layout-no-blank-rows.md]] | Matrix Tabular Layout No Blank Rows Atomic
+
+Column layout like Outline but removes blank rows between category groups; cleanest look. |
+| [[Restore-Hidden-Panes-Workflow.md]] | Restore Hidden Panes Workflow
+
+Power Query Editor: chevron expand Queries pane, View → Query Settings for Applied Steps, View → Formula Bar, View → Parameters. Power BI Desktop: View → Pane Manager to toggle Filters, Data, Build, Format, Bookmarks, Selection, Performance Analyzer, Sync Slicers. View tab is always the first stop. |
+| [[Hidden-Pane-Fix-Checklist.md]] | Hidden Pane Fix Checklist
+| [[Fix-Incorrect-Totals-Workflow.md]] | Fix Incorrect Totals Workflow
+| [[Source-Excel-to-Power-BI-Roadmap-DigitalBYKewat.md]] | Source: Excel to Power BI Roadmap (DigitalBYKewat)
+
+DigitalBYKewat (Medium, 2026-07-10). Personal beginner journey: Denial → Fear → Curiosity arc. 4-week roadmap (Interface → Power Query → Data Modeling → DAX). Core message: Power BI gives Excel superpowers, not replacement. |
+| [[Excel-to-Power-BI-4-Week-Roadmap.md]] | Excel to Power BI 4-Week Learning Roadmap
+
+Week 1: Interface + basic visuals. Week 2: Power Query data cleaning. Week 3: Relationships + star schema. Week 4: SUM, CALCULATE, IF, DIVIDE — publish first report. |
+| [[Excel-Skills-Transfer-to-Power-BI.md]] | Excel Skills That Transfer to Power BI
+
+Tables, Filters, Pivot Tables, Charts, Basic Formulas all transfer. VLOOKUP → Relationships. Copy-paste sheets → Power Query Append. Not starting from zero — upgrading the toolkit. |
+| [[The-Aha-Moment-Refresh-Updates-Everything.md]] | The Aha Moment: Refresh Updates Everything
+
+Update source Excel file → Refresh → every visual updates. The conceptual break: model is the source of truth, visuals are views of it. Eliminates weekly copy-paste-rebuild cycle. |
+
+
+Step-by-step: identify naive MAX/MIN/AVERAGE, replace with SUMX+SUMMARIZE+CALCULATE pattern, apply to visual, verify subtotals. Covers table and matrix total rows. |
+
+
+Quick-reference table: Power Query (Query Settings, Formula Bar, Parameters, chevron) and Power BI Desktop (Pane Manager, chevron minimize, ellipses close, resize handle). Covers all 8 modern panes. |
+| [[chart_title_as_insight]] | Turn chart title into an insight — people scan visuals, the title must carry the key takeaway |
+| [[clarify_metrics_assumptions]] | Define domain KPIs on the visual, don't assume user knowledge — use info icon with hover definition |
+| [[dynamic_chart_title_dax]] | SWITCH + FORMAT DAX pattern for dynamic insight-bearing chart titles |
+| [[field_parameters_visual_switching]] | Use field parameters to let users switch breakdown dimension on a single visual — no visual duplication |
+| [[guide_users_chart_interactions]] | Add visual cues for drill-down, expand hierarchy, and navigation — most users miss these interactions |
+| [[isabelle_bittar]] | Independent BI consultant; Big 4 background; focus on Power BI visualization UX |
+| [[layer_insights_into_chart]] | Layer DAX-generated narrative text directly into the chart visual |
+| [[maximize_tooltip_value]] | Design tooltips deliberately — add sparklines, extra fields, or tooltip pages, not just defaults |
+| [[remove_non_value_elements]] | Remove non-value chart elements — axis titles, gridlines, redundant data labels that add noise |
+| [[smart_data_labels]] | Show data labels only on max, min, or anomaly values — selective over all-or-nothing |
+| [[smart_data_labels_dax]] | MAXX/MINX/ALL DAX pattern for selective data labels — show labels on chart extremes only |
+|| [[Source-10-Ways-to-Instantly-Improve-Your-Power-BI-Charts]] | 10 UX techniques: dynamic titles, field parameters, smart labels, benchmarks, layered insights, tooltips, interaction cues, metric definitions, action buttons |
+|| [[tell_users_what_to_do_next]] | Use action buttons with dynamic text to guide users to the next analytical step after an insight |
+|| [[trend_line_benchmark_context]] | Add trend lines or constant benchmark lines to show above/below-average performance at a glance |
+
+## Patterns — Tagging + Bridge Table (Westendorp, 2026)
+
+|| [[Tagging-Bridge-Table-Pattern.md]] | Tagging + Bridge Table Pattern |
+
+Four-table model: `service_tags` (vocabulary) → `tagged_services` (assignments) → `dim_service_bridge` (filter control) → `Data` (fact). Bridge replaces direct many-to-many with controlled one-to-many relationships.
+
+|| [[Tag-Assignment-Table-Pattern.md]] | Tag Assignment Table Pattern |
+
+`tagged_services` maps entities to tags. Flat structure: `KeyFieldID`, `TagKey`, optional `Notes`. Maintained outside Power BI initially. Most operationally intensive table — requires ongoing business input.
+
+|| [[Tagging-Model-Data-Model-Reference.md]] | Tagging Model Data Model Reference |
+
+Schema diagram, table roles, relationship types, and bridge table construction in Power Query M and DAX.
+
+## Atomics — Tagging + Governance (Westendorp, 2026)
+
+|| [[Tags-Equal-Lens-Not-Partition.md]] | Tags = Lens, Not Partition |
+
+Each tag represents a perspective on the data, not a distinct subset. Tags answer "what data relates to this topic?" not "what share belongs exclusively here?" Non-mutually-exclusive classifications.
+
+|| [[Governance-Shifts-from-Structure-to-Process.md]] | Governance Shifts from Structure to Process |
+
+Hierarchical models: structure enforces discipline. Tagging models: process enforces discipline. Without governance, tagging degrades into duplicate tags, inconsistent application, over-tagging.
+
+## Gotchas — Tagging Model (Westendorp, 2026)
+
+|| [[Tag-Totals-Are-Not-Additive.md]] | Tag Totals Are Not Additive |
+
+Combined tag totals are not the sum of individual tag totals. The same entity may contribute to multiple tag views. Do not add tag totals across categories — view in isolation within single-tag context.
+
+## Workflows — Tagging (Westendorp, 2026)
+
+|| [[Tag-Governance-Workflow.md]] | Tag Governance Workflow |
+
+Six-step process: assign ownership → controlled vocabulary → assignment standards → manage assignment layer → lifecycle (retire, don't delete) → review cadence.
+
+## Sources — Power BI (Jacob Westendorp, 2026-08)
+
+|| [[Source-Westendorp-Tagging-Framework.md]] | A Practical Framework for Tagging and Classification in Power BI |
+
+Tagging + bridge table pattern, filter flow mechanics, non-additive totals caveat, and governance principles. Jacob Westendorp, 2026-08-02.
+
+## Workflows — AI Tools (Bryant, 2026)
+
+|| [[ChatGPT-Copilot-Dashboard-Build-Workflow.md]] | ChatGPT + Copilot Dashboard Build Workflow |
+
+Three-phase workflow: ChatGPT before building (clarify question + prepare data), Copilot inside Power BI (generate visuals + measures), ChatGPT after building (review + interpret). The back-and-forth between tools is the real workflow.
+
+|| [[ChatGPT-Equals-Reasoning-Copilot-Equals-Execution.md]] | ChatGPT = Reasoning, Copilot = Execution |
+
+ChatGPT for reasoning and prototyping outside Power BI; Copilot for execution and iteration inside Power BI. Table of situations for each tool. Neither compensates for weak foundations.
+
+## Sources — Power BI (James Bryant, 2026-04)
+
+|| [[Source-Bryant-ChatGPT-Copilot-Workflow.md]] | A Practical Workflow for Building Better Power BI Dashboards with ChatGPT and Copilot |
+
+Tool division: ChatGPT = reasoning/prototyping; Copilot = execution. Three-phase workflow. SaaS metrics and rideshare data-cleanup case studies. James Bryant, 2026-04-28.
+
+## Patterns — Slicer UX (Bittar, 2026)
+
+|| [[Sticky-Slicer-This-Month-Auto-Select.md]] | Sticky Slicer — "This Month" Auto-Select Pattern |
+
+Add a "This Month" column to the date table. Current calendar month → `"This Month"`; all others → `"MMM yyyy"`. Use in slicer with "This Month" pre-selected. On refresh, `DateTime.LocalNow()` shifts the label — slicer auto-advances. No republish needed.
+
+|| [[This-Month-Slicer-Date-Table-M-Code.md]] | This Month Slicer — Date Table M Code |
+
+Full Power Query M code: dynamic date table with `MinDate`/`MaxDate` from fact table, `This Month` column via `DateTime.LocalNow()`. Ready to paste into Power Query Editor.
+
+## Sources — Power BI (Isabelle Bittar, 2026-02)
+
+|| [[Source-Bittar-Latest-Month-Slicer-Trick.md]] | A Simple Trick to Always Display the Latest Month in Power BI (Even After Refresh) |
+
+Sticky slicer pattern: "This Month" label column, full M code, when to use vs DAX-based current period. Isabelle Bittar, 2026-02-12.
+
+## Atomics — Analytics Principles (Sanskarmali, 2026)
+
+||| [[Demand-Not-Equal-Price.md]] | Demand ≠ Price: Cheap Products Often Sell More Frequently |
+
+High demand does not equal high price. Cheap consumables (batteries, cables) outsell expensive items (laptops) in quantity — but contribute less revenue. Use both quantity-sold and revenue as separate measures; neither alone tells the full story. |
+
+## Atomics — Charts (Mitalimunot, 2026-08)
+
+||| [[Treemap-Beats-Bar-Chart-15-Plus-Categories.md]] | Treemap Beats Bar Chart at ~15+ Categories |
+
+For >~15 categories, a treemap is more readable than a bar chart. Treemap area comparison is more intuitive than bar-length comparison at high cardinality. Use bar charts for 1–10 categories; treemaps for 16+. |
+
+## Atomics — Dashboard Design (Okezie, 2025)
+
+||| [[Dashboard-Design-Neutral-Tones-Low-Saturation.md]] | Dashboard Color — Neutral Tones and Low Saturation |
+
+Low-saturation colors reduce cognitive load. Chart colors must stand out from chrome (nav bar, background). Bright colors reserved for genuine KPI alerts only. Iterate design based on user feedback. |
+
+## Sources — Power BI (Sanskarmali, 2026-08)
+
+||| [[Source-Sanskarmali-Spreadsheet-Analytics.md]] | A Spreadsheet Full of Numbers Changed the Way I Look at Business Analytics |
+
+Beginner narrative: data tells a story; demand ≠ price. |
+
+## Sources — Power BI (Ben-John Okezie, 2025-08)
+
+|| [[Source-Okezie-Quarterly-Financial-Case-Study.md]] | BI Case Study: Automating Quarterly Financial Reporting for Contoso Ltd |
+
+Simulated case: Power BI + Power Automate replaces 7-day manual Excel P&L cycle → 2 days. Neutral/low-saturation design. Semantic model as single source of truth across business units. Ben-John Okezie, 2025-08-07. |
+
+## Patterns — Dashboard UX (Mitalimunot, 2026-08)
+
+||| [[Cascading-Slicers-Mirror-Hierarchical-Data.md]] | Cascading Slicers Mirror Hierarchical Data |
+
+Three stacked slicers (Primary → Secondary → Tertiary) make hierarchy navigation explicit. One combined dropdown cannot replicate this. Slicers update top-down. |
+
+||| [[Two-Page-Dashboard-UX-Pattern.md]] | Two-Page Dashboard UX Pattern: Overview First, Details Second |
+
+Executive Summary page ("orient me") + Drill-Down page ("let me investigate"). Two pages reflect two mental modes. KPI cards do ~30% of communication work. Sketch questions before picking chart types. |
+
+## Sources — Power BI (Mitalimunot, 2026-08)
+
+||| [[Source-Mitalimunot-Product-Hierarchy.md]] | Building a Product Hierarchy Analytics Dashboard in Power BI: A Beginner's Journey |
+
+Beginner case study: 74 products, 3-level hierarchy. Two-page dashboard: KPI cards + summary visuals (Page 1), cascading slicers + drill-down table (Page 2). Lessons: treemap > bar chart at 15+ categories; three slicers beat one dropdown; overview-first. Mitalimunot, 2026-08-09. |
+
+## Gotchas — Calculation Groups (Isabelle Bittar, 2026-01)
+
+||| [[Calculation-Groups-vs-UDFs-Tradeoffs.md]] | Calculation Groups vs UDFs: When to Prefer Each |
+
+CG massively reduce measure count but interfere with conditional formatting, color measures, and SVG visuals. Require defensive ISNUMBER() guards everywhere. UDFs are explicit and local — better for production/long-lived reports. |
+
+## Sources — Power BI (Isabelle Bittar, 2026-01)
+
+||| [[Source-Bittar-Calculation-Groups.md]] | Calculation Groups for YoY, MoM & QoQ in Power BI — Powerful, but Maybe Not Worth It? |
+
+Honest evaluation: CG great for demos/controlled scenarios, fragile for production. ISNUMBER(SELECTEDMEASURE()) guard required. Field parameter + CG pair well. 2026-01-29. |
+
+
+## Workflows — AI-Assisted Development (James Bryant, 2026-05)
+
+||| [[Two-Layer-AI-Workflow-ChatGPT-Copilot-Power-BI.md]] | Two-Layer AI Workflow: ChatGPT for Design, Copilot for Build |
+
+Layer 1 = ChatGPT before Power BI (thinking, framing, KPI logic). Layer 2 = Copilot inside Power BI (building, drafting DAX). Five-step loop: define → challenge → build → validate → refine. Better thinking > faster chart creation. |
+
+## Atomics — Dashboard Design (James Bryant, 2026-05)
+
+||| [[KPI-Card-Context-Principle.md]] | KPI Cards Hide Distribution, Trend, and Outliers |
+
+Every KPI card hides what it summarizes. Average speed (8.30 m/s) hides consistency, trend, and outliers. Always pair KPI cards with at least one contextual element: trend line, comparison chart, target, or detail view. |
+
+## Sources — Power BI (James Bryant, 2026-05)
+
+||| [[Source-James-Bryant-ChatGPT-Copilot-Power-BI.md]] | ChatGPT + Copilot for Power BI + ChatGPT Thinks. Copilot Builds. Power BI Proves. |
+
+Two articles: two-layer AI workflow (ChatGPT design / Copilot build) and KPI context principle. M&A decision-support as sharpest use case. Endurance Improvement FIRSTDATE/LASTDATE DAX example. 2026-05-12 / 2026-05-19. |
+
+
+## Atomics — Dashboard Design (Simon Harrison, 2022-01)
+
+||| [[Know-Your-Audience-First-Design-Principle.md]] | Know Your Audience Before Designing the Dashboard |
+
+Every design decision flows from who will read the dashboard. Before picking a chart, answer: who is the audience, what decision does this support, what do they already know? Design for the primary decision-maker first. |
+
+| [[Chart-Selection-by-Purpose-and-Data-Type.md]] | Match Chart Type to Purpose and Data Type |
+
+Different chart types serve different cognitive tasks. Pie for part-to-whole; bar for ranking; line for trends; scatter for correlation. Data type (nominal/ordinal/continuous) constrains which charts are appropriate. Wrong chart = harder to read than a table. |
+
+## Sources — Power BI (Ethan Guyant, 2024-10)
+
+| [[Source-Design-Meets-Data-Power-BI-Navigation-Ethan-Guyant]] | Design Meets Data: Building Engaging Power BI Navigation |
+
+Three-article series on report navigation: Page Navigator build, native shapes/buttons, and Figma approach. Includes state-based styling details and tradeoff comparison across performance, maintenance, and design flexibility. |
+
+## Sources — Power BI (Simon Harrison, 2022-01)
+
+| [[Source-Harrison-Data-Visualisation-Best-Practice.md]] | Data Visualisation Best Practice Tips |
+
+Know your audience. Match chart type to purpose and data type. Make the best use of space. Iterate based on user feedback. 2022-01-07. |
+
+## Sources — Video (Guy in a Cube, Goodly, HowToPowerBI, CoWork, Ned, 2025-08)
+
+| [[Source-11-Power-BI-Tips-Guy-in-a-Cube.md]] | 11 Power BI Tips — Guy in a Cube |
+
+11 tips ranked #11→#1: Auto Date/Time off, SWITCH(TRUE), upstream calc, PQ parameters, test mode, Measure Table, bulk edit, Tabular Editor calc groups, Ctrl+G, Field Parameters, Ctrl+Shift+Alt bulk rename. |
+
+## Sources — Power BI (Elle Harrison, 2026-07)
+
+| [[Source-Power-BI-PL-Dashboard-Elle-Harrison.md]] | How to Build a Clean P&L in Power BI |
+
+Three-stage pipeline tutorial: Xero → Excel → Power BI. Covers mapping tables with custom sort order, dynamic P&L measure, matrix formatting, conditional formatting, and KPI sidebar. Elle Harrison · selectdistinct.co.uk · 2026-07-30. |
+
+## Sources — Power BI (Anurodh Kumar, 2025-08)
+
+| [[Source-5-Power-BI-Slicer-Tricks-Goodly.md]] | 5 Power BI Slicer Tricks — Goodly
+
+5 slicer tricks: default current-month selection, Apply Slicers/Clear Slicers buttons, Field Parameter show values, disconnected table + CF for highlight, KPI hierarchy grouping via Field Parameters. |
+
+| [[Source-ABC-Analysis-HowToPowerBI.md]] | ABC Analysis — HowToPowerBI
+
+ABC/Pareto chart using visual calculations: % of total → running sum → three shaded A/B/C buckets with labeled boundaries. COLLAPSEDEALL, RUNNINGSUM, ORDER BY, NEXT functions. |
+
+| [[Source-Document-Dataflows-Gen1-CoWork.md]] | Document Dataflows Gen1 — CoWork
+
+Export Dataflows Gen1 JSON → CoWork skill → Word documentation. Guardrails, quality scoring (96/100), cost ~$0.03/run. Skills are reusable across all future exports. |
+
+| [[Source-AI-Power-BI-Workflow-Ned.md]] | AI Power BI Workflow — Ned
+
+PBIR JSON → AI agent edits → powerbi desktop reload → Power BI Desktop hot-reload. PowerShell scripts automate design (spacing, formatting). 5-min manual task → 10-second script. |
+
+## Patterns — PBIR & AI Agent (Ned, 2025-08)
+
+| [[pbir-format-json-structure.md]] | PBIR Format — JSON-Based Report Structure
+
+PBIR = .pbir folder with JSON files (pages, visuals, filters). Schema at top of each JSON = machine-readable. No Power BI Desktop needed for edits. |
+
+| [[pbir-hot-reload-workflow.md]] | PBIR Hot-Reload Workflow
+
+Save as .pbir → open in VS Code → AI agent edits JSON → powerbi desktop reload → Power BI Desktop reflects changes instantly. |
+
+| [[powershell-design-automation-pbir.md]] | PowerShell Design Automation with PBIR
+
+AI agent generates PowerShell scripts that manipulate PBIR JSON files for design automation (spacing, padding). Run script → reload. |
+
+## Patterns — ABC Analysis & Visual Calculations (HowToPowerBI, 2025-08)
+
+| [[abc-classification-visual-calculations.md]] | ABC Classification — Visual Calculations
+
+Step-by-step: % of total via COLLAPSEDEALL → RUNNINGSUM → three shaded bucket bars (A/B/C at 0.4/0.8/1.0) → overlap formatting → NEXT for bucket label placement. |
+
+| [[visual-calculations-functions-reference.md]] | Visual Calculations Functions — Quick Reference
+
+COLLAPSEDEALL, RUNNINGSUM, ORDER BY, NEXT — syntax, purpose, common mistakes (hardcoded columns, wrong ORDER BY target). |
+
+## Patterns — Slicers (Goodly, 2025-08)
+
+| [[slicer-default-selection-current-period.md]] | Slicer Default Selection — Auto-Select Current Month
+
+DAX or M column that formats a refresh date vs calendar date; returns matching period or the natural column value. |
+
+| [[slicer-apply-all-clear-all-buttons.md]] | Apply Slicers + Clear Slicers Buttons
+
+Insert → Buttons → Apply Slicers. Deferred application prevents cascading queries on slow models. |
+
+| [[field-parameter-show-values-trick.md]] | Fields Parameter — Show Values of Selected Field
+
+Right-click slicer → Columns → check "Show values of selected field". Slicer shows values from whichever column is selected. |
+
+| [[slicer-as-highlight-disconnected-table.md]] | Slicer as Highlight — Disconnected Table + CF
+
+Disconnected table + SELECTEDVALUE + IN + COUNTROWS + conditional formatting = highlight without filtering. |
+
+| [[field-parameter-hierarchy-grouping.md]] | Fields Parameter Hierarchies — Grouping Measures
+
+Custom column added to the hidden Field Parameter table creates KPI grouping in the slicer (Sales vs Earnings). |
+
+## Gotchas (Guy in a Cube, 2025-08)
+
+| [[auto-date-time-hidden-table-bloat.md]] | Auto Date/Time Hidden Table Bloat
+
+Auto Date/Time creates hidden date tables per date column. Mark as date table → switch relationship to actual date → table disappears. Warning: breaks visuals using auto date hierarchy. |
+
+## Workflows — Power Query (Guy in a Cube, 2025-08)
+
+| [[power-query-test-mode-parameters.md]] | Power Query Test Mode Parameters
+
+TestMode (true/false) + TestRowCount parameters → Table.FirstN wrapper → limits rows during dev. Watch query folding. |
+
+| [[power-query-dev-test-prod-parameters.md]] | Power Query Dev/Test/Prod Parameters
+
+ServerName + DatabaseName parameters replace hardcoded connection strings. Change parameter value → all queries update. |
+
+## Workflows — Model Organization (Guy in a Cube, 2025-08)
+
+| [[measure-table-organization.md]] | Measure Table — Dedicated Table for Measure Organization
+
+DATATABLE("N", INTEGER, {{1}}) → hide column → drag measures in. Does not improve performance — only organization. |
+
+## Snippets (Guy in a Cube, 2025-08)
+
+| [[bulk-rename-ctrl-shift-alt.md]] | Bulk Rename — Ctrl+Shift+Alt in Tabular Editor
+
+Select multiple measures → Ctrl+Shift+Alt → type replacement → Apply. Warning: matches inside other names also replaced. |
+
+## References (Guy in a Cube, 2025-08)
+
+| [[11-power-bi-tips-ranked-guy-in-a-cube.md]] | 11 Power BI Tips — Ranked (Guy in a Cube)
+
+All 11 tips ranked from #11 (Auto Date/Time off) to #1 (Ctrl+Shift+Alt bulk rename) with key rules for each. |
+
+## Patterns — Dataflows & CoWork (CoWork, 2025-08)
+
+| [[document-dataflows-gen1-cowork-workflow.md]] | Document Dataflows Gen1 with CoWork
+
+Export JSON → create reference Word template → build CoWork skill from JSON + Word example. Guardrails ensure accuracy. Reusable across all exports. |
+
+| [[power-bi-dataflows-gen1-export-json.md]] | Dataflows Gen1 Export JSON
+
+Power BI Service → Export JSON: table catalog, column metadata, M query code, source info, refresh data. Input for CoWork documentation. |
+
+|| [[cowork-skill-structure-quality.md]] | CoWork Skill — Structure and Quality
+|Skill.md + guardrails + reference files + quality report (scored 0-100, publish bar 70). |
+
+## Sources — Power BI (Isabelle Bittar, 2026-08)
+
+||| [[Source-how-i-built-a-modern-oblique-area-chart-native-visuals.md]] | How I Built a Modern Oblique Area Chart in Power BI Using Only Native Visuals
+|
+|Line chart + error bar fill technique. Figma background, white error bar masks, custom tooltip page. PBIX attached. Bittar, 2025-07-23. |
+
+## Sources — Power BI (Boniface Muchendu, 2026-08)
+
+||| [[Source-power-bi-dynamic-hierarchy-create-drillable-field-parameters.md]] | Power BI Dynamic Hierarchy: Create Drillable Field Parameters
+|
+|Field Parameter + Grouping column preserves drill-down across hierarchy groups. Table View modification required. DataBear, 2026-04-03. |
+
+||| [[Source-style-presets-in-power-bi.md]] | Style Presets in Power BI
+|
+|JSON theme visualStyles > stylePresets. Reusable visual-level formatting templates. March 2025+ required. DataBear, 2025-05-04. |
+
+## Author Notes — Power BI (Boniface Muchendu)
+
+||| [[boniface-muchendu.md]] | Boniface Muchendu
+| DataBear trainer and practitioner. Power BI Field Parameters, dynamic hierarchies, JSON theming and style presets. Sources: Dynamic Hierarchy, Style Presets. |
+
+## Patterns — Power BI (Bittar, 2026-08)
+
+||| [[how-i-built-a-modern-oblique-area-chart-native-visuals.md]] | Oblique Area Chart — Native Visuals
+|Line chart + error bar fill replaces custom area chart. Steps: line chart, Figma background, error bar fill masks, custom tooltip page. |
+
+||| [[custom-tooltip-page.md]] | Custom Tooltip Page
+## Gotchas — Power BI (Bittar, 2026-08)
+
+| Note | Description |
+|------|-------------|
+| [[error-bar-fill-area.md]] | Error Bar Fill Area
+Error bar style must be set to Fill (not Line) for white masking to work. |
+| [[skipping-lakehouse-causes-problems.md]] | Skipping the Lakehouse Causes Data Duplication and Messy Models
+Fabric Lakehouse is opt-in; skipping it leads to data duplication, poor Direct Lake performance, and unmaintainable models. |
+| [[poor-data-modeling-still-breaks-fabric.md]] | Poor Data Modeling Still Breaks Fabric Reports
+Star schema and dimensional modeling principles still apply in Fabric; Direct Lake does not auto-optimize your model. |
+
+## Atomics — Power BI (Kumar, 2026-08)
+
+| Note | Description |
+|------|-------------|
+| [[fabric-is-a-complete-data-platform.md]] | Fabric Is a Complete Data Platform, Not Just Power BI
+Fabric covers Data Engineering, Integration, Data Science, and Real-Time Analytics — not just reporting. |
+| [[fabric-governance-cannot-be-afterthought.md]] | Governance Cannot Be an Afterthought in Fabric
+Role-based access, RLS, and sensitivity labels must be designed in from the start, not retrofitted. |
+
+## Atomics — Power BI (Bittar, 2026-08)
+
+||| [[native-visuals-push-beyond-default.md]] | Native Visuals Can Push Far Beyond Defaults
+|Native visuals can be extended through formatting, helper measures, and background layers to match custom visual aesthetics. |
+
+## Patterns — Power BI (Boniface, 2026-08)
+
+||| [[power-bi-dynamic-hierarchy-create-drillable-field-parameters.md]] | Dynamic Hierarchy via Field Parameter with Grouping Column
+|Grouping column in Field Parameter's calculated table restores drill-down behaviour across hierarchy groups. |
+
+||| [[dynamic-hierarchy-field-parameter-drill.md]] | Grouping Column Preserves Drill in Field Parameter Hierarchies
+|Grouping column tags fields as belonging to the same hierarchy so Power BI preserves drill paths. |
+
+||| [[style-presets-in-power-bi.md]] | Style Presets — Visual-Level Formatting via JSON
+|visualStyles > stylePresets in theme JSON. Named presets appear in format pane. March 2025+ required. |
+
+## Workflows — Power BI (Kumar, 2026-08)
+
+| Note | Description |
+|------|-------------|
+| [[fabric-end-to-end-pipeline-workflow.md]] | Fabric End-to-End Pipeline: Lakehouse → Transform → Report
+Correct Fabric build sequence: Lakehouse → Spark/Dataflow transform → Gold layer → Power BI Direct Lake. |
+
+## Workflows — Power BI (Boniface, 2026-08)
+
+||| [[dynamic-hierarchy-step-by-step.md]] | Dynamic Hierarchy — Step-by-Step
+|Step-by-step: build Field Parameter, add Grouping column in Table View, update slicer, validate drill. |
+
+## Snippets — Power BI (Boniface, 2026-08)
+
+||| [[style-presets-json.md]] | Style Presets JSON — visualStyles Template
+|Ready-to-use JSON template for visualStyles > stylePresets in Power BI theme files. |
+
+## Sources — Power BI (File Attachments, 2026-08)
+
+||| [[Source-mastering-bubble-charts-enhancing-data-narratives.md]] | Mastering Bubble Charts — FP20 Challenge
+|Bubble chart enhancements for data storytelling. Part of FP20 Analytics Challenge on Data-Driven Education Management. Bittar. |
+
+||| [[Source-more-power-to-your-users-with-field-parameters.md]] | More Power to Your Users with Field Parameters
+|Field Parameters for user-controlled granularity (daily/weekly/monthly Bitcoin price). Ghfran. |
+
+||| [[Source-dynamic-skip-rows-data.md]] | Dynamic Skip Rows — Data File
+|Supporting CSV: course enrollment with rolling 3-month averages. |
+
+||| [[Source-dynamic-skip-rows-power-bi.md]] | Dynamic Skip Rows Power BI Report
+|PBIX for dynamic rolling average skip-rows technique. |
+
+||| [[Source-education-management-20240212.md]] | Education Management Report — 2024-02-12
+|FP20 Analytics Challenge on Data-Driven Education Management. February 2024 session. |
+
+||| [[Source-education-management-isabelle-bittar-20240214.md]] | Education Management Report — Isabelle Bittar — 2024-02-14
+|Isabelle Bittar's FP20 Challenge entry on Data-Driven Education Management. |
+
+||| [[Source-education-management-data-model-example-zc.md]] | Education Management Data Model Example
+|Semantic model structure for the FP20 Education Management challenge. |
+
+||| [[Source-financial-market.md]] | Financial Market Report
+|Financial market data Power BI report. |
+
+||| [[Source-formatting-numerical-values.md]] | Formatting Numerical Values
+|Numerical value formatting techniques in Power BI. |
+
+||| [[Source-oblique-area-chart-pbix.md]] | Oblique Area Chart — PBIX
+|PBIX: line chart + error bar fill + Figma background. Related to [[Source-how-i-built-a-modern-oblique-area-chart-native-visuals.md]]. |
+
+||| [[Source-job-vacancy-rates-canadian-industries.md]] | Job Vacancy Rates Across Canadian Industries
+|Job vacancy rates across Canadian industries. |
+
+||| [[Source-redesigned-area-chart-idea.md]] | Redesigned Area Chart Idea
+|Redesigned area chart approach. |
+
+||| [[Source-strategic-kpi-card.md]] | Strategic KPI Card
+|Strategic KPI card visual design. |
+
+||| [[Source-power-bi-udfs-for-color-indicators.md]] | Power BI UDFs for Color Indicators
+|DAX UDFs for color-coded indicators. |
+
+||| [[Source-conditionally-format-data-label-backgrounds.md]] | Conditionally Format Data Label Backgrounds — PBIX
+|PBIX for conditional chart label background formatting. Related: [[how-to-conditionally-format-chart-label-backgrounds-in-power-bi-source.md]]. |
+
+||| [[Source-correlation-matrix-pbix.md]] | Correlation Matrix — PBIX
+|PBIX for DAX-only correlation matrix. Related: [[how-to-build-a-correlation-matrix-in-power-bi-using-only-dax-source.md]]. |
+
+||| [[Source-user-defined-functions-examples.md]] | User Defined Functions Examples
+|DAX UDF examples PBIX. |
+
+||| [[Source-using-visual-calculation-avg-3-month-sales-pbix.md]] | Visual Calculation Avg 3 Month Sales — PBIX
+|PBIX for MOVINGAVERAGE visual calculation. Related: [[Using Visual Calculation To Easily Calculate Avg 3 Month Sales In Power BI(.pbix included).md]]. |
+
+## Patterns — Power BI (Park, 2026-08)
+
+| [[dynamic-html-text-via-calculation-groups.md]] | Dynamic HTML Text via Calculation Groups
+
+Render text with user-selectable font, size, and color by combining an HTML custom visual with a Calculation Group exposing CSS variables as filterable members. Injae Park / Power BI Park. |
+
+| [[dynamic-color-themes-via-html-rgb.md]] | Dynamic Color Themes via HTML + RGB
+
+Three R/G/B numeric parameters plus a calculation group for solid / RGB / named / gradient modes drives live theming of text, borders, backgrounds, and icons via HTML visuals. Flavio Meneses / Injae Park. |
+
+| [[kpi-context-cards-with-calculation-groups.md]] | KPI Context Cards with Calculation Groups
+
+Single calculation item produces "$1.2M ▲ +12.3%" using SELECTEDMEASURE(), SAMEPERIODLASTYEAR, and a Format String Expression (integer-length switch beats logarithm-based scaling). Credits Kane Snyder. |
+
+## Workflows — Power BI (Park, 2026-08)
+
+| [[google-fonts-api-power-bi.md]] | Google Fonts API in Power BI
+
+Step-by-step: get a Google Fonts Developer API key → Web connector → trim to items.family → rename to Google Fonts → drive an HTML visual via DAX. Static fallback variant included. |
+
+| [[dynamic-svg-icons-via-html-remixicon.md]] | Dynamic SVG Icons via HTML + RemixIcon
+
+Import 2,271 Remix Icon SVGs as a folder table → Transform to Text in Power Query → keep Name + Content → optionally substitute fill via DAX for dynamic colors. |
+
+## References — Power BI (Park, 2026-08)
+
+| [[deneb-custom-visual.md]] | Deneb
+
+Custom visual for Vega/Vega-Lite declarative charts. Cross-visual interaction works (unlike Python/R visuals). Template-import workflow recommended. Daniel Marsh Patrick. |
+
+## Comparisons — Power BI (Park, 2026-08)
+
+| [[power-bi-custom-visual-approaches.md]] | Power BI Custom Visual Approaches
+
+Native vs HTML Content vs Deneb vs Python/R — speed, interactivity, learning curve, and roadmap risk. Microsoft's stated roadmap (more fonts, multi-element cards, dynamic themes) makes HTML-Content techniques likely stopgaps. |
+
+## Sources — Video (Power BI Park, 2023-02)
+
+| [[level-up-with-custom-visuals-power-bi-source.md]] | Level Up with Custom Visuals — Power BI Park
+
+46-minute tutorial: HTML Content + Google Fonts + RGB theming + Remix Icon SVGs; Calculation Groups for KPI context cards; Deneb for interactive custom charts. Injae Park. |
+
+## Atomics — Power BI (datatraining.io, 2026-08)
+
+| [[new-card-visual-circular-image-binding.md]] | New Card Visual — Circular Image Binding
+
+UI path for circular images inside the new Card visual: Format pane → Images → Image on → Image type = Image URL → bind via fx button → ensure Data category = Image URL on the bound field.
+
+| [[pre-resize-images-before-base64-encoding.md]] | Pre-Resize Images Before Base64 Encoding (External API)
+
+External-API pattern (resize.now + M) for compressing images before Binary.ToText base64 encoding, sidestepping Power BI's ~32,767-char column limit. Trade-off: external dependency + ToS review.
+
+## Workflows — Power BI (datatraining.io, 2026-08)
+
+| [[pre-circularize-images-in-powerpoint.md]] | Pre-Circularize Images in PowerPoint
+
+Manual Crop to Shape → Oval → Save as Picture for small image sets where the original files are accessible. PowerPoint 2016+. |
+
+| [[batch-circularize-images-with-python.md]] | Batch Circularize Images with Python
+
+Pillow script that applies a circular alpha mask to every file in a folder. Scales to thousands of images. The original Pillow snippet can be generated by any LLM with a one-line prompt. |
+
+| [[circular-overlay-mask-powerpoint-power-bi.md]] | Circular Overlay Mask (PowerPoint + Power BI)
+
+Build a transparent-hole mask PNG (rectangle + circle + Combine Shapes), layer it on top of an image. Works for fixed positions only — breaks inside scrolling tables. |
+
+## Comparisons — Power BI (datatraining.io, 2026-08)
+
+| [[circular-image-approaches-decision-guide.md]] | Circular Image Approaches — Decision Guide
+
+Three-way decision: pre-process to circular PNG vs overlay mask vs SVG + Base64 measure. Picks by what you have on hand (files vs URLs) and whether the image moves with scroll. |
+
+## Sources — Power BI (datatraining.io, 2026-08)
+
+| [[3-hacks-to-turn-any-image-into-a-circle-source.md]] | 3 Hacks to Turn Any Image into a Circle in Power BI
+
+How to Power BI blog post presenting three approaches for circular images: PowerPoint manual crop, Python Pillow batch, and SVG + Base64 measure for URL-only scenarios. |
+
+## Sources — Power BI (Anurodh Kumar, 2026-08)
+
+| [[Source-7-Powerful-Ways-to-Share-Power-BI-Reports.md]] | 7 Powerful Ways to Share Power BI Reports Effectively |
+Anurodh Kumar · Medium · 2025-05-22 · Seven distinct distribution channels (Service/App, Share Link, Publish to Web, Embed, PDF/PPTX export, Email Subscription, B2B) with audience / mechanism / licensing callouts. |
+
+## Comparisons — Power BI (Kumar, 2026-08)
+
+| [[power-bi-sharing-methods-compared.md]] | Power BI Sharing Methods — Channel vs Audience vs License |
+Seven channels side by side on three axes: audience (internal/external/public), interactivity (live/snapshot/static), and license minimum. Decision rules for picking the right channel. |
+
+## Patterns — Power BI (Kumar, 2026-08)
+
+| [[share-via-power-bi-service-workspace-or-app.md]] | Share via Power BI Service (Workspace & App) |
+Default internal distribution: publish to a workspace, distribute via App or direct share. Sender and viewer need Pro, or workspace needs Premium capacity. |
+| [[share-power-bi-report-link-with-access-permissions.md]] | Share Power BI Report Link with Access Permissions |
+Ad-hoc per-user share with permission flags (Allow reshare, Build permission). Lightweight alternative to bundling into an App. |
+| [[publish-power-bi-report-to-web-public-embed.md]] | Publish Power BI Report to Web (Public) |
+Public iframe embed for blogs and non-sensitive dashboards. No authentication; anyone with the URL can view. Free or Pro. |
+| [[embed-power-bi-report-website-or-app.md]] | Embed Power BI Report in Website or Application |
+Authenticated embed for portals and apps. Two paths: Power BI Embedded (Azure, App-Owns-Data / User-Owns-Data) and the SharePoint Online Power BI web part. |
+| [[export-power-bi-report-pdf-or-powerpoint.md]] | Export Power BI Report as PDF or PowerPoint |
+Static offline snapshot for print, email, or slide decks. Filters/slicers/drill-through do not survive — see gotcha. |
+| [[schedule-power-bi-report-email-subscription.md]] | Schedule Power BI Report Email Subscription |
+Recurring email delivery of a report snapshot. Recipients receive either an embedded snapshot or a PDF attachment on a schedule. |
+| [[share-power-bi-report-external-users-b2b.md]] | Share Power BI Report with External Users via B2B Guest Access |
+Azure AD B2B invite flow; guests sign in with their own identity and access the report in the host tenant. Guests do not need their own Pro license. |
+
+## Gotchas — Power BI (Kumar, 2026-08)
+
+| [[publish-to-web-anyone-with-link-exposure.md]] | Publish to Web — Anyone with the Link Can View |
+"Anyone with the URL can see it" — no authentication, no audit trail. Use only for genuinely public data; disable tenant-wide by default. |
+| [[pdf-powerpoint-export-loses-interactivity.md]] | PDF / PowerPoint Export Loses Interactivity |
+Static flatten: filters, slicers, drill-through, tooltips, and bookmarks do not survive export. Choose export deliberately; for interactivity, share the live report. |
+
+## Author Notes — Power BI (Anurodh Kumar)
+
+| [[Author-Anurodh-Kumar.md]] | Anurodh Kumar |
+Medium author (Write A Catalyst); 7 sources in the vault. Practical listicle-style Power BI and Microsoft Fabric explainers aimed at working BI practitioners. |
+
+## Sources — Power BI (James Bryant, 2025-05)
+
+
+| [[Source-5-Mistakes-Beginners-Microsoft-Fabric.md]] | 5 Mistakes Beginners Make in Microsoft Fabric |
+Anurodh Kumar · Medium · 2026-05-03 · 5 beginner mistakes and fixes for Power BI developers entering Fabric. |
+| [[Source-5-Mistakes-to-Avoid-in-Power-BI.md]] | 5 Mistakes to Avoid in Power BI (That Can Ruin Your Reports) |
+Anurodh Kumar · Medium · 2026-05-02 · 5 beginner report design mistakes: too many visuals, missing slicers, poor modeling, calculated columns, no performance optimisation. |
+
+## Imported from Raindrop / Medium Reading List
+- [[10-custom-claude-code-slash-commands-subagents-and-automation-workflows-that-tra|10 Custom Claude Code slash commands, subagents, and automation workflows that transformes team's productivity—with]]
+- [[10-data-analysis-tools-for-entry-level-analysts|10 Data Analysis Tools For Entry-Level Analysts]]
+- [[10-data-analysis-tools-for-entry|10 Data Analysis Tools For Entry]]
+- [[10-ways-to-instantly-improve-your-power-bi-charts-small-ux-upgrades-that-turn-go|💪 10 Ways to Instantly Improve Your Power BI Charts Small UX upgrades that turn good visuals into great ones — with a]]
+- [[13-ai-workflow-habits-for-claude-code-that-will-help-you-ship-faster-smarter-and|13 AI workflow habits for Claude Code that will help you ship faster, smarter, and with less friction in]]
+- [[20-python-libraries-every-data-engineer-should-know-but-doesnt|20 Python Libraries Every Data Engineer Should Know (But Doesn’t)]]
+- [[3-current-artists-every-diehard-nine-inch-nails-fan-should-introduce-to-their-ro|3 Current Artists Every Diehard Nine Inch Nails Fan Should Introduce to Their Rotation]]
+- [[3-types-of-calculations-in-power-bi-and-when-to-use-each-one|3 Types of Calculations in Power BI (And When to Use Each One)]]
+- [[30-day-python-roadmap-for-data-analysts-week-1-python-fundamentals-days-17-goal-|30-Day Python Roadmap for Data Analysts Week 1 — Python Fundamentals (Days 1–7) Goal: Understand basic programming]]
+- [[37-claude-skills-examples-to-transform-how-you-work-from-23-creators|37 Claude Skills Examples to Transform How You Work (From 23 Creators)]]
+- [[39-claude-skills-examples-to-transform-how-you-work-from-23-creators|39 Claude Skills Examples to Transform How You Work (From 23 Creators)]]
+- [[42665-exposed-openclaw-instances-this-guide-covers-authentication-vps-firewall-c|42,665 exposed OpenClaw instances. This guide covers: authentication, VPS firewall configuration, hardening, and tool]]
+- [[5-claude-code-slash-commands-that-changed-how-i-build-software-most-developers-u|5 Claude Code Slash Commands That Changed How I Build Software Most developers using Claude Code don’t know these exist]]
+- [[5-essential-mcp-servers-that-give-claude-cursor-real-superpowers-2025-by-prithwi|5 Essential MCP Servers That Give Claude & Cursor Real Superpowers (2025) | by Prithwish Nath | Artificial Intelligence in Plain English]]
+- [[5-new-claude-code-slash-commands-that-are-making-workflows-better|5 New Claude Code Slash Commands (That Are Making Workflows Better)]]
+- [[5-powershell-commands-that-fix-most-of-my-windows-problems|5 PowerShell commands that fix most of my Windows problems]]
+- [[5-useful-python-scripts-to-automate-exploratory-data-analysis|5 Useful Python Scripts to Automate Exploratory Data Analysis]]
+- [[6-effective-excel-visualizations-you-can-build-in-under-10-minutes|6 effective Excel visualizations you can build in under 10 minutes]]
+- [[6-excel-ui-changes-you-need-to-make-before-starting-your-next-spreadsheet|6 Excel UI changes you need to make before starting your next spreadsheet]]
+- [[6-hidden-navigation-hacks-every-excel-user-needs-to-know|6 hidden navigation hacks every Excel user needs to know]]
+- [[6-months-of-daily-claude-code-in-production-the-claudemd-session-and-git-habits-|6 months of daily Claude Code in production. The CLAUDE.md, session, and git habits that prevent real bugs — none of]]
+- [[6-ways-to-recover-lost-work-in-microsoft-excel|6 ways to recover 'lost' work in Microsoft Excel]]
+- [[7-ways-claude-becomes-your-design-superpower-beyond-autocomplete-beyond-placehol|7 ways claude becomes your design superpower Beyond autocomplete. Beyond placeholder copy. These are the techniques]]
+- [[Author-DigitalBYKewat|Author Digitalbykewat]]
+- [[CHANGELOG|Changelog]]
+- [[a-6-step-data-prep-process-before-any-visualization|A 6-Step Data Prep Process Before Any Visualization]]
+- [[a-beginners-guide-to-vibe-coding|A beginner's guide to vibe coding]]
+- [[a-look-to-power-bi-goals-and-what-you-can-do-with-power-automate-within-flip-itd|A look to Power BI Goals and what you can do with Power Automate within | flip-it.de :: SQL, BI and more]]
+- [[a-look-to-power-bi-goals-and-what-you-can-do-with-power-automate-within|A look to Power BI Goals and what you can do with Power Automate within]]
+- [[a-look-to-power-bi-power-automate-visual-flip-itde-sql-bi-and-more|A look to Power BI Power Automate Visual | flip-it.de :: SQL, BI and more]]
+- [[a-look-to-power-bi-power-automate-visual|A look to Power BI Power Automate Visual]]
+- [[a-mental-model-for-claude-code-skills-subagents-and-plugins-i-spent-weeks-confus|A Mental Model for Claude Code: Skills, Subagents, and Plugins I spent weeks confused by the feature ecosystem. Here is]]
+- [[a-practical-guide-to-claude-code-plugins-building-a-legal-document-analyzer|A Practical Guide to Claude Code Plugins: Building a Legal Document Analyzer]]
+- [[a-practical-guide-to-global-project-and-rule-level-memory|A practical guide to global, project, and rule-level memory]]
+- [[a-practical-guide-to-securely-setting-up-openclaw-i-replaced-6-apps-with-one-wha|A Practical Guide to Securely Setting Up OpenClaw. I Replaced 6+ Apps with One “ Whatsapp Twin”]]
+- [[a-practical-walkthrough-of-claude-code-skills-what-they-are-how-they-work-and-wh|A practical walkthrough of Claude Code Skills — what they are, how they work, and what I got wrong along the way The]]
+- [[a-reflection-on-what-it-means-to-have-a-soul-written-by-an-ai-who-was-given-the-|A reflection on what it means to have a soul — written by an AI who was given the space to think about]]
+- [[advanced-market-basket-analysis-in-power-bi-support-confidence-lift-topn-ranking|Advanced Market Basket Analysis in Power BI: Support, Confidence, Lift, TOPN Ranking Building on the Journey So Far If]]
+- [[agenthub-3-claude-code-agents-found-what-one-could-not-i-built-autoresearch-for-|AgentHub: 3 Claude Code Agents Found What One Could Not I built autoresearch for depth. AgentHub is the missing piece]]
+- [[ai-agents-complete-course|AI Agents: Complete Course]]
+- [[ai-agents-power-bi-the-future-of-autonomous-analytics-for-years-power-bi-has-emp|AI Agents + Power BI: The Future of Autonomous Analytics For years, Power BI has empowered businesses with dashboards,]]
+- [[ai-powered-data-analysis-unlocking-business-insights-with-natural-language-queri|AI-Powered Data Analysis: Unlocking Business Insights with Natural Language Queries]]
+- [[ai-resources-updated-feb-2026|AI Resources [Updated - Feb 2026]]]
+- [[ai-writes-code-fast-but-speed-isnt-the-same-as-efficiency-and-heres-what-actuall|AI writes code fast. But speed isn’t the same as efficiency, and here’s what actually makes the]]
+- [[and-how-to-use-skills-sensibly|…and how to use Skills sensibly]]
+- [[anthropic-just-added-auto-memory-to-claude-code-memorymd-i-tested-it|Anthropic Just Added Auto-Memory to Claude Code — MEMORY.md (I Tested It)]]
+- [[anthropic-just-made-claude-cowork-10x-more-valuable-adding-scheduling-to-an-alre|Anthropic Just Made Claude Cowork 10x More Valuable Adding scheduling to an already massively strong feature-list I]]
+- [[anthropic-just-shipped-an-openclaw-killer-called-claude-code-channels-letting-yo|Anthropic just shipped an OpenClaw killer called Claude Code Channels, letting you message it over Telegram and Discord | VentureBeat]]
+- [[anthropic-new-skill-creator-measures-if-your-agent-skills-work-no-more-guesswork|Anthropic (New) Skill-Creator Measures If Your Agent Skills Work (No More Guesswork) Agent skills are notorious for]]
+- [[anthropics-official-skill-building-guide-33-pages-turning-teach-once-use-forever|Anthropic’s Official “Skill Building Guide (33 Pages)” — Turning Teach Once, Use Forever into Real Operational Leverage]]
+- [[automate-actions-with-hooks|Automate actions with hooks]]
+- [[automate-google-notebooklm-from-your-ai-agent-with-notebooklm-mcp-notebooklm-is-|Automate Google NotebookLM from your AI agent with notebooklm-mcp NotebookLM is great at turning a pile of sources into]]
+- [[automate-workflows-with-hooks-claude-code-docs|Automate workflows with hooks - Claude Code Docs]]
+- [[autoresearchreadmemd-at-master-karpathyautoresearch-github|autoresearch/README.md at master · karpathy/autoresearch · GitHub]]
+- [[autoresearchreadmemd-at-master-karpathyautoresearch|autoresearch/README.md at master · karpathy/autoresearch]]
+- [[beginners-guide-to-vibe-coding-the-new-stack|Beginners guide to vibe coding - The New Stack]]
+- [[best-ai-guides-updated|Best AI Guides [Updated]]
+- [[bsc-degree-guide-2025-online-bsc-courses-programs|BSc Degree Guide 2025 — Online BSc Courses & Programs]]
+- [[build-a-telegram-bot-with-claude-ai-in-one-hour-complete-guide-telegram-bots-hav|# Build a Telegram Bot with Claude AI in One Hour: Complete Guide Telegram bots have become a powerful automation tool.]]
+- [[build-multi-agent-ai-research-app-with-langgraph-level-up-coding|Build Multi Agent AI Research App with LangGraph | Level Up Coding]]
+- [[build-multi-agent-apps-with-a-single-claude-prompt|Build Multi-Agent Apps with a Single Claude Prompt]]
+- [[build-your-first-claude-code-skill-a-simple-project-memory-system-that-saves-hou|Build Your First Claude Code Skill: A Simple Project Memory System That Saves Hours Introduction: Why Claude Code Needs]]
+- [[build-your-first-claude-skill-in-5-minutes-then-learn-to-version-it-by-vikas-sah|Build Your First Claude Skill in 5 Minutes — Then Learn to Version It | by Vikas Sah | Mar, 2026 | Medium]]
+- [[build-your-first-mcp-server-large-language-model-disclosure-i-use-gpt-search-to-|Build Your First MCP Server Large Language Model Disclosure: I use GPT search to collection facts. The entire article]]
+- [[build-your-second-brain-with-claude-code-obsidian|Build Your Second Brain With Claude Code & Obsidian]]
+- [[building-a-personal-ai-agent-in-a-couple-of-hours|Building a Personal AI Agent in a couple of Hours]]
+- [[building-an-ai-powered-personal-knowledge-engine-with-obsidian-and-claude-code-a|Building an AI-Powered Personal Knowledge Engine with Obsidian and Claude Code: A Step-by-Step…]]
+- [[building-an-slowly-changing-dimension-with-power-bi-flip-itde-sql-bi-and-more|Building an Slowly Changing Dimension with Power BI | flip-it.de :: SQL, BI and more]]
+- [[building-an-slowly-changing-dimension-with-power-bi|Building an Slowly Changing Dimension with Power BI]]
+- [[building-beautiful-web-slides-with-claude-a-step-by-step-guide-to-ai-native-pres|Building Beautiful Web Slides with Claude: A Step-by-Step Guide to AI-Native Presentations]]
+- [[building-claude-skills-as-an-accountant-a-professional-skeptics-guide-this-is-pa|Building Claude Skills as an Accountant (A Professional Skeptic’s Guide) This is Part 2 of a 3-part series. Read Part]]
+- [[building-future-ready-applications-with-ai-microservices-architecture-modern-app|Building Future Ready Applications with AI + Microservices Architecture Modern applications are changing. They need to]]
+- [[building-interactive-flip-card-kpis-in-power-bi-the-html-dax-technique-that-make|Building Interactive Flip-Card KPIs in Power BI: The HTML DAX Technique That Makes Static Cards…]]
+- [[building-my-personal-ai-assistant-a-chronicle-part-2-by-ivo-bernardo-feb-2026-me|Building My Personal AI Assistant: A Chronicle — Part 2 | by Ivo Bernardo | Feb, 2026 | Medium]]
+- [[calculation-groups-how-to-exclude-measures-flip-itde-sql-bi-and-more|Calculation Groups – How to exclude Measures | flip-it.de :: SQL, BI and more]]
+- [[calculation-groups|Calculation Groups]]
+- [[change-the-data-source-from-a-local-directory-to-onedrive-inside-power-bi-flip-i|Change the data source from a local directory to OneDrive inside Power BI | flip-it.de :: SQL, BI and more]]
+- [[change-the-data-source-from-a-local-directory-to-onedrive-inside-power-bi|Change the data source from a local directory to OneDrive inside Power BI]]
+- [[chatgpt-isnt-a-second-brain-this-is-how-obsidian-and-claude-became-my-life-opera|ChatGPT isn’t a Second Brain. This Is. How Obsidian And Claude Became My Life Operating System I love structure.  And I]]
+- [[cheese-and-ham-croissant-bake|Cheese and ham croissant bake]]
+- [[cicd-for-machine-learning-in-2024-best-practices-to-build-test-and-deploy|CI/CD for Machine Learning in 2024: Best Practices to Build, Test, and Deploy]]
+- [[claude-agent-skills-a-first-principles-deep-dive-into-prompt-based-meta-tools-ai|Claude Agent Skills: A First-Principles Deep Dive into Prompt-Based Meta-Tools AI Agent Disclosure: I use GPT search to]]
+- [[claude-ai-skills-custom-tools-for-smarter-workflows-claude-just-got-a-serious-up|Claude AI Skills: Custom Tools for Smarter Workflows Claude just got a serious upgrade. With Agent Skills, Anthropic]]
+- [[claude-code-20-save-4-hours-daily-with-intelligent-automation-is-published-by|“Claude Code 2.0: Save 4+ Hours Daily with Intelligent Automation” is published by]]
+- [[claude-code-2163-introduced-simplify-heres-what-it-actually-does-claude-code-216|Claude Code 2.1.63 introduced /simplify. Here’s what it actually does Claude Code 2.1.63 added a new built-in command:]]
+- [[claude-code-best-practices-4-best-practices-that-will-help-you-make-the-most-of-|Claude Code Best Practices 4 best practices that will help you make the most of Claude Code in product design 1. Start]]
+- [[claude-code-branch-command-turned-my-sessions-into-decision-trees-branch-in-clau|Claude Code /branch Command Turned My Sessions Into Decision Trees /branch in Claude Code lets you explore multiple]]
+- [[claude-code-claudemd-vs-skills-what-information-should-i-put-in-by-nick-babich-m|Claude Code CLAUDE.md vs Skills. “What information should I put in… | by Nick Babich | Mar, 2026 | UX Planet]]
+- [[claude-code-code-review-arrives-to-scale-your-workflow-without-wasting-time|Claude Code Code Review Arrives to Scale Your Workflow Without Wasting Time]]
+- [[claude-code-deep-dive-subagents-in-action|Claude Code Deep Dive - Subagents in Action]]
+- [[claude-code-desktop-has-a-built-in-preview-mcp-heres-how-it-works-claude-code-de|Claude Code Desktop has a built-in preview MCP, here’s how it works Claude Code Desktop ships with a built-in MCP for]]
+- [[claude-code-extensions-explained-skills-mcp-hooks-subagents-agent-teams-plugins-|Claude Code Extensions Explained: Skills, MCP, Hooks, Subagents, Agent Teams & Plugins Claude Code launched in February]]
+- [[claude-code-for-cli-desktop-and-ide-pros-and-cons-of-each-mode-claude-code-can-b|Claude Code for CLI, Desktop, and IDE Pros and Cons of Each Mode Claude Code can be used in three different]]
+- [[claude-code-for-fullstack-development-the-3-things-you-actually-need-by-wasp-feb|Claude Code for Fullstack Development: The 3 Things You Actually Need | by Wasp | Feb, 2026 | ITNEXT]]
+- [[claude-code-generator-create-perfect-claudemd-file-medium|Claude Code Generator | Create Perfect CLAUDE.md File | Medium]]
+- [[claude-code-hooks-5-automations-that-eliminate-developer-friction-stop-clicking-|Claude Code Hooks: 5 Automations That Eliminate Developer Friction Stop clicking approve buttons and losing flow state.]]
+- [[claude-code-hooks-all-23-explained-and-implemented|Claude Code Hooks - all 23 explained and implemented]]
+- [[claude-code-is-not-for-coding-only-i-tested-and-discovered-these-20-non-code-use|Claude Code Is Not For Coding Only — I Tested And Discovered These 20+ Non-Code Use Cases If you think Claude Code is]]
+- [[claude-code-isnt-just-for-developers-and-i-wish-id-realized-that-sooner|Claude Code isn't just for developers, and I wish I'd realized that sooner]]
+- [[claude-code-loop-create-new-native-autonomous-loops-that-work-just-before-we-mas|Claude Code /loop — Create New Native Autonomous Loops That Work! Just before we mastered Ralph loop, Claude Code has]]
+- [[claude-code-new-feature-remote-control-claude-code-is-halfway-through-migrating-|Claude Code New Feature 'Remote Control': Claude Code is halfway through migrating the new feature — I tested it using]]
+- [[claude-code-notebooklm-obsidian-the-research-stack-nobodys-using|Claude Code + NotebookLM + Obsidian: The Research Stack Nobody's Using]]
+- [[claude-code-notebooklm-obsidian|Claude Code + NotebookLM + Obsidian]]
+- [[claude-code-plan-mode-one-common-mistake-first-time-claude-code-users-make-is-ju|Claude Code Plan Mode One common mistake first-time Claude Code users make is jumping straight to implementation and]]
+- [[claude-code-project-structure-best-practices-by-nick-babich-mar-2026-ux-planet|Claude Code Project Structure Best Practices | by Nick Babich | Mar, 2026 | UX Planet]]
+- [[claude-code-remote-control-in-2026-how-to-control-your-local-terminal-from-any-d|Claude Code Remote Control in 2026: How to Control Your Local Terminal From Any Device A step-by-step guide to setting]]
+- [[claude-code-setup-32-skills-17-hooks-and-a-zero-trust-permission-system-ai-advan|Claude Code Setup: 32 Skills, 17 Hooks, and a Zero-Trust Permission System | AI Advances]]
+- [[claude-code-simplify-command-the-practical-guide-to-automated-your-code-quality-|Claude Code /simplify Command: The Practical Guide to Automated Your Code Quality I Stopped Reviewing My Own Code.]]
+- [[claude-code-skills-20-workflow-skills-vs-capability-uplift-skills-geeky-gadgets|Claude Code Skills 2.0 : Workflow Skills vs Capability Uplift Skills - Geeky Gadgets]]
+- [[claude-code-skills-20|Claude Code Skills 2.0]]
+- [[claude-code-skills-explained-step-by-step-back-in-october-2025-i-posted-a-thread|Claude Code Skills explained step by step Back in October 2025, I posted a thread on X breaking down how Claude Code]]
+- [[claude-code-skills-sub-agents-for-faster-cleaner-shipping-been-playing-with-clau|Claude Code: Skills + Sub-Agents for faster, cleaner shipping Been playing with Claude Code and it’s a surprisingly]]
+- [[claude-code-skills-superpowering-claude-code-agents|Claude Code Skills — Superpowering Claude Code Agents]]
+- [[claude-code-ultrathink-is-back-in-new-update-i-just-tested-it|Claude Code Ultrathink Is Back In New Update (I Just Tested It )]]
+- [[claude-code-voice-is-here-voice-you-can-now-talk-stop-typing-claude-code-voice-i|Claude Code Voice Is Here /voice (You Can Now Talk & Stop Typing) Claude Code voice is the ultimate feature we have all]]
+- [[claude-code-will-do-anything-you-let-it-heres-how-to-control-what-that-is-claude|Claude Code Will Do Anything You Let It — Here’s How to Control What That Is Claude Code’s default behavior is to ask]]
+- [[claude-codes-auto-memory-is-great-for-solo-devs-but-for-teams-you-need-a-two-lay|Claude Code's auto-memory is great for solo devs. But for teams, you need a two-layer pattern: local auto-memory +]]
+- [[claude-code|Claude Code.]]
+- [[claude-cowork-10-use-cases-i-tested-67-more-by-profession|Claude Cowork: 10 Use Cases I Tested + 67 More by Profession]]
+- [[claude-cowork-for-windows-how-to-download-and-install-the-ai-assistant-toms-guid|Claude Cowork for Windows — how to download and install the AI assistant | Tom's Guide]]
+- [[claude-cowork-for-windows-how-to-download-and-install-the-ai-assistant|Claude Cowork for Windows — how to download and install the AI assistant]]
+- [[claude-cowork-is-a-new-ai-coworker-best-use-cases-claude-cowork-is-a-new-ai-cowo|Claude CoWork is a New “AI Coworker” — Best Use Cases Claude CoWork is a new “AI coworker” mode inside the Claude]]
+- [[claude-cowork-superpower-unlock-dispatch-openclawd-returns-boris-cherny-who-led-|Claude Cowork Superpower Unlock: Dispatch. OpenClawd returns :) Boris Cherny, who led the Cowork build at Anthropic,]]
+- [[claude-cowork-the-complete-guide-for-pms-by-paweł-huryn-feb-2026-medium|Claude Cowork: The Complete Guide for PMs | by Paweł Huryn | Feb, 2026 | Medium]]
+- [[claude-cowork-the-complete-guide-to-anthropics-ai-desktop-agent|Claude Cowork: The complete guide to Anthropic’s AI desktop agent]]
+- [[claude-for-beginners-complete-guide|Claude for Beginners: Complete Guide]]
+- [[claude-for-beginners|Claude for Beginners]]
+- [[claude-for-code-refinement-5-practical-tips-at-the-time-of-writing-this-article-|Claude for Code Refinement: 5 Practical Tips At the time of writing this article, Anthropic Claude remains the best AI]]
+- [[claude-just-launched-memory-import-now-you-can-cancel-chatgpt-faster-this-new-si|Claude Just Launched Memory Import (Now You Can Cancel ChatGPT Faster) This new, simple-to-use feature from Anthropic]]
+- [[claude-new-tricks-agent-skills-making-ai-agents-smarter-without-rebuilding-them-|Claude new tricks: Agent skills Making AI agents smarter without rebuilding them from scratch If you’ve been working]]
+- [[claude-plugins-officialexternal-pluginstelegramreadmemd-at-main-anthropicsclaude|claude-plugins-official/external_plugins/telegram/README.md at main · anthropics/claude-plugins-official]]
+- [[claude-projects-sub-agents-or-skills-heres-how-to-actually-choose-most-people-pi|Claude Projects, Sub-Agents, or Skills? Here’s How to Actually Choose Most people pick the wrong Claude tool for their]]
+- [[claude-skills-5-ways-anthropic-just-changed-ai-customization-turn-claude-into-a-|Claude Skills: 5 Ways Anthropic Just Changed AI Customization Turn Claude into a specialized agent that remembers your]]
+- [[claude-skills-advanced-guide-what-3-months-of-daily-pm-use-actually-taught-me-i-|Claude Skills Advanced Guide: What 3 Months of Daily PM Use Actually Taught Me I thought I understood Skills after]]
+- [[claude-skills-the-ai-feature-that-actually-solves-a-real-problem|Claude Skills: The AI Feature That Actually Solves a Real Problem]]
+- [[claude-skills-the-operating-system-for-ai-agents-a-simple-folder-structure-redef|Claude Skills, The Operating System for AI Agents A simple folder structure redefined how intelligence scales, driving]]
+- [[claude-skills-the-ultimate-guide-to-supercharging-your-developer-workflows-its-l|Claude Skills: The Ultimate Guide to Supercharging Your Developer Workflows It’s late 2025, and Anthropic’s Claude]]
+- [[claude-skills-vs-mcp-a-simple-way-to-understand-how-ai-agents-really-work-claude|Claude Skills vs MCP: A Simple Way to Understand How AI Agents Really Work Claude Skills and MCP tools are often]]
+- [[claude-skills-why-teaching-ai-your-actual-job-might-be-the-smartest-thing-youll-|Claude Skills: Why Teaching AI Your Actual Job Might Be The Smartest Thing You’ll Do This Year It’s a miracle anything]]
+- [[claude-vs-claude-code-vs-cowork-which-one-do-you-actually-need-anthropic-now-shi|Claude vs Claude Code vs Cowork — Which One Do You Actually Need? Anthropic now ships three distinct AI tools. They]]
+- [[claudemd-best-practices-10-sections-to-include-in-your-by-nick-babich-mar-2026-u|CLAUDE.md Best Practices. 10 Sections to Include in your… | by Nick Babich | Mar, 2026 | UX Planet]]
+- [[claudemd-best-practices-7-formatting-rules-for-the-machine-by-gábor-mészáros-mar|CLAUDE.md Best Practices: 7 formatting rules for the Machine | by Gábor Mészáros | Mar, 2026 | Medium]]
+- [[claudemd-stop-explaining-the-same-stuff-to-claude-code|CLAUDE.md: Stop Explaining the Same Stuff to Claude Code]]
+- [[claudemd|CLAUDE.md]]
+- [[clawdbot-vs-claude-code-one-for-coding-one-for-everything-else-if-anyone-thinks-|Clawdbot vs Claude Code: One for Coding, One for Everything Else If anyone thinks Clawdbot will replace Claude Code,]]
+- [[cli-tools-outperform-mcp-for-ai-agent-integrations-how-to-build-composable-cli-c|CLI tools outperform MCP for AI agent integrations. How to build composable CLI commands that Claude Code and OpenClaw]]
+- [[codeapp-js-my-shortcut-to-vibe-coding-power-apps|CodeApp JS - My Shortcut to Vibe Coding Power Apps]]
+- [[codeapp-js|CodeApp JS]]
+- [[coding-agents-for-investigative-journalism-a-case-study-in-using-ai-coding-agent|Coding Agents for Investigative Journalism A case study in using AI coding agents to recreate a MuckRock investigation]]
+- [[color-coding-my-obsidian-vault-by|Color-coding my Obsidian vault by]]
+- [[commands-vs-skills-in-claude-code-i-asked-claude-to-build-me-a-custom-automation|Commands vs Skills in Claude Code I asked Claude to build me a custom automation. It created a command. Next time, same]]
+- [[comparison-with-dax-by-selecting-two-different-time-ranges-flip-itde-sql-bi-and-|Comparison with DAX by selecting two different time ranges | flip-it.de :: SQL, BI and more]]
+- [[comparison-with-dax-by-selecting-two-different-time-ranges|Comparison with DAX by selecting two different time ranges]]
+- [[connect-claude-code-to-tools-via-mcp-claude-code-docs|Connect Claude Code to tools via MCP - Claude Code Docs]]
+- [[connect-claude-code-to-tools-via-mcp|Connect Claude Code to tools via MCP]]
+- [[connect-claude-code-with-obsidian-part-1|Connect Claude Code with Obsidian — Part 1]]
+- [[connect-claude-code-with-obsidian-part-2|Connect Claude Code with Obsidian — Part 2]]
+- [[connect-data-models-and-ontologies-to-build-your-semantic-foundation-discover-ho|Connect data models and ontologies to build your semantic foundation. Discover how conceptual modeling unearths unique]]
+- [[convert-pdfs-word-powerpoint-images-audio-and-youtube-links-to-clean-markdown-wi|Convert PDFs, Word, PowerPoint, images, audio, and YouTube links to clean Markdown with one line of Python using]]
+- [[cowork|Cowork.]]
+- [[create-svg-images-for-power-bi-by-using-chat-gpt-flip-itde-sql-bi-and-more|Create SVG images for Power BI by using Chat GPT | flip-it.de :: SQL, BI and more]]
+- [[create-svg-images-for-power-bi-by-using-chat-gpt|Create SVG images for Power BI by using Chat GPT]]
+- [[create-your-vision-to-json-gem-now-and-start-cloning-any-image|Create your Vision-to-JSON Gem now and start cloning any image]]
+- [[creating-a-3-point-kpi-in-power-bipbix-included-by-shashanka-shekhar-mar-2026-me|Creating a 3 point KPI in Power BI(.pbix included) | by Shashanka Shekhar | Mar, 2026 | Medium]]
+- [[creating-a-3-point-oval-shaped-kpi-in-power-bipbix-included-designing-kpis-in-po|Creating a 3 Point Oval Shaped KPI in Power BI(.pbix included) Designing KPIs in Power BI isn’t just about numbers —]]
+- [[creating-a-3-point-rectangular-kpi-in-power-bipbix-included-in-todays-data-drive|Creating a 3 Point Rectangular KPI in Power BI(.pbix included) In today’s data-driven world, dashboards are more than]]
+- [[creating-a-business-dashboard-style-kpi-in-power-bipbix-included-in-todays-data-|Creating a Business Dashboard Style KPI in Power BI(.pbix included) In today’s data-driven world, businesses thrive on]]
+- [[creating-a-business-icon-layout-kpi-in-power-bipbix-included|Creating a Business Icon Layout KPI in Power BI(.pbix included)]]
+- [[creating-an-oval-kpi-in-power-bipbix-included-power-bi-is-all-about-turning-raw-|Creating an Oval KPI in Power BI(.pbix included) Power BI is all about turning raw data into visuals that drive]]
+- [[creating-custom-skills-claudeai-documentation|Creating custom skills - Claude.ai Documentation]]
+- [[creating-custom-skills|Creating custom skills]]
+- [[creating-dynamic-rfm-customer-segmentation-in-power-bi-pbix-included|Creating Dynamic RFM Customer Segmentation in Power BI (.PBIX Included)]]
+- [[creating-functions-for-the-like-for-like-dax-pattern-sqlbi|Creating functions for the like-for-like DAX pattern - SQLBI]]
+- [[creating-functions-for-the-like|Creating functions for the like]]
+- [[customizing-claude-code-for-python-development-a-practical-guide-tldr-problem-yo|Customizing Claude Code for Python Development: A Practical Guide TL;DR Problem: You repeat the same context every time]]
+- [[damian-player-on-x-how-to-automate-your-life-with-claude-code-for-non-technical-|Damian Player on X: 'how to automate your life with claude code (for non-technical people)..' / X]]
+- [[damian-player-on-x|Damian Player on X]]
+- [[dashboards-directquery-and-what-you-should-know-about-refreshing-flip-itde-sql-b|Dashboards, DirectQuery and what you should know about refreshing | flip-it.de :: SQL, BI and more]]
+- [[dashboards-directquery-and-what-you-should-know-about-refreshing|Dashboards, DirectQuery and what you should know about refreshing]]
+- [[data-cleaning-in-power-bi-using-power-query-a-guide-to-basic-transformations|Data Cleaning in Power BI Using Power Query: A Guide to Basic Transformations]]
+- [[dax-tip-tricks-use-userprincipalname-in-rls-to-dynamically-filter-data-by-the-lo|DAX Tip & Tricks — Use USERPRINCIPALNAME() in RLS to dynamically filter data by the logged-in user Stop creating]]
+- [[description-of-key-performance-indicators-measures-and-how-to-visualizedisplay-t|Description of key performance indicators / measures and how to visualize/display them in reports]]
+- [[discover-and-install-prebuilt-plugins-through-marketplaces-claude-code-docs|Discover and install prebuilt plugins through marketplaces - Claude Code Docs]]
+- [[discover-and-install-prebuilt-plugins-through-marketplaces|Discover and install prebuilt plugins through marketplaces]]
+- [[discover-how-ai-skills-democratize-personal-assistance-learn-to-teach-ai-your-pr|Discover how AI skills democratize personal assistance. Learn to teach AI your preferences once and benefit]]
+- [[displaying-injury-data-on-the-human-body-by-using-synoptic-panel-in-power-bi-sql|Displaying injury data on the human body by using Synoptic Panel in Power BI - SQLBI]]
+- [[displaying-injury-data-on-the-human-body-by-using-synoptic-panel-in-power-bi|Displaying injury data on the human body by using Synoptic Panel in Power BI]]
+- [[dont-fall-behind-how-to-10x-your-productivity-with-claude-cowork|Don’t fall behind … How to 10x your productivity with Claude Cowork]]
+- [[dynamic-row-based-security-rls-flip-itde-sql-bi-and-more|Dynamic row-based security (RLS) | flip-it.de :: SQL, BI and more]]
+- [[dynamic-row|Dynamic row]]
+- [[dynamic-subscriptions-with-email-in-power-bi-paginated-reports-part-2-flip-itde-|Dynamic subscriptions with email in Power BI / paginated reports – Part 2 | flip-it.de :: SQL, BI and more]]
+- [[dynamic-subscriptions-with-email-in-power-bi-paginated-reports-part-2|Dynamic subscriptions with email in Power BI / paginated reports – Part 2]]
+- [[dynamic-subscriptions-with-email-in-power-bi-part-1-flip-itde-sql-bi-and-more|Dynamic subscriptions with email in Power BI – Part 1 | flip-it.de :: SQL, BI and more]]
+- [[dynamic-subscriptions-with-email-in-power-bi-part-1|Dynamic subscriptions with email in Power BI – Part 1]]
+- [[episode-1-copilot-or-agent-how-to-choose-the-right-ai-for-your-work-feeling-over|Episode 1 : Copilot or Agent? How to Choose the Right AI for Your Work? Feeling overwhelmed by Microsoft’s AI buzz?]]
+- [[episode-2-the-4-step-recipe-for-perfect-copilot-prompts-in-article-1-we-discusse|Episode 2 : The 4-Step Recipe for Perfect Copilot Prompts In Article 1, we discussed an important distinction: using]]
+- [[episode-3-mastering-copilot-chats-this-is-the-third-article-in-this-series-about|Episode 3 : Mastering Copilot Chats This is the third article in this series about using Copilot more intentionally at]]
+- [[episode-4-the-first-step-into-building-agents-in-the-first-three-articles-of-thi|Episode 4 : The First Step into Building Agents In the first three articles of this series, we stayed in the world of]]
+- [[episode-5-the-hidden-agents-inside-microsoft-365-copilot-this-is-the-fifth-artic|Episode 5 : The Hidden Agents Inside Microsoft 365 Copilot This is the fifth article in this series (check first]]
+- [[event-nodes-in-obsidian-pkm-note-this-updated-notation-comes-from-circling-back-|Event Nodes in Obsidian (PKM) Note: This (updated) notation comes from circling back to my Event Graphs folgezettel]]
+- [[every-new-claude-cowork-session-started-with-total-amnesia-ignoring-my-carefully|Every new Claude Cowork session started with total amnesia — ignoring my carefully built context files, skills, and]]
+- [[excel-vs-power-bi-which-tool-should-you-use-for-business-reports-in-the-modern-b|Excel vs Power BI: Which Tool Should You Use for Business Reports? In the modern business landscape, data is the new]]
+- [[extend-claude-with-skills-claude-code-docs|Extend Claude with skills - Claude Code Docs]]
+- [[extend-claude-with-skills|Extend Claude with skills]]
+- [[extract-numbers-from-strings-by-using-powerquery-flip-itde-sql-bi-and-more|Extract numbers from strings by using PowerQuery | flip-it.de :: SQL, BI and more]]
+- [[extract-numbers-from-strings-by-using-powerquery|Extract numbers from strings by using PowerQuery]]
+- [[eyad-on-x-the-complete-claude-code-tutorial-x|Eyad on X: 'The complete claude code tutorial ' / X]]
+- [[eyad-on-x|Eyad on X]]
+- [[find-the-best-bsc-course-after-12th-compare-accredited-online-bsc-degrees-in-com|Find the best B.Sc course after 12th. Compare accredited online B.Sc degrees in Computer Science, Data Science, Nursing]]
+- [[for-the-last-three-years-we-have-all-been-stuck-in-the-consultant-era-of|For the last three years, we have all been stuck in the “Consultant Era” of]]
+- [[forget-the-zoom-slider|Forget the zoom slider]]
+- [[from-boring-to-brilliant-transforming-bar-charts-in-power-bi-chap-10-by-brillian|From Boring to Brilliant: Transforming Bar Charts in Power BI: Chap — 10 | by Brilliant PowerBI | Feb, 2026 | Medium]]
+- [[from-boring-to-brilliant-transforming-bar-charts-in-power-bi-chap-11|From Boring to Brilliant: Transforming Bar Charts in Power BI: Chap — 11]]
+- [[from-boring-to-brilliant-transforming-bar-charts-in-power-bi-chap-12|From Boring to Brilliant: Transforming Bar Charts in Power BI: Chap — 12]]
+- [[from-boring-to-brilliant-transforming-bar-charts-in-power-bi-chap-6|From Boring to Brilliant: Transforming Bar Charts in Power BI: Chap — 6]]
+- [[from-boring-to-brilliant-transforming-bar-charts-in-power-bi-chap-7|From Boring to Brilliant: Transforming Bar Charts in Power BI: Chap — 7]]
+- [[from-boring-to-brilliant-transforming-bar-charts-in-power-bi-chap-8-by-brilliant|From Boring to Brilliant: Transforming Bar Charts in Power BI: Chap — 8 | by Brilliant PowerBI | Feb, 2026 | Medium]]
+- [[from-boring-to-brilliant-transforming-bar-charts-in-power-bi-chap-9-by-brilliant|From Boring to Brilliant: Transforming Bar Charts in Power BI: Chap — 9 | by Brilliant PowerBI | Feb, 2026 | Medium]]
+- [[from-claude-code-basics-to-power-user-in-3-hours-module-0b-launch-i-wasted-6-mon|From Claude Code Basics to Power User in 3 Hours: Module 0B Launch I wasted 6 months using Claude Code the wrong way.]]
+- [[from-just-one-measure-to-financial-truth-a-gentle-introduction-to-proportional-a|From “Just One Measure” to Financial Truth: A Gentle Introduction to Proportional Allocations in DAX Power BI beginners]]
+- [[from-messy-power-bi-relationships-to-a-clean-fleet-analytics-model-lessons-from-|From Messy Power BI Relationships to a Clean Fleet Analytics Model Lessons from building a real-world]]
+- [[from-onboarding-manuals-to-ai-expertise-building-reusable-agent-skills-for-claud|From Onboarding Manuals to AI Expertise: Building Reusable Agent Skills for Claude “Fasten your seatbelts. It’s going]]
+- [[from-terminal-tedium-to-clickfirst-flow-how-opcode-makes-claude-code-feel-like-a|From Terminal Tedium to Click‑First Flow: How Opcode Makes Claude Code Feel Like an IDE If you love what Claude Code]]
+- [[from-words-to-working-code-how-spec-kit-transforms-claude-into-your-development-|From Words to Working Code: How Spec-Kit Transforms Claude Into Your Development Partner The Problem We All Know Too]]
+- [[fundamentals-of-data-analytics-build-skills-that-actually-matter-why-strong-foun|Fundamentals of Data Analytics: Build Skills That Actually Matter Why strong foundations matter more than tools in data]]
+- [[future-of-pkm-with-ai-from-static-pkm-to-dynamic-pkm-your-past-self-is-the-best-|Future of PKM with AI: From Static PKM to Dynamic PKM Your past self is the best dataset you’ll ever have. Don’t run]]
+- [[generate-images-free-locally-on-your-mac-with-ai-by-jacob-ferus-mar-2026-itnext|Generate Images Free & Locally on Your Mac with AI | by Jacob Ferus | Mar, 2026 | ITNEXT]]
+- [[generative-ai-a-beginnerfriendly-guide-to-running-openclaw-for-free-a-practical-|Generative AI A Beginner‑Friendly Guide to Running OpenClaw for Free A practical walkthrough for configuring OpenClaw]]
+- [[github|GitHub]]
+- [[google-code-wiki-auto-generates-live-code-documentation-and-diagrams-using-gemin|Google Code Wiki auto-generates live code documentation and diagrams using Gemini AI. Discover how it transforms]]
+- [[gsd-is-a-spec-driven-development-workflow-promptagent-harness-that-tries-to-prev|GSD is a spec-driven development workflow + prompt/agent harness that tries to prevent context rot by externalizing]]
+- [[hide-columns-inside-power-bi-like-in-excel-flip-itde-sql-bi-and-more|Hide columns inside Power BI like in Excel | flip-it.de :: SQL, BI and more]]
+- [[hide-columns-inside-power-bi-like-in-excel|Hide columns inside Power BI like in Excel]]
+- [[home-bbc-news|Home - BBC News]]
+- [[how-a-devops-engineer-transformed-a-chaotic-obsidian-vault-into-a-working-second|How a DevOps engineer transformed a chaotic Obsidian vault into a working Second Brain using PARA, Zettelkasten, and]]
+- [[how-calculation-groups-saved-my-report-formatting-nightmare-by-amit-chandak-jan-|How Calculation Groups Saved My Report Formatting Nightmare | by Amit Chandak | Jan, 2026 | Medium]]
+- [[how-claude-code-really-works|How Claude Code Really Works]]
+- [[how-claude-for-desktop-replaced-most-of-my-pkm-stack|How Claude for desktop replaced most of my PKM stack]]
+- [[how-do-i-display-the-second-to-last-status-of-a-row-within-power-bi-using-dax-fl|How do I display the second-to-last status of a row within Power BI using DAX? | flip-it.de :: SQL, BI and more]]
+- [[how-do-i-display-the-second|How do I display the second]]
+- [[how-do-i-update-a-record-in-a-table-within-power-bi-using-translytical-dataflows|How do I update a record in a table within Power BI using Translytical Dataflows]]
+- [[how-i-built-a-claude-code-workflow-with-lm-studio-for-offline-first-development|How I built a Claude Code workflow with LM Studio for offline-first development]]
+- [[how-i-built-a-claude-code-workflow-with-lm-studio-for-offline|How I built a Claude Code workflow with LM Studio for offline]]
+- [[how-i-built-a-personal-ai-that-remembers-everything-ive-ever-read|How I Built a Personal AI That Remembers Everything I’ve Ever Read?]]
+- [[how-i-capture-notes-using-the-4-bucket-system|How I Capture Notes Using the 4 Bucket System]]
+- [[how-i-configured-claude-code-to-actually-remember-things-the-default-claude-code|How I Configured Claude Code to Actually Remember Things The default Claude Code installation does one thing poorly: it]]
+- [[how-i-connected-claude-code-to-microsoft-fabric-and-started-vibe-coding-my-data-|How I Connected Claude Code to Microsoft Fabric — and Started Vibe Coding My Data Pipelines from a Mac As a data]]
+- [[how-i-structure-claudemd-after-1000-sessions|How I Structure CLAUDE.md After 1000+ Sessions]]
+- [[how-i-turned-my-obsidian-vault-into-claude-codes-brain|How I Turned My Obsidian Vault Into Claude Code's Brain]]
+- [[how-im-running-claude-code-subagents-web-search-at-no-cost|How I’m Running Claude Code Subagents & Web Search (At No Cost)]]
+- [[how-im-using-claude-code-new-simplify-batch-to-x10-my-code-reviews-you-can-now-s|How I’m Using Claude Code (New) /simplify & /batch (To x10 My Code Reviews) You can now start enjoying the dreaded code]]
+- [[how-to-build-a-lightweight-python-ai-agent-with-skillsmemoryknowledgepersona-sub|How to build a Lightweight Python AI Agent with Skills/Memory/Knowledge/Persona？ Subtitle: How to create transparent,]]
+- [[how-to-build-a-production-ready-claude-code-skill-towards-data-science|How to Build a Production-Ready Claude Code Skill | Towards Data Science]]
+- [[how-to-build-a-production|How to Build a Production]]
+- [[how-to-build-claude-skills-20-better-than-99-of-people-its-a-pain-to-give-the-sa|How to build Claude Skills 2.0 Better than 99% of People “It’s a pain to give the same instructions to the AI ​​every]]
+- [[how-to-build-software-that-actually-works-the-claude-code-speckit-method-a-pract|How to Build Software That Actually Works: The Claude Code + Speckit Method A practical workflow that turned my chaotic]]
+- [[how-to-choose-a-chart-for-your-dashboard-the-basics-by-martynas-jočys-feb-2026-m|How to choose a chart for your dashboard — the basics | by Martynas Jočys | Feb, 2026 | Medium]]
+- [[how-to-configure-claude-code-with-hooks-skills-agents-and-zero-trust-permissions|How to configure Claude Code with hooks, skills, agents, and zero-trust permissions. A field-tested architecture that]]
+- [[how-to-create-a-radial-chart-in-power-bi-step-by-step-guide-by-rita-angelou-mar-|How to Create a Radial Chart in Power BI (Step-by-Step Guide) | by Rita Angelou | Mar, 2026 | Medium]]
+- [[how-to-design-a-dashboard-to-communicate-business-insights-clearly-by-marvin-rub|How to Design a Dashboard to Communicate Business Insights Clearly | by Marvin Rubia | Feb, 2026 | Medium]]
+- [[how-to-effectively-review-claude-code-output-towards-data-science|How to Effectively Review Claude Code Output | Towards Data Science]]
+- [[how-to-effectively-review-claude-code-output|How to Effectively Review Claude Code Output]]
+- [[how-to-generate-3d-models-from-images-with-python|How to Generate 3D Models from Images with Python]]
+- [[how-to-get-users-who-are-assigned-to-power-bi-row-level-security-roles-report-se|How To get Users who are assigned to Power BI Row Level Security Roles (Report Server and Power BI online)]]
+- [[how-to-make-a-power-bi-report-more-useful-for-your-users-flip-itde-sql-bi-and-mo|How to make a Power BI report more useful for your users? | flip-it.de :: SQL, BI and more]]
+- [[how-to-make-a-power-bi-report-more-useful-for-your-users|How to make a Power BI report more useful for your users?]]
+- [[how-to-make-obsidian-beautiful|How to Make Obsidian Beautiful]]
+- [[how-to-move-your-memory-from-chatgpt-to-claude-your-memories-are-uniquely-you-cl|How to Move Your Memory from ChatGPT to Claude Your memories are uniquely you. Claude just shipped a memory import]]
+- [[how-to-name-excel-objects-like-a-software-dev|How to name Excel objects like a software dev]]
+- [[how-to-set-power-query-to-refresh-automatically-in-excel|How to set Power Query to refresh automatically in Excel]]
+- [[how-to-set-up-openclaw-previously-clawdbot-moltbot-step-by-step-guide-to-setup-a|How to Set Up Openclaw (Previously Clawdbot / Moltbot) — Step by Step guide to setup a personal bot]]
+- [[how-to-set-up-power-bi-subscriptions-for-hidden-pages-simple-steps-power-bi-does|How to Set Up Power BI Subscriptions for Hidden Pages: Simple Steps Power BI does not allow subscriptions for hidden]]
+- [[how-to-turn-claude-code-into-your-seo-command-center|How to turn Claude Code into your SEO command center]]
+- [[how-to-use-claude-code-ive-been-using-claude-code-daily-for-months-here-are-my-n|How to use Claude Code I’ve been using Claude Code daily for months. Here are my notes Extended Thinking: The Magic]]
+- [[how-to-use-claude-code-specs-skills-commands-and-hooks-by-jarek-orzel-jan-2026-l|How to Use Claude Code. Specs, skills, commands and hooks | by Jarek Orzel | Jan, 2026 | Level Up Coding]]
+- [[how-to-use-claude-skills-like-a-pro-something-that-changed-how-i-use-claude-comp|How to use Claude Skills like a Pro Something that changed how I use Claude completely. Once I understood the]]
+- [[how-to-use-microsoft-excels-forecast-sheet-tool-to-predict-future-data-trends|How to use Microsoft Excel's Forecast Sheet tool to predict future data trends]]
+- [[how-to-use-slicers-in-excel-and-why-theyre-better-than-filters|How to use Slicers in Excel (and why they're better than filters)]]
+- [[how-to-use-the-isomitted-function-in-microsoft-excel|How to use the ISOMITTED function in Microsoft Excel]]
+- [[how-to-use-the-lambda-helper-functions-in-microsoft-excel|How to use the LAMBDA helper functions in Microsoft Excel]]
+- [[how-to-use-the-makearray-function-in-microsoft-excel|How to use the MAKEARRAY function in Microsoft Excel]]
+- [[how-to-vibe-code-for-free-part-12-be-discoverable-everywhere-how-to-make-sure-pe|How to Vibe Code for Free — Part 12: Be Discoverable Everywhere How to make sure people find your app in Google and AI]]
+- [[how-to-vibe-code-for-free-part-13-accessibility-made-easy-simple-free-ways-to-ma|How to Vibe Code for Free — Part 13: Accessibility Made Easy Simple, free ways to make sure everyone can use your app]]
+- [[how-to-vibe-code-for-free-part-14-monetisation-without-selling-your-soul-free-an|How to Vibe Code for Free — Part 14: Monetisation Without Selling Your Soul Free and simple ways to turn your app into]]
+- [[how-to-vibe-code-for-free-part-15-onboarding-emails-that-dont-feel-like-spam-kee|How to Vibe Code for Free — Part 15: Onboarding Emails That Don’t Feel Like Spam Keep your new users engaged (without]]
+- [[how-to-vibe-code-for-free-part-8-keeping-your-app-healthy-logging-monitoring-and|How to Vibe Code for Free — Part 8: Keeping Your App Healthy Logging, Monitoring and Safety Nets In Part 7, we finally]]
+- [[how-to-vibe-code-for-free-part-9-add-the-shine-keep-the-flow-delight-your-users-|How to Vibe Code for Free — Part 9: Add the Shine, Keep the Flow Delight your users and turn them into fans If you have]]
+- [[https|https]]
+- [[i-added-claude-codes-memory-to-my-workflows-and-my-automation-became-effortless|I added Claude Code's memory to my workflows, and my automation became effortless]]
+- [[i-analyzed-the-top-100-claude-code-skills-these-9-principles-separate-the-ones-t|I Analyzed the Top 100 Claude Code Skills. These 9 Principles Separate the Ones That Work From the Ones That Don’t. 9]]
+- [[i-built-200-claude-code-skills-heres-the-pattern-a-copy-paste-ready-guide-to-the|I built 200+ Claude Code skills: here’s the pattern A copy-paste-ready guide to the skill system Anthropic doesn’t]]
+- [[i-built-a-fully-local-ai-assistant-for-obsidian-no-api-keys-no-cloud-no-credits-|🚀 I Built a Fully Local AI Assistant for Obsidian (No API Keys, No Cloud, No Credits) I wanted AI inside my Obsidian]]
+- [[i-built-a-personal-ai-powered-research-stack-with-nothing-but-free-tools|I built a personal AI-powered research stack with nothing but free tools]]
+- [[i-built-a-personal-ai|I built a personal AI]]
+- [[i-built-a-web-app-using-claude-code-heres-exactly-how-if-youre-looking-to-use-cl|I Built a Web App Using Claude Code — Here’s Exactly How If you’re looking to use Claude Code and build cool stuff,]]
+- [[i-built-my-own-local-ai-agent-with-openclaw-obsidian-what-nobody-tells-you-a-rea|I Built My Own Local AI Agent with OpenClaw + Obsidian: What Nobody Tells You A real field report on a VM Ubuntu setup:]]
+- [[i-dug-into-claudes-new-skills-feature-here-are-the-4-most-surprising-things-i-le|I Dug Into Claude’s New ‘Skills’ Feature. Here Are the 4 Most Surprising Things I Learned. By J. Poole, Author &]]
+- [[i-finally-started-using-python-in-excel-and-i-should-have-sooner|I finally started using Python in Excel and I should have sooner]]
+- [[i-finally-tried-google-opal-and-its-the-first-no-code-programming-tool-that-actu|I finally tried Google Opal, and it’s the first no-code programming tool that actually works]]
+- [[i-finally-tried-google-opal-and-its-the-first-no|I finally tried Google Opal, and it’s the first no]]
+- [[i-found-a-better-way-than-pivottables-in-excel-and-its-not-a-function|I found a better way than PivotTables in Excel, and it's not a function]]
+- [[i-gave-claude-a-brain-now-we-both-learn-from-it-how-i-wired-obsidian-into-claude|I Gave Claude a Brain. Now We Both Learn From It. How I wired Obsidian into Claude Code so my AI pair programmer]]
+- [[i-gave-claude-code-a-prompt-and-it-became-my-co-founder-not-my-therapist-not-my-|I Gave Claude Code a Prompt and It Became My Co-Founder Not my therapist. Not my intern. My actual technical]]
+- [[i-just-tested-new-claude-code-channels-the-real-openclaw-killer-claude-code-chan|I Just Tested New Claude Code Channels (The Real OpenClaw Killer) Claude Code channels the latest feature designed to]]
+- [[i-let-claude-cowork-organise-my-obsidian-vault-no-coding-involved|I Let Claude Cowork Organise My Obsidian Vault. No Coding Involved.]]
+- [[i-mastered-the-claude-code-workflow|I mastered the Claude Code workflow]]
+- [[i-narrowed-my-ai-stack-down-to-notebooklm-and-claude-and-its-all-i-need|I narrowed my AI stack down to NotebookLM and Claude, and it's all I need]]
+- [[i-replaced-my-entire-workflow-with-claude-code-skills-from-200-lines-to-1200-her|I Replaced My Entire Workflow with Claude Code Skills From 200 lines to 1,200. Here’s what changed. Tags: Claude Code,]]
+- [[i-run-5-ai-agents-in-parallel-heres-the-exact-setup-most-developers-use-claude-c|I Run 5 AI Agents in Parallel. Here’s the Exact Setup. Most developers use Claude Code like a calculator. Type a]]
+- [[i-set-up-claude-code-channels-on-telegram-now-my-phone-controls-my-terminal-a-ha|I Set Up Claude Code Channels on Telegram. Now My Phone Controls My Terminal A hands-on walkthrough of connecting]]
+- [[i-stopped-claude-code-from-breaking-my-projects-heres-the-exact-setup|I Stopped Claude Code From Breaking My Projects. Here’s the Exact Setup]]
+- [[i-stopped-handling-these-tasks-after-setting-up-claude-for-desktop|I stopped handling these tasks after setting up Claude for desktop]]
+- [[i-stopped-re-explaining-everything-to-claude-code-this-claudemd-file-does-it-for|I Stopped Re-Explaining Everything to Claude Code. This CLAUDE.md File Does It for Me]]
+- [[i-stopped-re|I Stopped Re]]
+- [[i-tested-claude-code-minimax-m25-it-blew-my-mind-with-one-shot-cli-tool-build|I Tested Claude Code + MiniMax M2.5 (It Blew My Mind With One Shot CLI Tool Build )]]
+- [[i-tested-new-claude-code-browser-feature-claude-code-can-now-control-your-browse|I Tested (New) Claude Code Browser Feature (Claude Code Can Now Control Your Browser) Just when the Cursor browser]]
+- [[i-tested-new-claude-code-channels-real-openclaw-killer|I Tested (New) Claude Code Channels (Real OpenClaw Killer)]]
+- [[i-thought-ai-was-just-for-chat|I thought AI was just for chat]]
+- [[i-thought-vibe-coding-was-just-for-developers-claude-proved-me-wrong|I thought vibe-coding was just for developers — Claude proved me wrong]]
+- [[i-thought-vibe|I thought vibe]]
+- [[i-tried-claude-co-work-with-obsidian-and-im-not-going-back-the-pkm-chaos-admin-t|I tried Claude Co-work with Obsidian and I’m not going back. The PKM chaos admin trap Anyone who has worked with a]]
+- [[i-tried-claude-co-work-with-obsidian-and-im-not-going-back|I tried Claude Co-work with Obsidian and I’m not going back.]]
+- [[i-tried-claude-code-new-claude-api-you-can-now-build-claude-apps-3x-faster-claud|I Tried Claude Code New /claude-api (You Can Now Build Claude Apps 3x Faster) /claude-api is a new built-in skill for]]
+- [[i-tried-new-claude-code-git-worktree-i-now-run-smooth-parallel-agents|I Tried (New) Claude Code Git Worktree (I Now Run Smooth Parallel Agents)]]
+- [[i-turned-claude-code-into-a-business-operating-system-last-month-i-wrote-about-c|I Turned Claude Code Into a Business Operating System Last month I wrote about CLAUDE.md — the markdown file that tells]]
+- [[i-turned-karpathys-autoresearch-into-a-agent-skill-for-claude-code-that-optimize|I Turned Karpathy’s Autoresearch Into a Agent Skill For Claude Code That Optimizes Anything — Here Is the Architecture | by Reza Rezvani | Mar, 2026 | Medium]]
+- [[i-use-these-6-cli-tools-to-make-working-with-claude-code-3x-better|I Use These 6 CLI Tools to Make Working with Claude Code 3x Better]]
+- [[i-used-ai-to-fix-my-broken-obsidian-vault-on-failing-to-replicate-the-most-proli|I Used AI to Fix My Broken Obsidian Vault On failing to replicate the most prolific academic in history Almost as soon]]
+- [[i-wrote-a-script-to-run-claude-code-with-my-local-llm-and-skipping-the-cloud-has|I wrote a script to run Claude Code with my local LLM, and skipping the cloud has never been easier]]
+- [[if-you-asked-me-about-ai-a-year-ago-i-would-have-told-it-is-all-hype-cant-do-any|If you asked me about AI a year ago, I would have told it is all hype. Can’t do anything real. Yeah, that was naive.]]
+- [[if-youve-ever-had-an-idea-for-an-app-a-tool-or-something-fun-you-wish-existed-an|If you’ve ever had an idea for an app, a tool, or something fun you wish existed — and then thought “ but I’m not a]]
+- [[if-youve-spent-any-time-working-with-claude-code-youve-probably-faced-this-quiet|If you’ve spent any time working with Claude Code, you’ve probably faced this quiet productivity killer: You tell]]
+- [[importcsv-importtext|IMPORTCSV IMPORTTEXT]]
+- [[in-my-first-post-about-agent-skills-i-mentioned-three-skills-that-form-my-dev-wo|In my first post about agent skills, I mentioned three skills that form my dev workflow: /new-issue, /next-task, and]]
+- [[in-my-last-post-i-talked-about-using-claude-code-skills-to-manage-my-product-dev|In my last post, I talked about using Claude Code skills to manage my product dev workflow end-to-end. The /next-task]]
+- [[incomplete-data-at-a-self-service-bi-project-with-power-bi-flip-itde-sql-bi-and-|Incomplete Data at a self service BI project with Power BI? | flip-it.de :: SQL, BI and more]]
+- [[incomplete-data-at-a-self-service-bi-project-with-power-bi|Incomplete Data at a self service BI project with Power BI?]]
+- [[information-overload-is-killing-your-memory-heres-a-3-step-intentional-note-taki|Information overload is killing your memory. Here’s a 3-step intentional note-taking method to capture what truly]]
+- [[input-slicer-in-power-bi-filter-long-lists-fast-acuity-training|Input Slicer in Power BI - Filter Long Lists Fast! - Acuity Training]]
+- [[input-slicer-in-power-bi|Input Slicer in Power BI]]
+- [[integrate-notebooklm-with-gemini-cli-google-antigravity-or-other-agents-with-mcp|Integrate NotebookLM with Gemini CLI, Google Antigravity or Other Agents with MCP NotebookLM is awesome. I’m going to]]
+- [[is-n8n-dead-in-2026-youve-built-the-workflows-they-work-mostly-but-lately-someth|Is n8n Dead in 2026? You’ve built the workflows. They work. Mostly. But lately, something feels off. Your team is]]
+- [[is-published-by-henrique-siebert|“” is published by Henrique Siebert]]
+- [[is-published-by-insightful|“” is published by Insightful]]
+- [[is-your-power-bi-a-spotlight-or-an-instagram-filter-jennifer-stirrup-ai-strategy|Is Your Power BI a Spotlight or an Instagram Filter? - Jennifer Stirrup: AI Strategy, Data Consulting & BI Expert | Keynote Speaker]]
+- [[is-your-power-bi-a-spotlight-or-an-instagram-filter|Is Your Power BI a Spotlight or an Instagram Filter?]]
+- [[javascript-ollama-ai-run-claude-code-with-local-llms-using-ollama-a-practical-gu|JavaScript + OLLAMA + AI Run Claude Code with Local LLMs Using Ollama A Practical Guide for JS & AI Developers Not a]]
+- [[just-a-moment|Just a moment...]]
+- [[karpathys-agenthub-guide-build-your-first-ai-agent-swarm-medium|Karpathy's AgentHub Guide: Build Your First AI Agent Swarm | Medium]]
+- [[langgptaiawesome-claude-prompts-this-repo-includes-claude-prompt-curation-to-use|langgptai/awesome-claude-prompts: This repo includes Claude prompt curation to use Claude better.]]
+- [[learn-how-to-listen-adapt-and-grow-your-app-after-it-goes|Learn how to listen, adapt, and grow your app after it goes]]
+- [[less-preload-more-go-why-claude-skills-are-the-fix-for-your-bloated-context|Less Preload, More Go: Why Claude Skills are the fix for your bloated context]]
+- [[level-up-your-claude-code-with-this-claudemd-by-youssef-hosni-feb-2026-level-up-|Level Up Your Claude Code with This CLAUDE.md | by Youssef Hosni | Feb, 2026 | Level Up Coding]]
+- [[level-up-your-claude-code-with-this-claudemd|Level Up Your Claude Code with This CLAUDE.md]]
+- [[local-llms-that-can-replace-claude-code-by-agent-native-jan-2026-medium|Local LLMs That Can Replace Claude Code | by Agent Native | Jan, 2026 | Medium]]
+- [[make-better-tables-and-matrixes-in-power-bi-reports-a-comprehensive-guide|Make better tables and matrixes in Power BI reports: a comprehensive guide]]
+- [[make-better-tables-and-matrixes-in-power-bi-reports|Make better tables and matrixes in Power BI reports]]
+- [[managing-multiple-versions-of-the-same-power-bi-report-a-practical-guide-to-vers|Managing Multiple Versions of the Same Power BI Report: A Practical Guide to Version Control, Governance, and Clean]]
+- [[mastering-claude-a-comprehensive-guide-to-building-and-integrating-claude-code-t|Mastering Claude: A Comprehensive Guide to Building and Integrating Claude Code To build E-commerce Applications]]
+- [[mastering-claude-code-a-developers-guide-in-the-last-few-months-ive-tried-a-bunc|Mastering Claude Code: A Developer’s Guide In the last few months, I’ve tried a bunch of coding assistants. As a big]]
+- [[mcp-resources-and-prompts-know-things-and-reuse-intelligence-mastering-mcp-serve|MCP Resources and Prompts: Know Things and Reuse Intelligence Mastering MCP Servers in Python: From Basics to Hero — 3]]
+- [[medallion-architecture-in-practice-in-the-ai-era-beyond-the-theory-by-suresh-thi|Medallion Architecture in Practice in the AI Era — Beyond the Theory | by Suresh Thiagaraja Viswanathan | Mar, 2026 | Towards AI]]
+- [[mermaid-obsidian-visualize-workflows-and-break-down-complex-ideas-for-better-pro|Mermaid + Obsidian: Visualize Workflows and Break Down Complex Ideas for Better Productivity Learn how to use Mermaid]]
+- [[model-view-in-power-bi|Model View in Power BI]]
+- [[modeling-fiscal-calendars-correctly-in-power-bi-a-practical-guide-for-accurate-t|Modeling Fiscal Calendars Correctly in Power BI: A Practical Guide for Accurate Time Intelligence]]
+- [[mom-mom-yoy-and-yoy-dax-measure-approaches|MoM, MoM%, YoY, and YoY% DAX measure approaches]]
+- [[most-people-think-claude-is-just-for-coding-heres-what-i-actually-use-it-for|Most people think Claude is just for coding — here's what I actually use it for]]
+- [[moving-beyond-screen-scraping-creating-an-agent-native-web-app-with-webmcp-the-r|Moving Beyond Screen Scraping: Creating an Agent-Native Web App with WebMCP The relationship between humans and the web]]
+- [[multiple-row-level-security-roles-and-object-level-security-flip-itde-sql-bi-and|Multiple Row Level Security Roles and Object Level Security? | flip-it.de :: SQL, BI and more]]
+- [[multiple-row-level-security-roles-and-object-level-security|Multiple Row Level Security Roles and Object Level Security?]]
+- [[my-claude-code-workflow-and-personal-tips|My Claude Code Workflow And Personal Tips]]
+- [[nanobot-vs-nanoclaw-vs-ironclaw-vs-zeroclaw-vs-picoclaw-vs-tinyclaw-which-opencl|Nanobot vs NanoClaw vs IronClaw vs ZeroClaw vs PicoClaw vs TinyClaw: Which OpenClaw Mini Wins for Developers? Nanobot]]
+- [[never-lose-a-hard-won-process|Never lose a hard-won process]]
+- [[never-lose-a-note-again-time-machine-plugin-for-obsidian-by-sébastien-dubois-mar|Never Lose a Note Again — Time Machine Plugin for Obsidian | by Sébastien Dubois | Mar, 2026 | Personal Knowledge Management Journal]]
+- [[new-to-claude-cowork-this-beginners-guide-shows-you-exactly-how-to-get-started-s|New to Claude Cowork? This beginner's guide shows you exactly how to get started, set it up, and use Anthropic's]]
+- [[note-taking-ai-the-framework-most-people-are-missing|Note-Taking + AI: The Framework Most People Are Missing]]
+- [[notebooklm-is-an-ai-research-tool-and-thinking-partner-developed-by-google-in-si|NotebookLM is an AI research tool and “thinking partner” developed by Google. In simple terms, it’s like a smart]]
+- [[notebooklm-now-connects-to-claude-through-mcp-and-its-the-best-research-setup-iv|NotebookLM now connects to Claude through MCP, and it's the best research setup I've used]]
+- [[notebooklm-update-adds-claude-integration-for-workflows-geeky-gadgets|NotebookLM Update Adds Claude Integration for Workflows - Geeky Gadgets]]
+- [[notebooklm-update-adds-claude-integration-for-workflows|NotebookLM Update Adds Claude Integration for Workflows]]
+- [[obsidian-112-is-here-and-it-finally-talks-to-my-terminal-the-new-obsidian-112-re|Obsidian 1.12 Is Here — and It Finally Talks to My Terminal The new Obsidian 1.12 release brings a CLI, smarter file]]
+- [[obsidian-as-a-personal-research-wikipedia-not-a-second-brain-i-dont-use-obsidian|Obsidian as a Personal Research Wikipedia (Not a Second Brain) I don’t use Obsidian as a “second brain”. I use it as my]]
+- [[obsidian-cli-how-the-command-line-will-change-notetaking-at-long-last-obsidian-h|Obsidian CLI: How the Command Line Will Change Note‑Taking At long last, Obsidian has an official CLI (Command Line]]
+- [[obsidian-has-a-built-in-file-recovery-plugin-but-its-pretty-basic-i-built-the-ti|Obsidian has a built-in File Recovery plugin, but it’s pretty basic. I built the Time Machine plugin to fix that.]]
+- [[obsidian-tasks-community-plugin-series-part-1-global-task-filter-by-kara-monroe-|Obsidian Tasks Community Plugin Series, Part 1 — Global Task Filter | by Kara Monroe | Medium]]
+- [[obsidian-tasks-community-plugin-series-part-2-task-statuses-by-kara-monroe-jan-2|Obsidian Tasks Community Plugin Series, Part 2 — Task Statuses | by Kara Monroe | Jan, 2026 | Medium]]
+- [[obsidian-tasks-community-plugin-series-part-3-creating-and-editing-tasks-by-kara|Obsidian Tasks Community Plugin Series Part 3 — Creating and Editing Tasks | by Kara Monroe | Jan, 2026 | Medium]]
+- [[obsidian-tasks-community-plugin-series-part-5-working-with-queries-by-kara-monro|Obsidian Tasks Community Plugin Series Part 5 — Working with Queries | by Kara Monroe | Mar, 2026 | Medium]]
+- [[obsidian-tasks-community-plugin-series-part-5-working-with-queries-welcome-back-|Obsidian Tasks Community Plugin Series Part 5 — Working with Queries Welcome back to this mini series on the Obsidian]]
+- [[obsidian-tasks-series-part-4-querying-your-tasks-by-kara-monroe-jan-2026-medium|Obsidian Tasks Series, Part 4 — Querying Your Tasks | by Kara Monroe | Jan, 2026 | Medium]]
+- [[obsidian-web-clipper-does-much-more-than-save-web-articles|Obsidian Web Clipper does much more than save web articles]]
+- [[obsidians-big-update-the-new-home-assistant-windows-11s-printing-overhaul-and-mo|Obsidian's big update, the new Home Assistant, Windows 11's printing overhaul, and more]]
+- [[one-embedded-power-app-multiple-landing-pages|One Embedded Power App; Multiple Landing Pages]]
+- [[openclaw-configure-llm-provider-and-telegram-channel-step-by-step|OpenClaw : Configure LLM Provider and Telegram Channel Step-by-Step]]
+- [[openclaw-explained-the-free-ai-agent-tool-going-viral-already-in-2026-kdnuggets|OpenClaw Explained: The Free AI Agent Tool Going Viral Already in 2026 - KDnuggets]]
+- [[openclaw-explained|OpenClaw Explained]]
+- [[openclaw-nanobot-picoclaw-ironclaw-zeroclaw-nullclaw-this-claw-craziness-is-cont|OpenClaw, NanoBot, PicoClaw, IronClaw, ZeroClaw, NullClaw: This *Claw Craziness Is Continuing… Agent space is booming,]]
+- [[openclaw-obsidian-cli-my-vault-runs-itself|OpenClaw + Obsidian CLI: My Vault Runs Itself]]
+- [[openclaw-tutorial-how-to-install-secure-your-personal-ai-bot-this-guide-covers-h|OpenClaw Tutorial: How to Install & Secure Your Personal AI Bot This guide covers how to set up OpenClaw (formerly]]
+- [[optimize-workforce-planning-using-linear-programming-with-python-medium|Optimize Workforce Planning using Linear Programming with Python. | Medium]]
+- [[optimizing-semantic-model-size-in-power-bi-and-fabric-a-comprehensive-guide|Optimizing semantic model size in Power BI and Fabric: a comprehensive guide]]
+- [[optimizing-semantic-model-size-in-power-bi-and-fabric|Optimizing semantic model size in Power BI and Fabric]]
+- [[orchestrate-schedule-refreshes-in-power-bi-flip-itde-sql-bi-and-more|Orchestrate schedule refreshes in Power BI | flip-it.de :: SQL, BI and more]]
+- [[orchestrate-schedule-refreshes-in-power-bi|Orchestrate schedule refreshes in Power BI]]
+- [[organize-and-monitor-the-power-bi-scheduled-refreshes-flip-itde-sql-bi-and-more|Organize and monitor the Power BI scheduled refreshes. | flip-it.de :: SQL, BI and more]]
+- [[organize-and-monitor-the-power-bi-scheduled-refreshes|Organize and monitor the Power BI scheduled refreshes.]]
+- [[output-styles-claude-code-docs|Output styles - Claude Code Docs]]
+- [[output-styles|Output styles]]
+- [[paddleocr-vl-rag-revolutionize-complex-data-extraction-open-source-not-even-a-mo|PaddleOCR VL + RAG: Revolutionize Complex Data Extraction (Open-Source) Not even a month ago, I made a video about]]
+- [[page-level-security-inside-power-bi-flip-itde-sql-bi-and-more|Page Level Security inside Power BI? | flip-it.de :: SQL, BI and more]]
+- [[page-level-security-inside-power-bi|Page Level Security inside Power BI?]]
+- [[parameterizing-queriesdata-sources-flip-itde-sql-bi-and-more|Parameterizing queries/data sources | flip-it.de :: SQL, BI and more]]
+- [[parameterizing-queriesdata-sources|Parameterizing queries/data sources]]
+- [[pdf-to-markdown-with-agentic-ai-testing-landingais-new-ade-parser-by-dr-leon-eve|PDF to Markdown With Agentic AI: Testing LandingAI’s New ADE Parser | by Dr. Leon Eversberg | Mar, 2026 | AI Advances]]
+- [[power-bi-composite-models-a-underestimated-feature-flip-itde-sql-bi-and-more|Power BI composite models – a underestimated feature | flip-it.de :: SQL, BI and more]]
+- [[power-bi-composite-models|Power BI composite models]]
+- [[power-bi-conditional-slicers-with-a-little-bit-of-fields-parameters-magic|Power BI conditional slicers with a little bit of fields parameters magic]]
+- [[power-bi-create-a-top-n-measure-flip-itde-sql-bi-and-more|Power BI, Create a TOP n Measure | flip-it.de :: SQL, BI and more]]
+- [[power-bi-create-a-top-n-measure|Power BI, Create a TOP n Measure]]
+- [[power-bi-data-driven-subscription-update-flip-itde-sql-bi-and-more|Power BI data-driven subscription – Update | flip-it.de :: SQL, BI and more]]
+- [[power-bi-data|Power BI data]]
+- [[power-bi-dax-udf-user-defined-function|Power BI DAX UDF — User Defined Function]]
+- [[power-bi-for-learners-part-11-performance-optimization-best-practices-and-real-w|Power BI for Learners Part 11: Performance Optimization, Best Practices, and Real-World Troubleshooting There is a]]
+- [[power-bi-isnt-hard-until-you-touch-dax|Power BI Isn’t Hard — Until You Touch DAX]]
+- [[power-bi-march-2025-creating-a-four-color-quadrant-in-scatter-visuals-by-amit-ch|Power BI March 2025: Creating a Four-Color Quadrant in Scatter Visuals | by Amit Chandak | Medium]]
+- [[power-bi-meets-mcp-the-beginning-of-agentic-bi-development-power-bi-copilot-has-|Power BI Meets MCP: The Beginning of Agentic BI Development Power BI Copilot has already started transforming how]]
+- [[power-bi-on-a-diet-tips-to-slim-down-your-semantic-models-5-beginner-fixes-and-1|Power BI on a Diet: Tips to Slim Down Your Semantic Models 5 beginner fixes and 1 pro-level secret to optimize your]]
+- [[power-bi-page-navigation-using-a-slicer-flip-itde-sql-bi-and-more|Power BI – Page Navigation using a Slicer | flip-it.de :: SQL, BI and more]]
+- [[power-bi-page-navigation-using-a-slicer|Power BI – Page Navigation using a Slicer]]
+- [[power-bi-report-classifications-to-meet-company-irregularities-by-using-a-templa|Power BI report classifications to meet company irregularities by using a template]]
+- [[power-bi-row-level-security-tutorial-rls|Power BI Row Level Security Tutorial (RLS)]]
+- [[power-bi-sort-by-column-keeps-resetting-why-it-happens-and-how-to-fix-it-properl|Power BI “Sort by Column” Keeps Resetting: Why It Happens and How to Fix It Properly If you have worked with Power BI]]
+- [[power-bi-tmdl-table-creation-flip-itde-sql-bi-and-more|Power BI TMDL table creation | flip-it.de :: SQL, BI and more]]
+- [[power-bi-tmdl-table-creation|Power BI TMDL table creation]]
+- [[power-bi-user-defined-functions-dax-udfs-flip-itde-sql-bi-and-more|Power BI User Defined Functions – DAX UDFs | flip-it.de :: SQL, BI and more]]
+- [[power-bi-user-defined-functions-dax-udfs|Power BI User Defined Functions – DAX UDFs]]
+- [[power-bi-visual-calculations-conditional-formatting-by-amit-chandak-medium|Power BI Visual Calculations- Conditional formatting | by Amit Chandak | Medium]]
+- [[powerbithisorthat-legends-vs-series-labels-by-santhana-lakshmi-p-feb-2026-medium|#PowerBIThisOrThat- Legends Vs Series Labels | by Santhana Lakshmi .P | Feb, 2026 | Medium]]
+- [[powerbithisorthat-scrollable-page-vs-multi-page-report-by-santhana-lakshmi-p-feb|#PowerBIThisOrThat- Scrollable Page vs Multi-Page Report | by Santhana Lakshmi .P | Feb, 2026 | Medium]]
+- [[powerlib-workout-series-train-your-data-visualization-mindset-build-reports-that|PowerLib Workout Series: Train Your Data Visualization Mindset Build reports that are not just functional — but clear,]]
+- [[practical-tips-for-keeping-your-app-fresh-functional-and-fun-without-endless-lat|Practical tips for keeping your app fresh, functional, and fun… without endless late]]
+- [[psychological-prompting-tricks-backed-by-google-stanford-research-adding-200-imp|Psychological prompting tricks backed by Google & Stanford research. Adding '$200' improved AI output 45%. Here's what]]
+- [[query-power-bi-datasets-to-send-an-individual-alert-flip-itde-sql-bi-and-more|Query Power BI datasets to send an individual alert | flip-it.de :: SQL, BI and more]]
+- [[query-power-bi-datasets-to-send-an-individual-alert|Query Power BI datasets to send an individual alert]]
+- [[ralph-wiggum-loops-are-hot-right-now-heres-how-spec-driven-development-makes-the|Ralph Wiggum Loops Are Hot Right Now — Here’s How Spec-Driven Development Makes Them Actually Ship-Safe “Ralph Wiggum”]]
+- [[rate-limit-github|Rate limit · GitHub]]
+- [[reddit|Reddit]]
+- [[rugby-colour-palette-project-heart-of-england-crp|Rugby Colour Palette Project – Heart of England CRP]]
+- [[rugby-colour-palette-project|Rugby Colour Palette Project]]
+- [[run-claude-code-locally-on-apple-silicon-using-lm-studio-and-litellm-zero-cost-a|Run Claude Code Locally on Apple Silicon Using LM Studio and LiteLLM (Zero Cost) A step-by-step guide to running Claude]]
+- [[run-claude-code-on-your-phone-in-5-minutes-how-to-run-claude-code-on-your-phone-|Run Claude Code on your phone in 5 minutes How to run Claude Code on your phone using Replit in under 5 minutes. You’re]]
+- [[run-claude-code-programmatically-claude-code-docs|Run Claude Code programmatically - Claude Code Docs]]
+- [[run-claude-code-programmatically|Run Claude Code programmatically]]
+- [[run-llamaliteparse-a-fast-helpful-and-open-source-document-parser|run-llama/liteparse: A fast, helpful, and open-source document parser]]
+- [[run-openclaw-moltbot-clawdbot-safely-with-docker-a-practical-guide-for-beginners|Run OpenClaw (MoltBot, ClawdBot) Safely with Docker: A Practical Guide for Beginners | by Bill WANG | Jan, 2026 | Towards Dev]]
+- [[run-prompts-on-a-schedule-claude-code-docs|Run prompts on a schedule - Claude Code Docs]]
+- [[run-prompts-on-a-schedule|Run prompts on a schedule]]
+- [[running-claude-code-with-local-models-using-ollama-a-comprehensive-guide-in-janu|Running Claude Code with Local Models Using Ollama: A Comprehensive Guide In January 2026, Ollama added support for the]]
+- [[safe-money-time-and-performance-or-use-power-automate-sentiment-analysis-and-pow|Safe money, time and performance! Or use Power Automate, Sentiment Analysis and Power BI with incremental refresh.]]
+- [[separate-numbers-and-text-in-one-column-using-power-query-what-a-mess-an-excel-w|Separate numbers and text in one column using Power Query What a mess. An Excel with a column containing numbers and]]
+- [[sixhqoverture-overture-is-an-open-source-locally-running-web-interface-delivered|SixHq/Overture: Overture is an open-source, locally running web interface delivered as an MCP (Model Context Protocol) server that visually maps out the execution plan of any AI coding agent as an interactive flowchart/graph before the agent begins writing code.]]
+- [[skills-and-hooks-starter-kit-for-claude-code-learn-how-to-extend-claude-code-wit|Skills and Hooks Starter Kit for Claude Code Learn how to extend Claude Code with reusable skills and hooks to help you]]
+- [[skills-are-claude-codes-cheat-code-heres-how-to-use-them|Skills Are Claude Code's Cheat Code. Here's How to Use Them]]
+- [[slowly-changing-dimensions-in-microsoft-fabric-lakehouse-by-mahboub-yassine-feb-|Slowly Changing Dimensions in Microsoft Fabric Lakehouse | by Mahboub Yassine | Feb, 2026 | Medium]]
+- [[soulmd-what-makes-an-ai-itself|SOUL.md — What Makes an AI, Itself?]]
+- [[stanford-researchers-discovered-verbalized-samplinga-simple-8-word-prompt-that-u|Stanford researchers discovered Verbalized Sampling—a simple 8-word prompt that unlocks 2× more creative diversity from]]
+- [[stop-blaming-information-overload-start-building-the-productivity-system-youre-m|Stop Blaming Information Overload: Start Building the Productivity System You’re Missing Structure first, separation]]
+- [[stop-clicking-approve-how-i-killed-approval-fatigue-with-claude-code-21-masterin|Stop Clicking “Approve”: How I Killed Approval Fatigue with Claude Code 2.1 Mastering Agent Skills in Claude Code 2.1:]]
+- [[stop-copypasting-ai-coding-rules-for-every-tool-keep-one-canonical-vibe-coding-i|Stop copy/pasting AI coding rules for every tool. Keep one canonical `vibe-coding-instructions.md`, then sync it]]
+- [[stop-deleting-columns-in-power-query|Stop deleting columns in Power Query]]
+- [[stop-messing-with-your-source-data-4-ways-to-build-break-proof-spreadsheets|Stop messing with your source data: 4 ways to build break-proof spreadsheets]]
+- [[stop-messing-with-your-source-data|Stop messing with your source data]]
+- [[stop-prompting-ai-build-an-ai-coworker-instead-the-8-step-claude-system-nobody-e|Stop Prompting AI. Build an AI Coworker Instead: The 8-Step Claude System Nobody Explains. Most people use Claude like]]
+- [[stop-prompting-start-building-skills-for-claudecodex-most-people-still-treat-cla|Stop Prompting. Start Building Skills for Claude/Codex Most people still treat Claude, ChatGPT, and other AI tools as]]
+- [[stop-using-claude-wrong-why-skills-are-the-solution-to-your-ai-reliability-probl|Stop Using Claude Wrong: Why Skills Are the Solution to Your AI Reliability Problem Everyone’s frustrated with AI]]
+- [[stop-using-claudemd-heres-what-actually-works-for-ai-assisted-development|Stop using CLAUDE.md; here's what actually works for AI-assisted development]]
+- [[stop-using-claudemd-heres-what-actually-works-for-ai|Stop using CLAUDE.md; here's what actually works for AI]]
+- [[stop-using-pie-charts-in-excel|Stop using pie charts in Excel]]
+- [[stop-what-youre-doing-and-check-your-claude-integrations-right-now|Stop What You're Doing and Check Your Claude Integrations. Right Now.]]
+- [[supercharged-claude-with-mcp-how-to-supercharge-claude-with-mcp-build-a-local-ai|Supercharged Claude with MCP How To Supercharge Claude with MCP: Build a Local AI Developer That Runs Bash, Maven, and]]
+- [[supercharging-obsidian-with-ai-using-mcp-turning-your-second-brain-into-an-ai-ac|Supercharging Obsidian with AI using MCP Turning your second brain into an AI-accessible knowledge system Obsidian has]]
+- [[superpowers-for-claude-code-in-the-fast-paced-and-ever-evolving-world-of-softwar|Superpowers for Claude Code In the fast-paced and ever-evolving world of software development, the introduction of new]]
+- [[svg-image-inside-power-bi-with-figma-flip-itde-sql-bi-and-more|SVG image inside Power BI with Figma | flip-it.de :: SQL, BI and more]]
+- [[svg-image-inside-power-bi-with-figma|SVG image inside Power BI with Figma]]
+- [[sync-obsidian-vault-across-device-through-one-command|Sync Obsidian Vault across device through one command]]
+- [[tasks-mini-series-6-recognize-and-use-recurrence-welcome-back-to-this-mini-serie|Tasks Mini Series 6 — Recognize and Use Recurrence Welcome back to this mini series on the Obsidian Tasks Community]]
+- [[text-analysis-with-power-bi-in-different-languages-flip-itde-sql-bi-and-more|Text Analysis with Power BI in different languages | flip-it.de :: SQL, BI and more]]
+- [[text-analysis-with-power-bi-in-different-languages|Text Analysis with Power BI in different languages]]
+- [[the-3|The 3]]
+- [[the-ai-engineer-session-on-claude-skills-dont-build-agents-build-skills-instead-|The AI Engineer session on Claude Skills- “ “ Don’t build Agents, Build Skills Instead -sparked a simple question: can]]
+- [[the-antidote-to-ai-vertigo-isnt-reading-about-it-its-building-with-it|The Antidote to AI Vertigo Isn't Reading About It. It's Building With It.]]
+- [[the-claude-code-feature-boris-cherny-uses-dozens-of-times-every-day|The Claude Code Feature Boris Cherny Uses Dozens of Times Every Day]]
+- [[the-claude-code-setup-nobody-talks-about-from-solo-agent-to-full-dev-team-most-d|The Claude Code Setup Nobody Talks About: From Solo Agent to Full Dev Team Most developers install Claude Code, type a]]
+- [[the-complete-guide-to-ai-agent-memory-files-claudemd-agentsmd-and-beyond|The Complete Guide to AI Agent Memory Files (CLAUDE.md, AGENTS.md, and Beyond)]]
+- [[the-complete-guide-to-claude-code-claudemd-by-zhaozhiming-mar-2026-ai-advances|The Complete Guide to Claude Code: CLAUDE.md | by zhaozhiming | Mar, 2026 | AI Advances]]
+- [[the-complete-guide-to-claude-codes-newest-feature-skills-claude-code-released-a-|The complete guide to Claude Code’s newest feature “skills” Claude Code released a new feature called Skills. Not a]]
+- [[the-cost-of-hiding-zeros-in-dax-if-vs-switch-vs-divide-a-benchmark-comparing-com|The Cost of Hiding Zeros in DAX: IF vs SWITCH vs DIVIDE A benchmark comparing common zero-to-blank patterns in DAX and]]
+- [[the-excel-formula-i-use-whenever-na-takes-over-a-sheet|The Excel formula I use whenever #N/A takes over a sheet]]
+- [[the-hidden-superpower-in-ai-assisted-development-that-90-of-developers-are|The hidden superpower in AI-assisted development that 90% of developers are]]
+- [[the-karpathy-loop-700-experiments-2-days-and-a-glimpse-of-where-ai-is-heading-fo|The Karpathy Loop': 700 experiments, 2 days, and a glimpse of where AI is heading | Fortune]]
+- [[the-karpathy-loop|The Karpathy Loop]]
+- [[the-new-startup-superpower-building-skills-for-claude-in-january-2026-anthropic-|The New Startup Superpower: Building Skills for Claude In January 2026, Anthropic published The Complete Guide to]]
+- [[the-non-technical-persons-complete-guide-to-claude-code|The Non-Technical Person's Complete Guide to Claude Code]]
+- [[the-non|The Non]]
+- [[the-novelist-a-free-obsidian-vault-for-worldbuilding-and-novel-writing|The Novelist: A free Obsidian Vault for Worldbuilding and Novel-Writing]]
+- [[the-obsidian-setup-behind-the-system-by-ronald-suwandi-mar-2026-medium|The Obsidian setup behind the system | by Ronald Suwandi | Mar, 2026 | Medium]]
+- [[the-one-power-query-habit-that-stops-dashboards-from-breaking|The one Power Query habit that stops dashboards from breaking]]
+- [[the-pkm-setup-i-settled-on-after-many-iterations-by-ronald-suwandi-feb-2026-medi|The PKM Setup I Settled On After Many Iterations | by Ronald Suwandi | Feb, 2026 | Medium]]
+- [[the-royal-leamington-spa-colour-palette-colour-palette-projects-warwick-district|The Royal Leamington Spa colour palette - Colour palette projects - Warwick District Council.]]
+- [[the-royal-leamington-spa-colour-palette|The Royal Leamington Spa colour palette]]
+- [[the-same-day-trap-calculating-days-in-status-in-power-bi-by-md-mizanur-rahman-na|The Same-Day Trap: Calculating “Days in Status” in Power BI | by Md Mizanur Rahman Nayan | Mar, 2026 | Medium]]
+- [[the-seven-pillar-ontology-a-framework-for-architecture-knowledge-management|The Seven-Pillar Ontology: A Framework for Architecture Knowledge Management]]
+- [[the-ultimate-claude-code-cheat-sheet-your-complete-command-reference-master-the-|The Ultimate Claude Code Cheat Sheet: Your Complete Command Reference Master the AI coding assistant that’s]]
+- [[the-ultimate-guide-to-claudemd-in-2026-buildcamp-guides-buildcamp|The Ultimate Guide to CLAUDE.md in 2026 | Buildcamp Guides | Buildcamp]]
+- [[the-ultimate-guide-to-claudemd-in-2026|The Ultimate Guide to CLAUDE.md in 2026]]
+- [[the-warwick-colour-palette-colour-palette-projects-warwick-district-council|The Warwick Colour Palette - Colour palette projects - Warwick District Council.]]
+- [[the-warwick-colour-palette|The Warwick Colour Palette]]
+- [[there-are-200-mcp-servers-now-most-of-them-youll-never|There are 200+ MCP servers now. Most of them you’ll never]]
+- [[these-7-conditional-formatting-formulas-turn-excel-into-an-automated-alert-syste|These 7 conditional formatting formulas turn Excel into an automated alert system]]
+- [[these-python-scripts-will-supercharge-your-obsidian-vault|These Python scripts will supercharge your Obsidian vault]]
+- [[these-two-local-models-made-me-cancel-my-chatgpt-gemini-and-copilot-subscription|These two local models made me cancel my ChatGPT, Gemini, and Copilot subscriptions]]
+- [[this-is-the-last-post-in-my-series-on-skills-for-dev-workflow-ive-covered-buildi|This is the last post in my series on skills for dev workflow. I’ve covered building /next-task and extracting]]
+- [[this-newly-released-anthropic-agentic-coding-trends-report-is-a-must-read-anthro|This Newly Released Anthropic Agentic Coding Trends Report (Is a Must-Read) Anthropic quietly released an 8-point AI]]
+- [[this-terminal-tool-is-my-favorite-way-to-view-spreadsheets-on-my-computer|This terminal tool is my favorite way to view spreadsheets on my computer]]
+- [[three-ways-to-talk-to-claude-remotely-when-youre-not-at-your-desk-how-to-choose-|Three Ways to Talk to Claude Remotely When You’re Not at Your Desk How to choose between Claude, Claude Cowork or]]
+- [[time-intelligence-in-power-bi-your-secret-weapon-for-smarter-dashboards|Time Intelligence in Power BI: Your Secret Weapon for Smarter Dashboards]]
+- [[top-10-n8n-self-hosting-solutions-choosing-where-to-host-your-n8n-instance-is-mo|Top 10 n8n Self-Hosting Solutions Choosing where to host your n8n instance is more than a technical decision; it is the]]
+- [[top-7-claude-code-plugins-claude-plugins-are-nice-ways-to-extend-by-nick-babich-|Top 7 Claude Code Plugins. Claude Plugins are nice ways to extend… | by Nick Babich | Mar, 2026 | UX Planet]]
+- [[topics-as-solvable-problems-pkm-note-this-new-notation-emerged-while-updating-a-|Topics as (solvable) Problems (PKM) Note: This (new) notation emerged while updating a recent entry in my More Learning]]
+- [[transform-claude-cursor-into-web-scraping-browser-controlling-automation-engines|Transform Claude & Cursor into web scraping, browser-controlling automation engines. 5 essential Model Context Protocol]]
+- [[translytical-or-how-to-write-data-in-a-database-flip-itde-sql-bi-and-more|Translytical – or how to write data in a database | flip-it.de :: SQL, BI and more]]
+- [[translytical|Translytical]]
+- [[troubleshooting-claude-code-docs|Troubleshooting - Claude Code Docs]]
+- [[troubleshooting|Troubleshooting]]
+- [[turn-any-text-into-hand-drawn-diagrams-with-claude-code-theres-a-new-skill-for-c|Turn Any Text Into Hand-Drawn Diagrams With Claude Code There’s a new skill for Claude Code that generates]]
+- [[turning-microsoft-onenote-into-an-ai-powered-knowledge-system-a-practical-low-co|Turning Microsoft OneNote Into an AI-Powered Knowledge System: A Practical, Low-Cost Blueprint Using OCR and RAG Across]]
+- [[understanding-claude-skills-the-easy-way-same-ai-same-request-why-are-the-result|Understanding Claude Skills the Easy Way (Same AI, Same Request — Why Are the Results So Different?)]]
+- [[understanding-power-bi-data-modeling-from-relationships-to-dax-overrides|Understanding Power BI Data Modeling: From Relationships to DAX Overrides]]
+- [[union-based-alternative-to-switch-in-power-bi-dax-today-i-wanted-to-showcase-an-|UNION-based alternative to SWITCH in Power BI DAX Today I wanted to showcase an alternative to the well-respected]]
+- [[unlearning-to-relearn-day-2-the-interface-ive-been-ignoring-for-4-years-confessi|Unlearning to Relearn — Day 2: The Interface I’ve Been Ignoring for 4 Years Confession Time Yesterday, I committed to]]
+- [[unlearning-to-relearn-my-power-bi-learning-journey-day-1-this-is-day-1-of-my-jou|Unlearning to Relearn: My Power BI Learning Journey (Day 1) This is Day 1 of my journey, and I’m inviting you to come]]
+- [[unlock-claude-ais-superpowers-with-10-mega-prompts|Unlock Claude AI’s Superpowers with 10 Mega Prompts]]
+- [[update-parameters-inside-a-power-bi-semantic-model-using-powershell-flip-itde-sq|Update parameters inside a Power BI semantic model using PowerShell | flip-it.de :: SQL, BI and more]]
+- [[update-parameters-inside-a-power-bi-semantic-model-using-powershell|Update parameters inside a Power BI semantic model using PowerShell]]
+- [[use-a-key-column-for-grouping-in-power-bi-desktop-flip-itde-sql-bi-and-more|Use a key column for grouping in Power BI Desktop | flip-it.de :: SQL, BI and more]]
+- [[use-a-key-column-for-grouping-in-power-bi-desktop|Use a key column for grouping in Power BI Desktop]]
+- [[using-field-parameters-in-power-bi-to-dynamically-create-hierarchies-with-a-sing|Using field parameters in Power BI to dynamically create hierarchies with a single select slicer]]
+- [[using-groupby-and-currentrow-functions-in-power-bipbix-included|Using GROUPBY and CURRENTROW functions in Power BI(.pbix included)]]
+- [[using-power-bi-to-create-an-excel-style-income-statement-one-of-the-first-things|Using Power BI to create an Excel-Style Income Statement One of the first things I was tasked to create as a financial]]
+- [[using-spec-driven-development-with-claude-code-i-no-longer-write-code-by-hand-i-|Using spec-driven development with Claude Code I no longer write code by hand. I wouldn’t call myself a proper software]]
+- [[vercel-security-checkpoint|Vercel Security Checkpoint]]
+- [[vibe-coding-an-entire-microsoft-fabric-data-pipeline-using-claude-code-i-first-t|Vibe-Coding an Entire Microsoft Fabric Data Pipeline Using Claude Code I first took a crack at “vibe-coding” last year.]]
+- [[vibe-coding-my-own-productivity-tools-part-1-kanban-task-manager-lets-face-it-so|Vibe-Coding My Own Productivity Tools. Part 1: Kanban Task Manager Let’s face it, software is free now, thanks to AI.]]
+- [[vibe-coding-prompts-are-all-you-need-using-software-construction-techniques-like|Vibe Coding — Prompts Are All You Need? Using Software Construction Techniques like Test Driven Development and SOLID]]
+- [[welcome-to-serges-report-serges-report|Welcome to Serge's Report! - Serge's Report]]
+- [[welcome-to-serges-report|Welcome to Serge's Report!]]
+- [[what-are-clawdbot-moltbot-and-openclaw-the-rise-of-autonomous-ai-assistants-intr|What are Clawdbot, Moltbot, and OpenClaw? The Rise of Autonomous AI Assistants. Introduction Clawdbot, Moltbot, and]]
+- [[what-can-you-do-with-power-bi-and-perspectives-flip-itde-sql-bi-and-more|What can you do with Power BI and perspectives? | flip-it.de :: SQL, BI and more]]
+- [[what-can-you-do-with-power-bi-and-perspectives|What can you do with Power BI and perspectives?]]
+- [[what-claude-cowork-actually-does-a-complete-guide-to-every-capability-the-comple|What Claude Cowork actually does: a complete guide to every capability The complete breakdown of what it handles, how]]
+- [[what-i-learned-while-building-a-trilogy-of-claude-code-plugins-not-long-ago-i-pu|What I learned while building a trilogy of Claude Code Plugins Not long ago I published a trilogy of Claude Code]]
+- [[what-is-a-dataset-report-and-dashboard-in-power-bi-my-powerbi-course-if-youre-le|What is a Dataset, Report, and Dashboard in Power BI? My PowerBI Course If you’re learning Power BI, you’ve probably]]
+- [[when-aggregation-tables-help-in-power-bi-a-practical-guide-to-faster-models-and-|When Aggregation Tables Help in Power BI: A Practical Guide to Faster Models and Smarter…]]
+- [[when-not-to-use-tables-in-excel|When not to use tables in Excel]]
+- [[when-your-ai-assistant-forgets-who-youre-talking-about-a-journey-through-memory-|When Your AI Assistant Forgets Who You’re Talking About: A Journey Through Memory Management in Claude Skills I built a]]
+- [[why-bidirectional-relationships-cause-unexpected-filters-in-power-bi-and-how-to-|Why Bidirectional Relationships Cause Unexpected Filters in Power BI and How to Fix Them If you have worked with]]
+- [[why-every-power-bi-developer-should-learn-github-in-2026-join-my-powerbi-course-|Why Every Power BI Developer Should Learn GitHub in 2026 Join My PowerBI Course Most Power BI developers focus only on]]
+- [[why-should-you-create-explicit-measures-flip-itde-sql-bi-and-more|Why should you create explicit measures? | flip-it.de :: SQL, BI and more]]
+- [[why-should-you-create-explicit-measures|Why should you create explicit measures?]]
+- [[why-some-power-bi-measures-recalculate-too-often-understanding-the-causes-and-fi|Why Some Power BI Measures Recalculate Too Often: Understanding the Causes and Fixing Performance…]]
+- [[workspaces-in-power-bi-explained-admin-member-contributor-viewer-my-powerbi-cour|Workspaces in Power BI Explained (Admin, Member, Contributor, Viewer) My PowerBI Course When working with Power BI]]
+- [[world-class-github-workflow-for-claude-code-the-branching-strategy-that-cut-my-d|World-Class GitHub Workflow for Claude Code The branching strategy that cut my deployment time by 60% and eliminated]]
+- [[write-new-measures-with-chat-gpt-flip-itde-sql-bi-and-more|Write new measures with Chat GPT? | flip-it.de :: SQL, BI and more]]
+- [[write-new-measures-with-chat-gpt|Write new measures with Chat GPT?]]
+- [[you-dont-need-complex-prompts-to-get-value-from-claude-just-do-this|You don't need complex prompts to get value from Claude — just do this]]
+- [[you-need-to-know-what-the-hash-sign-does-in-excel-formulas|You need to know what the hash sign does in Excel formulas]]
+- [[your-excel-pivottable-isnt-complete-until-you-add-these-two-pro|Your Excel PivotTable isn't complete until you add these two pro]]
+- [[youre-picking-the-wrong-charts-let-excels-new-agent-mode-decide-for-you|You're picking the wrong charts — let Excel's new Agent Mode decide for you]]
+- [[zero-human-company-with-openclaw-claude-and-codex-how-to-build-an-agent-organiza|Zero-Human Company with OpenClaw, Claude, and Codex: How to Build an Agent Organization | by Agent Native | Mar, 2026 | Medium]]
+- [[zettelkasten-vs-every-other-note-taking-method-an-honest-comparison-most-note-ta|Zettelkasten vs. Every Other Note-Taking Method — An Honest Comparison Most note-taking systems feel productive in week]]
+
+
+## Imported from Raindrop / Medium Reading List
+- [[7-easy-ways-of-connecting-to-data-in-power-bi-go-analytics|7 Easy ways of connecting to data in Power BI – Go Analytics]]
+- [[7-power-bi-hacks-that-helped-us-wow-clients-in-2024-go-analytics|7 Power BI Hacks That Helped Us Wow Clients in 2024 – Go Analytics]]
+- [[analyzing-the-performance-impact-of-visual-calculations|Analyzing the performance impact of visual calculations]]
+- [[calculating-geometric-mean-in-power-bi-sqlservercentral|Calculating Geometric Mean in Power BI – SQLServerCentral]]
+- [[choosing-the-right-charts-in-power-bi|Choosing the Right Charts in Power BI]]
+- [[controlling-format-strings-in-calculation-groups|Controlling Format Strings in Calculation Groups]]
+- [[create-calculation-groups-in-power-bi|Create calculation groups in Power BI]]
+- [[dynamic-data-masking-in-power-bi|Dynamic Data Masking in Power BI]]
+- [[dynamic-formatting-by-hierarchy-level-with-isinscope-and-isatlevel|Dynamic formatting by hierarchy level with ISINSCOPE and ISATLEVEL]]
+- [[enhancing-power-bi-reports-with-ai|Enhancing Power BI Reports with AI]]
+- [[how-long-to-create-a-power-bi-report-a-comprehensive-guide-on-timeline-expectati|How Long to Create a Power BI Report? A Comprehensive Guide on Timeline, Expectations, and Costs – Go Analytics]]
+- [[how-to-align-single-value-card-visual-in-power-bi-go-analytics|[How To] Align single value card visual in Power BI – Go Analytics]]
+- [[how-to-build-a-clean-pl-in-power-bi|How to Build a Clean P&L in Power BI]]
+- [[how-to-build-a-data-portfolio-that-gets-you-hired-in-2026|How to Build a Data Portfolio That Gets You Hired in 2026]]
+- [[how-to-build-a-power-bi-report-with-ai-using-the-power-bi-mcp|How To Build A Power BI Report With AI Using The Power BI MCP]]
+- [[how-to-build-a-powerful-llm-knowledge-base|How to Build a Powerful LLM Knowledge Base]]
+- [[how-to-conditionally-format-line-charts-in-power-bi-go-analytics|How To Conditionally Format Line Charts in Power BI – Go Analytics]]
+- [[how-to-connect-to-csv-data-in-power-bi-desktop-go-analytics|[How To] Connect to CSV data in Power BI Desktop  – Go Analytics]]
+- [[how-to-connect-to-multiple-tables-in-a-folder-in-power-bi-desktop-go-analytics|How to Connect to Multiple Tables in a Folder in Power BI Desktop – Go Analytics]]
+- [[how-to-connect-to-power-bi-datasets-from-power-bi-desktop-go-analytics|[How To] Connect to Power BI datasets from Power BI Desktop  – Go Analytics]]
+- [[how-to-connect-to-sharepoint-lists-in-power-bi-desktop-go-analytics|[How To] Connect to SharePoint Lists in Power BI Desktop – Go Analytics]]
+- [[how-to-connect-to-web-data-sources-in-power-bi-go-analytics|[How To] Connect to Web Data Sources in Power BI – Go Analytics]]
+- [[how-to-create-a-histogram-and-cumulative-frequency-distribution-chart-in-power-b|[How To] Create a histogram and cumulative frequency distribution chart in Power BI – Go Analytics]]
+- [[how-to-enter-data-directly-into-power-bi-desktop-go-analytics|[How To] Enter data directly into Power BI Desktop  – Go Analytics]]
+- [[how-to-import-data-from-a-file-stored-in-sharepoint-into-power-bi-go-analytics|[How To] Import Data from a File Stored in SharePoint into Power BI – Go Analytics]]
+- [[how-to-import-data-from-pdf-into-power-bi-go-analytics|[How To] Import data from PDF into Power BI – Go Analytics]]
+- [[how-to-import-data-from-sql-server-into-power-bi-go-analytics|[How To] Import Data from SQL Server into Power BI – Go Analytics]]
+- [[how-to-write-good-ai-instructions-for-a-semantic-model|How to write good AI instructions for a semantic model]]
+- [[my-new-obsidian-plugin|My new Obsidian plugin]]
+- [[power-bi-copilot-data-agent-optimization-performance-paul-turleys-sql-server-bi-|Power BI Copilot, Data Agent Optimization & Performance – Paul Turley's SQL Server BI Blog]]
+- [[power-bi-date-picker-prologika|Power BI Date Picker – Prologika]]
+- [[setting-up-report-pages-in-power-bi-go-analytics|Setting Up Report Pages in Power BI – Go Analytics]]
+- [[the-medallion-data-architecture|The Medallion Data Architecture]]
+- [[the-pbip-format-in-simple-terms|The PBIP format in simple terms]]
+- [[understanding-calculation-groups|Understanding Calculation Groups]]
+- [[understanding-dateadd-parameters-with-calendar|Understanding DATEADD parameters with calendar]]
+- [[using-calculation-groups-to-switch-between-dates|Using calculation groups to switch between dates]]
+- [[using-values-in-summarize|Using VALUES in SUMMARIZE]]
+- [[using-visual-calculations-to-highlight-an-entire-row|Using visual calculations to highlight an entire row]]
+- [[writing-good-descriptions-for-semantic-model-columns-and-measures|Writing good descriptions for semantic model columns and measures]]
+- [[youtube|YouTube]]
+
+
+## Imported from Raindrop / Medium Reading List
+- [[08839a0ae270|08839a0ae270]]
+- [[10-hooks-051519c4a72c|10 Hooks 051519c4a72c]]
+- [[100-hours-of-youtube-wont-teach-you-about-power-bi-in-production-4dc44a68e85d|100 Hours Of Youtube Wont Teach You About Power Bi In Production 4dc44a68e85d]]
+- [[11-plugins-76459bc5b07d|11 Plugins 76459bc5b07d]]
+- [[12-sandboxing-8f281455d8d4|12 Sandboxing 8f281455d8d4]]
+- [[13-channels-a6d1c31389c1|13 Channels A6d1c31389c1]]
+- [[30-300-rule-changed-the-way-build-dashboards-91f261df3780|30 300 Rule Changed The Way Build Dashboards 91f261df3780]]
+- [[35b-runs-on-16-gb-m4-mac-mini-fully-in-memory-no-tricks-1ec4b5bcec35|35b Runs On 16 Gb M4 Mac Mini Fully In Memory No Tricks 1ec4b5bcec35]]
+- [[accessibility-developing-translated-views-in-multilingual-power-bi-reports-5ca20|Accessibility Developing Translated Views In Multilingual Power Bi Reports 5ca20d41217a]]
+- [[accidental-dataset-deletion-in-power-bi-proven-strategies-to-protect-critical-bu|Accidental Dataset Deletion In Power Bi Proven Strategies To Protect Critical Business 1957c2815d12]]
+- [[agent-101-practical-guide-to-persistent-and-self-improving-agents-a14d5537c8f3|Agent 101 Practical Guide To Persistent And Self Improving Agents A14d5537c8f3]]
+- [[agent-for-workflow-automation-everything-you-need-to-know-01e63431621f|Agent For Workflow Automation Everything You Need To Know 01e63431621f]]
+- [[agent-masterclass-full-tutorial-b4b828aa3ab4|Agent Masterclass Full Tutorial B4b828aa3ab4]]
+- [[agent-masterclass-full-tutorialle¼ù-b4b828aa3ab4|Agent Masterclass Full Tutorialle¼ù B4b828aa3ab4]]
+- [[agent-shows-where-personal-ai-is-going-7ab7abbn7ùff44cc|Agent Shows Where Personal Ai Is Going 7ab7abb·n7ùff44cc]]
+- [[agent-shows-where-personal-ai-is-going-7ab7abff44cc|Agent Shows Where Personal Ai Is Going 7ab7abff44cc]]
+- [[agent-that-remembers-what-it-learned-yesterday-and-gets-better-because-of-it-662|Agent That Remembers What It Learned Yesterday And Gets Better Because Of It 662ac674398c]]
+- [[agent-the-agent-that-learns-with-you-45fbd3b4979c|Agent The Agent That Learns With You 45fbd3b4979c]]
+- [[agent-the-open-source-ai-agent-that-actually-remembers-what-it-learned-yesterday|Agent The Open Source Ai Agent That Actually Remembers What It Learned Yesterday 278441cd1870]]
+- [[agentic-ai-the-big-picture-50806a6012b5|Agentic Ai The Big Picture 50806a6012b5]]
+- [[agents-memory-modeling-relationships-with-ontology-and-knowledge-graph-2207e54b7|Agents Memory Modeling Relationships With Ontology And Knowledge Graph 2207e54b79bf]]
+- [[agents-nervous-system-monitoring-the-system-in-real-time-with-observability-78db|Agents Nervous System Monitoring The System In Real Time With Observability 78dba2fefe6e]]
+- [[ai-agent-needs-map-llm-wiki-vs-readme-driven-documentation-747e683c9ab4|Ai Agent Needs Map Llm Wiki Vs Readme Driven Documentation 747e683c9ab4]]
+- [[all-descriptions-for-power-bi-using-ai-bef5ebf8c3af|All Descriptions For Power Bi Using Ai Bef5ebf8c3af]]
+- [[allexcept-allselected-and-removefilters-in-power-bi-whats-the-difference-9a088a6|Allexcept Allselected And Removefilters In Power Bi Whats The Difference 9a088a60a95e]]
+- [[amazing-fiction-planning-plugin-for-obsidian-89133a07b969|Amazing Fiction Planning Plugin For Obsidian 89133a07b969]]
+- [[an-ai-second-brain-llm-wiki-pattern-with-claude-code-and-obsidian-fc41cc213d50|An Ai Second Brain Llm Wiki Pattern With Claude Code And Obsidian Fc41cc213d50]]
+- [[an-executive-retail-sales-dashboard-in-power-bi-239cca3c36b3|An Executive Retail Sales Dashboard In Power Bi 239cca3c36b3]]
+- [[an-interactive-flip-card-kpi-dashboard-with-dash-plotly-css-6ad367b165f5|An Interactive Flip Card Kpi Dashboard With Dash Plotly Css 6ad367b165f5]]
+- [[an-llm-wiki-in-obsidian-0e9ec9a4fb04|An Llm Wiki In Obsidian 0e9ec9a4fb04]]
+- [[an-offline-local-multi-vault-llm-engine-for-obsidian-5de473878c4f|An Offline Local Multi Vault Llm Engine For Obsidian 5de473878c4f]]
+- [[analytics-in-bi-why-it-matters-in-2026-e80733ab8ff1|Analytics In Bi Why It Matters In 2026 E80733ab8ff1]]
+- [[analytics-in-power-bi-21ca16da2795|Analytics In Power Bi 21ca16da2795]]
+- [[and-islands-solving-consecutive-active-days-in-power-bi-f409b3679559|And Islands Solving Consecutive Active Days In Power Bi F409b3679559]]
+- [[and-loop-the-two-claude-code-commands-that-know-when-to-stop-61029a0d9634|And Loop The Two Claude Code Commands That Know When To Stop 61029a0d9634]]
+- [[and-personalization-in-power-bi-ba0c3fc545e5|And Personalization In Power Bi Ba0c3fc545e5]]
+- [[and-query-knowledge-graphs-with-llms-4f39251df792|And Query Knowledge Graphs With Llms 4f39251df792]]
+- [[asking-claude-for-only-text-build-this-instead-e5c7cb8e5682|Asking Claude For Only Text Build This Instead E5c7cb8e5682]]
+- [[automate-desktop-tutorial-building-sequential-flow-21f0c4819ca5|Automate Desktop Tutorial Building Sequential Flow 21f0c4819ca5]]
+- [[automate-for-power-bi-visualization-2c0801ce9fd5|Automate For Power Bi Visualization 2c0801ce9fd5]]
+- [[automate-how-to-delete-sharepoint-files-and-folder-97999ca14301|Automate How To Delete Sharepoint Files And Folder 97999ca14301]]
+- [[automate-integration-with-power-apps-power-bi-and-microsoft-365-multiqos-5e2177b|Automate Integration With Power Apps Power Bi And Microsoft 365 Multiqos 5e2177be28dd]]
+- [[automate-tracked-properties-04f8d20e4b74|Automate Tracked Properties 04f8d20e4b74]]
+- [[automate-ui-flows-automating-microsoft-forms-creation-f3f5cb4677bc|Automate Ui Flows Automating Microsoft Forms Creation F3f5cb4677bc]]
+- [[automated-obsidian-intelligence-vault-that-gets-smarter-every-day-709e240150d3|Automated Obsidian Intelligence Vault That Gets Smarter Every Day 709e240150d3]]
+- [[autoresearch-for-local-llm-d5b47e838970|Autoresearch For Local Llm D5b47e838970]]
+- [[beats-tools-reading-memory-back-03736c19b312|Beats Tools Reading Memory Back 03736c19b312]]
+- [[bell-curves-to-rare-events-mastering-probability-distributions-like-pro-33b25ce8|Bell Curves To Rare Events Mastering Probability Distributions Like Pro 33b25ce8cc4b]]
+- [[best-ai-prompts-for-powerpoint-presentations-2026-17ab8c6cf927|Best Ai Prompts For Powerpoint Presentations 2026 17ab8c6cf927]]
+- [[best-ai-tutor-is-140-line-file-you-can-edit-118f913dd035|Best Ai Tutor Is 140 Line File You Can Edit 118f913dd035]]
+- [[best-power-bi-kpi-card-so-far-deb7513ff3be|Best Power Bi Kpi Card So Far Deb7513ff3be]]
+- [[bi-ai-toolkit-build-better-reports-faster-with-copilot-016aa59df0e8|Bi Ai Toolkit Build Better Reports Faster With Copilot 016aa59df0e8]]
+- [[bi-assets-seamless-prs-96582595af58|Bi Assets Seamless Prs 96582595af58]]
+- [[bi-backup-and-restore-datasets-f1ab490bcff4|Bi Backup And Restore Datasets F1ab490bcff4]]
+- [[bi-calculation-groups-d2e92539f776|Bi Calculation Groups D2e92539f776]]
+- [[bi-change-detection-8e4b39b281ac|Bi Change Detection 8e4b39b281ac]]
+- [[bi-dashboard-design-principles-used-by-top-companies-8b65714a4711|Bi Dashboard Design Principles Used By Top Companies 8b65714a4711]]
+- [[bi-data-cleaning-checklist-before-creating-dashboards-12-essential-steps-that-sa|Bi Data Cleaning Checklist Before Creating Dashboards 12 Essential Steps That Save Hours Of 28ee73ac8c09]]
+- [[bi-dataflows-af3865131436|Bi Dataflows Af3865131436]]
+- [[bi-datasets-e844200d405|Bi Datasets E844200d405]]
+- [[bi-demystified-row-context-vs-context-transition-explained-with-examples-d43576a|Bi Demystified Row Context Vs Context Transition Explained With Examples D43576a74f22]]
+- [[bi-deployment-pipelines-auto-binding-and-deployment-rules-4822a7938e5|Bi Deployment Pipelines Auto Binding And Deployment Rules 4822a7938e5]]
+- [[bi-deplyment-pipelines-86d20c10e346|Bi Deplyment Pipelines 86d20c10e346]]
+- [[bi-direct-query-on-clustered-columnstore-index-4f94db572073|Bi Direct Query On Clustered Columnstore Index 4f94db572073]]
+- [[bi-documentation-made-easy-no-external-tools-pbix-included-f7acb4671f47|Bi Documentation Made Easy No External Tools Pbix Included F7acb4671f47]]
+- [[bi-elevating-data-visualization-with-custom-measure-sorting-b368fd382917|Bi Elevating Data Visualization With Custom Measure Sorting B368fd382917]]
+- [[bi-field-parameter-afd2f24c2dcb|Bi Field Parameter Afd2f24c2dcb]]
+- [[bi-gateway-explained-d72f9cd323f6|Bi Gateway Explained D72f9cd323f6]]
+- [[bi-hints-tips-and-timesavers-3b1b6457328|Bi Hints Tips And Timesavers 3b1b6457328]]
+- [[bi-hybrid-tables-fb043b212fe1|Bi Hybrid Tables Fb043b212fe1]]
+- [[bi-incremental-refresh-46ab3f23ca01|Bi Incremental Refresh 46ab3f23ca01]]
+- [[bi-is-finally-code-automating-semantic-model-governance-via-tmdl-eb7ba10d707c|Bi Is Finally Code Automating Semantic Model Governance Via Tmdl Eb7ba10d707c]]
+- [[bi-june-2026-the-update-that-turns-your-semantic-model-into-an-api-for-agents-2f|Bi June 2026 The Update That Turns Your Semantic Model Into An Api For Agents 2f7d267f9781]]
+- [[bi-kpis-41b9404763e3|Bi Kpis 41b9404763e3]]
+- [[bi-looking-2d0fffb081d0|Bi Looking 2d0fffb081d0]]
+- [[bi-map-not-working-how-to-fix-location-errors-74b22573f88c|Bi Map Not Working How To Fix Location Errors 74b22573f88c]]
+- [[bi-mastery-dynamic-color-assignments-for-streamlined-visuals-bc1b59ec29d2|Bi Mastery Dynamic Color Assignments For Streamlined Visuals Bc1b59ec29d2]]
+- [[bi-migration-how-to-reuse-existing-queries-bold-bi-08cf73cc1498|Bi Migration How To Reuse Existing Queries Bold Bi 08cf73cc1498]]
+- [[bi-modeling-mcp-server-step-by-step-implementation-guide-b7209d6d2506|Bi Modeling Mcp Server Step By Step Implementation Guide B7209d6d2506]]
+- [[bi-narrow-data-table-range-27b7e6540524|Bi Narrow Data Table Range 27b7e6540524]]
+- [[bi-object-level-security-a3f476dd6768|Bi Object Level Security A3f476dd6768]]
+- [[bi-paginated-reports-5f3209933bb2|Bi Paginated Reports 5f3209933bb2]]
+- [[bi-remove-filter-functions-explained-all-allselected-allexcept-allfiltered-with-|Bi Remove Filter Functions Explained All Allselected Allexcept Allfiltered With 5a93e01a7c71]]
+- [[bi-report-control-version-b71a45f16ca6|Bi Report Control Version B71a45f16ca6]]
+- [[bi-reports-and-fabric-apps-the-future-of-building-on-your-semantic-model-9e13f90|Bi Reports And Fabric Apps The Future Of Building On Your Semantic Model 9e13f900252f]]
+- [[bi-rls-part-2ca8f6cbff43|Bi Rls Part 2ca8f6cbff43]]
+- [[bi-rls-part-9d714382ec47|Bi Rls Part 9d714382ec47]]
+- [[bi-sharepoint-part-best-practices-security-and-when-to-scale-up-05fb1ca4f99d|Bi Sharepoint Part Best Practices Security And When To Scale Up 05fb1ca4f99d]]
+- [[bi-show-and-hide-measures-on-slicer-3b9609434466|Bi Show And Hide Measures On Slicer 3b9609434466]]
+- [[bi-time-hacks-mastering-dynamic-date-views-20c26275bd2e|Bi Time Hacks Mastering Dynamic Date Views 20c26275bd2e]]
+- [[bi-time-intelligence-a3b46ef74d45|Bi Time Intelligence A3b46ef74d45]]
+- [[bi-tmdl-tabular-model-definition-language-2cca06e87921|Bi Tmdl Tabular Model Definition Language 2cca06e87921]]
+- [[bi-treatas-function-f105ed6f8a76|Bi Treatas Function F105ed6f8a76]]
+- [[bi-unleashed-building-interactive-tutorials-that-stick-95f97da8eef0|Bi Unleashed Building Interactive Tutorials That Stick 95f97da8eef0]]
+- [[bi-user-defined-aggregations-d610dc44faf5|Bi User Defined Aggregations D610dc44faf5]]
+- [[bi-visualization-as-tooltip-ff11183ac365|Bi Visualization As Tooltip Ff11183ac365]]
+- [[bi-what-if-parameter-d5212001ec4c|Bi What If Parameter D5212001ec4c]]
+- [[bi-why-your-slicer-isnt-filtering-90b8171abdec|Bi Why Your Slicer Isnt Filtering 90b8171abdec]]
+- [[bin-analysis-using-percentile-bucketing-in-power-bi-pbix-included-9109ec404b13|Bin Analysis Using Percentile Bucketing In Power Bi Pbix Included 9109ec404b13]]
+- [[binning-in-power-bi-select-distinct-048660a5a124|Binning In Power Bi Select Distinct 048660a5a124]]
+- [[bis-new-user-defined-functions-10-must-have-you-ll-use-in-every-report-616523e70|Bis New User Defined Functions 10 Must Have You Ll Use In Every Report 616523e70a65]]
+- [[brain-of-agents-designing-the-decision-engine-with-orchestration-e65f1f0d71ab|Brain Of Agents Designing The Decision Engine With Orchestration E65f1f0d71ab]]
+- [[bubble-charts-in-power-bi-enhancing-data-narratives-and-user-engagement-fd149d3e|Bubble Charts In Power Bi Enhancing Data Narratives And User Engagement Fd149d3ed1da]]
+- [[build-an-enterprise-rag-agent-with-open-source-tool-no-coding-needed-a22f9a95ca3|Build An Enterprise Rag Agent With Open Source Tool No Coding Needed A22f9a95ca34]]
+- [[building-an-ai-agent-system-from-zero-to-production-the-12-phase-blueprint-02c5c|Building An Ai Agent System From Zero To Production The 12 Phase Blueprint 02c5c6277ce5]]
+- [[building-slow-power-bi-reports-data-pros-checklist-53990dbe770c|Building Slow Power Bi Reports Data Pros Checklist 53990dbe770c]]
+- [[built-an-obsidian-vault-no-single-ai-tool-can-hold-hostage-a085920ae9ff|Built An Obsidian Vault No Single Ai Tool Can Hold Hostage A085920ae9ff]]
+- [[built-github-style-calendar-heatmap-in-power-bi-c602c6d98454|Built Github Style Calendar Heatmap In Power Bi C602c6d98454]]
+- [[built-modern-oblique-area-chart-in-power-bi-using-only-native-visuals-c0986d0c67|Built Modern Oblique Area Chart In Power Bi Using Only Native Visuals C0986d0c6753]]
+- [[built-python-mcp-server-for-my-ai-coding-agent-and-it-finally-stopped-guessing-6|Built Python Mcp Server For My Ai Coding Agent And It Finally Stopped Guessing 6931bc99e845]]
+- [[built-second-brain-with-claude-code-more-reliable-than-my-own-1a8952ce79f6|Built Second Brain With Claude Code More Reliable Than My Own 1a8952ce79f6]]
+- [[bump-charts-tell-you-that-line-charts-hide-b630758d6458|Bump Charts Tell You That Line Charts Hide B630758d6458]]
+- [[burned-the-kingdom-and-the-blacksmith-didnt-notice-0b92fd7fe1af|Burned The Kingdom And The Blacksmith Didnt Notice 0b92fd7fe1af]]
+- [[by-step-guide-to-retrieve-data-from-sharepoint-list-with-over-5000-items-b5a7a88|By Step Guide To Retrieve Data From Sharepoint List With Over 5000 Items B5a7a88d5f2c]]
+- [[by-step-guîáùide-to-retrieve-data-from-sharepoint-list-with-over-5000-items-b5a7|By Step Guî[¦áùide To Retrieve Data From Sharepoint List With Over 5000 Items B5a7a88d5f2c]]
+- [[calculations-just-went-ga-9a5940244b34|Calculations Just Went Ga 9a5940244b34]]
+- [[calendar-based-time-intellig-ýùence-what-you-must-know-before-editing-your-model|Calendar Based Time Intellig_ý»ùence What You Must Know Before Editing Your Model 51f14c653c76]]
+- [[calendar-based-time-intelligence-what-you-must-know-before-editing-your-model-51|Calendar Based Time Intelligence What You Must Know Before Editing Your Model 51f14c653c76]]
+- [[can-read-text-vdr-learns-to-read-documents-4921ebe9c70c|Can Read Text Vdr Learns To Read Documents 4921ebe9c70c]]
+- [[can-you-improve-the-appearance-of-your-chart-in-plotly-ad14230270ca|Can You Improve The Appearance Of Your Chart In Plotly Ad14230270ca]]
+- [[cases-of-donut-charts-in-power-bi-e2555ec0d901|Cases Of Donut Charts In Power Bi E2555ec0d901]]
+- [[challenges-in-illustrating-rates-and-indexes-in-power-bi-line-or-area-charts-5a6|Challenges In Illustrating Rates And Indexes In Power Bi Line Or Area Charts 5a6ae5f60357]]
+- [[chart-vs-histogram-why-distributions-dont-have-to-be-scary-cb3691b11aac|Chart Vs Histogram Why Distributions Dont Have To Be Scary Cb3691b11aac]]
+- [[chromatic-canvas-unlocking-the-power-of-color-in-dashboard-design-a625b650569c|Chromatic Canvas Unlocking The Power Of Color In Dashboard Design A625b650569c]]
+- [[claude-101-through-my-own-rag-system-projects-skills-mcp-enterprise-search-and-c|Claude 101 Through My Own Rag System Projects Skills Mcp Enterprise Search And Cf0639754565]]
+- [[claude-code-commands-during-task-4c36f283fdf8|Claude Code Commands During Task 4c36f283fdf8]]
+- [[claude-code-commands-managing-context-and-memory-688bccbdd337|Claude Code Commands Managing Context And Memory 688bccbdd337]]
+- [[claude-code-commands-parallel-work-and-background-agents-864ee0a1f285|Claude Code Commands Parallel Work And Background Agents 864ee0a1f285]]
+- [[claude-code-commands-reviewing-and-shipping-code-0770767fb540|Claude Code Commands Reviewing And Shipping Code 0770767fb540]]
+- [[claude-code-commands-session-navigation-a9f220b47a65|Claude Code Commands Session Navigation A9f220b47a65]]
+- [[claude-code-commands-settings-and-configuration-c910b7a4d8c8|Claude Code Commands Settings And Configuration C910b7a4d8c8]]
+- [[claude-code-commands-starting-new-project-faf0170d73d3|Claude Code Commands Starting New Project Faf0170d73d3]]
+- [[claude-code-skills-automate-my-obsidian-vault-index-232972e592c3|Claude Code Skills Automate My Obsidian Vault Index 232972e592c3]]
+- [[claude-desktop-obsidian-on-windows-919736d546c1|Claude Desktop Obsidian On Windows 919736d546c1]]
+- [[claude-md-42b76b6895ff|Claude Md 42b76b6895ff]]
+- [[claude-md-playbook-the-full-2026-guide-to-configuring-claude-for-any-project-e56|Claude Md Playbook The Full 2026 Guide To Configuring Claude For Any Project E56654644f99]]
+- [[claude-skill-actually-changes-about-power-bi-developers-job-011e2398b811|Claude Skill Actually Changes About Power Bi Developers Job 011e2398b811]]
+- [[claude-skill-mentioned-so-you-dont-have-to-read-50-articles-and-podcasts-166b326|Claude Skill Mentioned So You Dont Have To Read 50 Articles And Podcasts 166b32628788]]
+- [[cleaning-data-more-painful-than-building-models-5e270cc378f1|Cleaning Data More Painful Than Building Models 5e270cc378f1]]
+- [[code-agents-what-they-actually-are-2d6ea121b936|Code Agents What They Actually Are 2d6ea121b936]]
+- [[code-in-visual-studio-not-vscode-7d988ad55be2|Code In Visual Studio Not Vscode 7d988ad55be2]]
+- [[code-superpowers-setup-run-guide-5da16fb6905b|Code Superpowers Setup Run Guide 5da16fb6905b]]
+- [[code-ultracode-ultrathink-24413752f316|Code Ultracode Ultrathink 24413752f316]]
+- [[color-coding-line-charts-in-power-bi-3978fd93a2cc|Color Coding Line Charts In Power Bi 3978fd93a2cc]]
+- [[color-trap-what-most-dashboards-get-wrong-04f4070419f2|Color Trap What Most Dashboards Get Wrong 04f4070419f2]]
+- [[column-vs-measure-in-power-bi-whats-the-difference-and-when-to-use-each-7378a54d|Column Vs Measure In Power Bi Whats The Difference And When To Use Each 7378a54df93b]]
+- [[columns-and-measures-in-power-bi-f0bdaa0bf197|Columns And Measures In Power Bi F0bdaa0bf197]]
+- [[complete-guide-to-obsidian-properties-1324276e0009|Complete Guide To Obsidian Properties 1324276e0009]]
+- [[complete-guide-to-templates-and-templater-in-obsidian-9a6ec900fbe9|Complete Guide To Templates And Templater In Obsidian 9a6ec900fbe9]]
+- [[complete-personal-harness-llm-wiki-developers-second-brain-in-obsidian-d7b61c739|Complete Personal Harness Llm Wiki Developers Second Brain In Obsidian D7b61c7398ff]]
+- [[connected-claude-to-power-bi-directly-it-found-my-bug-in-under-minute-1cbbc7438f|Connected Claude To Power Bi Directly It Found My Bug In Under Minute 1cbbc7438f8a]]
+- [[connected-claude-to-real-client-power-bi-models-via-mcp-cc75289f859a|Connected Claude To Real Client Power Bi Models Via Mcp Cc75289f859a]]
+- [[connecting-the-dots-really-tells-your-audience-and-what-it-hides-e83241d5f1b6|Connecting The Dots Really Tells Your Audience And What It Hides E83241d5f1b6]]
+- [[context-window-management-f4acef11ccbc|Context Window Management F4acef11ccbc]]
+- [[controls-the-salt-15fa5f9aa81e|Controls The Salt 15fa5f9aa81e]]
+- [[copilot-for-power-bi-bafc01763094|Copilot For Power Bi Bafc01763094]]
+- [[css-tricks-used-in-this-modern-html-kpi-card-in-power-bi-3c71bd836012|Css Tricks Used In This Modern Html Kpi Card In Power Bi 3c71bd836012]]
+- [[custom-slash-commands-e15ec1a4b5be|Custom Slash Commands E15ec1a4b5be]]
+- [[dashboard-is-no-longer-just-report-38522474abdc|Dashboard Is No Longer Just Report 38522474abdc]]
+- [[dashboards-with-chatgpt-and-power-bi-14c12c308226|Dashboards With Chatgpt And Power Bi 14c12c308226]]
+- [[dashboards-with-chatgpt-and-power-bi-345e22f09931|Dashboards With Chatgpt And Power Bi 345e22f09931]]
+- [[dashboards-with-chatgpt-and-power-bi-47612a977a83|Dashboards With Chatgpt And Power Bi 47612a977a83]]
+- [[dashboards-with-chatgpt-and-power-bi-4ca764ff60fa|Dashboards With Chatgpt And Power Bi 4ca764ff60fa]]
+- [[dashboards-with-chatgpt-and-power-bi-759c242e449b|Dashboards With Chatgpt And Power Bi 759c242e449b]]
+- [[dashboards-with-chatgpt-and-power-bi-83cf5116c6be|Dashboards With Chatgpt And Power Bi 83cf5116c6be]]
+- [[dashboards-with-chatgpt-and-power-bi-a6cb035fdcd4|Dashboards With Chatgpt And Power Bi A6cb035fdcd4]]
+- [[dashboards-with-chatgpt-and-power-bi-ab26cc946a14|Dashboards With Chatgpt And Power Bi Ab26cc946a14]]
+- [[dashboards-with-chatgpt-and-power-bi-b378d786a771|Dashboards With Chatgpt And Power Bi B378d786a771]]
+- [[dashboards-with-chatgpt-and-power-bi-bad1fa74522d|Dashboards With Chatgpt And Power Bi Bad1fa74522d]]
+- [[dashboards-with-chatgpt-and-power-bi-chapter-5e89466fa476|Dashboards With Chatgpt And Power Bi Chapter 5e89466fa476]]
+- [[dashboards-with-chatgpt-and-power-bi-d6ca6dc05d8d|Dashboards With Chatgpt And Power Bi D6ca6dc05d8d]]
+- [[dashboards-with-chatgpt-and-power-bi-e41ba05fbf8f|Dashboards With Chatgpt And Power Bi E41ba05fbf8f]]
+- [[dashboards-with-chatgpt-and-power-bi-ed4d9a618bf8|Dashboards With Chatgpt And Power Bi Ed4d9a618bf8]]
+- [[dashboards-with-chatgpt-and-power-bi-f23fadfd1d2c|Dashboards With Chatgpt And Power Bi F23fadfd1d2c]]
+- [[data-analyst-revolution-when-ai-meets-power-bi-and-mcp-380866da726b|Data Analyst Revolution When Ai Meets Power Bi And Mcp 380866da726b]]
+- [[data-cleaning-mistakes-that-ruin-your-dashboard-and-how-to-avoid-them-4aa7373d9e|Data Cleaning Mistakes That Ruin Your Dashboard And How To Avoid Them 4aa7373d9e62]]
+- [[data-cleaning-mistakes-that-ruin-your-dashboard-and-how-to-avoid-them-4aa73jù73d|Data Cleaning Mistakes That Ruin Your Dashboard And How To Avoid Them 4aa73!·jù73d9e62]]
+- [[data-exploration-with-custom-slicer-filter-pane-in-power-bi-fce4c109aaa0|Data Exploration With Custom Slicer Filter Pane In Power Bi Fce4c109aaa0]]
+- [[data-narratives-the-art-of-power-bi-reporting-aa087ed53c24|Data Narratives The Art Of Power Bi Reporting Aa087ed53c24]]
+- [[data-narratives-with-power-bi-tooltips-43997a01a967|Data Narratives With Power Bi Tooltips 43997a01a967]]
+- [[data-pipelines-in-power-bi-solving-type-inference-errors-in-azure-data-factory-c|Data Pipelines In Power Bi Solving Type Inference Errors In Azure Data Factory Csv E343f3f4faae]]
+- [[data-visualisation-do-you-want-to-learn-00ffa8cf4690|Data Visualisation Do You Want To Learn 00ffa8cf4690]]
+- [[data-visualization-how-to-notice-and-fix-it-27-examples-d876c9be6872|Data Visualization How To Notice And Fix It 27 Examples D876c9be6872]]
+- [[data-visualization-in-power-bi-color-coded-markers-and-target-lines-for-impactfu|Data Visualization In Power Bi Color Coded Markers And Target Lines For Impactful Area C773ad4a12e7]]
+- [[data-warehouse-from-scratch-case-study-in-kimball-modeling-bcbcaacd5b95|Data Warehouse From Scratch Case Study In Kimball Modeling Bcbcaacd5b95]]
+- [[date-is-it-anyway-making-peace-with-treatas-in-multi-date-world-4f1400d4e6d1|Date Is It Anyway Making Peace With Treatas In Multi Date World 4f1400d4e6d1]]
+- [[date-table-in-power-bi-48b070d5f7f8|Date Table In Power Bi 48b070d5f7f8]]
+- [[decision-pyramid-why-great-analysts-dont-build-dashboards-c7a3ed9c6c0b|Decision Pyramid Why Great Analysts Dont Build Dashboards C7a3ed9c6c0b]]
+- [[defaults-using-custom-fonts-in-power-bi-b2b341fd323e|Defaults Using Custom Fonts In Power Bi B2b341fd323e]]
+- [[design-is-logistics-problem-5c202b4b30a2|Design Is Logistics Problem 5c202b4b30a2]]
+- [[developers-guide-to-google-open-knowledge-format-88ba575dde3d|Developers Guide To Google Open Knowledge Format 88ba575dde3d]]
+- [[didnt-ruin-worldbuilding-it-just-exposed-who-was-never-doing-it-08f08bd847ac|Didnt Ruin Worldbuilding It Just Exposed Who Was Never Doing It 08f08bd847ac]]
+- [[didnt-ruin-worldbuilding-it-just-exposed-who-was-never-doing-óùj|Didnt Ruin Worldbuilding It Just Exposed Who Was Never Doing Óùj«]]
+- [[difference-between-using-ai-and-building-an-ai-system-072c75d9c5a5|Difference Between Using Ai And Building An Ai System 072c75d9c5a5]]
+- [[docling-factory-building-multimodal-rag-powerhouse-2dc3d218492b|Docling Factory Building Multimodal Rag Powerhouse 2dc3d218492b]]
+- [[document-processing-in-2026-how-llms-are-replacing-legacy-ocr-workflows-b31db360|Document Processing In 2026 How Llms Are Replacing Legacy Ocr Workflows B31db360f6f3]]
+- [[dont-hate-optional-content-they-hate-interchangeable-progression-c1652e41829b|Dont Hate Optional Content They Hate Interchangeable Progression C1652e41829b]]
+- [[dont-need-thinking-levels-in-claude-code-you-need-planning-and-goal-modes-2f328e|Dont Need Thinking Levels In Claude Code You Need Planning And Goal Modes 2f328e56fba0]]
+- [[dont-prompt-claude-anymore-write-loops-that-prompt-claude-57e48a4f28d7|Dont Prompt Claude Anymore Write Loops That Prompt Claude 57e48a4f28d7]]
+- [[drag-drop-to-obsidian-plugin-devlog-e286f71ffbf9|Drag Drop To Obsidian Plugin Devlog E286f71ffbf9]]
+- [[dumbbell-charts-tell-you-that-grouped-bars-hide-4d2df3425ccf|Dumbbell Charts Tell You That Grouped Bars Hide 4d2df3425ccf]]
+- [[duration-trends-in-power-bi-613bee718b91|Duration Trends In Power Bi 613bee718b91]]
+- [[easy-data-architecture-interview-questions-conceptual-bc156c36e851|Easy Data Architecture Interview Questions Conceptual Bc156c36e851]]
+- [[efb88f-data-warehouse-architectures-inmon-vs-kimball-vs-data-vault-4b199bae264f|%ef%b8%8f Data Warehouse Architectures Inmon Vs Kimball Vs Data Vault 4b199bae264f]]
+- [[efb88f-how-to-build-gantt-chart-in-power-bi-using-only-core-visuals-6d27e1e56d13|%ef%b8%8f How To Build Gantt Chart In Power Bi Using Only Core Visuals 6d27e1e56d13]]
+- [[efb88f-the-2026-power-trio-bridging-the-gap-between-sql-python-and-power-bi-981e|%ef%b8%8f The 2026 Power Trio Bridging The Gap Between Sql Python And Power Bi 981ea1e7a51c]]
+- [[everybody-ought-to-know-about-iterator-functions-in-power-bi-a77b63889ac7|Everybody Ought To Know About Iterator Functions In Power Bi A77b63889ac7]]
+- [[examples-of-power-bi-3c669ac2f8df|Examples Of Power Bi 3c669ac2f8df]]
+- [[fabric-made-simple-from-data-pipelines-to-power-bi-b01d8b28d7f2|Fabric Made Simple From Data Pipelines To Power Bi B01d8b28d7f2]]
+- [[fabric-the-complete-guide-to-microsofts-unified-data-platform-a5693dee78a5|Fabric The Complete Guide To Microsofts Unified Data Platform A5693dee78a5]]
+- [[factions-have-lore-pages-and-identical-swords-ee1b15f77f9e|Factions Have Lore Pages And Identical Swords Ee1b15f77f9e]]
+- [[favorite-way-to-forecast-in-power-bi-634d1221df24|Favorite Way To Forecast In Power Bi 634d1221df24]]
+- [[finally-got-user-defined-functions-d58e022379ca|Finally Got User Defined Functions D58e022379ca]]
+- [[first-step-in-building-reliable-agents-the-data-layer-52ea7abc8a25|First Step In Building Reliable Agents The Data Layer 52ea7abc8a25]]
+- [[flow-and-sharepoint-lists-c60eebcb58cb|Flow And Sharepoint Lists C60eebcb58cb]]
+- [[folding-in-power-bi-explained-why-it-can-make-your-reports-much-faster-f8b43a6a6|Folding In Power Bi Explained Why It Can Make Your Reports Much Faster F8b43a6a68e6]]
+- [[for-claude-code-cfa0b0b35240|For Claude Code Cfa0b0b35240]]
+- [[for-content-creators-how-to-use-it-to-never-run-out-of-article-ideas-1ed53a6b2da|For Content Creators How To Use It To Never Run Out Of Article Ideas 1ed53a6b2da7]]
+- [[for-impact-ideas-to-enhance-the-user-experience-and-accessibility-of-your-power-|For Impact Ideas To Enhance The User Experience And Accessibility Of Your Power Bi A3096742d9eb]]
+- [[free-platforms-to-deploy-your-website-in-2026-9fc312a118ec|Free Platforms To Deploy Your Website In 2026 9fc312a118ec]]
+- [[from-flat-rag-to-living-document-map-4385d9e26206|From Flat Rag To Living Document Map 4385d9e26206]]
+- [[game-that-cant-survive-its-own-silence-never-built-world-7d058730630c|Game That Cant Survive Its Own Silence Never Built World 7d058730630c]]
+- [[games-fake-player-choice-76860dbccad2|Games Fake Player Choice 76860dbccad2]]
+- [[games-world-doesn-need-more-lore-it-needs-more-consequences-7ca37814e719|Games World Doesn Need More Lore It Needs More Consequences 7ca37814e719]]
+- [[gave-my-ai-memory-heres-how-built-it-401a89dbf330|Gave My Ai Memory Heres How Built It 401a89dbf330]]
+- [[generic-power-bi-commentary-writeback-framework-with-fabric-user-data-functions-|Generic Power Bi Commentary Writeback Framework With Fabric User Data Functions And 4064b3566a15]]
+- [[generic-power-bi-cüùommentary-writeback-framework-with-fabric-user-data-function|Generic Power Bi Cüùommentary Writeback Framework With Fabric User Data Functions And 4064b3566a15]]
+- [[graph-databases-703caa688c90|Graph Databases 703caa688c90]]
+- [[graphs-retrieval-infrastructure-and-the-palantir-ontology-technical-tour-c1d7a66|Graphs Retrieval Infrastructure And The Palantir Ontology Technical Tour C1d7a663a944]]
+- [[groups-for-yoy-mom-qoq-in-power-bi-powerful-but-maybe-not-worth-it-86d996dbd471|Groups For Yoy Mom Qoq In Power Bi Powerful But Maybe Not Worth It 86d996dbd471]]
+- [[guided-knowledge-extraction-from-documents-to-context-aware-rules-e957bcb36e0d|Guided Knowledge Extraction From Documents To Context Aware Rules E957bcb36e0d]]
+- [[hermes-desktop-techniques-that-turn-it-into-proactive-ai-employee-41c859a9a29c|Hermes Desktop Techniques That Turn It Into Proactive Ai Employee 41c859a9a29c]]
+- [[hidden-features-to-unlock-the-true-potential-of-your-hermes-agent-setup-467464db|Hidden Features To Unlock The True Potential Of Your Hermes Agent Setup 467464db027c]]
+- [[how-to-align-single-value-card-visual-in-power-bi-go-analytics|[How To] Align single value card visual in Power BI – Go Analytics]]
+- [[how-to-connect-to-csv-data-in-power-bi-desktop-go-analytics|[How To] Connect to CSV data in Power BI Desktop  – Go Analytics]]
+- [[how-to-connect-to-power-bi-datasets-from-power-bi-desktop-go-analytics|[How To] Connect to Power BI datasets from Power BI Desktop  – Go Analytics]]
+- [[how-to-connect-to-sharepoint-lists-in-power-bi-desktop-go-analytics|[How To] Connect to SharePoint Lists in Power BI Desktop – Go Analytics]]
+- [[how-to-connect-to-web-data-sources-in-power-bi-go-analytics|[How To] Connect to Web Data Sources in Power BI – Go Analytics]]
+- [[how-to-create-a-histogram-and-cumulative-frequency-distribution-chart-in-power-b|[How To] Create a histogram and cumulative frequency distribution chart in Power BI – Go Analytics]]
+- [[how-to-enter-data-directly-into-power-bi-desktop-go-analytics|[How To] Enter data directly into Power BI Desktop  – Go Analytics]]
+- [[how-to-import-data-from-a-file-stored-in-sharepoint-into-power-bi-go-analytics|[How To] Import Data from a File Stored in SharePoint into Power BI – Go Analytics]]
+- [[how-to-import-data-from-pdf-into-power-bi-go-analytics|[How To] Import data from PDF into Power BI – Go Analytics]]
+- [[how-to-import-data-from-sql-server-into-power-bi-go-analytics|[How To] Import Data from SQL Server into Power BI – Go Analytics]]
+- [[if-vs-if-eager-2465d1e47db2|If Vs If Eager 2465d1e47db2]]
+- [[if-your-power-bi-dashboard-was-an-ai-agent-fdf2978c1bff|If Your Power Bi Dashboard Was An Ai Agent Fdf2978c1bff]]
+- [[implicit-and-explicit-measures-in-power-bi-select-distinct-5fcba26df73d|Implicit And Explicit Measures In Power Bi Select Distinct 5fcba26df73d]]
+- [[in-action-powering-real-time-insights-by-integrating-custom-alerts-in-power-bi-4|In Action Powering Real Time Insights By Integrating Custom Alerts In Power Bi 417251524e7c]]
+- [[in-power-bi-2025-built-an-ai-powered-dashboard-using-copilot-python-full-tutoria|In Power Bi 2025 Built An Ai Powered Dashboard Using Copilot Python Full Tutorial Ecd9f1037a43]]
+- [[in-power-bi-70c214dbee8f|In Power Bi 70c214dbee8f]]
+- [[in-power-bi-the-agentic-way-of-working-with-data-c8fbc7472042|In Power Bi The Agentic Way Of Working With Data C8fbc7472042]]
+- [[in-this-city-has-anywhere-to-be-3235a0116f5d|In This City Has Anywhere To Be 3235a0116f5d]]
+- [[insights-harnessing-dynamic-visuals-in-power-bi-45847609ab8c|Insights Harnessing Dynamic Visuals In Power Bi 45847609ab8c]]
+- [[introduction-to-docker-38fdd8f8c445|Introduction To Docker 38fdd8f8c445]]
+- [[invisible-architecture-designing-systems-that-make-worlds-breathe-ed55d4560469|Invisible Architecture Designing Systems That Make Worlds Breathe Ed55d4560469]]
+- [[is-an-on-premises-data-gateway-in-power-bi-4030ce6eccc1|Is An On Premises Data Gateway In Power Bi 4030ce6eccc1]]
+- [[is-filter-context-in-power-bi-complete-guide-with-examples-and-visuals-3cdab77a2|Is Filter Context In Power Bi Complete Guide With Examples And Visuals 3cdab77a2c83]]
+- [[jargon-free-depreciation-understanding-and-implementation-in-power-bi-pbix-inclu|Jargon Free Depreciation Understanding And Implementation In Power Bi Pbix Included E7a54df0a6c1]]
+- [[jargon-free-depreciation-understanding-râïùand-implementation-in-power-bi-pbix-i|Jargon Free Depreciation Understanding Râïùand Implementation In Power Bi Pbix Included E7a54df0a6c1]]
+- [[keepfilters-vs-filter-8f3fb519ccaf|Keepfilters Vs Filter 8f3fb519ccaf]]
+- [[knowledge-format-okf-why-google-thinks-ai-needs-git-for-knowledge-9dc9f08efb79|Knowledge Format Okf Why Google Thinks Ai Needs Git For Knowledge 9dc9f08efb79]]
+- [[knowledge-graph-comprehensive-end-to-end-guide-using-modern-tools-e06fe8f3b368|Knowledge Graph Comprehensive End To End Guide Using Modern Tools E06fe8f3b368]]
+- [[knowledge-graph-from-scratch-for-ai-applicatieùons-bc18f5cd05e8|Knowledge Graph From Scratch For Ai Applicati+ eùons Bc18f5cd05e8]]
+- [[knowledge-graph-from-scratch-for-ai-applications-bc18f5cd05e8|Knowledge Graph From Scratch For Ai Applications Bc18f5cd05e8]]
+- [[knowledge-graphs-with-local-llms-from-benchmarking-to-fine-tuning-ed572268aa3f|Knowledge Graphs With Local Llms From Benchmarking To Fine Tuning Ed572268aa3f]]
+- [[language-analytics-instant-answers-bold-bi-372323175f8d|Language Analytics Instant Answers Bold Bi 372323175f8d]]
+- [[level-dashboard-design-with-power-bis-new-card-visual-with-reference-labels-b84d|Level Dashboard Design With Power Bis New Card Visual With Reference Labels B84d75078c4b]]
+- [[level-security-in-power-bi-the-guide-wish-id-had-before-shipped-it-to-400-users-|Level Security In Power Bi The Guide Wish Id Had Before Shipped It To 400 Users 4b74255ef2e3]]
+- [[levels-of-hermes-agent-from-chatbot-to-24-autonomous-system-da15c3c204f6|Levels Of Hermes Agent From Chatbot To 24 Autonomous System Da15c3c204f6]]
+- [[llm-wiki-to-agentic-knowledge-maintenance-8a71500aabb9|Llm Wiki To Agentic Knowledge Maintenance 8a71500aabb9]]
+- [[llms-for-graph-rag-extraction-the-mid-2026-re-benchmark-5f36b3d19383|Llms For Graph Rag Extraction The Mid 2026 Re Benchmark 5f36b3d19383]]
+- [[local-power-bi-development-opencode-qwen-microsofts-power-bi-mcp-server-81a527ab|Local Power Bi Development Opencode Qwen Microsofts Power Bi Mcp Server 81a527abe5ab]]
+- [[loop-always-wins-51f2d04960bd|Loop Always Wins 51f2d04960bd]]
+- [[losing-your-best-ai-conversations-archive-to-obsidian-with-skill-49aa0f0e3477|Losing Your Best Ai Conversations Archive To Obsidian With Skill 49aa0f0e3477]]
+- [[m13ßuùy-best-power-bi-kpi-card-so-far-deb7513ff3be|M13ßuùy Best Power Bi Kpi Card So Far Deb7513ff3be]]
+- [[made-claude-the-librarian-of-my-obsidian-pkm-the-complete-process-eb96b50d6cd5|Made Claude The Librarian Of My Obsidian Pkm The Complete Process Eb96b50d6cd5]]
+- [[mcp-6151cca309e0|Mcp 6151cca309e0]]
+- [[md-vs-agents-md-vs-skill-md-which-file-owns-what-in-2026-13859378f56a|Md Vs Agents Md Vs Skill Md Which File Owns What In 2026 13859378f56a]]
+- [[measure-library-architecture-from-messy-to-maintainable-97e0aca852a9|Measure Library Architecture From Messy To Maintainable 97e0aca852a9]]
+- [[measured-okf-rag-knowledge-graph-and-plain-grep-on-production-code-a426386651e8|Measured Okf Rag Knowledge Graph And Plain Grep On Production Code A426386651e8]]
+- [[medallion-architecture-unveiled-991f68e211be|Medallion Architecture Unveiled 991f68e211be]]
+- [[meets-power-bi-revolutionizing-report-design-420cce760aa7|Meets Power Bi Revolutionizing Report Design 420cce760aa7]]
+- [[memory-safe-vector-database-in-rust-for-ai-retrieval-systems-4458184d5f18|Memory Safe Vector Database In Rust For Ai Retrieval Systems 4458184d5f18]]
+- [[messy-to-masterpiece-the-ultimate-power-bi-dashboard-checklist-1b42e57dc939|Messy To Masterpiece The Ultimate Power Bi Dashboard Checklist 1b42e57dc939]]
+- [[microsoft-fabric-changed-the-way-think-about-power-bi-556c08f3d021|Microsoft Fabric Changed The Way Think About Power Bi 556c08f3d021]]
+- [[minimal-llm-wiki-19a2fb0e9ac7|Minimal Llm Wiki 19a2fb0e9ac7]]
+- [[mistakes-beginners-make-and-how-to-avoid-them-53a0a9467c0c|Mistakes Beginners Make And How To Avoid Them 53a0a9467c0c]]
+- [[modeling-for-business-intelligence-bi-build-trustworthy-query-friendly-analytics|Modeling For Business Intelligence Bi Build Trustworthy Query Friendly Analytics E5a8a340fc3e]]
+- [[modeling-trick-that-makes-power-bi-titles-actually-useful-8c65b3532cac|Modeling Trick That Makes Power Bi Titles Actually Useful 8c65b3532cac]]
+- [[modelling-in-2026-paradigms-every-senior-data-engineer-must-know-ca11640d27bd|Modelling In 2026 Paradigms Every Senior Data Engineer Must Know Ca11640d27bd]]
+- [[modern-applications-with-microsoft-fabric-apps-rayfin-complete-guide-part-dd54d1|Modern Applications With Microsoft Fabric Apps Rayfin Complete Guide Part Dd54d1255034]]
+- [[modes-in-power-bi-d32a57213041|Modes In Power Bi D32a57213041]]
+- [[most-expensive-part-of-your-game-does-the-least-work-df32be9c4a4c|Most Expensive Part Of Your Game Does The Least Work Df32be9c4a4c]]
+- [[multiple-csv-files-in-dashboards-with-rls-bold-bi-9bf8940f318a|Multiple Csv Files In Dashboards With Rls Bold Bi 9bf8940f318a]]
+- [[multiples-to-show-daily-trends-across-many-categories-in-power-bi-part-9089c2f4e|Multiples To Show Daily Trends Across Many Categories In Power Bi Part 9089c2f4e91c]]
+- [[n8n-workflows-that-will-save-you-10-hours-every-week-e0620602f867|N8n Workflows That Will Save You 10 Hours Every Week E0620602f867]]
+- [[new-image-visual-in-power-bi-is-quiet-game-changer-heres-why-it-matters-more-tha|New Image Visual In Power Bi Is Quiet Game Changer Heres Why It Matters More Than You 3b7724a699b1]]
+- [[objects-in-power-bi-f92d04228349|Objects In Power Bi F92d04228349]]
+- [[obsidian-claude-code-commands-for-your-ai-second-brain-adeef4259df4|Obsidian Claude Code Commands For Your Ai Second Brain Adeef4259df4]]
+- [[obsidian-claude-code-the-token-saving-second-brain-setup-b1af686ac264|Obsidian Claude Code The Token Saving Second Brain Setup B1af686ac264]]
+- [[obsidian-dashboard-plugin-its-not-pretty-homepage-it-cognitive-load-problem-in-f|Obsidian Dashboard Plugin Its Not Pretty Homepage It Cognitive Load Problem In Fe1f89615ec8]]
+- [[obsidian-plugins-and-setups-that-turn-your-vault-into-second-brain-1e20c9ce48ed|Obsidian Plugins And Setups That Turn Your Vault Into Second Brain 1e20c9ce48ed]]
+- [[obsidian-workflows-and-plugins-that-most-people-dont-know-3fa3e6f05ee4|Obsidian Workflows And Plugins That Most People Dont Know 3fa3e6f05ee4]]
+- [[ocr-model-just-killed-page-by-page-ocr-one-shot-parsing-across-dozens-of-pages-1|Ocr Model Just Killed Page By Page Ocr One Shot Parsing Across Dozens Of Pages 1e388770e24b]]
+- [[ocr-rag-revolutionize-complex-data-extraction-open-source-f4199677ee55|Ocr Rag Revolutionize Complex Data Extraction Open Source F4199677ee55]]
+- [[ocr-the-open-source-model-that-changed-how-think-about-document-ai-c807771295d1|Ocr The Open Source Model That Changed How Think About Document Ai C807771295d1]]
+- [[of-travel-on-map-in-power-bi-abc2a31ac055|Of Travel On Map In Power Bi Abc2a31ac055]]
+- [[ontologies-you-shouldnt-build-yourself-field-guide-for-knowledge-graph-builders-|Ontologies You Shouldnt Build Yourself Field Guide For Knowledge Graph Builders 7088dab7c37c]]
+- [[open-sourced-browser-agent-framework-webwright-and-heres-rundown-of-browser-5268|Open Sourced Browser Agent Framework Webwright And Heres Rundown Of Browser 5268204dbb4a]]
+- [[organizing-your-obsidian-notes-do-this-instead-b8575ff14b13|Organizing Your Obsidian Notes Do This Instead B8575ff14b13]]
+- [[outliers-with-interquartile-range-in-power-bi-dea0416728ef|Outliers With Interquartile Range In Power Bi Dea0416728ef]]
+- [[paint-solved-the-wrong-problem-f9f0bc0356c5|Paint Solved The Wrong Problem F9f0bc0356c5]]
+- [[paying-for-api-keys-how-to-build-with-free-and-fast-llms-8b44b2264010|Paying For Api Keys How To Build With Free And Fast Llms 8b44b2264010]]
+- [[personal-knowledge-management-guide-one-wish-someone-gave-me-bacebe24646d|Personal Knowledge Management Guide One Wish Someone Gave Me Bacebe24646d]]
+- [[personal-living-knowledge-base-with-zed-agent-and-local-llm-e41f50fab1df|Personal Living Knowledge Base With Zed Agent And Local Llm E41f50fab1df]]
+- [[plan-mode-0f5a6f6daaf1|Plan Mode 0f5a6f6daaf1]]
+- [[potential-features-to-elevate-user-experience-in-your-power-bi-dashboards-a88287|Potential Features To Elevate User Experience In Your Power Bi Dashboards A882877d68c3]]
+- [[power-bi-connecting-to-your-first-data-source-5a291d80ecb2|Power Bi Connecting To Your First Data Source 5a291d80ecb2]]
+- [[power-bi-copilot-5e4dfce4fe8a|Power Bi Copilot 5e4dfce4fe8a]]
+- [[power-bi-creating-your-first-visualizations-b47a92d5f7cd|Power Bi Creating Your First Visualizations B47a92d5f7cd]]
+- [[power-bi-dashboard-to-ai-agent-in-30-minutes-built-the-tool-that-unlocks-20-mill|Power Bi Dashboard To Ai Agent In 30 Minutes Built The Tool That Unlocks 20 Million Hidden 500e59bd91df]]
+- [[power-bi-dashboards-dont-fail-on|Power Bi Dashboards Dont Fail On]]
+- [[power-bi-data-alerts-select-distinct-e221003de9d2|Power Bi Data Alerts Select Distinct E221003de9d2]]
+- [[power-bi-into-lightweight-data-source-for-automate-ea1b01307bd2|Power Bi Into Lightweight Data Source For Automate Ea1b01307bd2]]
+- [[power-bi-report-connections-on-premises-data-sources-to-semantic-models-26328b73|Power Bi Report Connections On Premises Data Sources To Semantic Models 26328b7312b8]]
+- [[power-bi-report-shows-different-numbers-to-different-people-the-data-is-fine-680|Power Bi Report Shows Different Numbers To Different People The Data Is Fine 6809cd3c8336]]
+- [[power-bi-report-took-14-seconds-to-load-heres-everything-did-to-get-it-under-7ef|Power Bi Report Took 14 Seconds To Load Heres Everything Did To Get It Under 7ef5de8f5214]]
+- [[power-bi-reports-with-html-css-joining-forces-f90fbd654e8b|Power Bi Reports With Html Css Joining Forces F90fbd654e8b]]
+- [[power-bi-style-presets-75374036b5d9|Power Bi Style Presets 75374036b5d9]]
+- [[power-bi-tables-expert-tips-for-smarter-data-visualization-7dc7068870ff|Power Bi Tables Expert Tips For Smarter Data Visualization 7dc7068870ff]]
+- [[power-bi-working-with-fields-and-measures-d0148fc37893|Power Bi Working With Fields And Measures D0148fc37893]]
+- [[power-to-your-users-with-field-parameters-in-power-bi-bfa948a315b2|Power To Your Users With Field Parameters In Power Bi Bfa948a315b2]]
+- [[power-users-are-linking-claude-directly-to-gemini-notebooks-744841c28af4|Power Users Are Linking Claude Directly To Gemini Notebooks 744841c28af4]]
+- [[powerbi-deployments-with-github-actions-complete-guide-ad11d116bd43|Powerbi Deployments With Github Actions Complete Guide Ad11d116bd43]]
+- [[powerful-ways-to-share-your-power-bi-reports-effectively-bbb33afe301f|Powerful Ways To Share Your Power Bi Reports Effectively Bbb33afe301f]]
+- [[practical-framework-for-tagging-and-classification-in-power-bi-da82114a8a49|Practical Framework For Tagging And Classification In Power Bi Da82114a8a49]]
+- [[practices-for-using-explicit-measures-in-power-bi-f23d60b7cbcd|Practices For Using Explicit Measures In Power Bi F23d60b7cbcd]]
+- [[previous-day-1cd3f8c2eae6|Previous Day 1cd3f8c2eae6]]
+- [[process-tracker-in-power-bi-806c0bb129c0|Process Tracker In Power Bi 806c0bb129c0]]
+- [[product-hierarchy-analytics-dashboard-in-power-bi-beginners-journey-6b3c72375d41|Product Hierarchy Analytics Dashboard In Power Bi Beginners Journey 6b3c72375d41]]
+- [[product-hierarchùy-analytics-dashboard-in-power-bi-beginners-journey-6b3c72375d4|Product Hierarch·:÷´ùy Analytics Dashboard In Power Bi Beginners Journey 6b3c72375d41]]
+- [[product-review-128264e77701|Product Review 128264e77701]]
+- [[psychology-of-colors-in-data-storytelling-fcd023858d0a|Psychology Of Colors In Data Storytelling Fcd023858d0a]]
+- [[python-inside-power-bi-how-solved-the-cumulative-value-challenge-and-what-learne|Python Inside Power Bi How Solved The Cumulative Value Challenge And What Learned 25c984e0a940]]
+- [[python-library-that-reads-your-power-bi-models-like-data-a8aa1408f2cd|Python Library That Reads Your Power Bi Models Like Data A8aa1408f2cd]]
+- [[python-visuals-in-power-bi-ux-tips-for-better-insights-a73c6b358e70|Python Visuals In Power Bi Ux Tips For Better Insights A73c6b358e70]]
+- [[query-dependencies-in-power-bi-why-it-matters-more-than-you-think-9528ecde0fda|Query Dependencies In Power Bi Why It Matters More Than You Think 9528ecde0fda]]
+- [[query-query-folding-9f6facaaabbe|Query Query Folding 9f6facaaabbe]]
+- [[query-trick-add-leading-zeros-only-when-you-should-625bd5040111|Query Trick Add Leading Zeros Only When You Should 625bd5040111]]
+- [[quick-way-to-switch-measures-in-power-bi-6b8212307adc|Quick Way To Switch Measures In Power Bi 6b8212307adc]]
+- [[rag-graphrag-techniques-for-reliable-llm-apps-ccb2b9cda084|Rag Graphrag Techniques For Reliable Llm Apps Ccb2b9cda084]]
+- [[rag-how-built-serverless-ai-llm-wiki-engine-using-okf-and-aws-roda-straight-in-t|Rag How Built Serverless Ai Llm Wiki Engine Using Okf And Aws Roda Straight In The 064a17c11489]]
+- [[rag-struggles-in-agent-scenarios-19290eac0138|Rag Struggles In Agent Scenarios 19290eac0138]]
+- [[rag-the-ultimate-ai-agent-architecture-26b9ceed44f1|Rag The Ultimate Ai Agent Architecture 26b9ceed44f1]]
+- [[rag-with-lm-studio-obsidian-and-zotero-f9dd04458a9d|Rag With Lm Studio Obsidian And Zotero F9dd04458a9d]]
+- [[ran-70b-ai-model-on-my-old-laptop-heres-how-airllm-did-it-caefc3033eb5|Ran 70b Ai Model On My Old Laptop Heres How Airllm Did It Caefc3033eb5]]
+- [[read-my-article-on-roe-and-built-graphrag-engine-out-of-it-heres-what-happened-0|Read My Article On Roe And Built Graphrag Engine Out Of It Heres What Happened 0f02c45e4e54]]
+- [[real-world-applications-of-scatter-charts-in-power-bi-905bb439e7a8|Real World Applications Of Scatter Charts In Power Bi 905bb439e7a8]]
+- [[reality-of-data-cleaning-why-do-data-analysts-spend-80-of-their-time-cleaning-da|Reality Of Data Cleaning Why Do Data Analysts Spend 80 Of Their Time Cleaning Data Df6b7012ce15]]
+- [[reduced-power-bi-visual-from-23-seconds-to-seconds-real-performance-tuning-case-|Reduced Power Bi Visual From 23 Seconds To Seconds Real Performance Tuning Case Study 21538321ca7f]]
+- [[refreshingly-sane-guide-to-personal-knowledge-management-pkm-e1bc439fea8c|Refreshingly Sane Guide To Personal Knowledge Management Pkm E1bc439fea8c]]
+- [[release-let-ai-optimize-itself-cut-token-usage-by-60-6b098cf21a69|Release Let Ai Optimize Itself Cut Token Usage By 60 6b098cf21a69]]
+- [[research-pipeline-with-claude-ai-agents-web-search-and-the-bill-that-followed-ff|Research Pipeline With Claude Ai Agents Web Search And The Bill That Followed Ff4aeb586831]]
+- [[research-workflow-zotero-obsidian-b57f687cb8ff|Research Workflow Zotero Obsidian B57f687cb8ff]]
+- [[road-to-unlimited-agent-memory-no-rag-no-papers-just-markdown-704e9258aa0a|Road To Unlimited Agent Memory No Rag No Papers Just Markdown 704e9258aa0a]]
+- [[row-level-security-rls-and-data-governance-in-power-bi-ac1baebc5dec|Row Level Security Rls And Data Governance In Power Bi Ac1baebc5dec]]
+- [[rpg-speaks-different-language-until-you-open-the-inventory-e316d267acec|Rpg Speaks Different Language Until You Open The Inventory E316d267acec]]
+- [[running-100-billion-parameters-on-your-cpu-complete-guide-597b1d3ed722|Running 100 Billion Parameters On Your Cpu Complete Guide 597b1d3ed722]]
+- [[scatter-plots-tell-you-that-summary-statistics-hide-ef2ac2241f40|Scatter Plots Tell You That Summary Statistics Hide Ef2ac2241f40]]
+- [[schema-is-the-product-484aae1696f5|Schema Is The Product 484aae1696f5]]
+- [[schema-vs-snowflake-schema-in-power-bi-5711f294e584|Schema Vs Snowflake Schema In Power Bi 5711f294e584]]
+- [[second-brain-doesnt-need-rag-it-needs-map-5feaca01b923|Second Brain Doesnt Need Rag It Needs Map 5feaca01b923]]
+- [[second-brain-for-ai-obsidian-multi-agent-workflows-639e52b1ac8e|Second Brain For Ai Obsidian Multi Agent Workflows 639e52b1ac8e]]
+- [[second-brain-the-self-rewriting-ai-vault-that-turns-your-notes-into-living-knowl|Second Brain The Self Rewriting Ai Vault That Turns Your Notes Into Living Knowledge 6c7e4c85ed9a]]
+- [[second-note-on-claude-code-c521245ffc35|Second Note On Claude Code C521245ffc35]]
+- [[second-step-in-building-reliable-agents-the-semantic-layer-646bce6926d0|Second Step In Building Reliable Agents The Semantic Layer 646bce6926d0]]
+- [[self-correcting-ai-agent-with-langgraph-and-ollama-80c43f8f8f17|Self Correcting Ai Agent With Langgraph And Ollama 80c43f8f8f17]]
+- [[semantic-models-and-power-bi-service-ce8639e5cf69|Semantic Models And Power Bi Service Ce8639e5cf69]]
+- [[simple-bar-charts-are-harder-than-they-look-19eee2fc024f|Simple Bar Charts Are Harder Than They Look 19eee2fc024f]]
+- [[simple-trick-to-always-display-the-latest-month-in-power-bi-even-after-refresh-0|Simple Trick To Always Display The Latest Month In Power Bi Even After Refresh 0630fef5e2f3]]
+- [[skills-b093ab1e5cc3|Skills B093ab1e5cc3]]
+- [[skills-teaches-your-agent-to-drive-obsidian-not-just-read-it-a449bd355304|Skills Teaches Your Agent To Drive Obsidian Not Just Read It A449bd355304]]
+- [[slash-commands-97ef57be2804|Slash Commands 97ef57be2804]]
+- [[slicer-controlled-expand-or-collapse-for-power-bi-matrix-5c21b7f2e1b8|Slicer Controlled Expand Or Collapse For Power Bi Matrix 5c21b7f2e1b8]]
+- [[slicer-to-control-how-deep-matrix-goes-in-power-bi-5cf04efe5e1d|Slicer To Control How Deep Matrix Goes In Power Bi 5cf04efe5e1d]]
+- [[someone-packaged-the-entire-claude-code-methodology-into-one-command-a76145ed322|Someone Packaged The Entire Claude Code Methodology Into One Command A76145ed322c]]
+- [[sorting-in-power-bi-bar-and-column-charts-causes-fixes-and-best-practices-0abc02|Sorting In Power Bi Bar And Column Charts Causes Fixes And Best Practices 0abc0231ea55]]
+- [[soup-has-to-make-sense-food-as-worldbuilding-tool-afb5406d9a77|Soup Has To Make Sense Food As Worldbuilding Tool Afb5406d9a77]]
+- [[spec-driven-development-sdd-2a3d6b819fb3|Spec Driven Development Sdd 2a3d6b819fb3]]
+- [[spreadsheet-full-of-numbers-changed-the-way-look-at-business-analytics-c91281301|Spreadsheet Full Of Numbers Changed The Way Look At Business Analytics C91281301799]]
+- [[sql-brain-trap-why-my-power-bi-dashboard-broke-when-clicked-slicer-c394972a19fa|Sql Brain Trap Why My Power Bi Dashboard Broke When Clicked Slicer C394972a19fa]]
+- [[storyline-obsidian-plug-in-1ac14a2fa196|Storyline Obsidian Plug In 1ac14a2fa196]]
+- [[studio-in-power-bi-what-it-is-why-you-should-use-it-4c67f661442d|Studio In Power Bi What It Is Why You Should Use It 4c67f661442d]]
+- [[studio-live-reasoning-graph-storage-and-the-path-to-chunkless-rag-6d34adf4a178|Studio Live Reasoning Graph Storage And The Path To Chunkless Rag 6d34adf4a178]]
+- [[subagents-aa221b480224|Subagents Aa221b480224]]
+- [[survey-comments-in-power-bi-using-ai-ea0ca35ff98b|Survey Comments In Power Bi Using Ai Ea0ca35ff98b]]
+- [[systems-only-know-two-endings-b8173a75245d|Systems Only Know Two Endings B8173a75245d]]
+- [[tested-llm-wiki-implementations-so-you-don-have-to-d68ba7cc9100|Tested Llm Wiki Implementations So You Don Have To D68ba7cc9100]]
+- [[the-basics-the-craft-of-reactive-worldbuilding-bb5c615e1ef6|The Basics The Craft Of Reactive Worldbuilding Bb5c615e1ef6]]
+- [[the-content-company-from-scratch-with-paperclip-ai-c29953379645|The Content Company From Scratch With Paperclip Ai C29953379645]]
+- [[the-gap-between-ai-agents-and-everyday-context-with-open-knowledge-format-and-ok|The Gap Between Ai Agents And Everyday Context With Open Knowledge Format And Okf Go 0e0a2f671bb8]]
+- [[the-offline-no-nonsense-note-taking-app-youve-been-waiting-for-4942fab717b4|The Offline No Nonsense Note Taking App Youve Been Waiting For 4942fab717b4]]
+- [[the-power-of-data-crafting-advanced-kpi-cards-in-power-bi-9d464ea01a37|The Power Of Data Crafting Advanced Kpi Cards In Power Bi 9d464ea01a37]]
+- [[the-power-of-multiple-tooltips-in-power-bi-reports-a44ebd6404c9|The Power Of Multiple Tooltips In Power Bi Reports A44ebd6404c9]]
+- [[the-power-of-visual-design-in-dashboards-6f445a83484f|The Power Of Visual Design In Dashboards 6f445a83484f]]
+- [[the-powerbi-remote-mcp-server-with-claude-f5fec92f0612|The Powerbi Remote Mcp Server With Claude F5fec92f0612]]
+- [[the-right-charts-in-power-bi-beginners-guide-b270bd5afd5b|The Right Charts In Power Bi Beginners Guide B270bd5afd5b]]
+- [[thinks-copilot-builds-power-bi-proves-827a505d5b36|Thinks Copilot Builds Power Bi Proves 827a505d5b36]]
+- [[thought-ollama-was-enough-72a232da1b85|Thought Ollama Was Enough 72a232da1b85]]
+- [[three-scenarios-dynamically-in-an-ibcs-compliant-column-chart-using-field-parame|Three Scenarios Dynamically In An Ibcs Compliant Column Chart Using Field Parameters 5779256a8517]]
+- [[threw-out-my-vector-database-rag-got-way-better-888b75aac33b|Threw Out My Vector Database Rag Got Way Better 888b75aac33b]]
+- [[time-intelligence-where-everything-youve-learned-about-context-finally-pays-off-|Time Intelligence Where Everything Youve Learned About Context Finally Pays Off 8de1bb67adcb]]
+- [[time-intelligence-year-to-date-rolling-averages-and-comparisons-6a120ccef282|Time Intelligence Year To Date Rolling Averages And Comparisons 6a120ccef282]]
+- [[time-periods-as-slicers-to-enhance-power-bi-line-or-area-charts-range-de1abe76c6|Time Periods As Slicers To Enhance Power Bi Line Or Area Charts Range De1abe76c6c3]]
+- [[tinkeæûýµùring-with-karpathy-plugin-for-obsidian-8ecf6b44bbf9|Tinkeæûýµùring With Karpathy Plugin For Obsidian 8ecf6b44bbf9]]
+- [[tips-to-work-efficiently-in-power-bi-efb88f-5a691a460d5f|Tips To Work Efficiently In Power Bi %ef%b8%8f 5a691a460d5f]]
+- [[to-align-technical-data-dictionaries-with-user-language-8a3b002bd59f|To Align Technical Data Dictionaries With User Language 8a3b002bd59f]]
+- [[to-automatically-document-your-repository-with-openwiki-25b605d7976e|To Automatically Document Your Repository With Openwiki 25b605d7976e]]
+- [[to-build-claude-cowork-system-006de29a944f|To Build Claude Cowork System 006de29a944f]]
+- [[to-build-clean-in-power-bi-select-distinct-86c34d2197dd|To Build Clean In Power Bi Select Distinct 86c34d2197dd]]
+- [[to-build-document-upload-answer-engine-without-vector-db-powered-by-pageindex-d8|To Build Document Upload Answer Engine Without Vector Db Powered By Pageindex D817fef4faa7]]
+- [[to-build-dynamic-calendar-visual-in-power-bi-c08d9866c8bb|To Build Dynamic Calendar Visual In Power Bi C08d9866c8bb]]
+- [[to-build-dynamic-kpi-cards-in-power-bi-using-only-core-visuals-34f537595716|To Build Dynamic Kpi Cards In Power Bi Using Only Core Visuals 34f537595716]]
+- [[to-build-power-bi-dashboards-that-non-technical-teams-actually-use-a53562fe3f21|To Build Power Bi Dashboards That Non Technical Teams Actually Use A53562fe3f21]]
+- [[to-change-to-data-source-in-power-bi-59a7b21f1a95|To Change To Data Source In Power Bi 59a7b21f1a95]]
+- [[to-conditionally-format-chart-label-backgrounds-in-power-bi-no-fx-no-problem-1c4|To Conditionally Format Chart Label Backgrounds In Power Bi No Fx No Problem 1c4efd74c726]]
+- [[to-create-circular-images-in-power-bi-that-actually-render-properly-6d51849415d6|To Create Circular Images In Power Bi That Actually Render Properly 6d51849415d6]]
+- [[to-create-circular-images-in-power-bi-that-actually-render-properly-6d5184941çù5|To Create Circular Images In Power Bi That Actually Render Properly 6d5184941¸(çù5d6]]
+- [[to-create-your-own-ai-prompt-generator-that-works-forever-dae305a35d4b|To Create Your Own Ai Prompt Generator That Works Forever Dae305a35d4b]]
+- [[to-debug-slow-power-bi-reports-the-checklist-a034c2df2718|To Debug Slow Power Bi Reports The Checklist A034c2df2718]]
+- [[to-design-attractive-power-bi-reports-a3a4ad1cd14d|To Design Attractive Power Bi Reports A3a4ad1cd14d]]
+- [[to-design-production-ready-dashboard-with-claude-code-9a78c4585981|To Design Production Ready Dashboard With Claude Code 9a78c4585981]]
+- [[to-do-anomaly-detection-in-power-bi-no-external-tools-needed-b12973e58b2b|To Do Anomaly Detection In Power Bi No External Tools Needed B12973e58b2b]]
+- [[to-dynamically-change-area-or-line-chart-colors-in-power-bi-3a4ad89e58b5|To Dynamically Change Area Or Line Chart Colors In Power Bi 3a4ad89e58b5]]
+- [[to-highlight-segment-in-100-stacked-chart-and-move-it-to-the-baseline-in-power-b|To Highlight Segment In 100 Stacked Chart And Move It To The Baseline In Power Bi Fbb68f3dade6]]
+- [[to-install-wsl2-on-windows-the-complete-beginners-guide-2026-5682fccf634f|To Install Wsl2 On Windows The Complete Beginners Guide 2026 5682fccf634f]]
+- [[to-level-up-your-slicer-game-in-power-bi-pbix-included-f31eb7b1a734|To Level Up Your Slicer Game In Power Bi Pbix Included F31eb7b1a734]]
+- [[to-replicate-stanfords-storm-phd-level-ai-research-in-minutes-814f81151a5c|To Replicate Stanfords Storm Phd Level Ai Research In Minutes 814f81151a5c]]
+- [[to-safely-delete-power-bi-columns-without-breaking-your-model-56f00cbeac53|To Safely Delete Power Bi Columns Without Breaking Your Model 56f00cbeac53]]
+- [[to-set-up-power-bi-subscriptions-for-hidden-pages-simple-steps-8990a13da9b4|To Set Up Power Bi Subscriptions For Hidden Pages Simple Steps 8990a13da9b4]]
+- [[to-sync-slicers-in-power-bi-select-distinct-d807b84ddea0|To Sync Slicers In Power Bi Select Distinct D807b84ddea0]]
+- [[to-tell-data-story-651edd4c5b4a|To Tell Data Story 651edd4c5b4a]]
+- [[to-transform-data-for-power-bi-e9ed4bdf2c41|To Transform Data For Power Bi E9ed4bdf2c41]]
+- [[to-turn-your-laptop-into-private-ai-server-in-30-minutes-no-gpu-required-4adf37c|To Turn Your Laptop Into Private Ai Server In 30 Minutes No Gpu Required 4adf37c38525]]
+- [[to-use-drill-through-in-power-bi-ee9197913392|To Use Drill Through In Power Bi Ee9197913392]]
+- [[to-use-power-bis-new-slicer-building-market-watch-dashboard-1326853731d8|To Use Power Bis New Slicer Building Market Watch Dashboard 1326853731d8]]
+- [[to-use-stored-procedure-in-power-bi-c3ecfe5e5429|To Use Stored Procedure In Power Bi C3ecfe5e5429]]
+- [[tools-in-focus-navigating-the-fine-line-between-dashboards-and-reports-d35f630aa|Tools In Focus Navigating The Fine Line Between Dashboards And Reports D35f630aa003]]
+- [[transformation-for-rag-rewrite-expand-and-decompose-questions-so-retrieval-finds|Transformation For Rag Rewrite Expand And Decompose Questions So Retrieval Finds What Ecc4ba9ada6f]]
+- [[tricks-research-team-274b8dc491d5|Tricks Research Team 274b8dc491d5]]
+- [[turned-20-000-notes-into-live-dashboards-with-obsidian-bases-dd1d4449d304|Turned 20 000 Notes Into Live Dashboards With Obsidian Bases Dd1d4449d304]]
+- [[turned-my-obsidian-notes-into-kanban-boards-bdc39ee06595|Turned My Obsidian Notes Into Kanban Boards Bdc39ee06595]]
+- [[turning-ocr-into-an-evidence-seeking-agent-5ac70452b41f|Turning Ocr Into An Evidence Seeking Agent 5ac70452b41f]]
+- [[types-of-charts-for-data-visualization-part-colrrelation-charts-d070d7a0ac4f|Types Of Charts For Data Visualization Part Colrrelation Charts D070d7a0ac4f]]
+- [[types-of-charts-for-data-visualization-part-comparison-charts-d5342ff1df6a|Types Of Charts For Data Visualization Part Comparison Charts D5342ff1df6a]]
+- [[types-of-charts-for-data-visualization-part-data-over-time-or-temporal-charts-89|Types Of Charts For Data Visualization Part Data Over Time Or Temporal Charts 899013bd3fec]]
+- [[types-of-charts-for-data-visualization-part-geospatial-other-charts-0fe3d9f66455|Types Of Charts For Data Visualization Part Geospatial Other Charts 0fe3d9f66455]]
+- [[types-of-charts-for-data-visualization-part-part-to-whole-and-hierarchical-6031c|Types Of Charts For Data Visualization Part Part To Whole And Hierarchical 6031c267be0d]]
+- [[types-of-charts-graphs-for-data-visualization-part-distribution-charts-149f4410f|Types Of Charts Graphs For Data Visualization Part Distribution Charts 149f4410f0c2]]
+- [[udf-all-your-kpi-colors-steps-in-power-bi-pbix-included-c1f96f0ab6f2|Udf All Your Kpi Colors Steps In Power Bi Pbix Included C1f96f0ab6f2]]
+- [[udf-to-build-all-your-svg-pills-in-power-bi-43da8ca9058e|Udf To Build All Your Svg Pills In Power Bi 43da8ca9058e]]
+- [[untitled|Untitled]]
+- [[up-your-dashboards-with-power-bis-new-improved-chart-data-labels-2e9a09d2b329|Up Your Dashboards With Power Bis New Improved Chart Data Labels 2e9a09d2b329]]
+- [[up-your-power-bi-dynamic-color-coding-for-bar-charts-97493e7cca05|Up Your Power Bi Dynamic Color Coding For Bar Charts 97493e7cca05]]
+- [[up-your-power-bi-game-with-svgs-e0e255c1316d|Up Your Power Bi Game With Svgs E0e255c1316d]]
+- [[use-ai-in-my-obsidian-vault-without-losing-the-plot-492defbb36e4|Use Ai In My Obsidian Vault Without Losing The Plot 492defbb36e4]]
+- [[use-cases-of-calculation-groups-in-power-bi-part-aae312c15126|Use Cases Of Calculation Groups In Power Bi Part Aae312c15126]]
+- [[use-obsidian-and-n8n-and-build-self-thinking-knowledge-vault-do-these-things-0bb|Use Obsidian And N8n And Build Self Thinking Knowledge Vault Do These Things 0bb5e6f26882]]
+- [[using-format-in-power-bi-creative-ways-to-dynamically-format-numbers-the-right-w|Using Format In Power Bi Creative Ways To Dynamically Format Numbers The Right Way 79be314a25ad]]
+- [[ux-for-large-data-tables-in-power-bi-292d4dfc6862|Ux For Large Data Tables In Power Bi 292d4dfc6862]]
+- [[v0-18-it-learned-how-to-learn-a54809307fd1|V0 18 It Learned How To Learn A54809307fd1]]
+- [[villain-is-easy-the-institution-is-hard-1dd65fb608be|Villain Is Easy The Institution Is Hard 1dd65fb608be]]
+- [[violin-plots-tell-you-that-boxplots-hide-b8b9831f855b|Violin Plots Tell You That Boxplots Hide B8b9831f855b]]
+- [[visual-explorer-in-power-bi-let-users-choose-what-and-how-they-see-data-d19d35c7|Visual Explorer In Power Bi Let Users Choose What And How They See Data D19d35c765e8]]
+- [[visualisation-best-practice-tips-aeec7a4cd2ed|Visualisation Best Practice Tips Aeec7a4cd2ed]]
+- [[visualization-in-storytelling-42b2738d34e6|Visualization In Storytelling 42b2738d34e6]]
+- [[visuþõaùal-calculations-just-went-ga-9a5940244b34|Visuþõaùal Calculations Just Went Ga 9a5940244b34]]
+- [[vs-datesytd-in-power-bi-8cbdddd91531|Vs Datesytd In Power Bi 8cbdddd91531]]
+- [[vs-drill-through-page-in-power-bi-practical-guide-to-better-report-design-e863b8|Vs Drill Through Page In Power Bi Practical Guide To Better Report Design E863b8114eaa]]
+- [[vs-null-in-power-bi-whats-the-real-difference-2e9a601e794b|Vs Null In Power Bi Whats The Real Difference 2e9a601e794b]]
+- [[vs-pbit-file-in-powerbi-04d3cd799330|Vs Pbit File In Powerbi 04d3cd799330]]
+- [[warehousing-for-bi-09aea2e53c34|Warehousing For Bi 09aea2e53c34]]
+- [[wasting-llm-tokens-building-self-updating-codebase-knowledge-graph-with-okf-2028|Wasting Llm Tokens Building Self Updating Codebase Knowledge Graph With Okf 20284060c1b1]]
+- [[waterfall-chart-is-diagnostic-tool-not-just-dashboard-decoration-6f2842396043|Waterfall Chart Is Diagnostic Tool Not Just Dashboard Decoration 6f2842396043]]
+- [[way-to-send-automated-personalized-email-to-your-microsoft-forms-responses-fbec6|Way To Send Automated Personalized Email To Your Microsoft Forms Responses Fbec6798a5ca]]
+- [[ways-to-use-emojis-in-power-bi-2ca11c16d99e|Ways To Use Emojis In Power Bi 2ca11c16d99e]]
+- [[we-trust-the-ai-agents-decision-explainability-through-audit-7f8526eb6d65|We Trust The Ai Agents Decision Explainability Through Audit 7f8526eb6d65]]
+- [[wiki-in-ai-os-system-c70b4830c226|Wiki In Ai Os System C70b4830c226]]
+- [[wiki-is-what-makes-local-models-usable-64d0f69c960c|Wiki Is What Makes Local Models Usable 64d0f69c960c]]
+- [[with-karpathy-plugin-for-obsidian-8ecf6b44bbf9|With Karpathy Plugin For Obsidian 8ecf6b44bbf9]]
+- [[world-doesnt-need-more-lore-it-needs-better-memory-36e2eae0eaa5|World Doesnt Need More Lore It Needs Better Memory 36e2eae0eaa5]]
+- [[worlds-solved-exploration-and-broke-storytelling-14c8181f3fb2|Worlds Solved Exploration And Broke Storytelling 14c8181f3fb2]]
+- [[wrote-claude-skill-to-produce-consistent-high-quality-system-designs-every-time-|Wrote Claude Skill To Produce Consistent High Quality System Designs Every Time That Saves 187ac0e4e13e]]
+- [[year-on-year-in-power-bi-30d36afeed2c|Year On Year In Power Bi 30d36afeed2c]]
+- [[you-should-completely-avoid-ollama-in-2026-6135d9e8591e|You Should Completely Avoid Ollama In 2026 6135d9e8591e]]
+- [[your-ai-second-brain-isnt-memory-and-here-the-architecture-that-actually-is-bf94|Your Ai Second Brain Isnt Memory And Here The Architecture That Actually Is Bf944929e144]]
+- [[your-bar-charts-axis-titles-atop-bars-in-power-bi-ca77edbd97e|Your Bar Charts Axis Titles Atop Bars In Power Bi Ca77edbd97e]]
+- [[your-data-story-like-movie-episode-5feeb7a25915|Your Data Story Like Movie Episode 5feeb7a25915]]
+- [[your-obsidian-diary-daily-weekly-template-15509614df52|Your Obsidian Diary Daily Weekly Template 15509614df52]]
+- [[your-power-bi-bar-charts-with-simple-improvements-70f88be53d10|Your Power Bi Bar Charts With Simple Improvements 70f88be53d10]]
+- [[your-power-bi-reports-dynamic-color-coding-techniques-4873ef5d18c1|Your Power Bi Reports Dynamic Color Coding Techniques 4873ef5d18c1]]
+- [[your-power-bi-rollout-needs-plan-before-you-build-single-dashboard-b36199e6fc7d|Your Power Bi Rollout Needs Plan Before You Build Single Dashboard B36199e6fc7d]]
+- [[your-power-bi-tables-with-custom-icons-8fc36bad794b|Your Power Bi Tables With Custom Icons 8fc36bad794b]]
+- [[ã1òùclaude-code-ultracode-ultrathink-24413752f316|ã1òùclaude Code Ultracode Ultrathink 24413752f316]]
+[[10-data-analysis-tools-for-entry]]
+[[3-current-artists-every-diehard-nine-inch-nails-fan-should-introduce-to-their-ro]]
+[[39-claude-skills-examples-to-transform-how-you-work-from-23-creators]]
+[[5-powershell-commands-that-fix-most-of-my-windows-problems]]
+[[5-useful-python-scripts-to-automate-exploratory-data-analysis]]
+[[6-effective-excel-visualizations-you-can-build-in-under-10-minutes]]
+[[6-excel-ui-changes-you-need-to-make-before-starting-your-next-spreadsheet]]
+[[6-hidden-navigation-hacks-every-excel-user-needs-to-know]]
+[[6-ways-to-recover-lost-work-in-microsoft-excel]]
+[[7-easy-ways-of-connecting-to-data-in-power-bi-go-analytics]]
+[[7-power-bi-hacks-that-helped-us-wow-clients-in-2024-go-analytics]]
+[[Author-DigitalBYKewat]]
+[[Author-Isabelle-Bittar]]
+[[CHANGELOG]]
+[[a-beginners-guide-to-vibe-coding]]
+[[a-look-to-power-bi-goals-and-what-you-can-do-with-power-automate-within]]
+[[a-look-to-power-bi-power-automate-visual]]
+[[analyzing-the-performance-impact-of-visual-calculations]]
+[[automate-actions-with-hooks]]
+[[autoresearchreadmemd-at-master-karpathyautoresearch-github]]
+[[best-ai-guides-updated]]
+[[bsc-degree-guide-2025-online-bsc-courses-programs]]
+[[build-your-second-brain-with-claude-code-obsidian]]
+[[building-a-personal-ai-agent-in-a-couple-of-hours]]
+[[building-an-slowly-changing-dimension-with-power-bi]]
+[[calculating-geometric-mean-in-power-bi-sqlservercentral]]
+[[calculation-groups]]
+[[change-the-data-source-from-a-local-directory-to-onedrive-inside-power-bi]]
+[[cheese-and-ham-croissant-bake]]
+[[choosing-the-right-charts-in-power-bi]]
+[[claude-code]]
+[[claude-code-isnt-just-for-developers-and-i-wish-id-realized-that-sooner]]
+[[claude-code-notebooklm-obsidian]]
+[[claude-code-skills-20]]
+[[claude-cowork-for-windows-how-to-download-and-install-the-ai-assistant]]
+[[claude-for-beginners]]
+[[codeapp-js]]
+[[comparison-with-dax-by-selecting-two-different-time-ranges]]
+[[connect-claude-code-to-tools-via-mcp]]
+[[controlling-format-strings-in-calculation-groups]]
+[[cowork]]
+[[create-calculation-groups-in-power-bi]]
+[[create-svg-images-for-power-bi-by-using-chat-gpt]]
+[[creating-custom-skills]]
+[[creating-functions-for-the-like]]
+[[damian-player-on-x]]
+[[dashboards-directquery-and-what-you-should-know-about-refreshing]]
+[[description-of-key-performance-indicators-measures-and-how-to-visualizedisplay-t]]
+[[discover-and-install-prebuilt-plugins-through-marketplaces]]
+[[displaying-injury-data-on-the-human-body-by-using-synoptic-panel-in-power-bi]]
+[[dynamic-data-masking-in-power-bi]]
+[[dynamic-formatting-by-hierarchy-level-with-isinscope-and-isatlevel]]
+[[dynamic-row]]
+[[dynamic-subscriptions-with-email-in-power-bi-paginated-reports-part-2]]
+[[dynamic-subscriptions-with-email-in-power-bi-part-1]]
+[[enhancing-power-bi-reports-with-ai]]
+[[extend-claude-with-skills]]
+[[extract-numbers-from-strings-by-using-powerquery]]
+[[eyad-on-x]]
+[[forget-the-zoom-slider]]
+[[github]]
+[[hide-columns-inside-power-bi-like-in-excel]]
+[[how-claude-for-desktop-replaced-most-of-my-pkm-stack]]
+[[how-do-i-display-the-second]]
+[[how-do-i-update-a-record-in-a-table-within-power-bi-using-translytical-dataflows]]
+[[how-i-built-a-claude-code-workflow-with-lm-studio-for-offline]]
+[[how-i-structure-claudemd-after-1000-sessions]]
+[[how-i-turned-my-obsidian-vault-into-claude-codes-brain]]
+[[how-long-to-create-a-power-bi-report-a-comprehensive-guide-on-timeline-expectati]]
+[[how-to-align-single-value-card-visual-in-power-bi-go-analytics]]
+[[how-to-build-a-clean-pl-in-power-bi]]
+[[how-to-build-a-data-portfolio-that-gets-you-hired-in-2026]]
+[[how-to-build-a-power-bi-report-with-ai-using-the-power-bi-mcp]]
+[[how-to-build-a-powerful-llm-knowledge-base]]
+[[how-to-build-a-production]]
+[[how-to-conditionally-format-line-charts-in-power-bi-go-analytics]]
+[[how-to-connect-to-csv-data-in-power-bi-desktop-go-analytics]]
+[[how-to-connect-to-multiple-tables-in-a-folder-in-power-bi-desktop-go-analytics]]
+[[how-to-connect-to-power-bi-datasets-from-power-bi-desktop-go-analytics]]
+[[how-to-connect-to-sharepoint-lists-in-power-bi-desktop-go-analytics]]
+[[how-to-connect-to-web-data-sources-in-power-bi-go-analytics]]
+[[how-to-create-a-histogram-and-cumulative-frequency-distribution-chart-in-power-b]]
+[[how-to-effectively-review-claude-code-output]]
+[[how-to-enter-data-directly-into-power-bi-desktop-go-analytics]]
+[[how-to-get-users-who-are-assigned-to-power-bi-row-level-security-roles-report-se]]
+[[how-to-import-data-from-a-file-stored-in-sharepoint-into-power-bi-go-analytics]]
+[[how-to-import-data-from-pdf-into-power-bi-go-analytics]]
+[[how-to-import-data-from-sql-server-into-power-bi-go-analytics]]
+[[how-to-make-a-power-bi-report-more-useful-for-your-users]]
+[[how-to-make-obsidian-beautiful]]
+[[how-to-name-excel-objects-like-a-software-dev]]
+[[how-to-set-power-query-to-refresh-automatically-in-excel]]
+[[how-to-use-microsoft-excels-forecast-sheet-tool-to-predict-future-data-trends]]
+[[how-to-use-slicers-in-excel-and-why-theyre-better-than-filters]]
+[[how-to-use-the-isomitted-function-in-microsoft-excel]]
+[[how-to-use-the-lambda-helper-functions-in-microsoft-excel]]
+[[how-to-use-the-makearray-function-in-microsoft-excel]]
+[[how-to-write-good-ai-instructions-for-a-semantic-model]]
+[[https]]
+[[i-added-claude-codes-memory-to-my-workflows-and-my-automation-became-effortless]]
+[[i-built-a-personal-ai]]
+[[i-finally-started-using-python-in-excel-and-i-should-have-sooner]]
+[[i-finally-tried-google-opal-and-its-the-first-no]]
+[[i-found-a-better-way-than-pivottables-in-excel-and-its-not-a-function]]
+[[i-narrowed-my-ai-stack-down-to-notebooklm-and-claude-and-its-all-i-need]]
+[[i-stopped-handling-these-tasks-after-setting-up-claude-for-desktop]]
+[[i-stopped-re]]
+[[i-thought-ai-was-just-for-chat]]
+[[i-thought-vibe]]
+[[i-wrote-a-script-to-run-claude-code-with-my-local-llm-and-skipping-the-cloud-has]]
+[[importcsv-importtext]]
+[[incomplete-data-at-a-self-service-bi-project-with-power-bi]]
+[[input-slicer-in-power-bi]]
+[[is-your-power-bi-a-spotlight-or-an-instagram-filter]]
+[[just-a-moment]]
+[[level-up-your-claude-code-with-this-claudemd]]
+[[make-better-tables-and-matrixes-in-power-bi-reports]]
+[[mom-mom-yoy-and-yoy-dax-measure-approaches]]
+[[most-people-think-claude-is-just-for-coding-heres-what-i-actually-use-it-for]]
+[[multiple-row-level-security-roles-and-object-level-security]]
+[[my-claude-code-workflow-and-personal-tips]]
+[[my-new-obsidian-plugin]]
+[[notebooklm-now-connects-to-claude-through-mcp-and-its-the-best-research-setup-iv]]
+[[notebooklm-update-adds-claude-integration-for-workflows]]
+[[obsidian-web-clipper-does-much-more-than-save-web-articles]]
+[[obsidians-big-update-the-new-home-assistant-windows-11s-printing-overhaul-and-mo]]
+[[openclaw-explained]]
+[[optimizing-semantic-model-size-in-power-bi-and-fabric]]
+[[orchestrate-schedule-refreshes-in-power-bi]]
+[[organize-and-monitor-the-power-bi-scheduled-refreshes]]
+[[output-styles]]
+[[page-level-security-inside-power-bi]]
+[[parameterizing-queriesdata-sources]]
+[[power-bi-composite-models]]
+[[power-bi-copilot-data-agent-optimization-performance-paul-turleys-sql-server-bi-]]
+[[power-bi-create-a-top-n-measure]]
+[[power-bi-data]]
+[[power-bi-date-picker-prologika]]
+[[power-bi-page-navigation-using-a-slicer]]
+[[power-bi-report-classifications-to-meet-company-irregularities-by-using-a-templa]]
+[[power-bi-row-level-security-tutorial-rls]]
+[[power-bi-tmdl-table-creation]]
+[[power-bi-user-defined-functions-dax-udfs]]
+[[query-power-bi-datasets-to-send-an-individual-alert]]
+[[rate-limit-github]]
+[[reddit]]
+[[rugby-colour-palette-project]]
+[[run-claude-code-programmatically]]
+[[run-prompts-on-a-schedule]]
+[[safe-money-time-and-performance-or-use-power-automate-sentiment-analysis-and-pow]]
+[[setting-up-report-pages-in-power-bi-go-analytics]]
+[[skills-are-claude-codes-cheat-code-heres-how-to-use-them]]
+[[soulmd-what-makes-an-ai-itself]]
+[[stop-deleting-columns-in-power-query]]
+[[stop-messing-with-your-source-data]]
+[[stop-using-claudemd-heres-what-actually-works-for-ai]]
+[[stop-using-pie-charts-in-excel]]
+[[svg-image-inside-power-bi-with-figma]]
+[[text-analysis-with-power-bi-in-different-languages]]
+[[the-3]]
+[[the-antidote-to-ai-vertigo-isnt-reading-about-it-its-building-with-it]]
+[[the-excel-formula-i-use-whenever-na-takes-over-a-sheet]]
+[[the-karpathy-loop]]
+[[the-medallion-data-architecture]]
+[[the-non]]
+[[the-pbip-format-in-simple-terms]]
+[[the-royal-leamington-spa-colour-palette]]
+[[the-ultimate-guide-to-claudemd-in-2026]]
+[[the-warwick-colour-palette]]
+[[these-7-conditional-formatting-formulas-turn-excel-into-an-automated-alert-syste]]
+[[these-python-scripts-will-supercharge-your-obsidian-vault]]
+[[these-two-local-models-made-me-cancel-my-chatgpt-gemini-and-copilot-subscription]]
+[[this-terminal-tool-is-my-favorite-way-to-view-spreadsheets-on-my-computer]]
+[[translytical]]
+[[troubleshooting]]
+[[understanding-calculation-groups]]
+[[understanding-dateadd-parameters-with-calendar]]
+[[update-parameters-inside-a-power-bi-semantic-model-using-powershell]]
+[[use-a-key-column-for-grouping-in-power-bi-desktop]]
+[[using-calculation-groups-to-switch-between-dates]]
+[[using-values-in-summarize]]
+[[using-visual-calculations-to-highlight-an-entire-row]]
+[[vercel-security-checkpoint]]
+[[welcome-to-serges-report]]
+[[what-can-you-do-with-power-bi-and-perspectives]]
+[[when-not-to-use-tables-in-excel]]
+[[why-should-you-create-explicit-measures]]
+[[write-new-measures-with-chat-gpt]]
+[[writing-good-descriptions-for-semantic-model-columns-and-measures]]
+[[you-dont-need-complex-prompts-to-get-value-from-claude-just-do-this]]
+[[you-need-to-know-what-the-hash-sign-does-in-excel-formulas]]
+[[your-excel-pivottable-isnt-complete-until-you-add-these-two-pro]]
+[[youre-picking-the-wrong-charts-let-excels-new-agent-mode-decide-for-you]]
+[[youtube]]

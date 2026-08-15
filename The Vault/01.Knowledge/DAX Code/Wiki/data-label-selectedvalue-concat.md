@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-02
 source: Revolutionize Your Bar Charts: Axis Titles Atop Bars in Power BI
 note_type: snippet
 tags: [dax, snippet, selectedvalue, concat, custom-label, bar-chart]

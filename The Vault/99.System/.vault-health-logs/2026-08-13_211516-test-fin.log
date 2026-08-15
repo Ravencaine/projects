@@ -1,0 +1,848 @@
+=== Vault Health Check — 2026-08-13_211516 (session: test-final-verify) ===
+[RUN]  Orphans
+[FINDINGS] Orphans
+    === find_orphans.py — Vault Orphan Scan ===
+    
+    Scanning notes...
+      3412 notes scanned across 7 KBs
+    
+    ─── INDEX orphans (notes not in their KB's INDEX.md) ───
+      None
+    
+    ─── SOURCE orphans (source: field has no matching file) ───
+      None
+    
+    ─── REGISTRY orphans (source in _INGESTED.md, no note references it) ───
+      None
+    
+    ─── Folder structure ───
+      00.Inbox/ structure: OK (no unexpected subdirectories)
+    
+    ==================================================
+    INDEX orphans   : 0
+    SOURCE orphans : 0
+    REGISTRY orphans: 0
+    Total orphans  : 0
+    No orphans found.
+[RUN]  Downloads
+[FINDINGS] Downloads
+    Download links found in 228 file(s) (801 link(s))
+    
+    File                                                    Kind               Confidence                   URL
+    ----------------------------------------------------------------------------------------------------------------------------------
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/a5b99bf283666a98c6b7c43aef452549.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/49c12017f1f3767057e9c6503b860ba2.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/18da99fbbfc2898abd692332253c623e.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/222ed3c6585b1c9c66272674b52aa8c9.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/ba71d33d4c405702d6402b4ed57332c8.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/00d61b206dd29a0b5f44547cc1f76b2a.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/7cce1a87251bf77d3d6760e3d4638df8.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/5acd709be99e61d0d4b661d3ac3c1fb2.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/81d5c71f5e0c7f81f7662b1dc8bd4af9.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c2037107035b3bb8d59c7387978dd2f6.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/a32a4c08732d970b2ed26eef123a2e69.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/913df5d00ad40740d7395dabfa2b8d6a.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/2abe4f197c520023c258b836131f5e6e.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b8e82c0a703b745d5b489f0d321914f5.png
+    3 Hacks to Turn Any Image into a Circle in Power BI.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/7ecb90346454f3f93be6ab2f65382a46.png
+    38 rows of DAX becomes 1 Line!  User Defined Functions Walkthrough.md direct_file        high                         https://learn.microsoft.com/en-us/dax/best-practices/dax-user-defined-functions
+    38 rows of DAX becomes 1 Line!  User Defined Functions Walkthrough.md direct_file        high                         https://www.sqlbi.com/articles/introducing-user-defined-functions-in-dax/
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b60e1eafe8a7379617d6528870325337.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e3feee2bbd32d066eca7d77b23ea67bf.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/043b5d3e930a316ecf4b976de440c7dd.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/191901f0dec944c5d4d1116621ca69e0.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c2aa02cdb37c52193cf490bac47c13eb.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e650567b893b96cac94d345a6867988d.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/3e61cd3a853a502443f03afedea151d9.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/13f4d3312a6cb3cf38aeb5631449b100.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/ba28a1489c67eb390999da93e6fa7243.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/f30d3dd8872f0d768016533c2504324b.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/22784e18e3a5749d616640110d3f149a.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e3f35027d6c43edc4211b92b384961d2.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d9b61d8d63a8cb0038d3441fd7cbc76a.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/97fc1be3deb4ef20f74372ed7b0fce1b.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/478a839e33d0e2bc670fdda1dfac7a2b.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/1063279090de05a693330375681c71a0.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b768bc74191002dc33fa2bfe7efb5ffb.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/1fa5b567e82e54b0195445a3f9f1ee52.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c5de44c8a1aff9881548606d1039d052.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/241cb93b50ec79011f826faa156153ae.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/2d7f148d70de8f3c754374faaa40a747.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/fda54865481cb0baa347c6a76dd1ab4e.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/dafb8656259a9950585746a9c70925d8.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/3a0e0a4c5dd465c7b228388f1c638eb2.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/4057d72aa7b4e95a27a221de24e23659.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/22ad465dde08eef7c2af76c821519c36.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/7d303268d939b61d4001a998b53f9438.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/9a8934bf30d73401df6ab602b8420ab7.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/1b416e5eea5c163c9c2c36b4f10d1c4d.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/3f0e0ae9d6f9b86528bb934825c8a72d.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/657102819b7b5e8c5595d0f2140520d7.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e36787afcd500e3d7d7f92e127b8d271.png
+    4 ways to use error bars in Power BI - small feature, big impact.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/75d039aea1042115da90d485a43c4a38.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/dcc7a5d1617f5b4edbb4b424eee7bb11.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d08560196f63e9ce5ed8a94b3006597a.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b85f1071fe711a8586a7bd390d905545.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/1d5ff3bcb8b4158ee063a58ec90cc351.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/3329051d26ba16cc883e31027fd1077f.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/cd4ddb3d4a49f07d78b51f68269ff5a8.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/627b2e87f4f751ac6d530108b1a686ac.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/00555324a8d8f5d10ad0dcddd3557413.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/117f1e5ccd5557c8387f6215ef3b813b.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/db8ec1ed372cfbfdb8c3cc235c1127f8.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/cb0bf8199061a479ff2bc98c957d3f36.png
+    A button slicer that zooms on selection - a clever trick that makes a big difference.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/91d315b9a2e04b226dd9a3a3e1a7c3c2.png
+    A Comprehensive Guide to Attaching Files in Power Automate Approval Flows.md direct_file        high                         https://docs.microsoft.com/en-us/power-automate/
+    A Comprehensive Guide to Attaching Files in Power Automate Approval Flows.md direct_file        high                         https://docs.microsoft.com/en-us/power-automate/use-json
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/354937a64e6434604b99021ba5703208.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/32123e37254a0b3cebb6d1430f105b33.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/9c117c2e7a5394172be76c93d053c714.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/3fcb16e4b1173f1dc34ade6aba3ca590.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/370ba18a6f26d4805adb75ed626a1d7e.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/a16c55885fc7e29c9f2151982f134b4c.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/31a7c258beb4844a4e6e9dfcfe758e3b.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/60e65dd118397001fe09010f29b7b22d.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/ef212257cdcdea5d088c817df699c26c.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/7afb7e2cd57fe928fe6c2fa2a85b0d42.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/cdc98060adb322cd373639eb78d672a1.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/1a720bd5b3f57f73e3f2992fc67cb43f.png
+    A dynamic year-over-year comparison chart in Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/34aadf131e7adcfb982a4959f1b20d04.png
+    Add a date dimension table in Power BI.md               direct_file        high                         https://linktr.ee/powerbi.masterclass
+    An Unexpected Lesson with Calculating Currency Conversions in DAX.md direct_file        high                         https://www.daxpatterns.com/
+    An Unexpected Lesson with Calculating Currency Conversions in DAX.md direct_file        high                         https://www.daxpatterns.com/currency-conversion/
+    An Unexpected Lesson with Calculating Currency Conversions in DAX.md direct_file        high                         https://www.microsoft.com/en-us/download/details.aspx?id=18279
+    An Unexpected Lesson with Calculating Currency Conversions in DAX.md github             low                          https://github.com/microsoft/Power-BI-Embedded-Contoso-Sales-Demo
+    Building a Cinematic Welcome Screen in Power BI with HTML + DAX.md direct_file        high                         https://xxxx.supabase.co/storage/v1/object/public/public-assets/video.mp4
+    Building a Cinematic Welcome Screen in Power BI with HTML + DAX.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----7a0cdd7c78da---------------------------------------
+    Building a Correlation Matrix in Power BI When Native Solutions Don’t Exist, We Create Them.md github             low                          https://github.com/Ankan2508/Correlation-Matrix-PBIX/tree/main
+    Building Advanced HTMLCSS Tooltips in Power BI Beyond Basic Hover Text.md github             low                          https://github.com/Ankan2508/Correlation-Matrix-PBIX/tree/main
+    Building Interactive Flip-Card KPIs in Power BI The HTML DAX Technique That Makes Static Cards Obsolete.md direct_file        high                         https://marketplace.microsoft.com/en-us/product/WA200001930
+    Building Interactive Flip-Card KPIs in Power BI The HTML DAX Technique That Makes Static Cards Obsolete.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----2905d65a1666---------------------------------------
+    Change your approach with large datasets in Power BI.md direct_file        high                         https://docs.microsoft.com/en-us/power-bi/admin/service-premium-large-models
+    Change your approach with large datasets in Power BI.md direct_file        high                         https://docs.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview
+    Changing the Granularity of Data in Power BI.md         direct_file        high                         https://www.microsoft.com/en-us/download/details.aspx?id=18279
+    Changing the Granularity of Data in Power BI.md         github             low                          https://github.com/microsoft/Power-BI-Embedded-Contoso-Sales-Demo
+    Changing the Granularity of Data in Power BI.md         direct_file        high                         https://docs.microsoft.com/en-us/power-query/power-query-folding
+    Compare to Forecast Visual.md                           direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/bb5ac3620240b5b4313646667f449c92.png
+    Compare to Forecast Visual.md                           direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/5a21ba87c98d3ea6ff536c894c5056f6.png
+    Compare to Forecast Visual.md                           direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/914523430ba9094d9766a495034698b1.png
+    Compare to Forecast Visual.md                           direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/977a10a8fce84ce3cf03d2cb29739c40.png
+    Compare to Forecast Visual.md                           direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b8be79fb51cafaaac16a8ae71984fa13.png
+    Compare to Forecast Visual.md                           direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b12e4ef29388ab4db0c3204fe97971c7.png
+    Compare to Forecast Visual.md                           direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/2cbe07e11fe5c81703dc4c079ec769bf.png
+    Compare to Forecast Visual.md                           direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e32dcf649d1a29630f43dfd8b4d99c72.png
+    Creating DAX functions with AI to remove duplicated code.md direct_file        high                         https://www.sqlbi.com/articles/creating-dax-functions-with-ai-to-remove-duplicated-code/?utm_source=powerbiweekly&utm_medium=email&utm_campaign=newsletter
+    Creating DAX functions with AI to remove duplicated code.md direct_file        high                         https://www.daxpatterns.com/new-and-returning-customers/
+    Creating DAX functions with AI to remove duplicated code.md direct_file        high                         https://www.sqlbi.com/articles/model-dependent-and-model-independent-user-defined-functions-in-dax/
+    Custom Formats in Power BI.md                           direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-custom-format-strings
+    Custom Formats in Power BI.md                           direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Custom Subtotals in Power BI A Rescue for Matrix Totals.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----5f009d381b08---------------------------------------
+    Data Reduction Techniques for Power BI.md               direct_file        high                         https://tomaskutac.medium.com/e0d9e883a559?sk=40f0f54c8c61969321d93e3c939c9a61
+    Data Reduction Techniques for Power BI.md               direct_file        high                         https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial
+    Data Reduction Techniques for Power BI.md               direct_file        high                         https://learn.microsoft.com/en-us/sql/t-sql/queries/select-transact-sql?view=sql-server-ver16
+    Data Reduction Techniques for Power BI.md               direct_file        high                         https://learn.microsoft.com/en-us/training/modules/automate-data-cleaning-power-query/
+    Data Reduction Techniques for Power BI.md               direct_file        high                         https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-dynamic-m-query-parameters
+    Data Reduction Techniques for Power BI.md               direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-auto-date-time
+    Data Reduction Techniques for Power BI.md               direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-composite-models
+    Data Reduction Techniques for Power BI.md               direct_file        high                         https://learn.microsoft.com/en-us/power-bi/guidance/import-modeling-data-reduction
+    Data Reduction Techniques for Power BI.md               direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-common-query-tasks
+    Data Reduction Techniques for Power BI.md               direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-performance-analyzer
+    DAX Explained — SUM vs. SUMX.md                         direct_file        high                         https://tomaskutac.medium.com/subscribe?source=post_page-----c050fb6bb355---------------------------------------
+    DAX Explained — SUM vs. SUMX.md                         direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----c050fb6bb355---------------------------------------
+    DAX Filter Functions Navigating the Data Maze with Ease.md github             low                          https://github.com/EMGuyant/powerbi-dax-functions-series?source=post_page-----52c010b7ffb4---------------------------------------
+    DAX Filter Functions Navigating the Data Maze with Ease.md direct_file        high                         https://learn.microsoft.com/en-us/dax/filter-functions-dax?source=post_page-----52c010b7ffb4---------------------------------------
+    DAX Filter Functions Navigating the Data Maze with Ease.md direct_file        high                         https://learn.microsoft.com/en-us/dax/allexcept-function-dax?source=post_page-----52c010b7ffb4---------------------------------------
+    DAX Filter Functions Navigating the Data Maze with Ease.md direct_file        high                         https://learn.microsoft.com/en-us/dax/calculate-function-dax?source=post_page-----52c010b7ffb4---------------------------------------#parameters
+    DAX Filter Functions Navigating the Data Maze with Ease.md direct_file        high                         https://learn.microsoft.com/en-us/dax/best-practices/dax-avoid-avoid-filter-as-filter-argument?source=post_page-----52c010b7ffb4---------------------------------------
+    DAX Table Manipulation Functions Transforming Your Data Analysis.md github             low                          https://github.com/EMGuyant/powerbi-dax-functions-series?source=post_page-----ba05a0474efe---------------------------------------
+    DAX Table Manipulation Functions Transforming Your Data Analysis.md direct_file        high                         https://learn.microsoft.com/en-us/dax/currentgroup-function-dax?source=post_page-----ba05a0474efe---------------------------------------
+    DAX Table Manipulation Functions Transforming Your Data Analysis.md direct_file        high                         https://learn.microsoft.com/en-us/dax/table-manipulation-functions-dax?source=post_page-----ba05a0474efe---------------------------------------
+    DAX Table Manipulation Functions Transforming Your Data Analysis.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    DAX Tip & Tricks — Use USERPRINCIPALNAME() in RLS to dynamically filter data by the logged-in user.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----a6972c2aaf5d---------------------------------------
+    Design Meets Data A Guide to Building Interactive Power BI Report Navigation.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Design Meets Data The Art of Crafting Captivating Power BI Themes.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes?source=post_page-----cb7db2c8db0c---------------------------------------#set-structural-colors
+    Design Meets Data The Art of Crafting Captivating Power BI Themes.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes?source=post_page-----cb7db2c8db0c---------------------------------------#set-formatted-text-defaults
+    Design Meets Data The Art of Crafting Captivating Power BI Themes.md github             low                          https://raw.githubusercontent.com/microsoft/powerbi-desktop-samples/main/Report%20Theme%20JSON%20Schema/reportThemeSchema-2.126.json
+    Design Meets Data The Art of Crafting Captivating Power BI Themes.md github             low                          https://github.com/microsoft/powerbi-desktop-samples/tree/main/Report%20Theme%20JSON%20Schema
+    Design Meets Data The Art of Crafting Captivating Power BI Themes.md github             low                          https://github.com/EMGuyant/powerbi-custom-themes?source=post_page-----cb7db2c8db0c---------------------------------------
+    Design Meets Data The Art of Crafting Captivating Power BI Themes.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Direction of travel on a map in Power BI.md             direct_file        high                         https://www.selectdistinct.co.uk/wp-content/uploads/2023/10/shipping-data.xlsx
+    Discover the power of FILTER() in DAX.md                direct_file        high                         https://docs.microsoft.com/en-us/dax/best-practices/dax-avoid-avoid-filter-as-filter-argument
+    Discover the power of FILTER() in DAX.md                direct_file        high                         https://www.microsoft.com/en-us/download/details.aspx?id=18279
+    Discover the power of FILTER() in DAX.md                github             low                          https://github.com/microsoft/Power-BI-Embedded-Contoso-Sales-Demo
+    Dive Into DAX Data Aggregation Made Easy.md             github             low                          https://github.com/EMGuyant/powerbi-dax-functions-series?source=post_page-----45c514f96c64---------------------------------------
+    Dive Into DAX Data Aggregation Made Easy.md             direct_file        high                         https://learn.microsoft.com/en-us/dax/aggregation-functions-dax?source=post_page-----45c514f96c64---------------------------------------
+    Dive Into DAX Data Aggregation Made Easy.md             direct_file        high                         https://learn.microsoft.com/en-us/dax/countblank-function-dax
+    Dive Into DAX Data Aggregation Made Easy.md             direct_file        high                         https://learn.microsoft.com/en-us/dax/maxa-function-dax
+    Dive Into DAX Data Aggregation Made Easy.md             direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Dive into DAX Decoding Data with Power BI Logical Functions.md direct_file        high                         https://learn.microsoft.com/en-us/dax/logical-functions-dax?source=post_page-----bd3d1eafc15a---------------------------------------
+    Dive into DAX Decoding Data with Power BI Logical Functions.md github             low                          https://github.com/EMGuyant/powerbi-dax-functions-series?source=post_page-----bd3d1eafc15a---------------------------------------
+    Dive into DAX Decoding Data with Power BI Logical Functions.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Dive into DAX Elevated Insights with Information Functions.md github             low                          https://github.com/EMGuyant/powerbi-dax-functions-series?source=post_page-----6f9b385de0ed---------------------------------------
+    Dive into DAX Elevated Insights with Information Functions.md direct_file        high                         https://learn.microsoft.com/en-us/dax/information-functions-dax?source=post_page-----6f9b385de0ed---------------------------------------
+    Dive into DAX Elevated Insights with Information Functions.md direct_file        high                         https://learn.microsoft.com/en-us/dax/dax-function-reference?source=post_page-----6f9b385de0ed---------------------------------------
+    Dive into DAX Elevated Insights with Information Functions.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Dive into DAX Getting Started with DAX Query View.md    github             low                          https://github.com/EMGuyant/powerbi-dax-queries?source=post_page-----6446fca081e2---------------------------------------
+    Dive into DAX Getting Started with DAX Query View.md    direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/dax-query-view#dax-query-view-layout
+    Dive into DAX Getting Started with DAX Query View.md    direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/dax-query-view?source=post_page-----6446fca081e2---------------------------------------
+    Dive into DAX Getting Started with DAX Query View.md    direct_file        high                         https://learn.microsoft.com/en-us/dax/dax-queries?source=post_page-----6446fca081e2---------------------------------------
+    Dive into DAX Getting Started with DAX Query View.md    direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----6446fca081e2---------------------------------------
+    Dive into DAX Simplify Data Models with Relationship Functions.md direct_file        high                         https://learn.microsoft.com/en-us/dax/relationship-functions-dax?source=post_page-----57d41587e83a---------------------------------------
+    Dive into DAX Simplify Data Models with Relationship Functions.md github             low                          https://github.com/EMGuyant/powerbi-dax-functions-series?source=post_page-----57d41587e83a---------------------------------------
+    Dive into DAX Simplify Data Models with Relationship Functions.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Dive into DAX Unlock the Full Potential of FORMAT.md    direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-dynamic-format-strings?source=post_page-----e73501c025ac---------------------------------------
+    Dive into DAX Unlock the Full Potential of FORMAT.md    direct_file        high                         https://learn.microsoft.com/en-us/dax/format-function-dax?source=post_page-----e73501c025ac---------------------------------------#custom-numeric-format-characters
+    Dive into DAX Unlock the Full Potential of FORMAT.md    direct_file        high                         https://learn.microsoft.com/en-us/dax/format-function-dax?source=post_page-----e73501c025ac---------------------------------------#custom-datetime-formats
+    Dive into DAX Unlock the Full Potential of FORMAT.md    direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-dynamic-format-strings
+    Dive into DAX Unlock the Full Potential of FORMAT.md    github             low                          https://github.com/EMGuyant/powerbi-dax-functions-series?source=post_page-----e73501c025ac---------------------------------------
+    Dive into DAX Unlock the Full Potential of FORMAT.md    direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----e73501c025ac---------------------------------------
+    Donut Charts done right 3 New Power BI designs.md       direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/24daf1f2aff3de7dd0f4e27074b991da.png
+    Donut Charts done right 3 New Power BI designs.md       direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/bc6824dbc90c2f0079c330ef92447e25.png
+    Donut Charts done right 3 New Power BI designs.md       direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/45d4a82b2de71af652502c1d073eb641.png
+    Donut Charts done right 3 New Power BI designs.md       direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b9b366295364689417e4d030fb9f55d9.png
+    Donut Charts done right 3 New Power BI designs.md       direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/de1d596602aa17047280e8c0ef60ba9d.png
+    Donut Charts done right 3 New Power BI designs.md       direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/fdcc421dde3b6f38a2cb9847de545fc3.png
+    Donut Charts done right 3 New Power BI designs.md       direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/3748a3cb55d06df8ed10759abd87c57e.png
+    Donut Charts done right 3 New Power BI designs.md       direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d62c6c5284b0699a2874a2a750879ee0.png
+    Dynamic Dimension Attribute Buckets in Power BI A Guide to Manufacturer Groupings Use Case.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----eed3144b65c8---------------------------------------
+    Dynamic Pareto Analysis in Power BI - Native Visuals.md github             low                          https://github.com/PowerBIPark/PowerBITutorials
+    Easily Create Multiple Calculations Using A Single Formula in Power Query(.pbix included).md google_drive       medium (heuristic: .pbix filename) https://drive.google.com/file/d/1aTKHmQsP6__zJonEheM8Yl83huNK3sLU/view?usp=sharing
+    Easily Create Multiple Calculations Using A Single Formula in Power Query(.pbix included).md google_drive       medium (heuristic: .pbix filename) https://drive.google.com/file/d/1Kkhyu--606no5MOzmcGlItddQJpuTO5t/view?usp=sharing
+    Easily Remove Blank Rows in a Table using Power Query(.pbix included).md google_drive       medium (heuristic: .pbix filename) https://drive.google.com/file/d/18rVaub7tCQ5_5-qyjXO2B73r33AXud2x/view?usp=sharing
+    Easily Remove Blank Rows in a Table using Power Query(.pbix included).md google_drive       medium (heuristic: .pbix filename) https://drive.google.com/file/d/1m1YVco3OegJri1ZFaa4TpglJS7vUBmIH/view?usp=sharing
+    Elevate Power Automate Error Handling with Centralized Failure Notifications.md direct_file        high                         https://learn.microsoft.com/en-us/MicrosoftTeams/manage-tags
+    Elevate Power Automate Error Handling with Centralized Failure Notifications.md direct_file        high                         https://support.microsoft.com/en-us/office/using-tags-in-microsoft-teams-667bd56f-32b8-4118-9a0b-56807c96d91e
+    Enhancing Bar Charts in Power BI A 2025 Workout Wednesday Challenge.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----6c4c4b5b2082---------------------------------------
+    Explore Power BI Core Visualizations Part 1 — Bar and Column Charts.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Explore Power BI Core Visualizations Part 2 — Line and Area Charts.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Explore Power BI Core Visualizations Part 3 — Pie, Donut, and Treemap.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----95999b5d4e02---------------------------------------
+    Exploring the Power BI Remote MCP Server with Claude.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/mcp/remote-mcp-server-get-started
+    Exploring the Power BI Remote MCP Server with Claude.md github             low                          https://github.com/peterjohnbeck/Connecting_PowerBI_MCP
+    Faster DAX - Are Visual Calculations in Power BI Actually Faster Than DAX Measures.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/da91ad888b5abd0f39660e013f53658a.png
+    Faster DAX - Are Visual Calculations in Power BI Actually Faster Than DAX Measures.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/92e0d06ce27922a81bf795c01f4e6988.png
+    Faster DAX - Are Visual Calculations in Power BI Actually Faster Than DAX Measures.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/514ffa250159bab640553a1dd2f86aa1.png
+    Faster DAX - Are Visual Calculations in Power BI Actually Faster Than DAX Measures.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/6fc7073e51736ac8c422c517014acbbd.png
+    From Symptoms to Strategy How I Built a Patient Health Monitoring Dashboard in Power BI.md github             low                          https://github.com/Samadkudehinbu/Patient-Health-Monitoring-Report/tree/main
+    From Tableau to Power BI Recreating the Segmented Total Bar Chart with Error Bars (PBIX Included).md other_drive        low                          https://drive.google.com/drive/folders/1C6HjOKWZfz3-2c-y2zD6EijsawqQ1iY_?usp=sharing
+    From Tableau to Power BI Recreating the Segmented Total Bar Chart with Error Bars (PBIX Included).md direct_file        high                         https://powerbi.microsoft.com/en-in/blog/power-bi-march-2022-feature-summary/
+    Fully Controllable Best-Performing Items Comparison in Power BI.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Fully Controllable Best-Performing Items Comparison in Power BI.md direct_file        high                         https://www.sqlbi.com/articles/controlling-drillthrough-using-detail-rows-expressions-in-dax/
+    Fully Controllable Best-Performing Items Comparison in Power BI.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----05d480cbea36---------------------------------------
+    Fully Local Power BI Development OpenCode + Qwen 3.5 + Microsoft’s Power BI MCP Server.md direct_file        high                         https://aka.ms/powerbi-modeling-mcp-vscode
+    Fully Local Power BI Development OpenCode + Qwen 3.5 + Microsoft’s Power BI MCP Server.md github             low                          https://github.com/microsoft/powerbi-modeling-mcp
+    Fully Local Power BI Development OpenCode + Qwen 3.5 + Microsoft’s Power BI MCP Server.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----81a527abe5ab---------------------------------------
+    Highlight any Date Range on a Line Chart.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/aa92a8d4d8e397af0d7b90d85b14e690.png
+    Highlight any Date Range on a Line Chart.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/803a2062e4e56b2a669d20a19be80457.png
+    Highlight any Date Range on a Line Chart.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c1e3b980d5cdda94f12960636e6b0243.png
+    Highlight any Date Range on a Line Chart.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/7cd45e4db3519d914ed1d2a238303d80.png
+    Highlight any Date Range on a Line Chart.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c15a6d5a8ad9dd01a1c276d9748b2fba.png
+    Highlight any Date Range on a Line Chart.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/f055fac8338ef2cb58f55f6637bb3bf3.png
+    Highlight any Date Range on a Line Chart.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/1ba4bb32f721423678d8b469c38392cd.png
+    Highlight any Date Range on a Line Chart.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/cb68cf100ae42752c22b00c971980056.png
+    Highlight any Date Range on a Line Chart.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/975e9fe30475300ea1b87dcd3b81b084.png
+    How DAX Studio Helped Us Reduce Power BI Report Load Time in Production — Part 2 of 2.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/sample-employee-hiring-history
+    How Do I Look After My Power Automate Flows.md          direct_file        high                         https://flow.microsoft.com/
+    How Do I Look After My Power Automate Flows.md          direct_file        high                         https://admin.powerplatform.microsoft.com/
+    How I Built an Interactive HR Attrition Analytics Dashboard in Power BI.md github             low                          https://github.com/Samadkudehinbu/HR-Workforce-Planning-Attrition-Report
+    How to Add Comments Inside Excel Formulas • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/how-to-add-comments-inside-excel-formulas
+    How to Add Comments Inside Excel Formulas • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/excel-let-function
+    How to Add Comments Inside Excel Formulas • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/advanced-excel-formulas-course
+    How to Build a Dynamic Calendar Visual in Power BI.md   other_drive        low                          https://drive.google.com/drive/folders/1u98Y13nfIGdlbzhIZnQf5hn0h6HD-JvK?usp=sharing
+    How to Build a Gantt Chart in Power BI Using Only Core Visuals.md google_drive       medium                       https://drive.google.com/file/d/1qG27MWuxNmHqePrRTYIahpaqm8VyrbzW/view?usp=sharing
+    How to Build a Gap Bar Chart in Power BI Using Only Native Visuals.md github             low                          https://github.com/Ankan2508/Native-Gap-Bar-Chart
+    How to Build a Gap Bar Chart in Power BI Using Only Native Visuals.md github             low                          https://github.com/Ankan2508
+    How To Build A Power BI Report With AI Using The Power BI MCP.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/mcp/
+    How to Build Interactive Cards in Power BI with the New Visual Features.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/2c5aca650ab98a412af5068acb67801b.png
+    How to Build Interactive Cards in Power BI with the New Visual Features.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d657f597af55f13f667467adec6c169f.png
+    How to Build Interactive Cards in Power BI with the New Visual Features.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/789d8064e215bcc49c9e068dccd88580.png
+    How to Build Interactive Cards in Power BI with the New Visual Features.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/fcfb7327d81d91b8e39c0d806faf7d13.png
+    How to Build Interactive Cards in Power BI with the New Visual Features.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/679206db6dcd48830191ff38355f0c97.png
+    How to Build Interactive Cards in Power BI with the New Visual Features.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/6342b9936cb1379054026a90d9c9b3ec.png
+    How to Build Interactive Cards in Power BI with the New Visual Features.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/bf509e10c9c3aa09e8e853e4066ac957.png
+    How to Build Interactive Cards in Power BI with the New Visual Features.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/5954293e80d05ce52a81bd729bcdf4a1.png
+    How to Build Your First Power Automate Flow, Step by Step.md direct_file        high                         https://learn.microsoft.com/en-us/power-automate/copilot-overview
+    How to Build Your First Power Automate Flow, Step by Step.md direct_file        high                         https://learn.microsoft.com/en-us/credentials/certifications/power-platform-fundamentals/
+    How to Build Your First Power Automate Flow, Step by Step.md direct_file        high                         https://www.microsoft.com/en-us/power-platform/products/power-automate/pricing
+    How to Change the data source in Power BI.md            direct_file        high                         https://linktr.ee/powerbi.masterclass
+    How to Connect Excel with Power Automate — A Step-by-Step Guide.md direct_file        high                         https://flow.microsoft.com/
+    How to Create a Custom Slicer in Power BI for Enhanced Table Sorting.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/
+    How to Create Calculation Groups in Power BI.md         direct_file        high                         https://learn.microsoft.com/en-us/analysis-services/tabular-models/calculation-groups?view=asallproducts-allversions
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/6b5541b420b236356b5fe4a4cb914fb2.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/9616eca4da846f5586f7de5b7ba7fdb9.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/790ac0a97d81e99955aa0afcb095cfdc.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/0c99e897b166fe8b2ff737f1a1c9ac47.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/fcfbd31950c9892b809a8dcb97eb93ea.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/8ffc572858409e6f1fdaa9fe0f8c4bdf.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/262bc511a42b33c05c2f9d9b299a506e.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/58e41287453d976b612672939579dcc3.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/2be7bff6450d5d497eb9fc03bdbfdae4.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/3a81f000e7d014437ab4a1df5d106374.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/527ae2050aed53b851ca6860d60cdb42.png
+    How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/be8840a0504862c218a968612d6aa834.png
+    How to Customize Sync Slicers in Power BI.md            direct_file        high                         https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-slicers?tabs=powerbi-desktop
+    How to display measure descriptions directly in Power BI reports (part 2).md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----8a28a1a2c56f---------------------------------------
+    How to display measure descriptions directly in Power BI reports.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----c87e3579eb6a---------------------------------------
+    How to Dynamically Disable Slicers in Power BI Based on Selections.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/power-bi-reports-filters-and-highlighting
+    How to Enhance Your URLs in Power BI Reports.md         direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/power-bi-hyperlinks-in-tables?tabs=powerbi-desktop
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://www.microsoft.com/en-us/microsoft-365/try**
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://www.microsoft.com/en-us/microsoft-365/try
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://gov.flow.microsoft.us**
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://gov.flow.microsoft.us/
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://high.flow.microsoft.us**
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://high.flow.microsoft.us/
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://learn.microsoft.com/en-us/power-automate
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://admin.powerplatform.microsoft.com`
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://learn.microsoft.com/en-us/microsoftteams/get-started-with-teams-create-your-first-teams-and-channels**
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://learn.microsoft.com/en-us/microsoftteams/get-started-with-teams-create-your-first-teams-and-channels
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://powerautomate.microsoft.com
+    How to Get Started with Microsoft Power Automate.md     github             low                          https://github.com/codeaihub1998
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://yashvaantlakham73.medium.com/list/python-realworld-projects-96b6f41a9020?source=post_page-----5eb3e464172c---------------------------------------
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://yashvaantlakham73.medium.com/list/retrieval-augmented-generation-a-handson-approach-317f69b97292?source=post_page-----5eb3e464172c---------------------------------------
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://yashvaantlakham73.medium.com/list/ai-trading-a-handson-approach-c462bdbe8dc3?source=post_page-----5eb3e464172c---------------------------------------
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://yashvaantlakham73.medium.com/list/modern-marketing-with-ai-06cbbb099d2b?source=post_page-----5eb3e464172c---------------------------------------
+    How to Get Started with Microsoft Power Automate.md     direct_file        high                         https://yashvaantlakham73.medium.com/list/autonomous-programming-beginner-to-advanced-488b47c59bab?source=post_page-----5eb3e464172c---------------------------------------
+    How to Get Started with Power Automate.md               direct_file        high                         https://www.microsoft.com/en-us/microsoft-365/try**
+    How to Get Started with Power Automate.md               direct_file        high                         https://www.microsoft.com/en-us/microsoft-365/try
+    How to Get Started with Power Automate.md               direct_file        high                         https://gov.flow.microsoft.us
+    How to Get Started with Power Automate.md               direct_file        high                         https://gov.flow.microsoft.us/
+    How to Get Started with Power Automate.md               direct_file        high                         https://high.flow.microsoft.us
+    How to Get Started with Power Automate.md               direct_file        high                         https://high.flow.microsoft.us/
+    How to Get Started with Power Automate.md               direct_file        high                         https://learn.microsoft.com/en-us/power-automate**
+    How to Get Started with Power Automate.md               direct_file        high                         https://learn.microsoft.com/en-us/power-automate
+    How to Get Started with Power Automate.md               direct_file        high                         https://admin.powerplatform.microsoft.com**
+    How to Get Started with Power Automate.md               direct_file        high                         https://admin.powerplatform.microsoft.com/
+    How to Get Started with Power Automate.md               direct_file        high                         https://learn.microsoft.com/en-us/microsoftteams/get-started-with-teams-create-your-first-teams-and-channels**
+    How to Get Started with Power Automate.md               direct_file        high                         https://learn.microsoft.com/en-us/microsoftteams/get-started-with-teams-create-your-first-teams-and-channels
+    How to Get Started with Power Automate.md               direct_file        high                         https://powerautomate.microsoft.com**
+    How to Get Started with Power Automate.md               direct_file        high                         https://powerautomate.microsoft.com/
+    How to Get Started with Power Automate.md               github             low                          https://github.com/codeaihub1998
+    How to Get Started with Power Automate.md               direct_file        high                         https://yashvaantlakham73.medium.com/list/autonomous-programming-beginner-to-advanced-488b47c59bab?source=post_page-----7a8ff3804c38---------------------------------------
+    How to Get Started with Power Automate.md               direct_file        high                         https://yashvaantlakham73.medium.com/list/large-language-model-projects-15dacbb46517?source=post_page-----7a8ff3804c38---------------------------------------
+    How to Get Started with Power Automate.md               direct_file        high                         https://yashvaantlakham73.medium.com/list/ai-trading-a-handson-approach-c462bdbe8dc3?source=post_page-----7a8ff3804c38---------------------------------------
+    How to Get Started with Power Automate.md               direct_file        high                         https://yashvaantlakham73.medium.com/?source=post_page-----7a8ff3804c38---------------------------------------
+    How to Hide Sensitive Data in Power Automate Using Secure Inputs and Outputs.md direct_file        high                         https://learn.microsoft.com/en-us/power-automate/how-tos-use-sensitive-input
+    How to Hide Sensitive Data in Power Automate Using Secure Inputs and Outputs.md direct_file        high                         https://learn.microsoft.com/en-us/power-automate/guidance/coding-guidelines/use-secure-inputs-outputs-triggers
+    How to Hide Sensitive Data in Power Automate Using Secure Inputs and Outputs.md direct_file        high                         https://learn.microsoft.com/en-us/power-automate/guidance/planning/define-input-output
+    How to Schedule Power BI Report Refreshes on Non-Fixed Interval Using Power Automate.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----dcd3674effa3---------------------------------------
+    How to Set Up Alerts in Power BI.md                     direct_file        high                         https://learn.microsoft.com/en-us/fabric/data-activator/data-activator-introduction
+    How to Sort Dates in Power BI.md                        direct_file        high                         https://linktr.ee/powerbi.masterclass
+    How to Standardize Column Widths in Power BI.md         direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----e6abddaa1291---------------------------------------
+    How to Sync Slicers in Power BI — Select Distinct.md    direct_file        high                         https://www.selectdistinct.co.uk/wp-content/uploads/2024/03/Sync-Slicers-Data-1.xlsx
+    How to write good AI instructions for a semantic model.md github             low                          https://docs.github.com/en/copilot
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/guidance/star-schema
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-prepare-data-ai-data-schema
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-prepare-data-ai-instructions
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-prepare-data-ai-verified-answers
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/power-bi/create-reports/copilot-prepare-data-ai
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-overview
+    How to write good AI instructions for a semantic model.md github             low                          https://github.com/data-goblin/power-bi-agentic-development
+    How to write good AI instructions for a semantic model.md github             low                          https://github.com/TabularEditor/Scripts
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/en-us/rest/api/fabric/articles/fabric-command-line-interface
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/en-us/devops/develop/what-is-continuous-integration
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/power-bi/create-reports/copilot-prepare-data-ai-instructions
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/dax-query-view
+    How to write good AI instructions for a semantic model.md direct_file        high                         https://learn.microsoft.com/fabric/data-science/semantic-model-best-practices
+    I made a dynamic Excel timeline in 10 minutes (and you can too).md direct_file        high                         https://www.microsoft.com/en-us/microsoft-365/p/microsoft-365-personal/cfq7ttc0k5bf
+    I started using Python in Excel for boring tasks, and it completely changed my workflow.md direct_file        high                         https://www.microsoft.com/en-us/microsoft-365/try-copilot/individuals?gad_source=1&gad_campaignid=23510107647&gbraid=0AAAABBiB5pbGeRhp-LqRhrnxkh-s2RY5V&gclid=Cj0KCQjwmunNBhDbARIsAOndKpm6Qk0Ft83EGXfl0UvG8JFJ9vTlZMyIPxS9WTv1e68ZJxj187Y2yiQaAu9YEALw_wcB#plans
+    I started using Python in Excel for boring tasks, and it completely changed my workflow.md direct_file        high                         https://www.microsoft.com/en-us/microsoft-365/p/microsoft-365-personal/cfq7ttc0k5bf
+    Introducing Calculation Groups.md                       direct_file        high                         https://www.sqlbi.com/articles/introducing-calculation-groups/
+    Introducing Calculation Groups.md                       direct_file        high                         https://www.sqlbi.com/calculation-groups/
+    Introducing Calculation Groups.md                       direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-groups/
+    Introducing Calculation Groups.md                       direct_file        high                         https://www.sqlbi.com/articles/understanding-the-application-of-calculation-items/
+    Introducing Calculation Groups.md                       direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-group-precedence/
+    Introducing Calculation Groups.md                       direct_file        high                         https://www.sqlbi.com/articles/controlling-format-strings-in-calculation-groups/
+    Introducing Calculation Groups.md                       direct_file        high                         https://www.sqlbi.com/articles/avoiding-pitfalls-in-calculation-groups-precedence/
+    Introducing Calculation Groups.md                       direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-selectively-replace-measures-in-dax-expressions/
+    Introducing Calculation Groups.md                       direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-switch-between-dates/
+    Introducing Calculation Groups.md                       direct_file        high                         https://www.sqlbi.com/articles/understanding-the-interactions-between-composite-models-and-calculation-groups/
+    Introducing calendar-based time intelligence in DAX.md  direct_file        high                         https://www.sqlbi.com/articles/introducing-calendar-based-time-intelligence-in-dax/
+    Introducing user-defined functions in DAX.md            direct_file        high                         https://www.sqlbi.com/articles/introducing-user-defined-functions-in-dax/
+    Introduction to Power BI Semantic Models.md             direct_file        high                         https://learn.microsoft.com/en-us/fabric/data-warehouse/semantic-models
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d8cc607000e16ba3e4183d484a709350.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d830b96c27717733a117409edac6a830.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/ef73fd76f683574cf57b5c9139f6e3ef.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/53954c85c9df2cb55504b3fc29d68069.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/db9ace183d3223ce3180903a57c64eeb.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/1448260dc16377f754b485eacec46963.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/64f0919820418150cca2c02fefb5c458.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/cdd40b0feb824ad083824c2f775700b4.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/617d6699386982ca60ffb5ef430220fc.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c5cdebac8968ef5221dd4c334ef99d4d.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/88d2a571ac6fa6313adf802f07c9ee09.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/637582c0f40a99e993fcf773a9e17de8.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/6ba1ded3828d5d881a588fcaa04004aa.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e2a74b2db203b5fb82e3d7b47f14a995.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/182c1658adbbc2051c6f5de1c679b75e.png
+    KPI Overview Page in Power BI that left my Client speechless.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/ae22a26990717e4c62fe9fbbc919f66b.png
+    LEVEL UP with Custom Visuals Power BI🔹HTML🔹Calculation Groups🔹Deneb.md github             low                          https://github.com/RuiRomano
+    LEVEL UP with Custom Visuals Power BI🔹HTML🔹Calculation Groups🔹Deneb.md direct_file        high                         https://learn.microsoft.com/en-us/analysis-services/tabular-models/calculation-groups?view=asallproducts-allversions
+    LEVEL UP with Custom Visuals Power BI🔹HTML🔹Calculation Groups🔹Deneb.md github             high                         https://github.com/PowerBI-tips/Deneb-Templates/blob/main/templates/heatmap%20with%20bars%20-%20red%20themed.json
+    Marketing Campaign Analysis A 4-Page Power BI Dashboard Project.md direct_file        high                         https://github.com/Samadkudehinbu/Data-Portfolio/blob/main/Marketing%20Campaign%20Analysis%20Project%20by%20Abdulsamad%20Kudehinbu.sql
+    Master Power Automate Desktop Guide to Automation.md    direct_file        high                         https://www.microsoft.com/en-us/power-platform/products/power-automate/
+    Master Power Query in Power BI  Tips & Tricks for Faster Data Cleaning.md other_drive        low                          https://drive.google.com/drive/folders/1-BnDkTcGT68QEMHCu-tRz\_Ybss6wm11o?usp=drive\_link
+    Master Power Query in Power BI  Tips & Tricks for Faster Data Cleaning.md direct_file        high                         https://www.metricsthatmatter.com/url/u.aspx?7E0283CB2237285502
+    Matrix vs Table in Power BI.md                          direct_file        high                         https://learn.microsoft.com/en-us/power-bi/visuals/desktop-matrix-visual
+    MAX and MIN functions in Power BI.md                    direct_file        high                         https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps
+    Microsoft’s Power BI Modeling MCP Server What It Actually Means for Your BI Workflow.md github             low                          https://github.com/microsoft/powerbi-modeling-mcp
+    Microsoft’s Power BI Modeling MCP Server What It Actually Means for Your BI Workflow.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-tmdl-view
+    My Best Power BI KPI Card (So Far 😅).md                 other_drive        low                          https://drive.google.com/drive/folders/16XEq8hJ6g2QLFZDB--vBi-PtqFwNTtgs?usp=sharing
+    My Favorite Way to Forecast in Power BI.md              google_drive       medium                       https://drive.google.com/file/d/1tFpxvbgYj4xIkFbj9M5OGh_BlGUDK5p8/view?usp=sharing
+    New Button Slicer in Power BI.md                        direct_file        high                         https://powerbi.microsoft.com/en-nz/blog/new-slicer-button-public-preview/?source=post_page-----f577f7352629---------------------------------------
+    New Button Slicer in Power BI.md                        direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Obsidian + OKF + PBIP Turn Power BI documentation into reusable knowledge - Part 2.md direct_file        high                         https://community.obsidian.md/plugins/karpathywiki
+    Obsidian + OKF + PBIP Turn Power BI documentation into reusable knowledge - Part 2.md github             low                          https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+    Obsidian + OKF + PBIP Turn Power BI documentation into reusable knowledge - Part 2.md direct_file        high                         https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md
+    Obsidian + OKF + PBIP Turn Power BI documentation into reusable knowledge - Part 2.md direct_file        high                         https://community.obsidian.md/plugins/okf-enforcer
+    Obsidian + OKF + PBIP Turn Power BI documentation into reusable knowledge - Part 2.md github             low                          https://github.com/Jasmin319/Power-BI-Vibes/tree/main/Standardize
+    Optimizing DAX Time Intelligence Enhancing Performance with Calendar Dimension.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Optimizing DAX Time Intelligence Enhancing Performance with Calendar Dimension.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----513ab37fed3e---------------------------------------
+    Optional parameters in DAX user-defined functions.md    direct_file        high                         https://www.sqlbi.com/articles/optional-parameters-in-dax-user-defined-functions/
+    Optional parameters in DAX user-defined functions.md    direct_file        high                         https://www.sqlbi.com/dax-user-defined-functions-udf/
+    PBIP PBIR & Agentic AI Development in Power BI  Fabric Insider Ep. 14.md direct_file        high                         https://ideas.fabric.microsoft.com
+    PBIP PBIR & Agentic AI Development in Power BI  Fabric Insider Ep. 14.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/agentic/power-bi-agentic-overview
+    Power Automate + Power BI Building Intelligent Data Workflows That Transform Business Intelligence in 2025.md direct_file        high                         https://learn.microsoft.com/en-us/power-platform/release-plan/2025wave1/
+    Power Automate + Power BI Building Intelligent Data Workflows That Transform Business Intelligence in 2025.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-flow-integration
+    Power Automate + Power BI Building Intelligent Data Workflows That Transform Business Intelligence in 2025.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/power-bi-automate-visual
+    Power Automate + Power BI Building Intelligent Data Workflows That Transform Business Intelligence in 2025.md direct_file        high                         https://powerbi.microsoft.com/en-us/blog/
+    Power Automate + Power BI Building Intelligent Data Workflows That Transform Business Intelligence in 2025.md direct_file        high                         https://powerusers.microsoft.com/
+    Power Automate + Power BI Building Intelligent Data Workflows That Transform Business Intelligence in 2025.md github             low                          https://github.com/microsoft/PowerPlatform-Samples
+    Power Automate + Power BI Building Intelligent Data Workflows That Transform Business Intelligence in 2025.md github             low                          https://github.com/devbysatyam
+    Power Automate + Power BI Building Intelligent Data Workflows That Transform Business Intelligence in 2025.md direct_file        high                         https://learn.microsoft.com/en-us/users/devbysatyam/
+    Power Automate Desktop Tutorial Building a Sequential Flow.md direct_file        high                         https://medium.com/@mohamad.razzi.my/getting-started-with-power-automate-desktop-667f790b3b8a?source=post_page-----21f0c4819ca5---------------------------------------
+    Power Automate Integration with Power Apps, Power BI, and Microsoft 365 — MultiQoS.md direct_file        high                         https://news.microsoft.com/de-ch/2025/06/17/new-microsoft-study-reveals-the-rise-of-the-infinite-workday-40-of-employees-check-email-before-6-a-m-evening-meetings-up-16/#:~:text=New%20Microsoft%20Study%20Reveals%20the%20Rise%20of,while%20humans%20focus%20on%20strategy%20and%20creativity.
+    Power Automate Integration with Power Apps, Power BI, and Microsoft 365 — MultiQoS.md direct_file        high                         https://www.microsoft.com/en-us/power-platform/blog/power-automate/boost-efficiency-and-increase-roi-with-next-level-process-automation/
+    Power Automate to refresh a Power BI report.md          direct_file        high                         https://powerautomate.microsoft.com/en-us/
+    Power Automate unlocked for Excel users (PART 1) string functions.md direct_file        high                         https://learn.microsoft.com/en-us/power-automate/overview-cloud
+    Power Automate unlocked for Excel users (PART 1) string functions.md direct_file        high                         https://learn.microsoft.com/en-us/power-automate/multi-step-logic-flow
+    Power Automate vs Power BI What You Need to Know.md     direct_file        high                         https://www.microsoft.com/en-us/power-platform/products/power-bi
+    Power Automate vs Power BI What You Need to Know.md     direct_file        high                         https://www.microsoft.com/en-us/power-platform/products/power-automate/pricing
+    Power Automate vs Power BI What You Need to Know.md     direct_file        high                         https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing
+    Power Bi Alerts with DAX at Power Automate.md           direct_file        high                         https://learn.microsoft.com/en-us/rest/api/power-bi/datasets/execute-queries-in-group
+    Power BI Alt Text UDF Library.md                        github             low                          https://github.com/Juls-BI/powerbi-alttext-udfs
+    Power BI and Power Automate — Send email at the end of the month.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-bookmarks?tabs=powerbi-desktop
+    Power BI Barcode Scanning How to Filter Your Reports Using Barcodes.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-scan-barcode
+    Power BI button slicer as a KPI card on steroids.md     direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----46bc828b3c10---------------------------------------
+    Power BI Conditional formatting for font size and font weight.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----e8f71e464eb2---------------------------------------
+    Power BI conditional slicers with a little bit of fields parameters magic.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----e00eb6c94b54---------------------------------------
+    Power BI Data Catalog made easy with Obsidian, GitHub Copilot & AI.md github             low                          https://github.com/Jasmin319/Power-BI-Vibes/tree/fbb2fe838894cf004fb6b1e6498a6ea680a7f827/Data%20Catalog%20with%20Obsidian%20and%20AI
+    Power BI Data Catalog made easy with Obsidian, GitHub Copilot & AI.md github             low                          https://github.com/Jasmin319
+    Power BI Design Skills Why Accessibility Still Starts with the Prompt.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/agentic/power-bi-report-design-skill-overview
+    Power BI Export Buttons A Step-by-Step Guide.md         direct_file        high                         https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-new-card?tabs=On-the-ribbon
+    Power BI Feature News — Dynamic String Format for Measures.md direct_file        high                         https://learn.microsoft.com/en-us/dax/switch-function-dax
+    Power BI Feature News — Dynamic String Format for Measures.md direct_file        high                         https://learn.microsoft.com/en-us/dax/selectedvalue-function
+    Power BI Feature Spotlight Data Filtering and Modeling.md direct_file        high                         https://powerbi.microsoft.com/en-us/blog/power-bi-november-2024-feature-summary/
+    Power BI Feature Spotlight Data Filtering and Modeling.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/dax-query-view#quick-queries
+    Power BI Feature Spotlight Data Filtering and Modeling.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----cfb27ebbb240---------------------------------------
+    Power BI Feature Spotlight Marker Enhancements.md       direct_file        high                         https://powerbi.microsoft.com/en-us/blog/power-bi-october-2024-feature-summary/
+    Power BI Feature Spotlight Marker Enhancements.md       direct_file        high                         https://powerbi.microsoft.com/en-us/blog/power-bi-october-2024-feature-summary/#post-28196-_Toc179458532
+    Power BI Field parameters for dynamic views.md          direct_file        high                         https://learn.microsoft.com/en-us/power-bi/guidance/data-translation-implement-field
+    Power BI Field parameters for dynamic views.md          direct_file        high                         https://databear.com/wp-content/uploads/2025/11/Ezgif.Com-Video-To-Gif-Converter-1.mp4?_=1
+    Power BI Field parameters for dynamic views.md          direct_file        high                         https://databear.com/wp-content/uploads/2025/11/Ezgif.Com-Video-To-Gif-Converter-1.mp4
+    Power BI Fields Parameters Upgraded to the Next Level (Import Mode).md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----fb4545d83ed2---------------------------------------
+    Power BI illegal hacking of JSON files to add more conditional formatting capabilities.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----485751bc4be2---------------------------------------
+    Power BI KPIs.md                                        direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Power BI Let Users Choose Between Full and Abbreviated Numbers ⭐.md direct_file        high                         https://1drv.ms/u/c/5f8ed775d41b4aac/IQDAbwuHr5jQTJuxLzHjcncjAXlR9wnwp-RK3sGh2Fkf2co?e=skYpYs
+    Power BI Line Charts Just Got a Major Upgrade Conditional Line Color.md direct_file        high                         https://github.com/edwardpcharles/Power-BI-Projects/blob/main/Line\_Chart\_Sample.pbix
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://aka.ms/powerbi-modeling-mcp-vscode
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://api.fabric.microsoft.com/v1/mcp/powerbi
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/mcp/remote-mcp-server-get-started
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md github             low                          https://github.com/microsoft/powerbi-modeling-mcp
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://learn.microsoft.com/power-bi/developer/mcp/remote-mcp-server-get-started
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://aka.ms/power-modeling-mcp-demo
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://github.com/microsoft/powerbi-modeling-mcp/blob/main/TROUBLESHOOTING.md
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md github             low                          https://github.com/maxanatsko/PowerBI-Desktop-MCP
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://learn.microsoft.com/azure/api-management/secure-mcp-servers
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://learn.microsoft.com/power-bi/transform-model/service-semantic-model-version-history
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://learn.microsoft.com/power-bi/developer/projects/projects-dataset
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://learn.microsoft.com/power-bi/developer/projects/projects-dataset#tmdl-format
+    Power BI Modeling MCP Server — Step-by-Step Implementation Guide.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----b7209d6d2506---------------------------------------
+    Power BI RELATED Function.md                            direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Power BI Relationships for Data Analysis.md             direct_file        high                         https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-new-card?tabs=On-the-ribbon
+    Power BI report — control version.md                    direct_file        high                         https://michalmolka.medium.com/power-bi-update-dataset-alm-toolkit-f3e749f818f6
+    Power BI reports and Fabric Apps Expanding how you build on your semantic model data.md direct_file        high                         https://learn.microsoft.com/power-bi/visuals/power-bi-visualizations-overview
+    Power BI reports and Fabric Apps Expanding how you build on your semantic model data.md direct_file        high                         https://learn.microsoft.com/power-bi/connect-data/service-datasets-understand
+    Power BI reports and Fabric Apps Expanding how you build on your semantic model data.md direct_file        high                         https://learn.microsoft.com/power-bi/developer/agentic/power-bi-agentic-overview
+    Power BI reports and Fabric Apps Expanding how you build on your semantic model data.md direct_file        high                         https://learn.microsoft.com/power-bi/developer/mcp/mcp-servers-overview
+    Power BI reports and Fabric Apps Expanding how you build on your semantic model data.md direct_file        high                         https://learn.microsoft.com/fabric/apps/overview
+    Power BI slicers can do THIS.md                         direct_file        high                         https://mlvarv.clicks.mlsend.com/tf/c/eyJ2Ijoie1wiYVwiOjkxMDY4OCxcImxcIjoxOTUzMzIxODA5NDcyNDA1NDMsXCJyXCI6MTk1MzMyMTkzNTE2NTIxMjQwfSIsInMiOiJlNWYzYmZiM2NjM2U2YTgwIn0
+    Power BI Static Tables in 3 Easy Steps.md               direct_file        high                         https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-new-card?tabs=On-the-ribbon
+    Power BI Time Hacks Mastering Dynamic Date Views.md     direct_file        high                         https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
+    Power BI Time Hacks Mastering Dynamic Date Views.md     other_drive        low                          https://drive.google.com/drive/folders/1kN20nT-cgfSsI1Fd4c9IpM6HAQ9Pv2_h?usp=sharing
+    Power BI Time Hacks Mastering Dynamic Date Views.md     direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Power BI Tips & Tricks - Use TREATAS() to Create Virtual Relationships for Slicers.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----699934b9f5ad---------------------------------------
+    Power BI Tips & Tricks — Use KEEPFILTERS to Preserve Context in CALCULATE.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----e8bac1eef120---------------------------------------
+    Power BI Tips & Tricks — Use RANKX() to Build Dynamic Top N Reports.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----0c31d1dcf608---------------------------------------
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e64c91514979b824d9d94553e4baf7e1.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/7f0bc0f7e3e96c4f9fa1d50324c3f7c2.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/63ec463ccfa700b2cf02b1da9974f8b2.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/366354c3fabcf017e62e23aa2de138fa.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/62e5406c9c5f8aa3bbfdb372fa44247c.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/378a23fb2872475bed599b5af6de90ea.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/6a612e89c6f4c9006741bf1df86cb278.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/aeef61777a52cce6ceff231d0a8e5262.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/20664a747cf99482b99ecc7a8c4214a3.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/70b126f0155424ee68f88656e9f33a84.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/36cd11adba2d69da141c12d4c67dfdda.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/36464a62a0d5878cb42f36f24ee5feaa.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/ac2914775dc1ff1b9fcf2d2352810b27.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c8a5bcec3cf0b46fa38c1d9c063d2e8f.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/4cce0ba5b8b36becdb685715efcd7cae.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/13270cd68853d8f450fc36947fb39781.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c80b38cd631c6228c04c13a9d6d5b9ca.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/12649c7d7a682f7ab5393a8265758847.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/85e7e76f78860e6c7934cffb01c5f1a4.png
+    Power BI UX Enhancements with Visual Calculations.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/f80416c73eaf217635f8f28cb49c4cf7.png
+    Power BI visual templates made more dynamic.md          direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Power BI visual templates made more dynamic.md          direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----4bc8d52e6f65---------------------------------------
+    Power BI — a field parameter.md                         direct_file        high                         https://michalmolka.medium.com/power-bi-show-and-hide-measures-on-slicer-3b9609434466
+    Power BI — deployment pipelines — auto-binding and deployment rules.md direct_file        high                         https://michalmolka.medium.com/power-bi-deplyment-pipelines-86d20c10e346
+    Power BI — Incremental refresh.md                       direct_file        high                         https://docs.microsoft.com/en-us/power-bi/admin/service-premium-incremental-refresh
+    Power BI — Power Query — part 1 — data cleansing.md     direct_file        high                         https://michalmolka.medium.com/power-bi-power-query-part-2-create-star-schema-ed730095666
+    Power BI — show and hide measures on slicer and visual.md direct_file        high                         https://michalmolka.medium.com/power-bi-a-field-parameter-afd2f24c2dcb
+    Power BI — TMDL — Tabular Model Definition Language.md  direct_file        high                         https://e***y.sharepoint.com/personal/m***e_onmicrosoft_com/Documents/iowa_csv/part-00000-e1a14094-35f0-448c-b973-4bcf22858e25-c000.csv
+    Power BI, M365 Copilot and the importance of DAX UDFs.md direct_file        high                         https://learn.microsoft.com/en-us/dax/best-practices/dax-user-defined-functions
+    Power BIPower Query relative folder path for source files.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-data-sources?tabs=new-experience
+    Power Query Functions Building Flexible and Reusable Data Cleaning Routines.md github             low                          https://github.com/EMGuyant/power-query-functions/tree/master?source=post_page-----1eab3c04f8c1---------------------------------------
+    Power Query Functions Building Flexible and Reusable Data Cleaning Routines.md direct_file        high                         https://linktr.ee/powerbi.masterclass
+    RANK Function in Power BI Explained.md                  direct_file        high                         https://learn.microsoft.com/en-us/dax/rank-function-dax
+    Real-Time Intelligence in Microsoft Fabric An End-to-End KQL and Power BI Experience.md direct_file        high                         https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
+    Replace Measures by Calculation Groups in Power BI.md   direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/calculation-groups
+    Replace Measures by Calculation Groups in Power BI.md   direct_file        high                         https://learn.microsoft.com/en-us/analysis-services/tabular-models/calculation-groups?view=asallproducts-allversions
+    Replace Measures by Calculation Groups in Power BI.md   direct_file        high                         https://tomaskutac.medium.com/subscribe?source=post_page-----45b05aec1c6c---------------------------------------
+    Replace Measures by Calculation Groups in Power BI.md   direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----45b05aec1c6c---------------------------------------
+    Rolling Averages and Rolling Sums in Power BI.md        direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Safeguarding Subtotals in Power BI Strategies for Filtered Data Visualizations.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----20c6e35b4991---------------------------------------
+    SAMEPERIODLASTYEAR in Power BI.md                       direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Share Selected Power BI Report Pages with Specific Users.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/service-dashboard-create
+    Share Selected Power BI Report Pages with Specific Users.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps
+    Share Selected Power BI Report Pages with Specific Users.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-request-access
+    Show me the problem - a diagnostic toggle for your Power BI reports.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/30fe03142f3c33d17797661d8046f13d.png
+    Show me the problem - a diagnostic toggle for your Power BI reports.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/787e27e36aecb59a00dd1189c3a03fa1.png
+    Show me the problem - a diagnostic toggle for your Power BI reports.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/dfc30d848fc72cc0f8ae5701b800abbc.png
+    Show me the problem - a diagnostic toggle for your Power BI reports.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d5b00e689f6778c3426f4819556d4928.png
+    Show me the problem - a diagnostic toggle for your Power BI reports.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/3bba14cba4e6cb517bbeb5346d956bdf.png
+    Show me the problem - a diagnostic toggle for your Power BI reports.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/20494b44762a81fc4abc2b38a86d34b7.png
+    Show me the problem - a diagnostic toggle for your Power BI reports.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/5ee77cf7a5056fd7e3e2332941d1d0c4.png
+    Show me the problem - a diagnostic toggle for your Power BI reports.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e393eea07f4f77c8019073857ee32aef.png
+    Show me the problem - a diagnostic toggle for your Power BI reports.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c2ac60922eabc5bde66552f8fb653afb.png
+    Show me the problem - a diagnostic toggle for your Power BI reports.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/157942bf9b94bc862b708db5d41e883b.png
+    Show transaction details on the matrix visual in Power BI.md direct_file        high                         https://www.sqlbi.com/articles/show-transaction-details-on-the-matrix-visual-in-power-bi/
+    Show transaction details on the matrix visual in Power BI.md direct_file        high                         https://www.sqlbi.com/articles/blank-row-in-dax/
+    Show Values in Rows in Power BI.md                      direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Sideways recursion in DAX calculation groups.md         direct_file        high                         https://www.sqlbi.com/articles/sideways-recursion-in-dax-calculation-groups/
+    Sideways recursion in DAX calculation groups.md         direct_file        high                         https://www.sqlbi.com/articles/understanding-the-application-of-calculation-items/
+    Smart Excel Checklist • My Online Training Hub.md       direct_file        high                         https://www.myonlinetraininghub.com/smart-excel-checklist
+    Smart Excel Checklist • My Online Training Hub.md       direct_file        high                         https://www.myonlinetraininghub.com/excel-expert-upgrade
+    Smarter Power BI Dashboards Show Charts Only When Needed!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/f8fa8a1c24f7de55967e5a6baaf683c0.png
+    Smarter Power BI Dashboards Show Charts Only When Needed!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/55b3dcd43c26a843585a2b147995006a.png
+    Smarter Power BI Dashboards Show Charts Only When Needed!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/a6161dc51398098ade9855b8c0377977.png
+    Smarter Power BI Dashboards Show Charts Only When Needed!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/5d8af5e1a39938b68e3d31dfb41074e9.png
+    Smarter Power BI Dashboards Show Charts Only When Needed!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/6701ccb861665ea4cd58de8f5f955b1b.png
+    Smarter Power BI Dashboards Show Charts Only When Needed!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e5b24af700c58cf0aaaac96ef5d449c4.png
+    Smarter Power BI Dashboards Show Charts Only When Needed!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/be9f8806b3edd60023e6f27e9b83fae1.png
+    Smarter Power BI Dashboards Show Charts Only When Needed!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/2649dd9148ea79a18c90d47fe649fd89.png
+    Smarter Power BI Dashboards Show Charts Only When Needed!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/531c63e5c2145d17829d2726f1cc42c1.png
+    Smarter Power BI Dashboards Show Charts Only When Needed!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/05e6d445ef44bc0d1228eb42701903ad.png
+    Smarter Python Visuals in Power BI 5 UX Tips for Better Insights.md google_drive       medium                       https://drive.google.com/file/d/16v3vW3L0BCxNV_ZFGeY25kR-UDaJNfqJ/view?usp=sharing
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b45c3c9cfda25cbd7cd7e1dc1c25c750.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c032477b14c87082493130dd44d858cc.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c3f6b8d333056f684ea2e1f19028703b.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/a0a6e9b2787d9ef30e7b74c8292bad8f.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/3519b599cf02d85840f59243804a6830.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/75499b194d490e9c7f75c17eff3e2e21.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/482cab114e348fcd19cf1c975b7b1d8e.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/63e811e62bbcc5f37d5becb3a666bd28.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/8f3b82b1163be653371a0a566438fdfa.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b021b40c53f306d9d4b0f4076105a198.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/f2a104ca255124a2110cb4e4fb83478a.png
+    Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/657af90a35a0126fa97daeb448f806af.png
+    Sort of Dual-Measure Native Horizontal Bar Chart in Power BI.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----ce549387c86a---------------------------------------
+    Start Your Axis at Zero or Not A Power BI Trick to the Rescue.md direct_file        high                         https://medium.com/@mossakowski.mateusz/subscribe?source=post_page-----3e3310fcb857---------------------------------------
+    Step Up Your Power BI Game With SVGs 🔥.md               other_drive        low                          https://drive.google.com/drive/folders/1pMOGyMJb0ltCQ_IyVg6l-ydTmlcTVbDO?usp=sharing
+    Steps to Write DAX Measure in Power BI.md               direct_file        high                         https://learn.microsoft.com/en-us/dax/measure-statement-dax
+    Technical Examples Of Power BI.md                       direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-tutorial-create-measures?source=post_page-----3c669ac2f8df---------------------------------------
+    Temporal Alignment in Power BI How to Align Different Time Periods for Comparative Analysis.md direct_file        high                         https://linktr.ee/powerbi.masterclass?source=post_page-----7c22025a3993---------------------------------------
+    The Easy Guide To Excel Automation With Office Scripts.md direct_file        high                         https://learn.microsoft.com/en-us/office/dev/scripts/overview/excel
+    The Future of Power BI Reporting Is Here — Rayfin Data App with TypeScript + Semantic Model.md github             low                          https://github.com/microsoft/rayfin
+    The Future of Power BI Reporting Is Here — Rayfin Data App with TypeScript + Semantic Model.md direct_file        high                         https://learn.microsoft.com/en-us/fabric/apps/overview
+    The Future of Power BI Reporting Is Here — Rayfin Data App with TypeScript + Semantic Model.md github             low                          https://github.com/features/copilot
+    The Future of Power BI Reporting Is Here — Rayfin Data App with TypeScript + Semantic Model.md direct_file        high                         https://ideas.fabric.microsoft.com
+    The Monthly KPI Tracker You're Missing in Power BI.md   direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/ef5f52bce2b621fa58b8574024dd8f40.png
+    The Monthly KPI Tracker You're Missing in Power BI.md   direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/ba5870181dc201dc3e936128d0b695ef.png
+    The Monthly KPI Tracker You're Missing in Power BI.md   direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/97b05f4f42d72b5b59be468e4ad26e9f.png
+    The Monthly KPI Tracker You're Missing in Power BI.md   direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/248f1ea133ca764160ca7a7e06e1467f.png
+    The Monthly KPI Tracker You're Missing in Power BI.md   direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/f503102c0a5c72877f9435ff28d093ff.png
+    The Monthly KPI Tracker You're Missing in Power BI.md   direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/a8a0ca5d72fd98a5dc8cfd3c154fef06.png
+    The Monthly KPI Tracker You're Missing in Power BI.md   direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/727cb3edd9a9731e9ee1a383c33b84e5.png
+    The Monthly KPI Tracker You're Missing in Power BI.md   direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/581c8dff07dac5a342581cd37b629ec6.png
+    The Monthly KPI Tracker You're Missing in Power BI.md   direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/7cb87929df69b94ac96279b38f408da5.png
+    The New Card Visual in Power BI.md                      direct_file        high                         https://databear.com/wp-content/uploads/2025/11/Output0012024-01-1015-31-16-Ezgif.Com-Video-To-Gif-Converter.mp4?_=1
+    The New Card Visual in Power BI.md                      direct_file        high                         https://databear.com/wp-content/uploads/2025/11/Output0012024-01-1015-31-16-Ezgif.Com-Video-To-Gif-Converter.mp4
+    The New Card Visual in Power BI.md                      direct_file        high                         https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-new-card?tabs=On-the-ribbon
+    The New Power BI Authoring Skills change everything.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/9a8610a66792ac4388e5459340b73b7e.png
+    The New Power BI Authoring Skills change everything.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e3e8ce1629507be94e68e1a3a1b4c5ce.png
+    The New Power BI Authoring Skills change everything.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/8ca33913b2f3b689cf1aa1900d482d6b.png
+    The New Power BI Authoring Skills change everything.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/f760d319309d55c64a3a121f327b1fa9.png
+    The New Power BI Authoring Skills change everything.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/f077a2d42770f1a397d4a0b12054cdbf.png
+    The New Power BI Authoring Skills change everything.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d43f9b8d6c34a12a969b2a251e8b50f1.png
+    The New Power BI Authoring Skills change everything.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/252c6bce056dc8307c95be501f0678e9.png
+    The New Power BI Authoring Skills change everything.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c46fe71f43d56955641afed8a1e93b32.png
+    The New Power BI Authoring Skills change everything.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/802d2256c2c9824611d63bc081d0b083.png
+    The New Power BI Authoring Skills change everything.md  direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/5e8c0c24af03524c1a88fdd2df791fa9.png
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-overview
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/service-export-to-pbix
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/devops/develop/git/what-is-git
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://powerbi.microsoft.com/en-us/blog/deep-dive-into-power-bi-desktop-developer-mode-preview/
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/fabric/enterprise/powerbi/service-premium-connect-tools
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-report
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/analysis-services/tmdl/tmdl-overview
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-dataset
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/analysis-services/tmsl/tabular-model-scripting-language-tmsl-reference
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/fabric/enterprise/powerbi/service-security-sensitivity-label-overview
+    The PBIP format in simple terms why metadata is so important.md github             low                          https://github.com/data-goblin/power-bi-agentic-development
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/analysis-services/tmdl/tmdl-overview?view=sql-analysis-services-2025
+    The PBIP format in simple terms why metadata is so important.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-git
+    The Power BI Chart That Breaks All the Rules (And Why You’ll Love It).md github             low                          https://github.com/Ankan2508/All-in-One-Frankenstein-Chart
+    The Power of Action Dots Turning Numbers into Signals.md github             low                          https://github.com/Ankan2508/Action-Dots-in-Action
+    The Ultimate Time-Saver Style Presets in Power BI.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/5ff6153c2475905e4229149bb7534b75.png
+    The Ultimate Time-Saver Style Presets in Power BI.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/78b1a9ac334cb70d766d36c666d379a7.png
+    The Ultimate Time-Saver Style Presets in Power BI.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/5db53f80f6cf65a0151793faf68ebb75.png
+    The Ultimate Time-Saver Style Presets in Power BI.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/a9ca96ac2d49a7cc1afe612fd2c84a96.png
+    The Ultimate Time-Saver Style Presets in Power BI.md    github             low                          https://raw.githubusercontent.com/microsoft/powerbi-desktop-samples/refs/heads/main/Report%20Theme%20JSON%20Schema/reportThemeSchema-2.140.json
+    The Ultimate Time-Saver Style Presets in Power BI.md    direct_file        high                         https://learn.microsoft.com/power-bi/create-reports/desktop-report-themes
+    The Ultimate Time-Saver Style Presets in Power BI.md    github             low                          https://github.com/microsoft/powerbi-desktop-samples/tree/main/Report%20Theme%20JSON%20Schema
+    The Ultimate Time-Saver Style Presets in Power BI.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/8c040797b2b08b6d1679d578507e1d9f.png
+    The Ultimate Time-Saver Style Presets in Power BI.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/8216af418cd634fc88aaafda0937a2b6.png
+    The Ultimate Time-Saver Style Presets in Power BI.md    direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/8c4a3e3bc44e5a1f1c15a4b3355e08fb.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/a2e9820c4bdd432b017639927cd7a970.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/f66908186cdabf9616b1ac846ad0ff31.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/436c032f3d45db17ded99ceb8098b9ba.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/8fdf529aae273e5bb496fd0f5dd57f99.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/90ccb69a497413bcd8ad1096443f1835.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/9d68420c12a695c30dc5b10e599dadae.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/bf072c2f351018f4eecf35a6ffcc5b88.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/442e2f4d7e3f4810bc46f29a6b47b903.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/94143ca58c7f76bf2b79f670b02836f2.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b1b2cca770247389530645643d159480.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d287aff6ec0800a1572446501583a547.png
+    The visual that shows your 8020 instantly - the ABC Analysis.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b050cea8d0102e30d7da10cacc4ca81b.png
+    This DAX Measure Sends Emails Directly from Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/21c40372b9097f7b3286651fa07c9670.png
+    This DAX Measure Sends Emails Directly from Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/17b5c6b0b271b5ede9edb263c78e1d6f.png
+    This DAX Measure Sends Emails Directly from Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d3320c676a7ba4252d9930c7fa81a098.png
+    This DAX Measure Sends Emails Directly from Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/1b72cb69974d23a65bd8070d290043ec.png
+    This DAX Measure Sends Emails Directly from Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/8da9125f4cbcf64aec4be8752b130553.png
+    This DAX Measure Sends Emails Directly from Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/9037eb32c22a6514d256218f034e16b3.png
+    This DAX Measure Sends Emails Directly from Power BI.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/8b493813d04206b01456ccdd497570ec.png
+    TMDL View on the web Edit semantic models as code in your browser (Preview).md direct_file        high                         https://learn.microsoft.com/analysis-services/tmdl/tmdl-overview?view=sql-analysis-services-2025
+    TMDL View on the web Edit semantic models as code in your browser (Preview).md direct_file        high                         https://learn.microsoft.com/power-bi/transform-model/service-semantic-model-version-history
+    Toggle Measures in Power BI.md                          direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Top 5 DAX Functions Every Power BI Analyst Should Know.md direct_file        high                         https://learn.microsoft.com/en-us/dax/filter-function-dax
+    Top 5 DAX Functions Every Power BI Analyst Should Know.md direct_file        high                         https://learn.microsoft.com/en-us/dax/all-function-dax
+    Top 5 DAX Functions Every Power BI Analyst Should Know.md direct_file        high                         https://learn.microsoft.com/en-us/dax/datesytd-function-dax
+    Top 5 DAX Functions Every Power BI Analyst Should Know.md direct_file        high                         https://learn.microsoft.com/en-us/dax/if-function-dax
+    Top 5 ways to show ACTIVE FILTERS in Power BI.md        github             low                          https://github.com/PowerBIPark/PowerBITutorials🔥
+    Top 5 ways to show ACTIVE FILTERS in Power BI.md        github             low                          https://github.com/PowerBIPark/PowerBITutorials
+    TOPN in Power BI.md                                     direct_file        high                         https://linktr.ee/powerbi.masterclass
+    TOTALYTD() VS DATESYTD() in Power BI.md                 direct_file        high                         https://learn.microsoft.com/en-us/dax/
+    Tracking Changes Capture and Restore Previous SharePoint Data Dynamically using PowerAutomate.md direct_file        high                         https://mvp.microsoft.com/en-US/MVP/profile/7f3eb151-87ba-48bd-be5b-80a63e284416
+    Transform Your Power BI Report into an Interactive Playbook.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----80eb72b840bf---------------------------------------
+    Transforming Power BI Tables 6 Expert Tips for Smarter Data Visualization.md other_drive        low                          https://drive.google.com/drive/folders/1CfSJ4ci2DcEooq0pK2Fgo-00XWr8IMaH?usp=sharing
+    Trends with Power BI's Smart Narrative Visual.md        direct_file        high                         https://powerbi.microsoft.com/it-ch/blog/smart-narrative-preview/
+    Two for the price of one bar chart and table in one Power BI visual.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----01550076f8fb---------------------------------------
+    Understanding Calculation Group Precedence.md           direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-group-precedence/
+    Understanding Calculation Group Precedence.md           direct_file        high                         https://www.sqlbi.com/articles/introducing-calculation-groups/
+    Understanding Calculation Group Precedence.md           direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-groups/
+    Understanding Calculation Group Precedence.md           direct_file        high                         https://www.sqlbi.com/articles/understanding-the-application-of-calculation-items/
+    Understanding Calculation Group Precedence.md           direct_file        high                         https://www.sqlbi.com/articles/controlling-format-strings-in-calculation-groups/
+    Understanding Calculation Group Precedence.md           direct_file        high                         https://www.sqlbi.com/articles/avoiding-pitfalls-in-calculation-groups-precedence/
+    Understanding Calculation Group Precedence.md           direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-selectively-replace-measures-in-dax-expressions/
+    Understanding Calculation Group Precedence.md           direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-switch-between-dates/
+    Understanding Calculation Group Precedence.md           direct_file        high                         https://www.sqlbi.com/articles/understanding-the-interactions-between-composite-models-and-calculation-groups/
+    Understanding Calculation Groups.md                     direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-groups/
+    Understanding Calculation Groups.md                     direct_file        high                         https://www.sqlbi.com/articles/understanding-the-application-of-calculation-items/
+    Understanding Calculation Groups.md                     direct_file        high                         https://www.sqlbi.com/articles/introducing-calculation-groups/
+    Understanding Calculation Groups.md                     direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-group-precedence/
+    Understanding Calculation Groups.md                     direct_file        high                         https://www.sqlbi.com/articles/controlling-format-strings-in-calculation-groups/
+    Understanding Calculation Groups.md                     direct_file        high                         https://www.sqlbi.com/articles/avoiding-pitfalls-in-calculation-groups-precedence/
+    Understanding Calculation Groups.md                     direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-selectively-replace-measures-in-dax-expressions/
+    Understanding Calculation Groups.md                     direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-switch-between-dates/
+    Understanding Calculation Groups.md                     direct_file        high                         https://www.sqlbi.com/articles/understanding-the-interactions-between-composite-models-and-calculation-groups/
+    Understanding DATEADD parameters with calendar-based time intelligence.md direct_file        high                         https://www.sqlbi.com/articles/understanding-dateadd-parameters-with-calendar-based-time-intelligence/
+    Understanding DATEADD parameters with calendar-based time intelligence.md direct_file        high                         https://www.sqlbi.com/articles/introducing-calendar-based-time-intelligence-in-dax/
+    Understanding Joins and Fuzzy Merge Power BI.md         direct_file        high                         https://learn.microsoft.com/en-us/power-query/merge-queries-overview
+    Understanding parameter types in DAX user-defined functions (UDF).md direct_file        high                         https://www.sqlbi.com/articles/understanding-parameter-types-in-dax-user-defined-functions-udf/
+    Understanding parameter types in DAX user-defined functions (UDF).md direct_file        high                         https://www.sqlbi.com/articles/introducing-user-defined-functions-in-dax/
+    Understanding parameter types in DAX user-defined functions (UDF).md direct_file        high                         https://docs.sqlbi.com/dax-style/dax-naming-conventions#parameters
+    Understanding parameter types in DAX user-defined functions (UDF).md direct_file        high                         https://www.daxpatterns.com/static-segmentation/
+    Understanding parameter types in DAX user-defined functions (UDF).md direct_file        high                         https://www.daxpatterns.com/dynamic-segmentation/
+    Understanding Power BI DAX Basic Commands and Their Industry Applications.md direct_file        high                         https://learn.microsoft.com/en-us/dax/
+    Understanding Power BI DAX Basic Commands and Their Industry Applications.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-quickstart-learn-dax-basics
+    Understanding the Application of Calculation Items.md   direct_file        high                         https://www.sqlbi.com/articles/understanding-the-application-of-calculation-items/
+    Understanding the Application of Calculation Items.md   direct_file        high                         https://www.sqlbi.com/calculation-groups/
+    Understanding the Application of Calculation Items.md   direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-group-precedence/
+    Understanding the Application of Calculation Items.md   direct_file        high                         https://www.sqlbi.com/articles/introducing-calculation-groups/
+    Understanding the Application of Calculation Items.md   direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-groups/
+    Understanding the Application of Calculation Items.md   direct_file        high                         https://www.sqlbi.com/articles/controlling-format-strings-in-calculation-groups/
+    Understanding the Application of Calculation Items.md   direct_file        high                         https://www.sqlbi.com/articles/avoiding-pitfalls-in-calculation-groups-precedence/
+    Understanding the Application of Calculation Items.md   direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-selectively-replace-measures-in-dax-expressions/
+    Understanding the Application of Calculation Items.md   direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-switch-between-dates/
+    Understanding the Application of Calculation Items.md   direct_file        high                         https://www.sqlbi.com/articles/understanding-the-interactions-between-composite-models-and-calculation-groups/
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://www.sqlbi.com/articles/understanding-the-interactions-between-composite-models-and-calculation-groups/
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://www.sqlbi.com/articles/introducing-wholesale-and-retail-execution-in-composite-models
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-discourage-directquery-connections-to-dataset
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://www.sqlbi.com/articles/introducing-calculation-groups/
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-groups/
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://www.sqlbi.com/articles/understanding-the-application-of-calculation-items/
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-group-precedence/
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://www.sqlbi.com/articles/controlling-format-strings-in-calculation-groups/
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://www.sqlbi.com/articles/avoiding-pitfalls-in-calculation-groups-precedence/
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-selectively-replace-measures-in-dax-expressions/
+    Understanding the interactions between composite models and calculation groups.md direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-switch-between-dates/
+    UNION-based alternative to SWITCH in Power BI DAX.md    direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----0c1658f137cd---------------------------------------
+    Unlocking the Power of Star Schema in Power BI.md       direct_file        high                         https://docs.microsoft.com/power-bi/guidance/star-schema
+    Use Calculation Groups to Eliminate Redundant Measures in Power BI.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----e5505cb74f24---------------------------------------
+    Use Small Multiples to Replace Cluttered Line Charts in Power BI.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----460d4c5d1233---------------------------------------
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/bab27450db7ef40b1191e924a555a69b.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/167aeb4ff2850afb2fb3a1412875e0bd.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/0508a0681c9565a0bbc9db6b38f306e4.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/78557850b0ee596962c20651c16a87b4.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/d02799341518ca5069aa81d97d6ae816.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/0ddad43a55347b59cadd5323cd561f9a.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/2ae87d919a63315bf58ebe362acbde6b.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/6616e6486402f90dcbcc863cb95aa7f9.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c96bb05239ab12101136c9bed0540cc8.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/360bddd0b5acf2e811f34c77e470314c.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/63c8f813b957a914e278833f8e596012.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/1500ae04f55370a94c968857f8503b3e.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c10825aa8b99b58bd9bb8dd4f2d38d12.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/83d8be921f11a4796bb723b2d49a6414.png
+    User Defined Functions (UDFs) in Power BI - Three practical ways to put it to use.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b4866ac327fb0930fe3aef393866e9e6.png
+    Using calculation groups to selectively replace measures in DAX expressions.md direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-selectively-replace-measures-in-dax-expressions/
+    Using calculation groups to selectively replace measures in DAX expressions.md direct_file        high                         https://www.sqlbi.com/calculation-groups/
+    Using calculation groups to selectively replace measures in DAX expressions.md direct_file        high                         https://www.sqlbi.com/articles/introducing-calculation-groups/
+    Using calculation groups to selectively replace measures in DAX expressions.md direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-groups/
+    Using calculation groups to selectively replace measures in DAX expressions.md direct_file        high                         https://www.sqlbi.com/articles/understanding-the-application-of-calculation-items/
+    Using calculation groups to selectively replace measures in DAX expressions.md direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-group-precedence/
+    Using calculation groups to selectively replace measures in DAX expressions.md direct_file        high                         https://www.sqlbi.com/articles/controlling-format-strings-in-calculation-groups/
+    Using calculation groups to selectively replace measures in DAX expressions.md direct_file        high                         https://www.sqlbi.com/articles/avoiding-pitfalls-in-calculation-groups-precedence/
+    Using calculation groups to selectively replace measures in DAX expressions.md direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-switch-between-dates/
+    Using calculation groups to selectively replace measures in DAX expressions.md direct_file        high                         https://www.sqlbi.com/articles/understanding-the-interactions-between-composite-models-and-calculation-groups/
+    Using calculation groups to switch between dates.md     direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-switch-between-dates/
+    Using calculation groups to switch between dates.md     direct_file        high                         https://www.sqlbi.com/calculation-groups/#syntax
+    Using calculation groups to switch between dates.md     direct_file        high                         https://www.sqlbi.com/articles/introducing-calculation-groups/
+    Using calculation groups to switch between dates.md     direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-groups/
+    Using calculation groups to switch between dates.md     direct_file        high                         https://www.sqlbi.com/articles/understanding-the-application-of-calculation-items/
+    Using calculation groups to switch between dates.md     direct_file        high                         https://www.sqlbi.com/articles/understanding-calculation-group-precedence/
+    Using calculation groups to switch between dates.md     direct_file        high                         https://www.sqlbi.com/articles/controlling-format-strings-in-calculation-groups/
+    Using calculation groups to switch between dates.md     direct_file        high                         https://www.sqlbi.com/articles/avoiding-pitfalls-in-calculation-groups-precedence/
+    Using calculation groups to switch between dates.md     direct_file        high                         https://www.sqlbi.com/articles/using-calculation-groups-to-selectively-replace-measures-in-dax-expressions/
+    Using calculation groups to switch between dates.md     direct_file        high                         https://www.sqlbi.com/articles/understanding-the-interactions-between-composite-models-and-calculation-groups/
+    Using Curly Braces in Excel Formulas to Unlock Hidden Formula Power • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/using-curly-braces-in-excel-formulas-to-unlock-hidden-formula-power
+    Using Curly Braces in Excel Formulas to Unlock Hidden Formula Power • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/excel-date-function
+    Using Curly Braces in Excel Formulas to Unlock Hidden Formula Power • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/excel-functions/excel-filter-function
+    Using Curly Braces in Excel Formulas to Unlock Hidden Formula Power • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/excel-choose-function
+    Using Curly Braces in Excel Formulas to Unlock Hidden Formula Power • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/excel-vstack-and-hstack-functions
+    Using Curly Braces in Excel Formulas to Unlock Hidden Formula Power • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/excel-countif-and-countifs-formulas-explained
+    Using Curly Braces in Excel Formulas to Unlock Hidden Formula Power • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/excel-xlookup-function
+    Using Curly Braces in Excel Formulas to Unlock Hidden Formula Power • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/textsplit-textbefore-and-textafter-functions
+    Using Curly Braces in Excel Formulas to Unlock Hidden Formula Power • My Online Training Hub.md direct_file        high                         https://www.myonlinetraininghub.com/advanced-excel-formulas-course
+    Using Detail Rows Expressions to drill to a different fact table in Power BI.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/aggregations-advanced
+    Using Detail Rows Expressions to drill to a different fact table in Power BI.md direct_file        high                         https://www.sqlbi.com/articles/controlling-drillthrough-in-excel-pivottables-connected-to-power-bi-or-analysis-services/
+    Using RANK instead of RANKX in DAX.md                   direct_file        high                         https://www.sqlbi.com/articles/using-rank-instead-of-rankx-in-dax/
+    Using RANK instead of RANKX in DAX.md                   direct_file        high                         https://www.sqlbi.com/articles/introducing-the-rank-window-function-in-dax/
+    Using RANK instead of RANKX in DAX.md                   direct_file        high                         https://www.sqlbi.com/articles/introducing-rankx-in-dax/
+    Using RANK instead of RANKX in DAX.md                   direct_file        high                         https://www.sqlbi.com/articles/rankx-on-multiple-columns-with-dax-and-power-bi/
+    Using RANK instead of RANKX in DAX.md                   direct_file        high                         https://www.sqlbi.com/blog/marco/2014/07/16/use-of-rankx-with-decimal-numbers-in-dax/
+    Using RANK instead of RANKX in DAX.md                   direct_file        high                         https://www.sqlbi.com/articles/understanding-apply-semantics-for-window-functions-in-dax/
+    Using REMOVEFILTERS in DAX user-defined functions 1.md  direct_file        high                         https://www.sqlbi.com/articles/using-removefilters-in-dax-user-defined-functions/?utm_source=powerbiweekly&utm_medium=email&utm_campaign=newsletter
+    Using REMOVEFILTERS in DAX user-defined functions 1.md  direct_file        high                         https://www.sqlbi.com/articles/understanding-dateadd-parameters-with-calendar-based-time-intelligence/
+    Using REMOVEFILTERS in DAX user-defined functions 1.md  direct_file        high                         https://cdn.sqlbi.com/wp-content/uploads/image1-135.png
+    Using REMOVEFILTERS in DAX user-defined functions 1.md  direct_file        high                         https://www.sqlbi.com/learn/understanding-visual-calculations-in-dax/
+    Using REMOVEFILTERS in DAX user-defined functions 1.md  direct_file        high                         https://www.sqlbi.com/articles/introducing-calendar-based-time-intelligence-in-dax/
+    Using REMOVEFILTERS in DAX user-defined functions 1.md  direct_file        high                         https://cdn.sqlbi.com/wp-content/uploads/image2-131.png
+    Using REMOVEFILTERS in DAX user-defined functions 1.md  direct_file        high                         https://cdn.sqlbi.com/wp-content/uploads/image3-116.png
+    Using REMOVEFILTERS in DAX user-defined functions.md    direct_file        high                         https://www.sqlbi.com/articles/using-removefilters-in-dax-user-defined-functions/
+    Using REMOVEFILTERS in DAX user-defined functions.md    direct_file        high                         https://www.sqlbi.com/articles/understanding-dateadd-parameters-with-calendar-based-time-intelligence/
+    Using REMOVEFILTERS in DAX user-defined functions.md    direct_file        high                         https://www.sqlbi.com/learn/understanding-visual-calculations-in-dax/
+    Using REMOVEFILTERS in DAX user-defined functions.md    direct_file        high                         https://www.sqlbi.com/articles/introducing-calendar-based-time-intelligence-in-dax/
+    Using the New Text Slicer Visual in Power BI.md         direct_file        high                         https://appsource.microsoft.com/en-us/product/power-bi-visuals/wa104381309?tab=overview
+    Using VALUES in SUMMARIZE.md                            direct_file        high                         https://www.sqlbi.com/articles/using-values-in-summarize/
+    Using VALUES in SUMMARIZE.md                            direct_file        high                         https://www.sqlbi.com/articles/choosing-between-distinct-and-values-in-dax/
+    Using VALUES in SUMMARIZE.md                            direct_file        high                         https://www.sqlbi.com/articles/using-values-in-iterators/
+    Using VALUES in SUMMARIZE.md                            direct_file        high                         https://www.sqlbi.com/articles/blank-row-in-dax/
+    Using visual calculations to highlight an entire row.md direct_file        high                         https://www.sqlbi.com/articles/using-visual-calculations-to-highlight-an-entire-row/
+    Using visual calculations to highlight an entire row.md direct_file        high                         https://www.sqlbi.com/tv/how-to-navigate-the-lattice-of-visual-calculations/
+    Using visual calculations to highlight an entire row.md direct_file        high                         https://www.sqlbi.com/p/plus/
+    Virtual tables in Power BI.md                           direct_file        high                         https://learn.microsoft.com/en-us/dax/selectedvalue-function
+    Visual Level Calculations in Power BI.md                direct_file        high                         https://learn.microsoft.com/en-us/dax/
+    VS Code and MCP servers - 030 Agentic Thinking.md       direct_file        high                         https://github.com/microsoft/powerbi-modeling-mcphttps://learn.microsoft.com/en-us/power-bi/developer/mcp/mcp-servers-overviewFollow
+    VS Code and MCP servers - 030 Agentic Thinking.md       github             low                          https://github.com/microsoft/powerbi-modeling-mcp
+    VS Code and MCP servers - 030 Agentic Thinking.md       direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/mcp/mcp-servers-overview
+    Waterfall Chart in Power BI.md                          direct_file        high                         https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-waterfall-charts?tabs=powerbi-desktop
+    What are Power BI Template Files.md                     direct_file        high                         https://linktr.ee/powerbi.masterclass
+    What If Your Power BI Dashboard Was an AI Agent 🤯.md    google_drive       medium                       https://drive.google.com/file/d/1NQg3Ez_4SYn23A0_zYkQCtkyTX7o7HWd/view?usp=sharing
+    What If Your Power BI Dashboard Was an AI Agent 🤯.md    direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----fdf2978c1bff---------------------------------------
+    What is a Power BI Gateway.md                           direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----d72f9cd323f6---------------------------------------
+    When Every Data Point matters Building a matrix based Visual.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/07ecce612e1b55d5083a9df0286c62af.png
+    When Every Data Point matters Building a matrix based Visual.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/62f2b91613cb0bbe63f4a48b54baeb1c.png
+    When Every Data Point matters Building a matrix based Visual.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/4326bef0728123334bd5689c3d18a3e9.png
+    When Every Data Point matters Building a matrix based Visual.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/8549260162e67e2a090e8ce1c4eb24f0.png
+    When Every Data Point matters Building a matrix based Visual.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/14b93473f99ac28d370c2677b4420956.png
+    When Every Data Point matters Building a matrix based Visual.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/028a750bc24061165f7c0ca70a3b5df7.png
+    When Every Data Point matters Building a matrix based Visual.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/abf9d1665c0aafd6c6f491fb55713731.png
+    When Every Data Point matters Building a matrix based Visual.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/033dba1f7b9a0a54ab549a483750c191.png
+    When Every Data Point matters Building a matrix based Visual.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/bea6af35fcc90f6738273c552f0402fc.png
+    When Power Query lies to you the 1,000-row profiling gap.md direct_file        high                         https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/pl-300
+    When Power Query lies to you the 1,000-row profiling gap.md direct_file        high                         https://learn.microsoft.com/en-us/power-query/data-profiling-tools
+    When Power Query lies to you the 1,000-row profiling gap.md direct_file        high                         https://learn.microsoft.com/en-us/powerquery-m/table-replaceerrorvalues
+    When Power Query lies to you the 1,000-row profiling gap.md direct_file        high                         https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate/?practice-assessment-type=certification#certification-prepare-for-the-exam
+    When Power Query lies to you the 1,000-row profiling gap.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----a994bcf2079e---------------------------------------
+    When to Transform Data for Power BI.md                  direct_file        high                         https://linktr.ee/powerbi.masterclass
+    Why do we have four levels of security in Power BI.md   direct_file        high                         https://docs.microsoft.com/en-us/power-query/power-query-folding
+    Why do we have four levels of security in Power BI.md   direct_file        high                         https://docs.microsoft.com/en-us/power-bi/admin/desktop-privacy-levels
+    Why do we have four levels of security in Power BI.md   direct_file        high                         https://docs.microsoft.com/en-us/power-bi/admin/service-security-sensitivity-label-overview
+    Why do we have four levels of security in Power BI.md   direct_file        high                         https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-create-the-new-workspaces
+    Why do we have four levels of security in Power BI.md   direct_file        high                         https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-roles-new-workspaces
+    Why do we have four levels of security in Power BI.md   direct_file        high                         https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps#publish-your-app
+    Write DAX Code Once, Use it Everywhere 1.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/2b99e8683f9725861e2ef7591571e37e.png
+    Write DAX Code Once, Use it Everywhere 1.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/becf77bce80cc6e2fc450c0ffc52cc17.png
+    Write DAX Code Once, Use it Everywhere 1.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/354795566c5404c6a639afdf16110ca8.png
+    Write DAX Code Once, Use it Everywhere 1.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/9b44f6e0127022ccd4b421b399b2edbf.png
+    Write DAX Code Once, Use it Everywhere 1.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/81d62dab352359cad9c9e2f560869603.png
+    Write DAX Code Once, Use it Everywhere 1.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/7d218a5bf2e64b2d7fff944f924b52ff.png
+    Write DAX Code Once, Use it Everywhere 1.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/a632ef4b1edce0df8bcb535875bbbd01.png
+    Write DAX Code Once, Use it Everywhere 1.md             direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e285fecfca2b7475360b07a4dbc3290b.png
+    Writing good descriptions for semantic model columns and measures.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-composite-models
+    Writing good descriptions for semantic model columns and measures.md direct_file        high                         https://learn.microsoft.com/en-us/fabric/data-engineering/how-to-use-notebook
+    Writing good descriptions for semantic model columns and measures.md direct_file        high                         https://learn.microsoft.com/en-us/analysis-services/tmdl/tmdl-overview
+    Writing good descriptions for semantic model columns and measures.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-prepare-data-ai-instructions
+    Writing good descriptions for semantic model columns and measures.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-overview
+    Writing good descriptions for semantic model columns and measures.md direct_file        high                         https://learn.microsoft.com/en-us/analysis-services/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
+    Writing good descriptions for semantic model columns and measures.md direct_file        high                         https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-prepare-data-ai-settings
+    Writing good descriptions for semantic model columns and measures.md direct_file        high                         https://learn.microsoft.com/en-us/fabric/iq/ontology/overview
+    Writing good descriptions for semantic model columns and measures.md direct_file        high                         https://learn.microsoft.com/power-bi/transform-model/desktop-measure-copilot-descriptions
+    Writing good descriptions for semantic model columns and measures.md direct_file        high                         https://www.maxwikstrom.se/dax/extract-measures-and-other-metadata-from-power-bi-semantic-models-using-dax/
+    You can now automate any Power BI visual with AI and here's how!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/bf7e30af65a5988689462e424aed3906.png
+    You can now automate any Power BI visual with AI and here's how!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/b330cb00f6d4920f1259a7940348f8ba.png
+    You can now automate any Power BI visual with AI and here's how!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/126e046f27fc91aae3f95a59f0e56e38.png
+    You can now automate any Power BI visual with AI and here's how!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/73174119835953a7a95b1061c8bc6d81.png
+    You can now automate any Power BI visual with AI and here's how!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/e2a9e5f3bfe36641d8bdd0e7482e052c.png
+    You can now automate any Power BI visual with AI and here's how!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/c6ced2f415d2b6a2b3dad00bf35b165a.png
+    You can now automate any Power BI visual with AI and here's how!.md direct_file        high                         https://lwfiles.mycourse.app/datatraining-public/a5df0d31788187208862bc3acb036ed0.png
+    Your Power BI report shows different numbers to different people. The data is fine.md direct_file        high                         https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security
+    Your Power BI report shows different numbers to different people. The data is fine.md direct_file        high                         https://linktr.ee/powerbi.masterclass?utm_source=medium&utm_medium=medium-post&utm_campaign=linktree-medium-post-end&source=post_page-----6809cd3c8336---------------------------------------
+    
+    228 file(s), 801 download link(s).
+    
+    NOTE: Google Drive / OneDrive links are share links — file type
+          cannot be determined from the URL. Visit to confirm before downloading.
+[RUN]  Video Attach
+[FINDINGS] Video Attach
+    5 unmatched video(s) found:
+      * 99.System\Attachments\Video\11-Power-BI-Tips-Guy-in-a-Cube.mp4
+      * 99.System\Attachments\Video\5 Power BI Slicer Tricks To Build Professional Dashboards.mp4
+      * 99.System\Attachments\Video\ABC Analysis in Power BI： The Chart That Shows Your 80⧸20 Instantly.mp4
+      * 99.System\Attachments\Video\Document-Dataflows-Gen1-CoWork.mp4
+      * 99.System\Attachments\Video\rDuHokI3YBQ.mp4
+=== End — 2026-08-13 21:15:18 ===
+

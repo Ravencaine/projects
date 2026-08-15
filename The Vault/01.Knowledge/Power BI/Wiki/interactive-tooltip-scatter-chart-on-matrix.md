@@ -17,7 +17,7 @@ Drill-through context on hover: users see the actual distribution of data points
 ## Components
 
 1. **Tooltip page** (Page type: Tooltip, ~400×500px)
-2. **Scatter chart** — X-Axis: `X Value`, Y-Axis: `Y Value`, Details: `Employee ID`
+2. **Scatter chart:** X-Axis: `X Value`, Y-Axis: `Y Value`, Details: `Employee ID`
 3. **Measures:** `Selected X Name`, `Selected Y Name`, `X Value`, `Y Value`, `Scatter Title`, `Scatter Subtitle (HTML)`
 4. **Trend line** enabled via Analysis pane
 

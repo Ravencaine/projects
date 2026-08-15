@@ -20,7 +20,7 @@ The bar chart's X-axis and the column chart's X-axis are independent by default.
 
 ## Why It Happens
 
-The bar chart and the column chart have **independent axis scales** — they don't auto-sync just because they're stacked. They differ in how they pad their axes, how they treat the first/last bar edge, and how they bin dates. Even identical min/max bounds don't produce identical pixel layouts because the two visuals apply different default padding for "first bucket" and "last bucket". The article's author calls this out explicitly: "I needed to make sure that the **right end of the bar chart** was flush with the **right end of the column chart**, and that the **left start of the bar chart** was flush with the **first date (and vertical gridline) of the X-axis of the column chart**."
+The bar chart and the column chart have **independent axis scales:** they don't auto-sync just because they're stacked. They differ in how they pad their axes, how they treat the first/last bar edge, and how they bin dates. Even identical min/max bounds don't produce identical pixel layouts because the two visuals apply different default padding for "first bucket" and "last bucket". The article's author calls this out explicitly: "I needed to make sure that the **right end of the bar chart** was flush with the **right end of the column chart**, and that the **left start of the bar chart** was flush with the **first date (and vertical gridline) of the X-axis of the column chart**."
 
 ## How to Handle It
 

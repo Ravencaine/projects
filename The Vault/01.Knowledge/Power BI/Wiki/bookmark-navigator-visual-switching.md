@@ -29,7 +29,7 @@ For each visual type (bar, column, line, table, matrix):
 
 1. Create the visual and position it exactly where you want it.
 2. Create a bookmark targeting that visual.
-3. In the bookmark options, **uncheck Data** — this is critical: it prevents the field parameter slicers from resetting when switching visuals.
+3. In the bookmark options, **uncheck Data:** this is critical: it prevents the field parameter slicers from resetting when switching visuals.
 4. Optionally uncheck Background to see the visual clearly while editing.
 
 ### Bookmark Navigator
@@ -43,7 +43,7 @@ The "View Selection" group (bookmark navigator + visual icons) can be copied fro
 ## Key Rules
 
 - All visuals must be stacked at the same position. Even 1px offset will cause a visible jump.
-- The **Data checkbox in bookmark options must be unchecked** — this is the mechanism that preserves slicer state across visual switches.
+- The **Data checkbox in bookmark options must be unchecked:** this is the mechanism that preserves slicer state across visual switches.
 - Visual icons used for buttons should match the report's UI style.
 
 ## Related

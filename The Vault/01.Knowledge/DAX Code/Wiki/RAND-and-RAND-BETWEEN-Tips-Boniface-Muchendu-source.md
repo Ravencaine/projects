@@ -25,7 +25,7 @@ Boniface Muchendu (DataBear) covers two DAX functions for random number generati
 
 - `RAND()` generates a new random decimal (0–1) on every refresh — no parameters
 - `RAND.BETWEEN(min, max)` generates a random integer between the two bounds inclusive
-- Both are **volatile functions** — output changes on every data refresh and user interaction
+- Both are **volatile functions:** output changes on every data refresh and user interaction
 - Performance impact increases with dataset size — use judiciously
 - `RAND.BETWEEN()` can be used to generate random offsets from a base date (e.g., end date = start date + `RAND.BETWEEN(5, 10)` days)
 - Adding `RAND()` as a tiebreaker column in a ranking table ensures unique ordering for equal-ranked items

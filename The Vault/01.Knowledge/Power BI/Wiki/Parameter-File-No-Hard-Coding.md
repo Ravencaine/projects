@@ -29,7 +29,7 @@ Save as `.xlsx` and place in a shared or OneDrive location.
 
 1. **Get Data → Excel** → select the parameter file
 2. Load the sheet as a table (do not create any relationships)
-3. The table is **disconnected** — no active relationships to the data model
+3. The table is **disconnected:** no active relationships to the data model
 
 ### Step 3 — Retrieve values in DAX
 

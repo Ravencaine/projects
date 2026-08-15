@@ -1,10 +1,11 @@
 ---
 created: 2026-07-29
 updated: 2026-08-02
-source: "[[Author-Isabelle-Bittar|Isabelle Bittar]]"
+source: "Power BI UX: 7 Key Features"
 note_type: atomic
-tags: [UX, Power-BI-features, drillthrough, bookmarks, multilingual, feedback]
+tags: [ux, power-bi-features, drillthrough, bookmarks, multilingual, feedback]
 related: [Data-Narratives-Report-Design, The-3-30-300-Rule]
+source_url:
 ---
 
 # Power BI UX: 7 Key Features
@@ -36,6 +37,18 @@ Purpose: allow users to jump from a summary visual to a detailed page filtered t
 - Create a dedicated drillthrough page.
 - Add the field to the **Drillthrough** well of the source visual.
 - Power BI automatically filters the target page to the selected context.
+
+### 3b — Interactive Features as a Holistic Pattern
+
+Drillthrough, filters, and slicers form a unified interactive exploration pattern:
+
+- **Drill-down:** navigate within a visual's hierarchy (e.g., Year → Quarter → Month)
+- **Filters:** narrow the dataset by specific criteria (field-level, visual-level, page-level, report-level)
+- **Slicers:** always-visible filter controls that update the report in real time
+
+Van Zyl frames these as a *single concept*: **empowering users to unearth tailored insights**. The technical implementation (drill-down, filter pane, slicer visual) is secondary to the UX goal — self-service data exploration without analyst intervention.
+
+> Source: [[Source-Crafting-Compelling-Impactful-Power-BI-Reports]] — Althea Van Zyl, 2024-07-09
 
 ### 4 — Q&A Visual
 

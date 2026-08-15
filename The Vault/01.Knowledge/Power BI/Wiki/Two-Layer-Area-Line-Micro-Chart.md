@@ -81,9 +81,9 @@ def mini_area_line(data, color, xlabels=None):
 
 ## Variations
 
-- **Single colour, multiple cards** — reuse `hex_to_rgba()` with the same alpha across all cards for a consistent palette, varying only the hue per card.
-- **Horizontal bar chart instead of area** — for a different micro-chart shape, `go.Bar(orientation="h")` with `autorange="reversed"` to put highest value at top.
-- **No markers** — drop `+markers` from the top trace's `mode` for a cleaner, line-only look on wider cards.
+- **Single colour, multiple cards:** reuse `hex_to_rgba()` with the same alpha across all cards for a consistent palette, varying only the hue per card.
+- **Horizontal bar chart instead of area:** for a different micro-chart shape, `go.Bar(orientation="h")` with `autorange="reversed"` to put highest value at top.
+- **No markers:** drop `+markers` from the top trace's `mode` for a cleaner, line-only look on wider cards.
 
 ## Related
 

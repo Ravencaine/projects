@@ -1,12 +1,33 @@
 ---
 created: 2026-08-02
-updated: 2026-08-02
+updated: 2026-08-11
 source: system:changelog
 ---
 
 # CHANGELOG
 
 All notable changes to this knowledge base are documented here.
+
+## 2026-08-11 — Health check (delta)
+
+Audit: full scan of 180 wiki files. Delta since 2026-08-06.
+
+Auto-fixed:
+- writing-rules: 12 em-dash bullets replaced with colons across 12 files
+- INDEX links: 3 orphaned notes added to INDEX.md (In-Cell-Bar-Chart-REPT, REPT-In-Cell-Bar-Charts, integrating-python-excel-source)
+- frontmatter: 100 `updated:` fields backfilled
+
+New articles drafted: 0
+
+Pending judgement:
+- excel-index-extras: resolved this run — 3 orphaned notes now in INDEX
+
+## 2026-08-06 — Ingestion batch
+
+Sources: 1 file → 99.System/InboxArchive/2026-08/
+Notes: 1 written across 1 KB
+KBs: Excel (1 note)
+Errors fixed: 0 | Link ops applied: 0
 
 ## 2026-08-05 — Health check (delta)
 

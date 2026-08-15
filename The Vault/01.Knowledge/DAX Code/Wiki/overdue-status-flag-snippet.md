@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-02
 source: The Same-Day Trap: Calculating "Days in Status" in Power BI
 note_type: snippet
 tags: [dax, snippet, overdue, flag, status, latest, days, threshold, filter]

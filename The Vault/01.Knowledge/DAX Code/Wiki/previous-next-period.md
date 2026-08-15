@@ -43,16 +43,49 @@ Sales Prev Month = CALCULATE([Sales], PREVIOUSMONTH('Date'[Date]))
 YoY Growth = DIVIDE([Sales] - CALCULATE([Sales], PREVIOUSYEAR('Date'[Date])), CALCULATE([Sales], PREVIOUSYEAR('Date'[Date])))
 ```
 
+## PREVIOUS — Visual Calculation Variant
+
+`PREVIOUS()` in a visual calculation is a **different function** from the PREVIOUSDAY/PREVIOUSMONTH/PREVIOUSYEAR time-intelligence family. It retrieves the value of a measure from the previous row or column in the **visual calculation data grid**, without needing to recalculate via the storage engine.
+
+```dax
+PREVIOUS( <Measure> [, <Steps>] [, <Axis>] [, <OrderBy>] [, <Blanks>] [, <Reset>] )
+```
+
+| Parameter | Description |
+|-----------|-------------|
+| `<Measure>` | The measure to retrieve (e.g., `[Sales Amount]`) |
+| `<Steps>` | Number of steps back (default 1) |
+| `<Axis>` | `ROWS`, `COLUMNS`, or `ROWS COLUMNS` — which axis to navigate |
+| `<OrderBy>` | Optional ordering for the axis |
+| `<Blanks>` | How to handle blanks |
+| `<Reset>` | Reset navigation at certain boundaries |
+
+### Example — YoY% in a Visual Calculation
+
+```dax
+YOY % =
+VAR CY = [# Customers]
+VAR PY = PREVIOUS([# Customers], COLUMNS)
+RETURN DIVIDE(CY - PY, PY)
+```
+
+### Performance Characteristics
+
+`PREVIOUS()` in a visual calculation reads from the **precomputed virtual table:** no new storage engine query is fired for each cell. This makes it significantly faster than `SAMEPERIODLASTYEAR` when the virtual table is small (~110 rows). However, for large virtual tables (~1.7M rows), the densification overhead makes it 4× slower than the measure-based equivalent.
+
+See [[VC-vs-Measure-Performance-Decision]] for the full decision framework.
+
 ## Notes
 
-- All return a **table**: must be used inside CALCULATE
+- All time-intelligence PREVIOUS/NEXT return a **table**: must be used inside CALCULATE
 - PREVIOUS/NEXT WEEK require a calendar (ISO week dates)
 - `PREVIOUSYEAR` and `NEXTYEAR` accept `year_end_date` for fiscal years
-- Discouraged in visual calculations — likely returns meaningless results
 - Not supported in DirectQuery mode for calculated columns or RLS rules
-- Related: [[dateadd]], [[sameperiodlastyear]]
+- The visual calculation `PREVIOUS()` is a separate function — see [[PREVIOUS-YoY-VC-Pattern]] for the VC variant
 
 ## Related
 
+- [[PREVIOUS-YoY-VC-Pattern]] — ready-to-use VC pattern using `PREVIOUS(COLUMNS)`
+- [[VC-vs-Measure-Performance-Decision]] — when to use VC PREVIOUS vs measure with SAMEPERIODLASTYEAR
 - [[dateadd]]
 - [[sameperiodlastyear]]

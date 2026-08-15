@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "44f0204fba030c81",
+        "id": "d70ad9c1690212b3",
         "type": "tabs",
         "children": [
           {
-            "id": "8561dc91b1b50708",
+            "id": "74b97e0d88eff409",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01.Knowledge/Power BI/6-ways-to-recover-lost-work-in-microsoft-excel.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "6-ways-to-recover-lost-work-in-microsoft-excel"
             }
           }
         ]
@@ -87,6 +91,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "01.Knowledge/Power BI/6-ways-to-recover-lost-work-in-microsoft-excel.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -109,7 +114,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.4019828977761004,
+                  "scale": 0.9999999999999992,
                   "close": true
                 }
               },
@@ -121,7 +126,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 332
+    "width": 300
   },
   "right": {
     "id": "018c275678f6b701",
@@ -130,7 +135,7 @@
       {
         "id": "76db75e84a9b4aeb",
         "type": "tabs",
-        "dimension": 36.502347417840376,
+        "dimension": 73.03634232121922,
         "children": [
           {
             "id": "905aba765e85d4b1",
@@ -262,14 +267,34 @@
               "icon": "smart-connections",
               "title": "Connections"
             }
+          },
+          {
+            "id": "d391d15885059851",
+            "type": "leaf",
+            "state": {
+              "type": "obsidianaitools-chat-view",
+              "state": {},
+              "icon": "bot-message-square",
+              "title": "AI Tools"
+            }
+          },
+          {
+            "id": "cf2ee4e68b94d81f",
+            "type": "leaf",
+            "state": {
+              "type": "editor-ai-daemons-review",
+              "state": {},
+              "icon": "bot",
+              "title": "AI Editor Review"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 9
       },
       {
         "id": "49bc83a74ce76112",
         "type": "tabs",
-        "dimension": 63.497652582159624,
+        "dimension": 26.963657678780773,
         "children": [
           {
             "id": "65fb339232bea149",
@@ -287,7 +312,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 220.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -298,58 +324,60 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidianaitools:AI Tools": false,
+      "smart-connections:Smart Connections: Open random connection": false,
       "smart-connections:Smart Connections: Open connections view": false,
-      "smart-connections:Toggle Footer Connections": false,
-      "smart-connections:Smart Connections: Open random connection": false
+      "smart-connections:Toggle Footer Connections": false
     }
   },
-  "active": "30a382f52ab3688f",
+  "active": "74b97e0d88eff409",
   "lastOpenFiles": [
-    "01.Knowledge/Power BI/Wiki/automating-powerbi-deployments-github-actions-hannecke-source.md",
-    "01.Knowledge/Power BI/Wiki/workspace-not-found-pbix-deploy.md",
-    "01.Knowledge/Power BI/Wiki/pbix-deploy-create-or-overwrite.md",
-    "01.Knowledge/Power BI/Wiki/connect-powerbi-serviceaccount-service-principal.md",
-    "01.Knowledge/Power BI/Wiki/azure-ad-app-registration-power-bi-service-principal.md",
-    "01.Knowledge/Power BI/Wiki/power-bi-cicd-pipeline-github-actions.md",
-    "01.Knowledge/DAX Code/Wiki/measure-that-applies-cg-overrides-precedence.md",
-    "01.Knowledge/DAX Code/Wiki/nested-calculate-does-not-change-cg-application-order.md",
-    "01.Knowledge/DAX Code/Wiki/report-filter-vs-measure-cg-behaviour.md",
-    "01.Knowledge/DAX Code/Wiki/cg-precedence-application-not-evaluation.md",
-    "01.Knowledge/DAX Code/Wiki/avoiding-pitfalls-calculation-groups-precedence-ferrari-source.md",
-    "01.Knowledge/DAX Code/Wiki/calculation-items-apply-only-to-measure-references.md",
-    "99.System/InboxArchive/2026-08/Automating PowerBI Deployments with GitHub Actions A Complete Guide.md",
-    "99.System/InboxArchive/2026-08/Automate Excel Formulas and Functions with Python A Complete Guide.md",
-    "01.Knowledge/Power BI/Wiki/SVG-Images-Power-BI.md",
-    "01.Knowledge/Power BI/Wiki/Survey-AI-Dashboard-Components.md",
-    "01.Knowledge/Power BI/Wiki/REPT-UNICHAR-Measure-Sorting-Isabelle.md",
-    "01.Knowledge/Power BI/Wiki/Python-GPT4-Survey-Enrichment-Workflow.md",
-    "01.Knowledge/Power BI/Wiki/Local-Image-Insert-Power-BI.md",
-    "01.Knowledge/Power BI/Wiki/ImageBB-Hosting-Service.md",
-    "01.Knowledge/Power BI/Wiki/Image-URL-Data-Category.md",
-    "01.Knowledge/Power BI/Wiki/GPT4-API-Survey-Cost.md",
-    "01.Knowledge/Power BI/Wiki/Binary-Base64-Image-Model.md",
-    "01.Knowledge/Power BI/Wiki/Analyzing-Survey-Comments-AI-Power-BI-Isabelle-Bittar-source.md",
-    "01.Knowledge/Excel/Wiki/TRIM-CLEAN-Functions.md",
-    "01.Knowledge/Excel/Wiki/Text-to-Columns.md",
+    "01.Knowledge/Power BI/6-hidden-navigation-hacks-every-excel-user-needs-to-know.md",
+    "01.Knowledge/Power BI/Wiki/Source-5-Most-Used-Visuals-in-Power-BI-Kumar.md",
+    "01.Knowledge/Power BI/Wiki/Power-BI-Visual-Selection-Guide.md",
+    "01.Knowledge/Power BI/6-excel-ui-changes-you-need-to-make-before-starting-your-next-spreadsheet.md",
+    "01.Knowledge/Power BI/6-effective-excel-visualizations-you-can-build-in-under-10-minutes.md",
+    "01.Knowledge/Power BI/5-useful-python-scripts-to-automate-exploratory-data-analysis.md",
+    "01.Knowledge/Power BI/5-powershell-commands-that-fix-most-of-my-windows-problems.md",
+    "01.Knowledge/Power BI/3-current-artists-every-diehard-nine-inch-nails-fan-should-introduce-to-their-ro.md",
+    "00.Inbox/Dynamic Pareto Analysis in Power BI - Native Visuals.md",
+    "00.Inbox/LEVEL UP with Custom Visuals Power BI🔹HTML🔹Calculation Groups🔹Deneb.md",
+    "00.Inbox/Top 5 ways to show ACTIVE FILTERS in Power BI.md",
+    "00.Inbox/38 rows of DAX becomes 1 Line!  User Defined Functions Walkthrough.md",
+    "00.Inbox/How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md",
+    "00.Inbox/Smarter Power BI Dashboards Show Charts Only When Needed!.md",
+    "00.Inbox/How to Build Interactive Cards in Power BI with the New Visual Features.md",
+    "00.Inbox/The Ultimate Time-Saver Style Presets in Power BI.md",
+    "00.Inbox/Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md",
+    "00.Inbox/Power BI UX Enhancements with Visual Calculations.md",
+    "00.Inbox/Donut Charts done right 3 New Power BI designs.md",
+    "00.Inbox/3 Hacks to Turn Any Image into a Circle in Power BI.md",
+    "00.Inbox/Faster DAX - Are Visual Calculations in Power BI Actually Faster Than DAX Measures.md",
+    "00.Inbox/Write DAX Code Once, Use it Everywhere 1.md",
+    "00.Inbox/A button slicer that zooms on selection - a clever trick that makes a big difference.md",
+    "00.Inbox/KPI Overview Page in Power BI that left my Client speechless.md",
+    "00.Inbox/This DAX Measure Sends Emails Directly from Power BI.md",
+    "00.Inbox/The Monthly KPI Tracker You're Missing in Power BI.md",
+    "99.System/Scripts/scan_attachments_for_videos.py",
+    "01.Knowledge/DAX Code/Wiki/sedkKTBP6",
+    "99.System/Attachments/Visual-Calculations-Performance/C0298-6.png",
+    "99.System/Attachments/Visual-Calculations-Performance/C0298-5.png",
+    "99.System/Attachments/Visual-Calculations-Performance/C0298-4.png",
+    "99.System/Attachments/Visual-Calculations-Performance/C0298-2.png",
+    "99.System/Attachments/Visual-Calculations-Performance/C0298-1.png",
+    "99.System/Attachments/Visual-Calculations-Performance",
+    "sync.ffs_db",
+    "sync.ffs_db.eebd.ffs_tmp",
+    "sync.ffs_lock",
     "99.System/Attachments/Survey_Comments_AI_Power_BI.pbix",
     "99.System/Attachments/To_keep_your_projects_organized,_visualize_your_data_cleaning_pipeline_like.webp",
     "99.System/Attachments/Storing_Images_in_Your_Model.png",
     "99.System/Attachments/Using_Web_Images.png",
     "99.System/Attachments/import_images_into_your_Power_BI_report.png",
     "99.System/Attachments/Using_SVG_Images.png",
-    "99.System/Attachments/ALL.png",
-    "99.System/Attachments/RemoveFliter.png",
-    "99.System/Attachments/All_Function_Dax_filter-1.gif",
-    "99.System/Attachments/All_Function_Dax_filter.gif",
-    "99.System/Attachments/All_Function_.png",
     "99.System/Attachments/Using Visual Calculation Avg 3 Month Sales - variant 2.csv",
     "99.System/Attachments/Using Visual Calculation Avg 3 Month Sales.pbix",
-    "99.System/Attachments/Using Visual Calculation Avg 3 Month Sales.csv",
-    "99.System/Attachments/More Power to Your Users with Field Parameters.pbix",
-    "99.System/Attachments/Mastering Bubble Charts in Power BI.pbix",
-    "99.System/Attachments/How I Built a Modern Oblique Area Chart in Power BI.pbix",
-    "99.System/Attachments",
-    "99.System/Scripts/scan_for_downloads.py",
-    "99.System/InboxArchive/2026-08"
+    "99.System/Attachments/Using Visual Calculation Avg 3 Month Sales.csv"
   ]
 }

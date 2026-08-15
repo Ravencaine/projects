@@ -62,8 +62,8 @@ Power BI's image rendering layer expects a valid data URI. SVG characters like `
 
 ## Notes
 
-- This is a **helper UDF** — it is called from *within* other UDFs, not used directly in measures
-- **Do not URL-encode the final `data:image/svg+xml;utf8,` prefix** — only the SVG content inside it
+- This is a **helper UDF:** it is called from *within* other UDFs, not used directly in measures
+- **Do not URL-encode the final `data:image/svg+xml;utf8,` prefix:** only the SVG content inside it
 - If building SVG strings manually (without a dedicated UDF), prepend the prefix *after* encoding all special characters in the SVG body
 - Chaining `SUBSTITUTE` calls sequentially (s0 → s1 → s2...) is safe because each call replaces from the previous state
 

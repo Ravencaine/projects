@@ -21,10 +21,10 @@ The Image visual now generates accessible elements with semantic meaning — cri
 
 ## Why It Matters
 
-- **Public sector** — compliance with accessibility standards (WCAG)
-- **Healthcare** — HIPAA-adjacent environments require inclusive design
-- **Enterprise** — corporate accessibility policies increasingly require it
-- **All audiences** — inclusive design benefits everyone
+- **Public sector:** compliance with accessibility standards (WCAG)
+- **Healthcare:** HIPAA-adjacent environments require inclusive design
+- **Enterprise:** corporate accessibility policies increasingly require it
+- **All audiences:** inclusive design benefits everyone
 
 ## Dynamic Alt Text Pattern
 

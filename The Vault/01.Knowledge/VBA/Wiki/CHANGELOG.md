@@ -1,12 +1,23 @@
 ---
 created: 2026-08-02
-updated: 2026-08-02
+updated: 2026-08-11
 source: system:changelog
 ---
 
 # CHANGELOG
 
 All notable changes to this knowledge base are documented here.
+
+## 2026-08-11 — Health check (delta)
+
+Audit: no new wiki files since 2026-08-05. VBA KB remains empty.
+
+Auto-fixed: 0
+
+New articles drafted: 0
+
+Pending judgement:
+- vba-kb-empty: VBA KB has 0 notes. Consider beginning ingestion or clearing the stale KB entry from CLAUDE.md valid KB list.
 
 ## 2026-08-05 — Health check (delta, vault-wide)
 

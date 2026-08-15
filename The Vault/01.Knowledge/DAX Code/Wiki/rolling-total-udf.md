@@ -22,7 +22,7 @@ UDF RollingTotal =
 
 ## Implementation Notes
 
-- Window **ends at `MAX('Date'[Date])`** — adapts to filter context
+- Window **ends at `MAX('Date'[Date])`:** adapts to filter context
 - Weeks implemented as `7 * n` days (DAX has no week unit for `DATESINPERIOD`)
 - Returns `BLANK()` when the date window is empty
 

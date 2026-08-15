@@ -31,7 +31,7 @@ Title :=
 ## Design Principles
 
 - Keep emoji consistent: if 📈 means "performance" in one chart, use it consistently everywhere
-- Think of emojis as **micro-icons** — they create visual hierarchy without clutter
+- Think of emojis as **micro-icons:** they create visual hierarchy without clutter
 - Test in both light and dark mode: some emojis render differently
 
 ## Related

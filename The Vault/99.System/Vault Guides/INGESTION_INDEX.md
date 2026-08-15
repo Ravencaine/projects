@@ -17,6 +17,7 @@ Activate the ingestion skill on any of:
 
 | Keyword pattern | Target KB |
 |----------------|-----------|
+| `Power Automate` | `01.Knowledge/Power Automate/` |
 | `Power BI`, `DAX`, `PowerPivot` | `01.Knowledge/Power BI/` or `DAX Code/` |
 | `Power Query`, `M code`, `Get Data` | `01.Knowledge/Power Query/` |
 | `Excel`, `VBA`, `xlsx`, `spreadsheet` | `01.Knowledge/Excel/` or `VBA/` |

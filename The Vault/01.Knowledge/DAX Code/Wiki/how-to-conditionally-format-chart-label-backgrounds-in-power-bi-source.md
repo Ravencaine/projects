@@ -18,12 +18,20 @@ tags: [power-bi, visualization, chart, data-labels, conditional-formatting, dax]
 
 ## Core Technique
 
-No fx option exists for Data label → Background color. Workaround: split the variance measure into `_Positive`/`_Negative` dummy measures using `IF`, add both to the chart's Values, then style each series independently.
+## Extracted Notes
 
-## Key Patterns Extracted
+Links to notes derived from this source:
 
-1. [[dual-measure-label-background-trick]] — the core workaround pattern
-2. [[positive-negative-dummy-measure-split]] — the `IF`-split pattern for visual styling
-3. [[turnover-rate-12m-rolling-window]] — 12M rolling turnover rate with DATESINPERIOD
-4. [[label-variance-if-arrow-format]] — arrow + % variance label text
-5. [[label-font-color-variance-based]] — font color by variance direction
+- [[dual-measure-label-background-trick]] — the core workaround pattern
+- [[positive-negative-dummy-measure-split]] — the `IF`-split pattern for visual styling
+- [[turnover-rate-12m-rolling-window]] — 12M rolling turnover rate with DATESINPERIOD
+- [[label-variance-if-arrow-format]] — arrow + % variance label text
+- [[label-font-color-variance-based]] — font color by variance direction
+
+## Metadata
+
+| Field | Value |
+|-------|-------|
+| Source file | How to Conditionally Format Chart Label Backgrounds in Power BI.md |
+| Ingestion date | 2026-08-02 |
+| PBIX attachment | [[Attachments/Conditionally Format Data Label Backgrounds.pbix]] |

@@ -32,7 +32,7 @@ REMOVEFILTERS(<ColumnName>[, <ColumnName>[, …]])
 
 ## Return Value
 
-**Nothing** — REMOVEFILTERS does not return a table or column. It only has a side effect: it clears filter context. This is why it cannot be used as a table expression.
+**Nothing:** REMOVEFILTERS does not return a table or column. It only has a side effect: it clears filter context. This is why it cannot be used as a table expression.
 
 ## Common Pattern
 

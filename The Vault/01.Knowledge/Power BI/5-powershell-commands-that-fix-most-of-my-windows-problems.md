@@ -1,0 +1,40 @@
+---
+title: "5 PowerShell commands that fix most of my Windows problems"
+source: "https://share.google/KU1wmiz9AYRatN7W7"
+author: "share.google"
+date: "2026-08-11"
+tags: [imported, power-bi]
+created: "2026-08-11"
+---
+
+> A precise approach to everyday Windows breakdowns.
+
+5 PowerShell commands that fix most of my Windows problems Close Close By Afam Onyimadu Published Mar 4, 2026, 1:00 PM EST Afam's experience in tech publishing dates back to 2018, when he worked for Make Tech Easier. Over the years, he has built a reputation for publishing high-quality guides, reviews, tips, and explainer articles, covering Windows, Linux, and open source tools. His work has been featured on top websites, including Technical Ustad, Windows Report, Guiding Tech, Alphr, and Next of Windows. He holds a first degree in Computer Science and is a strong advocate for data privacy and security, with several tips, videos, and tutorials on the subject published on the Fuzo Tech YouTube channel. When he is not working, he loves to spend time with his family, cycling, or tending to his garden. Sign in to your MakeUseOf account A common denominator of using computers is that you'll encounter problems requiring troubleshooting. After years of using Windows, I have noticed certain PowerShell commands have been the most handy at resolving common problems. From fixing slow startups and bad network connections to dealing with stubborn apps, these commands are your best bet. Repair Windows before it snowballs Run SFC and DISM in the right order Afam Onyimadu / MUO Afam Onyimadu / MUO Afam Onyimadu / MUO Afam Onyimadu / MUO Afam Onyimadu / MUO Close Afam Onyimadu / MUO Afam Onyimadu / MUO Afam Onyimadu / MUO Afam Onyimadu / MUO Afam Onyimadu / MUO The DISM command repairs the Windows Component Store (WinSxS). Running the DISM command requires an internet connection by default because it connects to Windows Update to download the replacement files it needs. However, you can add the /Source flag to point it to a locally mounted ISO or WIM file. Pairing it with the /LimitAccess flag explicitly prevents DISM from trying to reach Windows Update if the local source is incomplete. On the other hand, the SFC command makes Windows replace bad files with their healthy cached versions. After an SFC scan, the computer should report that it found and fixed errors. However, if some errors cannot be fixed, check the CBS.log file at C:\Windows\Logs\CBS\CBS.log . I run these two commands when I see any signs of damage to Windows system files and the component store. These signs could be: System freezes, crashes, or Blue Screen of Death (BSOD) Windows features or applications fail to work properly Significant and sudden system slowdowns If a BSOD is hardware-related, both commands will be ineffective at fixing it. Here are the exact PowerShell commands I run with admin privileges:  Optionally, I run the command below to create a readable text file of Windows Update trace logs for diagnostic review:  The rule of thumb is to first run DISM before SFC, then restart your computer. This gives you the best chance of a successful, deep, and lasting repair. Find what’s actually filling your drive Expose storage hogs the GUI hides Afam Onyimadu / MUO One of the more common problems I face on Windows is apps or system components writing more data to disk than expected. Sometimes, I can trace these using the Windows Storage Sense feature, but it's not always the most efficient solution. A more reliable method requires querying Windows for files and folders that take up the most space. Any of these situations may require running the PowerShell query: Drives filling up faster than normal Increased load times for applications Slow file operations Unexplained low disk warnings The command block below scans and displays the largest folders for any specified Windows user profile:  Optionally, I run the PowerShell command below to see the largest individual files:  It’s wise to start scanning from the user folder since it typically contains the largest files, and only expand the scan to other drives if required. Reset networking without nuking your adapters Clear DNS, Winsock, and TCP/IP properly Afam Onyimadu / MUO The causes of network problems are not always obvious. Sometimes you need some router tweaks for a more reliable internet . Other times, certain apps may trigger problems. In fact, the OS itself can also be the culprit. Using PowerShell to restart all my adapters is often a reliable fix, and it saves me from reinstalling drivers. These network commands are usually effective in any of the following cases: Stalling or partially opening web pages Interrupted downloads or uploads "No internet" errors, when other devices work fine Below are the three commands I use in sequence (they require admin rights):  If you have cached addresses that are stale or corrupted, the first command can help clear them from the local DNS resolver cache. The second command disables and re-enables the physical network adapter and avoids other configurations, and the last command is a simple connectivity check test. But note that these commands would not be efficient for problems at the router or ISP level. For a more aggressive GUI-based reset, open Settings and navigate to Network & Internet -> Advanced network settings -> Network reset . When other devices are online, and the last command fails, note that firewalls, DNS policies, or blocked domains can affect results. Running the command: Test-NetConnection -ComputerName 8.8.8.8 -Port 53 can rule out a DNS-specific issue. Stop guessing why your PC feels slow Rank CPU, memory, and startup impact instantly Afam Onyimadu / MUO There are times when your computer feels slow. If I haven't started any known task that could cause slowness, I investigate running processes. They may show what’s consuming CPU, memory, or startup resources. From the Task Manager, I can get a snapshot that allows me to take precise action. With other third-party tools like Process Explorer, I may get more granular information . However, I still resort to PowerShell for a live, portable view when I notice any of the following: Freezing or lagging applications High fan activity Frequent CPU spikes Extended Windows star
+
+## Code / Examples
+
+```
+DISM /Online /Cleanup-Image /RestoreHealthsfc /scannow
+```
+```
+Get-WindowsUpdateLog
+```
+```
+$folders = Get-ChildItem -Path $env:USERPROFILE -Directory $folderSizes = foreach ($f in $folders) { $totalBytes = (Get-ChildItem $f.FullName -Recurse -File -ErrorAction Ignore | Measure-Object -Property Length -Sum).Sum [PSCustomObject]@{ Path = $f.FullName SizeInGB = [math]::Round(($totalBytes / 1GB), 2) } } $folderSizes | Sort-Object -Property SizeInGB -Descending
+```
+```
+Get-ChildItem $env:USERPROFILE -Recurse -File | Sort-Object Length -Descending | Select-Object -First 5 -Property Name, @{Name='SizeGB';Expression={[math]::Round($_.Length/1GB,2)}}
+```
+```
+Clear-DnsClientCacheGet-NetAdapter | Where-Object {$_.Status -eq "Up"} | Restart-NetAdapterTest-NetConnection google.com
+```
+```
+# Top 5 processes by live CPU usageGet-Counter '\Process(*)\% Processor Time' |Select-Object -ExpandProperty CounterSamples |Sort-Object -Property CookedValue -Descending |Select-Object -First 5 -Property InstanceName,CookedValue# Top 5 processes by private memory usageGet-Process | Sort-Object PM -Descending | Select-Object -First 5 ProcessName,PM# View startup programsGet-CimInstance Win32_StartupCommand# View currently running servicesGet-Service | Where-Object {$_.Status -eq "Running"}
+```
+```
+# Re-register all user and system apps$brokenApps = Get-AppxPackage -AllUsers | Where-Object {$_.InstallLocation -and (Test-Path "$($_.InstallLocation)\AppXManifest.xml")}foreach ($app in $brokenApps) { Add-AppxPackage -DisableDevelopmentMode -Register "$($app.InstallLocation)\AppXManifest.xml"}# Reset Microsoft Store cacheStart-Process wsreset.exe
+```
+
+
+---
+*Source: [share.google](https://share.google/KU1wmiz9AYRatN7W7)*

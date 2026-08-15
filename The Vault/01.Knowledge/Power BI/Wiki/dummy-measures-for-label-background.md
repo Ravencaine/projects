@@ -16,11 +16,11 @@ Power BI does not yet expose an `fx` button for data label background color. Thi
 
 ## Components
 
-1. **Base measure** — the underlying metric (e.g. `Turnover Rate Variance`)
-2. **Positive dummy** — `IF(metric < 0, metric)` — shows the value only for negative rows
-3. **Negative dummy** — `IF(metric >= 0, metric)` — shows the value only for positive rows
+1. **Base measure:** the underlying metric (e.g. `Turnover Rate Variance`)
+2. **Positive dummy:** `IF(metric < 0, metric)` — shows the value only for negative rows
+3. **Negative dummy:** `IF(metric >= 0, metric)` — shows the value only for positive rows
 4. **Both dummies** added to the chart's Values field well
-5. **Per-series formatting** — set background color on each dummy independently
+5. **Per-series formatting:** set background color on each dummy independently
 
 ## Structure
 

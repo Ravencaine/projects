@@ -11,11 +11,12 @@ tags: [dax, power-bi, correlation, matrix, visualization, statistics]
 
 Build a fully dynamic, interactive correlation matrix in Power BI using only DAX — no Python, no external tools. Uses a Matrix visual, disconnected selector tables, Pearson correlation measures, DAX-driven conditional formatting, and an interactive scatter chart tooltip.
 
-> **Type:** article
+> **Type:** article + PBIX
 > **Author:** Isabelle Bittar (KI Data Science)
 > **Published:** 2025-08-24
 > **URL:** https://medium.com/microsoft-power-bi/how-to-build-a-correlation-matrix-in-power-bi-using-only-dax-ab611a19a194
 > **Routed to:** DAX Code, Power BI
+> **PBIX:** [[Attachments/Correlation Matrix.pbix]]
 
 ## Summary
 

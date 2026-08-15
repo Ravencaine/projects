@@ -1,6 +1,7 @@
 ---
 title: "Advanced Dimensional Modeling for Retail Product Variants Pt 2"
 source: "https://medium.com/@jjr8888/advanced-dimensional-modeling-for-retail-product-variants-pt-2-efd14c680c3c"
+download_file: "99.System/Attachments/Code/sqlqueries_optimized_Retail_New_DeltaLake.sql"
 author:
   - "[[Jesse Ruiz (she/they)]]"
 published: 2026-05-11

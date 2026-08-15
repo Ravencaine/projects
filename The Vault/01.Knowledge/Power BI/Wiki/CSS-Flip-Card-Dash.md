@@ -101,10 +101,10 @@ def flip(*clicks):
 
 ## Variations
 
-- **Y-axis flip** — use `rotateX(180deg)` instead of `rotateY(180deg)` for a top-down flip.
-- **Partial flip** — apply `rotateY(-15deg)` on hover for a subtle "peek" preview without requiring a full click.
-- **Delay flip** — add `transition-delay: 0.2s` to `.flip-card-inner` to delay animation start.
-- **Accessibility** — add `aria-label` to the card container and `aria-expanded` state driven by the Dash callback; consider `prefers-reduced-motion` media query to disable the animation.
+- **Y-axis flip:** use `rotateX(180deg)` instead of `rotateY(180deg)` for a top-down flip.
+- **Partial flip:** apply `rotateY(-15deg)` on hover for a subtle "peek" preview without requiring a full click.
+- **Delay flip:** add `transition-delay: 0.2s` to `.flip-card-inner` to delay animation start.
+- **Accessibility:** add `aria-label` to the card container and `aria-expanded` state driven by the Dash callback; consider `prefers-reduced-motion` media query to disable the animation.
 
 ## Related
 

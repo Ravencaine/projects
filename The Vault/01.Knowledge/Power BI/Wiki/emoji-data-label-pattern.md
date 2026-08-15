@@ -70,7 +70,7 @@ IF([Rank] = 1, "🥇 Top Result", BLANK())
 
 ## Design Notes
 
-- Emojis are **text** — they export cleanly in all formats
+- Emojis are **text:** they export cleanly in all formats
 - One emoji per label avoids clutter
 - Use consistently across the report to build a **visual language**
 

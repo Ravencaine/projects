@@ -4,6 +4,7 @@ updated: 2026-08-02
 source: Artificial Intelligence with Power BI (Diepeveen)
 note_type: atomic
 tags: [data-storytelling, narrative, visualisation, communication]
+source_url:
 ---
 
 # Data Storytelling — Why Humans Need Narrative
@@ -20,6 +21,16 @@ Data storytelling is the practice of framing data insights within a narrative: w
 - Reports with narrative explanations are more likely to drive decisions than charts alone
 - Power BI tooltips, tooltips pages, and narrative insights are all storytelling mechanisms
 - The analyst's role is to translate data into a story stakeholders can act on
+- Data storytelling is elevated by **structural integrity** (clear opening, logical sequence, uniform formatting) and **interactive exploration** (drill-down, filters, slicers) — both guide the viewer through the narrative without abandoning it for raw data
+
+## Storytelling in Practice
+
+Van Zyl's framework for data-driven narratives in Power BI:
+- **Titles and captions** set the scene and frame the question the visual answers
+- **Annotations** on charts highlight the turning point, anomaly, or key correlation in the data
+- **Annotations should guide**, not replace — the viewer still reads the chart, but knows where to look
+
+> Source: [[Source-Crafting-Compelling-Impactful-Power-BI-Reports]] — Althea Van Zyl, 2024-07-09
 
 ## Storytelling as a Dashboard Design Practice
 

@@ -23,7 +23,7 @@ Power BI's default area chart looks generic; the slanted, oblique area chart pat
 ## Key Claims
 
 1. Modern oblique area charts can be built without custom visuals — only a line chart, a Figma PNG background, and well-placed error bands are required.
-2. Error bands (in the Analytics pane) can be repurposed from a statistical tool into a **visual mask** — fill them white, set upper/lower bounds to deliberately inflated values, and the chart edges become invisible against the background.
+2. Error bands (in the Analytics pane) can be repurposed from a statistical tool into a **visual mask:** fill them white, set upper/lower bounds to deliberately inflated values, and the chart edges become invisible against the background.
 3. The oblique baseline itself isn't drawn by Power BI at all — it lives entirely in the background PNG, behind a line chart that has its own background disabled.
 4. Y-axis range can be tied to dynamic DAX measures (`Max Graph Area`, `Min Graph Area`) using `MAXX`/`MINX` with a percentage buffer, so the chart adapts to whatever metric the slicer selects.
 5. A custom tooltip page is the cleanest way to hide the chart's invisible "max/min graph area" helper measures from end users.

@@ -1,5 +1,6 @@
 ---
 created: 2026-08-02
+updated: 2026-08-02
 source: One UDF, All Your KPI Colors 🎨: 3 Steps in Power BI
 note_type: pattern
 tags: [dax, pattern, udf, color, kpi, font, background, visual-formatting]

@@ -16,3 +16,7 @@ This is the index for the VBA knowledge base. 1 notes grouped by type.
 | [[QUESTIONS.md]] | Open Questions |
 
 (None yet — questions surface here after ingestion, health checks, or during note-writing.)
+
+
+## Imported from Raindrop / Medium Reading List
+- [[CHANGELOG|Changelog]]

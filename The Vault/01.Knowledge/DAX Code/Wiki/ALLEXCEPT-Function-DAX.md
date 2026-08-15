@@ -24,7 +24,7 @@ ALLEXCEPT(<table>, <column>[, <column>[, …]])
 
 | Parameter | Description |
 |-----------|-------------|
-| `table` | **First argument** — the table over which all context filters are removed |
+| `table` | **First argument:** the table over which all context filters are removed |
 | `column` | Subsequent arguments — the columns whose filters must be preserved |
 
 **Note:** Unlike ALL and ALLSELECTED, the table argument comes **first**, then the columns to keep. This is the opposite order.
@@ -60,9 +60,9 @@ CALCULATE(
 )
 ```
 
-- Year slicer: **preserved** — total reflects selected year
-- Category slicer: **removed** — total includes all categories
-- Region slicer: **removed** — total includes all regions
+- Year slicer: **preserved:** total reflects selected year
+- Category slicer: **removed:** total includes all categories
+- Region slicer: **removed:** total includes all regions
 
 ## ALLEXCEPT vs ALL
 

@@ -1,7 +1,7 @@
 ---
 created: 2026-08-01
 updated: 2026-08-02
-source: 'Why I Stopped Writing "Best Practice" DAX Posts (And What I Write Instead).md'
+source: 'Best Practices for Using Explicit Measures in Power BI.md'
 source_url: "https://medium.com/towards-artificial-intelligence/why-i-stopped-writing-best-practice-dax-posts-and-what-i-write-instead-f32e9e8fd77d"
 author: "Gulab Chand Tejwani"
 published: 2026-06-09

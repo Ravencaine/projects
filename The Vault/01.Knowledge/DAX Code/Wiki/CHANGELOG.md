@@ -1,12 +1,27 @@
 ---
 created: 2026-08-02
-updated: 2026-08-02
+updated: 2026-08-11
 source: system:changelog
 ---
 
 # CHANGELOG
 
 All notable changes to this knowledge base are documented here.
+
+## 2026-08-11 — Health check (delta)
+
+Audit: full scan of 1,197 wiki files. Delta since 2026-08-06.
+
+Auto-fixed:
+- writing-rules: 60 em-dash bullets replaced with colons across 60 files
+- frontmatter: 177 `updated:` fields backfilled
+
+New articles drafted: 0
+
+Pending judgement:
+- none (all items from previous check resolved or carried forward)
+
+## 2026-08-06 — Second-pass extractions
 
 ## 2026-08-05 — Health check (delta)
 

@@ -60,7 +60,7 @@ Five-step end-to-end workflow for building a custom theme with style presets in 
 5. **Load the theme and apply presets in Power BI Desktop**
    - Save the updated `.json` file
    - In Power BI Desktop: **View > Themes > Browse for themes** and reload the file
-   - Click any visual → **Format > Style preset** — all custom presets for that visual type appear in the dropdown
+   - Click any visual → **Format > Style preset:** all custom presets for that visual type appear in the dropdown
    - Select a preset per visual instance
 
 > **Note:** The Style preset dropdown appears in the Format pane **only** if at least one custom preset has been defined for that visual type in the JSON file.

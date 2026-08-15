@@ -16,10 +16,15 @@ Independent business consultant specialising in BI and data science. Writes arti
 
 ## Sources in this vault
 
-| Title | KB | Date |
-|-------|----|------|
-| [[Anomaly-Detection-Power-BI-Isabelle-Bittar-source]] | Power BI / Power Query | 2025-08-09 |
-| [[Circular-Images-Power-BI-Isabelle-Bittar-source]] | Power BI / Power Query | 2025-12-11 |
+|| Title | KB | Date ||
+|| --- | --- | --- ||
+|| [[Anomaly-Detection-Power-BI-Isabelle-Bittar-source]] | Power BI / Power Query | 2025-08-09 ||
+|| [[Circular-Images-Power-BI-Isabelle-Bittar-source]] | Power BI / Power Query | 2025-12-11 ||
+|| [[source-interactive-tutorials-that-stick]] | Power BI | 2024-02-12 ||
+| [[Source-Conditionally-Color-Coding-Line-Charts-in-Power-BI]] | Power BI | 2025-04-26 |
+| [[Source-Designing-for-Impact-6-Ideas]] | Designing for Impact | Power BI | 2024-03-02 |
+| [[source-custom-icons-power-bi-tables]] | Custom Icons Power BI Tables | Power BI | 2024-12-31 |
+| [[source-html-css-joining-forces-fp20]] | HTML & CSS Joining Forces FP20 | Power BI | 2024-02-04 |
 
 ## Expertise
 
@@ -28,8 +33,10 @@ Independent business consultant specialising in BI and data science. Writes arti
 - Dashboard UX and table visual design
 - Anomaly detection (Isolation Forest, time-series)
 - Power BI custom visualisation techniques
+- Interactive report onboarding and guided tutorial design
 
 ## Related
 
 - [[Anomaly-Detection-Power-BI-Isabelle-Bittar-source]]
 - [[Circular-Images-Power-BI-Isabelle-Bittar-source]]
+- [[source-interactive-tutorials-that-stick]]

@@ -13,9 +13,9 @@ Using emojis inside KPI card measures to communicate status, trend, or category 
 
 ## Why Emojis in Measures?
 
-- **No dependency on visual formatting** — the status is baked into the measure value itself
-- **Transferable** — works across KPI cards, table matrices, multi-row cards, and measure grids
-- **Concise** — a single character communicates what a color or icon would take up space to show
+- **No dependency on visual formatting:** the status is baked into the measure value itself
+- **Transferable:** works across KPI cards, table matrices, multi-row cards, and measure grids
+- **Concise:** a single character communicates what a color or icon would take up space to show
 
 ## Basic Emoji KPI Pattern
 
@@ -76,9 +76,9 @@ Use a leading space after the emoji so the number doesn't crowd the icon:
 
 ## Limitations
 
-- **Font rendering** — not all fonts render all emojis consistently across Power BI Service
-- **Export** — emojis may not render in exported PDFs or Excel
-- **Accessibility** — screen readers will read the emoji character; pair with text for full accessibility
+- **Font rendering:** not all fonts render all emojis consistently across Power BI Service
+- **Export:** emojis may not render in exported PDFs or Excel
+- **Accessibility:** screen readers will read the emoji character; pair with text for full accessibility
 
 ## Related
 

@@ -30,7 +30,7 @@ RAND.BETWEEN(<min>, <max>)
 ## Remarks
 
 - Both arguments must be integers
-- `RAND.BETWEEN()` is a **volatile function** — it returns a new value on every evaluation
+- `RAND.BETWEEN()` is a **volatile function:** it returns a new value on every evaluation
 - No seed parameter — the sequence cannot be reproduced
 - Often used to add a random integer offset to a date or numeric column
 

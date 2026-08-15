@@ -37,11 +37,11 @@ Group measures visually using Tabular Editor or Power BI's Display Folder proper
 
 ## Naming Rules
 
-1. **Use `[Brackets]` for measure references** — never forget the brackets inside CALCULATE, CALCULATETABLE, or any expression that references another measure.
-2. **Omit table qualifiers** — `SUM(Sales[Revenue])` not `SUM('Sales'[Revenue])` unless the column name is ambiguous.
-3. **Keep names short** — 1–3 words. `Sales YTD` beats `Year to Date Total Sales`.
-4. **Use Title Case** — `Gross Profit %` not `gross_profit_pct`.
-5. **Indicate direction for delta measures** — `Sales vs LY %`, `Margin Delta`.
+1. **Use `[Brackets]` for measure references:** never forget the brackets inside CALCULATE, CALCULATETABLE, or any expression that references another measure.
+2. **Omit table qualifiers:** `SUM(Sales[Revenue])` not `SUM('Sales'[Revenue])` unless the column name is ambiguous.
+3. **Keep names short:** 1–3 words. `Sales YTD` beats `Year to Date Total Sales`.
+4. **Use Title Case:** `Gross Profit %` not `gross_profit_pct`.
+5. **Indicate direction for delta measures:** `Sales vs LY %`, `Margin Delta`.
 
 ## Anti-Pattern: Underscores and Abbreviations
 

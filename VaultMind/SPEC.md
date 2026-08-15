@@ -52,16 +52,19 @@ This is not a semantic search engine. It is a knowledge base that an LLM interro
 │                                                         │
 │  ┌──────────────────────────────────────────────────┐   │
 │  │              Ollama (separate process)             │   │
-│  │  • qwen2.5:7b-q4_K_M (LLM)                       │   │
-│  │  • nomic-embed-text (embeddings only)            │   │
+│  │  • qwen2.5:7b-instruct-q4_K_M (LLM, CPU-only)     │   │
 │  └──────────────────────────────────────────────────┘   │
 │                                                         │
 │  ┌──────────────────────────────────────────────────┐   │
-│  │              Whisper (CPU + Arc)                  │   │
-│  │  • faster-whisper + Intel oneAPI                 │   │
-│  │  • yt-dlp for web video download                 │   │
+│  │              OpenVINO Whisper (Arc GPU)           │   │
+│  │  • distil-whisper-large-v3-int4-ov                │   │
+│  │  • yt-dlp + ffmpeg for web video download         │   │
 │  └──────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────┘
+
+**No semantic search.** Retrieval is BM25 + phrase/NEAR on SQLite FTS5 only.
+Embeddings are NOT used at runtime in v0.
+**No internet calls.** No cloud. No API keys.
 ```
 
 **No internet calls. No cloud. No API keys.**
@@ -170,13 +173,13 @@ Single resizable window (min 900×600). Three-pane layout:
 | XLSX | openpyxl | Sheet-by-sheet text extraction |
 | PPTX | python-pptx | Text + slide numbers |
 | TXT / MD | raw read | Direct ingestion |
-| EPUB | epublib | Text extraction |
+| EPUB | ebooklib | Text extraction (chapters via spine walk) |
 | PNG / JPG | pytesseract OCR | Image → text |
-| MP3 / WAV / M4A | faster-whisper | Audio → transcript |
-| MP4 / AVI / MKV / WEBM | faster-whisper | Video → transcript (audio track) |
-| YouTube URL | yt-dlp → faster-whisper | Download + transcribe |
-| Web article URL | requests + BeautifulSoup | Scrape article text |
-| Web video URL | yt-dlp → faster-whisper | Download + transcribe |
+| MP3 / WAV / M4A / FLAC / OGG | OpenVINO Whisper | Audio → transcript |
+| MP4 / AVI / MKV / WEBM / MOV | ffmpeg → OpenVINO Whisper | Video → transcript (audio track) |
+| YouTube URL | yt-dlp → ffmpeg → OpenVINO Whisper | Download + transcribe |
+| Web article URL | requests + readability-lxml | Scrape article text (boilerplate-stripped) |
+| Web video URL | yt-dlp → ffmpeg → OpenVINO Whisper | Download + transcribe |
 
 ### 5.2 Chunking
 
@@ -391,6 +394,7 @@ Response: { "chunks": [...], "sources": [...] }
 
 ```bash
 ollama pull qwen2.5:7b-instruct-q4_K_M
+# Optional for v2 (semantic recall). NOT used at runtime in v1.
 ollama pull nomic-embed-text:latest
 ```
 
@@ -398,35 +402,40 @@ ollama pull nomic-embed-text:latest
 
 ### 10.2 Whisper Setup
 
+**Backend: OpenVINO GenAI** (not faster-whisper — see Open Decisions §13). Pre-converted IR models are downloaded from the `OpenVINO/speech-to-text` HuggingFace collection.
+
 ```bash
-pip install faster-whisper
-# Optional: Intel oneAPI for Arc acceleration
-pip install intel-extension-for-pytorch
+pip install openvino-genai>=2024.4
+# Default model is OpenVINO/distil-whisper-large-v3-int4-ov, downloaded by bootstrap.ps1.
 ```
+
+`device="GPU"` is passed to `WhisperPipeline` — OpenVINO dispatches to Arc 140V on Windows.
 
 ### 10.3 Python Dependencies
 
 ```
-fastapi
-uvicorn
-pymupdf
-python-docx
-openpyxl
-python-pptx
-epublib
-pytesseract
-faster-whisper
-yt-dlp
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pymupdf>=1.24
+python-docx>=1.1
+openpyxl>=3.1
+python-pptx>=1.0
+ebooklib>=0.18
+pytesseract>=0.3
+Pillow>=10.0
+openvino-genai>=2024.4
+yt-dlp>=2024.08
 requests
-beautifulsoup4
-httpx
+beautifulsoup4>=4.12
+readability-lxml>=0.8
+httpx>=0.27
 ```
 
 ### 10.4 Tauri Build
 
-- Tauri 2.x with Python backend via `pyo3` or subprocess bridge
-- Frontend: vanilla HTML/CSS/JS (no framework — minimal footprint)
-- Build target: Windows x64 `.exe`
+- Tauri 2.x with Python backend launched as a **subprocess sidecar** (PyInstaller-bundled `.exe`). No `pyo3`.
+- Frontend: vanilla HTML/CSS/JS (no framework — minimal footprint).
+- Build target: Windows x64 `.exe` + NSIS installer.
 
 ---
 
@@ -437,40 +446,64 @@ VaultMind/
 ├── SPEC.md
 ├── README.md
 ├── CLAUDE.md
-├── src/                       # Rust (Tauri shell)
-│   ├── main.rs
-│   ├── lib.rs
-│   └── commands.rs
-├── frontend/                  # HTML/CSS/JS
+├── requirements.txt
+├── pyproject.toml
+├── src-tauri/                 # Rust (Tauri 2.x shell)
+│   ├── Cargo.toml
+│   ├── tauri.conf.json
+│   └── src/
+│       ├── main.rs
+│       ├── lib.rs
+│       ├── commands.rs
+│       ├── backend.rs
+│       ├── tray.rs
+│       └── state.rs
+├── frontend/                  # Vanilla HTML/CSS/JS
 │   ├── index.html
 │   ├── styles.css
 │   ├── app.js
-│   └── icons/
+│   ├── api.js
+│   ├── sse.js
+│   ├── ingest.js
+│   ├── chat.js
+│   ├── query.js
+│   └── citations.js
 ├── backend/                   # Python FastAPI
+│   ├── __main__.py
 │   ├── main.py
 │   ├── config.py
-│   ├── database.py            # SQLite + FTS5
-│   ├── ingest/
-│   │   ├── __init__.py
-│   │   ├── pdf.py
-│   │   ├── docx.py
-│   │   ├── xlsx.py
-│   │   ├── pptx.py
-│   │   ├── text.py
-│   │   ├── epub.py
-│   │   ├── image.py
-│   │   ├── audio.py
-│   │   ├── video.py
-│   │   ├── url.py
-│   │   └── youtube.py
+│   ├── database.py            # SQLite + FTS5 + triggers
 │   ├── chunker.py
+│   ├── cleanup.py
 │   ├── query.py
 │   ├── ollama_client.py
-│   └── models.py              # Pydantic schemas
-├── models/                    # Ollama model storage
-│   └── .gitkeep
-└── vault/                     # SQLite DB + vault data
-    └── .gitkeep
+│   ├── prompts.py
+│   ├── citations.py
+│   ├── progress.py
+│   ├── hashes.py
+│   ├── paths.py
+│   ├── models.py              # Pydantic schemas
+│   └── ingest/
+│       ├── __init__.py        # register() + get_extractor() registry
+│       ├── base.py            # Extractor protocol + dataclasses
+│       ├── pdf.py
+│       ├── docx.py
+│       ├── xlsx.py
+│       ├── pptx.py
+│       ├── text.py
+│       ├── epub.py
+│       ├── image.py
+│       ├── media.py           # audio + video (ffmpeg → OpenVINO Whisper)
+│       ├── url.py
+│       └── youtube.py
+├── models/                    # Ollama + OpenVINO Whisper storage
+│   ├── .gitkeep
+│   └── whisper/               # OpenVINO IR cache
+└── vault/                     # SQLite DB + cache
+    ├── vaultmind.db
+    ├── downloads/
+    ├── audio/
+    └── .cache/
 ```
 
 ---
@@ -487,10 +520,13 @@ VaultMind/
 
 ---
 
-## 13. Open Questions
+## 13. Open Decisions (Resolved)
 
-- [ ] Preferred chunk size — 700 tokens (spec default) or adjustable?
-- [ ] Should chat history be per-vault or global?
-- [ ] Whisper model size — `base` (fast, less accurate) vs `medium` (slower, better)? On Arc, both are viable.
-- [ ] Include web scraping for article URLs? (Already spec'd — confirm.)
-- [ ] Should the Query pane have a "filter by source" feature?
+| # | Question | Resolution |
+|---|----------|------------|
+| 1 | **Chunk size — 700 fixed or adjustable?** | 700 default (target), 350–850 range. Page-aware (no chunk spans a page boundary). Configurable via `backend/config.py` constant `CHUNK_TARGET_TOKENS`. UI override is a v0.1 feature. |
+| 2 | **Chat history — per-vault or global?** | Per-vault. One SQLite DB per vault (`vault/vaultmind.db`). Multi-vault deferred to v2. |
+| 3 | **Whisper model size — base / medium / large-v3?** | **`distil-whisper-large-v3-int4-ov`** (OpenVINO IR, INT4) as v0 default. ~6× faster than `large-v3` on Arc with quality close to `large-v3`. `large-v3-turbo` opt-in via `backend/config.py` constant `WHISPER_MODEL`. `base` rejected (too lossy for technical material). |
+| 4 | **Web scraping — article URLs included?** | Yes, confirmed. Implemented in `backend/ingest/url.py` using `requests` + `readability-lxml` (boilerplate stripping). Falls back to plain BeautifulSoup if readability fails. |
+| 5 | **Query pane — filter by source?** | Yes, ship in v0. Multi-select source filter chips above results list. Client-side filter on the existing chunk list (no re-query). |
+| 6 | **Embeddings — drop or keep `nomic-embed-text`?** | Drop semantic search from v0. `nomic-embed-text` may be pre-pulled as future-proofing only — it must never be queried at runtime. See CLAUDE.md RULE-VM-1. |

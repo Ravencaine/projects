@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache
+coverage.xml
+*.cover
+
+# mypy / ruff
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (for cargo tauri dev tooling)
+node_modules/
+package-lock.json
+
+# Rust
+src-tauri/target/
+src-tauri/Cargo.lock
+
+# Frontend build output (none in v0; future-proofing)
+frontend/dist/
+
+# VaultMind runtime
+vault/*.db
+vault/*.db-shm
+vault/*.db-wal
+vault/downloads/*
+vault/audio/*
+vault/.cache/*
+!vault/.gitkeep
+!vault/downloads/.gitkeep
+!vault/audio/.gitkeep
+!vault/.cache/.gitkeep
+
+models/*.bin
+models/*.gguf
+models/*.safetensors
+models/*.pt
+models/*.blob
+models/whisper/*/
+!models/.gitkeep
+!models/whisper/.gitkeep
+
+# Tauri build output
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/

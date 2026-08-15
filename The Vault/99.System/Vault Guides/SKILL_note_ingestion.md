@@ -17,6 +17,9 @@ Every note has exactly one type. Pick the most specific fit.
 | `comparison` | A vs B analysis: two approaches, tools, or concepts evaluated side by side. |
 | `workflow` | A step-by-step process with ordered, conditional, or branching steps. |
 | `reference` | A lookup table, cheatsheet, cheat sheet, or quick-reference card. |
+| `entity` | A named person, tool, or organization referenced by one or more articles in the KB but lacking a dedicated wiki note. Used by `extract-implicit-knowledge` skill. |
+| `claim` | A specific assertion or thesis attributed to one or more articles in the KB. The assertion itself, not the topic — can be cited, contradicted, or built upon. Used by `extract-implicit-knowledge` skill. |
+| `relationship` | A typed edge between two notes (builds_on, exemplifies, cites, contradicts) with quoted evidence. Used by `extract-implicit-knowledge` skill. |
 
 ---
 
@@ -119,6 +122,9 @@ The canonical note templates live alongside the skill in `99.System/Vault Guides
 | `template_reference.md` | reference |
 | `template_snippet.md` | snippet |
 | `template_workflow.md` | workflow |
+| `template_entity.md` | entity |
+| `template_claim.md` | claim |
+| `template_relationship.md` | relationship |
 
 ---
 
@@ -198,6 +204,14 @@ Before writing, check if a similar note exists in the target KB:
 4. If the source repeats the existing note verbatim or near-verbatim, skip writing — mark inventory item as `skipped (duplicate)`.
 5. If the source contradicts the existing note, flag it in the report and mark the inventory item as `conflict — see report`.
 6. If no similar note exists, write a new one.
+
+### Implicit-Knowledge Extension Rules (extract-implicit-knowledge skill)
+
+These rules apply only to notes created by the `extract-implicit-knowledge` skill:
+
+- **Entity notes**: if the skill proposes an entity whose slug already exists in the KB's `Wiki/Implicit/` folder or in `merge-state.json`, extend the existing note's `## Sources in the Vault` list with the new article citation rather than creating a duplicate.
+- **Claim notes**: if the skill proposes a claim whose slug already exists, add the new `## Evidence` bullet (with the new article citation) rather than creating a duplicate. Do not overwrite the existing claim body.
+- **Relationship notes**: if the skill proposes a relationship whose slug already exists, skip it silently — the existing note is preserved.
 
 ---
 

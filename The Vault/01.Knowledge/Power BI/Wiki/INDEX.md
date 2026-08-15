@@ -4805,3 +4805,138 @@ Anurodh Kumar · Medium · 2026-05-02 · 5 beginner report design mistakes: too 
 [[your-excel-pivottable-isnt-complete-until-you-add-these-two-pro]]
 [[youre-picking-the-wrong-charts-let-excels-new-agent-mode-decide-for-you]]
 [[youtube]]
+
+
+## Implicit Knowledge
+
+| Note | Description |
+|------|-------------|
+| [[Implicit/Entities/entity-althea-van-zyl]] | Author of Power BI report design articles published on databear.com in 2024 |
+| [[Implicit/Entities/entity-databearcom]] | Power BI consulting and training company publishing practical articles on report design and Power BI best practices |
+| [[Implicit/Entities/entity-plotlyjs]] | Open-source JavaScript charting library loaded via CDN, used inside Power BI HTML Content visual for custom heatmaps and |
+| [[Implicit/Entities/entity-statsmodels]] | Python library providing ExponentialSmoothing (Holt-Winters) implementation callable from Power Query Python script |
+| [[Implicit/Entities/entity-html-content-visual]] | Custom visual in Power BI that renders arbitrary HTML and JavaScript, enabling D3, Plotly, and other web-native charts i |
+| [[Implicit/Entities/entity-double-diamond-design-framework]] | Four-stage UX design process (Discover, Define, Develop, Deliver) used as the design methodology underpinning Isabelle B |
+| [[Implicit/Entities/entity-iso-8601]] | International date and time standard; week numbering scheme used by getISOWeek to map dates to calendar heatmap columns |
+| [[Implicit/Entities/entity-holt-winters-forecasting]] | ETS variant with additive trend and additive seasonality, implemented via statsmodels.tsa.holtwinters.ExponentialSmoothi |
+| [[Implicit/Entities/entity-concatenatex]] | DAX iterator function that concatenates a table's rows into a string; used as the JSON serialization bridge for passing  |
+| [[Implicit/Entities/entity-mary-jo-diepeveen]] | Author of 'Artificial Intelligence with Power BI', the source reference for the ETS exponential smoothing model note |
+| [[Implicit/Entities/entity-the-3-30-300-rule]] | Question hierarchy framework by Isabelle Bittar defining user engagement windows: 3 seconds (summary), 30 seconds (detai |
+| [[Implicit/Entities/entity-auto-date-time]] | Power BI setting that auto-creates hidden date tables for every date column; disabling it gives full control over the da |
+| [[Implicit/Edges/builds_on/source-crafting-data-narratives--builds_on--data-storytelling]] | ****: Source-Crafting-Data-Narratives provides the primary philosophical foundation (Power BI as a storytelling medium) that d |
+| [[Implicit/Edges/exemplifies/source-crafting-compelling-impactful-power-bi-reports--exemplifies--data-storytelling]] | ****: Article frames report creation as data storytelling, directly connecting to the data-storytelling concept |
+| [[Implicit/Edges/exemplifies/github-style-calendar-heatmap-pattern--exemplifies--pattern-recognition-over-exact-values]] | ****: Calendar heatmap is a concrete implementation of the principle that pattern recognition (density/color) beats exact valu |
+| [[Implicit/Edges/builds_on/plotly-heatmap-snippet--builds_on--github-style-calendar-heatmap-pattern]] | ****: Plotly-Heatmap-Snippet provides the reusable boilerplate code used inside the GitHub-Style-Calendar-Heatmap-Pattern impl |
+| [[Implicit/Edges/builds_on/getisoweek-javascript--builds_on--github-style-calendar-heatmap-pattern]] | ****: getISOWeek computes the week numbers used as x-axis columns in the calendar heatmap matrix |
+| [[Implicit/Edges/builds_on/getdaynumber-javascript--builds_on--github-style-calendar-heatmap-pattern]] | ****: getDayNumber maps JavaScript Sunday=0 to ISO Monday=1 layout, populating the 7-row heatmap matrix used by the calendar h |
+| [[Implicit/Edges/builds_on/concatenatex-json-bridge--builds_on--github-style-calendar-heatmap-pattern]] | ****: CONCATENATEX JSON Bridge is the DAX serialization mechanism that feeds date/value data into the Plotly.js heatmap inside |
+| [[Implicit/Edges/contradicts/ets-exponential-smoothing-model--contradicts--forecasting-visual-power-bi]] | ****: The article explicitly argues for Python/holt-winters via Power Query over the built-in Forecasting visual, identifying  |
+| [[Implicit/Edges/exemplifies/source-crafting-data-narratives--exemplifies--double-diamond-design]] | ****: The article's 7-step process is directly drawn from and exemplifies the Double Diamond design framework |
+| [[Implicit/Edges/builds_on/source-crafting-data-narratives--builds_on--the-3-30-300-rule]] | ****: The 3-30-300 question hierarchy rule is used as step 2 in the 7-step report design process |
+| [[Implicit/Edges/exemplifies/source-crafting-compelling-impactful-power-bi-reports--exemplifies--report-structural-integrity]] | ****: The article explicitly identifies structural integrity as the first principle for report design, with intro-body-formatt |
+| [[Implicit/Edges/builds_on/source-crafting-compelling-impactful-power-bi-reports--builds_on--data-accuracy-and-reliability]] | ****: The article identifies data accuracy and reliability as a prerequisite for trust, building on the foundational importanc |
+| [[Implicit/Edges/builds_on/source-crafting-data-narratives--builds_on--visual-design-principles]] | ****: The article applies Visual-Design-Principles and Gestalt-Principles to dashboard layout as part of the 7-step process |
+| [[Implicit/Edges/builds_on/source-crafting-data-narratives--builds_on--report-stewardship]] | ****: Step 7 of the 7-step process is post-publication iteration, which corresponds to Report-Stewardship practices |
+| [[Implicit/Edges/authored_by/entityalthea-van-zyl--authored_by--source-crafting-compelling-impactful-power-bi-reports]] | ****: Althea Van Zyl is the named author of the databear.com article |
+| [[Implicit/Edges/authored_by/entitydatabear--authored_by--source-crafting-compelling-impactful-power-bi-reports]] | ****: databear.com is the publishing organization for the Crafting Compelling Reports article |
+| [[Implicit/Edges/authored_by/entitymary-jo-diepeveen--authored_by--ets-exponential-smoothing-model]] | ****: Mary Jo Diepeveen is credited as the author of 'Artificial Intelligence with Power BI', the source note for the ETS arti |
+| [[Implicit/Edges/exemplifies/entitydouble-diamond--exemplifies--source-crafting-data-narratives]] | ****: The Double Diamond design framework underpins the 7-step process described in the Crafting Data Narratives article |
+
+| [[Implicit/Entities/entity-jake-duddy]] | Power BI author specializing in security topics: dynamic data masking, RLS vs OLS, semantic model security, Import vs Di |
+| [[Implicit/Entities/entity-janvi-gupta]] | Power BI educator and Medium publication author. Publishes the Power BI Masterclass series on Towards Data Science / Med |
+| [[Implicit/Entities/entity-juls]] | Power BI author focused on accessibility, AI-assisted development, WCAG compliance, and vibe coding workflows. Site: sma |
+| [[Implicit/Entities/entity-riccardo-perico]] | Power BI and DAX author on Medium. Focuses on practical DAX patterns, time intelligence, and semantic modeling guidance. |
+| [[Implicit/Entities/entity-plotly]] | Python graphing library. Used for chart rendering within Dash applications, with Plotly Express and graph objects. |
+| [[Implicit/Entities/entity-dash]] | Python web application framework for building analytical dashboards. Part of the Plotly ecosystem. Handles layout, callb |
+| [[Implicit/Entities/entity-gpt-4]] | OpenAI's large language model, used in these articles for thematic coding and survey enrichment workflows. |
+| [[Implicit/Entities/entity-openai-api]] | REST API for accessing OpenAI models. Used for making per-comment API calls in survey enrichment pipelines. |
+| [[Implicit/Entities/entity-pbir-power-bi-report-format]] | PBIR is the default Power BI Desktop report save format. It stores the complete report definition as structured JSON fil |
+| [[Implicit/Entities/entity-visual-calculations]] | Power BI feature that lets you write DAX-like expressions that only reference values present on the visual. Key function |
+| [[Implicit/Entities/entity-collapsesum-visual-calculation]] | A visual calculation function that computes a sum. Used with `ALL` modifier to calculate percent-of-total without needin |
+| [[Implicit/Entities/entity-runningsum-visual-calculation]] | A visual calculation function that computes a cumulative sum over rows, ordered by a specified column, used to build Par |
+| [[Implicit/Entities/entity-next-visual-calculation]] | A visual calculation function that returns the next row's value in the current sort order. Used to detect the last item  |
+| [[Implicit/Entities/entity-geometric-mean]] | The nth root of the product of n values. Preferred over arithmetic mean for aggregating multi-reviewer scores because it |
+| [[Implicit/Entities/entity-arithmetic-mean]] | The sum of values divided by the count. Does not penalize extreme outliers as effectively as geometric mean when aggrega |
+| [[Implicit/Entities/entity-power-query-m]] | Power BI's data transformation and ETL layer. Has no built-in geometric mean function; requires a two-step manual implem |
+| [[Implicit/Entities/entity-powershell]] | Windows scripting language used to write automation scripts that programmatically edit PBIR JSON files for Power BI desi |
+| [[Implicit/Entities/entity-ai-agent]] | An AI agent that reads Power BI report schemas and generates PowerShell automation scripts from natural-language descrip |
+| [[Implicit/Entities/entity-pbidesktop-reload-cli]] | A CLI command (part of the Power BI AI Agent skills) that refreshes an open Power BI Desktop PBIR report directly from t |
+| [[Implicit/Entities/entity-chart-selection-framework]] | A decision tree framework for choosing the right Power BI chart type based on the analytical question: time trends (line |
+| [[Implicit/Entities/entity-abc-classification-pareto]] | A categorization technique based on the Pareto principle (80/20 rule). Products/clients are grouped into A (top ~40% of  |
+| [[Implicit/Claims/claim-flip-card-css3d]] | The flip card interaction is driven entirely by CSS: rotateY(180deg) on .flip-card-inner toggled via class name; backfac |
+| [[Implicit/Claims/claim-flip-card-state-toggle]] | Dash tracks only n_clicks on the card inner container. Odd clicks set className to 'flip-card-inner flipped'; even click |
+| [[Implicit/Claims/claim-perspective-1000px]] | Setting .flip-card { perspective: 1000px; } creates a 3D depth environment where the 1000px distance produces a natural- |
+| [[Implicit/Claims/claim-chart-axis-alignment-gotcha]] | When two native visuals are stacked to create composite charts, their X-axes are independent by default. Even identical  |
+| [[Implicit/Claims/claim-axis-bounds-wired-to-measures]] | Setting axis bounds manually (e.g., fixed dates) breaks when data changes. Binding both stacked visuals to the same boun |
+| [[Implicit/Claims/claim-transparent-date-buffer]] | Without a left-side buffer, Gantt bars start at X=0 and float disconnected from the timeline. A Date Start Buffer measur |
+| [[Implicit/Claims/claim-status-measure-family]] | Rather than fight Power BI conditional formatting on a single measure, build one measure per status (Not Started, Delaye |
+| [[Implicit/Claims/claim-component-first-reuse]] | Building dashboards from small, reusable, single-responsibility components means adding a new card requires only a new d |
+| [[Implicit/Claims/claim-card-tuples-data-driven]] | Defining card content as a list of tuples (card_id, title, value, subtitle, back_fig, front_fig) and rendering via list  |
+| [[Implicit/Claims/claim-splat-callback-autoadapt]] | Using *[Output(f'c{i}-inner', 'className') for i in range(1, len(CARDS)+1)] and the same pattern for Input adapts the ca |
+| [[Implicit/Claims/claim-data-ui-separation]] | Loading data at startup from CSV/API/database and passing it into components as arguments means changing the data source |
+| [[Implicit/Claims/claim-error-band-whiteout]] | Setting an error band's fill to solid white (0% transparency) and binding its upper/lower bounds to inflated values that |
+| [[Implicit/Claims/claim-error-band-not-statistical]] | When error bands are used decoratively rather than to communicate statistical uncertainty, reviewers may misinterpret th |
+| [[Implicit/Claims/claim-line-charts-preferred-whiteout]] | Line charts' translucent strokes leave the background visible beneath the masked region. Area charts' solid fill fights  |
+| [[Implicit/Claims/claim-two-pass-thematic-coding]] | First-pass: one LLM call over the full corpus extracts a closed set of 12-15 themes. Second-pass: per-comment calls clas |
+| [[Implicit/Claims/claim-thematic-closed-vocabulary]] | Free tagging per comment ('Customer Support', 'Support Quality', 'Helpful Support') produces inconsistent labels that do |
+| [[Implicit/Claims/claim-sentiment-separate-pass]] | Theme tagging and sentiment scoring should be separate LLM calls. Sentiment uses a numeric 1-5 scale with locked definit |
+| [[Implicit/Claims/claim-gantt-two-visual-stack]] | A transparent clustered column chart provides the date X-axis timeline grid; a bar chart with transparent buffer series  |
+| [[Implicit/Claims/claim-dax-axis-bounds-adapts]] | Min Calendar Date and Max Project Date measures use CALCULATE and FILTER over the Projects table with ALL() to return th |
+| [[Implicit/Claims/claim-plotly-layout-mutation]] | Plotly's `fig.update_layout(**layout)` mutates the Python dict passed to it, rather than defensively copying. Reusing th |
+| [[Implicit/Claims/claim-visual-calculations-only-see-on-visual]] | Visual calculations in Power BI can only reference values that are present on the visual -- even if those values are hid |
+| [[Implicit/Claims/claim-geometric-mean-downweights-outliers]] | When aggregating scores from multiple reviewers, geometric mean naturally reduces the disproportionate influence of extr |
+| [[Implicit/Claims/claim-power-query-no-native-geometric-mean]] | Power Query (M) does not include a native geometric mean function. It must be implemented in two steps: (1) compute the  |
+| [[Implicit/Claims/claim-pbir-enables-ai-editing]] | PBIR stores Power BI report definitions as structured JSON files, making the full visual schema readable by AI agents. T |
+| [[Implicit/Claims/claim-ai-agent-generates-powershell]] | An AI agent can generate PowerShell scripts that programmatically edit PBIR JSON files, based on a natural-language desc |
+| [[Implicit/Claims/claim-stacked-columns-with-blank-create-threshold-bands]] | Three stacked column series using IF/BLANK logic -- each returning a fixed threshold value only for items within its buc |
+| [[Implicit/Claims/claim-pie-donut-4-5-slice-limit]] | Beyond 4-5 slices, pie and donut chart labels become unreadable and the eye cannot accurately compare slice sizes. If th |
+| [[Implicit/Claims/claim-visual-calc-data-format-properties-pane]] | For visual calculation fields, data format settings must be configured in the Properties panel under Data format, not in |
+| [[Implicit/Claims/claim-chart-selection-matches-goal]] | The guiding principle for chart selection is: pick the chart that fits the analytical goal, not the one that looks most  |
+| [[Implicit/Edges/builds_on/component-first-dashboard-design--builds_on--data-ui-separation-principle]] | ****: Component-first dashboard design depends on the data separation principle: components receive data as parameters and hav |
+| [[Implicit/Edges/exemplifies/data-driven-ui-card-tuples--exemplifies--component-first-dashboard-design]] | ****: Data-Driven UI Card Tuples is a concrete implementation pattern that exemplifies component-first dashboard design throug |
+| [[Implicit/Edges/exemplifies/data-driven-ui-card-tuples--exemplifies--data-ui-separation-principle]] | ****: Card geometry as tuples exemplifies the data separation principle: the UI renders from data without hardcoding values in |
+| [[Implicit/Edges/exemplifies/css-flip-card-dash--exemplifies--data-ui-separation-principle]] | ****: The CSS Flip Card exemplifies data separation: flip_card() receives data as parameters and has no opinion about data sou |
+| [[Implicit/Edges/exemplifies/css-flip-card-dash--exemplifies--component-first-dashboard-design]] | ****: The flip card component is a reusable, single-responsibility component that demonstrates component-first dashboard desig |
+| [[Implicit/Edges/exemplifies/css-flip-card-dash--exemplifies--data-driven-ui-card-tuples]] | ****: The flip card is the specific component used in the data-driven UI card tuples pattern; CARDS contains flip_card() tuple |
+| [[Implicit/Edges/exemplifies/gantt-chart-native-visuals-overlay-pattern--exemplifies--chart-alignment-between-stacked-visuals-gotcha]] | ****: The Gantt chart overlay pattern is the concrete use case that encounters and must resolve the chart alignment gotcha bet |
+| [[Implicit/Edges/builds_on/gantt-chart-native-visuals-overlay-pattern--builds_on--error-band-as-white-out-mask]] | ****: The Gantt chart pattern may incorporate the error band white-out mask technique for hiding helper series and aligning vi |
+| [[Implicit/Edges/exemplifies/gantt-chart-native-visuals-overlay-pattern--exemplifies--status-conditioned-measure-family-pattern]] | ****: The Gantt chart uses one measure per status (Not Started, Delayed, Pending, In Progress, Completed) gated by IF/SELECTED |
+| [[Implicit/Edges/exemplifies/error-band-as-white-out-mask--exemplifies--oblique-area-chart]] | ****: The original use case for the error band white-out mask is creating the oblique area chart: the white error band covers  |
+| [[Implicit/Edges/builds_on/gpt-4-thematic-coding--builds_on--llm-survey-enrichment-gpt4]] | ****: GPT-4 Thematic Coding (the two-pass prompt pattern) is part of a broader LLM Survey Enrichment workflow that includes se |
+| [[Implicit/Edges/builds_on/gpt-4-thematic-coding--builds_on--openai-api-cost-audit]] | ****: Per-comment GPT-4 API calls (Pass 2 and Pass 3 of the thematic coding pattern) have cost implications documented in the  |
+| [[Implicit/Edges/authored_by/author-jake-duddy--authored_by--source-dynamic-data-masking-in-power-bi]] | ****: Jake Duddy authored Source-Dynamic-Data-Masking-in-Power-BI (2026-05-11). |
+| [[Implicit/Edges/authored_by/author-janvi-gupta--authored_by--first-data-source-janvi-source]] | ****: Janvi Gupta authored the first-data-source article covering Get Data, file/database/cloud/API sources, Import vs DirectQ |
+| [[Implicit/Edges/authored_by/author-janvi-gupta--authored_by--first-visualizations-janvi-source]] | ****: Janvi Gupta authored the first-visualizations article covering chart selection framework, beginner visualisation mistake |
+| [[Implicit/Edges/authored_by/author-juls--authored_by--source-enhancing-power-bi-reports-with-ai]] | ****: Juls authored Source-Enhancing-Power-BI-Reports-with-AI (2026-07-01), covering accessibility and AI-assisted development |
+| [[Implicit/Edges/authored_by/author-riccardo-perico--authored_by--source-dax-calendar-based-time-intelligence]] | ****: Riccardo Perico authored Source-DAX-Calendar-Based-Time-Intelligence (2025-11-20), covering calendar-based time intellig |
+| [[Implicit/Edges/exemplifies/abc-classification-chart-visual-calculations--exemplifies--abc-group-thresholds-stacked-columns]] | ****: The ABC classification chart exemplifies the stacked column threshold band technique by using Group A/B/C stacked column |
+| [[Implicit/Edges/builds_on/abc-group-thresholds-stacked-columns--builds_on--visual-calculations-runningsum-order-by]] | ****: The stacked threshold column values (0.4, 0.8, 1.0) are derived from and compared against the RUNNINGSUM output to deter |
+| [[Implicit/Edges/exemplifies/geometric-mean-multi-reviewer-rankings--exemplifies--geometric-mean-power-query]] | ****: The Power Query implementation (List.Product + Number.Power) exemplifies the geometric mean calculation used in the mult |
+| [[Implicit/Edges/builds_on/geometric-mean-multi-reviewer-rankings--builds_on--geometric-mean-power-query]] | ****: The multi-reviewer ranking use case depends on the Power Query implementation steps to compute the geometric mean from a |
+| [[Implicit/Edges/contradicts/geometric-mean-multi-reviewer-rankings--contradicts--arithmetic-mean]] | ****: Geometric mean is presented as superior to arithmetic mean for multi-reviewer rankings because arithmetic mean fails to  |
+| [[Implicit/Edges/builds_on/geometric-mean-power-query--builds_on--geometric-mean-multi-reviewer-rankings]] | ****: The multi-reviewer ranking use case provides the business context and data model structure for the Power Query implement |
+| [[Implicit/Edges/builds_on/ai-written-powershell-scripts-design-automation--builds_on--pbir-power-bi-report-format-json]] | ****: The AI-written PowerShell automation scripts depend on the PBIR JSON format as the target file format they programmatica |
+| [[Implicit/Edges/builds_on/ai-written-powershell-scripts-design-automation--builds_on--power-bi-ai-agent-cli-reload]] | ****: The full AI-edit workflow for Power BI design automation requires the `pbidesktop reload` command to apply script change |
+| [[Implicit/Edges/builds_on/power-bi-ai-agent-cli-reload--builds_on--pbir-power-bi-report-format-json]] | ****: The `pbidesktop reload` command works by re-reading the JSON files in the PBIR definition folder after AI agents have ed |
+| [[Implicit/Edges/builds_on/bar-column-chart-comparing-groups--builds_on--chart-selection-decision-flow]] | ****: The bar/column chart article is a child node in the chart selection decision tree, applying the 'compare groups or items |
+| [[Implicit/Edges/builds_on/line-chart-trend-over-time--builds_on--chart-selection-decision-flow]] | ****: The line chart article is a child node in the chart selection decision tree, applying the 'show change over time' branch |
+| [[Implicit/Edges/builds_on/pie-donut-chart-parts-whole--builds_on--chart-selection-decision-flow]] | ****: The pie/donut chart article is a child node in the chart selection decision tree, applying the 'show parts of a whole' b |
+| [[Implicit/Edges/exemplifies/bar-column-chart-comparing-groups--exemplifies--pie-donut-chart-parts-whole]] | ****: The bar chart is explicitly recommended as the alternative when pie/donut charts exceed the 4-5 slice limit, exemplifyin |
+| [[Implicit/Edges/contradicts/bar-column-chart-comparing-groups--contradicts--line-chart-trend-over-time]] | ****: Bar/column and line charts are alternatives within the decision tree: use bar/column for discrete category comparisons,  |
+| [[Implicit/Edges/contradicts/bar-column-chart-comparing-groups--contradicts--scatter-plot-relationship-variables]] | ****: Bar/column and scatter plot serve different analytical questions: bar/column for category comparisons, scatter plot for  |
+| [[Implicit/Edges/builds_on/plotly-layout-mutation-gotcha--builds_on--chart-base-plotly]] | ****: The layout mutation gotcha is a known pitfall when reusing base chart layout dicts; chart-base-plotly likely provides th |
+| [[Implicit/Edges/exemplifies/plotly-layout-mutation-gotcha--exemplifies--two-layer-area-line-micro-chart]] | ****: The Two-Layer-Area-Line-Micro-Chart article links back to the layout mutation gotcha, indicating the pattern would be af |
+| [[Implicit/Edges/exemplifies/visual-calculations-usage-guide--exemplifies--abc-classification-chart-visual-calculations]] | ****: The ABC classification chart is a concrete pattern exemplifying the general guidance in the visual calculations usage gu |
+| [[Implicit/Edges/authored_by/source-geometric-mean-sqlservercentral--authored_by--geometric-mean-multi-reviewer-rankings]] | ****: The geometric mean multi-reviewer rankings article is sourced from the SQLServerCentral article on geometric mean in Pow |
+| [[Implicit/Edges/authored_by/source-geometric-mean-sqlservercentral--authored_by--geometric-mean-power-query]] | ****: The geometric mean Power Query article is sourced from the same SQLServerCentral article on geometric mean in Power BI. |
+| [[Implicit/Edges/authored_by/source-abc-analysis-howtopowerbi--authored_by--abc-classification-chart-visual-calculations]] | ****: The ABC classification chart article is sourced from the HowToPowerBI article on ABC analysis in Power BI. |
+| [[Implicit/Edges/authored_by/source-abc-analysis-howtopowerbi--authored_by--abc-group-thresholds-stacked-columns]] | ****: The ABC group thresholds stacked columns article is sourced from the same HowToPowerBI article on ABC analysis. |
+| [[Implicit/Edges/authored_by/source-choosing-right-charts-selectdistinct--authored_by--chart-selection-decision-flow]] | ****: The chart selection decision flow article is sourced from the beginner's guide to choosing the right charts in Power BI. |
+| [[Implicit/Edges/authored_by/source-choosing-right-charts-selectdistinct--authored_by--bar-column-chart-comparing-groups]] | ****: The bar and column chart article is sourced from the beginner's guide to choosing the right charts in Power BI. |
+| [[Implicit/Edges/authored_by/source-choosing-right-charts-selectdistinct--authored_by--line-chart-trend-over-time]] | ****: The line chart article is sourced from the beginner's guide to choosing the right charts in Power BI. |
+| [[Implicit/Edges/authored_by/source-choosing-right-charts-selectdistinct--authored_by--pie-donut-chart-parts-whole]] | ****: The pie and donut chart article is sourced from the beginner's guide to choosing the right charts in Power BI. |
+| [[Implicit/Edges/authored_by/source-crafting-compelling-impactful-power-bi-reports--authored_by--chart-selection-decision-flow]] | ****: The chart selection decision flow article is sourced from the article on crafting compelling and impactful Power BI repo |
+| [[Implicit/Edges/authored_by/ai-changing-power-bi-workflow--authored_by--pbir-power-bi-report-format-json]] | ****: The PBIR format article is sourced from the article on how AI is changing the Power BI workflow. |
+| [[Implicit/Edges/authored_by/ai-changing-power-bi-workflow--authored_by--ai-written-powershell-scripts-design-automation]] | ****: The AI-written PowerShell scripts article is sourced from the article on how AI is changing the Power BI workflow. |
+| [[Implicit/Edges/authored_by/ai-changing-power-bi-workflow--authored_by--power-bi-ai-agent-cli-reload]] | ****: The Power BI AI Agent CLI reload article is sourced from the article on how AI is changing the Power BI workflow. |
+| [[Implicit/Edges/authored_by/building-an-interactive-flip-card-kpi-dashboard--authored_by--plotly-layout-mutation-gotcha]] | ****: The Plotly layout mutation gotcha is a spin-off from the flip card KPI dashboard source article, documenting a discovere |

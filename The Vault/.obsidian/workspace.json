@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01.Knowledge/Power BI/6-ways-to-recover-lost-work-in-microsoft-excel.md",
+                "file": "01.Knowledge/Power Query/Wiki/accesscontrolentry_conditiontoidentities.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6-ways-to-recover-lost-work-in-microsoft-excel"
+              "title": "accesscontrolentry_conditiontoidentities"
             }
           }
         ]
@@ -91,7 +91,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "01.Knowledge/Power BI/6-ways-to-recover-lost-work-in-microsoft-excel.md",
+                "file": "01.Knowledge/Power Query/Wiki/accesscontrolentry_conditiontoidentities.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -331,8 +331,25 @@
       "smart-connections:Toggle Footer Connections": false
     }
   },
-  "active": "74b97e0d88eff409",
+  "active": "30a382f52ab3688f",
   "lastOpenFiles": [
+    "01.Knowledge/Power Query/Wiki/understanding-data-types-in-power-query-power-bi-excel-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/splitting-column-values-in-power-query-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/replacing-column-values-that-dont-match-a-string-in-power-query-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/replace-multiple-column-values-in-one-step-in-power-query-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/merging-queries-in-power-query-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/how-to-replace-column-values-in-power-query-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/how-to-remove-unwanted-columns-in-power-query-editor-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/how-to-reduce-data-tables-using-group-by-in-power-query-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/how-to-change-data-source-location-in-power-query-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/how-to-append-queries-in-power-query-power-bi-excel-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/duplicate-vs-reference-in-power-query.md",
+    "01.Knowledge/Power Query/Wiki/creating-a-measures-table-in-power-bi-and-why-you-should-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/avoid-the-1-mistake-that-leads-to-ineffective-reports-in-power-bi-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/3-easy-ways-to-rename-columns-in-power-query-go-analytics.md",
+    "01.Knowledge/Power Query/Wiki/access_database.md",
+    "01.Knowledge/Power Query/3-easy-ways-to-rename-columns-in-power-query-go-analytics.md",
+    "01.Knowledge/Power BI/6-ways-to-recover-lost-work-in-microsoft-excel.md",
     "01.Knowledge/Power BI/6-hidden-navigation-hacks-every-excel-user-needs-to-know.md",
     "01.Knowledge/Power BI/Wiki/Source-5-Most-Used-Visuals-in-Power-BI-Kumar.md",
     "01.Knowledge/Power BI/Wiki/Power-BI-Visual-Selection-Guide.md",
@@ -342,23 +359,6 @@
     "01.Knowledge/Power BI/5-powershell-commands-that-fix-most-of-my-windows-problems.md",
     "01.Knowledge/Power BI/3-current-artists-every-diehard-nine-inch-nails-fan-should-introduce-to-their-ro.md",
     "00.Inbox/Dynamic Pareto Analysis in Power BI - Native Visuals.md",
-    "00.Inbox/LEVEL UP with Custom Visuals Power BI🔹HTML🔹Calculation Groups🔹Deneb.md",
-    "00.Inbox/Top 5 ways to show ACTIVE FILTERS in Power BI.md",
-    "00.Inbox/38 rows of DAX becomes 1 Line!  User Defined Functions Walkthrough.md",
-    "00.Inbox/How to Create Gradient & Glow Effects in Power BI A Creative Workaround with Native Visuals.md",
-    "00.Inbox/Smarter Power BI Dashboards Show Charts Only When Needed!.md",
-    "00.Inbox/How to Build Interactive Cards in Power BI with the New Visual Features.md",
-    "00.Inbox/The Ultimate Time-Saver Style Presets in Power BI.md",
-    "00.Inbox/Smarter Quadrant Charts in Power BI Dynamic, Colorful & Fully Native.md",
-    "00.Inbox/Power BI UX Enhancements with Visual Calculations.md",
-    "00.Inbox/Donut Charts done right 3 New Power BI designs.md",
-    "00.Inbox/3 Hacks to Turn Any Image into a Circle in Power BI.md",
-    "00.Inbox/Faster DAX - Are Visual Calculations in Power BI Actually Faster Than DAX Measures.md",
-    "00.Inbox/Write DAX Code Once, Use it Everywhere 1.md",
-    "00.Inbox/A button slicer that zooms on selection - a clever trick that makes a big difference.md",
-    "00.Inbox/KPI Overview Page in Power BI that left my Client speechless.md",
-    "00.Inbox/This DAX Measure Sends Emails Directly from Power BI.md",
-    "00.Inbox/The Monthly KPI Tracker You're Missing in Power BI.md",
     "99.System/Scripts/scan_attachments_for_videos.py",
     "01.Knowledge/DAX Code/Wiki/sedkKTBP6",
     "99.System/Attachments/Visual-Calculations-Performance/C0298-6.png",

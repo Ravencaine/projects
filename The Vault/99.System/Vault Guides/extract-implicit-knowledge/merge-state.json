@@ -1,0 +1,4510 @@
+{
+  "power-bi": {
+    "entities": {
+      "entity-althea-van-zyl": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-Crafting-Compelling-Impactful-Power-BI-Reports"
+        ]
+      },
+      "entity-databearcom": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-Crafting-Compelling-Impactful-Power-BI-Reports"
+        ]
+      },
+      "entity-plotlyjs": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:GitHub-Style-Calendar-Heatmap-Pattern",
+          "article:Plotly-Heatmap-Snippet"
+        ]
+      },
+      "entity-statsmodels": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ets-exponential-smoothing-model"
+        ]
+      },
+      "entity-html-content-visual": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:GitHub-Style-Calendar-Heatmap-Pattern",
+          "article:CONCATENATEX-JSON-Bridge"
+        ]
+      },
+      "entity-double-diamond-design-framework": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-Crafting-Data-Narratives"
+        ]
+      },
+      "entity-iso-8601": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:getISOWeek-JavaScript"
+        ]
+      },
+      "entity-holt-winters-forecasting": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ets-exponential-smoothing-model"
+        ]
+      },
+      "entity-concatenatex": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:CONCATENATEX-JSON-Bridge",
+          "article:GitHub-Style-Calendar-Heatmap-Pattern"
+        ]
+      },
+      "entity-mary-jo-diepeveen": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ets-exponential-smoothing-model"
+        ]
+      },
+      "entity-the-3-30-300-rule": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-Crafting-Data-Narratives"
+        ]
+      },
+      "entity-auto-date-time": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Auto-Date-Time-Disable"
+        ]
+      },
+      "entity-jake-duddy": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Author-Jake-Duddy"
+        ]
+      },
+      "entity-janvi-gupta": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Author-Janvi-Gupta"
+        ]
+      },
+      "entity-juls": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Author-Juls"
+        ]
+      },
+      "entity-riccardo-perico": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Author-Riccardo-Perico"
+        ]
+      },
+      "entity-plotly": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:CSS-Flip-Card-Dash"
+        ]
+      },
+      "entity-dash": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:CSS-Flip-Card-Dash",
+          "article:Data-Driven-UI-Card-Tuples",
+          "article:Component-First-Dashboard-Design",
+          "article:Data-UI-Separation-Principle"
+        ]
+      },
+      "entity-gpt-4": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:GPT-4-Thematic-Coding"
+        ]
+      },
+      "entity-openai-api": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:GPT-4-Thematic-Coding"
+        ]
+      },
+      "entity-pbir-power-bi-report-format": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:PBIR-Power-BI-Report-Format-JSON",
+          "article:AI-Written-PowerShell-Scripts-Design-Automation",
+          "article:Power-BI-AI-Agent-CLI-Reload"
+        ]
+      },
+      "entity-visual-calculations": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ABC-Classification-Chart-Visual-Calculations",
+          "article:ABC-Group-Thresholds-Stacked-Columns",
+          "article:Geometric-Mean-Multi-Reviewer-Rankings"
+        ]
+      },
+      "entity-collapsesum-visual-calculation": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ABC-Classification-Chart-Visual-Calculations"
+        ]
+      },
+      "entity-runningsum-visual-calculation": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ABC-Classification-Chart-Visual-Calculations",
+          "article:ABC-Group-Thresholds-Stacked-Columns"
+        ]
+      },
+      "entity-next-visual-calculation": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ABC-Classification-Chart-Visual-Calculations"
+        ]
+      },
+      "entity-geometric-mean": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Geometric-Mean-Multi-Reviewer-Rankings",
+          "article:Geometric-Mean-Power-Query"
+        ]
+      },
+      "entity-arithmetic-mean": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Geometric-Mean-Multi-Reviewer-Rankings"
+        ]
+      },
+      "entity-power-query-m": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Geometric-Mean-Power-Query"
+        ]
+      },
+      "entity-powershell": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:AI-Written-PowerShell-Scripts-Design-Automation"
+        ]
+      },
+      "entity-ai-agent": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:AI-Written-PowerShell-Scripts-Design-Automation",
+          "article:Power-BI-AI-Agent-CLI-Reload"
+        ]
+      },
+      "entity-pbidesktop-reload-cli": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Power-BI-AI-Agent-CLI-Reload"
+        ]
+      },
+      "entity-chart-selection-framework": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Chart-Selection-Decision-Flow",
+          "article:Bar-Column-Chart-Comparing-Groups",
+          "article:Line-Chart-Trend-Over-Time",
+          "article:Pie-Donut-Chart-Parts-Whole"
+        ]
+      },
+      "entity-abc-classification-pareto": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ABC-Classification-Chart-Visual-Calculations",
+          "article:ABC-Group-Thresholds-Stacked-Columns"
+        ]
+      }
+    },
+    "edges": {
+      "source-crafting-data-narratives--builds_on--data-storytelling": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:Source-Crafting-Data-Narratives",
+        "target_node": "article:data-storytelling"
+      },
+      "source-crafting-compelling-impactful-power-bi-reports--exemplifies--data-storytelling": {
+        "first_seen": "2026-08-15",
+        "weight": 0.7,
+        "source_node": "article:Source-Crafting-Compelling-Impactful-Power-BI-Reports",
+        "target_node": "article:data-storytelling"
+      },
+      "github-style-calendar-heatmap-pattern--exemplifies--pattern-recognition-over-exact-values": {
+        "first_seen": "2026-08-15",
+        "weight": 0.7,
+        "source_node": "article:GitHub-Style-Calendar-Heatmap-Pattern",
+        "target_node": "article:Pattern-Recognition-Over-Exact-Values"
+      },
+      "plotly-heatmap-snippet--builds_on--github-style-calendar-heatmap-pattern": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:Plotly-Heatmap-Snippet",
+        "target_node": "article:GitHub-Style-Calendar-Heatmap-Pattern"
+      },
+      "getisoweek-javascript--builds_on--github-style-calendar-heatmap-pattern": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:getISOWeek-JavaScript",
+        "target_node": "article:GitHub-Style-Calendar-Heatmap-Pattern"
+      },
+      "getdaynumber-javascript--builds_on--github-style-calendar-heatmap-pattern": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:getDayNumber-JavaScript",
+        "target_node": "article:GitHub-Style-Calendar-Heatmap-Pattern"
+      },
+      "concatenatex-json-bridge--builds_on--github-style-calendar-heatmap-pattern": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:CONCATENATEX-JSON-Bridge",
+        "target_node": "article:GitHub-Style-Calendar-Heatmap-Pattern"
+      },
+      "ets-exponential-smoothing-model--contradicts--forecasting-visual-power-bi": {
+        "first_seen": "2026-08-15",
+        "weight": 0.9,
+        "source_node": "article:ets-exponential-smoothing-model",
+        "target_node": "article:forecasting-visual-power-bi"
+      },
+      "source-crafting-data-narratives--exemplifies--double-diamond-design": {
+        "first_seen": "2026-08-15",
+        "weight": 0.7,
+        "source_node": "article:Source-Crafting-Data-Narratives",
+        "target_node": "article:Double-Diamond-Design"
+      },
+      "source-crafting-data-narratives--builds_on--the-3-30-300-rule": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:Source-Crafting-Data-Narratives",
+        "target_node": "article:The-3-30-300-Rule"
+      },
+      "source-crafting-compelling-impactful-power-bi-reports--exemplifies--report-structural-integrity": {
+        "first_seen": "2026-08-15",
+        "weight": 0.7,
+        "source_node": "article:Source-Crafting-Compelling-Impactful-Power-BI-Reports",
+        "target_node": "article:Report-Structural-Integrity"
+      },
+      "source-crafting-compelling-impactful-power-bi-reports--builds_on--data-accuracy-and-reliability": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:Source-Crafting-Compelling-Impactful-Power-BI-Reports",
+        "target_node": "article:Data-Accuracy-and-Reliability"
+      },
+      "source-crafting-data-narratives--builds_on--visual-design-principles": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:Source-Crafting-Data-Narratives",
+        "target_node": "article:Visual-Design-Principles"
+      },
+      "source-crafting-data-narratives--builds_on--report-stewardship": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:Source-Crafting-Data-Narratives",
+        "target_node": "article:Report-Stewardship"
+      },
+      "entityalthea-van-zyl--authored_by--source-crafting-compelling-impactful-power-bi-reports": {
+        "first_seen": "2026-08-15",
+        "weight": 0.6,
+        "source_node": "entity:althea-van-zyl",
+        "target_node": "article:Source-Crafting-Compelling-Impactful-Power-BI-Reports"
+      },
+      "entitydatabear--authored_by--source-crafting-compelling-impactful-power-bi-reports": {
+        "first_seen": "2026-08-15",
+        "weight": 0.6,
+        "source_node": "entity:databear",
+        "target_node": "article:Source-Crafting-Compelling-Impactful-Power-BI-Reports"
+      },
+      "entitymary-jo-diepeveen--authored_by--ets-exponential-smoothing-model": {
+        "first_seen": "2026-08-15",
+        "weight": 0.6,
+        "source_node": "entity:mary-jo-diepeveen",
+        "target_node": "article:ets-exponential-smoothing-model"
+      },
+      "entitydouble-diamond--exemplifies--source-crafting-data-narratives": {
+        "first_seen": "2026-08-15",
+        "weight": 0.7,
+        "source_node": "entity:double-diamond",
+        "target_node": "article:Source-Crafting-Data-Narratives"
+      },
+      "component-first-dashboard-design--builds_on--data-ui-separation-principle": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:Component-First-Dashboard-Design",
+        "target_node": "article:Data-UI-Separation-Principle"
+      },
+      "data-driven-ui-card-tuples--exemplifies--component-first-dashboard-design": {
+        "first_seen": "2026-08-15",
+        "weight": 0.9,
+        "source_node": "article:Data-Driven-UI-Card-Tuples",
+        "target_node": "article:Component-First-Dashboard-Design"
+      },
+      "data-driven-ui-card-tuples--exemplifies--data-ui-separation-principle": {
+        "first_seen": "2026-08-15",
+        "weight": 0.9,
+        "source_node": "article:Data-Driven-UI-Card-Tuples",
+        "target_node": "article:Data-UI-Separation-Principle"
+      },
+      "css-flip-card-dash--exemplifies--data-ui-separation-principle": {
+        "first_seen": "2026-08-15",
+        "weight": 0.7,
+        "source_node": "article:CSS-Flip-Card-Dash",
+        "target_node": "article:Data-UI-Separation-Principle"
+      },
+      "css-flip-card-dash--exemplifies--component-first-dashboard-design": {
+        "first_seen": "2026-08-15",
+        "weight": 0.7,
+        "source_node": "article:CSS-Flip-Card-Dash",
+        "target_node": "article:Component-First-Dashboard-Design"
+      },
+      "css-flip-card-dash--exemplifies--data-driven-ui-card-tuples": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:CSS-Flip-Card-Dash",
+        "target_node": "article:Data-Driven-UI-Card-Tuples"
+      },
+      "gantt-chart-native-visuals-overlay-pattern--exemplifies--chart-alignment-between-stacked-visuals-gotcha": {
+        "first_seen": "2026-08-15",
+        "weight": 0.9,
+        "source_node": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+        "target_node": "article:Chart-Alignment-Between-Stacked-Visuals-Gotcha"
+      },
+      "gantt-chart-native-visuals-overlay-pattern--builds_on--error-band-as-white-out-mask": {
+        "first_seen": "2026-08-15",
+        "weight": 0.6,
+        "source_node": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+        "target_node": "article:Error-Band-as-White-Out-Mask"
+      },
+      "gantt-chart-native-visuals-overlay-pattern--exemplifies--status-conditioned-measure-family-pattern": {
+        "first_seen": "2026-08-15",
+        "weight": 0.8,
+        "source_node": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+        "target_node": "article:Status-Conditioned-Measure-Family-Pattern"
+      },
+      "error-band-as-white-out-mask--exemplifies--oblique-area-chart": {
+        "first_seen": "2026-08-15",
+        "weight": 0.9,
+        "source_node": "article:Error-Band-as-White-Out-Mask",
+        "target_node": "article:Oblique-Area-Chart"
+      },
+      "gpt-4-thematic-coding--builds_on--llm-survey-enrichment-gpt4": {
+        "first_seen": "2026-08-15",
+        "weight": 0.7,
+        "source_node": "article:GPT-4-Thematic-Coding",
+        "target_node": "article:LLM-Survey-Enrichment-GPT4"
+      },
+      "gpt-4-thematic-coding--builds_on--openai-api-cost-audit": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:GPT-4-Thematic-Coding",
+        "target_node": "article:OpenAI-API-Cost-Audit"
+      },
+      "author-jake-duddy--authored_by--source-dynamic-data-masking-in-power-bi": {
+        "first_seen": "2026-08-15",
+        "weight": 1.0,
+        "source_node": "article:Author-Jake-Duddy",
+        "target_node": "article:Source-Dynamic-Data-Masking-in-Power-BI"
+      },
+      "author-janvi-gupta--authored_by--first-data-source-janvi-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1.0,
+        "source_node": "article:Author-Janvi-Gupta",
+        "target_node": "article:first-data-source-janvi-source"
+      },
+      "author-janvi-gupta--authored_by--first-visualizations-janvi-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1.0,
+        "source_node": "article:Author-Janvi-Gupta",
+        "target_node": "article:first-visualizations-janvi-source"
+      },
+      "author-juls--authored_by--source-enhancing-power-bi-reports-with-ai": {
+        "first_seen": "2026-08-15",
+        "weight": 1.0,
+        "source_node": "article:Author-Juls",
+        "target_node": "article:Source-Enhancing-Power-BI-Reports-with-AI"
+      },
+      "author-riccardo-perico--authored_by--source-dax-calendar-based-time-intelligence": {
+        "first_seen": "2026-08-15",
+        "weight": 1.0,
+        "source_node": "article:Author-Riccardo-Perico",
+        "target_node": "article:Source-DAX-Calendar-Based-Time-Intelligence"
+      },
+      "abc-classification-chart-visual-calculations--exemplifies--abc-group-thresholds-stacked-columns": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:ABC-Classification-Chart-Visual-Calculations",
+        "target_node": "article:ABC-Group-Thresholds-Stacked-Columns"
+      },
+      "abc-group-thresholds-stacked-columns--builds_on--visual-calculations-runningsum-order-by": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:ABC-Group-Thresholds-Stacked-Columns",
+        "target_node": "article:Visual-Calculations-RUNNINGSUM-ORDER-BY"
+      },
+      "geometric-mean-multi-reviewer-rankings--exemplifies--geometric-mean-power-query": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Geometric-Mean-Multi-Reviewer-Rankings",
+        "target_node": "article:Geometric-Mean-Power-Query"
+      },
+      "geometric-mean-multi-reviewer-rankings--builds_on--geometric-mean-power-query": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Geometric-Mean-Multi-Reviewer-Rankings",
+        "target_node": "article:Geometric-Mean-Power-Query"
+      },
+      "geometric-mean-multi-reviewer-rankings--contradicts--arithmetic-mean": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Geometric-Mean-Multi-Reviewer-Rankings",
+        "target_node": "article:Arithmetic-Mean"
+      },
+      "geometric-mean-power-query--builds_on--geometric-mean-multi-reviewer-rankings": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Geometric-Mean-Power-Query",
+        "target_node": "article:Geometric-Mean-Multi-Reviewer-Rankings"
+      },
+      "ai-written-powershell-scripts-design-automation--builds_on--pbir-power-bi-report-format-json": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:AI-Written-PowerShell-Scripts-Design-Automation",
+        "target_node": "article:PBIR-Power-BI-Report-Format-JSON"
+      },
+      "ai-written-powershell-scripts-design-automation--builds_on--power-bi-ai-agent-cli-reload": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:AI-Written-PowerShell-Scripts-Design-Automation",
+        "target_node": "article:Power-BI-AI-Agent-CLI-Reload"
+      },
+      "power-bi-ai-agent-cli-reload--builds_on--pbir-power-bi-report-format-json": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Power-BI-AI-Agent-CLI-Reload",
+        "target_node": "article:PBIR-Power-BI-Report-Format-JSON"
+      },
+      "bar-column-chart-comparing-groups--builds_on--chart-selection-decision-flow": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Bar-Column-Chart-Comparing-Groups",
+        "target_node": "article:Chart-Selection-Decision-Flow"
+      },
+      "line-chart-trend-over-time--builds_on--chart-selection-decision-flow": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Line-Chart-Trend-Over-Time",
+        "target_node": "article:Chart-Selection-Decision-Flow"
+      },
+      "pie-donut-chart-parts-whole--builds_on--chart-selection-decision-flow": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Pie-Donut-Chart-Parts-Whole",
+        "target_node": "article:Chart-Selection-Decision-Flow"
+      },
+      "bar-column-chart-comparing-groups--exemplifies--pie-donut-chart-parts-whole": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Bar-Column-Chart-Comparing-Groups",
+        "target_node": "article:Pie-Donut-Chart-Parts-Whole"
+      },
+      "bar-column-chart-comparing-groups--contradicts--line-chart-trend-over-time": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Bar-Column-Chart-Comparing-Groups",
+        "target_node": "article:Line-Chart-Trend-Over-Time"
+      },
+      "bar-column-chart-comparing-groups--contradicts--scatter-plot-relationship-variables": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Bar-Column-Chart-Comparing-Groups",
+        "target_node": "article:Scatter-Plot-Relationship-Variables"
+      },
+      "plotly-layout-mutation-gotcha--builds_on--chart-base-plotly": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:plotly-layout-mutation-gotcha",
+        "target_node": "article:chart-base-plotly"
+      },
+      "plotly-layout-mutation-gotcha--exemplifies--two-layer-area-line-micro-chart": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:plotly-layout-mutation-gotcha",
+        "target_node": "article:Two-Layer-Area-Line-Micro-Chart"
+      },
+      "visual-calculations-usage-guide--exemplifies--abc-classification-chart-visual-calculations": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:visual-calculations-usage-guide",
+        "target_node": "article:ABC-Classification-Chart-Visual-Calculations"
+      },
+      "source-geometric-mean-sqlservercentral--authored_by--geometric-mean-multi-reviewer-rankings": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Source-Geometric-Mean-SQLServerCentral",
+        "target_node": "article:Geometric-Mean-Multi-Reviewer-Rankings"
+      },
+      "source-geometric-mean-sqlservercentral--authored_by--geometric-mean-power-query": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Source-Geometric-Mean-SQLServerCentral",
+        "target_node": "article:Geometric-Mean-Power-Query"
+      },
+      "source-abc-analysis-howtopowerbi--authored_by--abc-classification-chart-visual-calculations": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Source-ABC-Analysis-HowToPowerBI",
+        "target_node": "article:ABC-Classification-Chart-Visual-Calculations"
+      },
+      "source-abc-analysis-howtopowerbi--authored_by--abc-group-thresholds-stacked-columns": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Source-ABC-Analysis-HowToPowerBI",
+        "target_node": "article:ABC-Group-Thresholds-Stacked-Columns"
+      },
+      "source-choosing-right-charts-selectdistinct--authored_by--chart-selection-decision-flow": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Source-Choosing-Right-Charts-SelectDistinct",
+        "target_node": "article:Chart-Selection-Decision-Flow"
+      },
+      "source-choosing-right-charts-selectdistinct--authored_by--bar-column-chart-comparing-groups": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Source-Choosing-Right-Charts-SelectDistinct",
+        "target_node": "article:Bar-Column-Chart-Comparing-Groups"
+      },
+      "source-choosing-right-charts-selectdistinct--authored_by--line-chart-trend-over-time": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Source-Choosing-Right-Charts-SelectDistinct",
+        "target_node": "article:Line-Chart-Trend-Over-Time"
+      },
+      "source-choosing-right-charts-selectdistinct--authored_by--pie-donut-chart-parts-whole": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Source-Choosing-Right-Charts-SelectDistinct",
+        "target_node": "article:Pie-Donut-Chart-Parts-Whole"
+      },
+      "source-crafting-compelling-impactful-power-bi-reports--authored_by--chart-selection-decision-flow": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Source-Crafting-Compelling-Impactful-Power-BI-Reports",
+        "target_node": "article:Chart-Selection-Decision-Flow"
+      },
+      "ai-changing-power-bi-workflow--authored_by--pbir-power-bi-report-format-json": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:AI-Changing-Power-BI-Workflow",
+        "target_node": "article:PBIR-Power-BI-Report-Format-JSON"
+      },
+      "ai-changing-power-bi-workflow--authored_by--ai-written-powershell-scripts-design-automation": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:AI-Changing-Power-BI-Workflow",
+        "target_node": "article:AI-Written-PowerShell-Scripts-Design-Automation"
+      },
+      "ai-changing-power-bi-workflow--authored_by--power-bi-ai-agent-cli-reload": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:AI-Changing-Power-BI-Workflow",
+        "target_node": "article:Power-BI-AI-Agent-CLI-Reload"
+      },
+      "building-an-interactive-flip-card-kpi-dashboard--authored_by--plotly-layout-mutation-gotcha": {
+        "first_seen": "2026-08-15",
+        "weight": 0.5,
+        "source_node": "article:Building-an-Interactive-Flip-Card-KPI-Dashboard",
+        "target_node": "article:plotly-layout-mutation-gotcha"
+      }
+    },
+    "last_run": "2026-08-15",
+    "claims": {
+      "claim-flip-card-css3d": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:CSS-Flip-Card-Dash",
+        "evidence": [
+          {
+            "article": "article:CSS-Flip-Card-Dash",
+            "section": "CSS (3D stage)"
+          }
+        ]
+      },
+      "claim-flip-card-state-toggle": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:CSS-Flip-Card-Dash",
+        "evidence": [
+          {
+            "article": "article:CSS-Flip-Card-Dash",
+            "section": "Dash (state only)"
+          }
+        ]
+      },
+      "claim-perspective-1000px": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:CSS-Flip-Card-Dash",
+        "evidence": [
+          {
+            "article": "article:CSS-Flip-Card-Dash",
+            "section": "CSS (3D stage)"
+          }
+        ]
+      },
+      "claim-chart-axis-alignment-gotcha": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Chart-Alignment-Between-Stacked-Visuals-Gotcha",
+        "evidence": [
+          {
+            "article": "article:Chart-Alignment-Between-Stacked-Visuals-Gotcha",
+            "section": "Actual Behaviour"
+          }
+        ]
+      },
+      "claim-axis-bounds-wired-to-measures": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Chart-Alignment-Between-Stacked-Visuals-Gotcha",
+        "evidence": [
+          {
+            "article": "article:Chart-Alignment-Between-Stacked-Visuals-Gotcha",
+            "section": "How to Handle It"
+          }
+        ]
+      },
+      "claim-transparent-date-buffer": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+        "evidence": [
+          {
+            "article": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+            "section": "Key Points"
+          }
+        ]
+      },
+      "claim-status-measure-family": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+        "evidence": [
+          {
+            "article": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+            "section": "Key Points"
+          }
+        ]
+      },
+      "claim-component-first-reuse": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Component-First-Dashboard-Design",
+        "evidence": [
+          {
+            "article": "article:Component-First-Dashboard-Design",
+            "section": "Key Points"
+          }
+        ]
+      },
+      "claim-card-tuples-data-driven": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Data-Driven-UI-Card-Tuples",
+        "evidence": [
+          {
+            "article": "article:Data-Driven-UI-Card-Tuples",
+            "section": "Purpose"
+          }
+        ]
+      },
+      "claim-splat-callback-autoadapt": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Data-Driven-UI-Card-Tuples",
+        "evidence": [
+          {
+            "article": "article:Data-Driven-UI-Card-Tuples",
+            "section": "Structure"
+          }
+        ]
+      },
+      "claim-data-ui-separation": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Data-UI-Separation-Principle",
+        "evidence": [
+          {
+            "article": "article:Data-UI-Separation-Principle",
+            "section": "Definition"
+          }
+        ]
+      },
+      "claim-error-band-whiteout": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Error-Band-as-White-Out-Mask",
+        "evidence": [
+          {
+            "article": "article:Error-Band-as-White-Out-Mask",
+            "section": "Definition"
+          }
+        ]
+      },
+      "claim-error-band-not-statistical": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Error-Band-as-White-Out-Mask",
+        "evidence": [
+          {
+            "article": "article:Error-Band-as-White-Out-Mask",
+            "section": "Key Points"
+          }
+        ]
+      },
+      "claim-line-charts-preferred-whiteout": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Error-Band-as-White-Out-Mask",
+        "evidence": [
+          {
+            "article": "article:Error-Band-as-White-Out-Mask",
+            "section": "Key Points"
+          }
+        ]
+      },
+      "claim-two-pass-thematic-coding": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:GPT-4-Thematic-Coding",
+        "evidence": [
+          {
+            "article": "article:GPT-4-Thematic-Coding",
+            "section": "Purpose"
+          }
+        ]
+      },
+      "claim-thematic-closed-vocabulary": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:GPT-4-Thematic-Coding",
+        "evidence": [
+          {
+            "article": "article:GPT-4-Thematic-Coding",
+            "section": "Purpose"
+          }
+        ]
+      },
+      "claim-sentiment-separate-pass": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:GPT-4-Thematic-Coding",
+        "evidence": [
+          {
+            "article": "article:GPT-4-Thematic-Coding",
+            "section": "Components"
+          }
+        ]
+      },
+      "claim-gantt-two-visual-stack": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+        "evidence": [
+          {
+            "article": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+            "section": "Definition"
+          }
+        ]
+      },
+      "claim-dax-axis-bounds-adapts": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+        "evidence": [
+          {
+            "article": "article:Gantt-Chart-Native-Visuals-Overlay-Pattern",
+            "section": "Key Points / Examples"
+          }
+        ]
+      },
+      "claim-plotly-layout-mutation": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:plotly-layout-mutation-gotcha",
+        "evidence": [
+          {
+            "article": "article:plotly-layout-mutation-gotcha",
+            "section": "Why It Happens"
+          }
+        ]
+      },
+      "claim-visual-calculations-only-see-on-visual": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:ABC-Classification-Chart-Visual-Calculations",
+        "evidence": [
+          {
+            "article": "article:ABC-Classification-Chart-Visual-Calculations",
+            "section": "Key Insight"
+          }
+        ]
+      },
+      "claim-geometric-mean-downweights-outliers": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Geometric-Mean-Multi-Reviewer-Rankings",
+        "evidence": [
+          {
+            "article": "article:Geometric-Mean-Multi-Reviewer-Rankings",
+            "section": "Why Geometric Mean Works Better"
+          },
+          {
+            "article": "article:Geometric-Mean-Power-Query",
+            "section": "Implementation Steps"
+          }
+        ]
+      },
+      "claim-power-query-no-native-geometric-mean": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Geometric-Mean-Power-Query",
+        "evidence": [
+          {
+            "article": "article:Geometric-Mean-Power-Query",
+            "section": "Implementation Steps"
+          }
+        ]
+      },
+      "claim-pbir-enables-ai-editing": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:PBIR-Power-BI-Report-Format-JSON",
+        "evidence": [
+          {
+            "article": "article:PBIR-Power-BI-Report-Format-JSON",
+            "section": "Key Points"
+          },
+          {
+            "article": "article:AI-Written-PowerShell-Scripts-Design-Automation",
+            "section": "Purpose"
+          }
+        ]
+      },
+      "claim-ai-agent-generates-powershell": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:AI-Written-PowerShell-Scripts-Design-Automation",
+        "evidence": [
+          {
+            "article": "article:AI-Written-PowerShell-Scripts-Design-Automation",
+            "section": "Purpose"
+          }
+        ]
+      },
+      "claim-stacked-columns-with-blank-create-threshold-bands": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:ABC-Group-Thresholds-Stacked-Columns",
+        "evidence": [
+          {
+            "article": "article:ABC-Group-Thresholds-Stacked-Columns",
+            "section": "Formula Set"
+          }
+        ]
+      },
+      "claim-pie-donut-4-5-slice-limit": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Pie-Donut-Chart-Parts-Whole",
+        "evidence": [
+          {
+            "article": "article:Pie-Donut-Chart-Parts-Whole",
+            "section": "Hard Rule: Slice Limit"
+          },
+          {
+            "article": "article:Chart-Selection-Decision-Flow",
+            "section": "Decision Flow"
+          }
+        ]
+      },
+      "claim-visual-calc-data-format-properties-pane": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:ABC-Classification-Chart-Visual-Calculations",
+        "evidence": [
+          {
+            "article": "article:ABC-Classification-Chart-Visual-Calculations",
+            "section": "Formatting Details"
+          }
+        ]
+      },
+      "claim-chart-selection-matches-goal": {
+        "first_seen": "2026-08-15",
+        "first_article": "article:Chart-Selection-Decision-Flow",
+        "evidence": [
+          {
+            "article": "article:Chart-Selection-Decision-Flow",
+            "section": "Guiding Principle"
+          }
+        ]
+      }
+    }
+  },
+  "data-modeling": {
+    "entities": {
+      "entity-jesse-ruiz": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Jesse Ruiz"
+        ]
+      },
+      "entity-advanced-dimensional-modeling-for-retail-product-variants-parts-1-3": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:advanced-dimensional-modeling-retail-product-variants-source"
+        ]
+      },
+      "entity-data-modeling-for-bi-build-trustworthy-analytics": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-modeling-bi-trustworthy-analytics"
+        ]
+      },
+      "entity-data-warehousing-for-bi": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-warehousing-bi"
+        ]
+      },
+      "entity-han-xu-yang": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-modeling-bi-trustworthy-analytics",
+          "article:data-warehousing-bi"
+        ]
+      },
+      "entity-beginning-big-data-with-power-bi-and-excel-2013-dunlop": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:database-key-types"
+        ]
+      },
+      "entity-differential-privacy": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:differential-privacy-smartnoise"
+        ]
+      },
+      "entity-smartnoise-sdk": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:differential-privacy-smartnoise"
+        ]
+      },
+      "entity-dimdate-dax-date-dimension": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:dim-date-dax-calendar"
+        ]
+      },
+      "entity-dax-calendar-function": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:dim-date-dax-calendar"
+        ]
+      },
+      "entity-dimension-groups-d365-fo": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:dimension-groups-color-style-size-config"
+        ]
+      },
+      "entity-retail-product-variants": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:dimension-groups-color-style-size-config"
+        ]
+      },
+      "entity-multiple-fact-tables-modeling": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:handling-multiple-fact-tables-in-power-bi-source"
+        ]
+      },
+      "entity-conformed-dimensions": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:handling-multiple-fact-tables-in-power-bi-source",
+          "article:implementing-star-schema-multi-fact"
+        ]
+      },
+      "entity-import-mode-power-bi": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:import-vs-directquery-performance"
+        ]
+      },
+      "entity-directquery-mode-power-bi": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:import-vs-directquery-performance"
+        ]
+      },
+      "entity-incremental-refresh-pattern": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:incremental-refresh-pattern"
+        ]
+      },
+      "entity-append-only-tables": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:incremental-refresh-pattern"
+        ]
+      },
+      "entity-filtered-index-sql": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:index-strategy-filtered-index-barcode"
+        ]
+      },
+      "entity-lambda-architecture": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:lambda-kappa-architecture"
+        ]
+      },
+      "entity-kappa-architecture": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:lambda-kappa-architecture"
+        ]
+      },
+      "entity-materialized-views": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:materialized-views-vs-regular-views-cetas"
+        ]
+      },
+      "entity-cetas-create-external-table-as-select": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:materialized-views-vs-regular-views-cetas"
+        ]
+      },
+      "entity-medallion-architecture": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture"
+        ]
+      },
+      "entity-bronze-layer": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture"
+        ]
+      },
+      "entity-silver-layer": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture"
+        ]
+      },
+      "entity-gold-layer": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture"
+        ]
+      },
+      "entity-onelake": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture"
+        ]
+      },
+      "entity-direct-lake-mode": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture"
+        ]
+      },
+      "entity-delta-lake": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture"
+        ]
+      },
+      "entity-pricedisctable": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:missing-prices-debug-root-cause"
+        ]
+      },
+      "entity-product-variants": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:missing-prices-debug-root-cause"
+        ]
+      },
+      "entity-dimension-groups": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:missing-prices-debug-root-cause"
+        ]
+      },
+      "entity-parquet-format": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ml-data-formats-csv-parquet-json"
+        ]
+      },
+      "entity-csv-format": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ml-data-formats-csv-parquet-json"
+        ]
+      },
+      "entity-json-format": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ml-data-formats-csv-parquet-json"
+        ]
+      },
+      "entity-plain-text-format": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ml-data-formats-csv-parquet-json"
+        ]
+      },
+      "entity-semantic-debt": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:multi-dashboard-semantic-debt-analysis"
+        ]
+      },
+      "entity-normalization-and-3nf": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:normalization-3nf"
+        ]
+      },
+      "entity-transitive-dependency": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:normalization-3nf"
+        ]
+      },
+      "entity-ontology": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:power-bi-informal-ontologies",
+          "article:ontology-auto-generation-70-30-split",
+          "article:ontology-fabric-iq-export"
+        ]
+      },
+      "entity-fabric-iq": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:ontology-fabric-iq-export"
+        ]
+      },
+      "entity-stale-statistics": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:performance-degradation-over-time"
+        ]
+      },
+      "entity-power-bi-ontology-extractor": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:power-bi-formal-ontology-extraction-pipeline"
+        ]
+      },
+      "entity-modelbim": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:power-bi-formal-ontology-extraction-pipeline"
+        ]
+      },
+      "entity-power-bi-visual-performance": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:power-bi-visual-performance"
+        ]
+      },
+      "entity-power-bi-performance-analyzer": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:power-bi-visual-performance"
+        ]
+      },
+      "entity-powerpivot-diagram-view": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:powerpivot-diagram-view"
+        ]
+      },
+      "entity-manage-relationships-screen": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:powerpivot-diagram-view"
+        ]
+      },
+      "entity-pricing-cte-with-rownumber-deduplication": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:pricing-cte-with-row-number-deduplication"
+        ]
+      },
+      "entity-inventdim": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:pricing-cte-with-row-number-deduplication"
+        ]
+      },
+      "entity-rownumber-window-function": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:pricing-cte-with-row-number-deduplication"
+        ]
+      },
+      "entity-pii-removal-techniques": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:remove-pii-from-datasets"
+        ]
+      },
+      "entity-pii-categories": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:remove-pii-from-datasets"
+        ]
+      },
+      "entity-azure-cognitive-services-pii-detection": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:remove-pii-from-datasets"
+        ]
+      },
+      "entity-replicated-table-distribution": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:replicated-table-distribution"
+        ]
+      },
+      "entity-role-playing-dimension": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:role-playing-dimension"
+        ]
+      },
+      "entity-schema-drift-column-rename-failure": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:schema-drift-column-rename-loss"
+        ]
+      },
+      "entity-schema-drift-detection": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:schema-drift-detection-pattern"
+        ]
+      },
+      "entity-schemamapper-powerbi-ontology": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:schema-drift-detection-pattern"
+        ]
+      },
+      "entity-shared-dimensions-with-multiple-fact-tables": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:shared-dimensions-multi-fact"
+        ]
+      },
+      "entity-simple-vs-variant-products": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:simple-vs-variant-products"
+        ]
+      },
+      "entity-simple-product": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:simple-vs-variant-products"
+        ]
+      },
+      "entity-variant-product": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:simple-vs-variant-products"
+        ]
+      },
+      "entity-star-schema": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-fact-table-dimension-tables-in-powerpivot"
+        ]
+      },
+      "entity-fact-table": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-fact-table-dimension-tables-in-powerpivot"
+        ]
+      },
+      "entity-dimension-table": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-fact-table-dimension-tables-in-powerpivot"
+        ]
+      },
+      "entity-foreign-key-and-primary-key": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-fact-table-dimension-tables-in-powerpivot"
+        ]
+      },
+      "entity-surrogate-key": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-fact-table-dimension-tables-in-powerpivot"
+        ]
+      },
+      "entity-snowflake-schema": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-vs-snowflake-schema"
+        ]
+      },
+      "entity-composite-key": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:surrogate-keys-vs-composite-keys",
+          "article:union-all-pattern-simple-variant-products",
+          "article:variant-complexity-problem-d365-fo"
+        ]
+      },
+      "entity-union-all": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:union-all-pattern-simple-variant-products"
+        ]
+      },
+      "entity-d365-fo-dynamics-365-finance-operations": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:variant-complexity-problem-d365-fo"
+        ]
+      },
+      "entity-bi-directional-filtering": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Data-Modeling-Mistake-Bi-Directional-Filtering"
+        ]
+      },
+      "entity-broken-relationship": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Data-Modeling-Mistake-Broken-Relationships"
+        ]
+      },
+      "entity-bridge-table": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:many-to-many-bridge-table-pattern"
+        ]
+      },
+      "entity-powerpivot": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:powerpivot-data-model-load-access-diagram-view-relationships"
+        ]
+      },
+      "entity-data-lake": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-lake-vs-data-warehouse"
+        ]
+      },
+      "entity-data-warehouse": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-lake-vs-data-warehouse"
+        ]
+      },
+      "entity-inmon-data-warehouse-approach": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-warehouse-architectures-inmon-kimball-datavault"
+        ]
+      },
+      "entity-kimball-dimensional-modeling-approach": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-warehouse-architectures-inmon-kimball-datavault"
+        ]
+      },
+      "entity-data-vault-20": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-warehouse-architectures-inmon-kimball-datavault"
+        ]
+      },
+      "entity-slowly-changing-dimension-scd": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:power-bi-correct-granularity-and-scd",
+          "article:scd-type-1-price-changes"
+        ]
+      },
+      "entity-scd-type-1-overwrite": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:scd-type-1-price-changes"
+        ]
+      },
+      "entity-scd-type-2-history": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:power-bi-correct-granularity-and-scd"
+        ]
+      },
+      "entity-third-normal-form-3nf": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-warehouse-architectures-inmon-kimball-datavault"
+        ]
+      },
+      "entity-schema-on-read": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-lake-vs-data-warehouse"
+        ]
+      },
+      "entity-schema-on-write": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-lake-vs-data-warehouse"
+        ]
+      },
+      "entity-enterprise-data-warehouse-edw": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-warehouse-architectures-inmon-kimball-datavault"
+        ]
+      },
+      "entity-survey-response-mm-problem": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:many-to-many-bridge-table-pattern"
+        ]
+      },
+      "entity-crossfilter-dax-function": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Data-Modeling-Mistake-Bi-Directional-Filtering"
+        ]
+      },
+      "entity-degenerate-dimension": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:scd-type-1-price-changes"
+        ]
+      },
+      "entity-data-swamp": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-lake-vs-data-warehouse"
+        ]
+      },
+      "entity-cross-filter-direction": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Data-Modeling-Mistake-Bi-Directional-Filtering",
+          "article:Data-Modeling-Mistake-Broken-Relationships"
+        ]
+      },
+      "entity-data-mart": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:data-warehouse-architectures-inmon-kimball-datavault"
+        ]
+      },
+      "entity-unified-product-dimension": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:union-all-pattern-simple-variant-products"
+        ]
+      },
+      "entity-batch-processing": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:3-easy-data-architecture-interview-questions-source"
+        ]
+      },
+      "entity-stream-processing": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:3-easy-data-architecture-interview-questions-source"
+        ]
+      },
+      "entity-lakehouse-architecture": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:3-easy-data-architecture-interview-questions-source"
+        ]
+      },
+      "entity-pl-line-structure": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:pl-line-structure-reference"
+        ]
+      },
+      "entity-account-code-ranges": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:pl-line-structure-reference"
+        ]
+      },
+      "entity-chart-of-accounts": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:pl-line-structure-reference"
+        ]
+      },
+      "entity-pl-mapping-table": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:pl-line-structure-reference"
+        ]
+      },
+      "entity-flat-table-one-big-table": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-5-Mistakes-in-Power-BI-Data-Modeling"
+        ]
+      },
+      "entity-dimdate-date-dimension": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:stop-building-slow-power-bi-reports-source"
+        ]
+      },
+      "entity-directquery-mode": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:stop-building-slow-power-bi-reports-source"
+        ]
+      },
+      "entity-import-mode": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:stop-building-slow-power-bi-reports-source"
+        ]
+      },
+      "entity-incremental-refresh": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:stop-building-slow-power-bi-reports-source"
+        ]
+      },
+      "entity-bravo-for-power-bi": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:stop-building-slow-power-bi-reports-source"
+        ]
+      },
+      "entity-column-pruning": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:stop-building-slow-power-bi-reports-source"
+        ]
+      },
+      "entity-bi-directional-cross-filtering": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-5-Mistakes-in-Power-BI-Data-Modeling"
+        ]
+      },
+      "entity-calculated-column": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-5-Mistakes-in-Power-BI-Data-Modeling"
+        ]
+      },
+      "entity-dax-measure": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-5-Mistakes-in-Power-BI-Data-Modeling"
+        ]
+      },
+      "entity-date-dimension-table": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-5-Mistakes-in-Power-BI-Data-Modeling"
+        ]
+      },
+      "entity-time-intelligence": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-5-Mistakes-in-Power-BI-Data-Modeling"
+        ]
+      },
+      "entity-one-to-many-relationship": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-5-Mistakes-in-Power-BI-Data-Modeling"
+        ]
+      },
+      "entity-dashboard-health-checklist": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Dashboard-Health-Checklist"
+        ]
+      },
+      "entity-data-cleaning-pipeline": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Data-Cleaning-Pipeline-Flow"
+        ]
+      },
+      "entity-duplicate-records": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:5-Data-Cleaning-Mistakes-DigitalBYKewat-source",
+          "article:Duplicate-Records-Detection-Removal"
+        ]
+      },
+      "entity-inconsistent-date-formats": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:5-Data-Cleaning-Mistakes-DigitalBYKewat-source"
+        ]
+      },
+      "entity-missing-values": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:5-Data-Cleaning-Mistakes-DigitalBYKewat-source"
+        ]
+      },
+      "entity-inconsistent-categories": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:5-Data-Cleaning-Mistakes-DigitalBYKewat-source"
+        ]
+      },
+      "entity-outlier": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:5-Data-Cleaning-Mistakes-DigitalBYKewat-source",
+          "article:Ignoring-Outliers-Detection-Action"
+        ]
+      },
+      "entity-iso-date-format-yyyy-mm-dd": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:5-Data-Cleaning-Mistakes-DigitalBYKewat-source"
+        ]
+      },
+      "entity-primary-key": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Duplicate-Records-Detection-Removal"
+        ]
+      },
+      "entity-minmax-qa-check": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Ignoring-Outliers-Detection-Action"
+        ]
+      },
+      "entity-median-central-tendency": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Ignoring-Outliers-Detection-Action"
+        ]
+      },
+      "entity-countrows-vs-distinctcount-qa": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Duplicate-Records-Detection-Removal",
+          "article:Dashboard-Health-Checklist"
+        ]
+      },
+      "entity-texttrim-and-textclean": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:5-Data-Cleaning-Mistakes-DigitalBYKewat-source"
+        ]
+      },
+      "entity-architecture-by-habit": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Avoid-Architecture-by-Habit-Gotcha"
+        ]
+      },
+      "entity-bill-donofrio": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:stop-building-slow-power-bi-reports-source"
+        ]
+      },
+      "entity-anurodh-kumar": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-5-Mistakes-in-Power-BI-Data-Modeling"
+        ]
+      },
+      "entity-digitalbykewat": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:5-Data-Cleaning-Mistakes-DigitalBYKewat-source",
+          "article:Author-DigitalBYKewat"
+        ]
+      },
+      "entity-yadullah-abidi": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Author-Yadullah-Abidi"
+        ]
+      },
+      "entity-text-normalization": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Inconsistent-Categories-Normalisation"
+        ]
+      },
+      "entity-date-format-standardization": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Inconsistent-Date-Formats-ISO"
+        ]
+      },
+      "entity-landing-layer": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Layers-Equal-Responsibility-Boundaries",
+          "article:Medallion-Architecture-Layer-Selection-Pattern"
+        ]
+      },
+      "entity-curated-layer": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Layers-Equal-Responsibility-Boundaries",
+          "article:Materialized-Views-Data-Quality-Pattern",
+          "article:Medallion-Architecture-Layer-Selection-Pattern"
+        ]
+      },
+      "entity-analytics-layer": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Layers-Equal-Responsibility-Boundaries",
+          "article:Medallion-Architecture-Layer-Selection-Pattern"
+        ]
+      },
+      "entity-data-quality-constraints": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Materialized-Views-Data-Quality-Pattern"
+        ]
+      },
+      "entity-power-bi-semantic-model": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Semantic-Model-Replaces-Gold-Layer"
+        ]
+      },
+      "entity-many-to-many-relationship": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:bridge-tables-many-to-many-list-unpivoting"
+        ]
+      },
+      "entity-microsoft-fabric": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Medallion-Architecture-Fabric",
+          "article:Star-Schema-Fabric",
+          "article:Materialized-Views-Data-Quality-Pattern"
+        ]
+      },
+      "entity-missing-values-handling": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Missing-Values-Handling-Strategy"
+        ]
+      },
+      "entity-power-query-transforms": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Missing-Values-Handling-Strategy",
+          "article:Inconsistent-Categories-Normalisation"
+        ]
+      },
+      "entity-boniface-muchendu": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:Source-Do-You-Really-Need-Medallion-Architecture"
+        ]
+      },
+      "entity-cdc-column": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:cdc-column-selection-created-vs-updated-vs-etl-date"
+        ]
+      },
+      "entity-watermark-table": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:cdc-column-selection-created-vs-updated-vs-etl-date"
+        ]
+      },
+      "entity-etl-run-date": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:cdc-column-selection-created-vs-updated-vs-etl-date"
+        ]
+      },
+      "entity-upsert-table": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:cdc-column-selection-created-vs-updated-vs-etl-date"
+        ]
+      },
+      "entity-insert-only-table": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:cdc-column-selection-created-vs-updated-vs-etl-date"
+        ]
+      },
+      "entity-postgres-constraints": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:constraints-catch-bad-data-not-bad-formatting"
+        ]
+      },
+      "entity-schema-first-design": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:database-schema-first-migration"
+        ]
+      },
+      "entity-excel-to-postgres-migration-workflow": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:excel-to-postgres-migration-workflow"
+        ]
+      },
+      "entity-flag-and-preserve": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:flag-and-preserve-data-quality-philosophy"
+        ]
+      },
+      "entity-deferred-indexing-strategy": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:indexing-strategy-defer-until-schema-complete"
+        ]
+      },
+      "entity-inmon-enterprise-data-warehouse": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:inmon-vs-kimball-vs-data-vault-decision-framework"
+        ]
+      },
+      "entity-kimball-dimensional-modeling": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:inmon-vs-kimball-vs-data-vault-decision-framework",
+          "article:kimball-dimensional-modeling-case-study-baylas-2026"
+        ]
+      },
+      "entity-data-vault": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:inmon-vs-kimball-vs-data-vault-decision-framework"
+        ]
+      },
+      "entity-junk-dimension": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:junk-dimension-combine-vs-separate"
+        ]
+      },
+      "entity-multi-source-merge-pattern": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:multi-source-merge-archive-priority-load-sequencing"
+        ]
+      },
+      "entity-normalized-tables": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:normalized-tables-vs-flat-rows",
+          "article:database-schema-first-migration"
+        ]
+      },
+      "entity-kimball-dimensional-modeling-case-study-baylas-2026": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:kimball-dimensional-modeling-case-study-baylas-2026"
+        ]
+      },
+      "entity-cleansed-layer": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture-raw-cleansed-dimensional"
+        ]
+      },
+      "entity-dimensional-layer": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture-raw-cleansed-dimensional"
+        ]
+      },
+      "entity-raw-layer": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture-raw-cleansed-dimensional"
+        ]
+      },
+      "entity-elt-pattern": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:medallion-architecture-raw-cleansed-dimensional"
+        ]
+      },
+      "entity-source-excel-was-my-database-for-15-years-and-postgres-ended-that-in-a-weekend": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:database-schema-first-migration",
+          "article:constraints-catch-bad-data-not-bad-formatting",
+          "article:excel-to-postgres-migration-workflow",
+          "article:normalized-tables-vs-flat-rows"
+        ]
+      },
+      "entity-postgresql": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:postgres-constraint-enforcement",
+          "article:source-excel-postgres-weekend-yadullah"
+        ]
+      },
+      "entity-unique-constraint": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:postgres-constraint-enforcement"
+        ]
+      },
+      "entity-not-null-constraint": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:postgres-constraint-enforcement"
+        ]
+      },
+      "entity-foreign-key-constraint": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:postgres-constraint-enforcement"
+        ]
+      },
+      "entity-grain": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-fact-table-principles",
+          "article:star-schema-grain-locking-constraint"
+        ]
+      },
+      "entity-late-arriving-data": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-late-arrival-handling",
+          "article:star-schema-double-timestamp-pattern"
+        ]
+      },
+      "entity-multi-key-partitioning": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-multi-key-partitioning"
+        ]
+      },
+      "entity-dual-timestamp-pattern": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-double-timestamp-pattern"
+        ]
+      },
+      "entity-denormalized-metrics": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-denormalized-metrics"
+        ]
+      },
+      "entity-rohan-dutt": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-fact-tables-source"
+        ]
+      },
+      "entity-rely-constraint": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-referential-integrity-rely"
+        ]
+      },
+      "entity-zstd-encoding": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-zstd-encoding-clustering"
+        ]
+      },
+      "entity-column-clustering": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-zstd-encoding-clustering"
+        ]
+      },
+      "entity-rollup-flags-pattern": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-rollup-flags-pattern"
+        ]
+      },
+      "entity-natural-key": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:surrogate-key-pragmatism-when-to-use-natural-keys"
+        ]
+      },
+      "entity-primary-key-verification": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:unique-key-that-isnt-primary-key-verification"
+        ]
+      },
+      "entity-scd-type-2": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:surrogate-key-pragmatism-when-to-use-natural-keys"
+        ]
+      },
+      "entity-snowflake": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-referential-integrity-rely"
+        ]
+      },
+      "entity-amazon-redshift": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-referential-integrity-rely"
+        ]
+      },
+      "entity-bigquery": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-referential-integrity-rely"
+        ]
+      },
+      "entity-assume-referential-integrity": {
+        "first_seen": "2026-08-15",
+        "articles": [
+          "article:star-schema-referential-integrity-rely"
+        ]
+      }
+    },
+    "claims": {
+      "claim-data-modeling-mistake-missing-date-table": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-batch-processing-vs-stream-processing": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-column-pruning-bravo": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-composite-key-strategy-itemkey": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-conditional-joins-case-concat-matching": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-conformed-dimensions": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-database-key-types": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-degenerate-dimension-barcode-in-fact": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-d365-fo-product-dimension": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-d365-fo-dimension-groups": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-epsilon-parameter": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-delta-parameter": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-duplicate-barcodes": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-retailshowforitem-filter": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-star-schema-multi-fact": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-shared-dimensions": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-barcode-lookup": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-data-cleaning-effort": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-batch-stream-combination": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-view-precomputation": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-missing-price-error": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-semantic-debt-analysis": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-third-normal-form": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-ontology-extraction-70-30": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-power-bi-informal-ontologies": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-ontology-to-fabric-iq-export": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-performance-degradation-over-time": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-consolidated-fact-tables": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-duplicated-dimensions": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-power-bi-ontology-extraction-pipeline": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-visual-count-latency": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-matrix-table-high-cardinality-rows": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-conditional-formatting-expensive": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-scatter-plot-rendering": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-null-dimension-handling": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-data-movement-elimination": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-replicate-table-size-rule": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-schema-drift-4-6m-loss": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-schema-drift-fail-safe": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-shared-dimensions-model-size": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-unified-itemkey": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-denormalized-dimensions": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-narrow-fact-tables": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-powerpivot-auto-relationship-detection": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-wrong-granularity-scd": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-bi-directional-overuse-causes-duplication": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-union-all-over-union": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-star-schema-default-power-bi": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-snowflake-slower-4x": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-composite-key-60x-memory": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-d365-no-single-products-table": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-broken-relationships-wrong-totals": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-missing-date-relationship": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-scd-type1-overwrites-price": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-inmon-top-down": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-inmon-single-truth": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-bridge-avoids-m2m-overhead": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-powerpivot-auto-relationship-import": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-schema-on-read-flexibility": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-lake-and-warehouse-complementary": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-schema-on-read-vs-write": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-medallion-standard-pattern": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-batch-first-default": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-lakehouse-blurs-lines": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-star-schema-mandatory": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-surrogate-key-memory-efficiency": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-scd-wrong-granularity-recalculation": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-bridge-tables-solve-many-to-many": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-import-faster-than-directquery": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-incremental-refresh-game-changer": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-flat-table-breaks-calculations": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-bi-directional-ambiguity": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-measures-preferred-over-calculated-columns": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-date-table-unlocks-time-intelligence": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-duplicates-distort-metrics": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-inconsistent-dates-wrong-grouping": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-missing-values-break-calculations": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-inconsistent-categories-fragment-charts": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-outliers-warp-averages": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-medallion-habit-no-evaluation": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-pipeline-step-order-matters": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-countrows-distinctcount-detects-duplicates": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-remove-duplicates-early": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-claim-median-robust-to-outliers": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-case-inconsistency-splits-aggregations": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-iso-8601-unambiguous": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-layer-must-have-distinct-responsibility": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-materialized-views-eliminate-silver": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-materialization-overhead-accumulation": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-semantic-model-replaces-gold-aggregates": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-list-columns-not-index-parallel": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-boniface-muchendu-source": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-code-column-reliability": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-constraint-enforcement-pattern": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-degenerate-dimensions-save-storage": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-grain-must-be-locked": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-dual-timestamp-prevents-trend-spikes": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-multi-key-partitioning-reduces-cost": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-pre-denormalize-at-load-time": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-constraint-catches-three-data-quality-issues": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-rely-optimizer-eliminates-joins": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-rely-plus-pbi-0-8s": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-rollup-flags-replaces-20-mviews": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-zstd-500gb-to-70gb": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-clustering-reduces-io-40": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-surrogate-keys-low-cardinality": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-natural-keys-high-volume-fact": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-scd-type-2-requires-surrogate": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-verify-primary-key-with-count": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      },
+      "claim-blind-upsert-silently-overwrites": {
+        "first_seen": "2026-08-15",
+        "first_article": "",
+        "evidence": []
+      }
+    },
+    "edges": {
+      "jesse-ruiz--authored_by--advanced-dimensional-modeling-retail-product-variants-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "jesse-ruiz",
+        "target_node": "advanced-dimensional-modeling-retail-product-variants-source"
+      },
+      "han-xu-yang--authored_by--data-modeling-bi-trustworthy-analytics": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "han-xu-yang",
+        "target_node": "data-modeling-bi-trustworthy-analytics"
+      },
+      "han-xu-yang--authored_by--data-warehousing-bi": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "han-xu-yang",
+        "target_node": "data-warehousing-bi"
+      },
+      "dunlop-beginning-big-data--cites--database-key-types": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dunlop-beginning-big-data",
+        "target_node": "database-key-types"
+      },
+      "advanced-dimensional-modeling-retail-product-variants-source--exemplifies--d365-fo-product-dimension": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "advanced-dimensional-modeling-retail-product-variants-source",
+        "target_node": "d365-fo-product-dimension"
+      },
+      "d365-fo-product-dimension--builds_on--composite-key-strategy-itemkey": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "d365-fo-product-dimension",
+        "target_node": "composite-key-strategy-itemkey"
+      },
+      "composite-key-strategy-itemkey--builds_on--conditional-joins-case-concat-matching": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "composite-key-strategy-itemkey",
+        "target_node": "conditional-joins-case-concat-matching"
+      },
+      "d365-fo-dimension-groups--builds_on--conditional-joins-case-concat-matching": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "d365-fo-dimension-groups",
+        "target_node": "conditional-joins-case-concat-matching"
+      },
+      "conditional-joins-case-concat-matching--cites--advanced-dimensional-modeling-retail-product-variants-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "conditional-joins-case-concat-matching",
+        "target_node": "advanced-dimensional-modeling-retail-product-variants-source"
+      },
+      "composite-key-strategy-itemkey--cites--advanced-dimensional-modeling-retail-product-variants-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "composite-key-strategy-itemkey",
+        "target_node": "advanced-dimensional-modeling-retail-product-variants-source"
+      },
+      "degenerate-dimension-barcode-in-fact--cites--advanced-dimensional-modeling-retail-product-variants-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "degenerate-dimension-barcode-in-fact",
+        "target_node": "advanced-dimensional-modeling-retail-product-variants-source"
+      },
+      "data-modeling-mistake-missing-date-table--contradicts--advanced-dimensional-modeling-retail-product-variants-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-modeling-mistake-missing-date-table",
+        "target_node": "advanced-dimensional-modeling-retail-product-variants-source"
+      },
+      "database-key-types--builds_on--composite-key-strategy-itemkey": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "database-key-types",
+        "target_node": "composite-key-strategy-itemkey"
+      },
+      "conformed-dimensions--builds_on--data-modeling-bi-trustworthy-analytics": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "conformed-dimensions",
+        "target_node": "data-modeling-bi-trustworthy-analytics"
+      },
+      "data-warehousing-bi--builds_on--data-modeling-bi-trustworthy-analytics": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-warehousing-bi",
+        "target_node": "data-modeling-bi-trustworthy-analytics"
+      },
+      "batch-processing-vs-stream-processing--builds_on--data-warehousing-bi": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "batch-processing-vs-stream-processing",
+        "target_node": "data-warehousing-bi"
+      },
+      "column-pruning-bravo--contradicts--composite-key-strategy-itemkey": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "column-pruning-bravo",
+        "target_node": "composite-key-strategy-itemkey"
+      },
+      "degenerate-dimension-barcode-in-fact--builds_on--advanced-dimensional-modeling-retail-product-variants-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "degenerate-dimension-barcode-in-fact",
+        "target_node": "advanced-dimensional-modeling-retail-product-variants-source"
+      },
+      "differential-privacy--exemplifies--smartnoise": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "differential-privacy",
+        "target_node": "smartnoise"
+      },
+      "differential-privacy--builds_on--epsilon-parameter": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "differential-privacy",
+        "target_node": "epsilon-parameter"
+      },
+      "differential-privacy--builds_on--delta-parameter": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "differential-privacy",
+        "target_node": "delta-parameter"
+      },
+      "dim-date--builds_on--dax-calendar-function": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dim-date",
+        "target_node": "dax-calendar-function"
+      },
+      "dimension-groups--builds_on--retail-product-variants": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dimension-groups",
+        "target_node": "retail-product-variants"
+      },
+      "duplicate-barcodes--contradicts--retailshowforitem-filter": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "duplicate-barcodes",
+        "target_node": "retailshowforitem-filter"
+      },
+      "duplicate-barcodes--builds_on--retail-product-variants": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "duplicate-barcodes",
+        "target_node": "retail-product-variants"
+      },
+      "star-schema-multi-fact--builds_on--conformed-dimensions": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema-multi-fact",
+        "target_node": "conformed-dimensions"
+      },
+      "star-schema-multi-fact--builds_on--shared-dimensions": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema-multi-fact",
+        "target_node": "shared-dimensions"
+      },
+      "multiple-fact-tables--exemplifies--star-schema-multi-fact": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "multiple-fact-tables",
+        "target_node": "star-schema-multi-fact"
+      },
+      "multiple-fact-tables--exemplifies--shared-dimensions": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "multiple-fact-tables",
+        "target_node": "shared-dimensions"
+      },
+      "import-mode--builds_on--incremental-refresh": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "import-mode",
+        "target_node": "incremental-refresh"
+      },
+      "directquery-mode--builds_on--materialized-views": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "directquery-mode",
+        "target_node": "materialized-views"
+      },
+      "incremental-refresh--builds_on--append-only-tables": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "incremental-refresh",
+        "target_node": "append-only-tables"
+      },
+      "filtered-index--exemplifies--barcode-lookup": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "filtered-index",
+        "target_node": "barcode-lookup"
+      },
+      "lambda-architecture--exemplifies--batch-stream-combination": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "lambda-architecture",
+        "target_node": "batch-stream-combination"
+      },
+      "kappa-architecture--exemplifies--batch-stream-combination": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kappa-architecture",
+        "target_node": "batch-stream-combination"
+      },
+      "materialized-views--builds_on--cetas": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "materialized-views",
+        "target_node": "cetas"
+      },
+      "view-precomputation--exemplifies--materialized-views": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "view-precomputation",
+        "target_node": "materialized-views"
+      },
+      "view-precomputation--exemplifies--cetas": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "view-precomputation",
+        "target_node": "cetas"
+      },
+      "bronze-layer--builds_on--silver-layer": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bronze-layer",
+        "target_node": "silver-layer"
+      },
+      "silver-layer--builds_on--gold-layer": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "silver-layer",
+        "target_node": "gold-layer"
+      },
+      "medallion-architecture--exemplifies--one-lake": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "medallion-architecture",
+        "target_node": "one-lake"
+      },
+      "medallion-architecture--builds_on--delta-lake": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "medallion-architecture",
+        "target_node": "delta-lake"
+      },
+      "gold-layer--exemplifies--direct-lake-mode": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "gold-layer",
+        "target_node": "direct-lake-mode"
+      },
+      "pricedisctable--builds_on--product-variants": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "pricedisctable",
+        "target_node": "product-variants"
+      },
+      "dimension-groups--builds_on--pricedisctable": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dimension-groups",
+        "target_node": "pricedisctable"
+      },
+      "missing-price-error--exemplifies--pricedisctable": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "missing-price-error",
+        "target_node": "pricedisctable"
+      },
+      "parquet-format--builds_on--csv-format": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "parquet-format",
+        "target_node": "csv-format"
+      },
+      "semantic-debt--exemplifies--semantic-debt-analysis": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "semantic-debt",
+        "target_node": "semantic-debt-analysis"
+      },
+      "normalization-3nf--contradicts--transitive-dependency": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "normalization-3nf",
+        "target_node": "transitive-dependency"
+      },
+      "normalization-3nf--exemplifies--third-normal-form": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "normalization-3nf",
+        "target_node": "third-normal-form"
+      },
+      "power-bi-informal-ontologies--exemplifies--ontology": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "power-bi-informal-ontologies",
+        "target_node": "ontology"
+      },
+      "ontology-extraction-70-30--builds_on--power-bi-informal-ontologies": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "ontology-extraction-70-30",
+        "target_node": "power-bi-informal-ontologies"
+      },
+      "power-bi-ontology-extraction-pipeline--builds_on--power-bi-extractor": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "power-bi-ontology-extraction-pipeline",
+        "target_node": "power-bi-extractor"
+      },
+      "power-bi-ontology-extraction-pipeline--builds_on--ontology-extraction-70-30": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "power-bi-ontology-extraction-pipeline",
+        "target_node": "ontology-extraction-70-30"
+      },
+      "ontology-extraction-70-30--builds_on--ontology-to-fabric-iq-export": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "ontology-extraction-70-30",
+        "target_node": "ontology-to-fabric-iq-export"
+      },
+      "ontology-to-fabric-iq-export--builds_on--fabric-iq": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "ontology-to-fabric-iq-export",
+        "target_node": "fabric-iq"
+      },
+      "stale-statistics--exemplifies--performance-degradation-over-time": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "stale-statistics",
+        "target_node": "performance-degradation-over-time"
+      },
+      "cetas--contradicts--performance-degradation-over-time": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "cetas",
+        "target_node": "performance-degradation-over-time"
+      },
+      "consolidated-fact-tables--contradicts--duplicated-dimensions": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "consolidated-fact-tables",
+        "target_node": "duplicated-dimensions"
+      },
+      "duplicated-dimensions--contradicts--consolidated-fact-tables": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "duplicated-dimensions",
+        "target_node": "consolidated-fact-tables"
+      },
+      "visual-count-latency--exemplifies--power-bi-visual-performance": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "visual-count-latency",
+        "target_node": "power-bi-visual-performance"
+      },
+      "matrix-table-high-cardinality-rows--exemplifies--power-bi-visual-performance": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "matrix-table-high-cardinality-rows",
+        "target_node": "power-bi-visual-performance"
+      },
+      "conditional-formatting-expensive--exemplifies--power-bi-visual-performance": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "conditional-formatting-expensive",
+        "target_node": "power-bi-visual-performance"
+      },
+      "scatter-plot-rendering--exemplifies--power-bi-visual-performance": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "scatter-plot-rendering",
+        "target_node": "power-bi-visual-performance"
+      },
+      "power-bi-performance-analyzer--cites--power-bi-visual-performance": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "power-bi-performance-analyzer",
+        "target_node": "power-bi-visual-performance"
+      },
+      "powerpivot-diagram-view--builds_on--manage-relationships": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "powerpivot-diagram-view",
+        "target_node": "manage-relationships"
+      },
+      "pricing-cte-row-number-deduplication--exemplifies--row-number-window-function": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "pricing-cte-row-number-deduplication",
+        "target_node": "row-number-window-function"
+      },
+      "pricing-cte-row-number-deduplication--cites--pricedisctable": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "pricing-cte-row-number-deduplication",
+        "target_node": "pricedisctable"
+      },
+      "pricing-cte-row-number-deduplication--cites--inventdim": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "pricing-cte-row-number-deduplication",
+        "target_node": "inventdim"
+      },
+      "null-dimension-handling--builds_on--row-number-window-function": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "null-dimension-handling",
+        "target_node": "row-number-window-function"
+      },
+      "pii-removal-techniques--builds_on--pii-categories": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "pii-removal-techniques",
+        "target_node": "pii-categories"
+      },
+      "azure-cognitive-services-pii-detection--builds_on--pii-removal-techniques": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "azure-cognitive-services-pii-detection",
+        "target_node": "pii-removal-techniques"
+      },
+      "replicated-table-distribution--exemplifies--data-movement-elimination": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "replicated-table-distribution",
+        "target_node": "data-movement-elimination"
+      },
+      "data-movement-elimination--builds_on--replicate-table-size-rule": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-movement-elimination",
+        "target_node": "replicate-table-size-rule"
+      },
+      "role-playing-dimension--exemplifies--star-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "role-playing-dimension",
+        "target_node": "star-schema"
+      },
+      "schema-drift-4-6m-loss--exemplifies--schema-drift-column-rename-failure": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "schema-drift-4-6m-loss",
+        "target_node": "schema-drift-column-rename-failure"
+      },
+      "schema-drift-column-rename-failure--builds_on--schema-drift-detection": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "schema-drift-column-rename-failure",
+        "target_node": "schema-drift-detection"
+      },
+      "schema-drift-detection--exemplifies--schema-drift-fail-safe": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "schema-drift-detection",
+        "target_node": "schema-drift-fail-safe"
+      },
+      "schema-drift-detection--cites--schema-mapper": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "schema-drift-detection",
+        "target_node": "schema-mapper"
+      },
+      "shared-dimensions--exemplifies--shared-dimensions-model-size": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "shared-dimensions",
+        "target_node": "shared-dimensions-model-size"
+      },
+      "shared-dimensions--builds_on--star-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "shared-dimensions",
+        "target_node": "star-schema"
+      },
+      "simple-vs-variant-products--exemplifies--simple-product": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "simple-vs-variant-products",
+        "target_node": "simple-product"
+      },
+      "simple-vs-variant-products--exemplifies--variant-product": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "simple-vs-variant-products",
+        "target_node": "variant-product"
+      },
+      "simple-vs-variant-products--builds_on--unified-itemkey": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "simple-vs-variant-products",
+        "target_node": "unified-itemkey"
+      },
+      "variant-product--builds_on--pricedisctable": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "variant-product",
+        "target_node": "pricedisctable"
+      },
+      "variant-product--builds_on--inventdim": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "variant-product",
+        "target_node": "inventdim"
+      },
+      "star-schema--exemplifies--fact-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "fact-table"
+      },
+      "star-schema--exemplifies--dimension-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "dimension-table"
+      },
+      "star-schema--exemplifies--foreign-key-primary-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "foreign-key-primary-key"
+      },
+      "fact-table--builds_on--surrogate-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "fact-table",
+        "target_node": "surrogate-key"
+      },
+      "fact-table--exemplifies--narrow-fact-tables": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "fact-table",
+        "target_node": "narrow-fact-tables"
+      },
+      "dimension-table--exemplifies--denormalized-dimensions": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dimension-table",
+        "target_node": "denormalized-dimensions"
+      },
+      "powerpivot-diagram-view--builds_on--powerpivot-auto-relationship-detection": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "powerpivot-diagram-view",
+        "target_node": "powerpivot-auto-relationship-detection"
+      },
+      "snowflake-schema--contradicts--star-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "snowflake-schema",
+        "target_node": "star-schema"
+      },
+      "union-all--builds_on--variant-product": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "union-all",
+        "target_node": "variant-product"
+      },
+      "union-all--builds_on--simple-product": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "union-all",
+        "target_node": "simple-product"
+      },
+      "unified-product-dimension--exemplifies--union-all": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "unified-product-dimension",
+        "target_node": "union-all"
+      },
+      "variant-product--builds_on--d365-fo": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "variant-product",
+        "target_node": "d365-fo"
+      },
+      "simple-product--builds_on--d365-fo": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "simple-product",
+        "target_node": "d365-fo"
+      },
+      "unified-product-dimension--builds_on--composite-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "unified-product-dimension",
+        "target_node": "composite-key"
+      },
+      "composite-key--contradicts--surrogate-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "composite-key",
+        "target_node": "surrogate-key"
+      },
+      "surrogate-key--builds_on--composite-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "surrogate-key",
+        "target_node": "composite-key"
+      },
+      "bridge-table--exemplifies--survey-response-many-to-many": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bridge-table",
+        "target_node": "survey-response-many-to-many"
+      },
+      "bridge-table--builds_on--star-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bridge-table",
+        "target_node": "star-schema"
+      },
+      "bridge-table--builds_on--surrogate-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bridge-table",
+        "target_node": "surrogate-key"
+      },
+      "diagram-view--builds_on--powerpivot": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "diagram-view",
+        "target_node": "powerpivot"
+      },
+      "diagram-view--exemplifies--star-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "diagram-view",
+        "target_node": "star-schema"
+      },
+      "powerpivot--builds_on--star-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "powerpivot",
+        "target_node": "star-schema"
+      },
+      "data-lake--exemplifies--schema-on-read": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-lake",
+        "target_node": "schema-on-read"
+      },
+      "data-warehouse--exemplifies--schema-on-write": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-warehouse",
+        "target_node": "schema-on-write"
+      },
+      "data-lake--builds_on--data-warehouse": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-lake",
+        "target_node": "data-warehouse"
+      },
+      "data-swamp--contradicts--data-lake": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-swamp",
+        "target_node": "data-lake"
+      },
+      "data-warehouse--exemplifies--inmon-approach": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-warehouse",
+        "target_node": "inmon-approach"
+      },
+      "inmon-approach--builds_on--third-normal-form": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "inmon-approach",
+        "target_node": "third-normal-form"
+      },
+      "inmon-approach--exemplifies--enterprise-data-warehouse": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "inmon-approach",
+        "target_node": "enterprise-data-warehouse"
+      },
+      "data-mart--builds_on--inmon-approach": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-mart",
+        "target_node": "inmon-approach"
+      },
+      "inmon-approach--contradicts--kimball-approach": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "inmon-approach",
+        "target_node": "kimball-approach"
+      },
+      "data-vault--builds_on--inmon-approach": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-vault",
+        "target_node": "inmon-approach"
+      },
+      "data-vault--builds_on--kimball-approach": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-vault",
+        "target_node": "kimball-approach"
+      },
+      "inmon-approach--builds_on--star-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "inmon-approach",
+        "target_node": "star-schema"
+      },
+      "kimball-approach--exemplifies--star-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-approach",
+        "target_node": "star-schema"
+      },
+      "scd-type-2--builds_on--surrogate-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "scd-type-2",
+        "target_node": "surrogate-key"
+      },
+      "scd-type-1--exemplifies--slowly-changing-dimension": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "scd-type-1",
+        "target_node": "slowly-changing-dimension"
+      },
+      "scd-type-2--exemplifies--slowly-changing-dimension": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "scd-type-2",
+        "target_node": "slowly-changing-dimension"
+      },
+      "wrong-granularity-scd--exemplifies--scd-type-2": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "wrong-granularity-scd",
+        "target_node": "scd-type-2"
+      },
+      "wrong-granularity-scd--contradicts--surrogate-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "wrong-granularity-scd",
+        "target_node": "surrogate-key"
+      },
+      "scd-type-1--builds_on--degenerate-dimension": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "scd-type-1",
+        "target_node": "degenerate-dimension"
+      },
+      "scd-type-1--exemplifies--role-playing-dimension": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "scd-type-1",
+        "target_node": "role-playing-dimension"
+      },
+      "bi-directional-filtering--exemplifies--cross-filter-direction": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bi-directional-filtering",
+        "target_node": "cross-filter-direction"
+      },
+      "bi-directional-overuse-causes-duplication--exemplifies--bi-directional-filtering": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bi-directional-overuse-causes-duplication",
+        "target_node": "bi-directional-filtering"
+      },
+      "bi-directional-filtering--builds_on--broken-relationship": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bi-directional-filtering",
+        "target_node": "broken-relationship"
+      },
+      "crossfilter-dax--contradicts--bi-directional-filtering": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "crossfilter-dax",
+        "target_node": "bi-directional-filtering"
+      },
+      "cross-filter-direction--builds_on--crossfilter-dax": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "cross-filter-direction",
+        "target_node": "crossfilter-dax"
+      },
+      "broken-relationship--builds_on--cross-filter-direction": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "broken-relationship",
+        "target_node": "cross-filter-direction"
+      },
+      "missing-date-relationship--exemplifies--broken-relationship": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "missing-date-relationship",
+        "target_node": "broken-relationship"
+      },
+      "star-schema--builds_on--fact-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "fact-table"
+      },
+      "star-schema--builds_on--dimension-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "dimension-table"
+      },
+      "snowflake-schema--builds_on--dimension-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "snowflake-schema",
+        "target_node": "dimension-table"
+      },
+      "surrogate-key--builds_on--fact-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "surrogate-key",
+        "target_node": "fact-table"
+      },
+      "star-schema-default-power-bi--exemplifies--star-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema-default-power-bi",
+        "target_node": "star-schema"
+      },
+      "snowflake-slower-4x--exemplifies--snowflake-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "snowflake-slower-4x",
+        "target_node": "snowflake-schema"
+      },
+      "union-all-over-union--exemplifies--union-all": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "union-all-over-union",
+        "target_node": "union-all"
+      },
+      "composite-key-60x-memory--exemplifies--composite-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "composite-key-60x-memory",
+        "target_node": "composite-key"
+      },
+      "d365-no-single-products-table--exemplifies--d365-fo": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "d365-no-single-products-table",
+        "target_node": "d365-fo"
+      },
+      "broken-relationships-wrong-totals--exemplifies--broken-relationship": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "broken-relationships-wrong-totals",
+        "target_node": "broken-relationship"
+      },
+      "scd-type1-overwrites-price--exemplifies--scd-type-1": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "scd-type1-overwrites-price",
+        "target_node": "scd-type-1"
+      },
+      "inmon-top-down--exemplifies--inmon-approach": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "inmon-top-down",
+        "target_node": "inmon-approach"
+      },
+      "inmon-single-truth--exemplifies--inmon-approach": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "inmon-single-truth",
+        "target_node": "inmon-approach"
+      },
+      "bridge-avoids-m2m-overhead--exemplifies--bridge-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bridge-avoids-m2m-overhead",
+        "target_node": "bridge-table"
+      },
+      "powerpivot-auto-relationship-import--exemplifies--powerpivot": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "powerpivot-auto-relationship-import",
+        "target_node": "powerpivot"
+      },
+      "schema-on-read-flexibility--exemplifies--schema-on-read": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "schema-on-read-flexibility",
+        "target_node": "schema-on-read"
+      },
+      "lake-and-warehouse-complementary--exemplifies--data-lake": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "lake-and-warehouse-complementary",
+        "target_node": "data-lake"
+      },
+      "lake-and-warehouse-complementary--exemplifies--data-warehouse": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "lake-and-warehouse-complementary",
+        "target_node": "data-warehouse"
+      },
+      "claim-schema-on-read-vs-write--exemplifies--data-lake": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-schema-on-read-vs-write",
+        "target_node": "data-lake"
+      },
+      "claim-schema-on-read-vs-write--exemplifies--data-warehouse": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-schema-on-read-vs-write",
+        "target_node": "data-warehouse"
+      },
+      "claim-medallion-standard-pattern--exemplifies--medallion-architecture": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-medallion-standard-pattern",
+        "target_node": "medallion-architecture"
+      },
+      "claim-medallion-standard-pattern--builds_on--delta-lake": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-medallion-standard-pattern",
+        "target_node": "delta-lake"
+      },
+      "claim-lakehouse-blurs-lines--exemplifies--lakehouse-architecture": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-lakehouse-blurs-lines",
+        "target_node": "lakehouse-architecture"
+      },
+      "claim-lakehouse-blurs-lines--builds_on--delta-lake": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-lakehouse-blurs-lines",
+        "target_node": "delta-lake"
+      },
+      "batch-processing--contradicts--stream-processing": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "batch-processing",
+        "target_node": "stream-processing"
+      },
+      "lambda-architecture--builds_on--batch-processing": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "lambda-architecture",
+        "target_node": "batch-processing"
+      },
+      "lambda-architecture--builds_on--stream-processing": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "lambda-architecture",
+        "target_node": "stream-processing"
+      },
+      "kappa-architecture--builds_on--stream-processing": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kappa-architecture",
+        "target_node": "stream-processing"
+      },
+      "claim-batch-first-default--exemplifies--batch-processing": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-batch-first-default",
+        "target_node": "batch-processing"
+      },
+      "claim-batch-first-default--contradicts--stream-processing": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-batch-first-default",
+        "target_node": "stream-processing"
+      },
+      "claim-star-schema-mandatory--exemplifies--star-schema": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-star-schema-mandatory",
+        "target_node": "star-schema"
+      },
+      "claim-star-schema-mandatory--contradicts--flat-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-star-schema-mandatory",
+        "target_node": "flat-table"
+      },
+      "claim-flat-table-breaks-calculations--exemplifies--flat-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-flat-table-breaks-calculations",
+        "target_node": "flat-table"
+      },
+      "claim-surrogate-key-memory-efficiency--exemplifies--surrogate-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-surrogate-key-memory-efficiency",
+        "target_node": "surrogate-key"
+      },
+      "claim-surrogate-key-memory-efficiency--contradicts--composite-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-surrogate-key-memory-efficiency",
+        "target_node": "composite-key"
+      },
+      "claim-scd-wrong-granularity-recalculation--exemplifies--slowly-changing-dimension": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-scd-wrong-granularity-recalculation",
+        "target_node": "slowly-changing-dimension"
+      },
+      "claim-bridge-tables-solve-many-to-many--exemplifies--bridge-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-bridge-tables-solve-many-to-many",
+        "target_node": "bridge-table"
+      },
+      "dim-date--builds_on--date-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dim-date",
+        "target_node": "date-table"
+      },
+      "claim-import-faster-than-directquery--exemplifies--import-mode": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-import-faster-than-directquery",
+        "target_node": "import-mode"
+      },
+      "claim-import-faster-than-directquery--contradicts--directquery": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-import-faster-than-directquery",
+        "target_node": "directquery"
+      },
+      "claim-incremental-refresh-game-changer--exemplifies--incremental-refresh": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-incremental-refresh-game-changer",
+        "target_node": "incremental-refresh"
+      },
+      "bravo-for-power-bi--exemplifies--column-pruning": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bravo-for-power-bi",
+        "target_node": "column-pruning"
+      },
+      "claim-bi-directional-ambiguity--exemplifies--bi-directional-filtering": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-bi-directional-ambiguity",
+        "target_node": "bi-directional-filtering"
+      },
+      "claim-bi-directional-ambiguity--contradicts--one-to-many-relationship": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-bi-directional-ambiguity",
+        "target_node": "one-to-many-relationship"
+      },
+      "claim-measures-preferred-over-calculated-columns--exemplifies--dax-measure": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-measures-preferred-over-calculated-columns",
+        "target_node": "dax-measure"
+      },
+      "claim-measures-preferred-over-calculated-columns--contradicts--calculated-column": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-measures-preferred-over-calculated-columns",
+        "target_node": "calculated-column"
+      },
+      "claim-date-table-unlocks-time-intelligence--exemplifies--date-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-date-table-unlocks-time-intelligence",
+        "target_node": "date-table"
+      },
+      "claim-date-table-unlocks-time-intelligence--builds_on--time-intelligence": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-date-table-unlocks-time-intelligence",
+        "target_node": "time-intelligence"
+      },
+      "account-code-ranges--builds_on--pl-line-structure": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "account-code-ranges",
+        "target_node": "pl-line-structure"
+      },
+      "chart-of-accounts--builds_on--pl-mapping-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "chart-of-accounts",
+        "target_node": "pl-mapping-table"
+      },
+      "pl-mapping-table--builds_on--pl-line-structure": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "pl-mapping-table",
+        "target_node": "pl-line-structure"
+      },
+      "claim-duplicates-distort-metrics--exemplifies--duplicate-records": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-duplicates-distort-metrics",
+        "target_node": "duplicate-records"
+      },
+      "claim-inconsistent-dates-wrong-grouping--exemplifies--inconsistent-date-formats": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-inconsistent-dates-wrong-grouping",
+        "target_node": "inconsistent-date-formats"
+      },
+      "iso-date-format--contradicts--inconsistent-date-formats": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "iso-date-format",
+        "target_node": "inconsistent-date-formats"
+      },
+      "claim-missing-values-break-calculations--exemplifies--missing-values": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-missing-values-break-calculations",
+        "target_node": "missing-values"
+      },
+      "claim-inconsistent-categories-fragment-charts--exemplifies--inconsistent-categories": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-inconsistent-categories-fragment-charts",
+        "target_node": "inconsistent-categories"
+      },
+      "text-transform--builds_on--inconsistent-categories": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "text-transform",
+        "target_node": "inconsistent-categories"
+      },
+      "claim-outliers-warp-averages--exemplifies--outlier": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-outliers-warp-averages",
+        "target_node": "outlier"
+      },
+      "min-max-qa--builds_on--outlier": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "min-max-qa",
+        "target_node": "outlier"
+      },
+      "claim-median-robust-to-outliers--exemplifies--median": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-median-robust-to-outliers",
+        "target_node": "median"
+      },
+      "claim-median-robust-to-outliers--contradicts--outlier": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-median-robust-to-outliers",
+        "target_node": "outlier"
+      },
+      "dashboard-health-checklist--exemplifies--duplicate-records": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dashboard-health-checklist",
+        "target_node": "duplicate-records"
+      },
+      "dashboard-health-checklist--exemplifies--inconsistent-date-formats": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dashboard-health-checklist",
+        "target_node": "inconsistent-date-formats"
+      },
+      "dashboard-health-checklist--exemplifies--missing-values": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dashboard-health-checklist",
+        "target_node": "missing-values"
+      },
+      "dashboard-health-checklist--exemplifies--inconsistent-categories": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dashboard-health-checklist",
+        "target_node": "inconsistent-categories"
+      },
+      "dashboard-health-checklist--exemplifies--outlier": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dashboard-health-checklist",
+        "target_node": "outlier"
+      },
+      "countrows-vs-distinctcount--builds_on--duplicate-records": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "countrows-vs-distinctcount",
+        "target_node": "duplicate-records"
+      },
+      "countrows-vs-distinctcount--builds_on--primary-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "countrows-vs-distinctcount",
+        "target_node": "primary-key"
+      },
+      "data-cleaning-pipeline--exemplifies--duplicate-records": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-cleaning-pipeline",
+        "target_node": "duplicate-records"
+      },
+      "data-cleaning-pipeline--exemplifies--missing-values": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-cleaning-pipeline",
+        "target_node": "missing-values"
+      },
+      "data-cleaning-pipeline--exemplifies--inconsistent-date-formats": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-cleaning-pipeline",
+        "target_node": "inconsistent-date-formats"
+      },
+      "data-cleaning-pipeline--exemplifies--inconsistent-categories": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-cleaning-pipeline",
+        "target_node": "inconsistent-categories"
+      },
+      "data-cleaning-pipeline--exemplifies--outlier": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "data-cleaning-pipeline",
+        "target_node": "outlier"
+      },
+      "claim-pipeline-step-order-matters--exemplifies--data-cleaning-pipeline": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-pipeline-step-order-matters",
+        "target_node": "data-cleaning-pipeline"
+      },
+      "claim-countrows-distinctcount-detects-duplicates--exemplifies--countrows-vs-distinctcount": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-countrows-distinctcount-detects-duplicates",
+        "target_node": "countrows-vs-distinctcount"
+      },
+      "claim-remove-duplicates-early--exemplifies--duplicate-records": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-remove-duplicates-early",
+        "target_node": "duplicate-records"
+      },
+      "claim-medallion-habit-no-evaluation--exemplifies--architecture-by-habit": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "claim-medallion-habit-no-evaluation",
+        "target_node": "architecture-by-habit"
+      },
+      "architecture-by-habit--contradicts--medallion-architecture": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "architecture-by-habit",
+        "target_node": "medallion-architecture"
+      },
+      "star-schema--builds_on--surrogate-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "surrogate-key"
+      },
+      "star-schema--builds_on--one-to-many-relationship": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "one-to-many-relationship"
+      },
+      "star-schema--builds_on--bridge-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "bridge-table"
+      },
+      "star-schema--builds_on--date-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "date-table"
+      },
+      "jesse-ruiz--authored_by--3-easy-data-architecture-interview-questions-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "jesse-ruiz",
+        "target_node": "article:3-easy-data-architecture-interview-questions-source"
+      },
+      "bill-donofrio--authored_by--stop-building-slow-power-bi-reports-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bill-donofrio",
+        "target_node": "article:stop-building-slow-power-bi-reports-source"
+      },
+      "anurodh-kumar--authored_by--source-5-mistakes-in-power-bi-data-modeling": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "anurodh-kumar",
+        "target_node": "article:Source-5-Mistakes-in-Power-BI-Data-Modeling"
+      },
+      "digitalbykewat--authored_by--5-data-cleaning-mistakes-digitalbykewat-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "digitalbykewat",
+        "target_node": "article:5-Data-Cleaning-Mistakes-DigitalBYKewat-source"
+      },
+      "yadullah-abidi--authored_by--author-yadullah-abidi": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "yadullah-abidi",
+        "target_node": "article:Author-Yadullah-Abidi"
+      },
+      "digitalbykewat--authored_by--author-digitalbykewat": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "digitalbykewat",
+        "target_node": "article:Author-DigitalBYKewat"
+      },
+      "case-inconsistency-splits-aggregations--exemplifies--text-normalization": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "case-inconsistency-splits-aggregations",
+        "target_node": "text-normalization"
+      },
+      "text-normalization--builds_on--power-query-transforms": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "text-normalization",
+        "target_node": "power-query-transforms"
+      },
+      "iso-8601-unambiguous--exemplifies--date-format-standardization": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "iso-8601-unambiguous",
+        "target_node": "date-format-standardization"
+      },
+      "date-format-standardization--builds_on--power-query-transforms": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "date-format-standardization",
+        "target_node": "power-query-transforms"
+      },
+      "layer-must-have-distinct-responsibility--exemplifies--medallion-architecture": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "layer-must-have-distinct-responsibility",
+        "target_node": "medallion-architecture"
+      },
+      "medallion-architecture--builds_on--landing-layer": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "medallion-architecture",
+        "target_node": "landing-layer"
+      },
+      "medallion-architecture--builds_on--curated-layer": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "medallion-architecture",
+        "target_node": "curated-layer"
+      },
+      "medallion-architecture--builds_on--analytics-layer": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "medallion-architecture",
+        "target_node": "analytics-layer"
+      },
+      "materialized-views-eliminate-silver--builds_on--curated-layer": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "materialized-views-eliminate-silver",
+        "target_node": "curated-layer"
+      },
+      "materialized-views-eliminate-silver--exemplifies--materialized-views": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "materialized-views-eliminate-silver",
+        "target_node": "materialized-views"
+      },
+      "materialized-views-eliminate-silver--builds_on--data-quality-constraints": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "materialized-views-eliminate-silver",
+        "target_node": "data-quality-constraints"
+      },
+      "medallion-architecture--exemplifies--microsoft-fabric": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "medallion-architecture",
+        "target_node": "microsoft-fabric"
+      },
+      "medallion-architecture--builds_on--onelake": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "medallion-architecture",
+        "target_node": "onelake"
+      },
+      "direct-lake-mode--builds_on--onelake": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "direct-lake-mode",
+        "target_node": "onelake"
+      },
+      "materialization-overhead-accumulation--exemplifies--medallion-architecture": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "materialization-overhead-accumulation",
+        "target_node": "medallion-architecture"
+      },
+      "semantic-model-replaces-gold-aggregates--exemplifies--power-bi-semantic-model": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "semantic-model-replaces-gold-aggregates",
+        "target_node": "power-bi-semantic-model"
+      },
+      "semantic-model-replaces-gold-aggregates--contradicts--medallion-architecture": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "semantic-model-replaces-gold-aggregates",
+        "target_node": "medallion-architecture"
+      },
+      "star-schema--exemplifies--microsoft-fabric": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "microsoft-fabric"
+      },
+      "star-schema--builds_on--direct-lake-mode": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema",
+        "target_node": "direct-lake-mode"
+      },
+      "bridge-table--exemplifies--many-to-many-relationship": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bridge-table",
+        "target_node": "many-to-many-relationship"
+      },
+      "list-columns-not-index-parallel--exemplifies--bridge-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "list-columns-not-index-parallel",
+        "target_node": "bridge-table"
+      },
+      "bridge-table--builds_on--fact-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "bridge-table",
+        "target_node": "fact-table"
+      },
+      "missing-values-handling--builds_on--power-query-transforms": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "missing-values-handling",
+        "target_node": "power-query-transforms"
+      },
+      "boniface-muchendu--authored_by--boniface-muchendu-source": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "boniface-muchendu",
+        "target_node": "boniface-muchendu-source"
+      },
+      "anurodh-kumar--authored_by--medallion-architecture-fabric": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "anurodh-kumar",
+        "target_node": "article:Medallion-Architecture-Fabric"
+      },
+      "anurodh-kumar--authored_by--star-schema-fabric": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "anurodh-kumar",
+        "target_node": "article:Star-Schema-Fabric"
+      },
+      "digitalbykewat--authored_by--inconsistent-categories-normalisation": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "digitalbykewat",
+        "target_node": "article:Inconsistent-Categories-Normalisation"
+      },
+      "digitalbykewat--authored_by--inconsistent-date-formats-iso": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "digitalbykewat",
+        "target_node": "article:Inconsistent-Date-Formats-ISO"
+      },
+      "digitalbykewat--authored_by--missing-values-handling-strategy": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "digitalbykewat",
+        "target_node": "article:Missing-Values-Handling-Strategy"
+      },
+      "cleansed-layer--exemplifies--cdc-column": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "cleansed-layer",
+        "target_node": "cdc-column"
+      },
+      "cleansed-layer--exemplifies--multi-source-merge": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "cleansed-layer",
+        "target_node": "multi-source-merge"
+      },
+      "schema-first-design--builds_on--cdc-column": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "schema-first-design",
+        "target_node": "cdc-column"
+      },
+      "watermark-table--builds_on--cdc-column": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "watermark-table",
+        "target_node": "cdc-column"
+      },
+      "normalized-tables--builds_on--postgres-constraints": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "normalized-tables",
+        "target_node": "postgres-constraints"
+      },
+      "schema-first-design--builds_on--flag-and-preserve": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "schema-first-design",
+        "target_node": "flag-and-preserve"
+      },
+      "excel-to-postgres-migration--exemplifies--schema-first-design": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "excel-to-postgres-migration",
+        "target_node": "schema-first-design"
+      },
+      "kimball-baylas-2026--exemplifies--kimball-dimensional-modeling": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "kimball-dimensional-modeling"
+      },
+      "kimball-baylas-2026--exemplifies--medallion-architecture": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "medallion-architecture"
+      },
+      "kimball-baylas-2026--exemplifies--flag-and-preserve": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "flag-and-preserve"
+      },
+      "kimball-baylas-2026--exemplifies--cdc-column": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "cdc-column"
+      },
+      "kimball-baylas-2026--exemplifies--multi-source-merge": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "multi-source-merge"
+      },
+      "kimball-baylas-2026--exemplifies--indexing-strategy": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "indexing-strategy"
+      },
+      "kimball-baylas-2026--exemplifies--junk-dimension": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "junk-dimension"
+      },
+      "kimball-baylas-2026--exemplifies--upsert-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "upsert-table"
+      },
+      "kimball-baylas-2026--exemplifies--insert-only-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "insert-only-table"
+      },
+      "kimball-baylas-2026--exemplifies--elt-pattern": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "elt-pattern"
+      },
+      "kimball-baylas-2026--authored_by--source-yadullah-abidi": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-baylas-2026",
+        "target_node": "source-yadullah-abidi"
+      },
+      "schema-first-design--authored_by--source-yadullah-abidi": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "schema-first-design",
+        "target_node": "source-yadullah-abidi"
+      },
+      "excel-to-postgres-migration--authored_by--source-yadullah-abidi": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "excel-to-postgres-migration",
+        "target_node": "source-yadullah-abidi"
+      },
+      "postgres-constraints--authored_by--source-yadullah-abidi": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "postgres-constraints",
+        "target_node": "source-yadullah-abidi"
+      },
+      "normalized-tables--authored_by--source-yadullah-abidi": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "normalized-tables",
+        "target_node": "source-yadullah-abidi"
+      },
+      "medallion-architecture--cites--kimball-baylas-2026": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "medallion-architecture",
+        "target_node": "kimball-baylas-2026"
+      },
+      "inmon-edw--contradicts--kimball-dimensional-modeling": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "inmon-edw",
+        "target_node": "kimball-dimensional-modeling"
+      },
+      "inmon-edw--contradicts--data-vault": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "inmon-edw",
+        "target_node": "data-vault"
+      },
+      "kimball-dimensional-modeling--contradicts--data-vault": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "kimball-dimensional-modeling",
+        "target_node": "data-vault"
+      },
+      "medallion-architecture--builds_on--inmon-edw": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "medallion-architecture",
+        "target_node": "inmon-edw"
+      },
+      "medallion-architecture--builds_on--data-vault": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "medallion-architecture",
+        "target_node": "data-vault"
+      },
+      "dimensional-layer--builds_on--junk-dimension": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dimensional-layer",
+        "target_node": "junk-dimension"
+      },
+      "dimensional-layer--builds_on--indexing-strategy": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dimensional-layer",
+        "target_node": "indexing-strategy"
+      },
+      "etl-run-date--contradicts--cdc-column": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "etl-run-date",
+        "target_node": "cdc-column"
+      },
+      "excel-to-postgres-migration--builds_on--postgres-constraints": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "excel-to-postgres-migration",
+        "target_node": "postgres-constraints"
+      },
+      "degenerate-dimensions-save-storage--exemplifies--degenerate-dimension": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "degenerate-dimensions-save-storage",
+        "target_node": "degenerate-dimension"
+      },
+      "grain-must-be-locked--builds_on--grain": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "grain-must-be-locked",
+        "target_node": "grain"
+      },
+      "dual-timestamp-prevents-trend-spikes--exemplifies--dual-timestamp": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "dual-timestamp-prevents-trend-spikes",
+        "target_node": "dual-timestamp"
+      },
+      "multi-key-partitioning-reduces-cost--exemplifies--multi-key-partitioning": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "multi-key-partitioning-reduces-cost",
+        "target_node": "multi-key-partitioning"
+      },
+      "pre-denormalize-at-load-time--exemplifies--denormalized-metrics": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "pre-denormalize-at-load-time",
+        "target_node": "denormalized-metrics"
+      },
+      "constraint-enforcement-pattern--exemplifies--postgres": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "constraint-enforcement-pattern",
+        "target_node": "postgres"
+      },
+      "constraint-catches-three-data-quality-issues--exemplifies--postgres": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "constraint-catches-three-data-quality-issues",
+        "target_node": "postgres"
+      },
+      "code-column-reliability--builds_on--dimension-table": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "code-column-reliability",
+        "target_node": "dimension-table"
+      },
+      "source-excel-postgres-weekend-yadullah--authored_by--yadamullah-abidi": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "source-excel-postgres-weekend-yadullah",
+        "target_node": "yadamullah-abidi"
+      },
+      "star-schema-fact-tables-source--authored_by--rohan-dutt": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "star-schema-fact-tables-source",
+        "target_node": "rohan-dutt"
+      },
+      "rely-constraint--exemplifies--rely-optimizer-eliminates-joins": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "rely-constraint",
+        "target_node": "rely-optimizer-eliminates-joins"
+      },
+      "rely-constraint--builds_on--snowflake": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "rely-constraint",
+        "target_node": "snowflake"
+      },
+      "rely-constraint--builds_on--redshift": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "rely-constraint",
+        "target_node": "redshift"
+      },
+      "rely-constraint--builds_on--bigquery": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "rely-constraint",
+        "target_node": "bigquery"
+      },
+      "rely-optimizer-eliminates-joins--exemplifies--rely-plus-pbi-0-8s": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "rely-optimizer-eliminates-joins",
+        "target_node": "rely-plus-pbi-0-8s"
+      },
+      "rely-constraint--builds_on--assume-referential-integrity": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "rely-constraint",
+        "target_node": "assume-referential-integrity"
+      },
+      "rollup-flags-pattern--exemplifies--rollup-flags-replaces-20-mviews": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "rollup-flags-pattern",
+        "target_node": "rollup-flags-replaces-20-mviews"
+      },
+      "zstd-encoding--exemplifies--zstd-500gb-to-70gb": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "zstd-encoding",
+        "target_node": "zstd-500gb-to-70gb"
+      },
+      "column-clustering--exemplifies--clustering-reduces-io-40": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "column-clustering",
+        "target_node": "clustering-reduces-io-40"
+      },
+      "surrogate-key--exemplifies--surrogate-keys-low-cardinality": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "surrogate-key",
+        "target_node": "surrogate-keys-low-cardinality"
+      },
+      "surrogate-key--exemplifies--scd-type-2-requires-surrogate": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "surrogate-key",
+        "target_node": "scd-type-2-requires-surrogate"
+      },
+      "surrogate-key--builds_on--scd-type-2": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "surrogate-key",
+        "target_node": "scd-type-2"
+      },
+      "natural-key--exemplifies--natural-keys-high-volume-fact": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "natural-key",
+        "target_node": "natural-keys-high-volume-fact"
+      },
+      "surrogate-key--contradicts--natural-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "surrogate-key",
+        "target_node": "natural-key"
+      },
+      "primary-key-verification--exemplifies--verify-primary-key-with-count": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "primary-key-verification",
+        "target_node": "verify-primary-key-with-count"
+      },
+      "primary-key-verification--exemplifies--blind-upsert-silently-overwrites": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "primary-key-verification",
+        "target_node": "blind-upsert-silently-overwrites"
+      },
+      "primary-key-verification--builds_on--composite-key": {
+        "first_seen": "2026-08-15",
+        "weight": 1,
+        "source_node": "primary-key-verification",
+        "target_node": "composite-key"
+      }
+    },
+    "last_run": "2026-08-15"
+  }
+}

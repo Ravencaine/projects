@@ -1,0 +1,686 @@
+---
+created: 2026-08-15
+source: implicit-extraction:Data Modeling
+note_type: reference
+tags: [Data Modeling, implicit-extraction, report]
+---
+
+# Implicit Extraction Report — Data Modeling
+
+## Summary
+
+| Category | Count |
+|----------|-------|
+| Entities | 189 |
+| Claims | 110 |
+| Relationships | 311 |
+| Duplicates skipped | 49 |
+| Errors | 0 |
+
+## Written Notes
+
+- [[Implicit/Entities/entity-jesse-ruiz]] — entity: Jesse Ruiz
+- [[Implicit/Entities/entity-advanced-dimensional-modeling-for-retail-product-variants-parts-1-3]] — entity: Advanced Dimensional Modeling for Retail Product Variants (Parts 1-3)
+- [[Implicit/Entities/entity-data-modeling-for-bi-build-trustworthy-analytics]] — entity: Data Modeling for BI: Build Trustworthy Analytics
+- [[Implicit/Entities/entity-data-warehousing-for-bi]] — entity: Data Warehousing for BI
+- [[Implicit/Entities/entity-han-xu-yang]] — entity: Han Xu Yang
+- [[Implicit/Entities/entity-beginning-big-data-with-power-bi-and-excel-2013-dunlop]] — entity: Beginning Big Data with Power BI and Excel 2013 (Dunlop)
+- [[Implicit/Entities/entity-differential-privacy]] — entity: Differential Privacy
+- [[Implicit/Entities/entity-smartnoise-sdk]] — entity: SmartNoise SDK
+- [[Implicit/Entities/entity-dimdate-dax-date-dimension]] — entity: dim_date (DAX date dimension)
+- [[Implicit/Entities/entity-dax-calendar-function]] — entity: DAX CALENDAR Function
+- [[Implicit/Entities/entity-dimension-groups-d365-fo]] — entity: Dimension Groups (D365 F&O)
+- [[Implicit/Entities/entity-retail-product-variants]] — entity: Retail Product Variants
+- [[Implicit/Entities/entity-multiple-fact-tables-modeling]] — entity: Multiple Fact Tables Modeling
+- [[Implicit/Entities/entity-conformed-dimensions]] — entity: Conformed Dimensions
+- [[Implicit/Entities/entity-import-mode-power-bi]] — entity: Import Mode (Power BI)
+- [[Implicit/Entities/entity-directquery-mode-power-bi]] — entity: DirectQuery Mode (Power BI)
+- [[Implicit/Entities/entity-incremental-refresh-pattern]] — entity: Incremental Refresh Pattern
+- [[Implicit/Entities/entity-append-only-tables]] — entity: Append-Only Tables
+- [[Implicit/Entities/entity-filtered-index-sql]] — entity: Filtered Index (SQL)
+- [[Implicit/Entities/entity-lambda-architecture]] — entity: Lambda Architecture
+- [[Implicit/Entities/entity-kappa-architecture]] — entity: Kappa Architecture
+- [[Implicit/Entities/entity-materialized-views]] — entity: Materialized Views
+- [[Implicit/Entities/entity-cetas-create-external-table-as-select]] — entity: CETAS (CREATE EXTERNAL TABLE AS SELECT)
+- [[Implicit/Entities/entity-medallion-architecture]] — entity: Medallion Architecture
+- [[Implicit/Entities/entity-bronze-layer]] — entity: Bronze Layer
+- [[Implicit/Entities/entity-silver-layer]] — entity: Silver Layer
+- [[Implicit/Entities/entity-gold-layer]] — entity: Gold Layer
+- [[Implicit/Entities/entity-onelake]] — entity: OneLake
+- [[Implicit/Entities/entity-direct-lake-mode]] — entity: Direct Lake Mode
+- [[Implicit/Entities/entity-delta-lake]] — entity: Delta Lake
+- [[Implicit/Entities/entity-pricedisctable]] — entity: PriceDiscTable
+- [[Implicit/Entities/entity-product-variants]] — entity: Product Variants
+- [[Implicit/Entities/entity-dimension-groups]] — entity: Dimension Groups
+- [[Implicit/Entities/entity-parquet-format]] — entity: Parquet Format
+- [[Implicit/Entities/entity-csv-format]] — entity: CSV Format
+- [[Implicit/Entities/entity-json-format]] — entity: JSON Format
+- [[Implicit/Entities/entity-plain-text-format]] — entity: Plain Text Format
+- [[Implicit/Entities/entity-semantic-debt]] — entity: Semantic Debt
+- [[Implicit/Entities/entity-normalization-and-3nf]] — entity: Normalization and 3NF
+- [[Implicit/Entities/entity-transitive-dependency]] — entity: Transitive Dependency
+- [[Implicit/Entities/entity-ontology]] — entity: Ontology
+- [[Implicit/Entities/entity-fabric-iq]] — entity: Fabric IQ
+- [[Implicit/Entities/entity-stale-statistics]] — entity: Stale Statistics
+- [[Implicit/Entities/entity-power-bi-ontology-extractor]] — entity: Power BI Ontology Extractor
+- [[Implicit/Entities/entity-modelbim]] — entity: model.bim
+- [[Implicit/Entities/entity-power-bi-visual-performance]] — entity: Power BI Visual Performance
+- [[Implicit/Entities/entity-power-bi-performance-analyzer]] — entity: Power BI Performance Analyzer
+- [[Implicit/Entities/entity-powerpivot-diagram-view]] — entity: PowerPivot Diagram View
+- [[Implicit/Entities/entity-manage-relationships-screen]] — entity: Manage Relationships Screen
+- [[Implicit/Entities/entity-pricing-cte-with-rownumber-deduplication]] — entity: Pricing CTE with ROW_NUMBER Deduplication
+- [[Implicit/Entities/entity-inventdim]] — entity: InventDim
+- [[Implicit/Entities/entity-rownumber-window-function]] — entity: ROW_NUMBER() Window Function
+- [[Implicit/Entities/entity-pii-removal-techniques]] — entity: PII Removal Techniques
+- [[Implicit/Entities/entity-pii-categories]] — entity: PII Categories
+- [[Implicit/Entities/entity-azure-cognitive-services-pii-detection]] — entity: Azure Cognitive Services PII Detection
+- [[Implicit/Entities/entity-replicated-table-distribution]] — entity: Replicated Table Distribution
+- [[Implicit/Entities/entity-role-playing-dimension]] — entity: Role-Playing Dimension
+- [[Implicit/Entities/entity-schema-drift-column-rename-failure]] — entity: Schema Drift: Column Rename Failure
+- [[Implicit/Entities/entity-schema-drift-detection]] — entity: Schema Drift Detection
+- [[Implicit/Entities/entity-schemamapper-powerbi-ontology]] — entity: SchemaMapper / PowerBI-Ontology
+- [[Implicit/Entities/entity-shared-dimensions-with-multiple-fact-tables]] — entity: Shared Dimensions with Multiple Fact Tables
+- [[Implicit/Entities/entity-simple-vs-variant-products]] — entity: Simple vs Variant Products
+- [[Implicit/Entities/entity-simple-product]] — entity: Simple Product
+- [[Implicit/Entities/entity-variant-product]] — entity: Variant Product
+- [[Implicit/Entities/entity-star-schema]] — entity: Star Schema
+- [[Implicit/Entities/entity-fact-table]] — entity: Fact Table
+- [[Implicit/Entities/entity-dimension-table]] — entity: Dimension Table
+- [[Implicit/Entities/entity-foreign-key-and-primary-key]] — entity: Foreign Key and Primary Key
+- [[Implicit/Entities/entity-surrogate-key]] — entity: Surrogate Key
+- [[Implicit/Entities/entity-snowflake-schema]] — entity: Snowflake Schema
+- [[Implicit/Entities/entity-composite-key]] — entity: Composite Key
+- [[Implicit/Entities/entity-union-all]] — entity: UNION ALL
+- [[Implicit/Entities/entity-d365-fo-dynamics-365-finance-operations]] — entity: D365 F&O (Dynamics 365 Finance & Operations)
+- [[Implicit/Entities/entity-bi-directional-filtering]] — entity: Bi-Directional Filtering
+- [[Implicit/Entities/entity-broken-relationship]] — entity: Broken Relationship
+- [[Implicit/Entities/entity-bridge-table]] — entity: Bridge Table
+- [[Implicit/Entities/entity-powerpivot]] — entity: PowerPivot
+- [[Implicit/Entities/entity-data-lake]] — entity: Data Lake
+- [[Implicit/Entities/entity-data-warehouse]] — entity: Data Warehouse
+- [[Implicit/Entities/entity-inmon-data-warehouse-approach]] — entity: Inmon Data Warehouse Approach
+- [[Implicit/Entities/entity-kimball-dimensional-modeling-approach]] — entity: Kimball Dimensional Modeling Approach
+- [[Implicit/Entities/entity-data-vault-20]] — entity: Data Vault 2.0
+- [[Implicit/Entities/entity-slowly-changing-dimension-scd]] — entity: Slowly Changing Dimension (SCD)
+- [[Implicit/Entities/entity-scd-type-1-overwrite]] — entity: SCD Type 1 (Overwrite)
+- [[Implicit/Entities/entity-scd-type-2-history]] — entity: SCD Type 2 (History)
+- [[Implicit/Entities/entity-third-normal-form-3nf]] — entity: Third Normal Form (3NF)
+- [[Implicit/Entities/entity-schema-on-read]] — entity: Schema-on-Read
+- [[Implicit/Entities/entity-schema-on-write]] — entity: Schema-on-Write
+- [[Implicit/Entities/entity-enterprise-data-warehouse-edw]] — entity: Enterprise Data Warehouse (EDW)
+- [[Implicit/Entities/entity-survey-response-mm-problem]] — entity: Survey Response M:M Problem
+- [[Implicit/Entities/entity-crossfilter-dax-function]] — entity: CROSSFILTER DAX Function
+- [[Implicit/Entities/entity-degenerate-dimension]] — entity: Degenerate Dimension
+- [[Implicit/Entities/entity-data-swamp]] — entity: Data Swamp
+- [[Implicit/Entities/entity-cross-filter-direction]] — entity: Cross Filter Direction
+- [[Implicit/Entities/entity-data-mart]] — entity: Data Mart
+- [[Implicit/Entities/entity-unified-product-dimension]] — entity: Unified Product Dimension
+- [[Implicit/Entities/entity-batch-processing]] — entity: Batch Processing
+- [[Implicit/Entities/entity-stream-processing]] — entity: Stream Processing
+- [[Implicit/Entities/entity-lakehouse-architecture]] — entity: Lakehouse Architecture
+- [[Implicit/Entities/entity-pl-line-structure]] — entity: P&L Line Structure
+- [[Implicit/Entities/entity-account-code-ranges]] — entity: Account Code Ranges
+- [[Implicit/Entities/entity-chart-of-accounts]] — entity: Chart of Accounts
+- [[Implicit/Entities/entity-pl-mapping-table]] — entity: P&L Mapping Table
+- [[Implicit/Entities/entity-flat-table-one-big-table]] — entity: Flat Table (One Big Table)
+- [[Implicit/Entities/entity-dimdate-date-dimension]] — entity: dim_date (Date Dimension)
+- [[Implicit/Entities/entity-directquery-mode]] — entity: DirectQuery Mode
+- [[Implicit/Entities/entity-import-mode]] — entity: Import Mode
+- [[Implicit/Entities/entity-incremental-refresh]] — entity: Incremental Refresh
+- [[Implicit/Entities/entity-bravo-for-power-bi]] — entity: Bravo for Power BI
+- [[Implicit/Entities/entity-column-pruning]] — entity: Column Pruning
+- [[Implicit/Entities/entity-bi-directional-cross-filtering]] — entity: Bi-directional Cross-Filtering
+- [[Implicit/Entities/entity-calculated-column]] — entity: Calculated Column
+- [[Implicit/Entities/entity-dax-measure]] — entity: DAX Measure
+- [[Implicit/Entities/entity-date-dimension-table]] — entity: Date Dimension Table
+- [[Implicit/Entities/entity-time-intelligence]] — entity: Time Intelligence
+- [[Implicit/Entities/entity-one-to-many-relationship]] — entity: One-to-Many Relationship
+- [[Implicit/Entities/entity-dashboard-health-checklist]] — entity: Dashboard Health Checklist
+- [[Implicit/Entities/entity-data-cleaning-pipeline]] — entity: Data Cleaning Pipeline
+- [[Implicit/Entities/entity-duplicate-records]] — entity: Duplicate Records
+- [[Implicit/Entities/entity-inconsistent-date-formats]] — entity: Inconsistent Date Formats
+- [[Implicit/Entities/entity-missing-values]] — entity: Missing Values
+- [[Implicit/Entities/entity-inconsistent-categories]] — entity: Inconsistent Categories
+- [[Implicit/Entities/entity-outlier]] — entity: Outlier
+- [[Implicit/Entities/entity-iso-date-format-yyyy-mm-dd]] — entity: ISO Date Format (YYYY-MM-DD)
+- [[Implicit/Entities/entity-primary-key]] — entity: Primary Key
+- [[Implicit/Entities/entity-minmax-qa-check]] — entity: Min/Max QA Check
+- [[Implicit/Entities/entity-median-central-tendency]] — entity: Median (Central Tendency)
+- [[Implicit/Entities/entity-countrows-vs-distinctcount-qa]] — entity: COUNTROWS vs DISTINCTCOUNT QA
+- [[Implicit/Entities/entity-texttrim-and-textclean]] — entity: Text.Trim and Text.Clean
+- [[Implicit/Entities/entity-architecture-by-habit]] — entity: Architecture by Habit
+- [[Implicit/Entities/entity-bill-donofrio]] — entity: Bill Donofrio
+- [[Implicit/Entities/entity-anurodh-kumar]] — entity: Anurodh Kumar
+- [[Implicit/Entities/entity-digitalbykewat]] — entity: DigitalBYKewat
+- [[Implicit/Entities/entity-yadullah-abidi]] — entity: Yadullah Abidi
+- [[Implicit/Entities/entity-text-normalization]] — entity: Text Normalization
+- [[Implicit/Entities/entity-date-format-standardization]] — entity: Date Format Standardization
+- [[Implicit/Entities/entity-landing-layer]] — entity: Landing Layer
+- [[Implicit/Entities/entity-curated-layer]] — entity: Curated Layer
+- [[Implicit/Entities/entity-analytics-layer]] — entity: Analytics Layer
+- [[Implicit/Entities/entity-data-quality-constraints]] — entity: Data Quality Constraints
+- [[Implicit/Entities/entity-power-bi-semantic-model]] — entity: Power BI Semantic Model
+- [[Implicit/Entities/entity-many-to-many-relationship]] — entity: Many-to-Many Relationship
+- [[Implicit/Entities/entity-microsoft-fabric]] — entity: Microsoft Fabric
+- [[Implicit/Entities/entity-missing-values-handling]] — entity: Missing Values Handling
+- [[Implicit/Entities/entity-power-query-transforms]] — entity: Power Query Transforms
+- [[Implicit/Entities/entity-boniface-muchendu]] — entity: Boniface Muchendu
+- [[Implicit/Entities/entity-cdc-column]] — entity: CDC Column
+- [[Implicit/Entities/entity-watermark-table]] — entity: Watermark Table
+- [[Implicit/Entities/entity-etl-run-date]] — entity: ETL Run Date
+- [[Implicit/Entities/entity-upsert-table]] — entity: Upsert Table
+- [[Implicit/Entities/entity-insert-only-table]] — entity: Insert-Only Table
+- [[Implicit/Entities/entity-postgres-constraints]] — entity: Postgres Constraints
+- [[Implicit/Entities/entity-schema-first-design]] — entity: Schema-First Design
+- [[Implicit/Entities/entity-excel-to-postgres-migration-workflow]] — entity: Excel to Postgres Migration Workflow
+- [[Implicit/Entities/entity-flag-and-preserve]] — entity: Flag and Preserve
+- [[Implicit/Entities/entity-deferred-indexing-strategy]] — entity: Deferred Indexing Strategy
+- [[Implicit/Entities/entity-inmon-enterprise-data-warehouse]] — entity: Inmon / Enterprise Data Warehouse
+- [[Implicit/Entities/entity-kimball-dimensional-modeling]] — entity: Kimball Dimensional Modeling
+- [[Implicit/Entities/entity-data-vault]] — entity: Data Vault
+- [[Implicit/Entities/entity-junk-dimension]] — entity: Junk Dimension
+- [[Implicit/Entities/entity-multi-source-merge-pattern]] — entity: Multi-Source Merge Pattern
+- [[Implicit/Entities/entity-normalized-tables]] — entity: Normalized Tables
+- [[Implicit/Entities/entity-kimball-dimensional-modeling-case-study-baylas-2026]] — entity: Kimball Dimensional Modeling Case Study — Baylas 2026
+- [[Implicit/Entities/entity-cleansed-layer]] — entity: Cleansed Layer
+- [[Implicit/Entities/entity-dimensional-layer]] — entity: Dimensional Layer
+- [[Implicit/Entities/entity-raw-layer]] — entity: Raw Layer
+- [[Implicit/Entities/entity-elt-pattern]] — entity: ELT Pattern
+- [[Implicit/Entities/entity-source-excel-was-my-database-for-15-years-and-postgres-ended-that-in-a-weekend]] — entity: Source: Excel was my database for 15 years, and Postgres ended that in a weekend
+- [[Implicit/Entities/entity-postgresql]] — entity: PostgreSQL
+- [[Implicit/Entities/entity-unique-constraint]] — entity: UNIQUE Constraint
+- [[Implicit/Entities/entity-not-null-constraint]] — entity: NOT NULL Constraint
+- [[Implicit/Entities/entity-foreign-key-constraint]] — entity: FOREIGN KEY Constraint
+- [[Implicit/Entities/entity-grain]] — entity: Grain
+- [[Implicit/Entities/entity-late-arriving-data]] — entity: Late-Arriving Data
+- [[Implicit/Entities/entity-multi-key-partitioning]] — entity: Multi-Key Partitioning
+- [[Implicit/Entities/entity-dual-timestamp-pattern]] — entity: Dual Timestamp Pattern
+- [[Implicit/Entities/entity-denormalized-metrics]] — entity: Denormalized Metrics
+- [[Implicit/Entities/entity-rohan-dutt]] — entity: Rohan Dutt
+- [[Implicit/Entities/entity-rely-constraint]] — entity: RELY Constraint
+- [[Implicit/Entities/entity-zstd-encoding]] — entity: ZSTD Encoding
+- [[Implicit/Entities/entity-column-clustering]] — entity: Column Clustering
+- [[Implicit/Entities/entity-rollup-flags-pattern]] — entity: Rollup Flags Pattern
+- [[Implicit/Entities/entity-natural-key]] — entity: Natural Key
+- [[Implicit/Entities/entity-primary-key-verification]] — entity: Primary Key Verification
+- [[Implicit/Entities/entity-scd-type-2]] — entity: SCD Type 2
+- [[Implicit/Entities/entity-snowflake]] — entity: Snowflake
+- [[Implicit/Entities/entity-amazon-redshift]] — entity: Amazon Redshift
+- [[Implicit/Entities/entity-bigquery]] — entity: BigQuery
+- [[Implicit/Entities/entity-assume-referential-integrity]] — entity: Assume Referential Integrity
+- [[Implicit/Claims/claim-data-modeling-mistake-missing-date-table]] — claim: Data Modeling Mistake: No Dedicated Date Table
+- [[Implicit/Claims/claim-batch-processing-vs-stream-processing]] — claim: Batch Processing vs Stream Processing
+- [[Implicit/Claims/claim-column-pruning-bravo]] — claim: Column Pruning with Bravo for Power BI
+- [[Implicit/Claims/claim-composite-key-strategy-itemkey]] — claim: Composite Key Strategy (CONCAT-based ItemKey)
+- [[Implicit/Claims/claim-conditional-joins-case-concat-matching]] — claim: Conditional Joins via CASE/CONCAT Matching
+- [[Implicit/Claims/claim-conformed-dimensions]] — claim: Conformed Dimensions
+- [[Implicit/Claims/claim-database-key-types]] — claim: Database Key Types
+- [[Implicit/Claims/claim-degenerate-dimension-barcode-in-fact]] — claim: Degenerate Dimension (Barcode in Fact)
+- [[Implicit/Claims/claim-d365-fo-product-dimension]] — claim: D365 F&O Product Dimension Complexity
+- [[Implicit/Claims/claim-d365-fo-dimension-groups]] — claim: D365 F&O Dimension Groups
+- [[Implicit/Claims/claim-epsilon-parameter]] — claim: Epsilon (privacy budget parameter)
+- [[Implicit/Claims/claim-delta-parameter]] — claim: Delta (probability of privacy violation)
+- [[Implicit/Claims/claim-duplicate-barcodes]] — claim: Duplicate Barcodes Error Pattern
+- [[Implicit/Claims/claim-retailshowforitem-filter]] — claim: retailshowforitem = 1 Filter
+- [[Implicit/Claims/claim-star-schema-multi-fact]] — claim: Star Schema for Multi-Fact Models
+- [[Implicit/Claims/claim-shared-dimensions]] — claim: Shared Dimensions Pattern
+- [[Implicit/Claims/claim-barcode-lookup]] — claim: Barcode Lookup Pattern
+- [[Implicit/Claims/claim-data-cleaning-effort]] — claim: Data Cleaning Dominates Project Time
+- [[Implicit/Claims/claim-batch-stream-combination]] — claim: Batch and Stream Processing Combination
+- [[Implicit/Claims/claim-view-precomputation]] — claim: View Precomputation Benefit
+- [[Implicit/Claims/claim-missing-price-error]] — claim: Missing Prices Error Pattern
+- [[Implicit/Claims/claim-semantic-debt-analysis]] — claim: Multi-Dashboard Semantic Debt Analysis Pattern
+- [[Implicit/Claims/claim-third-normal-form]] — claim: 3NF Eliminates Update Anomalies
+- [[Implicit/Claims/claim-ontology-extraction-70-30]] — claim: 70/30 Ontology Auto-Generation Split
+- [[Implicit/Claims/claim-power-bi-informal-ontologies]] — claim: Power BI Models as Informal Ontologies
+- [[Implicit/Claims/claim-ontology-to-fabric-iq-export]] — claim: Ontology to Fabric IQ Export Pattern
+- [[Implicit/Claims/claim-performance-degradation-over-time]] — claim: Performance Degradation From Growth and Stale Statistics
+- [[Implicit/Claims/claim-consolidated-fact-tables]] — claim: Consolidated Fact Tables Anti-Pattern
+- [[Implicit/Claims/claim-duplicated-dimensions]] — claim: Duplicated Dimensions Per Fact Table Anti-Pattern
+- [[Implicit/Claims/claim-power-bi-ontology-extraction-pipeline]] — claim: Power BI to Formal Ontology Extraction Pipeline
+- [[Implicit/Claims/claim-visual-count-latency]] — claim: Visual Count Per Page Causes Latency
+- [[Implicit/Claims/claim-matrix-table-high-cardinality-rows]] — claim: Matrix and Table Visuals Load All Matching Rows
+- [[Implicit/Claims/claim-conditional-formatting-expensive]] — claim: Conditional Formatting Is Expensive Per-Cell
+- [[Implicit/Claims/claim-scatter-plot-rendering]] — claim: Dense Scatter Plots Slow Rendering
+- [[Implicit/Claims/claim-null-dimension-handling]] — claim: ISNULL Converts NULL Dimensions to Empty Strings
+- [[Implicit/Claims/claim-data-movement-elimination]] — claim: Replicated Tables Eliminate Data Movement
+- [[Implicit/Claims/claim-replicate-table-size-rule]] — claim: Replicate Works for Dimensions Under 2GB Per Node
+- [[Implicit/Claims/claim-schema-drift-4-6m-loss]] — claim: Column Rename Caused $4.6M Business Loss
+- [[Implicit/Claims/claim-schema-drift-fail-safe]] — claim: Fail-Safe Mode Blocks Agent Execution on Drift
+- [[Implicit/Claims/claim-shared-dimensions-model-size]] — claim: Shared Dimensions Reduce Model Size
+- [[Implicit/Claims/claim-unified-itemkey]] — claim: Unified ItemKey Handles Both Product Types
+- [[Implicit/Claims/claim-denormalized-dimensions]] — claim: Dimension Tables Should Be Denormalized
+- [[Implicit/Claims/claim-narrow-fact-tables]] — claim: Fact Tables Should Be Narrow
+- [[Implicit/Claims/claim-powerpivot-auto-relationship-detection]] — claim: PowerPivot Auto-Detects Relationships on Import
+- [[Implicit/Claims/claim-wrong-granularity-scd]] — claim: Wrong Granularity SCD Causes Full Fact Recalculation
+- [[Implicit/Claims/claim-bi-directional-overuse-causes-duplication]] — claim: Bi-Directional Filtering Causes Row Duplication
+- [[Implicit/Claims/claim-union-all-over-union]] — claim: UNION ALL is Faster Than UNION for ETL
+- [[Implicit/Claims/claim-star-schema-default-power-bi]] — claim: Star Schema is the Default Choice for Power BI
+- [[Implicit/Claims/claim-snowflake-slower-4x]] — claim: Snowflake Schema is ~4x Slower Than Star Schema
+- [[Implicit/Claims/claim-composite-key-60x-memory]] — claim: Composite Keys Consume ~60x More Memory Than Surrogate Keys
+- [[Implicit/Claims/claim-d365-no-single-products-table]] — claim: D365 F&O Has No Single Products Table
+- [[Implicit/Claims/claim-broken-relationships-wrong-totals]] — claim: Broken Relationships Produce Wrong Totals
+- [[Implicit/Claims/claim-missing-date-relationship]] — claim: Missing Date Relationship Breaks Time Intelligence
+- [[Implicit/Claims/claim-scd-type1-overwrites-price]] — claim: SCD Type 1 Overwrites Price Without Preserving History
+- [[Implicit/Claims/claim-inmon-top-down]] — claim: Inmon Approach is Top-Down with Normalised EDW
+- [[Implicit/Claims/claim-inmon-single-truth]] — claim: Inmon EDW Provides Single Source of Truth
+- [[Implicit/Claims/claim-bridge-avoids-m2m-overhead]] — claim: Bridge Table Avoids Power BI Native M:M Overhead
+- [[Implicit/Claims/claim-powerpivot-auto-relationship-import]] — claim: PowerPivot Auto-Imports Source Relationships
+- [[Implicit/Claims/claim-schema-on-read-flexibility]] — claim: Schema-on-Read Provides Storage Flexibility
+- [[Implicit/Claims/claim-lake-and-warehouse-complementary]] — claim: Data Lakes and Data Warehouses are Complementary
+- [[Implicit/Claims/claim-claim-schema-on-read-vs-write]] — claim: Schema-on-Read vs Schema-on-Write Distinction
+- [[Implicit/Claims/claim-claim-medallion-standard-pattern]] — claim: Medallion is Standard Delta Lake Pattern
+- [[Implicit/Claims/claim-claim-batch-first-default]] — claim: Batch Processing as Honest Default
+- [[Implicit/Claims/claim-claim-lakehouse-blurs-lines]] — claim: Lakehouse Architecture Blurs Lake/Warehouse Distinction
+- [[Implicit/Claims/claim-claim-star-schema-mandatory]] — claim: Star Schema is Mandatory in Power BI
+- [[Implicit/Claims/claim-claim-surrogate-key-memory-efficiency]] — claim: Surrogate Keys Outperform Composite Keys at Scale
+- [[Implicit/Claims/claim-claim-scd-wrong-granularity-recalculation]] — claim: SCD at Wrong Granularity Causes Full In-Memory Recalculation
+- [[Implicit/Claims/claim-claim-bridge-tables-solve-many-to-many]] — claim: Bridge Tables Resolve Many-to-Many Safely
+- [[Implicit/Claims/claim-claim-import-faster-than-directquery]] — claim: Import Mode is Faster than DirectQuery
+- [[Implicit/Claims/claim-claim-incremental-refresh-game-changer]] — claim: Incremental Refresh is a Game Changer for Append-Only Data
+- [[Implicit/Claims/claim-claim-flat-table-breaks-calculations]] — claim: Flat Tables Bloat Models and Break Calculations
+- [[Implicit/Claims/claim-claim-bi-directional-ambiguity]] — claim: Bi-directional Filtering Creates Ambiguity and Row Duplication
+- [[Implicit/Claims/claim-claim-measures-preferred-over-calculated-columns]] — claim: DAX Measures are Preferred Over Calculated Columns
+- [[Implicit/Claims/claim-claim-date-table-unlocks-time-intelligence]] — claim: Dedicated Date Table Unlocks Time Intelligence
+- [[Implicit/Claims/claim-claim-duplicates-distort-metrics]] — claim: Duplicate Records Distort Revenue, Profit, and Count Metrics
+- [[Implicit/Claims/claim-claim-inconsistent-dates-wrong-grouping]] — claim: Inconsistent Date Formats Cause Wrong Month and Year Grouping
+- [[Implicit/Claims/claim-claim-missing-values-break-calculations]] — claim: Missing Values Silently Break Averages, Slicers, and Forecasting
+- [[Implicit/Claims/claim-claim-inconsistent-categories-fragment-charts]] — claim: Inconsistent Categories Split Charts into Many Small Bars
+- [[Implicit/Claims/claim-claim-outliers-warp-averages]] — claim: Outliers Warp Averages and Trend Lines
+- [[Implicit/Claims/claim-claim-medallion-habit-no-evaluation]] — claim: Teams Apply Medallion Layers Without Evaluating Suitability
+- [[Implicit/Claims/claim-claim-pipeline-step-order-matters]] — claim: Data Cleaning Pipeline Order Matters
+- [[Implicit/Claims/claim-claim-countrows-distinctcount-detects-duplicates]] — claim: COUNTROWS vs DISTINCTCOUNT Reveals Duplicates
+- [[Implicit/Claims/claim-claim-remove-duplicates-early]] — claim: Remove Duplicates Early in the Pipeline
+- [[Implicit/Claims/claim-claim-median-robust-to-outliers]] — claim: Median is Robust to Outliers
+- [[Implicit/Claims/claim-case-inconsistency-splits-aggregations]] — claim: Case Inconsistency Splits Aggregations
+- [[Implicit/Claims/claim-iso-8601-unambiguous]] — claim: ISO 8601 Date Format Is Unambiguous
+- [[Implicit/Claims/claim-layer-must-have-distinct-responsibility]] — claim: Each Layer Must Have Distinct Responsibility
+- [[Implicit/Claims/claim-materialized-views-eliminate-silver]] — claim: Materialized Views Can Eliminate Silver Layer
+- [[Implicit/Claims/claim-materialization-overhead-accumulation]] — claim: Materialization Overhead Accumulates
+- [[Implicit/Claims/claim-semantic-model-replaces-gold-aggregates]] — claim: Semantic Model Can Replace Gold Aggregates
+- [[Implicit/Claims/claim-list-columns-not-index-parallel]] — claim: List Columns in Same Row Are Not Index-Parallel
+- [[Implicit/Claims/claim-boniface-muchendu-source]] — claim: Boniface Muchendu Authored Medallion Framework
+- [[Implicit/Claims/claim-code-column-reliability]] — claim: Code Columns Are Not Always Reliable
+- [[Implicit/Claims/claim-constraint-enforcement-pattern]] — claim: Constraints Enforce Data Quality at Engine Level
+- [[Implicit/Claims/claim-degenerate-dimensions-save-storage]] — claim: Degenerate Dimensions Save 40% Storage
+- [[Implicit/Claims/claim-grain-must-be-locked]] — claim: Grain Must Be Locked First
+- [[Implicit/Claims/claim-dual-timestamp-prevents-trend-spikes]] — claim: Dual Timestamps Prevent Trend Line Spikes
+- [[Implicit/Claims/claim-multi-key-partitioning-reduces-cost]] — claim: Multi-Key Partitioning Reduces Compute Cost ~60%
+- [[Implicit/Claims/claim-pre-denormalize-at-load-time]] — claim: Pre-Denormalize Metrics at Load Time
+- [[Implicit/Claims/claim-constraint-catches-three-data-quality-issues]] — claim: Constraints Catch Three Data Quality Issues Excel Allowed
+- [[Implicit/Claims/claim-rely-optimizer-eliminates-joins]] — claim: RELY enables join elimination
+- [[Implicit/Claims/claim-rely-plus-pbi-0-8s]] — claim: RELY + Power BI optimization achieves 15x speedup
+- [[Implicit/Claims/claim-rollup-flags-replaces-20-mviews]] — claim: Rollup flags replace 20 materialized views
+- [[Implicit/Claims/claim-zstd-500gb-to-70gb]] — claim: ZSTD achieves 86% compression
+- [[Implicit/Claims/claim-clustering-reduces-io-40]] — claim: Column clustering reduces I/O by ~40%
+- [[Implicit/Claims/claim-surrogate-keys-low-cardinality]] — claim: Use surrogate keys for low-cardinality dimensions
+- [[Implicit/Claims/claim-natural-keys-high-volume-fact]] — claim: Use natural keys for high-volume fact tables
+- [[Implicit/Claims/claim-scd-type-2-requires-surrogate]] — claim: Type 2 SCD requires surrogate keys
+- [[Implicit/Claims/claim-verify-primary-key-with-count]] — claim: Always verify primary key with COUNT(*) = COUNT(DISTINCT)
+- [[Implicit/Claims/claim-blind-upsert-silently-overwrites]] — claim: Unverified keys cause silent upsert overwrites
+- [[Implicit/Edges/authored_by/jesse-ruiz--authored_by--advanced-dimensional-modeling-retail-product-variants-source]] — relationship: 
+- [[Implicit/Edges/authored_by/han-xu-yang--authored_by--data-modeling-bi-trustworthy-analytics]] — relationship: 
+- [[Implicit/Edges/authored_by/han-xu-yang--authored_by--data-warehousing-bi]] — relationship: 
+- [[Implicit/Edges/cites/dunlop-beginning-big-data--cites--database-key-types]] — relationship: 
+- [[Implicit/Edges/exemplifies/advanced-dimensional-modeling-retail-product-variants-source--exemplifies--d365-fo-product-dimension]] — relationship: 
+- [[Implicit/Edges/builds_on/d365-fo-product-dimension--builds_on--composite-key-strategy-itemkey]] — relationship: 
+- [[Implicit/Edges/builds_on/composite-key-strategy-itemkey--builds_on--conditional-joins-case-concat-matching]] — relationship: 
+- [[Implicit/Edges/builds_on/d365-fo-dimension-groups--builds_on--conditional-joins-case-concat-matching]] — relationship: 
+- [[Implicit/Edges/cites/conditional-joins-case-concat-matching--cites--advanced-dimensional-modeling-retail-product-variants-source]] — relationship: 
+- [[Implicit/Edges/cites/composite-key-strategy-itemkey--cites--advanced-dimensional-modeling-retail-product-variants-source]] — relationship: 
+- [[Implicit/Edges/cites/degenerate-dimension-barcode-in-fact--cites--advanced-dimensional-modeling-retail-product-variants-source]] — relationship: 
+- [[Implicit/Edges/contradicts/data-modeling-mistake-missing-date-table--contradicts--advanced-dimensional-modeling-retail-product-variants-source]] — relationship: 
+- [[Implicit/Edges/builds_on/database-key-types--builds_on--composite-key-strategy-itemkey]] — relationship: 
+- [[Implicit/Edges/builds_on/conformed-dimensions--builds_on--data-modeling-bi-trustworthy-analytics]] — relationship: 
+- [[Implicit/Edges/builds_on/data-warehousing-bi--builds_on--data-modeling-bi-trustworthy-analytics]] — relationship: 
+- [[Implicit/Edges/builds_on/batch-processing-vs-stream-processing--builds_on--data-warehousing-bi]] — relationship: 
+- [[Implicit/Edges/contradicts/column-pruning-bravo--contradicts--composite-key-strategy-itemkey]] — relationship: 
+- [[Implicit/Edges/builds_on/degenerate-dimension-barcode-in-fact--builds_on--advanced-dimensional-modeling-retail-product-variants-source]] — relationship: 
+- [[Implicit/Edges/exemplifies/differential-privacy--exemplifies--smartnoise]] — relationship: 
+- [[Implicit/Edges/builds_on/differential-privacy--builds_on--epsilon-parameter]] — relationship: 
+- [[Implicit/Edges/builds_on/differential-privacy--builds_on--delta-parameter]] — relationship: 
+- [[Implicit/Edges/builds_on/dim-date--builds_on--dax-calendar-function]] — relationship: 
+- [[Implicit/Edges/builds_on/dimension-groups--builds_on--retail-product-variants]] — relationship: 
+- [[Implicit/Edges/contradicts/duplicate-barcodes--contradicts--retailshowforitem-filter]] — relationship: 
+- [[Implicit/Edges/builds_on/duplicate-barcodes--builds_on--retail-product-variants]] — relationship: 
+- [[Implicit/Edges/builds_on/star-schema-multi-fact--builds_on--conformed-dimensions]] — relationship: 
+- [[Implicit/Edges/builds_on/star-schema-multi-fact--builds_on--shared-dimensions]] — relationship: 
+- [[Implicit/Edges/exemplifies/multiple-fact-tables--exemplifies--star-schema-multi-fact]] — relationship: 
+- [[Implicit/Edges/exemplifies/multiple-fact-tables--exemplifies--shared-dimensions]] — relationship: 
+- [[Implicit/Edges/builds_on/import-mode--builds_on--incremental-refresh]] — relationship: 
+- [[Implicit/Edges/builds_on/directquery-mode--builds_on--materialized-views]] — relationship: 
+- [[Implicit/Edges/builds_on/incremental-refresh--builds_on--append-only-tables]] — relationship: 
+- [[Implicit/Edges/exemplifies/filtered-index--exemplifies--barcode-lookup]] — relationship: 
+- [[Implicit/Edges/exemplifies/lambda-architecture--exemplifies--batch-stream-combination]] — relationship: 
+- [[Implicit/Edges/exemplifies/kappa-architecture--exemplifies--batch-stream-combination]] — relationship: 
+- [[Implicit/Edges/builds_on/materialized-views--builds_on--cetas]] — relationship: 
+- [[Implicit/Edges/exemplifies/view-precomputation--exemplifies--materialized-views]] — relationship: 
+- [[Implicit/Edges/exemplifies/view-precomputation--exemplifies--cetas]] — relationship: 
+- [[Implicit/Edges/builds_on/bronze-layer--builds_on--silver-layer]] — relationship: 
+- [[Implicit/Edges/builds_on/silver-layer--builds_on--gold-layer]] — relationship: 
+- [[Implicit/Edges/exemplifies/medallion-architecture--exemplifies--one-lake]] — relationship: 
+- [[Implicit/Edges/builds_on/medallion-architecture--builds_on--delta-lake]] — relationship: 
+- [[Implicit/Edges/exemplifies/gold-layer--exemplifies--direct-lake-mode]] — relationship: 
+- [[Implicit/Edges/builds_on/pricedisctable--builds_on--product-variants]] — relationship: 
+- [[Implicit/Edges/builds_on/dimension-groups--builds_on--pricedisctable]] — relationship: 
+- [[Implicit/Edges/exemplifies/missing-price-error--exemplifies--pricedisctable]] — relationship: 
+- [[Implicit/Edges/builds_on/parquet-format--builds_on--csv-format]] — relationship: 
+- [[Implicit/Edges/exemplifies/semantic-debt--exemplifies--semantic-debt-analysis]] — relationship: 
+- [[Implicit/Edges/contradicts/normalization-3nf--contradicts--transitive-dependency]] — relationship: 
+- [[Implicit/Edges/exemplifies/normalization-3nf--exemplifies--third-normal-form]] — relationship: 
+- [[Implicit/Edges/exemplifies/power-bi-informal-ontologies--exemplifies--ontology]] — relationship: 
+- [[Implicit/Edges/builds_on/ontology-extraction-70-30--builds_on--power-bi-informal-ontologies]] — relationship: 
+- [[Implicit/Edges/builds_on/power-bi-ontology-extraction-pipeline--builds_on--power-bi-extractor]] — relationship: 
+- [[Implicit/Edges/builds_on/power-bi-ontology-extraction-pipeline--builds_on--ontology-extraction-70-30]] — relationship: 
+- [[Implicit/Edges/builds_on/ontology-extraction-70-30--builds_on--ontology-to-fabric-iq-export]] — relationship: 
+- [[Implicit/Edges/builds_on/ontology-to-fabric-iq-export--builds_on--fabric-iq]] — relationship: 
+- [[Implicit/Edges/exemplifies/stale-statistics--exemplifies--performance-degradation-over-time]] — relationship: 
+- [[Implicit/Edges/contradicts/cetas--contradicts--performance-degradation-over-time]] — relationship: 
+- [[Implicit/Edges/contradicts/consolidated-fact-tables--contradicts--duplicated-dimensions]] — relationship: 
+- [[Implicit/Edges/contradicts/duplicated-dimensions--contradicts--consolidated-fact-tables]] — relationship: 
+- [[Implicit/Edges/exemplifies/visual-count-latency--exemplifies--power-bi-visual-performance]] — relationship: 
+- [[Implicit/Edges/exemplifies/matrix-table-high-cardinality-rows--exemplifies--power-bi-visual-performance]] — relationship: 
+- [[Implicit/Edges/exemplifies/conditional-formatting-expensive--exemplifies--power-bi-visual-performance]] — relationship: 
+- [[Implicit/Edges/exemplifies/scatter-plot-rendering--exemplifies--power-bi-visual-performance]] — relationship: 
+- [[Implicit/Edges/cites/power-bi-performance-analyzer--cites--power-bi-visual-performance]] — relationship: 
+- [[Implicit/Edges/builds_on/powerpivot-diagram-view--builds_on--manage-relationships]] — relationship: 
+- [[Implicit/Edges/exemplifies/pricing-cte-row-number-deduplication--exemplifies--row-number-window-function]] — relationship: 
+- [[Implicit/Edges/cites/pricing-cte-row-number-deduplication--cites--pricedisctable]] — relationship: 
+- [[Implicit/Edges/cites/pricing-cte-row-number-deduplication--cites--inventdim]] — relationship: 
+- [[Implicit/Edges/builds_on/null-dimension-handling--builds_on--row-number-window-function]] — relationship: 
+- [[Implicit/Edges/builds_on/pii-removal-techniques--builds_on--pii-categories]] — relationship: 
+- [[Implicit/Edges/builds_on/azure-cognitive-services-pii-detection--builds_on--pii-removal-techniques]] — relationship: 
+- [[Implicit/Edges/exemplifies/replicated-table-distribution--exemplifies--data-movement-elimination]] — relationship: 
+- [[Implicit/Edges/builds_on/data-movement-elimination--builds_on--replicate-table-size-rule]] — relationship: 
+- [[Implicit/Edges/exemplifies/role-playing-dimension--exemplifies--star-schema]] — relationship: 
+- [[Implicit/Edges/exemplifies/schema-drift-4-6m-loss--exemplifies--schema-drift-column-rename-failure]] — relationship: 
+- [[Implicit/Edges/builds_on/schema-drift-column-rename-failure--builds_on--schema-drift-detection]] — relationship: 
+- [[Implicit/Edges/exemplifies/schema-drift-detection--exemplifies--schema-drift-fail-safe]] — relationship: 
+- [[Implicit/Edges/cites/schema-drift-detection--cites--schema-mapper]] — relationship: 
+- [[Implicit/Edges/exemplifies/shared-dimensions--exemplifies--shared-dimensions-model-size]] — relationship: 
+- [[Implicit/Edges/builds_on/shared-dimensions--builds_on--star-schema]] — relationship: 
+- [[Implicit/Edges/exemplifies/simple-vs-variant-products--exemplifies--simple-product]] — relationship: 
+- [[Implicit/Edges/exemplifies/simple-vs-variant-products--exemplifies--variant-product]] — relationship: 
+- [[Implicit/Edges/builds_on/simple-vs-variant-products--builds_on--unified-itemkey]] — relationship: 
+- [[Implicit/Edges/builds_on/variant-product--builds_on--pricedisctable]] — relationship: 
+- [[Implicit/Edges/builds_on/variant-product--builds_on--inventdim]] — relationship: 
+- [[Implicit/Edges/exemplifies/star-schema--exemplifies--fact-table]] — relationship: 
+- [[Implicit/Edges/exemplifies/star-schema--exemplifies--dimension-table]] — relationship: 
+- [[Implicit/Edges/exemplifies/star-schema--exemplifies--foreign-key-primary-key]] — relationship: 
+- [[Implicit/Edges/builds_on/fact-table--builds_on--surrogate-key]] — relationship: 
+- [[Implicit/Edges/exemplifies/fact-table--exemplifies--narrow-fact-tables]] — relationship: 
+- [[Implicit/Edges/exemplifies/dimension-table--exemplifies--denormalized-dimensions]] — relationship: 
+- [[Implicit/Edges/builds_on/powerpivot-diagram-view--builds_on--powerpivot-auto-relationship-detection]] — relationship: 
+- [[Implicit/Edges/contradicts/snowflake-schema--contradicts--star-schema]] — relationship: 
+- [[Implicit/Edges/builds_on/union-all--builds_on--variant-product]] — relationship: 
+- [[Implicit/Edges/builds_on/union-all--builds_on--simple-product]] — relationship: 
+- [[Implicit/Edges/exemplifies/unified-product-dimension--exemplifies--union-all]] — relationship: 
+- [[Implicit/Edges/builds_on/variant-product--builds_on--d365-fo]] — relationship: 
+- [[Implicit/Edges/builds_on/simple-product--builds_on--d365-fo]] — relationship: 
+- [[Implicit/Edges/builds_on/unified-product-dimension--builds_on--composite-key]] — relationship: 
+- [[Implicit/Edges/contradicts/composite-key--contradicts--surrogate-key]] — relationship: 
+- [[Implicit/Edges/builds_on/surrogate-key--builds_on--composite-key]] — relationship: 
+- [[Implicit/Edges/exemplifies/bridge-table--exemplifies--survey-response-many-to-many]] — relationship: 
+- [[Implicit/Edges/builds_on/bridge-table--builds_on--star-schema]] — relationship: 
+- [[Implicit/Edges/builds_on/bridge-table--builds_on--surrogate-key]] — relationship: 
+- [[Implicit/Edges/builds_on/diagram-view--builds_on--powerpivot]] — relationship: 
+- [[Implicit/Edges/exemplifies/diagram-view--exemplifies--star-schema]] — relationship: 
+- [[Implicit/Edges/builds_on/powerpivot--builds_on--star-schema]] — relationship: 
+- [[Implicit/Edges/exemplifies/data-lake--exemplifies--schema-on-read]] — relationship: 
+- [[Implicit/Edges/exemplifies/data-warehouse--exemplifies--schema-on-write]] — relationship: 
+- [[Implicit/Edges/builds_on/data-lake--builds_on--data-warehouse]] — relationship: 
+- [[Implicit/Edges/contradicts/data-swamp--contradicts--data-lake]] — relationship: 
+- [[Implicit/Edges/exemplifies/data-warehouse--exemplifies--inmon-approach]] — relationship: 
+- [[Implicit/Edges/builds_on/inmon-approach--builds_on--third-normal-form]] — relationship: 
+- [[Implicit/Edges/exemplifies/inmon-approach--exemplifies--enterprise-data-warehouse]] — relationship: 
+- [[Implicit/Edges/builds_on/data-mart--builds_on--inmon-approach]] — relationship: 
+- [[Implicit/Edges/contradicts/inmon-approach--contradicts--kimball-approach]] — relationship: 
+- [[Implicit/Edges/builds_on/data-vault--builds_on--inmon-approach]] — relationship: 
+- [[Implicit/Edges/builds_on/data-vault--builds_on--kimball-approach]] — relationship: 
+- [[Implicit/Edges/builds_on/inmon-approach--builds_on--star-schema]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-approach--exemplifies--star-schema]] — relationship: 
+- [[Implicit/Edges/builds_on/scd-type-2--builds_on--surrogate-key]] — relationship: 
+- [[Implicit/Edges/exemplifies/scd-type-1--exemplifies--slowly-changing-dimension]] — relationship: 
+- [[Implicit/Edges/exemplifies/scd-type-2--exemplifies--slowly-changing-dimension]] — relationship: 
+- [[Implicit/Edges/exemplifies/wrong-granularity-scd--exemplifies--scd-type-2]] — relationship: 
+- [[Implicit/Edges/contradicts/wrong-granularity-scd--contradicts--surrogate-key]] — relationship: 
+- [[Implicit/Edges/builds_on/scd-type-1--builds_on--degenerate-dimension]] — relationship: 
+- [[Implicit/Edges/exemplifies/scd-type-1--exemplifies--role-playing-dimension]] — relationship: 
+- [[Implicit/Edges/exemplifies/bi-directional-filtering--exemplifies--cross-filter-direction]] — relationship: 
+- [[Implicit/Edges/exemplifies/bi-directional-overuse-causes-duplication--exemplifies--bi-directional-filtering]] — relationship: 
+- [[Implicit/Edges/builds_on/bi-directional-filtering--builds_on--broken-relationship]] — relationship: 
+- [[Implicit/Edges/contradicts/crossfilter-dax--contradicts--bi-directional-filtering]] — relationship: 
+- [[Implicit/Edges/builds_on/cross-filter-direction--builds_on--crossfilter-dax]] — relationship: 
+- [[Implicit/Edges/builds_on/broken-relationship--builds_on--cross-filter-direction]] — relationship: 
+- [[Implicit/Edges/exemplifies/missing-date-relationship--exemplifies--broken-relationship]] — relationship: 
+- [[Implicit/Edges/builds_on/star-schema--builds_on--fact-table]] — relationship: 
+- [[Implicit/Edges/builds_on/star-schema--builds_on--dimension-table]] — relationship: 
+- [[Implicit/Edges/builds_on/snowflake-schema--builds_on--dimension-table]] — relationship: 
+- [[Implicit/Edges/builds_on/surrogate-key--builds_on--fact-table]] — relationship: 
+- [[Implicit/Edges/exemplifies/star-schema-default-power-bi--exemplifies--star-schema]] — relationship: 
+- [[Implicit/Edges/exemplifies/snowflake-slower-4x--exemplifies--snowflake-schema]] — relationship: 
+- [[Implicit/Edges/exemplifies/union-all-over-union--exemplifies--union-all]] — relationship: 
+- [[Implicit/Edges/exemplifies/composite-key-60x-memory--exemplifies--composite-key]] — relationship: 
+- [[Implicit/Edges/exemplifies/d365-no-single-products-table--exemplifies--d365-fo]] — relationship: 
+- [[Implicit/Edges/exemplifies/broken-relationships-wrong-totals--exemplifies--broken-relationship]] — relationship: 
+- [[Implicit/Edges/exemplifies/scd-type1-overwrites-price--exemplifies--scd-type-1]] — relationship: 
+- [[Implicit/Edges/exemplifies/inmon-top-down--exemplifies--inmon-approach]] — relationship: 
+- [[Implicit/Edges/exemplifies/inmon-single-truth--exemplifies--inmon-approach]] — relationship: 
+- [[Implicit/Edges/exemplifies/bridge-avoids-m2m-overhead--exemplifies--bridge-table]] — relationship: 
+- [[Implicit/Edges/exemplifies/powerpivot-auto-relationship-import--exemplifies--powerpivot]] — relationship: 
+- [[Implicit/Edges/exemplifies/schema-on-read-flexibility--exemplifies--schema-on-read]] — relationship: 
+- [[Implicit/Edges/exemplifies/lake-and-warehouse-complementary--exemplifies--data-lake]] — relationship: 
+- [[Implicit/Edges/exemplifies/lake-and-warehouse-complementary--exemplifies--data-warehouse]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-schema-on-read-vs-write--exemplifies--data-lake]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-schema-on-read-vs-write--exemplifies--data-warehouse]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-medallion-standard-pattern--exemplifies--medallion-architecture]] — relationship: 
+- [[Implicit/Edges/builds_on/claim-medallion-standard-pattern--builds_on--delta-lake]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-lakehouse-blurs-lines--exemplifies--lakehouse-architecture]] — relationship: 
+- [[Implicit/Edges/builds_on/claim-lakehouse-blurs-lines--builds_on--delta-lake]] — relationship: 
+- [[Implicit/Edges/contradicts/batch-processing--contradicts--stream-processing]] — relationship: 
+- [[Implicit/Edges/builds_on/lambda-architecture--builds_on--batch-processing]] — relationship: 
+- [[Implicit/Edges/builds_on/lambda-architecture--builds_on--stream-processing]] — relationship: 
+- [[Implicit/Edges/builds_on/kappa-architecture--builds_on--stream-processing]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-batch-first-default--exemplifies--batch-processing]] — relationship: 
+- [[Implicit/Edges/contradicts/claim-batch-first-default--contradicts--stream-processing]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-star-schema-mandatory--exemplifies--star-schema]] — relationship: 
+- [[Implicit/Edges/contradicts/claim-star-schema-mandatory--contradicts--flat-table]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-flat-table-breaks-calculations--exemplifies--flat-table]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-surrogate-key-memory-efficiency--exemplifies--surrogate-key]] — relationship: 
+- [[Implicit/Edges/contradicts/claim-surrogate-key-memory-efficiency--contradicts--composite-key]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-scd-wrong-granularity-recalculation--exemplifies--slowly-changing-dimension]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-bridge-tables-solve-many-to-many--exemplifies--bridge-table]] — relationship: 
+- [[Implicit/Edges/builds_on/dim-date--builds_on--date-table]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-import-faster-than-directquery--exemplifies--import-mode]] — relationship: 
+- [[Implicit/Edges/contradicts/claim-import-faster-than-directquery--contradicts--directquery]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-incremental-refresh-game-changer--exemplifies--incremental-refresh]] — relationship: 
+- [[Implicit/Edges/exemplifies/bravo-for-power-bi--exemplifies--column-pruning]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-bi-directional-ambiguity--exemplifies--bi-directional-filtering]] — relationship: 
+- [[Implicit/Edges/contradicts/claim-bi-directional-ambiguity--contradicts--one-to-many-relationship]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-measures-preferred-over-calculated-columns--exemplifies--dax-measure]] — relationship: 
+- [[Implicit/Edges/contradicts/claim-measures-preferred-over-calculated-columns--contradicts--calculated-column]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-date-table-unlocks-time-intelligence--exemplifies--date-table]] — relationship: 
+- [[Implicit/Edges/builds_on/claim-date-table-unlocks-time-intelligence--builds_on--time-intelligence]] — relationship: 
+- [[Implicit/Edges/builds_on/account-code-ranges--builds_on--pl-line-structure]] — relationship: 
+- [[Implicit/Edges/builds_on/chart-of-accounts--builds_on--pl-mapping-table]] — relationship: 
+- [[Implicit/Edges/builds_on/pl-mapping-table--builds_on--pl-line-structure]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-duplicates-distort-metrics--exemplifies--duplicate-records]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-inconsistent-dates-wrong-grouping--exemplifies--inconsistent-date-formats]] — relationship: 
+- [[Implicit/Edges/contradicts/iso-date-format--contradicts--inconsistent-date-formats]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-missing-values-break-calculations--exemplifies--missing-values]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-inconsistent-categories-fragment-charts--exemplifies--inconsistent-categories]] — relationship: 
+- [[Implicit/Edges/builds_on/text-transform--builds_on--inconsistent-categories]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-outliers-warp-averages--exemplifies--outlier]] — relationship: 
+- [[Implicit/Edges/builds_on/min-max-qa--builds_on--outlier]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-median-robust-to-outliers--exemplifies--median]] — relationship: 
+- [[Implicit/Edges/contradicts/claim-median-robust-to-outliers--contradicts--outlier]] — relationship: 
+- [[Implicit/Edges/exemplifies/dashboard-health-checklist--exemplifies--duplicate-records]] — relationship: 
+- [[Implicit/Edges/exemplifies/dashboard-health-checklist--exemplifies--inconsistent-date-formats]] — relationship: 
+- [[Implicit/Edges/exemplifies/dashboard-health-checklist--exemplifies--missing-values]] — relationship: 
+- [[Implicit/Edges/exemplifies/dashboard-health-checklist--exemplifies--inconsistent-categories]] — relationship: 
+- [[Implicit/Edges/exemplifies/dashboard-health-checklist--exemplifies--outlier]] — relationship: 
+- [[Implicit/Edges/builds_on/countrows-vs-distinctcount--builds_on--duplicate-records]] — relationship: 
+- [[Implicit/Edges/builds_on/countrows-vs-distinctcount--builds_on--primary-key]] — relationship: 
+- [[Implicit/Edges/exemplifies/data-cleaning-pipeline--exemplifies--duplicate-records]] — relationship: 
+- [[Implicit/Edges/exemplifies/data-cleaning-pipeline--exemplifies--missing-values]] — relationship: 
+- [[Implicit/Edges/exemplifies/data-cleaning-pipeline--exemplifies--inconsistent-date-formats]] — relationship: 
+- [[Implicit/Edges/exemplifies/data-cleaning-pipeline--exemplifies--inconsistent-categories]] — relationship: 
+- [[Implicit/Edges/exemplifies/data-cleaning-pipeline--exemplifies--outlier]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-pipeline-step-order-matters--exemplifies--data-cleaning-pipeline]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-countrows-distinctcount-detects-duplicates--exemplifies--countrows-vs-distinctcount]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-remove-duplicates-early--exemplifies--duplicate-records]] — relationship: 
+- [[Implicit/Edges/exemplifies/claim-medallion-habit-no-evaluation--exemplifies--architecture-by-habit]] — relationship: 
+- [[Implicit/Edges/contradicts/architecture-by-habit--contradicts--medallion-architecture]] — relationship: 
+- [[Implicit/Edges/builds_on/star-schema--builds_on--surrogate-key]] — relationship: 
+- [[Implicit/Edges/builds_on/star-schema--builds_on--one-to-many-relationship]] — relationship: 
+- [[Implicit/Edges/builds_on/star-schema--builds_on--bridge-table]] — relationship: 
+- [[Implicit/Edges/builds_on/star-schema--builds_on--date-table]] — relationship: 
+- [[Implicit/Edges/authored_by/jesse-ruiz--authored_by--3-easy-data-architecture-interview-questions-source]] — relationship: 
+- [[Implicit/Edges/authored_by/bill-donofrio--authored_by--stop-building-slow-power-bi-reports-source]] — relationship: 
+- [[Implicit/Edges/authored_by/anurodh-kumar--authored_by--source-5-mistakes-in-power-bi-data-modeling]] — relationship: 
+- [[Implicit/Edges/authored_by/digitalbykewat--authored_by--5-data-cleaning-mistakes-digitalbykewat-source]] — relationship: 
+- [[Implicit/Edges/authored_by/yadullah-abidi--authored_by--author-yadullah-abidi]] — relationship: 
+- [[Implicit/Edges/authored_by/digitalbykewat--authored_by--author-digitalbykewat]] — relationship: 
+- [[Implicit/Edges/exemplifies/case-inconsistency-splits-aggregations--exemplifies--text-normalization]] — relationship: 
+- [[Implicit/Edges/builds_on/text-normalization--builds_on--power-query-transforms]] — relationship: 
+- [[Implicit/Edges/exemplifies/iso-8601-unambiguous--exemplifies--date-format-standardization]] — relationship: 
+- [[Implicit/Edges/builds_on/date-format-standardization--builds_on--power-query-transforms]] — relationship: 
+- [[Implicit/Edges/exemplifies/layer-must-have-distinct-responsibility--exemplifies--medallion-architecture]] — relationship: 
+- [[Implicit/Edges/builds_on/medallion-architecture--builds_on--landing-layer]] — relationship: 
+- [[Implicit/Edges/builds_on/medallion-architecture--builds_on--curated-layer]] — relationship: 
+- [[Implicit/Edges/builds_on/medallion-architecture--builds_on--analytics-layer]] — relationship: 
+- [[Implicit/Edges/builds_on/materialized-views-eliminate-silver--builds_on--curated-layer]] — relationship: 
+- [[Implicit/Edges/exemplifies/materialized-views-eliminate-silver--exemplifies--materialized-views]] — relationship: 
+- [[Implicit/Edges/builds_on/materialized-views-eliminate-silver--builds_on--data-quality-constraints]] — relationship: 
+- [[Implicit/Edges/exemplifies/medallion-architecture--exemplifies--microsoft-fabric]] — relationship: 
+- [[Implicit/Edges/builds_on/medallion-architecture--builds_on--onelake]] — relationship: 
+- [[Implicit/Edges/builds_on/direct-lake-mode--builds_on--onelake]] — relationship: 
+- [[Implicit/Edges/exemplifies/materialization-overhead-accumulation--exemplifies--medallion-architecture]] — relationship: 
+- [[Implicit/Edges/exemplifies/semantic-model-replaces-gold-aggregates--exemplifies--power-bi-semantic-model]] — relationship: 
+- [[Implicit/Edges/contradicts/semantic-model-replaces-gold-aggregates--contradicts--medallion-architecture]] — relationship: 
+- [[Implicit/Edges/exemplifies/star-schema--exemplifies--microsoft-fabric]] — relationship: 
+- [[Implicit/Edges/builds_on/star-schema--builds_on--direct-lake-mode]] — relationship: 
+- [[Implicit/Edges/exemplifies/bridge-table--exemplifies--many-to-many-relationship]] — relationship: 
+- [[Implicit/Edges/exemplifies/list-columns-not-index-parallel--exemplifies--bridge-table]] — relationship: 
+- [[Implicit/Edges/builds_on/bridge-table--builds_on--fact-table]] — relationship: 
+- [[Implicit/Edges/builds_on/missing-values-handling--builds_on--power-query-transforms]] — relationship: 
+- [[Implicit/Edges/authored_by/boniface-muchendu--authored_by--boniface-muchendu-source]] — relationship: 
+- [[Implicit/Edges/authored_by/anurodh-kumar--authored_by--medallion-architecture-fabric]] — relationship: 
+- [[Implicit/Edges/authored_by/anurodh-kumar--authored_by--star-schema-fabric]] — relationship: 
+- [[Implicit/Edges/authored_by/digitalbykewat--authored_by--inconsistent-categories-normalisation]] — relationship: 
+- [[Implicit/Edges/authored_by/digitalbykewat--authored_by--inconsistent-date-formats-iso]] — relationship: 
+- [[Implicit/Edges/authored_by/digitalbykewat--authored_by--missing-values-handling-strategy]] — relationship: 
+- [[Implicit/Edges/exemplifies/cleansed-layer--exemplifies--cdc-column]] — relationship: 
+- [[Implicit/Edges/exemplifies/cleansed-layer--exemplifies--multi-source-merge]] — relationship: 
+- [[Implicit/Edges/builds_on/schema-first-design--builds_on--cdc-column]] — relationship: 
+- [[Implicit/Edges/builds_on/watermark-table--builds_on--cdc-column]] — relationship: 
+- [[Implicit/Edges/builds_on/normalized-tables--builds_on--postgres-constraints]] — relationship: 
+- [[Implicit/Edges/builds_on/schema-first-design--builds_on--flag-and-preserve]] — relationship: 
+- [[Implicit/Edges/exemplifies/excel-to-postgres-migration--exemplifies--schema-first-design]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-baylas-2026--exemplifies--kimball-dimensional-modeling]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-baylas-2026--exemplifies--medallion-architecture]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-baylas-2026--exemplifies--flag-and-preserve]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-baylas-2026--exemplifies--cdc-column]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-baylas-2026--exemplifies--multi-source-merge]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-baylas-2026--exemplifies--indexing-strategy]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-baylas-2026--exemplifies--junk-dimension]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-baylas-2026--exemplifies--upsert-table]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-baylas-2026--exemplifies--insert-only-table]] — relationship: 
+- [[Implicit/Edges/exemplifies/kimball-baylas-2026--exemplifies--elt-pattern]] — relationship: 
+- [[Implicit/Edges/authored_by/kimball-baylas-2026--authored_by--source-yadullah-abidi]] — relationship: 
+- [[Implicit/Edges/authored_by/schema-first-design--authored_by--source-yadullah-abidi]] — relationship: 
+- [[Implicit/Edges/authored_by/excel-to-postgres-migration--authored_by--source-yadullah-abidi]] — relationship: 
+- [[Implicit/Edges/authored_by/postgres-constraints--authored_by--source-yadullah-abidi]] — relationship: 
+- [[Implicit/Edges/authored_by/normalized-tables--authored_by--source-yadullah-abidi]] — relationship: 
+- [[Implicit/Edges/cites/medallion-architecture--cites--kimball-baylas-2026]] — relationship: 
+- [[Implicit/Edges/contradicts/inmon-edw--contradicts--kimball-dimensional-modeling]] — relationship: 
+- [[Implicit/Edges/contradicts/inmon-edw--contradicts--data-vault]] — relationship: 
+- [[Implicit/Edges/contradicts/kimball-dimensional-modeling--contradicts--data-vault]] — relationship: 
+- [[Implicit/Edges/builds_on/medallion-architecture--builds_on--inmon-edw]] — relationship: 
+- [[Implicit/Edges/builds_on/medallion-architecture--builds_on--data-vault]] — relationship: 
+- [[Implicit/Edges/builds_on/dimensional-layer--builds_on--junk-dimension]] — relationship: 
+- [[Implicit/Edges/builds_on/dimensional-layer--builds_on--indexing-strategy]] — relationship: 
+- [[Implicit/Edges/contradicts/etl-run-date--contradicts--cdc-column]] — relationship: 
+- [[Implicit/Edges/builds_on/excel-to-postgres-migration--builds_on--postgres-constraints]] — relationship: 
+- [[Implicit/Edges/exemplifies/degenerate-dimensions-save-storage--exemplifies--degenerate-dimension]] — relationship: 
+- [[Implicit/Edges/builds_on/grain-must-be-locked--builds_on--grain]] — relationship: 
+- [[Implicit/Edges/exemplifies/dual-timestamp-prevents-trend-spikes--exemplifies--dual-timestamp]] — relationship: 
+- [[Implicit/Edges/exemplifies/multi-key-partitioning-reduces-cost--exemplifies--multi-key-partitioning]] — relationship: 
+- [[Implicit/Edges/exemplifies/pre-denormalize-at-load-time--exemplifies--denormalized-metrics]] — relationship: 
+- [[Implicit/Edges/exemplifies/constraint-enforcement-pattern--exemplifies--postgres]] — relationship: 
+- [[Implicit/Edges/exemplifies/constraint-catches-three-data-quality-issues--exemplifies--postgres]] — relationship: 
+- [[Implicit/Edges/builds_on/code-column-reliability--builds_on--dimension-table]] — relationship: 
+- [[Implicit/Edges/authored_by/source-excel-postgres-weekend-yadullah--authored_by--yadamullah-abidi]] — relationship: 
+- [[Implicit/Edges/authored_by/star-schema-fact-tables-source--authored_by--rohan-dutt]] — relationship: 
+- [[Implicit/Edges/exemplifies/rely-constraint--exemplifies--rely-optimizer-eliminates-joins]] — relationship: 
+- [[Implicit/Edges/builds_on/rely-constraint--builds_on--snowflake]] — relationship: 
+- [[Implicit/Edges/builds_on/rely-constraint--builds_on--redshift]] — relationship: 
+- [[Implicit/Edges/builds_on/rely-constraint--builds_on--bigquery]] — relationship: 
+- [[Implicit/Edges/exemplifies/rely-optimizer-eliminates-joins--exemplifies--rely-plus-pbi-0-8s]] — relationship: 
+- [[Implicit/Edges/builds_on/rely-constraint--builds_on--assume-referential-integrity]] — relationship: 
+- [[Implicit/Edges/exemplifies/rollup-flags-pattern--exemplifies--rollup-flags-replaces-20-mviews]] — relationship: 
+- [[Implicit/Edges/exemplifies/zstd-encoding--exemplifies--zstd-500gb-to-70gb]] — relationship: 
+- [[Implicit/Edges/exemplifies/column-clustering--exemplifies--clustering-reduces-io-40]] — relationship: 
+- [[Implicit/Edges/exemplifies/surrogate-key--exemplifies--surrogate-keys-low-cardinality]] — relationship: 
+- [[Implicit/Edges/exemplifies/surrogate-key--exemplifies--scd-type-2-requires-surrogate]] — relationship: 
+- [[Implicit/Edges/builds_on/surrogate-key--builds_on--scd-type-2]] — relationship: 
+- [[Implicit/Edges/exemplifies/natural-key--exemplifies--natural-keys-high-volume-fact]] — relationship: 
+- [[Implicit/Edges/contradicts/surrogate-key--contradicts--natural-key]] — relationship: 
+- [[Implicit/Edges/exemplifies/primary-key-verification--exemplifies--verify-primary-key-with-count]] — relationship: 
+- [[Implicit/Edges/exemplifies/primary-key-verification--exemplifies--blind-upsert-silently-overwrites]] — relationship: 
+- [[Implicit/Edges/builds_on/primary-key-verification--builds_on--composite-key]] — relationship: 
+
+## Skipped Duplicates
+
+- entity: CETAS (Create External Table As Select)
+- entity: PriceDiscTable
+- entity: Star Schema
+- entity: Surrogate Key
+- entity: Variant Product
+- entity: Simple Product
+- entity: PowerPivot Diagram View
+- entity: Dimension Table
+- entity: Fact Table
+- entity: Role-Playing Dimension
+- entity: Data Lake
+- entity: Data Warehouse
+- entity: Schema-on-Read
+- entity: Schema-on-Write
+- entity: Medallion Architecture
+- entity: Bronze Layer
+- entity: Silver Layer
+- entity: Gold Layer
+- entity: Lambda Architecture
+- entity: Kappa Architecture
+- entity: Delta Lake
+- entity: Star Schema
+- entity: Surrogate Key
+- entity: Composite Key
+- entity: Slowly Changing Dimension (SCD)
+- entity: Bridge Table
+- entity: Jesse Ruiz
+- entity: Medallion Architecture
+- entity: Materialized Views
+- entity: Star Schema
+- entity: Fact Table
+- entity: Dimension Table
+- entity: Bridge Table
+- entity: OneLake
+- entity: Direct Lake Mode
+- entity: Anurodh Kumar
+- entity: DigitalBYKewat
+- entity: Medallion Architecture
+- entity: Star Schema
+- entity: Fact Table
+- entity: Dimension Table
+- entity: Degenerate Dimension
+- entity: Yadullah Abidi
+- entity: Surrogate Key
+- entity: Composite Key
+- edge: bronze-layer--builds_on--silver-layer
+- edge: silver-layer--builds_on--gold-layer
+- edge: star-schema--builds_on--fact-table
+- edge: star-schema--builds_on--dimension-table
+
+---
+*Generated by extract-implicit-knowledge skill*
